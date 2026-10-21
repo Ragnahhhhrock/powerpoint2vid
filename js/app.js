@@ -238,6 +238,15 @@
     status('Exported powerpoint2vid-explainer.' + ext + '.'); setProgress(1);
   };
 
+  /* ---------- hero explainer: autoplays muted; button restarts it with sound ---------- */
+  const hv = $('hero-video'), hs = $('hero-sound');
+  if (hv && hs) {
+    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) { hv.removeAttribute('autoplay'); hv.pause(); hv.controls = true; }
+    hs.onclick = () => {
+      if (hv.muted) { hv.muted = false; hv.loop = false; hv.currentTime = 0; hv.controls = true; hv.play().catch(() => {}); hs.hidden = true; track('hero_video_sound'); }
+    };
+  }
+
   /* ---------- outbound / CTA clicks ---------- */
   document.addEventListener('click', (ev) => {
     const a = ev.target.closest && ev.target.closest('a[href]');

@@ -51,6 +51,7 @@
       ctx.beginPath();
       if (s.prst === 'ellipse') ctx.ellipse(x + w / 2, y + h / 2, w / 2, h / 2, 0, 0, Math.PI * 2);
       else if (s.prst === 'roundRect') ctx.roundRect(x, y, w, h, Math.min(w, h) * 0.16);
+      else if (s.prst === 'triangle') { ctx.moveTo(x + w / 2, y); ctx.lineTo(x + w, y + h); ctx.lineTo(x, y + h); ctx.closePath(); }
       else ctx.rect(x, y, w, h);
       if (s.fill) { ctx.fillStyle = s.fill; ctx.fill(); }
       if (s.stroke) { ctx.strokeStyle = s.stroke; ctx.lineWidth = Math.max(1, k * 12700); ctx.stroke(); }
@@ -240,8 +241,9 @@
     slide.shapes.forEach((s, i) => {
       let e = { a: 1, dy: 0, s: 1, blur: 0 };
       if (opts.animate && n > 1) {
-        const start = 0.06 + (0.55 * i) / Math.max(1, n - 1);
-        e = entrance(st.motion, (p - start) / 0.12, sh);
+        const span = opts.revealSpan || 0.55, dur = opts.revealDur || 0.12, lead = opts.revealLead != null ? opts.revealLead : 0.06;
+        const start = lead + (span * i) / Math.max(1, n - 1);
+        e = entrance(st.motion, (p - start) / dur, sh);
         if (e.impact) impact = true;
       }
       if (e.a <= 0) return;

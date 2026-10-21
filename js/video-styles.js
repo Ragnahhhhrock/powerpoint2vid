@@ -18,8 +18,8 @@
     },
     {
       id: 'keynote', name: 'Keynote launch', desc: 'Slides float as glass cards on a dark stage with a slow drifting camera.',
-      trans: 'zoom', motion: 'blur', frame: { bg: '#050507', glow: '#1c1c28', card: 0.075, radius: 0.028, shadow: 0.6 }, camera: 'drift', caption: 'glass',
-      fx: { vignette: 0.2 }, sources: [src('thejohnnyhuy', 'thejohnnyhuy-282154'), src('jake11moran', 'jake11moran-414633')]
+      trans: 'zoom', motion: 'blur', frame: { bg: '#050507', glow: '#231a52', card: 0.075, radius: 0.028, shadow: 0.6 }, camera: 'drift', caption: 'glass',
+      fx: {}, sources: [src('thejohnnyhuy', 'thejohnnyhuy-282154'), src('jake11moran', 'jake11moran-414633')]
     },
     {
       id: 'ui-springs', name: 'UI springs', desc: 'Warm-gray canvas, springy reveals with a tiny overshoot, camera eases in.',

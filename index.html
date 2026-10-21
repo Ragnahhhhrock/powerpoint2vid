@@ -66,11 +66,11 @@
     {
       "@type": "VideoObject",
       "name": "PowerPoint to video converter: example narrated explainer video",
-      "description": "A 43-second narrated explainer video made from a 5-slide PowerPoint deck with PowerPoint2Vid, the online PowerPoint to video converter.",
-      "thumbnailUrl": "https://powerpoint2vid.com/assets/example/example-poster.jpg",
+      "description": "A narrated explainer video made from a 5-slide PowerPoint deck with PowerPoint2Vid, the online PowerPoint to video converter, in the Keynote launch video style.",
+      "thumbnailUrl": "https://powerpoint2vid.com/assets/example/explainer-poster.jpg",
       "uploadDate": "2026-10-21",
-      "duration": "PT43S",
-      "contentUrl": "https://powerpoint2vid.com/assets/example/example-video.mp4",
+      "duration": "PT46S",
+      "contentUrl": "https://powerpoint2vid.com/assets/example/explainer.mp4",
       "author": { "@type": "Person", "name": "Mal Gordon", "url": "https://malgordon.com/" }
     },
     {
@@ -116,6 +116,18 @@
 <main id="main">
   <section class="hero">
     <div class="wrap">
+      <figure class="hero-video" id="demo">
+        <div class="stage">
+          <video id="hero-video" autoplay muted loop playsinline preload="auto" poster="/assets/example/explainer-poster.jpg" aria-label="Example narrated explainer video made from a 5-slide PowerPoint deck in the Keynote launch style">
+            <source src="/assets/example/explainer.mp4" type="video/mp4">
+            <source src="/assets/example/explainer.webm" type="video/webm">
+            <track kind="captions" src="/assets/example/explainer-captions.vtt" srclang="en" label="English" default>
+            Your browser cannot play this video. <a href="/assets/example/explainer.mp4">Download the example video</a>.
+          </video>
+          <button class="hero-video__sound" id="hero-sound" type="button" aria-pressed="false">🔊 Play with sound</button>
+        </div>
+        <figcaption>Made with PowerPoint2Vid from a 5-slide deck, Keynote launch style. <a href="/assets/example/explainer-deck.pptx" download>Download the deck</a></figcaption>
+      </figure>
       <span class="eyebrow">Private · Online · No upload</span>
       <h1>PowerPoint to video converter, <em>narrated</em>.</h1>
       <p class="lede">The online PowerPoint to video converter. Turn PowerPoint and Google Slides decks into animated videos with voiceover and captions. No upload. No sign-up.</p>
@@ -230,30 +242,6 @@
           </fieldset>
           <p class="hint">Keep this tab in the foreground while exporting. The video records in real time.</p>
         </aside>
-      </div>
-    </div>
-  </section>
-
-  <section class="block alt" id="demo" aria-labelledby="demo-title">
-    <div class="wrap">
-      <h2 id="demo-title">See the PowerPoint to video converter in action</h2>
-      <div class="app-grid demo">
-        <div class="stage">
-          <video controls preload="metadata" playsinline poster="/assets/example/example-poster.jpg" aria-label="Example narrated explainer video made from a 5-slide PowerPoint deck">
-            <source src="/assets/example/example-video.mp4" type="video/mp4">
-            <source src="/assets/example/example-video.webm" type="video/webm">
-            <track kind="captions" src="/assets/example/example-captions.vtt" srclang="en" label="English" default>
-            Your browser cannot play this video. <a href="/assets/example/example-video.mp4">Download the example video</a>.
-          </video>
-        </div>
-        <div class="panel">
-          <h3>A 43-second example</h3>
-          <p>This explainer video was made from a 5-slide deck. The speaker notes became the narration, and the captions are included.</p>
-          <div class="controls">
-            <a class="btn" href="#app" data-cta="demo">Make your own</a>
-            <a class="btn btn--ghost" href="/assets/example/example-deck.pptx" download>Download the example deck</a>
-          </div>
-        </div>
       </div>
     </div>
   </section>
