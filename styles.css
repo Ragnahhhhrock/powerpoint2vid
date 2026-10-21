@@ -107,7 +107,9 @@ h3 { font-size: var(--fs-md); margin: 0 0 var(--s-2); font-weight: 700; }
 .drop strong { display: block; font-size: var(--fs-lg); margin-bottom: var(--s-1); }
 .drop span { color: var(--text-muted); font-size: var(--fs-sm); }
 .stage { background: var(--ink-900); border-radius: var(--r-md); overflow: hidden; box-shadow: var(--shadow-lg); aspect-ratio: 16/9; }
-.stage canvas { width: 100%; height: 100%; }
+.stage canvas, .stage video { width: 100%; height: 100%; display: block; }
+.demo { align-items: center; margin-top: var(--s-5); }
+.demo .panel p { color: var(--text-muted); font-size: var(--fs-sm); margin: 0; }
 .filmstrip { display: flex; gap: var(--s-2); overflow-x: auto; padding: var(--s-3) 0 var(--s-1); }
 .thumb { flex: 0 0 auto; width: 112px; border: 2px solid transparent; border-radius: var(--r-sm); padding: 0; background: none; cursor: pointer; overflow: hidden; }
 .thumb[aria-current="true"] { border-color: var(--primary); }

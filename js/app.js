@@ -208,6 +208,7 @@
     if (!a) return;
     const href = a.getAttribute('href');
     if (a.classList.contains('btn--accent') && href === '#app') track('cta_click', { location: 'hero' });
+    else if (a.dataset.cta) track('cta_click', { location: a.dataset.cta });
     else if (/^mailto:/i.test(href)) track('contact_click');
     else if (/^https?:\/\//i.test(href) && new URL(href).host !== location.host) track('outbound_click', { link_domain: new URL(href).hostname });
   });

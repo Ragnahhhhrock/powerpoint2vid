@@ -64,6 +64,16 @@
       "author": { "@type": "Person", "name": "Mal Gordon", "url": "https://malgordon.com/" }
     },
     {
+      "@type": "VideoObject",
+      "name": "PowerPoint to video converter: example narrated explainer video",
+      "description": "A 44-second narrated explainer video made from a 5-slide PowerPoint deck with PowerPoint2Vid, the free PowerPoint to video converter.",
+      "thumbnailUrl": "https://powerpoint2vid.com/assets/example/example-poster.jpg",
+      "uploadDate": "2026-10-21",
+      "duration": "PT44S",
+      "contentUrl": "https://powerpoint2vid.com/assets/example/example-video.mp4",
+      "author": { "@type": "Person", "name": "Mal Gordon", "url": "https://malgordon.com/" }
+    },
+    {
       "@type": "FAQPage",
       "mainEntity": [
         { "@type": "Question", "name": "What is the best free PowerPoint to video converter?",
@@ -94,6 +104,7 @@
       <span>PowerPoint<b>2Vid</b></span>
     </a>
     <nav class="nav" aria-label="Primary">
+      <a href="#demo">Demo</a>
       <a href="#how">How to convert</a>
       <a href="#features">Features</a>
       <a href="#faq">FAQ</a>
@@ -217,7 +228,31 @@
     </div>
   </section>
 
-  <section class="block alt" id="how">
+  <section class="block alt" id="demo" aria-labelledby="demo-title">
+    <div class="wrap">
+      <h2 id="demo-title">See the PowerPoint to video converter in action</h2>
+      <div class="app-grid demo">
+        <div class="stage">
+          <video controls preload="metadata" playsinline poster="/assets/example/example-poster.jpg" aria-label="Example narrated explainer video made from a 5-slide PowerPoint deck">
+            <source src="/assets/example/example-video.mp4" type="video/mp4">
+            <source src="/assets/example/example-video.webm" type="video/webm">
+            <track kind="captions" src="/assets/example/example-captions.vtt" srclang="en" label="English" default>
+            Your browser cannot play this video. <a href="/assets/example/example-video.mp4">Download the example video</a>.
+          </video>
+        </div>
+        <div class="panel">
+          <h3>A 44-second example</h3>
+          <p>This explainer video was made from a 5-slide deck. The speaker notes became the narration, and the captions are included.</p>
+          <div class="controls">
+            <a class="btn" href="#app" data-cta="demo">Make your own</a>
+            <a class="btn btn--ghost" href="/assets/example/example-deck.pptx" download>Download the example deck</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="how">
     <div class="wrap">
       <h2>How to convert PowerPoint to video in 4 steps</h2>
       <div class="cards">
@@ -229,7 +264,7 @@
     </div>
   </section>
 
-  <section class="block" id="features">
+  <section class="block alt" id="features">
     <div class="wrap">
       <h2>Why use this PowerPoint to video converter</h2>
       <div class="cards">
@@ -243,7 +278,7 @@
     </div>
   </section>
 
-  <section class="block alt" id="faq">
+  <section class="block" id="faq">
     <div class="wrap">
       <h2>PowerPoint to video converter: common questions</h2>
       <details><summary>What is the best free PowerPoint to video converter?</summary><p>PowerPoint2Vid is a free PowerPoint to video converter that runs in your browser. It adds voiceover from your speaker notes, animated reveals, transitions and captions, with no upload, no sign-up and no watermark.</p></details>
