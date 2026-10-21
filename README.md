@@ -11,7 +11,7 @@ Free, private PowerPoint to video converter at https://powerpoint2vid.com. Turns
 Static site, no build step: framework preset *None*, build command empty, output directory `/`.
 
 ## Google tag gateway
-`index.html` carries the Google tag with placeholder ID `G-XXXXXXXXXX`. Replace it, then in Cloudflare: zone > Google tag gateway > enable, enter the tag ID and a measurement path (e.g. `/metrics`).
+`index.html` carries the Google tag with tag ID `G-3F8MGRVD2L`. In Cloudflare: zone > Google tag gateway > enable, enter the tag ID and a measurement path (e.g. `/metrics`).
 
 ## Regenerate share images
 `python3 scripts/make-images.py` (needs Pillow and the Inter font).
