@@ -110,6 +110,17 @@
     </div>
   </section>
 
+  <section class="stats" id="stats" aria-label="Usage so far" hidden>
+    <div class="wrap">
+      <ul class="stats__grid">
+        <li><strong data-stat="videos">0</strong><span>videos created</span></li>
+        <li><strong data-stat="decks">0</strong><span>slide decks processed</span></li>
+        <li><strong data-stat="slides">0</strong><span>slides narrated</span></li>
+        <li><strong data-stat="minutes">0</strong><span>minutes of video</span></li>
+      </ul>
+    </div>
+  </section>
+
   <section class="app" id="app" aria-labelledby="app-title">
     <div class="wrap">
       <h2 id="app-title" class="sr-only">Slide deck to video converter</h2>
@@ -250,5 +261,6 @@
 <script src="/js/pptx-parser.js"></script>
 <script src="/js/renderer.js"></script>
 <script src="/js/app.js"></script>
+<script src="/js/stats.js"></script>
 </body>
 </html>

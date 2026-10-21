@@ -10,6 +10,10 @@ Free, private PowerPoint to video converter at https://powerpoint2vid.com. Turns
 ## Deploy (Cloudflare Pages)
 Static site, no build step: framework preset *None*, build command empty, output directory `/`.
 
+## Usage stats (homepage)
+`functions/api/stats.js` (Cloudflare Pages Function) keeps four aggregate counters in KV: videos created, decks processed, slides, and video seconds. `js/stats.js` fetches them on page load and animates a stats strip, but only once **10+ videos** exist. Sample decks are not counted. Only numbers are stored, never files or content.
+**Setup:** Cloudflare Pages > Settings > Functions > KV namespace bindings > add variable `STATS` pointing at a KV namespace (production and preview), then redeploy.
+
 ## Google tag gateway
 `index.html` carries the Google tag with tag ID `G-3F8MGRVD2L`. In Cloudflare: zone > Google tag gateway > enable, enter the tag ID and a measurement path (e.g. `/metrics`).
 

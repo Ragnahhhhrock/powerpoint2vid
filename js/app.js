@@ -11,6 +11,9 @@
   const track = (name, params) => { try { if (typeof window.gtag === 'function') window.gtag('event', name, params || {}); } catch (e) { /* analytics must never break the app */ } };
   const optParams = (o) => ({ voice_source: o.source, transition: o.trans, speed: o.rate, min_seconds: o.minSec, animate: o.animate, captions: o.captions, zoom: o.kenburns, tab_audio: o.tabAudio });
 
+  /* Aggregate usage counters (counts only; see functions/api/stats.js) */
+  const count = (body) => { try { fetch('/api/stats', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), keepalive: true }).catch(() => {}); } catch (e) { /* never break the app */ } };
+
   /* ---------- settings ---------- */
   const opts = () => ({
     voiceURI: $('voice').value, rate: +$('rate').value, source: $('source').value, trans: $('trans').value,
@@ -66,8 +69,9 @@
 
   function show(playerOn) { $('intake').hidden = playerOn; $('player').hidden = !playerOn; }
 
-  function loadDeck(d) {
+  function loadDeck(d, isSample) {
     deck = d; current = 0;
+    if (!isSample) count({ type: 'deck', slides: d.slides.length });
     track('deck_loaded', { slide_count: d.slides.length });
     const canvasH = 720, canvasW = Math.round((canvasH * d.W) / d.H);
     stage.width = canvasW; stage.height = canvasH;
@@ -184,6 +188,7 @@
     const chunks = []; rec.ondataavailable = (e) => e.data.size && chunks.push(e.data);
     const done = new Promise((r) => (rec.onstop = r));
     rec.start(500);
+    const t0 = Date.now();
     const ok = await playDeck(o, true);
     await new Promise((r) => setTimeout(r, 400));
     rec.stop(); await done;
@@ -192,6 +197,7 @@
     const ext = /mp4/.test(rec.mimeType) ? 'mp4' : 'webm';
     const url = URL.createObjectURL(new Blob(chunks, { type: rec.mimeType || 'video/webm' }));
     const a = document.createElement('a'); a.href = url; a.download = 'powerpoint2vid-explainer.' + ext; document.body.appendChild(a); a.click(); a.remove();
+    count({ type: 'video', seconds: (Date.now() - t0) / 1000 });
     track('export_complete', { format: ext, slide_count: deck.slides.length, size_mb: +(chunks.reduce((n, c) => n + c.size, 0) / 1048576).toFixed(1) });
     status('Exported powerpoint2vid-explainer.' + ext + '.'); setProgress(1);
   };
@@ -225,6 +231,6 @@
     ];
     return { W, H, slides };
   }
-  $('sample').onclick = (e) => { e.preventDefault(); track('sample_deck'); loadDeck(sample()); };
+  $('sample').onclick = (e) => { e.preventDefault(); track('sample_deck'); loadDeck(sample(), true); };
   window.__p2v = { loadDeck, sample };
 })();
