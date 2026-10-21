@@ -7,6 +7,7 @@ Private, online **PowerPoint to video converter** at https://powerpoint2vid.com.
 - **Video styles:** `js/video-styles.js` presets (cinematic, keynote, UI springs, kinetic poster, paper & ink) adapted from [awesome-opus5-5-videos](https://github.com/yihui-dev/awesome-opus5-5-videos) prompts. See `docs/VIDEO_STYLES.md`.
 - **Narrate + record:** `js/app.js` uses the Web Speech API for voice and MediaRecorder for export (WebM, or MP4 where supported).
 - **Design system:** `docs/STYLE_GUIDE.md` and `/style-guide.html`.
+- **v2 (planned):** server-side Opus 5.5 motion-director pipeline. See `docs/ARCHITECTURE.md`.
 
 ## Deploy (Cloudflare Pages)
 Static site, no build step: framework preset *None*, build command empty, output directory `/`.
