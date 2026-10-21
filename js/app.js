@@ -7,6 +7,10 @@
   let deck = null, current = 0, running = null; // running = {cancel(), recording}
   const synth = window.speechSynthesis;
 
+  /* ---------- analytics (GA4 custom events; never sends file names or slide content) ---------- */
+  const track = (name, params) => { try { if (typeof window.gtag === 'function') window.gtag('event', name, params || {}); } catch (e) { /* analytics must never break the app */ } };
+  const optParams = (o) => ({ voice_source: o.source, transition: o.trans, speed: o.rate, min_seconds: o.minSec, animate: o.animate, captions: o.captions, zoom: o.kenburns, tab_audio: o.tabAudio });
+
   /* ---------- settings ---------- */
   const opts = () => ({
     voiceURI: $('voice').value, rate: +$('rate').value, source: $('source').value, trans: $('trans').value,
@@ -35,11 +39,12 @@
     $('tab-ppt').setAttribute('aria-selected', ppt); $('tab-gs').setAttribute('aria-selected', !ppt);
     $('pane-ppt').hidden = !ppt; $('pane-gs').hidden = ppt;
   }
-  $('tab-ppt').onclick = () => tab('ppt'); $('tab-gs').onclick = () => tab('gs');
+  $('tab-ppt').onclick = () => { tab('ppt'); track('select_input_tab', { input_tab: 'pptx' }); }; $('tab-gs').onclick = () => { tab('gs'); track('select_input_tab', { input_tab: 'google_slides' }); };
 
   $('gs-open').onclick = () => {
     const m = $('gs-url').value.match(/\/presentation\/d\/([\w-]+)/);
     if (!m) { alert('Paste a Google Slides link that looks like docs.google.com/presentation/d/…'); return; }
+    track('google_slides_download');
     window.open('https://docs.google.com/presentation/d/' + m[1] + '/export/pptx', '_blank', 'noopener');
   };
 
@@ -51,17 +56,19 @@
 
   async function handleFile(file) {
     if (!/\.pptx$/i.test(file.name)) { alert('Please choose a .pptx file. For older .ppt files, open them in PowerPoint and Save As .pptx.'); return; }
+    track('deck_upload', { file_size_kb: Math.round(file.size / 1024) });
     show(true); status('Reading slides…'); setProgress(0.05);
     try {
       const d = await window.parsePptx(await file.arrayBuffer(), (n, t) => { setProgress(0.05 + 0.9 * (n / t)); status('Reading slide ' + (n + 1) + ' of ' + t + '…'); });
       loadDeck(d);
-    } catch (e) { console.error(e); show(false); alert('Sorry, that file could not be read: ' + e.message); }
+    } catch (e) { console.error(e); track('deck_parse_error'); show(false); alert('Sorry, that file could not be read: ' + e.message); }
   }
 
   function show(playerOn) { $('intake').hidden = playerOn; $('player').hidden = !playerOn; }
 
   function loadDeck(d) {
     deck = d; current = 0;
+    track('deck_loaded', { slide_count: d.slides.length });
     const canvasH = 720, canvasW = Math.round((canvasH * d.W) / d.H);
     stage.width = canvasW; stage.height = canvasH;
     document.querySelector('.stage').style.aspectRatio = d.W + '/' + d.H;
@@ -150,15 +157,16 @@
   function stopAll() { if (running) running.cancel(); }
 
   $('play').onclick = async () => {
+    track('preview_start', optParams(opts()));
     const ok = await playDeck(opts(), false);
     status(ok ? 'Done. Export the video when you are happy.' : 'Stopped.'); setProgress(0); gotoSlide(current);
   };
   $('stop').onclick = stopAll;
-  $('reset').onclick = () => { stopAll(); deck = null; $('file').value = ''; show(false); };
+  $('reset').onclick = () => { track('new_deck'); stopAll(); deck = null; $('file').value = ''; show(false); };
 
   $('export').onclick = async () => {
     const o = opts();
-    if (!window.MediaRecorder) { alert('Your browser cannot record video. Please use Chrome, Edge or Firefox on a desktop.'); return; }
+    if (!window.MediaRecorder) { track('export_unsupported'); alert('Your browser cannot record video. Please use Chrome, Edge or Firefox on a desktop.'); return; }
     const stream = stage.captureStream(30);
     let displayStream = null;
     if (o.tabAudio && o.source !== 'none') {
@@ -171,6 +179,7 @@
     }
     const types = ['video/mp4;codecs=avc1', 'video/webm;codecs=vp9,opus', 'video/webm;codecs=vp8,opus', 'video/webm'];
     const mime = types.find((t) => MediaRecorder.isTypeSupported(t)) || '';
+    track('export_start', Object.assign({ slide_count: deck.slides.length }, optParams(o)));
     const rec = new MediaRecorder(stream, Object.assign({ videoBitsPerSecond: 6e6 }, mime ? { mimeType: mime } : {}));
     const chunks = []; rec.ondataavailable = (e) => e.data.size && chunks.push(e.data);
     const done = new Promise((r) => (rec.onstop = r));
@@ -179,12 +188,23 @@
     await new Promise((r) => setTimeout(r, 400));
     rec.stop(); await done;
     if (displayStream) displayStream.getTracks().forEach((t) => t.stop());
-    if (!ok) { status('Export cancelled.'); setProgress(0); return; }
+    if (!ok) { track('export_cancel'); status('Export cancelled.'); setProgress(0); return; }
     const ext = /mp4/.test(rec.mimeType) ? 'mp4' : 'webm';
     const url = URL.createObjectURL(new Blob(chunks, { type: rec.mimeType || 'video/webm' }));
     const a = document.createElement('a'); a.href = url; a.download = 'powerpoint2vid-explainer.' + ext; document.body.appendChild(a); a.click(); a.remove();
+    track('export_complete', { format: ext, slide_count: deck.slides.length, size_mb: +(chunks.reduce((n, c) => n + c.size, 0) / 1048576).toFixed(1) });
     status('Exported powerpoint2vid-explainer.' + ext + '.'); setProgress(1);
   };
+
+  /* ---------- outbound / CTA clicks ---------- */
+  document.addEventListener('click', (ev) => {
+    const a = ev.target.closest && ev.target.closest('a[href]');
+    if (!a) return;
+    const href = a.getAttribute('href');
+    if (a.classList.contains('btn--accent') && href === '#app') track('cta_click', { location: 'hero' });
+    else if (/^mailto:/i.test(href)) track('contact_click');
+    else if (/^https?:\/\//i.test(href) && new URL(href).host !== location.host) track('outbound_click', { link_domain: new URL(href).hostname });
+  });
 
   /* ---------- sample deck ---------- */
   function sample() {
@@ -205,6 +225,6 @@
     ];
     return { W, H, slides };
   }
-  $('sample').onclick = (e) => { e.preventDefault(); loadDeck(sample()); };
+  $('sample').onclick = (e) => { e.preventDefault(); track('sample_deck'); loadDeck(sample()); };
   window.__p2v = { loadDeck, sample };
 })();

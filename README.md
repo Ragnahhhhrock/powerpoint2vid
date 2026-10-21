@@ -13,6 +13,23 @@ Static site, no build step: framework preset *None*, build command empty, output
 ## Google tag gateway
 `index.html` carries the Google tag with tag ID `G-3F8MGRVD2L`. In Cloudflare: zone > Google tag gateway > enable, enter the tag ID and a measurement path (e.g. `/metrics`).
 
+## Analytics events (GA4)
+Fired from `js/app.js` via `gtag('event', ...)`. No file names or slide content are ever sent. In GA4, mark `deck_loaded` and `export_complete` as key events.
+
+| Event | When | Params |
+|---|---|---|
+| `select_input_tab` | PowerPoint / Google Slides tab chosen | `input_tab` |
+| `google_slides_download` | Slides link opened as .pptx | |
+| `deck_upload` | .pptx chosen or dropped | `file_size_kb` |
+| `deck_loaded` | Deck parsed (also sample) | `slide_count` |
+| `deck_parse_error` | .pptx could not be read | |
+| `sample_deck` | Sample deck used | |
+| `preview_start` | Preview with voice | voice/transition/speed/captions settings |
+| `export_start` / `export_complete` / `export_cancel` | Video export lifecycle | settings, `slide_count`, `format`, `size_mb` |
+| `export_unsupported` | Browser cannot record | |
+| `new_deck` | New deck clicked | |
+| `cta_click` / `contact_click` / `outbound_click` | Hero CTA, mailto, external links | `location`, `link_domain` |
+
 ## Regenerate share images
 `python3 scripts/make-images.py` (needs Pillow and the Inter font).
 
