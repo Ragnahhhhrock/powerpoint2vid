@@ -116,7 +116,7 @@ h3 { font-size: var(--fs-md); margin: 0 0 var(--s-2); font-weight: 700; }
 .panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); box-shadow: var(--shadow-md); padding: var(--s-5); }
 .app-grid { display: grid; grid-template-columns: 1.55fr 1fr; gap: var(--s-5); align-items: start; }
 @media (max-width: 900px) { .app-grid { grid-template-columns: 1fr; } }
-.drop { border: 2px dashed var(--ink-300); border-radius: var(--r-md); padding: var(--s-7) var(--s-5); text-align: center; background: var(--paper-50); transition: border-color .15s, background .15s; cursor: pointer; }
+.drop { display: block; position: relative; border: 2px dashed var(--ink-300); border-radius: var(--r-md); padding: var(--s-7) var(--s-5); text-align: center; background: var(--paper-50); transition: border-color .15s, background .15s; cursor: pointer; }
 .drop:hover, .drop.is-over { border-color: var(--primary); background: var(--paper-100); }
 .drop strong { display: block; font-size: var(--fs-lg); margin-bottom: var(--s-1); }
 .drop span { color: var(--text-muted); font-size: var(--fs-sm); }
