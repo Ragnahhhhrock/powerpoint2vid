@@ -183,7 +183,28 @@
   $('stop').onclick = stopAll;
   $('reset').onclick = () => { track('new_deck'); stopAll(); deck = null; $('file').value = ''; show(false); };
 
+  /* ---------- paywall: exporting needs an active Pro subscription (previewing stays open) ---------- */
+  const paywall = $('paywall');
+  async function canExport() {
+    let me = await window.P2V.get();
+    if (me.pro) return true;
+    me = await window.P2V.get(true); // they may have just subscribed in another tab
+    if (me.pro) return true;
+    track('paywall_shown', { logged_in: !!me.loggedIn });
+    $('paywall-login').hidden = !!me.loggedIn;
+    $('paywall-msg').textContent = me.configured === false
+      ? 'Accounts are being set up. Exporting will be available shortly.'
+      : me.loggedIn
+        ? 'You are signed in as ' + me.email + ' but do not have an active plan. Previewing is open to everyone; exporting needs PowerPoint2Vid Pro, from A$8.25 a month.'
+        : 'Previewing is open to everyone. Exporting the finished video needs a PowerPoint2Vid Pro plan, from A$8.25 a month. Log in if you already have one.';
+    if (paywall.showModal) paywall.showModal(); else paywall.setAttribute('open', '');
+    return false;
+  }
+  $('paywall-close').onclick = () => paywall.close();
+  $('paywall-retry').onclick = async () => { paywall.close(); $('export').click(); };
+
   $('export').onclick = async () => {
+    if (!(await canExport())) return;
     const o = opts();
     if (!window.MediaRecorder) { track('export_unsupported'); alert('Your browser cannot record video. Please use Chrome, Edge or Firefox on a desktop.'); return; }
     const stream = stage.captureStream(30);

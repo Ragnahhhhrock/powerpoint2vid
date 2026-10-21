@@ -305,6 +305,19 @@
   </div>
 </footer>
 
+<dialog class="paywall" id="paywall" aria-labelledby="paywall-title">
+  <h2 id="paywall-title">Go Pro to export your video</h2>
+  <p id="paywall-msg">Previewing is open to everyone. Exporting the finished video needs a PowerPoint2Vid Pro plan, from A$8.25 a month.</p>
+  <p>Your deck stays loaded in this tab. The buttons below open in a new tab so you can come back and export.</p>
+  <div class="controls">
+    <a class="btn btn--accent" id="paywall-plans" href="/pricing" target="_blank" rel="noopener">See plans</a>
+    <a class="btn" id="paywall-login" href="/account?next=%2F" target="_blank" rel="noopener">Log in</a>
+    <button class="btn btn--ghost" id="paywall-retry" type="button">I've subscribed, continue</button>
+    <button class="btn btn--ghost" id="paywall-close" type="button">Close</button>
+  </div>
+</dialog>
+
+<script src="/js/account.js"></script>
 <script src="/vendor/jszip.min.js"></script>
 <script src="/js/pptx-parser.js"></script>
 <script src="/js/video-styles.js"></script>

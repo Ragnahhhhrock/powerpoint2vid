@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log in or create an account | PowerPoint2Vid</title>
+<meta name="description" content="Log in to PowerPoint2Vid, the PowerPoint to video converter, to manage your Pro subscription and export videos.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#6d4aff">
+<link rel="canonical" href="https://powerpoint2vid.com/account">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3F8MGRVD2L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-3F8MGRVD2L');
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="PowerPoint2Vid, the PowerPoint to video converter, home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#6d4aff"/><rect x="12" y="16" width="40" height="28" rx="5" fill="#fff"/><path d="M28 24l12 6-12 6z" fill="#5b3df0"/><rect x="20" y="49" width="24" height="4" rx="2" fill="#fff" opacity=".85"/></svg>
+      <span>PowerPoint<b>2Vid</b></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="/">Converter</a>
+      <a href="/pricing">Pricing</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="block">
+    <div class="wrap">
+      <div class="panel auth">
+        <!-- Signed out -->
+        <div id="auth-out" hidden>
+          <div class="tabs" role="tablist" aria-label="Account">
+            <button role="tab" id="tab-login" aria-selected="true" aria-controls="form-auth">Log in</button>
+            <button role="tab" id="tab-signup" aria-selected="false" aria-controls="form-auth">Create account</button>
+          </div>
+          <form id="form-auth" novalidate>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="text" inputmode="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="password">Password <span id="pw-hint" class="muted" hidden>(8 characters or more)</span></label>
+              <input id="password" name="password" type="password" autocomplete="current-password" required>
+            </div>
+            <p class="form-error" id="auth-error" role="alert" hidden></p>
+            <button class="btn" id="auth-submit" type="submit">Log in</button>
+          </form>
+        </div>
+
+        <!-- Signed in -->
+        <div id="auth-in" hidden>
+          <h1 class="auth__title">Your account</h1>
+          <p class="muted" id="who"></p>
+          <div class="hint" id="plan-box"></div>
+          <div class="controls">
+            <a class="btn btn--accent" id="go-pricing" href="/pricing">See plans</a>
+            <a class="btn" id="go-app" href="/">Open the converter</a>
+            <a class="btn btn--ghost" id="manage" href="#" hidden>Manage subscription</a>
+            <button class="btn btn--ghost" id="logout" type="button">Log out</button>
+          </div>
+        </div>
+
+        <p class="status" id="not-configured" hidden>Accounts are not switched on for this site yet. Please check back soon.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>© 2026 PowerPoint2Vid, the online PowerPoint to video converter · <a href="/pricing">Pricing</a> · <a href="mailto:contact@powerpoint2vid.com">contact@powerpoint2vid.com</a></div>
+    <div>another <a href="https://malgordon.com/" rel="noopener">Mal Gordon</a> creation</div>
+  </div>
+</footer>
+
+<script src="/js/account.js"></script>
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  var q = new URLSearchParams(location.search);
+  var rawNext = q.get('next') || '/';
+  var next = /^\/[^/\\]/.test(rawNext) ? rawNext : '/';
+  var mode = q.get('mode') === 'signup' ? 'signup' : 'login';
+
+  function setMode(m) {
+    mode = m;
+    $('tab-login').setAttribute('aria-selected', m === 'login');
+    $('tab-signup').setAttribute('aria-selected', m === 'signup');
+    $('auth-submit').textContent = m === 'login' ? 'Log in' : 'Create account';
+    $('pw-hint').hidden = m === 'login';
+    $('password').setAttribute('autocomplete', m === 'login' ? 'current-password' : 'new-password');
+    $('auth-error').hidden = true;
+  }
+  $('tab-login').onclick = function () { setMode('login'); };
+  $('tab-signup').onclick = function () { setMode('signup'); };
+
+  $('form-auth').onsubmit = function (e) {
+    e.preventDefault();
+    var btn = $('auth-submit'), err = $('auth-error');
+    err.hidden = true; btn.disabled = true;
+    fetch('/api/' + mode, { method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'same-origin',
+      body: JSON.stringify({ email: $('email').value, password: $('password').value }) })
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+      .then(function (res) {
+        if (!res.ok) throw new Error(res.j.error || 'Something went wrong.');
+        if (window.gtag) gtag('event', mode === 'signup' ? 'sign_up' : 'login', { method: 'password' });
+        location.href = next;
+      })
+      .catch(function (ex) { err.textContent = ex.message; err.hidden = false; btn.disabled = false; });
+  };
+
+  $('logout').onclick = function () {
+    fetch('/api/logout', { method: 'POST', credentials: 'same-origin' }).then(function () { location.href = '/'; });
+  };
+
+  window.P2V.get(true).then(function (me) {
+    if (me.configured === false) { $('not-configured').hidden = false; return; }
+    if (!me.loggedIn) { setMode(mode); $('auth-out').hidden = false; return; }
+    $('auth-in').hidden = false;
+    $('who').textContent = 'Signed in as ' + me.email;
+    if (me.pro) {
+      $('plan-box').textContent = 'PowerPoint2Vid Pro is active' + (me.plan ? ' (' + me.plan + ' plan)' : '') + '. You can export videos.';
+      $('go-pricing').hidden = true;
+    } else {
+      $('plan-box').textContent = 'You do not have an active plan yet. Choose a plan to export videos.';
+      $('go-app').className = 'btn btn--ghost';
+    }
+    var m = $('manage');
+    if (me.pro) { m.hidden = false; m.href = me.portalUrl || 'mailto:contact@powerpoint2vid.com?subject=Manage%20my%20subscription'; }
+  });
+})();
+</script>
+</body>
+</html>

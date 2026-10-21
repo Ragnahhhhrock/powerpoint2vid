@@ -59,7 +59,7 @@
         { "@type": "Question", "name": "How much does the PowerPoint to video converter cost?",
           "acceptedAnswer": { "@type": "Answer", "text": "PowerPoint2Vid Pro costs A$12 per month or A$99 per year (about A$8.25 a month). Both plans include unlimited slides, narration from speaker notes, captions and no watermark." } },
         { "@type": "Question", "name": "Can I cancel my PowerPoint2Vid subscription?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can cancel at any time from the link in your Stripe receipt email and you keep access until the end of the period you have paid for." } },
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Open your account page and choose Manage subscription. You keep access until the end of the period you have paid for." } },
         { "@type": "Question", "name": "Is my presentation uploaded when I pay?",
           "acceptedAnswer": { "@type": "Answer", "text": "No. Payment is handled by Stripe. Your slides are still parsed, narrated and recorded locally in your browser and never leave your device." } }
       ]
@@ -128,7 +128,7 @@
             <li>No watermark</li>
             <li>Private: slides never leave your device</li>
           </ul>
-          <a class="btn" href="https://buy.stripe.com/4gM8wHbqpd4pbJmfP6aAw06" rel="noopener" data-plan="pro_monthly">Get Pro monthly</a>
+          <a class="btn" href="/checkout?plan=monthly" data-plan="pro_monthly">Get Pro monthly</a>
         </article>
 
         <article class="plan plan--best">
@@ -145,10 +145,10 @@
             <li>Cancel any time</li>
             <li>Private: slides never leave your device</li>
           </ul>
-          <a class="btn btn--accent" href="https://buy.stripe.com/7sY6ozfGFggB00EauMaAw07" rel="noopener" data-plan="pro_yearly">Get Pro yearly</a>
+          <a class="btn btn--accent" href="/checkout?plan=yearly" data-plan="pro_yearly">Get Pro yearly</a>
         </article>
       </div>
-      <p class="fine">Prices in Australian dollars (AUD). Secure checkout by Stripe. Receipts are emailed and include a link to manage or cancel your subscription.</p>
+      <p class="fine">Prices in Australian dollars (AUD). You will be asked to create an account or log in first, then taken to secure Stripe checkout.</p>
     </div>
   </section>
 
@@ -175,7 +175,7 @@
     <div class="wrap">
       <h2>Pricing questions</h2>
       <details><summary>How much does the PowerPoint to video converter cost?</summary><p>PowerPoint2Vid Pro is A$12 per month or A$99 per year. Both include unlimited slides, narration from speaker notes, captions and no watermark.</p></details>
-      <details><summary>Can I cancel at any time?</summary><p>Yes. Use the manage link in your Stripe receipt email. You keep access until the end of the period you have paid for.</p></details>
+      <details><summary>Can I cancel at any time?</summary><p>Yes. Open your account page and choose Manage subscription. You keep access until the end of the period you have paid for.</p></details>
       <details><summary>Is my presentation uploaded when I pay?</summary><p>No. Payment is handled by Stripe. Your slides are still parsed, narrated and recorded locally in your browser.</p></details>
       <details><summary>Do you offer team or bulk pricing?</summary><p>Email <a href="mailto:contact@powerpoint2vid.com">contact@powerpoint2vid.com</a> with how many people need access and we will sort something out.</p></details>
       <details><summary>Which payment methods are accepted?</summary><p>Cards, Apple Pay, Link and Klarna, via Stripe's secure checkout.</p></details>
@@ -190,6 +190,7 @@
   </div>
 </footer>
 
+<script src="/js/account.js"></script>
 <script>
   document.querySelectorAll('[data-plan]').forEach(function (a) {
     a.addEventListener('click', function () {
