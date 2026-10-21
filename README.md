@@ -4,6 +4,7 @@ Free, private **PowerPoint to video converter** at https://powerpoint2vid.com. T
 
 - **Parse:** `js/pptx-parser.js` reads slides, shapes, images and speaker notes (JSZip, vendored).
 - **Render/animate:** `js/renderer.js` draws slides to canvas with reveal animations, transitions and captions.
+- **Video styles:** `js/video-styles.js` presets (cinematic, keynote, UI springs, kinetic poster, paper & ink) adapted from [awesome-opus5-5-videos](https://github.com/yihui-dev/awesome-opus5-5-videos) prompts. See `docs/VIDEO_STYLES.md`.
 - **Narrate + record:** `js/app.js` uses the Web Speech API for voice and MediaRecorder for export (WebM, or MP4 where supported).
 - **Design system:** `docs/STYLE_GUIDE.md` and `/style-guide.html`.
 
@@ -28,7 +29,8 @@ Fired from `js/app.js` via `gtag('event', ...)`. No file names or slide content 
 | `deck_loaded` | Deck parsed (also sample) | `slide_count` |
 | `deck_parse_error` | .pptx could not be read | |
 | `sample_deck` | Sample deck used | |
-| `preview_start` | Preview with voice | voice/transition/speed/captions settings |
+| `select_video_style` | Video style changed | `video_style` |
+| `preview_start` | Preview with voice | `video_style`, voice/transition/speed/captions settings |
 | `export_start` / `export_complete` / `export_cancel` | Video export lifecycle | settings, `slide_count`, `format`, `size_mb` |
 | `export_unsupported` | Browser cannot record | |
 | `new_deck` | New deck clicked | |

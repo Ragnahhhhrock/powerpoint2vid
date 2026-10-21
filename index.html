@@ -79,7 +79,7 @@
         { "@type": "Question", "name": "What is the best free PowerPoint to video converter?",
           "acceptedAnswer": { "@type": "Answer", "text": "PowerPoint2Vid is a free PowerPoint to video converter that runs in your browser. It adds voiceover from your speaker notes, animated reveals, transitions and captions, with no upload, no sign-up and no watermark." } },
         { "@type": "Question", "name": "How do I convert a PowerPoint to a video?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Drop your .pptx file into the PowerPoint to video converter, choose a voice and animation style, preview it, then export. Everything runs in your browser." } },
+          "acceptedAnswer": { "@type": "Answer", "text": "Drop your .pptx file into the PowerPoint to video converter, choose a voice and video style, preview it, then export. Everything runs in your browser." } },
         { "@type": "Question", "name": "Can I convert Google Slides to video?",
           "acceptedAnswer": { "@type": "Answer", "text": "Yes. In Google Slides choose File, Download, Microsoft PowerPoint (.pptx), then drop the file into the converter. The Google Slides tab gives you a direct export link." } },
         { "@type": "Question", "name": "What video format does the PowerPoint to video converter export?",
@@ -203,6 +203,11 @@
             </select>
           </div>
           <div class="field">
+            <label for="vstyle">Video style</label>
+            <select id="vstyle"></select>
+            <small id="vstyle-desc"></small>
+          </div>
+          <div class="field">
             <label for="trans">Transition</label>
             <select id="trans">
               <option value="fade">Crossfade</option>
@@ -282,7 +287,7 @@
     <div class="wrap">
       <h2>PowerPoint to video converter: common questions</h2>
       <details><summary>What is the best free PowerPoint to video converter?</summary><p>PowerPoint2Vid is a free PowerPoint to video converter that runs in your browser. It adds voiceover from your speaker notes, animated reveals, transitions and captions, with no upload, no sign-up and no watermark.</p></details>
-      <details><summary>How do I convert a PowerPoint to a video?</summary><p>Drop your .pptx into the PowerPoint to video converter, choose a voice and animation style, preview it, then export. Everything runs in your browser.</p></details>
+      <details><summary>How do I convert a PowerPoint to a video?</summary><p>Drop your .pptx into the PowerPoint to video converter, choose a voice and video style, preview it, then export. Everything runs in your browser.</p></details>
       <details><summary>Can I convert Google Slides to video?</summary><p>Yes. Download your deck from Google Slides as a PowerPoint (.pptx) file, then drop it in. The Google Slides tab gives you the export link.</p></details>
       <details><summary>Is my presentation uploaded to a server?</summary><p>No. Slides are parsed and recorded locally, so they never leave your device.</p></details>
       <details><summary>Where does the narration come from?</summary><p>From your speaker notes, or slide text if there are no notes, using your browser’s built-in text-to-speech voices. Available voices depend on your device.</p></details>
@@ -301,6 +306,7 @@
 
 <script src="/vendor/jszip.min.js"></script>
 <script src="/js/pptx-parser.js"></script>
+<script src="/js/video-styles.js"></script>
 <script src="/js/renderer.js"></script>
 <script src="/js/app.js"></script>
 <script src="/js/stats.js"></script>

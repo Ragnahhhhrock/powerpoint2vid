@@ -9,7 +9,7 @@
 
   /* ---------- analytics (GA4 custom events; never sends file names or slide content) ---------- */
   const track = (name, params) => { try { if (typeof window.gtag === 'function') window.gtag('event', name, params || {}); } catch (e) { /* analytics must never break the app */ } };
-  const optParams = (o) => ({ voice_source: o.source, transition: o.trans, speed: o.rate, min_seconds: o.minSec, animate: o.animate, captions: o.captions, zoom: o.kenburns, tab_audio: o.tabAudio });
+  const optParams = (o) => ({ video_style: o.style.id, voice_source: o.source, transition: o.trans, speed: o.rate, min_seconds: o.minSec, animate: o.animate, captions: o.captions, zoom: o.kenburns, tab_audio: o.tabAudio });
 
   /* Aggregate usage counters (counts only; see functions/api/stats.js) */
   const count = (body) => { try { fetch('/api/stats', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), keepalive: true }).catch(() => {}); } catch (e) { /* never break the app */ } };
@@ -17,7 +17,22 @@
   /* ---------- settings ---------- */
   const opts = () => ({
     voiceURI: $('voice').value, rate: +$('rate').value, source: $('source').value, trans: $('trans').value,
-    minSec: +$('minsec').value, animate: $('anim').checked, captions: $('caps').checked, kenburns: $('kb').checked, tabAudio: $('tabaudio').checked
+    minSec: +$('minsec').value, animate: $('anim').checked, captions: $('caps').checked, kenburns: $('kb').checked, tabAudio: $('tabaudio').checked, style: window.VideoStyles.get($('vstyle').value)
+  });
+
+  /* ---------- video styles (presets from js/video-styles.js) ---------- */
+  $('vstyle').innerHTML = window.VideoStyles.list.map((v) => `<option value="${v.id}">${v.name}</option>`).join('');
+  function describeStyle() {
+    const v = window.VideoStyles.get($('vstyle').value);
+    const credit = v.sources.length ? ' Adapted from prompts by ' + v.sources.map((c) => `<a href="${c.prompt}" target="_blank" rel="noopener">${c.author}</a>`).join(' and ') + '.' : '';
+    $('vstyle-desc').innerHTML = v.desc + credit;
+  }
+  describeStyle();
+  $('vstyle').addEventListener('change', () => {
+    const v = window.VideoStyles.get($('vstyle').value);
+    $('trans').value = v.trans; describeStyle();
+    track('select_video_style', { video_style: v.id });
+    if (deck && !running) gotoSlide(current);
   });
   $('rate').addEventListener('input', () => ($('rate-out').textContent = (+$('rate').value).toFixed(1) + '×'));
   $('minsec').addEventListener('input', () => ($('min-out').textContent = $('minsec').value + 's'));
@@ -91,7 +106,7 @@
     });
   }
   function gotoSlide(i) {
-    current = i; R.drawSlide(ctx, deck.slides[i], 1, { animate: false, kenburns: false });
+    current = i; R.drawStill(ctx, deck.slides[i], opts(), { idx: i, total: deck.slides.length });
     Array.from($('strip').children).forEach((b, j) => b.setAttribute('aria-current', j === i ? 'true' : 'false'));
   }
 
@@ -144,11 +159,11 @@
         const el = (performance.now() - t0) / 1000;
         if (el >= est && spoken) break;
         const p = Math.min(1, el / est);
-        R.drawFrame(ctx, slide, prev, p, o, el);
+        R.drawFrame(ctx, slide, prev, p, o, el, { idx: i, total: deck.slides.length });
         if (o.captions && caps.length) {
           let acc = 0, shown = caps[caps.length - 1];
           for (const c of caps) { acc += c.length / total; if (p <= acc) { shown = c; break; } }
-          R.drawCaption(ctx, shown);
+          R.drawCaption(ctx, shown, o.style);
         }
         setProgress((i + Math.min(1, el / est)) / deck.slides.length);
         await raf();
