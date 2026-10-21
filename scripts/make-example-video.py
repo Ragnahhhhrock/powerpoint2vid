@@ -49,7 +49,7 @@ SLIDES = [
      "notes": "Add your deck. Pick a voice and a style. Preview it. Then export. Your speaker notes become the script, and shapes animate in as each point is spoken."},
     {"kind": "ticks",
      "title": "Private by design.",
-     "ticks": ["Runs in your browser", "Nothing is uploaded", "No sign-up, no watermark", "Free to use"],
+     "ticks": ["Runs in your browser", "Nothing is uploaded", "No sign-up, no watermark"],
      "notes": "Everything runs in your browser. Nothing is uploaded, so your slides never leave your device. There is no sign-up and no watermark, and it is free."},
     {"kind": "cta",
      "title": "Try it with your own deck.",

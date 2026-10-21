@@ -242,7 +242,7 @@
         'Welcome to PowerPoint2Vid. This short sample shows how a slide deck becomes a narrated explainer video, right in your browser.'),
       mkSlide(1, '#f8f7fc', [title('How it works'), bullets(['Drop in a PowerPoint deck', 'Your speaker notes become the voiceover', 'Shapes animate in, slides transition', 'Export a finished video']), chip(8.4, 2.6, '#6d4aff', 'Drop'), chip(8.4, 4.1, '#1fbf8f', 'Narrate'), chip(8.4, 5.6, '#ff6b4a', 'Export')],
         'It works in four steps. Drop in your deck. Your speaker notes become the voiceover. Shapes animate in one by one. Then export your finished video.'),
-      mkSlide(2, '#ffffff', [title('Your slides stay on your device'), bullets(['Parsed locally in your browser', 'No uploads, no account', 'Free to use']), chip(8.4, 3.2, '#0e1330', 'Private by design')],
+      mkSlide(2, '#ffffff', [title('Your slides stay on your device'), bullets(['Parsed locally in your browser', 'No uploads, no account']), chip(8.4, 3.2, '#0e1330', 'Private by design')],
         'Everything runs on your device. Nothing is uploaded, and there is no account to create. Try it with your own deck now.')
     ];
     return { W, H, slides };
