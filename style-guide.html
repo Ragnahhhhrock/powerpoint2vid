@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Style Guide | PowerPoint2Vid</title>
+<meta name="description" content="Design system and style guide for PowerPoint2Vid: colour, typography, spacing and components.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://powerpoint2vid.com/style-guide.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/styles.css"></head>
+<body>
+<header class="site-header"><div class="wrap"><a class="brand" href="/">PowerPoint<b>2Vid</b></a><nav class="nav"><a href="/">Back to converter</a></nav></div></header>
+<main class="wrap" style="padding:var(--s-7) 0">
+<h1 style="font-size:var(--fs-xl);max-width:none;margin-top:0">Design system &amp; style guide</h1>
+<p class="lede" style="margin-left:0">Tokens live in <code>styles.css</code> (<code>:root</code>). Everything below uses them.</p>
+<h2>Colour</h2><div class="cards"><div class="card"><div style="height:64px;border-radius:var(--r-sm);background:var(--ink-900);border:1px solid var(--border)"></div><h3 style="margin-top:var(--s-3)">--ink-900</h3><p>#0e1330</p></div><div class="card"><div style="height:64px;border-radius:var(--r-sm);background:var(--ink-500);border:1px solid var(--border)"></div><h3 style="margin-top:var(--s-3)">--ink-500</h3><p>#5b6190</p></div><div class="card"><div style="height:64px;border-radius:var(--r-sm);background:var(--paper-50);border:1px solid var(--border)"></div><h3 style="margin-top:var(--s-3)">--paper-50</h3><p>#f8f7fc</p></div><div class="card"><div style="height:64px;border-radius:var(--r-sm);background:var(--paper-200);border:1px solid var(--border)"></div><h3 style="margin-top:var(--s-3)">--paper-200</h3><p>#e1def1</p></div><div class="card"><div style="height:64px;border-radius:var(--r-sm);background:var(--violet-500);border:1px solid var(--border)"></div><h3 style="margin-top:var(--s-3)">--violet-500</h3><p>#6d4aff</p></div><div class="card"><div style="height:64px;border-radius:var(--r-sm);background:var(--violet-600);border:1px solid var(--border)"></div><h3 style="margin-top:var(--s-3)">--violet-600</h3><p>#5b3df0</p></div><div class="card"><div style="height:64px;border-radius:var(--r-sm);background:var(--coral-500);border:1px solid var(--border)"></div><h3 style="margin-top:var(--s-3)">--coral-500</h3><p>#ff6b4a</p></div><div class="card"><div style="height:64px;border-radius:var(--r-sm);background:var(--mint-500);border:1px solid var(--border)"></div><h3 style="margin-top:var(--s-3)">--mint-500</h3><p>#1fbf8f</p></div></div>
+<h2 style="margin-top:var(--s-7)">Typography</h2>
+<div class="panel"><div style="font-size:var(--fs-2xl);font-weight:800;line-height:1.05;letter-spacing:-.035em">Display 800</div><h2 style="margin-top:var(--s-4)">Heading XL 800</h2><h3>Heading MD 700</h3><p>Body copy, Inter 400, 17px with 1.6 line height for comfortable reading.</p><p style="color:var(--text-muted);font-size:var(--fs-sm)">Muted small text for hints and secondary information.</p></div>
+<h2 style="margin-top:var(--s-7)">Buttons</h2>
+<div class="controls"><button class="btn">Primary</button><button class="btn btn--accent">Accent</button><button class="btn btn--ghost">Ghost</button><button class="btn" disabled>Disabled</button></div>
+<h2 style="margin-top:var(--s-7)">Form controls</h2>
+<div class="panel" style="max-width:420px"><div class="field"><label for="a">Select</label><select id="a"><option>Narrator voice</option></select></div><div class="field"><label for="b">Slider</label><input id="b" type="range"></div><label class="check"><input type="checkbox" checked> Checkbox option</label></div>
+<h2 style="margin-top:var(--s-7)">Rules</h2>
+<ul><li>Use tokens only; no hard-coded colours, sizes or radii.</li><li>One accent (coral) action per view; everything else primary or ghost.</li><li>Keep AA contrast, 44px targets and visible focus rings.</li><li>Voice: plain, confident, short sentences.</li></ul>
+</main>
+<footer class="site-footer"><div class="wrap"><div>© 2026 PowerPoint2Vid</div><div>another <a href="https://malgordon.com/" rel="noopener">Mal Gordon</a> creation</div></div></footer>
+</body></html>

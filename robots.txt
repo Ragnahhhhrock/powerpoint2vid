@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://powerpoint2vid.com/sitemap.xml
