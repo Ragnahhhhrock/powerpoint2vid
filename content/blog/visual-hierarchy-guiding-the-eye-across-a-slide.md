@@ -8,7 +8,7 @@ pillar: craft
 persona: all
 ---
 
-When a slide appears, the viewer's eye has to land somewhere. If everything is the same size and colour, it lands nowhere in particular and wanders. That is the problem visual hierarchy slides solve. It tells people what to look at first, what to read second, and what they can ignore until later. This post covers the tools that create hierarchy and how to apply them, with a worked example.
+When a slide appears, the viewer's eye has to land somewhere. If everything is the same size and colour, it lands nowhere in particular and wanders. That is the problem visual hierarchy slides solve. Good hierarchy tells people what to look at first, what to read second, and what they can ignore until later. This post covers the tools that create hierarchy and how to apply them, with a worked example.
 
 ## What visual hierarchy means on a slide
 

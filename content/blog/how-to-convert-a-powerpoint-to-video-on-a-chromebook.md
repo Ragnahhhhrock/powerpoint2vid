@@ -2,7 +2,7 @@
 title: How to Convert a PowerPoint to Video on a Chromebook
 slug: how-to-convert-a-powerpoint-to-video-on-a-chromebook
 date: 2026-12-13
-description: A step-by-step guide to PowerPoint to video on a Chromebook: get a .pptx, add narration from speaker notes, burn in captions and export in Chrome.
+description: A step-by-step PowerPoint to video Chromebook guide: get a .pptx, add narration from speaker notes, burn in captions and export a video in Chrome.
 keyword: powerpoint to video chromebook
 pillar: convert
 persona: educator
@@ -58,7 +58,7 @@ Here is a sample speaker note for a Year 9 science slide titled "Plants make the
 
 That reads naturally aloud and gives the text-to-speech voice clean sentences to work with. For more on this, see [How to Write Speaker Notes That Become a Great Voiceover](/blog/how-to-write-speaker-notes-that-become-a-great-voiceover).
 
-## Convert PowerPoint to video on a Chromebook, step by step
+## A PowerPoint to video Chromebook walkthrough
 
 PowerPoint2Vid runs entirely in the browser. Your .pptx is opened, animated, narrated and recorded on the Chromebook itself. The slides are not uploaded to a server, which is useful when course material includes student names or unreleased assessment details.
 

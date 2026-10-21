@@ -101,7 +101,7 @@ Here's one slide showing several mistakes at once, and the fixed version.
 
 Same information. Far easier to take in.
 
-## How to catch these mistakes before anyone else does
+## How to catch PowerPoint mistakes before anyone else does
 
 Fixing mistakes is easy once you see them. The hard part is seeing them in your own deck.
 

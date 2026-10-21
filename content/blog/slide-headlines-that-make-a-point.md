@@ -94,6 +94,7 @@ These can stay short, but they can still make a promise.
 - **Vague verbs.** "Improved", "enhanced" and "optimised" without a measure don't say much. Say what changed.
 - **Claims the slide doesn't support.** The headline makes a promise; the body has to keep it.
 - **Questions as headlines everywhere.** One question to open a section can work. A whole deck of them feels like a quiz.
+- **Jargon the reader doesn't share.** Internal project names and acronyms mean nothing to a prospect. Use the words your client uses to describe their own problem.
 
 ## Headlines and speaker notes
 

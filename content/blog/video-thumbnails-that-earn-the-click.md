@@ -2,7 +2,7 @@
 title: Video Thumbnails That Earn the Click
 slug: video-thumbnails-that-earn-the-click
 date: 2027-01-08
-description: Practical video thumbnail tips for presentation and explainer videos: one clear idea, a few bold words, strong contrast, and a design that reads at phone size.
+description: Practical video thumbnail tips for presentation and explainer videos: one clear idea, a few bold words, strong contrast and a design that reads on a phone.
 keyword: video thumbnail tips
 pillar: share
 persona: marketer

@@ -2,13 +2,13 @@
 title: Adding Presentation Videos to Your LMS
 slug: adding-presentation-videos-to-your-lms
 date: 2026-12-11
-description: A practical guide to putting a presentation video in your LMS: file formats, hosting, captions, transcripts and page layout students can follow.
+description: A practical presentation video LMS guide: file formats, hosting, captions, transcripts and a page layout that helps students actually press play.
 keyword: presentation video lms
 pillar: share
 persona: educator
 ---
 
-You have turned a lecture deck into a narrated video. Now it needs a home where students will actually find it and watch it. Getting a presentation video into your LMS well is less about the upload button and more about the decisions around it: format, hosting, captions, and where the video sits on the page.
+You have turned a lecture deck into a narrated video. Now it needs a home where students will actually find it and watch it. A good presentation video LMS setup is less about the upload button and more about the decisions around it: format, hosting, captions, and where the video sits on the page.
 
 This guide walks through those decisions in order. It applies whether your institution runs Moodle, Canvas, Blackboard or something else, because the principles are the same.
 

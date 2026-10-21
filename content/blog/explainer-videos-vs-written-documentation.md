@@ -2,7 +2,7 @@
 title: Explainer Videos vs Written Documentation
 slug: explainer-videos-vs-written-documentation
 date: 2026-12-20
-description: Video vs documentation for training and internal knowledge: when each works best, how to combine them, and how to keep both up to date without double the effort.
+description: Video vs documentation for training and internal knowledge: when each works best, how to combine them, and how to keep both current without double the effort.
 keyword: video vs documentation
 pillar: why
 persona: trainer
@@ -85,7 +85,7 @@ Here is an example for a new expense policy.
 3. Submit. Your manager is notified automatically.
 4. Do not email receipts to finance.
 
-The words match because they came from the same place. When the policy changes again, you update one set of notes. For more on writing notes like this, see [Pronunciation Tips for Text-to-Speech Narration](/blog/pronunciation-tips-for-text-to-speech-narration).
+The words match because they came from the same place. When the policy changes again, you update one set of notes. For a fuller example of this approach, see [Employee Onboarding Videos From Your Existing PowerPoint](/blog/employee-onboarding-videos-from-your-existing-powerpoint).
 
 ## When to skip the video
 
@@ -105,6 +105,6 @@ Save video for topics people need to understand, not just look up.
 - Use one deck and its speaker notes as the source for both.
 - Skip video for tiny, reference-only or constantly changing content.
 
-## Make the video half the easy half
+## Start with the slides you already have
 
 If your training content already lives in slides, the video is mostly done. Drop the deck into the [PowerPoint to video converter](/), let the speaker notes become the narration, burn in captions, and export. Then reuse the same notes for your written guide, so both always tell the same story.

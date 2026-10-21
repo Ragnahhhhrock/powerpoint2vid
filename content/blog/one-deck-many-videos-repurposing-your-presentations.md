@@ -2,17 +2,17 @@
 title: One Deck, Many Videos: Repurposing Your Presentations
 slug: one-deck-many-videos-repurposing-your-presentations
 date: 2026-12-17
-description: How to repurpose a presentation into video several ways: a full explainer, short social clips, a sales follow-up and an onboarding version, all from one deck.
+description: How to repurpose a presentation into video four ways: a website explainer, social clips, a sales follow-up and an onboarding version, all from one deck.
 keyword: repurpose presentation into video
 pillar: why
 persona: marketer
 ---
 
-Most decks get presented once, then disappear into a shared drive. That is a lot of thinking left on the shelf. When you repurpose a presentation into video, the same slides can become a website explainer, a set of social clips, a sales follow-up and an onboarding module. Each one reaches a different audience, and none of them starts from a blank page.
+Most decks get presented once, then disappear into a shared drive. That is a lot of thinking left on the shelf. If you repurpose a presentation into video, the same slides can become a website explainer, a set of social clips, a sales follow-up and an onboarding module. Each one reaches a different audience, and none of them starts from a blank page.
 
 This post shows how to plan one deck for several videos, and how to adapt it for each use without rebuilding everything.
 
-## Why repurposing works
+## Why it pays to repurpose a presentation into video
 
 You already did the hard part. The deck has a story, a structure, approved messaging and visuals that match your brand. Creating each video from scratch means repeating that work and risking mixed messages.
 

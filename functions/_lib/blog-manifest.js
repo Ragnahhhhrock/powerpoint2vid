@@ -47,21 +47,21 @@ export const POSTS = [
 "slug": "lecturers-turn-lecture-slides-into-course-videos",
 "date": "2026-10-28",
 "title": "Lecturers: Turn Lecture Slides into Course Videos",
-"description": "A practical playbook for turning lecture slides to video: pick the right decks, write notes as narration, add captions and build short course videos for your LMS.",
+"description": "A practical playbook for turning lecture slides to video: pick the right decks, write notes as narration, add captions and build short videos for your LMS.",
 "pillar": "playbook"
 },
 {
 "slug": "the-benefits-of-explainer-videos-for-small-businesses",
 "date": "2026-10-29",
 "title": "The Benefits of Explainer Videos for Small Businesses",
-"description": "The benefits of explainer videos for small businesses: clearer messages, fewer repeat questions, consistent sales and support, and a low-cost route from slides.",
+"description": "The benefits of explainer videos for small businesses: clearer messages, fewer repeat questions, consistent sales and a low-cost route from your slides.",
 "pillar": "why"
 },
 {
 "slug": "choosing-a-narrator-voice-and-speaking-speed",
 "date": "2026-10-30",
 "title": "Choosing a Narrator Voice and Speaking Speed",
-"description": "How to choose a text to speech narrator voice and speaking speed for slide videos, with tips on testing voices, setting pace and writing scripts that sound natural.",
+"description": "How to choose a text to speech narrator voice and speaking speed for slide videos, with tips on testing voices, setting pace and writing natural scripts.",
 "pillar": "share"
 },
 {
@@ -152,14 +152,14 @@ export const POSTS = [
 "slug": "where-to-put-an-explainer-video-on-your-website",
 "date": "2026-11-12",
 "title": "Where to Put an Explainer Video on Your Website",
-"description": "Where should an explainer video on your website go? Practical placements for home, product, pricing and help pages, plus how to keep each one useful.",
+"description": "The best places for an explainer video on website pages, from home and product pages to pricing and help, plus the details that get people to press play.",
 "pillar": "why"
 },
 {
 "slug": "pronunciation-tips-for-text-to-speech-narration",
 "date": "2026-11-13",
 "title": "Pronunciation Tips for Text-to-Speech Narration",
-"description": "Practical text to speech pronunciation tips for training videos: fix acronyms, names, numbers and jargon in your speaker notes so the narrator gets them right.",
+"description": "Text to speech pronunciation tips for training videos. Fix acronyms, names, numbers and jargon in your speaker notes so the narrator gets them right.",
 "pillar": "share"
 },
 {
@@ -180,7 +180,7 @@ export const POSTS = [
 "slug": "how-to-choose-a-video-style-for-your-slide-deck",
 "date": "2026-11-16",
 "title": "How to Choose a Video Style for Your Slide Deck",
-"description": "A practical guide to presentation video styles: what each of the six PowerPoint2Vid looks does and how to match one to your brand, audience and message.",
+"description": "A practical guide to presentation video styles. See what each of the six PowerPoint2Vid looks does and how to match one to your brand and audience.",
 "pillar": "convert"
 },
 {
@@ -208,7 +208,7 @@ export const POSTS = [
 "slug": "where-to-share-your-presentation-video",
 "date": "2026-11-20",
 "title": "Where to Share Your Presentation Video",
-"description": "Where to share presentation video files once they're made: websites, YouTube, LinkedIn, your LMS, email and internal tools, with tips for each channel.",
+"description": "Where to share presentation video files once they're made. Websites, YouTube, LinkedIn, your LMS, email and internal tools, with tips for each channel.",
 "pillar": "share"
 },
 {
@@ -243,7 +243,7 @@ export const POSTS = [
 "slug": "compliance-and-policy-training-videos-without-a-studio",
 "date": "2026-11-25",
 "title": "Compliance and Policy Training Videos Without a Studio",
-"description": "A step-by-step playbook for making a compliance training video from your existing policy deck, with clear scripts, captions and quick updates when rules change.",
+"description": "A step-by-step playbook for making a compliance training video from your policy deck, with clear scripts, captions and quick updates when rules change.",
 "pillar": "playbook"
 },
 {
@@ -257,42 +257,42 @@ export const POSTS = [
 "slug": "uploading-a-presentation-video-to-youtube-titles-descriptions-and-chap",
 "date": "2026-11-27",
 "title": "Uploading a Presentation Video to YouTube: Titles, Descriptions and Chapters",
-"description": "How to upload a presentation to YouTube the right way: file prep, a searchable title, a useful description, chapters built from your slides and a clean thumbnail.",
+"description": "How to upload a presentation to YouTube properly: file prep, a searchable title, a useful description, chapters built from your slides and a thumbnail.",
 "pillar": "share"
 },
 {
 "slug": "how-to-open-a-presentation-so-people-keep-watching",
 "date": "2026-11-28",
 "title": "How to Open a Presentation So People Keep Watching",
-"description": "How to start a presentation so people keep watching: five opening patterns, sample first lines, and what to cut from your first slides for live talks and video.",
+"description": "How to start a presentation so people keep watching: five opening patterns, sample first lines, and what to cut from your first slides, live or on video.",
 "pillar": "craft"
 },
 {
 "slug": "how-to-add-narration-to-powerpoint-without-recording-your-own-voice",
 "date": "2026-11-29",
 "title": "How to Add Narration to PowerPoint Without Recording Your Own Voice",
-"description": "Want to add voiceover to PowerPoint without using a microphone? Here is how text-to-speech narration from speaker notes works, with scripts, settings and tips.",
+"description": "Want to add voiceover to PowerPoint without a microphone? Here is how text-to-speech narration from speaker notes works, with scripts, settings and tips.",
 "pillar": "convert"
 },
 {
 "slug": "slide-transitions-that-work-in-video-and-ones-that-dont",
 "date": "2026-11-30",
 "title": "Slide Transitions That Work in Video (and Ones That Don't)",
-"description": "Which PowerPoint transitions in video help viewers follow along and which distract. Crossfade, slide, zoom and hard cuts compared, with tips on pacing and builds.",
+"description": "Which PowerPoint transitions in video help viewers follow along and which distract. Crossfade, slide, zoom and hard cuts compared, plus tips on builds.",
 "pillar": "convert"
 },
 {
 "slug": "how-to-end-a-presentation-with-a-clear-call-to-action",
 "date": "2026-12-01",
 "title": "How to End a Presentation With a Clear Call to Action",
-"description": "Learn how to end a presentation with one clear call to action, a short recap and a closing slide that tells people exactly what to do next.",
+"description": "Learn how to end a presentation with one clear call to action, a short recap and a closing slide that tells your audience exactly what to do next.",
 "pillar": "craft"
 },
 {
 "slug": "marketers-turning-decks-into-social-videos",
 "date": "2026-12-02",
 "title": "Marketers: Turning Decks into Social Videos",
-"description": "A practical playbook for marketers turning a presentation to social video, from picking the right slides to captions, hooks and posting.",
+"description": "A practical playbook for marketers turning a presentation to social video, from picking the right slides to writing captions, hooks and posts.",
 "pillar": "playbook"
 },
 {
@@ -306,14 +306,14 @@ export const POSTS = [
 "slug": "sharing-presentation-videos-on-linkedin",
 "date": "2026-12-04",
 "title": "Sharing Presentation Videos on LinkedIn",
-"description": "How to share a presentation video on LinkedIn so it gets watched: prepare the file, write the post, add captions and follow up with the right people.",
+"description": "How to share a presentation video LinkedIn users will watch: prepare the file, write the post, add captions and follow up with the right people.",
 "pillar": "share"
 },
 {
 "slug": "slide-masters-and-templates-set-up-once-save-hours",
 "date": "2026-12-05",
 "title": "Slide Masters and Templates: Set Up Once, Save Hours",
-"description": "How to use the PowerPoint slide master and templates to keep every training deck consistent, faster to update and ready to turn into video.",
+"description": "How to use the PowerPoint slide master and templates to keep every training deck consistent, quicker to update and ready to turn into a video.",
 "pillar": "craft"
 },
 {
@@ -327,14 +327,14 @@ export const POSTS = [
 "slug": "how-to-convert-a-powerpoint-to-video-on-a-mac",
 "date": "2026-12-07",
 "title": "How to Convert a PowerPoint to Video on a Mac",
-"description": "Three ways to convert PowerPoint to video on a Mac, from PowerPoint's own export to Keynote and a browser converter, plus fixes for common snags.",
+"description": "Three ways to convert PowerPoint to video on Mac computers, from PowerPoint's own export to Keynote and a browser converter, plus fixes for common snags.",
 "pillar": "convert"
 },
 {
 "slug": "visual-hierarchy-guiding-the-eye-across-a-slide",
 "date": "2026-12-08",
 "title": "Visual Hierarchy: Guiding the Eye Across a Slide",
-"description": "Use visual hierarchy in your slides to show people what to read first, second and third, with size, contrast, position and spacing that guide the eye.",
+"description": "Design visual hierarchy slides that show people what to read first, second and third, using size, contrast, position and spacing to guide the eye.",
 "pillar": "craft"
 },
 {
@@ -355,7 +355,7 @@ export const POSTS = [
 "slug": "adding-presentation-videos-to-your-lms",
 "date": "2026-12-11",
 "title": "Adding Presentation Videos to Your LMS",
-"description": "A practical guide to putting a presentation video in your LMS: file formats, hosting, captions, transcripts and page layout students can follow.",
+"description": "A practical presentation video LMS guide: file formats, hosting, captions, transcripts and a page layout that helps students actually press play.",
 "pillar": "share"
 },
 {
@@ -369,7 +369,7 @@ export const POSTS = [
 "slug": "how-to-convert-a-powerpoint-to-video-on-a-chromebook",
 "date": "2026-12-13",
 "title": "How to Convert a PowerPoint to Video on a Chromebook",
-"description": "A step-by-step guide to PowerPoint to video on a Chromebook: get a .pptx, add narration from speaker notes, burn in captions and export in Chrome.",
+"description": "A step-by-step PowerPoint to video Chromebook guide: get a .pptx, add narration from speaker notes, burn in captions and export a video in Chrome.",
 "pillar": "convert"
 },
 {
@@ -397,7 +397,7 @@ export const POSTS = [
 "slug": "one-deck-many-videos-repurposing-your-presentations",
 "date": "2026-12-17",
 "title": "One Deck, Many Videos: Repurposing Your Presentations",
-"description": "How to repurpose a presentation into video several ways: a full explainer, short social clips, a sales follow-up and an onboarding version, all from one deck.",
+"description": "How to repurpose a presentation into video four ways: a website explainer, social clips, a sales follow-up and an onboarding version, all from one deck.",
 "pillar": "why"
 },
 {
@@ -406,6 +406,20 @@ export const POSTS = [
 "title": "Embedding a Video on Your Website Without Slowing It Down",
 "description": "Keep pages fast when you add video. Practical tips on embed video website performance: hosting, lazy loading, posters, file size and autoplay choices.",
 "pillar": "share"
+},
+{
+"slug": "designing-16-9-slides-for-screens-and-video",
+"date": "2026-12-19",
+"title": "Designing 16:9 Slides for Screens and Video",
+"description": "A practical guide to 16:9 slide design for screens and video: safe margins, text sizes, layouts that use the wide frame, and fixing old 4:3 decks.",
+"pillar": "craft"
+},
+{
+"slug": "explainer-videos-vs-written-documentation",
+"date": "2026-12-20",
+"title": "Explainer Videos vs Written Documentation",
+"description": "Video vs documentation for training and internal knowledge: when each works best, how to combine them, and how to keep both current without double the effort.",
+"pillar": "why"
 },
 {
 "slug": "the-pre-export-checklist-getting-a-deck-ready-for-video",
@@ -537,8 +551,15 @@ export const POSTS = [
 "slug": "video-thumbnails-that-earn-the-click",
 "date": "2027-01-08",
 "title": "Video Thumbnails That Earn the Click",
-"description": "Practical video thumbnail tips for presentation and explainer videos: one clear idea, a few bold words, strong contrast, and a design that reads at phone size.",
+"description": "Practical video thumbnail tips for presentation and explainer videos: one clear idea, a few bold words, strong contrast and a design that reads on a phone.",
 "pillar": "share"
+},
+{
+"slug": "writing-for-the-ear-making-slides-and-script-work-together",
+"date": "2027-01-09",
+"title": "Writing for the Ear: Making Slides and Script Work Together",
+"description": "Presentation script writing for lecturers and teachers: how to write narration for the ear and design slides that support it instead of repeating it.",
+"pillar": "craft"
 },
 {
 "slug": "turning-a-webinar-deck-into-an-on-demand-video",
