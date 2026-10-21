@@ -2,7 +2,7 @@
 title: Lecturers: Turn Lecture Slides into Course Videos
 slug: lecturers-turn-lecture-slides-into-course-videos
 date: 2026-10-28
-description: A practical playbook for turning lecture slides to video: pick the right decks, write notes as narration, add captions and build short course videos for your LMS.
+description: A practical playbook for turning lecture slides to video: pick the right decks, write notes as narration, add captions and build short videos for your LMS.
 keyword: lecture slides to video
 pillar: playbook
 persona: educator

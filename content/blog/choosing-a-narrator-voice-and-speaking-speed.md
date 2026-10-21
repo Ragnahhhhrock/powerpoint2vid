@@ -2,7 +2,7 @@
 title: Choosing a Narrator Voice and Speaking Speed
 slug: choosing-a-narrator-voice-and-speaking-speed
 date: 2026-10-30
-description: How to choose a text to speech narrator voice and speaking speed for slide videos, with tips on testing voices, setting pace and writing scripts that sound natural.
+description: How to choose a text to speech narrator voice and speaking speed for slide videos, with tips on testing voices, setting pace and writing natural scripts.
 keyword: text to speech narrator voice
 pillar: share
 persona: all

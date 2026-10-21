@@ -2,7 +2,7 @@
 title: "Slide Masters and Templates: Set Up Once, Save Hours"
 slug: slide-masters-and-templates-set-up-once-save-hours
 date: 2026-12-05
-description: How to use the PowerPoint slide master and templates to keep every training deck consistent, faster to update and ready to turn into video.
+description: How to use the PowerPoint slide master and templates to keep every training deck consistent, quicker to update and ready to turn into a video.
 keyword: powerpoint slide master
 pillar: craft
 persona: trainer

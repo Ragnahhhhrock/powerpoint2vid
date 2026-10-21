@@ -2,13 +2,13 @@
 title: "Visual Hierarchy: Guiding the Eye Across a Slide"
 slug: visual-hierarchy-guiding-the-eye-across-a-slide
 date: 2026-12-08
-description: Use visual hierarchy in your slides to show people what to read first, second and third, with size, contrast, position and spacing that guide the eye.
+description: Design visual hierarchy slides that show people what to read first, second and third, using size, contrast, position and spacing to guide the eye.
 keyword: visual hierarchy slides
 pillar: craft
 persona: all
 ---
 
-When a slide appears, the viewer's eye has to land somewhere. If everything is the same size and colour, it lands nowhere in particular and wanders. Good visual hierarchy in slides fixes that. It tells people what to look at first, what to read second, and what they can ignore until later. This post covers the tools that create hierarchy and how to apply them, with a worked example.
+When a slide appears, the viewer's eye has to land somewhere. If everything is the same size and colour, it lands nowhere in particular and wanders. That is the problem visual hierarchy slides solve. It tells people what to look at first, what to read second, and what they can ignore until later. This post covers the tools that create hierarchy and how to apply them, with a worked example.
 
 ## What visual hierarchy means on a slide
 
@@ -33,7 +33,7 @@ Most slides need only three levels:
 
 If you find yourself needing a fourth or fifth level, the slide is probably trying to do too much. Split it.
 
-## The levers in practice
+## The levers behind visual hierarchy slides
 
 ### Size: make the point the biggest thing
 

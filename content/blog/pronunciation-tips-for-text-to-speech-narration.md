@@ -2,7 +2,7 @@
 title: Pronunciation Tips for Text-to-Speech Narration
 slug: pronunciation-tips-for-text-to-speech-narration
 date: 2026-11-13
-description: Practical text to speech pronunciation tips for training videos: fix acronyms, names, numbers and jargon in your speaker notes so the narrator gets them right.
+description: Text to speech pronunciation tips for training videos. Fix acronyms, names, numbers and jargon in your speaker notes so the narrator gets them right.
 keyword: text to speech pronunciation
 pillar: share
 persona: trainer

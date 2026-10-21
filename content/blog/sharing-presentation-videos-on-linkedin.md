@@ -2,13 +2,13 @@
 title: Sharing Presentation Videos on LinkedIn
 slug: sharing-presentation-videos-on-linkedin
 date: 2026-12-04
-description: How to share a presentation video on LinkedIn so it gets watched: prepare the file, write the post, add captions and follow up with the right people.
+description: How to share a presentation video LinkedIn users will watch: prepare the file, write the post, add captions and follow up with the right people.
 keyword: presentation video linkedin
 pillar: share
 persona: seller
 ---
 
-LinkedIn is where your buyers, clients and peers already spend time at work. A short, narrated presentation video on LinkedIn can explain your idea while you're busy elsewhere, and it reaches people a PDF attachment never would. This guide covers how to prepare the video, how to write the post around it, and how to turn views into conversations.
+LinkedIn is where your buyers, clients and peers already spend time at work. A short, narrated presentation video LinkedIn members can watch at their desk will explain your idea while you're busy elsewhere, and it reaches people a PDF attachment never would. This guide covers how to prepare the video, how to write the post around it, and how to turn views into conversations.
 
 ## Why share a presentation video on LinkedIn
 
@@ -20,7 +20,7 @@ For sellers, consultants and customer success teams, that means:
 - **Your expertise is visible.** A clear two-minute explainer shows you understand the problem.
 - **It starts conversations.** A good video gives people something specific to comment on or message you about.
 
-## Prepare the video before you post
+## Prepare a presentation video LinkedIn viewers will finish
 
 ### Keep it short
 

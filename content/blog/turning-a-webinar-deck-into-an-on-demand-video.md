@@ -12,7 +12,7 @@ You ran the webinar. People registered, some showed up, and plenty didn't. The d
 
 This guide shows how to cut a live deck down, rewrite it for narration and publish something people will actually finish.
 
-## Why the raw recording isn't enough
+## Why turn webinar slides to video instead of posting the recording
 
 A webinar recording is a record of an event. An on-demand video is a piece of content. They do different jobs.
 

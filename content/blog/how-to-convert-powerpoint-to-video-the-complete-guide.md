@@ -34,7 +34,7 @@ PowerPoint can export a presentation as a video file. Before exporting, you can 
 
 ### 2. Screen recording
 
-You can present the deck in slideshow mode and record your screen and microphone with a screen recording tool. It's flexible and quick for a one-off. The catch is that every mistake means another take, and updating one slide means recording again.
+You can present the deck in slideshow mode and record your screen and microphone. It's quick for a one-off, but every mistake means another take.
 
 ### 3. A dedicated converter
 
@@ -71,7 +71,7 @@ Here's a before and after for an onboarding slide.
 **After (notes as a script):**
 "On your first day, three things happen. You'll get your laptop. You'll get logins for email and the HR system. And you'll meet your buddy, who is your go-to person for the first month. If anything doesn't work, log a ticket with IT and they'll sort it out."
 
-The second version is longer, but it's clear, friendly and easy to follow by ear. That's what matters in a video.
+The second version is longer, but it's much easier to follow by ear.
 
 ## Step by step: converting with PowerPoint2Vid
 

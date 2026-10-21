@@ -2,7 +2,7 @@
 title: "Writing a Voiceover Script: Pace, Pauses and Plain Words"
 slug: writing-a-voiceover-script-pace-pauses-and-plain-words
 date: 2026-11-06
-description: Practical voiceover script tips for slide videos. Control pace with sentence length, add pauses with punctuation, and swap jargon for plain words people follow.
+description: Practical voiceover script tips for slide videos. Control pace with sentence length, add pauses with punctuation, and swap jargon for plain words.
 keyword: voiceover script tips
 pillar: share
 persona: presenter

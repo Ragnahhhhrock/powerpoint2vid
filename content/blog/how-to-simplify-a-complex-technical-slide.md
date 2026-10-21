@@ -74,7 +74,7 @@ You can do this two ways:
 
 Both work well in video. In PowerPoint2Vid, the "animate shapes in one by one" option brings each shape in as the video plays, which gives a similar step-by-step reveal without extra slides.
 
-## A before and after example
+## Simplify a technical presentation: a before and after example
 
 Here is a typical slide from a research or engineering update.
 

@@ -51,6 +51,27 @@ export const POSTS = [
 "pillar": "playbook"
 },
 {
+"slug": "the-benefits-of-explainer-videos-for-small-businesses",
+"date": "2026-10-29",
+"title": "The Benefits of Explainer Videos for Small Businesses",
+"description": "The benefits of explainer videos for small businesses: clearer messages, fewer repeat questions, consistent sales and support, and a low-cost route from slides.",
+"pillar": "why"
+},
+{
+"slug": "choosing-a-narrator-voice-and-speaking-speed",
+"date": "2026-10-30",
+"title": "Choosing a Narrator Voice and Speaking Speed",
+"description": "How to choose a text to speech narrator voice and speaking speed for slide videos, with tips on testing voices, setting pace and writing scripts that sound natural.",
+"pillar": "share"
+},
+{
+"slug": "slide-headlines-that-make-a-point",
+"date": "2026-10-31",
+"title": "Slide Headlines That Make a Point",
+"description": "A practical guide to slide headline writing: turn topic labels into clear statements, with before-and-after examples for sales decks, reports and pitches.",
+"pillar": "craft"
+},
+{
 "slug": "how-to-turn-google-slides-into-a-narrated-video",
 "date": "2026-11-01",
 "title": "How to Turn Google Slides into a Narrated Video",
@@ -82,14 +103,14 @@ export const POSTS = [
 "slug": "why-people-remember-more-from-narrated-visuals",
 "date": "2026-11-05",
 "title": "Why People Remember More From Narrated Visuals",
-"description": "Explainer video learning works because words and pictures together are easier to process. See why narrated visuals help people learn, and how to design for it.",
+"description": "Explainer video learning works because words and pictures together are easier to process. See why narrated visuals help people learn, and how to design them.",
 "pillar": "why"
 },
 {
 "slug": "writing-a-voiceover-script-pace-pauses-and-plain-words",
 "date": "2026-11-06",
 "title": "Writing a Voiceover Script: Pace, Pauses and Plain Words",
-"description": "Practical voiceover script tips for slide videos. Control pace with sentence length, add pauses with punctuation, and swap jargon for plain words people follow.",
+"description": "Practical voiceover script tips for slide videos. Control pace with sentence length, add pauses with punctuation, and swap jargon for plain words.",
 "pillar": "share"
 },
 {
@@ -112,6 +133,13 @@ export const POSTS = [
 "title": "MP4 or WebM? Choosing a Format for Your Presentation Video",
 "description": "Going from PowerPoint to MP4 or WebM? Learn what each format is, where each one plays, and how to convert WebM to MP4 when a platform asks for it.",
 "pillar": "convert"
+},
+{
+"slug": "contrast-and-accessibility-in-slide-design",
+"date": "2026-11-10",
+"title": "Contrast and Accessibility in Slide Design",
+"description": "Accessible presentation design starts with contrast, readable text and never relying on colour alone. Practical fixes for slides that work for every viewer.",
+"pillar": "craft"
 },
 {
 "slug": "sales-teams-send-a-narrated-pitch-deck-not-a-cold-pdf",
@@ -170,6 +198,20 @@ export const POSTS = [
 "pillar": "playbook"
 },
 {
+"slug": "how-explainer-videos-support-accessibility-and-inclusion",
+"date": "2026-11-19",
+"title": "How Explainer Videos Support Accessibility and Inclusion",
+"description": "Accessible explainer videos help more people understand your content. How narration, captions and clear slides support inclusion, and what still to check.",
+"pillar": "why"
+},
+{
+"slug": "where-to-share-your-presentation-video",
+"date": "2026-11-20",
+"title": "Where to Share Your Presentation Video",
+"description": "Where to share presentation video files once they're made: websites, YouTube, LinkedIn, your LMS, email and internal tools, with tips for each channel.",
+"pillar": "share"
+},
+{
 "slug": "using-images-in-presentations-without-the-clutter",
 "date": "2026-11-21",
 "title": "Using Images in Presentations Without the Clutter",
@@ -224,6 +266,20 @@ export const POSTS = [
 "title": "How to Open a Presentation So People Keep Watching",
 "description": "How to start a presentation so people keep watching: five opening patterns, sample first lines, and what to cut from your first slides for live talks and video.",
 "pillar": "craft"
+},
+{
+"slug": "how-to-add-narration-to-powerpoint-without-recording-your-own-voice",
+"date": "2026-11-29",
+"title": "How to Add Narration to PowerPoint Without Recording Your Own Voice",
+"description": "Want to add voiceover to PowerPoint without using a microphone? Here is how text-to-speech narration from speaker notes works, with scripts, settings and tips.",
+"pillar": "convert"
+},
+{
+"slug": "slide-transitions-that-work-in-video-and-ones-that-dont",
+"date": "2026-11-30",
+"title": "Slide Transitions That Work in Video (and Ones That Don't)",
+"description": "Which PowerPoint transitions in video help viewers follow along and which distract. Crossfade, slide, zoom and hard cuts compared, with tips on pacing and builds.",
+"pillar": "convert"
 },
 {
 "slug": "how-to-end-a-presentation-with-a-clear-call-to-action",
@@ -282,6 +338,20 @@ export const POSTS = [
 "pillar": "craft"
 },
 {
+"slug": "customer-success-product-walkthrough-videos-from-slides",
+"date": "2026-12-09",
+"title": "Customer Success: Product Walkthrough Videos From Slides",
+"description": "A playbook for customer success teams making a product walkthrough video from slides, so customers learn key features without another live call.",
+"pillar": "playbook"
+},
+{
+"slug": "how-long-should-an-explainer-video-be",
+"date": "2026-12-10",
+"title": "How Long Should an Explainer Video Be?",
+"description": "There is no single right explainer video length. Here is how to choose one based on your goal, audience and platform, and how to cut a script to fit.",
+"pillar": "why"
+},
+{
 "slug": "adding-presentation-videos-to-your-lms",
 "date": "2026-12-11",
 "title": "Adding Presentation Videos to Your LMS",
@@ -322,6 +392,20 @@ export const POSTS = [
 "title": "Conference Speakers: Pre-Recorded Talks That Still Engage",
 "description": "How to plan, script and produce a pre-recorded conference talk that holds attention, from structure and slide design to narration, captions and live Q&A.",
 "pillar": "playbook"
+},
+{
+"slug": "one-deck-many-videos-repurposing-your-presentations",
+"date": "2026-12-17",
+"title": "One Deck, Many Videos: Repurposing Your Presentations",
+"description": "How to repurpose a presentation into video several ways: a full explainer, short social clips, a sales follow-up and an onboarding version, all from one deck.",
+"pillar": "why"
+},
+{
+"slug": "embedding-a-video-on-your-website-without-slowing-it-down",
+"date": "2026-12-18",
+"title": "Embedding a Video on Your Website Without Slowing It Down",
+"description": "Keep pages fast when you add video. Practical tips on embed video website performance: hosting, lazy loading, posters, file size and autoplay choices.",
+"pillar": "share"
 },
 {
 "slug": "the-pre-export-checklist-getting-a-deck-ready-for-video",
@@ -380,6 +464,20 @@ export const POSTS = [
 "pillar": "convert"
 },
 {
+"slug": "how-many-slides-do-you-really-need",
+"date": "2026-12-29",
+"title": "How Many Slides Do You Really Need?",
+"description": "How many slides for a presentation? Skip the fixed rules. Work it out from your time, your message and your audience, with a simple method and examples.",
+"pillar": "craft"
+},
+{
+"slug": "founders-turning-your-pitch-deck-into-a-video",
+"date": "2026-12-30",
+"title": "Founders: Turning Your Pitch Deck into a Video",
+"description": "A founder's playbook for making a pitch deck video: tighten the story, script your notes, choose a style and share a narrated deck investors will watch.",
+"pillar": "playbook"
+},
+{
 "slug": "explainer-videos-that-cut-down-repeat-questions",
 "date": "2026-12-31",
 "title": "Explainer Videos That Cut Down Repeat Questions",
@@ -429,6 +527,20 @@ export const POSTS = [
 "pillar": "playbook"
 },
 {
+"slug": "types-of-explainer-videos-and-which-one-fits-your-message",
+"date": "2027-01-07",
+"title": "Types of Explainer Videos and Which One Fits Your Message",
+"description": "Compare the main types of explainer videos, from animated and live-action to screencasts and narrated slides, and learn how to match each one to your message.",
+"pillar": "why"
+},
+{
+"slug": "video-thumbnails-that-earn-the-click",
+"date": "2027-01-08",
+"title": "Video Thumbnails That Earn the Click",
+"description": "Practical video thumbnail tips for presentation and explainer videos: one clear idea, a few bold words, strong contrast, and a design that reads at phone size.",
+"pillar": "share"
+},
+{
 "slug": "turning-a-webinar-deck-into-an-on-demand-video",
 "date": "2027-01-10",
 "title": "Turning a Webinar Deck into an On-Demand Video",
@@ -467,7 +579,7 @@ export const POSTS = [
 "slug": "presentation-videos-in-other-languages",
 "date": "2027-01-15",
 "title": "Presentation Videos in Other Languages",
-"description": "How to translate a presentation video for multilingual teams. Prepare the deck, translate notes and slide text, check voices and review with native speakers.",
+"description": "How to translate presentation video content for multilingual teams. Prepare the deck, translate notes and slide text, check voices, review with locals.",
 "pillar": "share"
 },
 {
@@ -483,5 +595,19 @@ export const POSTS = [
 "title": "Explainer Videos for Nonprofits and Fundraising",
 "description": "A nonprofit explainer video helps donors, volunteers and grant panels understand your cause. Here's how to make one from slides on a small budget.",
 "pillar": "why"
+},
+{
+"slug": "the-polishing-checklist-final-pass-before-you-share-a-deck",
+"date": "2027-01-18",
+"title": "The Polishing Checklist: Final Pass Before You Share a Deck",
+"description": "A presentation checklist for the final pass before you share a deck. Check story, headlines, text, design, accessibility, notes and file details.",
+"pillar": "craft"
+},
+{
+"slug": "leaders-all-hands-updates-as-a-short-video",
+"date": "2027-01-19",
+"title": "Leaders: All-Hands Updates as a Short Video",
+"description": "Turn your all-hands deck into a short all-hands video update people can watch any time. Structure it, write it for listening and share it well.",
+"pillar": "playbook"
 }
 ];

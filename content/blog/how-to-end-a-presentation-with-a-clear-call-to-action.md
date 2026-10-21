@@ -2,7 +2,7 @@
 title: How to End a Presentation With a Clear Call to Action
 slug: how-to-end-a-presentation-with-a-clear-call-to-action
 date: 2026-12-01
-description: Learn how to end a presentation with one clear call to action, a short recap and a closing slide that tells people exactly what to do next.
+description: Learn how to end a presentation with one clear call to action, a short recap and a closing slide that tells your audience exactly what to do next.
 keyword: how to end a presentation
 pillar: craft
 persona: seller

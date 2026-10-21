@@ -2,17 +2,17 @@
 title: Presentation Videos in Other Languages
 slug: presentation-videos-in-other-languages
 date: 2027-01-15
-description: How to translate a presentation video for multilingual teams. Prepare the deck, translate notes and slide text, check voices and review with native speakers.
+description: How to translate presentation video content for multilingual teams. Prepare the deck, translate notes and slide text, check voices, review with locals.
 keyword: translate presentation video
 pillar: share
 persona: trainer
 ---
 
-Your onboarding deck works well in English. Now the business has a team in Jakarta, a warehouse crew whose first language is Vietnamese, and contractors who'd follow along much better in Spanish. Recording a separate voiceover for each language is slow and costly. If your videos are built from slides and speaker notes, though, you can translate a presentation video by translating the deck, then exporting it again.
+Your onboarding deck works well in English. Now the business has a team in Jakarta, a warehouse crew whose first language is Vietnamese, and contractors who'd follow along much better in Spanish. Recording a separate voiceover for each language is slow and costly. If your videos are built from slides and speaker notes, though, you can translate presentation video content by translating the deck, then exporting it again.
 
 This guide covers how to set up a deck for translation, what to check and how to keep several language versions in step.
 
-## Why slide-based videos are easier to translate
+## Why it's easier to translate presentation video built from slides
 
 With a filmed video, translating means re-recording or adding subtitles over someone speaking English. With a slide video, the words live in two places you control:
 

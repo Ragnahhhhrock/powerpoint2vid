@@ -2,7 +2,7 @@
 title: The Benefits of Explainer Videos for Small Businesses
 slug: the-benefits-of-explainer-videos-for-small-businesses
 date: 2026-10-29
-description: The benefits of explainer videos for small businesses: clearer messages, fewer repeat questions, consistent sales and support, and a low-cost route from slides.
+description: The benefits of explainer videos for small businesses: clearer messages, fewer repeat questions, consistent sales and a low-cost route from your slides.
 keyword: benefits of explainer videos
 pillar: why
 persona: marketer

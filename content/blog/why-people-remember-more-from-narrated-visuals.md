@@ -2,7 +2,7 @@
 title: Why People Remember More From Narrated Visuals
 slug: why-people-remember-more-from-narrated-visuals
 date: 2026-11-05
-description: Explainer video learning works because words and pictures together are easier to process. See why narrated visuals help people learn, and how to design for it.
+description: Explainer video learning works because words and pictures together are easier to process. See why narrated visuals help people learn, and how to design them.
 keyword: explainer video learning
 pillar: why
 persona: educator

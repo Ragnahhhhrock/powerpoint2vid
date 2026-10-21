@@ -2,7 +2,7 @@
 title: How to Choose a Video Style for Your Slide Deck
 slug: how-to-choose-a-video-style-for-your-slide-deck
 date: 2026-11-16
-description: A practical guide to presentation video styles: what each of the six PowerPoint2Vid looks does and how to match one to your brand, audience and message.
+description: A practical guide to presentation video styles. See what each of the six PowerPoint2Vid looks does and how to match one to your brand and audience.
 keyword: presentation video styles
 pillar: convert
 persona: marketer
@@ -22,7 +22,7 @@ A style is not a template that changes your slides. Your content, colours and fo
 - **Captions.** Where they sit and how they look, if you turn them on.
 - **Texture.** Clean edges, film grain, vignette.
 
-Because the slides stay yours, you can switch styles freely while you preview and see which one makes your deck look its best.
+Because the slides stay yours, you can switch between styles as often as you like while you preview and see which one makes your deck look its best.
 
 ## The six presentation video styles
 

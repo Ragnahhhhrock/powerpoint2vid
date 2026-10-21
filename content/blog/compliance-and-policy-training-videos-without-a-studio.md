@@ -2,7 +2,7 @@
 title: Compliance and Policy Training Videos Without a Studio
 slug: compliance-and-policy-training-videos-without-a-studio
 date: 2026-11-25
-description: A step-by-step playbook for making a compliance training video from your existing policy deck, with clear scripts, captions and quick updates when rules change.
+description: A step-by-step playbook for making a compliance training video from your policy deck, with clear scripts, captions and quick updates when rules change.
 keyword: compliance training video
 pillar: playbook
 persona: trainer

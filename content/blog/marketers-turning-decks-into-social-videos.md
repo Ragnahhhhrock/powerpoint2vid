@@ -2,7 +2,7 @@
 title: "Marketers: Turning Decks into Social Videos"
 slug: marketers-turning-decks-into-social-videos
 date: 2026-12-02
-description: A practical playbook for marketers turning a presentation to social video, from picking the right slides to captions, hooks and posting.
+description: A practical playbook for marketers turning a presentation to social video, from picking the right slides to writing captions, hooks and posts.
 keyword: presentation to social video
 pillar: playbook
 persona: marketer
@@ -12,7 +12,7 @@ You already have the raw material for a month of social content. It's sitting in
 
 This playbook walks through the process step by step, with a worked example at the end.
 
-## Why decks make good social videos
+## Why turning a presentation to social video works
 
 A good deck has already done the hard thinking. The message is agreed, the visuals are on brand and the numbers have been checked. That is most of what a social video needs.
 

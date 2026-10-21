@@ -2,7 +2,7 @@
 title: How to Open a Presentation So People Keep Watching
 slug: how-to-open-a-presentation-so-people-keep-watching
 date: 2026-11-28
-description: How to start a presentation so people keep watching: five opening patterns, sample first lines, and what to cut from your first slides for live talks and video.
+description: How to start a presentation so people keep watching: five opening patterns, sample first lines, and what to cut from your first slides, live or on video.
 keyword: how to start a presentation
 pillar: craft
 persona: presenter

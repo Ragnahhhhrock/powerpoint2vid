@@ -29,7 +29,7 @@ A video tends to work better when the content is mostly one-way.
 
 ### The information is the same for everyone
 
-If you give the same product overview to every prospect, you're repeating yourself. A well-made video gives every prospect the same clear explanation, and frees your live time for their specific questions.
+If you give the same product overview to every prospect, you're repeating yourself. A well-made video gives every prospect the same clear explanation, and saves your live time for their specific questions.
 
 ### Several people need it, at different times
 

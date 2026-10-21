@@ -10,8 +10,6 @@ persona: marketer
 
 Good images in presentations do one job: they make the point land faster than words can. Bad ones fill space. Most decks have too many pictures, too small, placed wherever there was room. The fix is not more design talent. It is a few simple rules about choosing, cropping and placing.
 
-This guide is for anyone building a deck that will be watched on a screen, whether it is a product pitch, a training module or a webinar that will later become a video.
-
 ## Why images in presentations often backfire
 
 An image competes with your words for attention. When it supports the message, the viewer gets the idea twice, once through the picture and once through the narration. When it doesn't, the viewer has to work out why it is there.
@@ -100,7 +98,7 @@ Pick a lane and stay in it for the whole deck:
 - **Illustrations only**, from one set or one illustrator.
 - **Screenshots and diagrams**, with consistent borders or shadows.
 
-Mixing styles isn't banned, but it should be a decision, not an accident. If a slide feels "off" and you can't say why, inconsistent image style is often the cause.
+Mixing styles is fine when it's a decision, not an accident.
 
 ## Check image quality and rights
 

@@ -113,4 +113,4 @@ For the full conversion process, see [How to Convert PowerPoint to Video: The Co
 
 ## Try the PowerPoint to video converter with your own deck
 
-The right tool is the one that turns your actual slides into a video you're happy to send. Drop a deck into the [PowerPoint to video converter](/), preview it with a voice and see how it looks in each style. If it fits, [Pro](/pricing) unlocks export.
+The right tool is the one that turns your actual slides into a video you're happy to send. Drop a deck into the [PowerPoint to video converter](/), preview it with a voice and see how it looks in each style. If it fits, [Pro](/pricing) lets you export.

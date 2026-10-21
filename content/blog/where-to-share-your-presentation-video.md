@@ -2,7 +2,7 @@
 title: Where to Share Your Presentation Video
 slug: where-to-share-your-presentation-video
 date: 2026-11-20
-description: Where to share presentation video files once they're made: websites, YouTube, LinkedIn, your LMS, email and internal tools, with tips for each channel.
+description: Where to share presentation video files once they're made. Websites, YouTube, LinkedIn, your LMS, email and internal tools, with tips for each channel.
 keyword: share presentation video
 pillar: share
 persona: all
@@ -22,7 +22,7 @@ A little preparation saves trouble on every platform.
 - **Burn in captions.** Many people watch with the sound off. Captions burned into the video show on any platform.
 - **Write a short description.** One or two sentences on what the video covers and who it is for. You will reuse it everywhere.
 
-## Places to share your presentation video
+## Where to share presentation video files
 
 ### Your own website
 

@@ -62,6 +62,8 @@ Small inconsistencies make a deck feel less trustworthy, even if viewers can't s
 
 Flick through the deck quickly in presentation mode. Anything that jumps or shifts between slides is worth fixing.
 
+A useful habit: if several people built the deck, check that every slide uses a layout from the same slide master. Slides pasted in from older decks often carry their own fonts and colours, and resetting them to the master layout fixes most inconsistencies in one step.
+
 ## Pass 4: Accessibility
 
 A few checks make your deck usable by more people.

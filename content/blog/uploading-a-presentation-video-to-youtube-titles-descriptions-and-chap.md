@@ -2,7 +2,7 @@
 title: "Uploading a Presentation Video to YouTube: Titles, Descriptions and Chapters"
 slug: uploading-a-presentation-video-to-youtube-titles-descriptions-and-chap
 date: 2026-11-27
-description: How to upload a presentation to YouTube the right way: file prep, a searchable title, a useful description, chapters built from your slides and a clean thumbnail.
+description: How to upload a presentation to YouTube properly: file prep, a searchable title, a useful description, chapters built from your slides and a thumbnail.
 keyword: upload presentation to youtube
 pillar: share
 persona: marketer

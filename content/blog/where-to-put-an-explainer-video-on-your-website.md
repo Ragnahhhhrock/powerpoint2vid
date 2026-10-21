@@ -2,13 +2,13 @@
 title: Where to Put an Explainer Video on Your Website
 slug: where-to-put-an-explainer-video-on-your-website
 date: 2026-11-12
-description: Where should an explainer video on your website go? Practical placements for home, product, pricing and help pages, plus how to keep each one useful.
+description: The best places for an explainer video on website pages, from home and product pages to pricing and help, plus the details that get people to press play.
 keyword: explainer video on website
 pillar: why
 persona: marketer
 ---
 
-You have made the video. Now the question is where it goes. An explainer video on your website only helps if the right people see it at the moment they have the question it answers. Drop it in the wrong place and it becomes decoration. Put it in the right place and it does a sales or support job every day without you.
+You have made the video. Now the question is where it goes. An explainer video on website pages only helps if the right people see it at the moment they have the question it answers. Drop it in the wrong place and it becomes decoration. Put it in the right place and it does a sales or support job every day without you.
 
 This guide covers the placements that tend to work, how to match the video to the page, and the small details that decide whether anyone presses play.
 
@@ -25,7 +25,7 @@ Then ask where a visitor is when they have that question. That is where the vide
 
 If you are still deciding what kind of video you need, [What Is an Explainer Video? A Plain-English Guide](/blog/what-is-an-explainer-video-a-plain-english-guide) covers the basics.
 
-## The best places for an explainer video on your website
+## The best spots for an explainer video on website pages
 
 ### 1. The home page, near the top
 

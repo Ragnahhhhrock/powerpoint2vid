@@ -80,7 +80,7 @@ When the narration says "start from your order page", the screen should show the
 
 ### It's short enough to finish
 
-There's no perfect length, but every extra minute should earn its place. If it's getting long, it may be two explainers.
+There's no perfect length, but every extra minute should earn its place. If it's getting long, it may be two explainers. A quick test: if you can't sum up the video in one sentence, it's probably trying to cover too much. Split it, give each part its own title, and link them together.
 
 ### It's accessible
 
