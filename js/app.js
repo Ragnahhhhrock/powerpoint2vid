@@ -50,7 +50,7 @@
 
   /* ---------- intake ---------- */
   const status = (t) => ($('status').textContent = t);
-  const setProgress = (f) => { $('bar').style.width = Math.round(f * 100) + '%'; document.querySelector('.bar').setAttribute('aria-valuenow', Math.round(f * 100)); };
+  const setProgress = (f) => { $('bar').style.width = Math.round(f * 100) + '%'; $('bar').parentElement.setAttribute('aria-valuenow', Math.round(f * 100)); };
 
   function tab(which) {
     const ppt = which === 'ppt';
@@ -90,7 +90,7 @@
     track('deck_loaded', { slide_count: d.slides.length });
     const canvasH = 720, canvasW = Math.round((canvasH * d.W) / d.H);
     stage.width = canvasW; stage.height = canvasH;
-    document.querySelector('.stage').style.aspectRatio = d.W + '/' + d.H;
+    stage.parentElement.style.aspectRatio = d.W + '/' + d.H;
     buildStrip(); gotoSlide(0);
     setProgress(0); status(d.slides.length + ' slides ready. Preview with voice, or export the video.');
     show(true);
