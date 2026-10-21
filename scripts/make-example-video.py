@@ -30,7 +30,7 @@ def rgb(h): return RGBColor.from_string(h.upper())
 
 SLIDES = [
     {"kind": "title",
-     "eyebrow": "Free · Private · Online",
+     "eyebrow": "Private · Online · No upload",
      "title": ["PowerPoint to video,", "narrated."],
      "sub": "Turn any slide deck into an explainer video.",
      "notes": "Meet PowerPoint2Vid. It turns a PowerPoint deck into a narrated explainer video, right in your browser."},
@@ -50,7 +50,7 @@ SLIDES = [
     {"kind": "ticks",
      "title": "Private by design.",
      "ticks": ["Runs in your browser", "Nothing is uploaded", "No sign-up, no watermark"],
-     "notes": "Everything runs in your browser. Nothing is uploaded, so your slides never leave your device. There is no sign-up and no watermark, and it is free."},
+     "notes": "Everything runs in your browser. Nothing is uploaded, so your slides never leave your device. There is no sign-up and no watermark."},
     {"kind": "cta",
      "title": "Try it with your own deck.",
      "button": "Convert PowerPoint to video",
@@ -205,7 +205,7 @@ def main():
             voice.synthesize_wav(spoken(s["notes"]), wf)
         clips.append((wp, wav_len(wp)))
 
-    # Per-slide clips with Ken-Burns-free subtle fade, captions burned via VTT-style segments
+    # Per-slide clips with subtle fade (no Ken Burns), captions burned via VTT-style segments
     segs, cues, t = [], [], 0.0
     for i, ((wp, dur), png) in enumerate(zip(clips, pngs), 1):
         total = dur + PAD_IN + PAD_OUT

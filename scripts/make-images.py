@@ -47,7 +47,7 @@ def render(W,H,path):
     for line,col in (("PowerPoint",(255,255,255)),("to Video",(255,255,255)),("Converter",CORAL)):
         d.text((64,y),line,font=hf,fill=col); y+=84
     d.text((64,y+14),"Narrated, animated explainer videos",font=font("Medium",30),fill=MUTED)
-    d.text((64,y+54),"from PPTX & Google Slides. Free and private.",font=font("Medium",30),fill=MUTED)
+    d.text((64,y+54),"from PPTX & Google Slides. Private and online.",font=font("Medium",30),fill=MUTED)
     # visual: slide -> video
     cw,ch=int(W*.30),int(H*.38)
     slide_card(img,int(W*.56),int(H*.12),cw,ch,.5,VIOLET,tilt=4)

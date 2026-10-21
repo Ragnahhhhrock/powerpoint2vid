@@ -1,6 +1,6 @@
 # PowerPoint2Vid
 
-Free, private **PowerPoint to video converter** at https://powerpoint2vid.com. Turns `.pptx` (and Google Slides exported as `.pptx`) into animated, narrated explainer videos, entirely in the browser.
+Private, online **PowerPoint to video converter** at https://powerpoint2vid.com. Turns `.pptx` (and Google Slides exported as `.pptx`) into animated, narrated explainer videos, entirely in the browser.
 
 - **Parse:** `js/pptx-parser.js` reads slides, shapes, images and speaker notes (JSZip, vendored).
 - **Render/animate:** `js/renderer.js` draws slides to canvas with reveal animations, transitions and captions.
