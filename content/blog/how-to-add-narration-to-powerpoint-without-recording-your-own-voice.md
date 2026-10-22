@@ -2,7 +2,7 @@
 title: How to Add Narration to PowerPoint Without Recording Your Own Voice
 slug: how-to-add-narration-to-powerpoint-without-recording-your-own-voice
 date: 2026-11-29
-description: Want to add voiceover to PowerPoint without a microphone? Here is how narration from speaker notes works, with sample scripts, voice and speed settings, and tips for notes that sound natural.
+description: Want to add voiceover to PowerPoint without a microphone? Here is how narration from speaker notes works, with sample scripts and tips.
 keyword: add voiceover to powerpoint
 pillar: convert
 persona: trainer
