@@ -68,7 +68,7 @@ PowerPoint2Vid works from any computer with a modern browser, so a Chromebook is
 5. **Watch the whole video once** and note any slide that feels rushed or mispronounced. Fix the notes and try again.
 6. **Download the video** as an MP4, with WebM also available.
 
-Basic downloads a watermarked browser version. Pro downloads the Opus-directed video with no watermark.
+Basic downloads a watermarked browser version. Pro downloads the a.i.-directed video with no watermark.
 
 ## Chromebook tips
 
@@ -93,4 +93,4 @@ The video downloads as an MP4, with WebM also available, so you can upload it to
 
 ## A Chromebook is all you need
 
-You do not need a desktop app or a studio to turn a lesson into a video. Open the [PowerPoint to video converter](/) in Chrome and add your .pptx. On Pro, Claude Opus 5.5 plays director: it tightens the story, designs each slide as an animated scene and times the animation to your narration, so a classroom deck lands like a produced explainer. You can compare Basic and Pro on the [pricing page](/pricing).
+You do not need a desktop app or a studio to turn a lesson into a video. Open the [PowerPoint to video converter](/) in Chrome and add your .pptx. On Pro, a.i. plays director: it tightens the story, designs each slide as an animated scene and times the animation to your narration, so a classroom deck lands like a produced explainer. You can compare Basic and Pro on the [pricing page](/pricing).

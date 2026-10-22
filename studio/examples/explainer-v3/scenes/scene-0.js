@@ -32,7 +32,7 @@ P2V.scene((ctx) => {
   const sweep = { x: 0 };
   const rule = el('div', '', txt, { height: '4px', width: '420px', marginTop: '46px', background: 'linear-gradient(90deg, var(--amber), rgba(255,179,64,0))', transformOrigin: '0 50%' });
   const credit = el('div', 'abs', after, { left: '146px', top: '900px', font: `500 22px/1 ${MONO}`, letterSpacing: '.24em', color: 'var(--muted)' });
-  credit.innerHTML = 'DIRECTED BY <span style="color:var(--paper)">CLAUDE OPUS 5.5</span>';
+  credit.innerHTML = 'DIRECTED BY <span style="color:var(--paper)">A.I.</span>';
 
   /* ---------- BEFORE: a plain editor window with the real slide ---------- */
   const before = el('div', 'abs', stage, { inset: 0, background: '#d9d9dc', transformOrigin: '58% 52%' });

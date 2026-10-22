@@ -116,4 +116,4 @@ A post that gets views but no conversations hasn't done its job yet.
 
 ## Make the video from your deck first
 
-Before any of this, you need the video. Upload your short deck to the [PowerPoint to video converter](/) and your speaker notes become the narration. Claude Opus 5.5 takes the director's chair, tightening the story and designing each scene so a feed-sized explainer looks produced, with captions burned in for sound-off viewing. Download the MP4 and post it. If the deck includes client details, check your organisation's policy before using any online tool with it.
+Before any of this, you need the video. Upload your short deck to the [PowerPoint to video converter](/) and your speaker notes become the narration. a.i. takes the director's chair, tightening the story and designing each scene so a feed-sized explainer looks produced, with captions burned in for sound-off viewing. Download the MP4 and post it. If the deck includes client details, check your organisation's policy before using any online tool with it.

@@ -106,4 +106,4 @@ Keep the .pptx alongside the video. When something changes, edit the slide or no
 
 ## Start with one lecture and the PowerPoint to video converter
 
-You don't need a studio or a microphone. You need one deck and an hour. Open the [PowerPoint to video converter](/) and drop in your lecture slides. On Pro, Claude Opus 5.5 takes the director's chair: it tightens the story, designs each scene and times the animation to your narration, so a lecture deck lands like a produced explainer. Try one lecture on Basic, then see [Pro](/pricing) for a semester's worth.
+You don't need a studio or a microphone. You need one deck and an hour. Open the [PowerPoint to video converter](/) and drop in your lecture slides. On Pro, a.i. takes the director's chair: it tightens the story, designs each scene and times the animation to your narration, so a lecture deck lands like a produced explainer. Try one lecture on Basic, then see [Pro](/pricing) for a semester's worth.

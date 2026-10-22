@@ -122,4 +122,4 @@ If you need several people working across a team, email contact@powerpoint2vid.c
 
 ## Build your compliance video from the deck you already have
 
-Your policy deck is most of the way to a compliance training video already. Load it into the [PowerPoint to video converter](/) and let your notes become the narration, with captions on. Claude Opus 5.5 directs the video: it keeps each rule to one clear scene and times the animation to the narration, so even a dry policy holds attention. Download it once the policy owner is happy. When the rules change next year, edit the slides and create the video again.
+Your policy deck is most of the way to a compliance training video already. Load it into the [PowerPoint to video converter](/) and let your notes become the narration, with captions on. a.i. directs the video: it keeps each rule to one clear scene and times the animation to the narration, so even a dry policy holds attention. Download it once the policy owner is happy. When the rules change next year, edit the slides and create the video again.

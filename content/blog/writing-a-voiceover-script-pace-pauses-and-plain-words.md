@@ -133,4 +133,4 @@ It moves at a steady pace, pauses before the key point, uses a question to set u
 
 A voiceover script works best when it lives in your speaker notes, one section per slide. That keeps the words and visuals in sync and makes edits easy.
 
-When your script is ready, add the deck to the [PowerPoint to video converter](/). Your speaker notes become the narration, with a voice and speaking speed you choose. Claude Opus 5.5 directs the video and times the animation to your voice, so a well-paced script gets scenes that land on the right words. Listen for any line that drags or rushes, and fix it in the notes.
+When your script is ready, add the deck to the [PowerPoint to video converter](/). Your speaker notes become the narration, with a voice and speaking speed you choose. a.i. directs the video and times the animation to your voice, so a well-paced script gets scenes that land on the right words. Listen for any line that drags or rushes, and fix it in the notes.

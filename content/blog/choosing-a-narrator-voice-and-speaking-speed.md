@@ -102,4 +102,4 @@ For captions on narrated videos, see [Captions on Presentation Videos: Why and H
 
 ## Hear your deck in the PowerPoint to video converter
 
-The fastest way to choose a voice is to hear it read your own slides. Open the [PowerPoint to video converter](/), drop in your deck and try a few voices and speeds. Claude Opus 5.5 directs the video around your narration, timing each animated scene to the voice so key points land on the word that names them. Settle on the right sound, then download the finished video.
+The fastest way to choose a voice is to hear it read your own slides. Open the [PowerPoint to video converter](/), drop in your deck and try a few voices and speeds. a.i. directs the video around your narration, timing each animated scene to the voice so key points land on the word that names them. Settle on the right sound, then download the finished video.

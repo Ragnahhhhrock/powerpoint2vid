@@ -129,4 +129,4 @@ When a deck becomes a video, images get more screen time and more attention than
 
 ## Turn your image-led deck into a video
 
-A deck with fewer, bigger, well-cropped images makes a far better video than one stuffed with thumbnails. Once your slides are clean, bring the .pptx to the [PowerPoint to video converter](/). Your speaker notes become the narration, and Claude Opus 5.5 plays director: it frames each image as a scene, with motion and timing that bring the picture in as the voice describes it. Watch the result, then adjust any slide where the picture and the words don't line up.
+A deck with fewer, bigger, well-cropped images makes a far better video than one stuffed with thumbnails. Once your slides are clean, bring the .pptx to the [PowerPoint to video converter](/). Your speaker notes become the narration, and a.i. plays director: it frames each image as a scene, with motion and timing that bring the picture in as the voice describes it. Watch the result, then adjust any slide where the picture and the words don't line up.

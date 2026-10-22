@@ -93,7 +93,7 @@ Choose a voice and a speaking speed. Slightly slower suits technical material. L
 
 ### Step 4: The video is directed and rendered
 
-This is where PowerPoint2Vid differs from a plain converter. Claude Opus 5.5 reads the whole deck, tightens the story and redesigns each slide as an animated scene. Charts are rebuilt as animated charts with the same numbers, and key points land on the word that names them. It times the animation to the voice and adds captions and polished transitions between scenes. A slide that was a static list of bullets becomes something worth watching.
+This is where PowerPoint2Vid differs from a plain converter. a.i. reads the whole deck, tightens the story and redesigns each slide as an animated scene. Charts are rebuilt as animated charts with the same numbers, and key points land on the word that names them. It times the animation to the voice and adds captions and polished transitions between scenes. A slide that was a static list of bullets becomes something worth watching.
 
 ### Step 5: Download the MP4
 
@@ -134,4 +134,4 @@ The export is an MP4, which plays almost everywhere, with WebM available if you 
 
 ## Make your first video with the PowerPoint to video converter
 
-You already have the hardest part: a deck that explains something. Open the [PowerPoint to video converter](/), upload your .pptx and pick a voice. Try it on Basic first. On Pro, Claude directs the result, so your ordinary deck comes out as an explainer video with animated scenes and a tighter story, not slides with a voice over them. [PowerPoint2Vid Pro](/pricing) is A$29 a month with 10 Opus-directed videos included and no watermark.
+You already have the hardest part: a deck that explains something. Open the [PowerPoint to video converter](/), upload your .pptx and pick a voice. Try it on Basic first. On Pro, a.i. directs the result, so your ordinary deck comes out as an explainer video with animated scenes and a tighter story, not slides with a voice over them. [PowerPoint2Vid Pro](/pricing) is A$29 a month with 10 a.i.-directed videos included and no watermark.

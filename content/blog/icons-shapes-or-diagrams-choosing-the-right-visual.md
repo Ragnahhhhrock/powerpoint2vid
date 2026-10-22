@@ -118,4 +118,4 @@ Charts follow similar rules. See [Designing Charts People Understand in Five Sec
 
 ## Turn clear diagrams into a training video
 
-A well-built diagram does half the teaching. Narration does the rest. When your deck is ready, drop it into the [PowerPoint to video converter](/) and let your speaker notes walk learners through each step. Claude Opus 5.5 directs the video: it rebuilds your diagram as an animated scene and lands each box on the word that names it, so a simple process flow reads like a produced explainer. When a procedure changes, edit the diagram and export again.
+A well-built diagram does half the teaching. Narration does the rest. When your deck is ready, drop it into the [PowerPoint to video converter](/) and let your speaker notes walk learners through each step. a.i. directs the video: it rebuilds your diagram as an animated scene and lands each box on the word that names it, so a simple process flow reads like a produced explainer. When a procedure changes, edit the diagram and export again.

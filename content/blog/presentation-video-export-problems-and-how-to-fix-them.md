@@ -143,4 +143,4 @@ PowerPoint's built-in video export is another route. It uses timings and narrati
 
 ## Get a clean export from your slides
 
-Most export issues disappear once the deck and notes are right. Open the [PowerPoint to video converter](/), load your .pptx and check the result. Claude Opus 5.5 plays director: it tightens the story, redesigns each slide as an animated scene and times the animation to your narration, so pacing problems like rushed or overlong slides are far less likely to reach the final file.
+Most export issues disappear once the deck and notes are right. Open the [PowerPoint to video converter](/), load your .pptx and check the result. a.i. plays director: it tightens the story, redesigns each slide as an animated scene and times the animation to your narration, so pacing problems like rushed or overlong slides are far less likely to reach the final file.

@@ -1,4 +1,4 @@
-/* Scene 4 — "Basic exports carry a watermark. Pro removes it, and includes ten Opus-directed videos a month,
+/* Scene 4 — "Basic exports carry a watermark. Pro removes it, and includes ten a.i.-directed videos a month,
  * from 29 Australian dollars."
  * Storyboard: a real frame from this video in a player, stamped with the PowerPoint2Vid watermark, labelled
  * BASIC. On "Pro removes it" an amber light wipe clears the watermark, the label flips to PRO and the frame
@@ -45,7 +45,7 @@ P2V.scene((ctx) => {
   const eb = el('div', 'abs', cam, { left: RX + 'px', top: '160px', padding: '10px 18px', borderRadius: '999px', background: 'var(--amber)', font: `800 22px/1 ${MONO}`, letterSpacing: '.22em', color: '#140d05' }); eb.textContent = 'PRO PLAN';
   const cntRow = el('div', 'abs', cam, { left: RX + 'px', top: '226px', display: 'flex', alignItems: 'center', gap: '30px' });
   const cnt = el('div', '', cntRow, { font: '900 190px/1 "Inter Display", Inter', letterSpacing: '-.06em', color: 'var(--paper)', width: '230px', textAlign: 'right', fontVariantNumeric: 'tabular-nums' });
-  const cntL = el('div', '', cntRow, { font: '700 40px/1.12 Inter', letterSpacing: '-.02em', color: 'var(--paper)' }); cntL.innerHTML = 'Opus-directed<br>videos a month';
+  const cntL = el('div', '', cntRow, { font: '700 40px/1.12 Inter', letterSpacing: '-.02em', color: 'var(--paper)' }); cntL.innerHTML = 'a.i.-directed<br>videos a month';
   const cv = { n: 0 };
   const rule = el('div', 'abs', cam, { left: RX + 'px', top: '446px', width: '650px', height: '1.5px', background: 'linear-gradient(90deg, rgba(244,238,227,.35), transparent)', transformOrigin: '0 50%' });
   const from = el('div', 'abs', cam, { left: RX + 6 + 'px', top: '482px', font: '600 34px/1 Inter', color: 'var(--muted)' }); from.textContent = 'From';

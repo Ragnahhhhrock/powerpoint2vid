@@ -49,7 +49,7 @@ This one is easy to forget. If your product, prices or policy change, how much d
 | Route | What you get | Trade-offs |
 |---|---|---|
 | Agency or studio | Strategy, script, custom design and animation, professional voice, project management | Highest spend, longer timelines, updates usually go back to the agency |
-| Deck-to-video service (such as PowerPoint2Vid) | Your deck goes in; Claude Opus 5.5 acts as your director, redesigning slides as animated scenes and narrating from your speaker notes | Basic browser version with no subscription (watermarked); Pro from A$29 a month with 10 Opus-directed videos included; you supply the deck and notes |
+| Deck-to-video service (such as PowerPoint2Vid) | Your deck goes in; a.i. acts as your director, redesigning slides as animated scenes and narrating from your speaker notes | Basic browser version with no subscription (watermarked); Pro from A$29 a month with 10 a.i.-directed videos included; you supply the deck and notes |
 | Doing it yourself from slides | Your existing deck becomes the visuals; your speaker notes become the script | You own the writing and design; less custom than bespoke animation |
 
 ### When an agency is worth it
@@ -63,7 +63,7 @@ An agency makes sense when:
 
 ### When online tools fit
 
-A deck-to-video service suits teams who already have decks and want a produced-looking video without hiring a studio or learning an editor. You supply the story and the speaker notes; Claude Opus 5.5 directs the video from there. It is less custom than a bespoke agency animation, and it won't suit a project that needs hand-drawn characters.
+A deck-to-video service suits teams who already have decks and want a produced-looking video without hiring a studio or learning an editor. You supply the story and the speaker notes; a.i. directs the video from there. It is less custom than a bespoke agency animation, and it won't suit a project that needs hand-drawn characters.
 
 ### When doing it yourself from slides fits
 
@@ -109,4 +109,4 @@ None of these is wrong. They suit different goals. Many teams use a mix: one age
 
 ## Turning slides into explainer videos at a fraction of the cost
 
-If you have a deck, you have most of an explainer video already. The [PowerPoint to video converter](/) turns an ordinary deck into an extraordinary explainer video. On Pro, Claude Opus 5.5 directs it: it tightens the story, redesigns each slide as an animated scene and times the animation to your narration, which comes from your speaker notes. Pro downloads an MP4 with no watermark, from A$29 a month with 10 videos included. Basic lets you try it first, with a watermark.
+If you have a deck, you have most of an explainer video already. The [PowerPoint to video converter](/) turns an ordinary deck into an extraordinary explainer video. On Pro, a.i. directs it: it tightens the story, redesigns each slide as an animated scene and times the animation to your narration, which comes from your speaker notes. Pro downloads an MP4 with no watermark, from A$29 a month with 10 videos included. Basic lets you try it first, with a watermark.

@@ -17,13 +17,14 @@ LEAD_IN, TAIL, GAP = 0.8, 1.1, 0.28   # seconds: before speech, after speech, be
 
 
 def sentences(text):
-    return [s.strip() for s in re.split(r"(?<=[.!?])\s+", text.strip()) if s.strip()]
+    return [s.strip() for s in re.split(r"(?<![Aa]\.[Ii]\.)(?<=[.!?])\s+", text.strip()) if s.strip()]
 
 
 def spoken(s):
     # pronunciation fixes for TTS only (captions keep the written form)
     return (s.replace("powerpoint2vid.com", "PowerPoint to vid dot com")
-             .replace("PowerPoint2Vid", "PowerPoint to vid"))
+             .replace("PowerPoint2Vid", "PowerPoint to vid")
+             .replace("a.i.", "A I").replace("A.I.", "A I"))
 
 
 def main():

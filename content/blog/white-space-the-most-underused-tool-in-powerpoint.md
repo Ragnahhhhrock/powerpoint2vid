@@ -120,4 +120,4 @@ For related advice on keeping text in check, see [how much text is too much on a
 
 ## Give your spacious slides a voice
 
-A slide with room to breathe makes a clear frame in a video. When your deck is cleaned up, add it to the [PowerPoint to video converter](/). Your speaker notes, which now hold the detail you moved off the slides, become the narration. Claude Opus 5.5 directs the video and gives your uncluttered slides room to work as animated scenes, so the visuals stay calm and the voice carries the explanation.
+A slide with room to breathe makes a clear frame in a video. When your deck is cleaned up, add it to the [PowerPoint to video converter](/). Your speaker notes, which now hold the detail you moved off the slides, become the narration. a.i. directs the video and gives your uncluttered slides room to work as animated scenes, so the visuals stay calm and the voice carries the explanation.

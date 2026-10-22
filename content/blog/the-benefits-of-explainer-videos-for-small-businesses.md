@@ -96,4 +96,4 @@ Be clear about what you're getting: a produced explainer built from your own sli
 
 ## Turn your sales deck into an explainer
 
-You've probably already explained your business in a slide deck. Upload it to the [PowerPoint to video converter](/). On Pro, Claude Opus 5.5 acts as your director: it tightens your message, designs each scene and times the animation to your narration, so a small business gets an explainer that looks produced without an agency. Test it on Basic, then when you're ready to publish, [Pro](/pricing) gives you Opus-directed videos with no watermark, from A$29 a month.
+You've probably already explained your business in a slide deck. Upload it to the [PowerPoint to video converter](/). On Pro, a.i. acts as your director: it tightens your message, designs each scene and times the animation to your narration, so a small business gets an explainer that looks produced without an agency. Test it on Basic, then when you're ready to publish, [Pro](/pricing) gives you a.i.-directed videos with no watermark, from A$29 a month.

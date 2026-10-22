@@ -121,4 +121,4 @@ Keep the situation very short. Viewers decide quickly whether to keep watching, 
 
 ## From structured slides to a structured video
 
-A deck built on this framework turns into a clear video with very little extra work, because the story is already there. When your headlines and notes are ready, upload the deck to the [PowerPoint to video converter](/). Claude Opus 5.5 takes the director's chair: it reads the whole deck, tightens the story and designs each scene around the part it plays, whether situation, problem, answer, proof or next step. You'll hear quickly whether the story flows.
+A deck built on this framework turns into a clear video with very little extra work, because the story is already there. When your headlines and notes are ready, upload the deck to the [PowerPoint to video converter](/). a.i. takes the director's chair: it reads the whole deck, tightens the story and designs each scene around the part it plays, whether situation, problem, answer, proof or next step. You'll hear quickly whether the story flows.

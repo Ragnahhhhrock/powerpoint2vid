@@ -120,4 +120,4 @@ If a slide is still text-heavy, PowerPoint2Vid redesigns it as an animated scene
 
 ## From visual slides to a narrated video
 
-Once your bullets have become visuals, your deck is ready to explain itself. Bring the .pptx to the [PowerPoint to video converter](/) and let the speaker notes carry the detail. Claude Opus 5.5 directs the video: it reads the whole deck, turns each process, comparison and chart into an animated scene, and lands every reveal on the word that names it.
+Once your bullets have become visuals, your deck is ready to explain itself. Bring the .pptx to the [PowerPoint to video converter](/) and let the speaker notes carry the detail. a.i. directs the video: it reads the whole deck, turns each process, comparison and chart into an animated scene, and lands every reveal on the word that names it.

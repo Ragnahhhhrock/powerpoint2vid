@@ -1,5 +1,6 @@
 {
   "title": "PowerPoint2Vid: your deck, directed",
+  "poster": 7.0,
   "brief": {
     "font": "Inter",
     "palette": {
@@ -33,21 +34,21 @@
       "beats": [
         {
           "t": 0.8,
-          "end": 2.274,
+          "end": 2.333,
           "text": "This is an ordinary slide."
         },
         {
-          "t": 2.554,
-          "end": 3.866,
+          "t": 2.613,
+          "end": 3.901,
           "text": "Watch it get directed."
         }
       ],
-      "speechEnd": 3.866
+      "speechEnd": 3.901
     },
     {
       "file": "scenes/scene-1.js",
       "slide_index": 1,
-      "narration": "Claude Opus 5.5 reads your whole deck and tightens the story. Your speaker notes become the voiceover.",
+      "narration": "a.i. reads your whole deck and tightens the story. Your speaker notes become the voiceover.",
       "minDuration": 9.4,
       "storyboard": "The five real slides fan in a 3D arc; an amber scan line reads across them on 'reads'. The deck's actual wordy speaker note is typeset below; on 'tightens' filler words are struck in ember and collapse out, the remaining words close up. On 'voiceover' the tightened line lifts and a waveform grows from it, a playhead sweeping across.",
       "slide": {
@@ -65,16 +66,16 @@
       "beats": [
         {
           "t": 0.8,
-          "end": 4.666,
-          "text": "Claude Opus 5.5 reads your whole deck and tightens the story."
+          "end": 3.586,
+          "text": "a.i. reads your whole deck and tightens the story."
         },
         {
-          "t": 4.946,
-          "end": 7.001,
+          "t": 3.866,
+          "end": 5.828,
           "text": "Your speaker notes become the voiceover."
         }
       ],
-      "speechEnd": 7.001
+      "speechEnd": 5.828
     },
     {
       "file": "scenes/scene-2.js",
@@ -97,11 +98,11 @@
       "beats": [
         {
           "t": 0.8,
-          "end": 5.688,
+          "end": 5.769,
           "text": "Then it redesigns every slide as an animated scene, with each move timed to the narration."
         }
       ],
-      "speechEnd": 5.688
+      "speechEnd": 5.769
     },
     {
       "file": "scenes/scene-3.js",
@@ -124,27 +125,27 @@
       "beats": [
         {
           "t": 0.8,
-          "end": 2.611,
+          "end": 2.449,
           "text": "A flat chart becomes a moment."
         },
         {
-          "t": 2.891,
-          "end": 5.48,
+          "t": 2.729,
+          "end": 5.701,
           "text": "The numbers build, and the result lands as it's said."
         }
       ],
-      "speechEnd": 5.48
+      "speechEnd": 5.701
     },
     {
       "file": "scenes/scene-4.js",
       "slide_index": 3,
-      "narration": "Basic exports carry a watermark. Pro removes it, and includes ten Opus-directed videos a month, from 29 Australian dollars.",
+      "narration": "Basic exports carry a watermark. Pro removes it, and includes ten a.i.-directed videos a month, from 29 Australian dollars.",
       "minDuration": 10.6,
       "storyboard": "A real frame from this video in a player, stamped with the PowerPoint2Vid watermark, labelled BASIC. On 'Pro removes it' a light wipe clears the watermark and the frame becomes the hero, labelled PRO. On 'ten' ten frames from this video deal out into a film strip while a counter climbs to 10. On 'Australian dollars' the price A$29/month lands in big type.",
       "slide": {
         "title": "Plans",
-        "text": "Basic: exports carry a PowerPoint2Vid watermark. Pro: from A$29/month. Pro includes 10 Opus-directed videos, no watermark",
-        "notes": "In terms of plans, Basic exports have a watermark on them. Pro is from A$29 a month and includes 10 Opus-directed videos with no watermark.",
+        "text": "Basic: exports carry a PowerPoint2Vid watermark. Pro: from A$29/month. Pro includes 10 a.i.-directed videos, no watermark",
+        "notes": "In terms of plans, Basic exports have a watermark on them. Pro is from A$29 a month and includes 10 a.i.-directed videos with no watermark.",
         "image": "assets/slide-4.png"
       },
       "transition": {
@@ -156,16 +157,16 @@
       "beats": [
         {
           "t": 0.8,
-          "end": 2.936,
+          "end": 2.89,
           "text": "Basic exports carry a watermark."
         },
         {
-          "t": 3.216,
-          "end": 8.928,
-          "text": "Pro removes it, and includes ten Opus-directed videos a month, from 29 Australian dollars."
+          "t": 3.17,
+          "end": 9.091,
+          "text": "Pro removes it, and includes ten a.i.-directed videos a month, from 29 Australian dollars."
         }
       ],
-      "speechEnd": 8.928
+      "speechEnd": 9.091
     },
     {
       "file": "scenes/scene-5.js",
@@ -193,12 +194,11 @@
         },
         {
           "t": 3.483,
-          "end": 5.968,
+          "end": 5.991,
           "text": "Go Pro at powerpoint2vid.com."
         }
       ],
-      "speechEnd": 5.968
+      "speechEnd": 5.991
     }
-  ],
-  "poster": 7.0
+  ]
 }

@@ -46,7 +46,7 @@ Try a couple of voices. Adjust the speaking speed so it sounds natural, not rush
 
 ## Step 4: Let the video be designed for you (about a minute)
 
-This is where PowerPoint2Vid differs from a plain converter. Claude Opus 5.5 acts as director and motion designer. It reads the whole deck, tightens the story, redesigns each slide as an animated scene and times the animation to the voice. Charts are rebuilt as animated charts with the same numbers, and key points land on the word that names them.
+This is where PowerPoint2Vid differs from a plain converter. a.i. acts as director and motion designer. It reads the whole deck, tightens the story, redesigns each slide as an animated scene and times the animation to the voice. Charts are rebuilt as animated charts with the same numbers, and key points land on the word that names them.
 
 Your job is to give it good material: a clear deck, notes that say what you mean, and one idea per slide. Ordinary slides in, extraordinary video out.
 
@@ -83,4 +83,4 @@ If you need your own recorded voice, PowerPoint's built-in video export can incl
 
 ## Try it with your own deck
 
-The fastest way to learn is to load a real presentation into the [PowerPoint to video converter](/) and see what an Opus-directed video does for it: a tighter story, designed scenes and animation timed to your narration, so even a plain deck comes out like a produced explainer. See [pricing](/pricing) to compare Basic and Pro.
+The fastest way to learn is to load a real presentation into the [PowerPoint to video converter](/) and see what an a.i.-directed video does for it: a tighter story, designed scenes and animation timed to your narration, so even a plain deck comes out like a produced explainer. See [pricing](/pricing) to compare Basic and Pro.

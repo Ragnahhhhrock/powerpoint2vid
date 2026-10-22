@@ -4,7 +4,7 @@ to PNG (assets/slide-1.png ...), and write plan.json (brief + narration + storyb
 
 The deck is the plain "before": default Office theme, default layouts, one default chart, and wordy
 speaker notes the way people actually write them. The plan's narration is the tightened version
-(written by Opus 5.5 in a Claude session from these notes), and scene 1 shows that tightening on screen.
+(written by a.i. in a Claude session from these notes), and scene 1 shows that tightening on screen.
 Run from this folder. Needs python-pptx, LibreOffice, pdftoppm."""
 import json, shutil, subprocess, tempfile
 from pathlib import Path
@@ -31,9 +31,9 @@ SLIDES = [
      "Here is the revenue chart for the four quarters. As you can see it goes up every quarter, from "
      "1.2 million in Q1 to 2.6 million in Q4."),
     ("Plans", ["Basic: exports carry a PowerPoint2Vid watermark", "Pro: from A$29/month",
-               "Pro includes 10 Opus-directed videos, no watermark"], None,
+               "Pro includes 10 a.i.-directed videos, no watermark"], None,
      "In terms of plans, Basic exports have a watermark on them. Pro is from A$29 a month and includes "
-     "10 Opus-directed videos with no watermark."),
+     "10 a.i.-directed videos with no watermark."),
     ("Get started", ["powerpoint2vid.com"], None,
      "To get started, head over to powerpoint2vid.com."),
 ]
@@ -73,7 +73,7 @@ SCENES = [
                     "revealing a dark stage with a projector beam and dust. The title is rebuilt as heavy kinetic "
                     "type, letters rising through a mask, an amber light sweep crossing them."),
     dict(slide=1, minDuration=9.4, transition={"type": "fadeblack", "duration": 0.45},
-         narration="Claude Opus 5.5 reads your whole deck and tightens the story. Your speaker notes become the voiceover.",
+         narration="a.i. reads your whole deck and tightens the story. Your speaker notes become the voiceover.",
          storyboard="The five real slides fan in a 3D arc; an amber scan line reads across them on 'reads'. The deck's "
                     "actual wordy speaker note is typeset below; on 'tightens' filler words are struck in ember and "
                     "collapse out, the remaining words close up. On 'voiceover' the tightened line lifts and a "
@@ -92,7 +92,7 @@ SCENES = [
                     "column on 'numbers build'; on 'lands' Q4 ignites ember, the rest dim, and '+117%' (Q4 vs Q1, "
                     "from the deck's numbers) slams in."),
     dict(slide=3, minDuration=10.6, transition={"type": "smoothleft", "duration": 0.6},
-         narration="Basic exports carry a watermark. Pro removes it, and includes ten Opus-directed videos a month, from 29 Australian dollars.",
+         narration="Basic exports carry a watermark. Pro removes it, and includes ten a.i.-directed videos a month, from 29 Australian dollars.",
          storyboard="A real frame from this video in a player, stamped with the PowerPoint2Vid watermark, labelled "
                     "BASIC. On 'Pro removes it' a light wipe clears the watermark and the frame becomes the hero, "
                     "labelled PRO. On 'ten' ten frames from this video deal out into a film strip while a counter "

@@ -1,6 +1,6 @@
 # Product claims for blog posts (Oct 2026 update)
 
-PowerPoint2Vid's edge: it is more than a PowerPoint to video converter. **Claude Opus 5.5 acts as director and motion designer.** It reads the whole deck, tightens the story, redesigns each slide as an animated scene, writes or polishes the narration from the speaker notes, and times the animation to the voice. The result is a high-impact explainer video, not slides with a voice over them. The aim is that the viewer is impressed.
+PowerPoint2Vid's edge: it is more than a PowerPoint to video converter. **a.i. acts as director and motion designer.** It reads the whole deck, tightens the story, redesigns each slide as an animated scene, writes or polishes the narration from the speaker notes, and times the animation to the voice. The result is a high-impact explainer video, not slides with a voice over them. The aim is that the viewer is impressed.
 
 ## Say
 - PowerPoint2Vid turns an ordinary deck into an extraordinary explainer video (a version of "ordinary slides in, extraordinary video out" is the tagline).
@@ -10,8 +10,8 @@ PowerPoint2Vid's edge: it is more than a PowerPoint to video converter. **Claude
 - Works with PowerPoint (.pptx) and Google Slides (export as .pptx first).
 - Two plans (Oct 2026 decision):
   - **Basic**: the browser converter. Narration from speaker notes, captions, transitions. Exports carry a watermark. No subscription needed. Never call it "free".
-  - **Pro**: Claude Opus 5.5 directs the video (everything in the edge paragraph above). No watermark. From A$29 a month with 10 Opus-directed videos included; top-up packs for more. Do not quote yearly or top-up prices until they are on /pricing.
-- Opus-directed claims describe **Pro**. In a closing section, attach them to Pro ("On Pro, Claude Opus 5.5 directs...") and, where it fits, mention Basic as the way to try it first.
+  - **Pro**: a.i. directs the video (everything in the edge paragraph above). No watermark. From A$29 a month with 10 a.i.-directed videos included; top-up packs for more. Do not quote yearly or top-up prices until they are on /pricing.
+- a.i.-directed claims describe **Pro**. In a closing section, attach them to Pro ("On Pro, a.i. directs...") and, where it fits, mention Basic as the way to try it first.
 - Link `/pricing` at most once where it fits.
 
 ## Do not say (these were true of the old browser-only converter and are not true of the new pipeline)
@@ -24,7 +24,7 @@ PowerPoint2Vid's edge: it is more than a PowerPoint to video converter. **Claude
 
 ## How to edit a post
 - Keep front matter `title`, `slug`, `date`, `keyword`, `pillar`, `persona` exactly as they are. Edit `description` only if it makes a claim above; keep it 140-158 characters and keep the keyword.
-- Change as little as the claims require, plus: in the closing product section (the H2 that links to the converter), say in one or two sentences, in words that fit this post's topic, what Opus-directed videos do for this reader (for example "Claude Opus 5.5 directs the video: it tightens the story, designs each scene and times the animation to your narration, so a lecture deck lands like a produced explainer"). Do not paste the same sentence across posts; vary it to the topic. Mention Opus by name at most once per post. Elsewhere in the body, a clause or sentence that matches the topic is enough; do not force it in.
+- Change as little as the claims require, plus: in the closing product section (the H2 that links to the converter), say in one or two sentences, in words that fit this post's topic, what a.i.-directed videos do for this reader (for example "a.i. directs the video: it tightens the story, designs each scene and times the animation to your narration, so a lecture deck lands like a produced explainer"). Do not paste the same sentence across posts; vary it to the topic. Mention a.i. at most once per post; never name Claude or Opus. Elsewhere in the body, a clause or sentence that matches the topic is enough; do not force it in.
 - Keep the link to the converter at `/` with anchor text containing "PowerPoint to video converter". Do not add or remove blog links. Do not change slugs in links.
 - Keep Australian spelling, plain confident short sentences, 800-1,300 words, and the existing structure and headings (rename an H2 only if it carries a banned claim, and keep the target keyword in at least one H2).
 - When a "why this tool" bullet or checklist item was built on privacy or on-device, replace it with something true from the "Say" list (for example "Story and design: the deck is upgraded, not just recorded") rather than deleting it and leaving a gap.

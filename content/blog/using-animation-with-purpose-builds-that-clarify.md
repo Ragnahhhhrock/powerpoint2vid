@@ -105,4 +105,4 @@ For more on matching motion to slide changes, see [slide transitions that work i
 
 ## From builds to video
 
-Purposeful builds make a live session easier to follow, and they make a video even better. Once your deck reveals one idea at a time, bring it to the [PowerPoint to video converter](/). Claude Opus 5.5 directs the finished video: it designs each slide as an animated scene and times every build to your narration, so each training point lands just as the voice reaches it. Watch the result once to check the order matches your notes.
+Purposeful builds make a live session easier to follow, and they make a video even better. Once your deck reveals one idea at a time, bring it to the [PowerPoint to video converter](/). a.i. directs the finished video: it designs each slide as an animated scene and times every build to your narration, so each training point lands just as the voice reaches it. Watch the result once to check the order matches your notes.

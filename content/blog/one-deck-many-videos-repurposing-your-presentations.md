@@ -104,4 +104,4 @@ Keep the style consistent within each channel so viewers start to recognise your
 
 ## Turn one deck into a library of videos
 
-Repurposing works best when re-exporting is quick. Open the [PowerPoint to video converter](/) and drop in each version of your deck. On Pro, Claude Opus 5.5 directs every version separately: it tightens the story for that audience, designs the scenes and times the animation to the narration, so a website explainer and an onboarding module each feel made for their job. Pro videos have no watermark, and each plan includes a monthly allowance of Opus-directed videos; see the [pricing page](/pricing).
+Repurposing works best when re-exporting is quick. Open the [PowerPoint to video converter](/) and drop in each version of your deck. On Pro, a.i. directs every version separately: it tightens the story for that audience, designs the scenes and times the animation to the narration, so a website explainer and an onboarding module each feel made for their job. Pro videos have no watermark, and each plan includes a monthly allowance of a.i.-directed videos; see the [pricing page](/pricing).

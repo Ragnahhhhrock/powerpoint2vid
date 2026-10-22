@@ -1,7 +1,7 @@
 # PowerPoint2Vid Blog Content Strategy
 
-**Goal:** grow organic search traffic around "PowerPoint to video converter" and its related questions, get readers trying the Basic converter, and upgrade them to Pro for Opus-directed videos.
-**Plans:** Basic (browser converter, watermarked, no subscription) and Pro (Claude Opus 5.5 directs the video, no watermark, from A$29/month with 10 videos included, top-ups for more). Basic is the entry point; the quality jump to Pro is the upsell.
+**Goal:** grow organic search traffic around "PowerPoint to video converter" and its related questions, get readers trying the Basic converter, and upgrade them to Pro for a.i.-directed videos.
+**Plans:** Basic (browser converter, watermarked, no subscription) and Pro (a.i. directs the video, no watermark, from A$29/month with 10 videos included, top-ups for more). Basic is the entry point; the quality jump to Pro is the upsell.
 **Cadence:** one post a day for 90 days, 22 Oct 2026 to 19 Jan 2027. Each post goes live at 00:00 Perth time (AWST).
 **Home:** https://powerpoint2vid.com/blog
 
@@ -62,7 +62,7 @@ Day 1 is the cornerstone guide, "How to Convert PowerPoint to Video: The Complet
 - Posts only link to earlier posts, so readers never hit a page that isn't live yet. Related-post links are added automatically.
 - 800 to 1,300 words. Plain, confident, short sentences. Australian spelling.
 - House rule: never describe the product or anything else as costing nothing (the "f-word" is banned site-wide). No invented statistics, studies or quotes.
-- Product claims must match the product and follow `content/blog/PRODUCT_CLAIMS.md`: an Opus 5.5-directed explainer video made from the deck, speaker-note narration, captions and transitions, MP4 (WebM available) download. Basic: browser version, watermarked. Pro: Opus-directed, no watermark, from A$29/month with 10 videos included. Opus claims describe Pro. Never the word "free", including for Basic. No privacy, on-device or no-upload claims.
+- Product claims must match the product and follow `content/blog/PRODUCT_CLAIMS.md`: an a.i.-directed explainer video made from the deck, speaker-note narration, captions and transitions, MP4 (WebM available) download. Basic: browser version, watermarked. Pro: a.i.-directed, no watermark, from A$29/month with 10 videos included. a.i. claims describe Pro. Never name Claude or Opus on the site. Never the word "free", including for Basic. No privacy, on-device or no-upload claims.
 
 ## 6. Measurement
 - GA4: blog sessions, scroll depth, `cta_click` from blog posts, `deck_loaded` and `export_complete` from blog referrals.

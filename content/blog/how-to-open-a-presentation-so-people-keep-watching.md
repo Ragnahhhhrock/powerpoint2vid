@@ -127,4 +127,4 @@ When the opening is read by a narrator voice, a few extra habits help:
 
 ## Hear your opening before anyone else does
 
-The quickest way to test an opening is to hear it. Write it into the speaker notes, upload the deck to the [PowerPoint to video converter](/) and listen to the result. Claude Opus 5.5 directs the video, so your opening line lands on a designed first scene with the headline timed to the narration. If the first twenty seconds don't make you want to keep watching, rewrite the first slide and try again.
+The quickest way to test an opening is to hear it. Write it into the speaker notes, upload the deck to the [PowerPoint to video converter](/) and listen to the result. a.i. directs the video, so your opening line lands on a designed first scene with the headline timed to the narration. If the first twenty seconds don't make you want to keep watching, rewrite the first slide and try again.

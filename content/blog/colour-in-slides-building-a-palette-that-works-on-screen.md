@@ -110,4 +110,4 @@ The palette shrank from seven colours to three, and the slide now says exactly o
 
 A tight palette is one of the things that makes a slide video look deliberate rather than thrown together. It also helps the viewer follow the narration, because the accent shows them where to look at each moment.
 
-Once your colours are set, drop the deck into the [PowerPoint to video converter](/) and see how your colours hold up in motion. Claude Opus 5.5 is the director behind each video, rebuilding charts as animated charts with the same numbers and bringing your accent in on the word that names it, so the colour roles you chose do real work on screen.
+Once your colours are set, drop the deck into the [PowerPoint to video converter](/) and see how your colours hold up in motion. a.i. is the director behind each video, rebuilding charts as animated charts with the same numbers and bringing your accent in on the word that names it, so the colour roles you chose do real work on screen.

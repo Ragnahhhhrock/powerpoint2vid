@@ -176,7 +176,7 @@ def post_page(p, body_html, toc, related):
       <aside class="post-cta" aria-label="Try PowerPoint2Vid">
         <p class="post-cta__eyebrow">PowerPoint to video converter</p>
         <h2>Turn your next deck into an extraordinary video</h2>
-        <p>On Pro, Claude Opus 5.5 directs your deck: a tighter story, every slide redesigned as an animated scene, timed to your narration.</p>
+        <p>On Pro, a.i. directs your deck: a tighter story, every slide redesigned as an animated scene, timed to your narration.</p>
         <div class="post-cta__actions">
           <a class="btn btn--accent" href="/#showcase" data-cta="blog_post_showcase">See what Pro makes</a>
           <a class="btn btn--ghost" href="/pricing" data-cta="blog_post_pricing">See pricing</a>
@@ -223,7 +223,7 @@ def index_page(posts):
     <div class="panel blog-band__inner">
       <div>
         <h2>Got a deck? Make it a video.</h2>
-        <p>The online PowerPoint to video converter that narrates your speaker notes, upgrades your slides into animated scenes and adds captions. Directed by Claude Opus 5.5.</p>
+        <p>The online PowerPoint to video converter that narrates your speaker notes, upgrades your slides into animated scenes and adds captions. Directed by a.i..</p>
       </div>
       <a class="btn btn--accent" href="/#showcase" data-cta="blog_index_showcase">Watch the Pro showcase</a>
     </div>

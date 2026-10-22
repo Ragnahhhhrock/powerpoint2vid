@@ -103,4 +103,4 @@ Captions make the video accessible to people who are deaf or hard of hearing and
 
 ## Make the explainer from the deck you already have
 
-You probably have a sales or product deck that already explains the topic well. Bring it to the [PowerPoint to video converter](/) to turn the slides and speaker notes into a narrated explainer. Claude Opus 5.5 is the director behind each video: it tightens the story and designs each scene, so a page visitor gets a clear, produced explainer rather than a recorded slideshow. Those same speaker notes then become your transcript, so the video and the page tell the same story.
+You probably have a sales or product deck that already explains the topic well. Bring it to the [PowerPoint to video converter](/) to turn the slides and speaker notes into a narrated explainer. a.i. is the director behind each video: it tightens the story and designs each scene, so a page visitor gets a clear, produced explainer rather than a recorded slideshow. Those same speaker notes then become your transcript, so the video and the page tell the same story.

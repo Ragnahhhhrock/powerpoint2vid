@@ -102,4 +102,4 @@ Internal decks often contain sensitive information: unreleased changes, internal
 
 ## Make your next internal update from the deck you already have
 
-Most internal updates already exist as slides. Drop the .pptx into the [PowerPoint to video converter](/) and your speaker notes become narration, with captions. Claude Opus 5.5 takes the director's chair: it tightens the message, designs each scene and times the animation to the voice, so a routine update lands like a produced briefing. When the process changes, edit the deck and create a new version.
+Most internal updates already exist as slides. Drop the .pptx into the [PowerPoint to video converter](/) and your speaker notes become narration, with captions. a.i. takes the director's chair: it tightens the message, designs each scene and times the animation to the voice, so a routine update lands like a produced briefing. When the process changes, edit the deck and create a new version.

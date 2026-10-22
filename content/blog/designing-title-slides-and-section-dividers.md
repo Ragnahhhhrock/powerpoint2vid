@@ -138,4 +138,4 @@ The dividers alone tell the whole story. That's a good sign your structure is cl
 
 ## Strong openings make better videos
 
-A clear title slide becomes a clear first frame, and well-written dividers give a video natural chapters. Load your deck into the [PowerPoint to video converter](/) and check that the title slide grabs attention and each divider lands before the section begins. Claude Opus 5.5 directs the video: it turns your title into an opening scene and your dividers into clean chapter transitions, timed to the narration, so the structure you planned is easy to feel.
+A clear title slide becomes a clear first frame, and well-written dividers give a video natural chapters. Load your deck into the [PowerPoint to video converter](/) and check that the title slide grabs attention and each divider lands before the section begins. a.i. directs the video: it turns your title into an opening scene and your dividers into clean chapter transitions, timed to the narration, so the structure you planned is easy to feel.

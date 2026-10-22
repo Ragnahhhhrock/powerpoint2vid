@@ -73,7 +73,7 @@ The video that comes out is clearer for staff and contains nothing the trainer w
 
 ## What this means for PowerPoint2Vid
 
-PowerPoint2Vid does more than record your slides. Claude Opus 5.5 acts as the director: it reads the whole deck, tightens the story, designs each slide as an animated scene and times the animation to your narration. That work happens as part of producing your video, so your deck is processed as part of that service rather than only on your own computer.
+PowerPoint2Vid does more than record your slides. a.i. acts as the director: it reads the whole deck, tightens the story, designs each slide as an animated scene and times the animation to your narration. That work happens as part of producing your video, so your deck is processed as part of that service rather than only on your own computer.
 
 So apply the checklist to us too. Check your organisation's policy, prepare the deck as above, and if a deck is too sensitive to share with any online service, convert a cleaned-up version instead. For decks you are comfortable sharing, the result is a video that looks produced, not recorded. Try the [PowerPoint to video converter](/) on a public or lightly edited deck first, and see [pricing](/pricing) for plans.
 

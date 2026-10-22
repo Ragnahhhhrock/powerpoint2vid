@@ -105,4 +105,4 @@ Each takes minutes, because the speaker notes do most of the work.
 
 ## Make a version for every channel
 
-Sharing well starts with a video that suits the place it lands. Since your video comes from slides, you can make a long version, a short version and a personalised version from the same deck. Add your .pptx to the [PowerPoint to video converter](/) and download the versions you need. Claude Opus 5.5 directs each one, so a short social cut gets a tight story and punchy scenes, and the full version gets room to explain.
+Sharing well starts with a video that suits the place it lands. Since your video comes from slides, you can make a long version, a short version and a personalised version from the same deck. Add your .pptx to the [PowerPoint to video converter](/) and download the versions you need. a.i. directs each one, so a short social cut gets a tight story and punchy scenes, and the full version gets room to explain.

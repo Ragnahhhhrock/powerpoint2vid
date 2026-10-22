@@ -109,4 +109,4 @@ Watch your own recording one more time on the day. It helps you pick up where th
 
 ## Turn your talk deck into a finished recording
 
-If a narrated slide video fits the brief, your deck and speaker notes are most of the work already done. Drop the .pptx into the [PowerPoint to video converter](/), and choose a voice and speaking speed. Claude Opus 5.5 directs the talk: it tightens the story, turns each slide into an animated scene and times the animation to your narration, so a recorded talk keeps the energy a room would give it. Download the MP4 when it is right, which suits the common conference request for MP4.
+If a narrated slide video fits the brief, your deck and speaker notes are most of the work already done. Drop the .pptx into the [PowerPoint to video converter](/), and choose a voice and speaking speed. a.i. directs the talk: it tightens the story, turns each slide into an animated scene and times the animation to your narration, so a recorded talk keeps the energy a room would give it. Download the MP4 when it is right, which suits the common conference request for MP4.

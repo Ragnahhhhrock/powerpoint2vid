@@ -129,4 +129,4 @@ If you're preparing a talk that will be pre-recorded anyway, [pre-recorded confe
 
 ## Use the converter as your rehearsal room
 
-You can run this whole method with the [PowerPoint to video converter](/). Upload your .pptx and let it narrate from your speaker notes. Claude Opus 5.5 art-directs the result, tightening the story and timing each animated scene to the voice, so you rehearse against something close to a produced version of your talk. If you later decide to share it, download the finished video from the same deck.
+You can run this whole method with the [PowerPoint to video converter](/). Upload your .pptx and let it narrate from your speaker notes. a.i. art-directs the result, tightening the story and timing each animated scene to the voice, so you rehearse against something close to a produced version of your talk. If you later decide to share it, download the finished video from the same deck.

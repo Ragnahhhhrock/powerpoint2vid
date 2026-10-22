@@ -112,4 +112,4 @@ Watch the finished video once from start to finish, with the rubric beside you.
 
 ## Make your assignment video from your slides
 
-You have already done the hard part when your slides and notes are clear. Upload your .pptx to the [PowerPoint to video converter](/). Claude Opus 5.5 directs the video: it tightens your argument, designs each slide as an animated scene and times the animation to your narration, so a marker sees a produced presentation, not slides with a voice over. If it suits your assignment, download it and submit with time to spare.
+You have already done the hard part when your slides and notes are clear. Upload your .pptx to the [PowerPoint to video converter](/). a.i. directs the video: it tightens your argument, designs each slide as an animated scene and times the animation to your narration, so a marker sees a produced presentation, not slides with a voice over. If it suits your assignment, download it and submit with time to spare.

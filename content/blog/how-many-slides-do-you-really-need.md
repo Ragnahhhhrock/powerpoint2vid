@@ -113,4 +113,4 @@ That makes the method above useful for video too: one idea per slide, a short no
 
 ## From the right number of slides to a video
 
-Once each slide carries one idea, the deck is easy to turn into a clear, well-paced video. Load your .pptx into the [PowerPoint to video converter](/) and watch how the pacing feels. Claude Opus 5.5 art-directs the result: it tightens the story, designs each slide as an animated scene and times it to your narration, so a lean deck plays like a produced explainer. Adjust a note and watch again until it flows.
+Once each slide carries one idea, the deck is easy to turn into a clear, well-paced video. Load your .pptx into the [PowerPoint to video converter](/) and watch how the pacing feels. a.i. art-directs the result: it tightens the story, designs each slide as an animated scene and times it to your narration, so a lean deck plays like a produced explainer. Adjust a note and watch again until it flows.

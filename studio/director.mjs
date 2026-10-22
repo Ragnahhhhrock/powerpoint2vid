@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* PowerPoint2Vid director: runs the Claude Opus 5.5 passes for a job.
+/* PowerPoint2Vid director: runs the a.i. passes for a job.
  *
  *   story  : whole deck in -> brief + per-scene narration, storyboard, transition   (1 call)
  *   voice  : narration -> audio + beat timings                                       (studio/voice.py)
@@ -161,7 +161,7 @@ async function review() {
 
 /* ---------- pipeline ---------- */
 const t0 = Date.now();
-progress('story', 5, MOCK ? 'slides-only story' : 'Opus is reading the deck');
+progress('story', 5, MOCK ? 'slides-only story' : 'a.i. is reading the deck');
 if (FROM <= 0) await story();
 progress('voice', 20, 'recording narration');
 if (FROM <= 1 && !DRY) { if (!VOICE) throw new Error('--voice <piper .onnx> needed'); run('python3', [path.join(HERE, 'voice.py'), job, '--voice', VOICE]); }
@@ -172,6 +172,6 @@ if (FROM <= 3 && !DRY && !MOCK) await review();
 progress('render', 75, 'rendering final video');
 if (FROM <= 4 && !DRY) run('node', [path.join(HERE, 'render.mjs'), job]);
 progress('done', 100, '');
-// Opus 5.5 list prices per million tokens: input $4, output $20, cache read $0.20, 5-min cache write $5.
+// a.i. list prices per million tokens: input $4, output $20, cache read $0.20, 5-min cache write $5.
 const cost = (usage.input * 4 + usage.output * 20 + usage.cache_read * 0.2 + usage.cache_write * 5) / 1e6;
 console.log(`done in ${((Date.now() - t0) / 1000).toFixed(0)}s; tokens ${JSON.stringify(usage)}; est. Claude cost $${cost.toFixed(2)}`);

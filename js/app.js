@@ -184,7 +184,7 @@
   $('stop').onclick = stopAll;
   $('reset').onclick = () => { track('new_deck'); stopAll(); deck = null; $('file').value = ''; show(false); };
 
-  /* ---------- plans: Basic exports carry a watermark; Pro removes it (and adds Opus-directed videos in Studio) ---------- */
+  /* ---------- plans: Basic exports carry a watermark; Pro removes it (and adds a.i.-directed videos in Studio) ---------- */
   const upsell = $('paywall');
   let watermark = true;
   async function exportPlan() {
@@ -236,7 +236,7 @@
     const a = document.createElement('a'); a.href = url; a.download = 'powerpoint2vid-explainer.' + ext; document.body.appendChild(a); a.click(); a.remove();
     count({ type: 'video', seconds: (Date.now() - t0) / 1000 });
     track('export_complete', { format: ext, slide_count: deck.slides.length, size_mb: +(chunks.reduce((n, c) => n + c.size, 0) / 1048576).toFixed(1) });
-    status(watermark ? 'Exported powerpoint2vid-explainer.' + ext + ' (Basic, with watermark). Pro removes the watermark and adds Opus-directed videos.' : 'Exported powerpoint2vid-explainer.' + ext + '.'); setProgress(1);
+    status(watermark ? 'Exported powerpoint2vid-explainer.' + ext + ' (Basic, with watermark). Pro removes the watermark and adds a.i.-directed videos.' : 'Exported powerpoint2vid-explainer.' + ext + '.'); setProgress(1);
   };
 
   /* ---------- hero explainer: autoplays muted; button restarts it with sound ---------- */

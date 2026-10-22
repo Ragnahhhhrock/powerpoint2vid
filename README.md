@@ -7,13 +7,13 @@ Private, online **PowerPoint to video converter** at https://powerpoint2vid.com.
 - **Video styles:** `js/video-styles.js` presets (cinematic, keynote, UI springs, kinetic poster, paper & ink) adapted from [awesome-opus5-5-videos](https://github.com/yihui-dev/awesome-opus5-5-videos) prompts. See `docs/VIDEO_STYLES.md`.
 - **Narrate + record:** `js/app.js` uses the Web Speech API for voice and MediaRecorder for export (WebM, or MP4 where supported).
 - **Design system:** `docs/STYLE_GUIDE.md` and `/style-guide.html`.
-- **v2 (planned):** server-side Opus 5.5 motion-director pipeline. See `docs/ARCHITECTURE.md`.
+- **v2 (planned):** server-side a.i. motion-director pipeline. See `docs/ARCHITECTURE.md`.
 
 ## Deploy (Cloudflare Pages)
 Static site, no build step: framework preset *None*, build command empty, output directory `/`.
 
 ## Accounts and paywall (Pro subscription)
-Two plans. **Basic**: anyone can preview and export in the browser; exports carry a watermark (`drawWatermark()` in `js/renderer.js`, applied in `exportPlan()` / the export flow in `js/app.js`). **Pro** (A$29/month, `MONTHLY_VIDEOS` Opus-directed videos in `/studio`, default 10): no watermark. The Pro payment link (A$29/month) is a constant in `functions/checkout.js`; the Cloudflare variable `STRIPE_LINK_PRO_MONTHLY` overrides it if set.
+Two plans. **Basic**: anyone can preview and export in the browser; exports carry a watermark (`drawWatermark()` in `js/renderer.js`, applied in `exportPlan()` / the export flow in `js/app.js`). **Pro** (A$29/month, `MONTHLY_VIDEOS` a.i.-directed videos in `/studio`, default 10): no watermark. The Pro payment link (A$29/month) is a constant in `functions/checkout.js`; the Cloudflare variable `STRIPE_LINK_PRO_MONTHLY` overrides it if set.
 
 Flow: `/pricing` -> `/checkout?plan=monthly` -> (sign up or log in at `/account`) -> Stripe payment link with the account id in `client_reference_id` -> Stripe calls `/api/stripe-webhook` -> Pro switches on for that account.
 
@@ -60,7 +60,7 @@ Fired from `js/app.js` via `gtag('event', ...)`. No file names or slide content 
 | `cta_click` / `contact_click` / `outbound_click` | Hero CTA, mailto, external links | `location`, `link_domain` |
 
 ## Homepage explainer video
-The hero autoplays `assets/example-v3/explainer-v3.mp4` muted on load (WebM fallback, captions in `explainer-v3-captions.vtt`); "Play with sound" restarts it with narration. It is the Opus 5.5-directed example: scenes were written by Opus 5.5 and rendered with the `studio/` pipeline (source in `studio/examples/explainer-v3/`; render scenes 0-3 before scene 4, which uses stills from them). The older Basic-renderer build (`scripts/make-styled-explainer.py`, `assets/example/`) is no longer used on the homepage. Files under `/assets/*` are cached immutably (see `_headers`), so if you regenerate the video, rename the files or purge the Cloudflare cache.
+The hero autoplays `assets/example-v3/explainer-v3.mp4` muted on load (WebM fallback, captions in `explainer-v3-captions.vtt`); "Play with sound" restarts it with narration. It is the a.i.-directed example: scenes were written by a.i. and rendered with the `studio/` pipeline (source in `studio/examples/explainer-v3/`; render scenes 0-3 before scene 4, which uses stills from them). The older Basic-renderer build (`scripts/make-styled-explainer.py`, `assets/example/`) is no longer used on the homepage. Files under `/assets/*` are cached immutably (see `_headers`), so if you regenerate the video, rename the files or purge the Cloudflare cache.
 
 ## Regenerate share images
 `python3 scripts/make-images.py` (needs Pillow and the Inter font).

@@ -39,7 +39,7 @@ If you have already recorded your own voice over the slides, the built-in export
 
 ## What a dedicated converter does differently
 
-A dedicated converter starts from the same .pptx but treats the video as its own thing. PowerPoint2Vid goes a step further and is more than a converter: On Pro, Claude Opus 5.5 acts as director and motion designer. It reads the whole deck, tightens the story, redesigns each slide as an animated scene and times the animation to the voice. Ordinary slides in, extraordinary video out. Here is what that means in practice:
+A dedicated converter starts from the same .pptx but treats the video as its own thing. PowerPoint2Vid goes a step further and is more than a converter: On Pro, a.i. acts as director and motion designer. It reads the whole deck, tightens the story, redesigns each slide as an animated scene and times the animation to the voice. Ordinary slides in, extraordinary video out. Here is what that means in practice:
 
 - **Narration from your speaker notes.** You choose a voice and speaking speed. No microphone needed.
 - **Timing follows the speech.** Key points land on the word that names them.

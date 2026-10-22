@@ -1,4 +1,4 @@
-/* Scene 1 — "Claude Opus 5.5 reads your whole deck and tightens the story. Your speaker notes become the voiceover."
+/* Scene 1 — "a.i. reads your whole deck and tightens the story. Your speaker notes become the voiceover."
  * Storyboard: the five real slides fan in a 3D arc; an amber scan line reads across them on "reads".
  * The deck's actual wordy speaker note is typeset below; on "tightens" filler words are struck in ember
  * and fall away while the kept words glide into one tight line. On "voiceover" a waveform grows under
@@ -17,7 +17,7 @@ P2V.scene((ctx) => {
   const lab = el('div', 'abs', cam, { left: '160px', top: '86px', font: `500 22px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--muted)' });
   lab.innerHTML = 'READING&nbsp;&nbsp;·&nbsp;&nbsp;input-deck.pptx&nbsp;&nbsp;·&nbsp;&nbsp;5 SLIDES';
   const chip = el('div', 'abs', cam, { right: '160px', top: '72px', padding: '14px 24px', borderRadius: '999px', border: '2px solid rgba(255,179,64,.7)', font: `600 22px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--amber)', boxShadow: '0 0 40px rgba(255,179,64,.25)', background: 'rgba(255,179,64,.06)' });
-  chip.textContent = 'CLAUDE OPUS 5.5';
+  chip.textContent = 'A.I.';
   const persp = el('div', 'abs', cam, { left: 0, top: 0, width: '1920px', height: '420px', perspective: '1400px', perspectiveOrigin: '50% 60%' });
   const row = el('div', 'abs', persp, { inset: 0, transformStyle: 'preserve-3d' });
   const TW = 300, TH = 169;

@@ -70,7 +70,7 @@ Some converters offer AI presenters, stock footage libraries, background music a
 
 ## How PowerPoint2Vid answers these questions
 
-PowerPoint2Vid is more than a converter. Claude Opus 5.5 acts as director and motion designer: it reads the whole deck, tightens the story, redesigns each slide as an animated scene and times the animation to the voice. Ordinary slides in, extraordinary video out. Here's a straight summary so you can compare.
+PowerPoint2Vid is more than a converter. a.i. acts as director and motion designer: it reads the whole deck, tightens the story, redesigns each slide as an animated scene and times the animation to the voice. Ordinary slides in, extraordinary video out. Here's a straight summary so you can compare.
 
 | Question | PowerPoint2Vid |
 |---|---|
@@ -81,7 +81,7 @@ PowerPoint2Vid is more than a converter. Claude Opus 5.5 acts as director and mo
 | Captions | Included |
 | Input | PowerPoint (.pptx) and Google Slides, exported as .pptx first |
 | Format | MP4 to download and share, with WebM available |
-| Price | Basic: browser version, watermarked, no subscription. Pro: Opus-directed, no watermark, from A$29 a month with 10 videos included |
+| Price | Basic: browser version, watermarked, no subscription. Pro: a.i.-directed, no watermark, from A$29 a month with 10 videos included |
 
 For how your files are handled, check the tool's own information against your organisation's policy, as you would with any online service.
 
@@ -111,4 +111,4 @@ For the full conversion process, see [How to Convert PowerPoint to Video: The Co
 
 ## Try the PowerPoint to video converter with your own deck
 
-The right tool is the one that turns your actual slides into a video you're happy to send. Drop a deck into the [PowerPoint to video converter](/) and see what an Opus-directed video does for slides you already have: a tighter story, designed scenes and animation that follows your narration. Try it on Basic, and if it fits, see [Pro](/pricing).
+The right tool is the one that turns your actual slides into a video you're happy to send. Drop a deck into the [PowerPoint to video converter](/) and see what an a.i.-directed video does for slides you already have: a tighter story, designed scenes and animation that follows your narration. Try it on Basic, and if it fits, see [Pro](/pricing).

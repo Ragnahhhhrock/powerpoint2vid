@@ -112,4 +112,4 @@ A clean master also helps converters read your slides properly. Text in real pla
 
 ## From tidy template to training video
 
-Once your decks are built on a solid master, they are ready to become training videos. Upload the .pptx to the [PowerPoint to video converter](/) and your speaker notes become the narration. Claude Opus 5.5 plays director, tightening the lesson flow and designing each step as an animated scene, so a consistent training deck lands like a produced explainer. When the policy changes, update the slide and download a fresh video. If the content is internal, check your organisation's policy on using online tools first.
+Once your decks are built on a solid master, they are ready to become training videos. Upload the .pptx to the [PowerPoint to video converter](/) and your speaker notes become the narration. a.i. plays director, tightening the lesson flow and designing each step as an animated scene, so a consistent training deck lands like a produced explainer. When the policy changes, update the slide and download a fresh video. If the content is internal, check your organisation's policy on using online tools first.

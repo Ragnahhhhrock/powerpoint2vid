@@ -107,4 +107,4 @@ Try these on any slide:
 
 ## See your hierarchy in motion
 
-The fastest way to check hierarchy is to watch your slides the way a viewer would. Add your .pptx to the [PowerPoint to video converter](/) and your speaker notes become the narration. Claude Opus 5.5 directs the video, bringing in the headline, then the support, then the detail, with each point landing on the word that names it. If the voice and the reveals feel out of order, you'll notice straight away, and you can fix the slide before you share it.
+The fastest way to check hierarchy is to watch your slides the way a viewer would. Add your .pptx to the [PowerPoint to video converter](/) and your speaker notes become the narration. a.i. directs the video, bringing in the headline, then the support, then the detail, with each point landing on the word that names it. If the voice and the reveals feel out of order, you'll notice straight away, and you can fix the slide before you share it.

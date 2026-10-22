@@ -112,4 +112,4 @@ That single slide takes about twenty seconds on screen. A twenty-slide lecture s
 
 The hardest part of a narrated lecture video is the script, and if you've written good speaker notes, that part is done. The rest is a download and a few settings. For a broader look at the whole process, see [how to convert PowerPoint to video](/blog/how-to-convert-powerpoint-to-video-the-complete-guide).
 
-Download your deck as .pptx and upload it to the [PowerPoint to video converter](/). On Pro, Claude Opus 5.5 is the director behind each video: it tightens the story, designs each scene and times the animation to your narration, so a lecture deck lands like a produced explainer. Basic is there to try it, with a watermark; Pro starts at A$29 a month with 10 Opus-directed videos included.
+Download your deck as .pptx and upload it to the [PowerPoint to video converter](/). On Pro, a.i. is the director behind each video: it tightens the story, designs each scene and times the animation to your narration, so a lecture deck lands like a produced explainer. Basic is there to try it, with a watermark; Pro starts at A$29 a month with 10 a.i.-directed videos included.

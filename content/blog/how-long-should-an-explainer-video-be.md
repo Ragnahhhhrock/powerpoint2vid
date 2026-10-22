@@ -110,4 +110,4 @@ When content keeps growing, split it. Three focused two-minute videos are easier
 
 ## Let your script set the pace
 
-With slide-based videos, length follows your words. In the [PowerPoint to video converter](/), your speaker notes become the narration and the animation is timed to the voice. Claude Opus 5.5 plays director, tightening the story so a short script still lands as a produced explainer. Trim the notes, watch the result, and you'll see exactly how long it runs before you share it.
+With slide-based videos, length follows your words. In the [PowerPoint to video converter](/), your speaker notes become the narration and the animation is timed to the voice. a.i. plays director, tightening the story so a short script still lands as a produced explainer. Trim the notes, watch the result, and you'll see exactly how long it runs before you share it.
