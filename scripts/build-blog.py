@@ -14,7 +14,7 @@ SRC = ROOT / "content/blog"
 OUT = ROOT / "blog"
 IMG = ROOT / "assets/blog"
 SITE = "https://powerpoint2vid.com"
-VER = "20261021b"
+VER = "20261022a"
 GA = "G-3F8MGRVD2L"
 
 PILLARS = {
@@ -175,8 +175,8 @@ def post_page(p, body_html, toc, related):
       </div>
       <aside class="post-cta" aria-label="Try PowerPoint2Vid">
         <p class="post-cta__eyebrow">PowerPoint to video converter</p>
-        <h2>Turn your next deck into a narrated video</h2>
-        <p>Drop in a .pptx, pick a voice and a video style, and preview it straight away. Your slides never leave your browser.</p>
+        <h2>Turn your next deck into an extraordinary video</h2>
+        <p>Drop in a .pptx and your speaker notes become the narration. Claude Opus 5.5 directs the video, turning each slide into an animated scene.</p>
         <div class="post-cta__actions">
           <a class="btn btn--accent" href="/#app" data-cta="blog_post_convert">Convert PowerPoint to video</a>
           <a class="btn btn--ghost" href="/pricing" data-cta="blog_post_pricing">See pricing</a>
@@ -223,7 +223,7 @@ def index_page(posts):
     <div class="panel blog-band__inner">
       <div>
         <h2>Got a deck? Make it a video.</h2>
-        <p>The online PowerPoint to video converter that narrates your speaker notes, animates your slides and adds captions. Private by design.</p>
+        <p>The online PowerPoint to video converter that narrates your speaker notes, upgrades your slides into animated scenes and adds captions. Directed by Claude Opus 5.5.</p>
       </div>
       <a class="btn btn--accent" href="/#app" data-cta="blog_index_convert">Convert PowerPoint to video</a>
     </div>
