@@ -27,3 +27,6 @@ Pieces: the **site** (Cloudflare Pages, already live) calls a **runner** (this r
 - Cloudflare Containers wiring (`workers/runner`) was written against the docs and has not been deployed from here; the runner itself was tested locally.
 - GSAP (no-charge licence) and Piper voice (en_US-lessac) licences should be re-checked before launch.
 - Before turning this on publicly: add a privacy page and update the homepage FAQ line "Everything runs in your browser".
+
+## Deploying from GitHub instead of a terminal
+`.github/workflows/deploy-runner.yml` builds and deploys the runner on GitHub's servers. Add these repo secrets (Settings > Secrets and variables > Actions): `CLOUDFLARE_API_TOKEN` ("Edit Cloudflare Workers" template), `CLOUDFLARE_ACCOUNT_ID`, `RUNNER_SECRET`, `ANTHROPIC_API_KEY`. Then run the workflow from the Actions tab. Steps 3-5 above still apply for the Pages variables.
