@@ -15,7 +15,7 @@ jobs:
   revoice:
     runs-on: ubuntu-latest
     timeout-minutes: 180
-    container: mcr.microsoft.com/playwright:v1.48.0-jammy
+    container: mcr.microsoft.com/playwright:v1.64.1-jammy
     steps:
       - uses: actions/checkout@v4
       - name: Check the key is set

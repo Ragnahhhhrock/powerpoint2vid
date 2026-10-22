@@ -1,5 +1,5 @@
 # PowerPoint2Vid job runner. Build from the repo root:  docker build -f studio/Dockerfile -t p2v-runner .
-FROM mcr.microsoft.com/playwright:v1.48.0-jammy
+FROM mcr.microsoft.com/playwright:v1.64.1-jammy
 RUN apt-get update && apt-get install -y --no-install-recommends python3 python3-pip libreoffice-impress poppler-utils ffmpeg fonts-inter fonts-liberation fonts-noto-core curl \
  && rm -rf /var/lib/apt/lists/* \
  && pip3 install --no-cache-dir python-pptx piper-tts
