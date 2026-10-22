@@ -18,12 +18,15 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { mockStory, templateScene } from './fallback.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const args = process.argv.slice(2);
 const job = path.resolve(args.find((a) => !a.startsWith('--')) || '.');
 const opt = (k, d) => { const i = args.indexOf('--' + k); return i < 0 ? d : args[i + 1]; };
 const DRY = args.includes('--dry-run');
+const MOCK = args.includes('--mock') || (!process.env.ANTHROPIC_API_KEY && !DRY);   // no key: slides-only story + template scenes, so a job still finishes
+const progress = (step, pct, msg = '') => { try { fs.writeFileSync(path.join(job, 'status.json'), JSON.stringify({ step, pct, msg, at: Date.now() })); } catch {} console.log(`[${pct}%] ${step} ${msg}`); };
 const MODEL = process.env.P2V_MODEL || 'claude-opus-5-5';
 const STEPS = ['story', 'voice', 'scenes', 'review', 'final'];
 const FROM = STEPS.indexOf(opt('from', 'story'));
@@ -92,7 +95,9 @@ async function story() {
     content.push(img(path.join(job, s.image)));
   });
   content.push({ type: 'text', text: plan.direction ? `\nCustomer direction: ${plan.direction}` : '\nPlan the video.' });
-  const out = await claude({ system: prompt('story'), content, schema: STORY_SCHEMA, tag: 'story' });
+  let out;
+  if (MOCK) out = mockStory(plan);
+  else { try { out = await claude({ system: prompt('story'), content, schema: STORY_SCHEMA, tag: 'story' }); } catch (e) { console.warn('story failed, using slides-only story:', e.message); out = mockStory(plan); plan.degraded = true; } }
   if (!out) return;
   plan.brief = out.brief;
   plan.scenes = out.scenes.map((s, i) => ({
@@ -118,10 +123,13 @@ async function scenes() {
   const plan = readPlan(); fs.mkdirSync(path.join(job, 'scenes'), { recursive: true });
   const idx = ONLY || plan.scenes.map((_, i) => i);
   await pool(idx, 4, async (i) => {
-    const text = await claude({ system: prompt('scene'), content: sceneRequest(plan, i), tag: `scene ${i}` });
-    if (text) fs.writeFileSync(path.join(job, plan.scenes[i].file), extractJs(text));
-    console.log(`scene ${i}: written`);
+    let code = null;
+    if (!MOCK) { try { const text = await claude({ system: prompt('scene'), content: sceneRequest(plan, i), tag: `scene ${i}` }); if (text) code = extractJs(text); } catch (e) { console.warn(`scene ${i} failed, using template:`, e.message); plan.degraded = true; } }
+    if (!DRY && !code) code = templateScene(plan.scenes[i].slide, i);
+    if (code) fs.writeFileSync(path.join(job, plan.scenes[i].file), code);
+    console.log(`scene ${i}: written${MOCK ? ' (template)' : ''}`);
   });
+  if (plan.degraded) savePlan(plan);
 }
 
 /* ---------- 5. review loop ---------- */
@@ -150,13 +158,20 @@ async function review() {
   }
 }
 
+
 /* ---------- pipeline ---------- */
 const t0 = Date.now();
+progress('story', 5, MOCK ? 'slides-only story' : 'Opus is reading the deck');
 if (FROM <= 0) await story();
+progress('voice', 20, 'recording narration');
 if (FROM <= 1 && !DRY) { if (!VOICE) throw new Error('--voice <piper .onnx> needed'); run('python3', [path.join(HERE, 'voice.py'), job, '--voice', VOICE]); }
+progress('scenes', 35, 'designing scenes');
 if (FROM <= 2) await scenes();
-if (FROM <= 3 && !DRY) await review();
+progress('review', 55, 'checking the draft');
+if (FROM <= 3 && !DRY && !MOCK) await review();
+progress('render', 75, 'rendering final video');
 if (FROM <= 4 && !DRY) run('node', [path.join(HERE, 'render.mjs'), job]);
+progress('done', 100, '');
 // Opus 5.5 list prices per million tokens: input $4, output $20, cache read $0.20, 5-min cache write $5.
 const cost = (usage.input * 4 + usage.output * 20 + usage.cache_read * 0.2 + usage.cache_write * 5) / 1e6;
 console.log(`done in ${((Date.now() - t0) / 1000).toFixed(0)}s; tokens ${JSON.stringify(usage)}; est. Claude cost $${cost.toFixed(2)}`);

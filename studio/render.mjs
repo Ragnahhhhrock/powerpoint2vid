@@ -16,6 +16,7 @@ import path from 'node:path';
 import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { chromium } from 'playwright';
+import { templateScene } from './fallback.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const args = process.argv.slice(2);
@@ -95,7 +96,17 @@ const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PAT
 const todo = ONLY || plan.scenes.map((_, i) => i);
 const queue = [...todo];
 await Promise.all(Array.from({ length: Math.min(PAR, queue.length) }, async () => {
-  while (queue.length) await renderScene(browser, queue.shift());
+  while (queue.length) {
+    const i = queue.shift();
+    try { await renderScene(browser, i); }
+    catch (e) {   // a broken generated scene must not sink the job: swap in the template scene and retry once
+      console.warn(`scene ${i} failed (${e.message.slice(0, 200)}); using template scene`);
+      const f = path.join(jobDir, plan.scenes[i].file);
+      if (fs.existsSync(f)) fs.copyFileSync(f, f + '.failed');
+      fs.writeFileSync(f, templateScene(plan.scenes[i].slide, i));
+      await renderScene(browser, i);
+    }
+  }
 }));
 await browser.close(); server.close();
 const missing = plan.scenes.map((_, i) => i).filter((i) => !fs.existsSync(path.join(segDir, `scene-${i}.mp4`)));
