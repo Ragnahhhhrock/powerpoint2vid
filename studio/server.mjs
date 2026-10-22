@@ -100,7 +100,14 @@ http.createServer((req, res) => {
   }
   if (req.method === 'GET' && FILES.has(file)) {
     const p = path.join(dir(id), 'out', file); if (!fs.existsSync(p)) return send(res, 404, { error: 'not ready' });
-    const st = fs.statSync(p); res.writeHead(200, { 'content-type': TYPES[path.extname(file)], 'content-length': st.size });
+    const st = fs.statSync(p), type = TYPES[path.extname(file)], m = /^bytes=(\d*)-(\d*)$/.exec(req.headers.range || '');
+    if (m && (m[1] || m[2])) {   // range requests, so browsers can seek
+      let a = m[1] ? +m[1] : st.size - +m[2], b = m[1] && m[2] ? Math.min(+m[2], st.size - 1) : st.size - 1;
+      if (a > b || a >= st.size) { res.writeHead(416, { 'content-range': `bytes */${st.size}` }); return res.end(); }
+      res.writeHead(206, { 'content-type': type, 'accept-ranges': 'bytes', 'content-range': `bytes ${a}-${b}/${st.size}`, 'content-length': b - a + 1 });
+      return fs.createReadStream(p, { start: a, end: b }).pipe(res);
+    }
+    res.writeHead(200, { 'content-type': type, 'accept-ranges': 'bytes', 'content-length': st.size });
     return fs.createReadStream(p).pipe(res);
   }
   if (req.method === 'DELETE' && !file) { jobs.delete(id); fs.rmSync(dir(id), { recursive: true, force: true }); return send(res, 200, { ok: true }); }
