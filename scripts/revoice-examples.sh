@@ -28,7 +28,7 @@ for row in $EXAMPLES; do
   if [ "$id" = explainer ]; then
     # homepage hero + first showcase video
     d=assets/example-v3; n=explainer-v3b
-    ffmpeg -y -loglevel error -i "$src/out/video.mp4" -c:v libx264 -preset slow -crf 23 -pix_fmt yuv420p -movflags +faststart -c:a aac -b:a 128k "$d/$n.mp4"
+    ffmpeg -y -loglevel error -i "$src/out/video.mp4" -c:v libx264 -preset slow -crf 23 -maxrate 4500k -bufsize 9000k -pix_fmt yuv420p -movflags +faststart -c:a aac -b:a 128k "$d/$n.mp4"
     ffmpeg -y -loglevel error -i "$d/$n.mp4" -c:v libvpx-vp9 -b:v 0 -crf 38 -row-mt 1 -deadline good -cpu-used 4 -c:a libopus -b:a 96k "$d/$n.webm"
     ffmpeg -y -loglevel error -i "$src/out/poster.jpg" -vf scale=1280:-1 -q:v 3 "$d/$n-poster.jpg"
     cp "$src/out/captions.vtt" "$d/$n-captions.vtt"
