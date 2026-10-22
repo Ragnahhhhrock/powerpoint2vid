@@ -82,7 +82,14 @@ The deck-level design brief and scene runtime docs go in a **cached system promp
 
 The current site promises the deck never leaves the device ("Private by design", the FAQ answer about uploads, `pptx-parser.js` comments). v2 uploads the deck. Before launch, update the copy and add a privacy page covering: what's sent to Anthropic and the TTS provider, retention (auto-delete after 7 days), and that customer content isn't used for model training under Anthropic's commercial terms (confirm current terms before stating it).
 
+## Licences to check before launch
+
+- **GSAP** (scene runtime): free under GSAP's "standard no-charge" licence, which restricts use in tools that compete with Webflow's visual animation builder. PowerPoint2Vid outputs video files, so it likely fits, but confirm. Fallback: anime.js (MIT) behind the same `ctx.tl` contract.
+- **Piper voices**: check each voice model's licence; production should use a commercial TTS provider anyway.
+
 ## Build order
+
+Prototype status (Oct 2026): steps 1 and 2 are in `studio/` (see `studio/README.md`). The director (`studio/director.mjs`) is written but hasn't run against the API yet.
 
 1. Scene runtime + renderer container: hand-write 2 scenes, prove deterministic frame capture and ffmpeg assembly.
 2. Scene pass: Opus generates scenes for the 5-slide example deck; compare against the current homepage video.

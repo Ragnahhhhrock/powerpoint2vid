@@ -1,0 +1,13 @@
+{
+  "name": "powerpoint2vid-studio",
+  "private": true,
+  "type": "module",
+  "description": "v2 render pipeline: Opus-directed animated scenes rendered frame by frame",
+  "scripts": {
+    "render": "node render.mjs",
+    "direct": "node director.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.48.0"
+  }
+}

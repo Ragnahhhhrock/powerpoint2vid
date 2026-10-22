@@ -1,0 +1,8 @@
+/* Base for every generated scene. 1920x1080, no scrollbars, brief tokens injected as CSS vars. */
+html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+#stage { position: relative; width: 1920px; height: 1080px; overflow: hidden;
+  font-family: var(--font, "Inter"), system-ui, sans-serif; color: var(--ink, #0e1330);
+  -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; }
+#stage * { box-sizing: border-box; }
+.abs { position: absolute; }
+.center { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }

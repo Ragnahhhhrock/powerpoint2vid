@@ -1,0 +1,171 @@
+{
+  "title": "PowerPoint2Vid: ordinary slides, extraordinary videos",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#080b1f",
+      "violet": "#6d4aff",
+      "violet-hi": "#8f75ff",
+      "coral": "#ff6b4a",
+      "mint": "#1fbf8f",
+      "paper": "#f8f7fc",
+      "muted": "#aab0d4"
+    },
+    "motion": "Confident and cinematic: slow camera push, springy reveals with a small overshoot, light streaks on key beats, film grain. Every key visual lands on the word that names it.",
+    "story": "Before/after: plain office slides are shown as they are, then transformed. Dark stage for drama, one light paper scene for the how-it-works explanation, gradient finale."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "This video started life as five ordinary slides. Watch what happens when they get a director.",
+      "minDuration": 9.6,
+      "slide": {
+        "title": "PowerPoint2Vid",
+        "text": "Turn slides into explainer videos",
+        "notes": "This video started life as five ordinary slides. Watch what happens when they get a director.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 9.6,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.668,
+          "text": "This video started life as five ordinary slides."
+        },
+        {
+          "t": 3.948,
+          "end": 6.281,
+          "text": "Watch what happens when they get a director."
+        }
+      ],
+      "speechEnd": 6.281,
+      "storyboard": "the real input slides drop onto a dark stage as a flat row. On \"ordinary\" they drain of colour. On beat 2 the others fly off and slide 1 pushes to camera; a clapper snaps on \"director\", the slide flips and its back is the designed title card, which then grows to fill the frame."
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Most slide videos are just slides, with a voice reading out the bullet points. By slide three, your audience has tuned out.",
+      "minDuration": 9.8,
+      "slide": {
+        "title": "The problem",
+        "text": "Most slide videos are just slides and a voice. The bullet points get read aloud. Audiences tune out fast",
+        "notes": "Most slide videos are just slides, with a voice reading out the bullet points. By slide three, your audience has tuned out.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.5
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 9.8,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 5.316,
+          "text": "Most slide videos are just slides, with a voice reading out the bullet points."
+        },
+        {
+          "t": 5.596,
+          "end": 8.638,
+          "text": "By slide three, your audience has tuned out."
+        }
+      ],
+      "speechEnd": 8.638,
+      "storyboard": "the usual slide video, shown honestly: a player with the plain slide, a monotone waveform, bullets highlighted as they're read. An attention graph beside it sags. On \"slide three\" the counter ticks 1-2-3; on \"tuned out\" the line bottoms out in coral and the player goes dim."
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "PowerPoint2Vid reads your whole deck. It writes the story, designs every scene, and times each animation to the narration.",
+      "minDuration": 9.8,
+      "slide": {
+        "title": "How it works",
+        "text": "Reads your whole deck. Writes the story. Designs every scene. Times animation to the narration",
+        "notes": "PowerPoint2Vid reads your whole deck. It writes the story, designs every scene, and times each animation to the narration.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.7
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 9.8,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.157,
+          "text": "PowerPoint2Vid reads your whole deck."
+        },
+        {
+          "t": 3.437,
+          "end": 7.965,
+          "text": "It writes the story, designs every scene, and times each animation to the narration."
+        }
+      ],
+      "speechEnd": 7.965,
+      "storyboard": "light paper scene (contrast after the dim player). A scan beam reads the stacked deck, then a path draws left to right and three cards pop exactly on \"story\", \"scene\" and \"times\": a script being written, a storyboard, and keyframes snapping to a waveform. Ends on a glowing play button on \"narration\"."
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "So a flat chart becomes a moment. The numbers build, and the result lands right as it's said.",
+      "minDuration": 8.6,
+      "slide": {
+        "title": "Quarterly revenue",
+        "text": "",
+        "notes": "So a flat chart becomes a moment. The numbers build, and the result lands right as it's said.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 8.6,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 2.855,
+          "text": "So a flat chart becomes a moment."
+        },
+        {
+          "t": 3.135,
+          "end": 6.107,
+          "text": "The numbers build, and the result lands right as it's said."
+        }
+      ],
+      "speechEnd": 6.107,
+      "storyboard": "the deck's real default chart, shown as-is, literally tips flat on \"flat\". On \"moment\" it sinks away and the same data rises as glowing columns on a dark stage. Columns and counters build one by one on \"numbers build\"; on \"result lands\" Q4 ignites, the others dim and \"+117%\" slams in."
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Turn ordinary slides into extraordinary explainer videos. Start at powerpoint2vid.com.",
+      "minDuration": 9.6,
+      "slide": {
+        "title": "Get started",
+        "text": "powerpoint2vid.com",
+        "notes": "Turn ordinary slides into extraordinary explainer videos. Start at powerpoint2vid.com.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 9.6,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.167,
+          "text": "Turn ordinary slides into extraordinary explainer videos."
+        },
+        {
+          "t": 4.447,
+          "end": 6.688,
+          "text": "Start at powerpoint2vid.com."
+        }
+      ],
+      "speechEnd": 6.688,
+      "storyboard": "finale on a drifting aurora. The promise is typeset word by word as it's spoken; \"ordinary\" stays muted and \"extraordinary\" ignites. On the URL a button lands, a cursor glides in and clicks it. Holds as an end card."
+    }
+  ]
+}

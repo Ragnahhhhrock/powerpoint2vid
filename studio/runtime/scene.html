@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>PowerPoint2Vid scene</title>
+<link rel="stylesheet" href="scene-base.css">
+<script src="gsap.min.js"></script>
+<script src="CustomEase.min.js"></script>
+<script src="MotionPathPlugin.min.js"></script>
+<script src="scene-runtime.js"></script>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+  // ?scene=<path to scene js>&job=<path to job dir>
+  const q = new URLSearchParams(location.search);
+  P2V.boot(q.get('job'), +q.get('i'));
+</script>
+</body>
+</html>
