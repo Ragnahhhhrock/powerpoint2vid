@@ -29,7 +29,89 @@
         "notes": "OK so this first one is just a basic title slide, pretty standard. What I want to show is what it looks like once it gets properly directed.",
         "image": "assets/slide-1.png"
       },
-      "audio": "audio/scene-0.wav"
+      "audio": "audio/scene-0.wav",
+      "duration": 6.503,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 2.379,
+          "text": "This is an ordinary slide.",
+          "words": [
+            {
+              "w": "This",
+              "t": 0.8
+            },
+            {
+              "w": "is",
+              "t": 1.079
+            },
+            {
+              "w": "an",
+              "t": 1.195
+            },
+            {
+              "w": "ordinary",
+              "t": 1.322
+            },
+            {
+              "w": "slide.",
+              "t": 1.822
+            }
+          ]
+        },
+        {
+          "t": 2.553,
+          "end": 5.653,
+          "text": "Watch it get directed, like the opening shot of a film.",
+          "words": [
+            {
+              "w": "Watch",
+              "t": 2.553
+            },
+            {
+              "w": "it",
+              "t": 2.867
+            },
+            {
+              "w": "get",
+              "t": 3.006
+            },
+            {
+              "w": "directed,",
+              "t": 3.203
+            },
+            {
+              "w": "like",
+              "t": 3.888
+            },
+            {
+              "w": "the",
+              "t": 4.109
+            },
+            {
+              "w": "opening",
+              "t": 4.26
+            },
+            {
+              "w": "shot",
+              "t": 4.666
+            },
+            {
+              "w": "of",
+              "t": 4.922
+            },
+            {
+              "w": "a",
+              "t": 5.026
+            },
+            {
+              "w": "film.",
+              "t": 5.119
+            }
+          ]
+        }
+      ],
+      "speechEnd": 5.653
     },
     {
       "file": "scenes/scene-1.js",
@@ -47,7 +129,101 @@
         "type": "fadeblack",
         "duration": 0.45
       },
-      "audio": "audio/scene-1.wav"
+      "audio": "audio/scene-1.wav",
+      "duration": 8.401,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.557,
+          "text": "a.i. reads your whole deck and tightens the story.",
+          "words": [
+            {
+              "w": "A.I.",
+              "t": 0.55
+            },
+            {
+              "w": "reads",
+              "t": 1.096
+            },
+            {
+              "w": "your",
+              "t": 1.398
+            },
+            {
+              "w": "whole",
+              "t": 1.595
+            },
+            {
+              "w": "deck",
+              "t": 1.862
+            },
+            {
+              "w": "and",
+              "t": 2.21
+            },
+            {
+              "w": "tightens",
+              "t": 2.361
+            },
+            {
+              "w": "the",
+              "t": 2.814
+            },
+            {
+              "w": "story.",
+              "t": 2.942
+            }
+          ]
+        },
+        {
+          "t": 3.801,
+          "end": 7.551,
+          "text": "Your speaker notes become the voiceover, rewritten so it flows.",
+          "words": [
+            {
+              "w": "Your",
+              "t": 3.801
+            },
+            {
+              "w": "speaker",
+              "t": 4.022
+            },
+            {
+              "w": "notes",
+              "t": 4.439
+            },
+            {
+              "w": "become",
+              "t": 4.776
+            },
+            {
+              "w": "the",
+              "t": 5.101
+            },
+            {
+              "w": "voiceover,",
+              "t": 5.217
+            },
+            {
+              "w": "rewritten",
+              "t": 6.088
+            },
+            {
+              "w": "so",
+              "t": 6.657
+            },
+            {
+              "w": "it",
+              "t": 6.831
+            },
+            {
+              "w": "flows.",
+              "t": 6.947
+            }
+          ]
+        }
+      ],
+      "speechEnd": 7.551
     },
     {
       "file": "scenes/scene-2.js",
@@ -65,7 +241,94 @@
         "type": "smoothleft",
         "duration": 0.6
       },
-      "audio": "audio/scene-2.wav"
+      "audio": "audio/scene-2.wav",
+      "duration": 8.076,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 7.226,
+          "text": "Then it redesigns every slide as an animated scene, with each move timed to the narration, word for word.",
+          "words": [
+            {
+              "w": "Then",
+              "t": 0.55
+            },
+            {
+              "w": "it",
+              "t": 0.817
+            },
+            {
+              "w": "redesigns",
+              "t": 0.945
+            },
+            {
+              "w": "every",
+              "t": 1.618
+            },
+            {
+              "w": "slide",
+              "t": 1.978
+            },
+            {
+              "w": "as",
+              "t": 2.431
+            },
+            {
+              "w": "an",
+              "t": 2.559
+            },
+            {
+              "w": "animated",
+              "t": 2.675
+            },
+            {
+              "w": "scene,",
+              "t": 3.244
+            },
+            {
+              "w": "with",
+              "t": 3.952
+            },
+            {
+              "w": "each",
+              "t": 4.196
+            },
+            {
+              "w": "move",
+              "t": 4.474
+            },
+            {
+              "w": "timed",
+              "t": 4.869
+            },
+            {
+              "w": "to",
+              "t": 5.252
+            },
+            {
+              "w": "the",
+              "t": 5.38
+            },
+            {
+              "w": "narration,",
+              "t": 5.484
+            },
+            {
+              "w": "word",
+              "t": 6.251
+            },
+            {
+              "w": "for",
+              "t": 6.564
+            },
+            {
+              "w": "word.",
+              "t": 6.715
+            }
+          ]
+        }
+      ],
+      "speechEnd": 7.226
     },
     {
       "file": "scenes/scene-3.js",
@@ -83,7 +346,101 @@
         "type": "fadeblack",
         "duration": 0.45
       },
-      "audio": "audio/scene-3.wav"
+      "audio": "audio/scene-3.wav",
+      "duration": 7.634,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.361,
+          "text": "A flat chart becomes a moment.",
+          "words": [
+            {
+              "w": "A",
+              "t": 0.55
+            },
+            {
+              "w": "flat",
+              "t": 0.712
+            },
+            {
+              "w": "chart",
+              "t": 0.991
+            },
+            {
+              "w": "becomes",
+              "t": 1.374
+            },
+            {
+              "w": "a",
+              "t": 1.734
+            },
+            {
+              "w": "moment.",
+              "t": 1.815
+            }
+          ]
+        },
+        {
+          "t": 2.686,
+          "end": 6.784,
+          "text": "The numbers build, and the result lands as it's said, right on cue.",
+          "words": [
+            {
+              "w": "The",
+              "t": 2.686
+            },
+            {
+              "w": "numbers",
+              "t": 2.86
+            },
+            {
+              "w": "build,",
+              "t": 3.231
+            },
+            {
+              "w": "and",
+              "t": 3.719
+            },
+            {
+              "w": "the",
+              "t": 3.916
+            },
+            {
+              "w": "result",
+              "t": 4.021
+            },
+            {
+              "w": "lands",
+              "t": 4.404
+            },
+            {
+              "w": "as",
+              "t": 4.752
+            },
+            {
+              "w": "it's",
+              "t": 4.892
+            },
+            {
+              "w": "said,",
+              "t": 5.054
+            },
+            {
+              "w": "right",
+              "t": 5.751
+            },
+            {
+              "w": "on",
+              "t": 6.041
+            },
+            {
+              "w": "cue.",
+              "t": 6.215
+            }
+          ]
+        }
+      ],
+      "speechEnd": 6.784
     },
     {
       "file": "scenes/scene-4.js",
@@ -101,7 +458,101 @@
         "type": "smoothleft",
         "duration": 0.6
       },
-      "audio": "audio/scene-4.wav"
+      "audio": "audio/scene-4.wav",
+      "duration": 10.084,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.756,
+          "text": "Basic exports carry a watermark.",
+          "words": [
+            {
+              "w": "Basic",
+              "t": 0.55
+            },
+            {
+              "w": "exports",
+              "t": 1.037
+            },
+            {
+              "w": "carry",
+              "t": 1.595
+            },
+            {
+              "w": "a",
+              "t": 1.92
+            },
+            {
+              "w": "watermark.",
+              "t": 1.989
+            }
+          ]
+        },
+        {
+          "t": 3.452,
+          "end": 9.234,
+          "text": "Pro removes it, and includes ten a.i.-directed videos a month, from 29 Australian dollars.",
+          "words": [
+            {
+              "w": "Pro",
+              "t": 3.452
+            },
+            {
+              "w": "removes",
+              "t": 3.824
+            },
+            {
+              "w": "it,",
+              "t": 4.265
+            },
+            {
+              "w": "and",
+              "t": 4.578
+            },
+            {
+              "w": "includes",
+              "t": 4.81
+            },
+            {
+              "w": "ten",
+              "t": 5.252
+            },
+            {
+              "w": "A.I.-directed",
+              "t": 5.6
+            },
+            {
+              "w": "videos",
+              "t": 6.436
+            },
+            {
+              "w": "a",
+              "t": 6.854
+            },
+            {
+              "w": "month,",
+              "t": 6.935
+            },
+            {
+              "w": "from",
+              "t": 7.469
+            },
+            {
+              "w": "29",
+              "t": 7.69
+            },
+            {
+              "w": "Australian",
+              "t": 8.189
+            },
+            {
+              "w": "dollars.",
+              "t": 8.711
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.234
     },
     {
       "file": "scenes/scene-5.js",
@@ -119,7 +570,90 @@
         "type": "fadewhite",
         "duration": 0.6
       },
-      "audio": "audio/scene-5.wav"
+      "audio": "audio/scene-5.wav",
+      "duration": 8.23,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.779,
+          "text": "More than a PowerPoint to video converter.",
+          "words": [
+            {
+              "w": "More",
+              "t": 0.55
+            },
+            {
+              "w": "than",
+              "t": 0.747
+            },
+            {
+              "w": "a",
+              "t": 0.898
+            },
+            {
+              "w": "PowerPoint",
+              "t": 0.968
+            },
+            {
+              "w": "to",
+              "t": 1.583
+            },
+            {
+              "w": "video",
+              "t": 1.734
+            },
+            {
+              "w": "converter.",
+              "t": 2.094
+            }
+          ]
+        },
+        {
+          "t": 3.22,
+          "end": 6.03,
+          "text": "Go Pro today, at powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Go",
+              "t": 3.22
+            },
+            {
+              "w": "Pro",
+              "t": 3.464
+            },
+            {
+              "w": "today,",
+              "t": 3.754
+            },
+            {
+              "w": "at",
+              "t": 4.16
+            },
+            {
+              "w": "PowerPoint",
+              "t": 4.369
+            },
+            {
+              "w": "to",
+              "t": 4.869
+            },
+            {
+              "w": "vid",
+              "t": 4.996
+            },
+            {
+              "w": "dot",
+              "t": 5.298
+            },
+            {
+              "w": "com.",
+              "t": 5.542
+            }
+          ]
+        }
+      ],
+      "speechEnd": 6.03
     }
-  ]
+  ],
+  "voiceProvider": "elevenlabs"
 }
