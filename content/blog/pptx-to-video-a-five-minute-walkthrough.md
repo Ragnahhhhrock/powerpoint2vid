@@ -62,7 +62,7 @@ A few things round out the video:
 
 Watch the video with the voice on. Listen for words that sound wrong, slides that feel too long, and points that appear before they're mentioned. Fix them in your deck or notes and convert again.
 
-When it's right, download it. You'll get an MP4 to share, with WebM available. WebM plays in Chrome, Edge, Firefox and most video editors, and converts to MP4 with common tools if a platform asks for it. Pro has no watermark.
+When it's right, download it. You'll get an MP4 to share, with WebM available. WebM plays in Chrome, Edge, Firefox and most video editors, and converts to MP4 with common tools if a platform asks for it. Basic adds a watermark; Pro does not.
 
 ## What a PPTX to video converter like this won't do
 
@@ -83,4 +83,4 @@ If you need your own recorded voice, PowerPoint's built-in video export can incl
 
 ## Try it with your own deck
 
-The fastest way to learn is to load a real presentation into the [PowerPoint to video converter](/) and see what an Opus-directed video does for it: a tighter story, designed scenes and animation timed to your narration, so even a plain deck comes out like a produced explainer. See [pricing](/pricing) for Pro.
+The fastest way to learn is to load a real presentation into the [PowerPoint to video converter](/) and see what an Opus-directed video does for it: a tighter story, designed scenes and animation timed to your narration, so even a plain deck comes out like a produced explainer. See [pricing](/pricing) to compare Basic and Pro.

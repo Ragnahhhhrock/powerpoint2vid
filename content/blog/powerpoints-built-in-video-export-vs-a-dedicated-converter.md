@@ -39,14 +39,14 @@ If you have already recorded your own voice over the slides, the built-in export
 
 ## What a dedicated converter does differently
 
-A dedicated converter starts from the same .pptx but treats the video as its own thing. PowerPoint2Vid goes a step further and is more than a converter: Claude Opus 5.5 acts as director and motion designer. It reads the whole deck, tightens the story, redesigns each slide as an animated scene and times the animation to the voice. Ordinary slides in, extraordinary video out. Here is what that means in practice:
+A dedicated converter starts from the same .pptx but treats the video as its own thing. PowerPoint2Vid goes a step further and is more than a converter: On Pro, Claude Opus 5.5 acts as director and motion designer. It reads the whole deck, tightens the story, redesigns each slide as an animated scene and times the animation to the voice. Ordinary slides in, extraordinary video out. Here is what that means in practice:
 
 - **Narration from your speaker notes.** You choose a voice and speaking speed. No microphone needed.
 - **Timing follows the speech.** Key points land on the word that names them.
 - **Bespoke animated scenes.** Slides are redesigned rather than just played back, with polished transitions.
 - **Charts rebuilt as animated charts**, using the same numbers.
 - **Captions** included.
-- **No watermark.**
+- **No watermark** on Pro. (The Basic browser version adds one.)
 
 The trade-offs are real too. It uses synthetic voices rather than your own, and it redesigns your slides as scenes, so it does not reproduce your custom PowerPoint animations exactly. Output is an MP4 to download and share, with WebM available. For more on that choice, see [MP4 or WebM? Choosing a Format for Your Presentation Video](/blog/mp4-or-webm-choosing-a-format-for-your-presentation-video).
 

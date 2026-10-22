@@ -1,6 +1,7 @@
 # PowerPoint2Vid Blog Content Strategy
 
-**Goal:** grow organic search traffic around "PowerPoint to video converter" and its related questions, and turn readers into Pro subscribers.
+**Goal:** grow organic search traffic around "PowerPoint to video converter" and its related questions, get readers trying the Basic converter, and upgrade them to Pro for Opus-directed videos.
+**Plans:** Basic (browser converter, watermarked, no subscription) and Pro (Claude Opus 5.5 directs the video, no watermark, from A$29/month with 10 videos included, top-ups for more). Basic is the entry point; the quality jump to Pro is the upsell.
 **Cadence:** one post a day for 90 days, 22 Oct 2026 to 19 Jan 2027. Each post goes live at 00:00 Perth time (AWST).
 **Home:** https://powerpoint2vid.com/blog
 
@@ -8,8 +9,8 @@
 
 | Persona | Who they are | What they need | What they search | Why PowerPoint2Vid |
 |---|---|---|---|---|
-| **Lecturer Leah** (educator) | University lecturer, teacher or learning designer. Has years of lecture slides. | Course videos for the LMS, flipped-classroom content, captions for accessibility, without a studio. | "lecture slides to video", "google slides to video", "add narration to powerpoint" | Speaker notes become narration; captions built in; slides never leave her device. |
-| **Trainer Tom** (L&D / HR) | Corporate trainer, HR or L&D lead. Owns onboarding and compliance decks. | Consistent training videos that are quick to update when policy changes. | "onboarding video from powerpoint", "compliance training video" | Edit the deck, re-export the video. No voice talent, no re-recording. Private for internal content. |
+| **Lecturer Leah** (educator) | University lecturer, teacher or learning designer. Has years of lecture slides. | Course videos for the LMS, flipped-classroom content, captions for accessibility, without a studio. | "lecture slides to video", "google slides to video", "add narration to powerpoint" | Speaker notes become narration; captions built in; on Pro a lecture deck plays like a produced explainer. |
+| **Trainer Tom** (L&D / HR) | Corporate trainer, HR or L&D lead. Owns onboarding and compliance decks. | Consistent training videos that are quick to update when policy changes. | "onboarding video from powerpoint", "compliance training video" | Edit the deck, re-export the video. No voice talent, no re-recording. |
 | **Marketer Mia** (marketer / founder) | Small-business marketer or founder with a pitch, product or webinar deck. | Explainer videos for the website, launches and social, on a small budget. | "explainer video cost", "presentation to social video", "pitch deck video" | Turns the deck she already has into a styled video at a fraction of agency cost. |
 | **Seller Sam** (sales / customer success / consulting) | Account exec, CSM or consultant who sends decks to prospects and clients. | Async pitches and walkthroughs that get watched, not skimmed. | "video pitch deck", "product walkthrough video" | A narrated deck explains itself when he's not in the room. |
 | **Presenter Priya** (speaker / student / researcher) | Conference speaker, student or researcher presenting findings. | Pre-recorded talks, assignment videos, research explainers. | "video presentation for assignment", "pre-recorded conference talk" | Polished, timed video from slides and notes, with no camera. |
@@ -61,7 +62,7 @@ Day 1 is the cornerstone guide, "How to Convert PowerPoint to Video: The Complet
 - Posts only link to earlier posts, so readers never hit a page that isn't live yet. Related-post links are added automatically.
 - 800 to 1,300 words. Plain, confident, short sentences. Australian spelling.
 - House rule: never describe the product or anything else as costing nothing (the "f-word" is banned site-wide). No invented statistics, studies or quotes.
-- Product claims must match the product and follow `content/blog/PRODUCT_CLAIMS.md`: an Opus 5.5-directed explainer video made from the deck, speaker-note narration, captions and transitions, MP4 (WebM available) download, Pro from A$12/month or A$99/year. No privacy, on-device or no-upload claims.
+- Product claims must match the product and follow `content/blog/PRODUCT_CLAIMS.md`: an Opus 5.5-directed explainer video made from the deck, speaker-note narration, captions and transitions, MP4 (WebM available) download. Basic: browser version, watermarked. Pro: Opus-directed, no watermark, from A$29/month with 10 videos included. Opus claims describe Pro. Never the word "free", including for Basic. No privacy, on-device or no-upload claims.
 
 ## 6. Measurement
 - GA4: blog sessions, scroll depth, `cta_click` from blog posts, `deck_loaded` and `export_complete` from blog referrals.

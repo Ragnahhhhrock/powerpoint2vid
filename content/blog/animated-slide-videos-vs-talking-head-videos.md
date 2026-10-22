@@ -97,4 +97,4 @@ If you answered "visual", "often" and "nobody in particular", a slide video is p
 
 ## Make a slide video from the deck you already have
 
-If a slide video fits your message, you are most of the way there already. Drop your .pptx into the [PowerPoint to video converter](/), and let your notes become the narration. Claude Opus 5.5 takes the director's chair, tightening the story and turning each slide into an animated scene, so the slide format has the polish that usually takes a talking-head shoot. Download the MP4 with no watermark on Pro, from A$12 a month on the [pricing page](/pricing).
+If a slide video fits your message, you are most of the way there already. Drop your .pptx into the [PowerPoint to video converter](/), and let your notes become the narration. Claude Opus 5.5 takes the director's chair, tightening the story and turning each slide into an animated scene, so the slide format has the polish that usually takes a talking-head shoot. Try the Basic browser version first (it adds a watermark), then move to Pro for the Opus-directed cut with no watermark, from A$29 a month on the [pricing page](/pricing).

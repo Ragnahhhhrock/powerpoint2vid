@@ -122,4 +122,4 @@ Each clip is a separate small deck. Each one uses the same style and caption set
 
 ## From deck to social clip
 
-Once your short decks are ready, drop each one into the [PowerPoint to video converter](/). Your speaker notes become the narration and captions are included. Claude Opus 5.5 directs each clip: it sharpens the hook, rebuilds slides as animated scenes and lands key points on the word that names them, so a plain deck becomes a clip worth stopping the scroll for. There is no watermark, and Pro details are on the [pricing page](/pricing).
+Once your short decks are ready, drop each one into the [PowerPoint to video converter](/). Your speaker notes become the narration and captions are included. On Pro, Claude Opus 5.5 directs each clip: it sharpens the hook, rebuilds slides as animated scenes and lands key points on the word that names them, so a plain deck becomes a clip worth stopping the scroll for. Pro clips carry no watermark, and Basic and Pro are compared on the [pricing page](/pricing).
