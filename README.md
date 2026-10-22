@@ -13,7 +13,7 @@ Private, online **PowerPoint to video converter** at https://powerpoint2vid.com.
 Static site, no build step: framework preset *None*, build command empty, output directory `/`.
 
 ## Accounts and paywall (Pro subscription)
-Two plans. **Basic**: anyone can preview and export in the browser; exports carry a watermark (`drawWatermark()` in `js/renderer.js`, applied in `exportPlan()` / the export flow in `js/app.js`). **Pro** (A$29/month, `MONTHLY_VIDEOS` Opus-directed videos in `/studio`, default 10): no watermark. The Pro payment link is the Cloudflare variable `STRIPE_LINK_PRO_MONTHLY`; until it is set, checkout returns to `/pricing?unavailable=1`.
+Two plans. **Basic**: anyone can preview and export in the browser; exports carry a watermark (`drawWatermark()` in `js/renderer.js`, applied in `exportPlan()` / the export flow in `js/app.js`). **Pro** (A$29/month, `MONTHLY_VIDEOS` Opus-directed videos in `/studio`, default 10): no watermark. The Pro payment link (A$29/month) is a constant in `functions/checkout.js`; the Cloudflare variable `STRIPE_LINK_PRO_MONTHLY` overrides it if set.
 
 Flow: `/pricing` -> `/checkout?plan=monthly` -> (sign up or log in at `/account`) -> Stripe payment link with the account id in `client_reference_id` -> Stripe calls `/api/stripe-webhook` -> Pro switches on for that account.
 

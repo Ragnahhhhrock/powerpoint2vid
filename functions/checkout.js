@@ -4,8 +4,9 @@
 import { sessionUid } from './_lib/auth.js';
 
 /* Pro (A$29/month, 10 Opus-directed videos). Set the Stripe payment link as the Cloudflare variable
- * STRIPE_LINK_PRO_MONTHLY. The old A$12 monthly and A$99 yearly links are retired. */
-const links = (env) => ({ monthly: env.STRIPE_LINK_PRO_MONTHLY || '' });
+ * STRIPE_LINK_PRO_MONTHLY (optional override; the default is the live A$29 link below). The old A$12 monthly and A$99 yearly links are retired. */
+const PRO_MONTHLY = 'https://buy.stripe.com/7sY14f1PP6G1dRu32kaAw08';
+const links = (env) => ({ monthly: env.STRIPE_LINK_PRO_MONTHLY || PRO_MONTHLY });
 
 export async function onRequestGet({ request, env }) {
   const url = new URL(request.url);
