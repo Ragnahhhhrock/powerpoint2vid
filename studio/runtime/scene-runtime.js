@@ -13,7 +13,7 @@
  *   el(tag, cls, parent, css) : helper that creates an element
  *   onFrame(fn(t)) : per-frame hook for canvas/procedural drawing (called after each seek)
  *   rand(seed) : seeded PRNG (never use Math.random: frames must be deterministic)
- *   at(i, word): time the narrator says `word` in beat i (estimated within the sentence)
+ *   at(i, word): time the narrator says `word` in beat i (exact when the voice gave word timings, else estimated)
  *   split(el, text, by='char'|'word') : fills el with spans, returns them
  *   fx.grain({opacity}) / fx.vignette({strength}) : shared finishing layers
  * }
@@ -62,6 +62,9 @@
           const b = ctx.beats[i]; if (!b) return 0;
           const end = b.end != null ? b.end : (ctx.beats[i + 1] ? ctx.beats[i + 1].t : ctx.dur - 1);
           if (!word) return b.t;
+          const norm = (x) => String(x).toLowerCase().replace(/[^a-z0-9]/g, '');
+          const target = norm(word);
+          if (b.words && target) { const w = b.words.find((x) => norm(x.w).startsWith(target)) || b.words.find((x) => norm(x.w).includes(target)); if (w) return w.t; }
           const k = b.text.toLowerCase().indexOf(String(word).toLowerCase());
           return k < 0 ? b.t : b.t + (end - b.t) * (k / b.text.length);
         },

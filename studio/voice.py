@@ -6,8 +6,10 @@ Reads <job>/plan.json, writes <job>/audio/scene-<i>.wav and updates each scene's
 from the real synthesised audio, so scenes can time animation to the exact moment a line is said.
 
 Providers:
-  ElevenLabs (production): used when ELEVENLABS_API_KEY is set. One request per scene with
-    character timestamps, so delivery flows naturally and beats are exact. Voice from
+  ElevenLabs (production): used when ELEVENLABS_API_KEY is set. The script is read as one continuous
+    take (or a few, for long decks) with character timestamps, then cut into scenes at the quietest
+    point of each pause, so delivery flows across scene changes and no word is clipped. Beats carry
+    word times (beats[i].words) so animation lands on the exact word. Voice from
     P2V_TTS_VOICE (an ElevenLabs voice id), model from ELEVENLABS_MODEL. Responses are cached in
     $DATA_DIR/tts-cache, so retries and re-renders don't spend credits twice.
   Piper (local fallback): used when there is no key, or if ElevenLabs fails (quota, outage), so a
@@ -18,7 +20,8 @@ Usage: python3 studio/voice.py <job_dir> --voice en_US-lessac-medium.onnx [--spe
 import argparse, base64, hashlib, json, os, re, sys, time, urllib.error, urllib.request, wave
 from pathlib import Path
 
-LEAD_IN, TAIL, GAP = 0.8, 1.1, 0.28   # seconds: before speech, after speech, between sentences (Piper)
+LEAD_IN, TAIL, GAP = 0.8, 1.1, 0.28   # seconds: before speech (first scene), after speech, between sentences (Piper)
+LEAD_NEXT, TAIL_NEXT, END_HOLD, MAX_HOLD = 0.55, 0.85, 2.2, 1.6   # ElevenLabs: pause before speech in later scenes; final hold; max silence after speech
 SR_11 = 24000                          # ElevenLabs pcm_24000: 16-bit mono
 DEFAULT_VOICE = "JBFqnCBsd6RMkjVDRZzb"  # George: warm, measured narrator
 API = os.environ.get("ELEVENLABS_BASE", "https://api.elevenlabs.io")
@@ -75,29 +78,80 @@ def eleven_request(text, prev, nxt, voice, model, speed, key, cache):
     return out
 
 
-def eleven_scene(sents, prev, nxt, voice, model, speed, key, cache):
-    """One request per scene. Returns (pcm bytes, [(start, end)] per sentence) with times relative to audio start."""
-    parts = [spoken(s, eleven=True) for s in sents]
-    text = " ".join(parts)
-    r = eleven_request(text, prev, nxt, voice, model, speed, key, cache)
-    pcm = base64.b64decode(r["audio"])
-    total = len(pcm) / 2 / SR_11
-    al = r["alignment"] or {}
-    starts, ends = al.get("character_start_times_seconds") or [], al.get("character_end_times_seconds") or []
-    n = len(starts)
-    scale = n / len(text) if text and n else 0
+def _norm_al(r, text, total):
+    al = r.get("alignment") or {}
+    st, en = al.get("character_start_times_seconds") or [], al.get("character_end_times_seconds") or []
+    n = len(st); scale = n / len(text) if text and n else 0
+    def at(i, end=False):
+        if not n: return total * (i + (1 if end else 0)) / max(1, len(text))
+        return (en if end else st)[max(0, min(n - 1, round(i * scale)))]
+    return at
 
-    def at(i, arr, default):
-        if not n: return default
-        return arr[max(0, min(n - 1, round(i * scale)))]
 
-    spans, off = [], 0
-    for k, p in enumerate(parts):
-        a = at(off, starts, total * off / max(1, len(text)))
-        b = at(off + len(p) - 1, ends, total * (off + len(p)) / max(1, len(text)))
-        spans.append((round(a, 3), round(max(a, b), 3)))
-        off += len(p) + 1
-    return pcm, spans
+def _quietest(pcm, sr, a, b):
+    """Sample index of the quietest 20 ms window between times a and b (the cut point inside a pause)."""
+    import array
+    s = array.array("h", pcm)
+    lo, hi = int(a * sr), int(b * sr); win = int(0.02 * sr)
+    if hi - lo <= win: return (lo + hi) // 2
+    best, at = None, (lo + hi) // 2
+    for i in range(lo, hi - win, win // 2):
+        e = sum(abs(x) for x in s[i:i + win:4])
+        if best is None or e < best: best, at = e, i + win // 2
+    return at
+
+
+def _fade(pcm, sr, ms=12):
+    import array
+    s = array.array("h", pcm); k = min(len(s) // 2, int(sr * ms / 1000))
+    for i in range(k):
+        g = i / k; s[i] = int(s[i] * g); s[-1 - i] = int(s[-1 - i] * g)
+    return s.tobytes()
+
+
+GUARD = "Thanks for watching."   # spoken after the real last line and cut off, so the last word is never clipped
+TAKE_CHARS = 2400                # one continuous take per this many characters (whole video for most decks)
+
+
+def eleven_takes(scenes, voice, model, speed, key, cache):
+    """Narrate scenes as continuous takes (natural flow across scene changes), then cut each take into
+    scenes at the quietest point of each pause. Returns per scene: (pcm, speech_start, speech_end,
+    [(start, end)] per sentence, [(word, t)]), times relative to that scene's audio."""
+    texts = [[spoken(x, eleven=True) for x in (sentences(sc.get("narration", "")) or ["."])] for sc in scenes]
+    groups, cur, size = [], [], 0
+    for i, t in enumerate(texts):
+        L = sum(len(x) + 1 for x in t)
+        if cur and size + L > TAKE_CHARS: groups.append(cur); cur, size = [], 0
+        cur.append(i); size += L
+    groups.append(cur)
+    out = [None] * len(scenes)
+    for g, ids in enumerate(groups):
+        paras = [" ".join(texts[i]) for i in ids]
+        text = "\n\n".join(paras + [GUARD])
+        prev = " ".join(" ".join(texts[i]) for i in groups[g - 1]) if g else ""
+        nxt = " ".join(texts[groups[g + 1][0]]) if g + 1 < len(groups) else ""
+        r = eleven_request(text, prev, nxt, voice, model, speed, key, cache)
+        pcm = base64.b64decode(r["audio"]); total = len(pcm) / 2 / SR_11
+        at = _norm_al(r, text, total)
+        # character offsets of every scene paragraph, its sentences and words
+        info, off = [], 0
+        for i, para in zip(ids, paras):
+            sp, so = [], off
+            for x in texts[i]:
+                sp.append((at(so), at(so + len(x) - 1, True))); so += len(x) + 1
+            words = [(m.group(0), at(off + m.start())) for m in re.finditer(r"\S+", para)]
+            info.append((i, at(off), at(off + len(para) - 1, True), sp, words))
+            off += len(para) + 2
+        guard_start = at(off)
+        cuts = [0]
+        for k in range(len(info)):
+            nxt_start = info[k + 1][1] if k + 1 < len(info) else guard_start
+            cuts.append(_quietest(pcm, SR_11, info[k][2] + 0.03, max(info[k][2] + 0.05, nxt_start - 0.03)))
+        for k, (i, a, b, sp, words) in enumerate(info):
+            c0, c1 = cuts[k], cuts[k + 1]; t0 = c0 / SR_11
+            seg = _fade(pcm[c0 * 2:c1 * 2], SR_11)
+            out[i] = (seg, a - t0, b - t0, [(x - t0, y - t0) for x, y in sp], [(w, t - t0) for w, t in words])
+    return out
 
 
 # ---------- Piper ----------
@@ -144,26 +198,41 @@ def main():
 
     scenes = plan["scenes"]
 
-    def synth(i, sents):
-        if provider == "elevenlabs":
-            prev = scenes[i - 1].get("narration", "") if i else ""
-            nxt = scenes[i + 1].get("narration", "") if i + 1 < len(scenes) else ""
-            pcm, spans = eleven_scene(sents, prev, nxt, voice, model, a.speed, key, cache)
-            return pcm, spans, SR_11
-        p = get_piper(); pcm, spans = p.scene(sents); return pcm, spans, p.sr
+    def timing(sc, speech_end, last):
+        # minDuration is a soft floor: never more than MAX_HOLD of silence after the voice
+        tail = END_HOLD if last else (TAIL_NEXT if provider == "elevenlabs" else TAIL)
+        return max(speech_end + tail, min(sc.get("minDuration", 0), speech_end + MAX_HOLD))
 
     def narrate():
+        if provider == "elevenlabs":
+            takes = eleven_takes(scenes, voice, model, a.speed, key, cache)
         for i, sc in enumerate(scenes):
             sents = sentences(sc.get("narration", "")) or ["."]
-            pcm, spans, sr = synth(i, sents)
-            out_pcm = bytearray(b"\0\0" * int(LEAD_IN * sr)) + pcm
-            speech_end = LEAD_IN + len(pcm) / 2 / sr
-            dur = max(sc.get("minDuration", 0), speech_end + TAIL)
-            out_pcm += b"\0\0" * max(0, int((dur - speech_end) * sr))
-            write_wav(job / "audio" / f"scene-{i}.wav", out_pcm, sr)
-            beats = [{"t": round(LEAD_IN + s, 3), "end": round(LEAD_IN + e, 3), "text": t} for (s, e), t in zip(spans, sents)]
+            last = i == len(scenes) - 1
+            if provider == "elevenlabs":
+                seg, s0, s1, spans, words = takes[i]; sr = SR_11
+                lead = LEAD_IN if i == 0 else LEAD_NEXT
+                if s0 > lead:   # trim long pauses at scene changes to one steady breath (cuts are in silence)
+                    cut = int((s0 - lead + 0.02) * sr); seg = _fade(seg[cut * 2:], sr)
+                    d = cut / sr; s0, s1 = s0 - d, s1 - d; spans = [(x - d, y - d) for x, y in spans]; words = [(w, t - d) for w, t in words]
+                keep = int((s1 + TAIL_NEXT - 0.1) * sr)
+                if i < len(scenes) - 1 and len(seg) // 2 > keep: seg = _fade(seg[:keep * 2], sr)
+                pad = max(0.0, lead - s0)   # natural pause already in the cut counts
+                pcm = b"\0\0" * int(pad * sr) + seg
+                speech_end = pad + s1
+                beats = [{"t": round(pad + x, 3), "end": round(pad + y, 3), "text": t} for (x, y), t in zip(spans, sents)]
+                ws = [{"w": w, "t": round(pad + t, 3)} for w, t in words]
+                for bt in beats: bt["words"] = [w for w in ws if bt["t"] - 0.05 <= w["t"] <= bt["end"] + 0.05]
+            else:
+                p = get_piper(); seg, spans = p.scene(sents); sr = p.sr
+                pcm = b"\0\0" * int(LEAD_IN * sr) + seg
+                speech_end = LEAD_IN + len(seg) / 2 / sr
+                beats = [{"t": round(LEAD_IN + x, 3), "end": round(LEAD_IN + y, 3), "text": t} for (x, y), t in zip(spans, sents)]
+            dur = max(timing(sc, speech_end, last), len(pcm) / 2 / sr)
+            pcm = bytearray(pcm) + b"\0\0" * max(0, int(dur * sr) - len(pcm) // 2)
+            write_wav(job / "audio" / f"scene-{i}.wav", pcm, sr)
             sc.update(audio=f"audio/scene-{i}.wav", duration=round(dur, 3), beats=beats, speechEnd=round(speech_end, 3))
-            print(f"scene {i}: {dur:5.2f}s, {len(beats)} beats ({provider})")
+            print(f"scene {i}: {dur:5.2f}s, speech {beats[0]['t']:.2f}-{speech_end:.2f}, {len(beats)} beats ({provider})")
 
     try:
         narrate()

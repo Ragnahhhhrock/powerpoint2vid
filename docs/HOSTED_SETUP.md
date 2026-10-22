@@ -25,7 +25,8 @@ Pieces: the **site** (Cloudflare Pages, already live) calls a **runner** (this r
 - `ELEVENLABS_API_KEY` lives in Pages. The job API sends it to the runner with each job (over HTTPS, behind `RUNNER_SECRET`); the runner keeps it in memory for that job only and never returns it. A runner secret of the same name, if set, takes priority.
 - Key settings in ElevenLabs: restricted, Text to Speech = Access, Voices = Read, everything else No Access, monthly credit cap a little under the plan's credits.
 - Voices offered in `/studio` are the list in `functions/_lib/jobs.js` (`VOICES`, first = default). Change the model with runner env `ELEVENLABS_MODEL` (default `eleven_multilingual_v2`).
-- `studio/voice.py` makes one request per scene with character timestamps, so sentence beats are exact; responses are cached on the runner so retries don't spend credits twice.
+- `studio/voice.py` reads the whole script as one continuous take (plus a throwaway closing line so the last word is never clipped), cuts it into scenes at the quietest point of each pause, and gives every scene a steady 0.9 s breath at scene changes. Word timestamps go into `beats[i].words` so animations land on the exact word. Silence after the voice is capped at 1.6 s even when a scene asks for a longer minimum. Responses are cached on the runner so retries don't spend credits twice.
+- Final renders are sized to `P2V_MAX_MB` (default 22 MB) in one encode, under Cloudflare Pages' 25 MB file limit.
 - If ElevenLabs fails (quota, outage), the whole video falls back to the local Piper voice so the job still finishes (`voiceFallback` in plan.json).
 - Credits are roughly one per character of narration: a 10-slide deck is about 2,000 to 5,000.
 

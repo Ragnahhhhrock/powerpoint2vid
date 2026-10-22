@@ -134,9 +134,12 @@ let af = S.map((s, i) => `[${n + i}:a]adelay=${Math.round(starts[i] * 1000)}:all
 af += S.map((_, i) => `[a${i}]`).join('') + `amix=inputs=${n}:normalize=0:duration=longest,apad,atrim=0:${total.toFixed(3)},loudnorm=I=-16:TP=-1.5:LRA=11[aout]`;
 
 const mp4 = path.join(out, 'video.mp4');
+// size budget: the final MP4 fits in MAX_MB (Cloudflare Pages serves files up to 25 MB), at the best quality that allows
+const MAX_MB = +(process.env.P2V_MAX_MB || 22), ABR = 128;
+const vk = Math.max(1200, Math.min(8000, Math.floor((MAX_MB * 8 * 1024 * 0.97) / total - ABR)));
 await run('ffmpeg', ['-y', '-loglevel', 'error', ...inputs, '-filter_complex', vf + af, '-map', '[vout]', '-map', '[aout]',
-  '-c:v', 'libx264', '-preset', DRAFT ? 'veryfast' : 'slow', '-crf', DRAFT ? '26' : '19', '-pix_fmt', 'yuv420p', '-movflags', '+faststart',
-  '-c:a', 'aac', '-b:a', '160k', '-ar', '48000', mp4]);
+  '-c:v', 'libx264', '-preset', DRAFT ? 'veryfast' : 'slow', '-crf', DRAFT ? '26' : '20', '-maxrate', vk + 'k', '-bufsize', vk * 2 + 'k',
+  '-pix_fmt', 'yuv420p', '-movflags', '+faststart', '-c:a', 'aac', '-b:a', ABR + 'k', '-ar', '48000', mp4]);
 if (!DRAFT) {
   await run('ffmpeg', ['-y', '-loglevel', 'error', '-i', mp4, '-c:v', 'libvpx-vp9', '-b:v', '0', '-crf', '34', '-row-mt', '1', '-deadline', 'good', '-cpu-used', '4', '-c:a', 'libopus', '-b:a', '96k', path.join(out, 'video.webm')]);
 }

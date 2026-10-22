@@ -20,8 +20,8 @@
     {
       "file": "scenes/scene-0.js",
       "slide_index": 0,
-      "narration": "This is an ordinary slide. Watch it get directed.",
-      "minDuration": 7.6,
+      "narration": "This is an ordinary slide. Watch it get directed, like the opening shot of a film.",
+      "minDuration": 0,
       "storyboard": "The real default title slide fills the frame in a plain editor window. On 'directed' a clapper-snap flash, then the slide breaks into a wave of tiles that tumble toward camera, revealing a dark stage with a projector beam and dust. The title is rebuilt as heavy kinetic type, letters rising through a mask, an amber light sweep crossing them.",
       "slide": {
         "title": "PowerPoint2Vid",
@@ -29,27 +29,13 @@
         "notes": "OK so this first one is just a basic title slide, pretty standard. What I want to show is what it looks like once it gets properly directed.",
         "image": "assets/slide-1.png"
       },
-      "audio": "audio/scene-0.wav",
-      "duration": 7.6,
-      "beats": [
-        {
-          "t": 0.8,
-          "end": 2.425,
-          "text": "This is an ordinary slide."
-        },
-        {
-          "t": 2.634,
-          "end": 4.376,
-          "text": "Watch it get directed."
-        }
-      ],
-      "speechEnd": 4.376
+      "audio": "audio/scene-0.wav"
     },
     {
       "file": "scenes/scene-1.js",
       "slide_index": 1,
-      "narration": "a.i. reads your whole deck and tightens the story. Your speaker notes become the voiceover.",
-      "minDuration": 9.4,
+      "narration": "a.i. reads your whole deck and tightens the story. Your speaker notes become the voiceover, rewritten so it flows.",
+      "minDuration": 0,
       "storyboard": "The five real slides fan in a 3D arc; an amber scan line reads across them on 'reads'. The deck's actual wordy speaker note is typeset below; on 'tightens' filler words are struck in ember and collapse out, the remaining words close up. On 'voiceover' the tightened line lifts and a waveform grows from it, a playhead sweeping across.",
       "slide": {
         "title": "How it works",
@@ -61,27 +47,13 @@
         "type": "fadeblack",
         "duration": 0.45
       },
-      "audio": "audio/scene-1.wav",
-      "duration": 9.4,
-      "beats": [
-        {
-          "t": 0.8,
-          "end": 3.935,
-          "text": "a.i. reads your whole deck and tightens the story."
-        },
-        {
-          "t": 4.376,
-          "end": 6.651,
-          "text": "Your speaker notes become the voiceover."
-        }
-      ],
-      "speechEnd": 6.651
+      "audio": "audio/scene-1.wav"
     },
     {
       "file": "scenes/scene-2.js",
       "slide_index": 1,
-      "narration": "Then it redesigns every slide as an animated scene, with each move timed to the narration.",
-      "minDuration": 9.0,
+      "narration": "Then it redesigns every slide as an animated scene, with each move timed to the narration, word for word.",
+      "minDuration": 0,
       "storyboard": "The plain bullet slide, as written. On 'redesigns' the camera swings to an isometric exploded view: the new scene's layers (stage, light, type, cards) float apart in depth with mono labels. On 'animated scene' the layers slam together and the camera returns front-on. On 'timed' a timeline strip draws along the bottom: waveform, keyframe diamonds, a playhead that pops each step card as it passes.",
       "slide": {
         "title": "How it works",
@@ -93,22 +65,13 @@
         "type": "smoothleft",
         "duration": 0.6
       },
-      "audio": "audio/scene-2.wav",
-      "duration": 9.0,
-      "beats": [
-        {
-          "t": 0.8,
-          "end": 6.744,
-          "text": "Then it redesigns every slide as an animated scene, with each move timed to the narration."
-        }
-      ],
-      "speechEnd": 6.744
+      "audio": "audio/scene-2.wav"
     },
     {
       "file": "scenes/scene-3.js",
       "slide_index": 2,
-      "narration": "A flat chart becomes a moment. The numbers build, and the result lands as it's said.",
-      "minDuration": 9.2,
+      "narration": "A flat chart becomes a moment. The numbers build, and the result lands as it's said, right on cue.",
+      "minDuration": 0,
       "storyboard": "The deck's default chart, as-is, tips back on 'flat' and becomes the floor. On 'moment' the same data erupts from it as extruded 3D columns under an orbiting camera. Counters build column by column on 'numbers build'; on 'lands' Q4 ignites ember, the rest dim, and '+117%' (Q4 vs Q1, from the deck's numbers) slams in.",
       "slide": {
         "title": "Quarterly revenue",
@@ -120,27 +83,13 @@
         "type": "fadeblack",
         "duration": 0.45
       },
-      "audio": "audio/scene-3.wav",
-      "duration": 9.2,
-      "beats": [
-        {
-          "t": 0.8,
-          "end": 2.634,
-          "text": "A flat chart becomes a moment."
-        },
-        {
-          "t": 3.076,
-          "end": 6.466,
-          "text": "The numbers build, and the result lands as it's said."
-        }
-      ],
-      "speechEnd": 6.466
+      "audio": "audio/scene-3.wav"
     },
     {
       "file": "scenes/scene-4.js",
       "slide_index": 3,
       "narration": "Basic exports carry a watermark. Pro removes it, and includes ten a.i.-directed videos a month, from 29 Australian dollars.",
-      "minDuration": 10.6,
+      "minDuration": 0,
       "storyboard": "A real frame from this video in a player, stamped with the PowerPoint2Vid watermark, labelled BASIC. On 'Pro removes it' a light wipe clears the watermark and the frame becomes the hero, labelled PRO. On 'ten' ten frames from this video deal out into a film strip while a counter climbs to 10. On 'Australian dollars' the price A$29/month lands in big type.",
       "slide": {
         "title": "Plans",
@@ -152,27 +101,13 @@
         "type": "smoothleft",
         "duration": 0.6
       },
-      "audio": "audio/scene-4.wav",
-      "duration": 11.467,
-      "beats": [
-        {
-          "t": 0.8,
-          "end": 3.052,
-          "text": "Basic exports carry a watermark."
-        },
-        {
-          "t": 3.749,
-          "end": 10.367,
-          "text": "Pro removes it, and includes ten a.i.-directed videos a month, from 29 Australian dollars."
-        }
-      ],
-      "speechEnd": 10.367
+      "audio": "audio/scene-4.wav"
     },
     {
       "file": "scenes/scene-5.js",
       "slide_index": 4,
-      "narration": "More than a PowerPoint to video converter. Go Pro at powerpoint2vid.com.",
-      "minDuration": 8.6,
+      "narration": "More than a PowerPoint to video converter. Go Pro today, at powerpoint2vid.com.",
+      "minDuration": 0,
       "storyboard": "Finale under the projector beam. 'More than a PowerPoint to video converter.' types in muted; then 'Your deck, directed.' rises huge with an amber light sweep. On 'Go Pro' the Pro button lands with the price, and the URL settles beneath. Holds as an end card.",
       "slide": {
         "title": "Get started",
@@ -184,22 +119,7 @@
         "type": "fadewhite",
         "duration": 0.6
       },
-      "audio": "audio/scene-5.wav",
-      "duration": 8.6,
-      "beats": [
-        {
-          "t": 0.8,
-          "end": 3.018,
-          "text": "More than a PowerPoint to video converter."
-        },
-        {
-          "t": 3.459,
-          "end": 6.187,
-          "text": "Go Pro at powerpoint2vid.com."
-        }
-      ],
-      "speechEnd": 6.187
+      "audio": "audio/scene-5.wav"
     }
-  ],
-  "voiceProvider": "elevenlabs"
+  ]
 }

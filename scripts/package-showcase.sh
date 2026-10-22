@@ -7,9 +7,8 @@ set -euo pipefail
 src=$1; id=$2; dst=assets/showcase/$id
 mkdir -p "$dst"
 if [ -f "$src/out/video.mp4" ]; then
-  # web encode: 1080p, CRF 23, fast start (keeps files well under Cloudflare's 25 MB limit)
-  ffmpeg -y -loglevel error -i "$src/out/video.mp4" -c:v libx264 -preset slow -crf 23 -maxrate 4500k -bufsize 9000k -pix_fmt yuv420p -movflags +faststart -c:a aac -b:a 128k "$dst/video.mp4"
-  ffmpeg -y -loglevel error -i "$dst/video.mp4" -c:v libvpx-vp9 -b:v 0 -crf 38 -row-mt 1 -deadline good -cpu-used 4 -c:a libopus -b:a 96k "$dst/video.webm"
+  # the render is already web-ready and sized to its budget (P2V_MAX_MB in studio/render.mjs): copy, don't re-encode
+  cp "$src/out/video.mp4" "$dst/video.mp4"; cp "$src/out/video.webm" "$dst/video.webm"
   ffmpeg -y -loglevel error -i "$src/out/poster.jpg" -vf scale=1280:-1 -q:v 3 "$dst/poster.jpg"
   cp "$src/out/captions.vtt" "$dst/captions.vtt"
 fi
