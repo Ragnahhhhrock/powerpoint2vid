@@ -71,21 +71,21 @@ You have a few options, and each suits different speakers.
 |---|---|---|
 | Record yourself in PowerPoint | Speak over each slide using PowerPoint's own recording and export | You want your own voice and are comfortable recording |
 | Camera plus slides | Record yourself on camera with slides alongside | The conference wants a speaker on screen |
-| Text-to-speech from notes | A tool reads your speaker notes and records the slides | You want consistent narration, easy edits, or are presenting in a second language |
+| Narration from notes | A tool turns your speaker notes into a narrated, animated video | You want consistent narration, easy edits, or are presenting in a second language |
 
-PowerPoint2Vid takes the third approach. It reads your speaker notes with your browser's built-in voices, animates the slides, and records a video in the browser. It does not record your own microphone or camera. If the conference wants your face or voice, use one of the other approaches, or check whether a narrated slide video is acceptable.
+PowerPoint2Vid takes the third approach. Your speaker notes become the narration, in a voice and speed you choose, and the slides become animated scenes. It does not record your own microphone or camera. If the conference wants your face or voice, use one of the other approaches, or check whether a narrated slide video is acceptable.
 
 ## Make it feel produced
 
 Small touches make a recorded talk feel deliberate.
 
-- **Pick a calm video style.** Minimal cinematic and Keynote launch both give a polished, conference-ready look. Clean works if you want the slides to speak for themselves.
+- **Let the slides be redesigned for the screen.** An animated scene for each slide gives a polished, conference-ready look, while a calm pace lets the content speak for itself.
 - **Use gentle transitions.** A crossfade is rarely distracting.
 - **Reveal shapes one by one** on diagram slides, so each part arrives as you describe it.
 - **Burn in captions.** They help viewers with the sound off and those listening in a second language. If the organisers need a caption file such as SRT, you will need to make that separately.
 - **Set a minimum time per slide** so title and section slides do not flash past.
 
-Preview the full talk with voice. Watch it once as a viewer, not the author.
+Watch the full talk with the narration on. Watch it once as a viewer, not the author.
 
 ## Plan for the live Q&A
 
@@ -109,4 +109,4 @@ Watch your own recording one more time on the day. It helps you pick up where th
 
 ## Turn your talk deck into a finished recording
 
-If a narrated slide video fits the brief, your deck and speaker notes are most of the work already done. Drop the .pptx into the [PowerPoint to video converter](/), choose a style and voice, preview with narration, and export when it is right. If the organisers need MP4 and your browser saves WebM, convert it with a common tool before sending.
+If a narrated slide video fits the brief, your deck and speaker notes are most of the work already done. Drop the .pptx into the [PowerPoint to video converter](/), and choose a voice and speaking speed. Claude Opus 5.5 directs the talk: it tightens the story, turns each slide into an animated scene and times the animation to your narration, so a recorded talk keeps the energy a room would give it. Download the MP4 when it is right, which suits the common conference request for MP4.

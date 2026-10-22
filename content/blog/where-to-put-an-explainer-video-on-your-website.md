@@ -111,4 +111,4 @@ The simplest fix is to make videos from slides you control. When a feature chang
 
 ## Make the videos from the decks you already have
 
-Your sales deck, product deck and onboarding slides already contain most of what these videos need. Write the explanation into the speaker notes, drop the .pptx into the [PowerPoint to video converter](/), pick a style and preview it with narration. Each page on your site can have its own short explainer video, made from slides you can update whenever the message changes.
+Your sales deck, product deck and onboarding slides already contain most of what these videos need. Write the explanation into the speaker notes, add the .pptx to the [PowerPoint to video converter](/) and download the finished video. Claude Opus 5.5 directs each one, tightening the story and designing the scenes so a home page overview or a pricing walkthrough looks produced. Each page on your site can have its own short explainer video, made from slides you can update whenever the message changes.

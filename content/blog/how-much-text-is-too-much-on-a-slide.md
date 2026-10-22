@@ -120,4 +120,4 @@ For more on splitting slides, see [The One Idea Per Slide Rule (and When to Brea
 
 ## Lighter slides make better videos
 
-Cutting text from your slides and moving it into the speaker notes is exactly the shape a narrated video needs. The slide shows the point; the voice explains it. Once your deck passes the tests above, drop it into the [PowerPoint to video converter](/) and preview it with narration. You will hear straight away whether each slide and its script work together.
+Cutting text from your slides and moving it into the speaker notes is exactly the shape a narrated video needs. The slide shows the point; the voice explains it. Once your deck passes the tests above, drop it into the [PowerPoint to video converter](/). Claude Opus 5.5 directs the video, rebuilding each slide as an animated scene and landing key points on the word that names them, so a clean slide with the detail in your notes plays like a produced explainer. You will see straight away whether each slide and its script work together.

@@ -82,7 +82,7 @@ Captions add a layer of text to every frame, so slide design matters more.
 
 ## How captions work in PowerPoint2Vid
 
-PowerPoint2Vid has a "burn in captions" option. When it's on, the narration script is shown sentence by sentence and burned into the video. Several video styles have their own caption look, such as lower-third captions in Minimal cinematic, glass captions in Keynote launch and typewriter-tape captions in Paper & ink.
+PowerPoint2Vid has a "burn in captions" option. When it's on, the narration script is shown sentence by sentence and burned into the video, so the captions appear in step with the voice.
 
 It doesn't export a separate caption file (SRT or VTT). If you need closed captions, upload the video to your platform and use its captioning tools, pasting in your speaker notes as the transcript where the platform allows. For the full conversion process, see [How to Convert PowerPoint to Video: The Complete Guide](/blog/how-to-convert-powerpoint-to-video-the-complete-guide).
 
@@ -97,4 +97,4 @@ It doesn't export a separate caption file (SRT or VTT). If you need closed capti
 
 ## Add captions with the PowerPoint to video converter
 
-The quickest way to captioned slides is to start from notes you've already written. Open the [PowerPoint to video converter](/), drop in your deck, turn on burned-in captions and preview the result with the voice. You'll see straight away which sentences need trimming before you export.
+The quickest way to captioned slides is to start from notes you've already written. Open the [PowerPoint to video converter](/), drop in your deck, turn on burned-in captions and choose a voice. Claude Opus 5.5 directs the video, timing the animation and the captions to your narration so key points land on the word that names them. Preview it to see which sentences need trimming before you download.

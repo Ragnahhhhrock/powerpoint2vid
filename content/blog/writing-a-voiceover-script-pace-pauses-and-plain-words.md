@@ -45,7 +45,7 @@ A sentence with two ideas forces the listener to hold the first while processing
 
 ### Set the speaking speed after the script
 
-If you're using a text-to-speech voice, you can adjust the speaking speed. Get the script right first, then tune the speed. A well-written script usually sounds best at a natural, moderate rate. If it only sounds clear when slowed right down, the sentences are probably too long. For more, see [choosing a narrator voice and speaking speed](/blog/choosing-a-narrator-voice-and-speaking-speed).
+You can choose a voice and adjust the speaking speed. Get the script right first, then tune the speed. A well-written script usually sounds best at a natural, moderate rate. If it only sounds clear when slowed right down, the sentences are probably too long. For more, see [choosing a narrator voice and speaking speed](/blog/choosing-a-narrator-voice-and-speaking-speed).
 
 ## Using pauses on purpose
 
@@ -53,7 +53,7 @@ Pauses give listeners time to absorb what they've just heard. They also signal t
 
 ### Punctuation is your pause control
 
-Text-to-speech voices respond to punctuation:
+Narration responds to punctuation:
 
 - **Full stop:** a clear pause. Use it before and after key points.
 - **Comma:** a short breath. Use it to separate list items and clauses.
@@ -133,4 +133,4 @@ It moves at a steady pace, pauses before the key point, uses a question to set u
 
 A voiceover script works best when it lives in your speaker notes, one section per slide. That keeps the words and visuals in sync and makes edits easy.
 
-When your script is ready, drop the deck into the [PowerPoint to video converter](/). It reads your speaker notes with your browser's built-in voices, times each slide to the speech, and lets you adjust the speaking speed. Preview it, listen for any line that drags or rushes, and fix it in the notes.
+When your script is ready, add the deck to the [PowerPoint to video converter](/). Your speaker notes become the narration, with a voice and speaking speed you choose. Claude Opus 5.5 directs the video and times the animation to your voice, so a well-paced script gets scenes that land on the right words. Listen for any line that drags or rushes, and fix it in the notes.

@@ -63,7 +63,7 @@ If you are self-hosting, file size matters.
 
 - **Keep it short.** A focused one to two minute explainer is lighter and usually more effective than a ten-minute walkthrough.
 - **Match the resolution to the space.** A video shown in a 700-pixel-wide column does not need to be served at a much larger size.
-- **Offer MP4 where you need broad support.** PowerPoint2Vid exports WebM, or MP4 in browsers that support it. WebM plays in Chrome, Edge and Firefox. If you need the widest support, convert to MP4 with a common tool and offer that, or offer both.
+- **Offer MP4 where you need broad support.** PowerPoint2Vid gives you an MP4, with WebM available. MP4 plays almost everywhere, so it is the safe default. WebM can be a lighter option for browsers that support it, so you can offer both.
 - **Compress before uploading.** Common conversion tools let you lower the bitrate. Slide-based videos with simple motion often compress well.
 
 ## Think carefully about autoplay
@@ -80,7 +80,7 @@ A better pattern for explainers:
 
 Here is a simple, fast layout for a product page.
 
-- **Headline:** Turn your existing training deck into a video in minutes
+- **Headline:** Turn your existing training deck into a video
 - **Subhead:** One sentence on who it is for.
 - **Video:** Poster image of your title slide, play button, "Watch the 90-second overview".
 - **Button:** Start now.
@@ -100,4 +100,4 @@ The video loads only when clicked. The headline and button work even if nobody w
 
 ## From deck to a fast, embeddable video
 
-A lean explainer starts with a focused deck. Build a short version of your presentation, drop it into the [PowerPoint to video converter](/), pick a style that suits your site, and burn in captions for viewers with the sound off. Then embed it with the steps above, and your page stays quick.
+A lean explainer starts with a focused deck. Build a short version of your presentation, drop it into the [PowerPoint to video converter](/) and download the MP4, with captions for viewers who have the sound off. Claude Opus 5.5 directs the video: it tightens the story to what a visitor needs, designs each scene and times the animation to the narration, so a short clip does the work of a longer one. Then embed it with the steps above, and your page stays quick.

@@ -36,7 +36,7 @@ Put what you plan to say in the notes for each slide. Not bullet prompts, but th
 
 ### 2. Play the deck as a narrated video
 
-Turn the deck into a video where a text-to-speech voice reads your notes over the slides. The voice won't sound like you, and that's the point. You'll hear your words as words, not as your own familiar delivery.
+Turn the deck into a video where a narrator voice reads your notes over the slides. The voice won't sound like you, and that's the point. You'll hear your words as words, not as your own familiar delivery.
 
 ### 3. Watch once without stopping
 
@@ -129,4 +129,4 @@ If you're preparing a talk that will be pre-recorded anyway, [pre-recorded confe
 
 ## Use the converter as your rehearsal room
 
-You can run this whole method with the [PowerPoint to video converter](/). Drop in your .pptx, keep the narration set to read your speaker notes, and press preview. Your browser's built-in voice reads every note over the slides, with timing that follows the speech, and the slides never leave your device. Preview with voice is open to everyone, so you can rehearse as many times as you like. If you later decide to share the talk as a video, you can export it from the same deck.
+You can run this whole method with the [PowerPoint to video converter](/). Upload your .pptx and let it narrate from your speaker notes. Claude Opus 5.5 directs the video, tightening the story and timing each animated scene to the voice, so you rehearse against something close to a produced version of your talk. If you later decide to share it, download the finished video from the same deck.

@@ -92,9 +92,9 @@ Sample speaker note:
 
 ## How 16:9 slides look in video
 
-PowerPoint2Vid turns your .pptx into a video, and several of its styles add motion or frame the slide in different ways. The Clean style shows your slide full-bleed. Keynote launch places the slide as a rounded card on a dark stage, and Paper & ink pins it to paper. Others add a slow push-in. Generous margins help in all of them, because a little movement or framing never crowds your content.
+PowerPoint2Vid turns your .pptx into a video, and the scenes it builds add motion, captions and framing around your content. Generous margins help, because a little movement or a caption never crowds your content.
 
-Preview your deck with voice in a couple of styles. If anything feels tight against the edge, pull it in.
+Watch the finished video once with the captions on. If anything feels tight against the edge, pull it in.
 
 ## Quick checklist
 
@@ -107,4 +107,4 @@ Preview your deck with voice in a couple of styles. If anything feels tight agai
 
 ## Wide slides, ready for video
 
-A deck designed for 16:9 is already shaped like a video. Drop your .pptx into the [PowerPoint to video converter](/), choose a style, and see how your wide layouts look with narration and captions before you share them.
+A deck designed for 16:9 is already shaped like a video. Drop your .pptx into the [PowerPoint to video converter](/) and your wide layouts become full-frame scenes with narration and captions. Claude Opus 5.5 directs the video: it redesigns each slide to use the width, adds motion that suits the layout and times it to your voice, so a split-screen slide arrives as a produced scene, not a static picture.

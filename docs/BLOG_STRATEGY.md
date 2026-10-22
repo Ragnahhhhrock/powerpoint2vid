@@ -61,7 +61,7 @@ Day 1 is the cornerstone guide, "How to Convert PowerPoint to Video: The Complet
 - Posts only link to earlier posts, so readers never hit a page that isn't live yet. Related-post links are added automatically.
 - 800 to 1,300 words. Plain, confident, short sentences. Australian spelling.
 - House rule: never describe the product or anything else as costing nothing (the "f-word" is banned site-wide). No invented statistics, studies or quotes.
-- Product claims must match the product: browser-based, no upload, speaker-note narration with the browser's built-in voices, six video styles, captions, transitions, WebM (or MP4 where supported) export, Pro from A$12/month or A$99/year.
+- Product claims must match the product and follow `content/blog/PRODUCT_CLAIMS.md`: an Opus 5.5-directed explainer video made from the deck, speaker-note narration, captions and transitions, MP4 (WebM available) download, Pro from A$12/month or A$99/year. No privacy, on-device or no-upload claims.
 
 ## 6. Measurement
 - GA4: blog sessions, scroll depth, `cta_click` from blog posts, `deck_loaded` and `export_complete` from blog referrals.
@@ -128,7 +128,7 @@ All 90 posts are written up front and committed to the repo (`content/blog/*.md`
 | 51 | Fri 2026-12-11 | Voice, Captions & Sharing | Adding Presentation Videos to Your LMS | Leah | presentation video lms |
 | 52 | Sat 2026-12-12 | Better Presentations | Icons, Shapes or Diagrams? Choosing the Right Visual | Tom | presentation diagrams |
 | 53 | Sun 2026-12-13 | Convert & Create | How to Convert a PowerPoint to Video on a Chromebook | Leah | powerpoint to video chromebook |
-| 54 | Mon 2026-12-14 | Convert & Create | Private by Design: Why Converting Slides in Your Browser Matters | Tom | private powerpoint to video converter |
+| 54 | Mon 2026-12-14 | Convert & Create | What to Check Before Using a PowerPoint to Video Converter With Confidential Slides | Tom | private powerpoint to video converter |
 | 55 | Tue 2026-12-15 | Better Presentations | Turning Bullet Points into Visuals | All | alternatives to bullet points |
 | 56 | Wed 2026-12-16 | Playbooks by Role | Conference Speakers: Pre-Recorded Talks That Still Engage | Priya | pre-recorded conference talk |
 | 57 | Thu 2026-12-17 | Why Explainer Videos | One Deck, Many Videos: Repurposing Your Presentations | Mia | repurpose presentation into video |

@@ -30,7 +30,7 @@ Longer videos need more script, more visuals and more animation. Animation in pa
 
 ### Voiceover
 
-Professional voice talent adds a fee, and sometimes extra for usage rights. Recording your own voice costs time and a decent microphone. Text-to-speech voices remove that step.
+Professional voice talent adds a fee, and sometimes extra for usage rights. Recording your own voice costs time and a decent microphone. Narration generated from your script removes that step.
 
 ### Revisions
 
@@ -49,7 +49,7 @@ This one is easy to forget. If your product, prices or policy change, how much d
 | Route | What you get | Trade-offs |
 |---|---|---|
 | Agency or studio | Strategy, script, custom design and animation, professional voice, project management | Highest spend, longer timelines, updates usually go back to the agency |
-| Online video tools | Templates, stock media, built-in editing, often voice or avatar options | Subscription fees, learning curve, you still do the writing and assembly |
+| Deck-to-video service (such as PowerPoint2Vid) | Your deck goes in; Claude Opus 5.5 directs the video, redesigning slides as animated scenes and narrating from your speaker notes | Subscription (Pro from A$12 a month or A$99 a year); you supply the deck and notes |
 | Doing it yourself from slides | Your existing deck becomes the visuals; your speaker notes become the script | You own the writing and design; less custom than bespoke animation |
 
 ### When an agency is worth it
@@ -63,7 +63,7 @@ An agency makes sense when:
 
 ### When online tools fit
 
-General video tools suit teams who make a lot of varied video content, want stock footage and music, and are comfortable editing on a timeline.
+A deck-to-video service suits teams who already have decks and want a produced-looking video without hiring a studio or learning an editor. You supply the story and the speaker notes; Claude Opus 5.5 directs the video from there. It is less custom than a bespoke agency animation, and it won't suit a project that needs hand-drawn characters.
 
 ### When doing it yourself from slides fits
 
@@ -89,8 +89,8 @@ Whichever route you choose, ask:
 Say a small software company wants a 90-second video explaining its new invoicing feature.
 
 - **Agency:** A discovery call, a script, storyboard, custom animation and a professional voiceover over several weeks. The result is polished and distinctive. When the feature changes next quarter, an update is a new job.
-- **Online tool:** The marketer spends a few days choosing a template, sourcing stock clips and music, and assembling the edit. Flexible, but time-hungry, and there's a subscription.
-- **Slides:** The marketer takes the six feature slides from the sales deck, rewrites the speaker notes as a script, and exports a narrated video with a motion style and captions. It's ready the same day. When the feature changes, she edits the slides and exports again.
+- **Deck-to-video service:** The marketer sends the six feature slides with their speaker notes to a service such as PowerPoint2Vid, where the slides are redesigned as animated scenes. There's a subscription, but no editing timeline to learn.
+- **Slides:** The marketer takes the six feature slides from the sales deck, rewrites the speaker notes as a script, and builds a narrated video herself from the slides. The result depends on her own design and editing time. When the feature changes, she edits the slides and builds it again.
 
 None of these is wrong. They suit different goals. Many teams use a mix: one agency flagship, plus a steady stream of slide-based explainers for everything else. For more on what those videos can do for a business, see [the benefits of explainer videos for small businesses](/blog/the-benefits-of-explainer-videos-for-small-businesses).
 
@@ -109,4 +109,4 @@ None of these is wrong. They suit different goals. Many teams use a mix: one age
 
 ## Turning slides into explainer videos at a fraction of the cost
 
-If you have a deck, you have most of an explainer video already. The [PowerPoint to video converter](/) turns your .pptx into a narrated, animated video in your browser, using your speaker notes as the script and the browser's built-in voices. Preview is open to everyone. Exporting needs Pro at A$12 a month or A$99 a year, with unlimited videos and no watermark.
+If you have a deck, you have most of an explainer video already. The [PowerPoint to video converter](/) turns an ordinary deck into an extraordinary explainer video. Claude Opus 5.5 directs it: it tightens the story, redesigns each slide as an animated scene and times the animation to your narration, which comes from your speaker notes. You download an MP4 with no watermark. Pro starts from A$12 a month or A$99 a year.

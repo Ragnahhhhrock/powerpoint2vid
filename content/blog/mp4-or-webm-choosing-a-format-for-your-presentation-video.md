@@ -34,7 +34,7 @@ MP4 is the most widely recognised video format. It plays on almost every phone, 
 
 ## WebM in brief
 
-WebM is an open video format designed for the web. It's widely supported in modern browsers, including Chrome, Edge and Firefox, and many video editors and platforms accept it too. Browsers can record WebM natively, which is why browser-based tools often produce it.
+WebM is an open video format designed for the web. It's widely supported in modern browsers, including Chrome, Edge and Firefox, and many video editors and platforms accept it too.
 
 **Good for:**
 
@@ -52,7 +52,6 @@ WebM is an open video format designed for the web. It's widely supported in mode
 | Accepted by video platforms | Almost always | Often, check the platform |
 | Accepted by LMSs | Usually | Sometimes, check your system |
 | Opens in most video editors | Yes | Many, not all |
-| Produced natively by browser recording | In some browsers | Yes, widely |
 
 The short version: MP4 is the most portable. WebM is a solid web format that sometimes needs converting for a specific destination.
 
@@ -64,9 +63,9 @@ There are a few routes from a deck to a video file.
 
 Desktop PowerPoint can save a presentation as a video, and MP4 is one of the formats it offers. It uses your slide timings and any narration you've recorded yourself. If you're happy recording your own voice and your deck already has its timings set, it's a sensible option.
 
-### A browser-based converter
+### A dedicated converter
 
-PowerPoint2Vid works differently. It reads your .pptx in your browser, narrates your speaker notes with your browser's built-in voices, applies a video style and records the result on your device. Because the browser records in real time, the output is usually WebM, or MP4 in browsers that support recording it.
+PowerPoint2Vid works differently. It turns your speaker notes into narration and builds a produced explainer video from your slides. The output is an MP4 file to download and share, with WebM available if you want it for the web.
 
 ### Converting WebM to MP4
 
@@ -91,7 +90,7 @@ Work backwards from where the video is going.
 
 ## Example: one video, three destinations
 
-Say you've made a five-minute product overview from your sales deck and exported it as WebM.
+Say you've made a five-minute product overview from your sales deck and have it as a WebM file.
 
 - **Website:** Embed the WebM directly on the product page. It plays in modern browsers.
 - **YouTube:** Upload the WebM if the platform accepts it, or convert to MP4 first.
@@ -103,21 +102,20 @@ One export, one quick conversion, three places covered.
 
 Whatever format you end up with, these habits help the file come out right:
 
-- **Keep the recording tab in the foreground** while a browser-based export runs. Switching away can affect the recording.
-- **Include the audio.** In Chrome, when asked what to share, choose "this tab" and tick "share tab audio" so the narration is recorded into the file.
-- **Preview before exporting.** Fix mispronunciations and timing first, so you only export once.
+- **Check the narration first.** Fix mispronunciations and timing in your notes before you export, so you only export once.
+- **Confirm the audio is there.** Play the file in a different player to make sure the narration came through.
 - **Watch the final file all the way through.** Check the audio, the last slide and the ending.
 
 ## Quick checklist
 
 - Know where the video is going before you export
 - Check the destination's accepted formats
-- Keep WebM for the web if it's accepted
-- Convert to MP4 for platforms or devices that need it
+- Use MP4 when you are unsure, and WebM for the web if it's accepted
+- Convert between them for platforms or devices that need it
 - Play the final file through once to check audio and video
 
-## From PowerPoint to MP4 or WebM in your browser
+## From PowerPoint to MP4 or WebM
 
 The format question matters less than it seems. Both formats are widely supported, and converting between them is routine. What matters more is a clear deck, a good script and a video that tells the story well. For the whole process, see [how to convert PowerPoint to video](/blog/how-to-convert-powerpoint-to-video-the-complete-guide), and for a checklist of features to compare, read [what to look for in a PowerPoint to video converter](/blog/powerpoint-to-video-converter-what-to-look-for-before-you-choose).
 
-Drop your .pptx into the [PowerPoint to video converter](/) and preview it with narration. Exporting with Pro gives you a WebM, or MP4 in browsers that support it, ready to share or convert.
+Drop your .pptx into the [PowerPoint to video converter](/) and you get an MP4, with WebM available. Claude Opus 5.5 directs the video: it tightens the story, designs each scene and times the animation to your narration, so the file you share is a produced explainer, whatever the format.

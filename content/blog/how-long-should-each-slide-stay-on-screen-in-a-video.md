@@ -48,7 +48,7 @@ If a slide needs more than about 45 seconds of narration, that is often a sign i
 - A chart disappears before anyone could find the highlighted bar.
 - A title slide flashes past with no narration at all.
 
-**Fixes:** add a sentence of narration, or set a minimum time per slide so short slides still get a fair look.
+**Fixes:** add a sentence of narration, or hold the slide a little longer so it gets a fair look.
 
 ## Example: re-timing a compliance slide
 
@@ -79,18 +79,17 @@ Each slide now runs about 15 to 20 seconds. The total length is similar, but the
 
 Some slides genuinely need time, such as a diagram with four parts. Instead of showing everything at once, reveal each part as the narration reaches it. The slide stays on screen longer, but there is always something new to look at.
 
-In PowerPoint2Vid, "animate shapes in one by one" brings shapes in one at a time, which helps with this kind of slide.
+PowerPoint2Vid does this for you: key points land on the word that names them, which helps with this kind of slide.
 
 ## How PowerPoint2Vid handles timing
 
 PowerPoint2Vid sets each slide's duration from the narration:
 
-- **Timing follows the speech.** Each slide stays up while its narration plays.
-- **Minimum seconds per slide.** A setting makes sure short or silent slides still stay on screen long enough to read.
+- **Timing follows the speech.** Each slide stays up while its narration plays, and the animation is timed to the voice.
 - **Speaking speed is adjustable.** A slightly slower voice gives dense slides more room. A slightly faster voice tightens a video that drags.
-- **Narration script options.** The default reads speaker notes and falls back to slide text where a slide has no notes. You can also choose speaker notes only, slide text only, or no narration. With no narration, the minimum seconds setting controls the pace.
+- **Speaker notes are the script.** Whatever you write for a slide sets how long it stays up.
 
-If you're preparing a silent video, set the minimum to give viewers enough time to read each slide comfortably, then check it by watching the preview without looking away.
+For a very short or text-heavy slide, add a sentence of narration so viewers have enough time to read it comfortably, then check it by watching the video without looking away.
 
 ## Write notes with timing in mind
 
@@ -109,9 +108,9 @@ For more on writing narration, see [how to write speaker notes that become a gre
 - No slide runs much past 45 seconds without new visuals.
 - Title and divider slides are short but readable.
 - Charts get time for the viewer to find the point.
-- A minimum time per slide is set for silent or very short slides.
-- You have watched the full preview once at normal speed.
+- Very short slides have enough narration to be read comfortably.
+- You have watched the full video once at normal speed.
 
 ## Get the timing right before you export
 
-The easiest way to judge slide timing is to watch the video. Load your deck into the [PowerPoint to video converter](/), preview it with voice, and note any slide that feels rushed or slow. Adjust the speaker notes, the speaking speed or the minimum seconds per slide, then preview again. A few minutes of tuning makes a training video feel considered rather than mechanical.
+The easiest way to judge slide timing is to watch the video. Load your deck into the [PowerPoint to video converter](/) and note any slide that feels rushed or slow. Claude Opus 5.5 directs the video, so the pacing of each scene is worked out from your narration and the animation lands with the voice. Adjust the speaker notes or the speaking speed, then watch it again. A little tuning makes a training video feel considered rather than mechanical.

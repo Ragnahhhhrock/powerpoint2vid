@@ -130,4 +130,4 @@ No single type does every job well. Matching type to message is the point.
 
 ## When your message already lives in a deck
 
-For training, teaching, sales and internal updates, the most practical type of explainer is often the one you can make from slides you already have. The [PowerPoint to video converter](/) turns a .pptx into a narrated video in your browser, with your speaker notes read aloud, six video styles from calm to bold, and burned-in captions if you need them. When the content changes, you edit the deck and export again.
+For training, teaching, sales and internal updates, the most practical type of explainer is often the one you can make from slides you already have. The [PowerPoint to video converter](/) turns a .pptx into a narrated explainer, with your speaker notes as the narration and captions if you need them. Claude Opus 5.5 directs the video: it tightens the story and designs each scene as animated motion graphics, so a narrated slide video gets close to the polish of a produced explainer. When the content changes, you edit the deck and export again.

@@ -45,7 +45,7 @@ Here is a speaker-note script for a fictional invoicing app, one paragraph per s
 >
 > **Slide 5:** Start a trial at ledgerly dot com and set up your first reminder in five minutes.
 
-Notice the short sentences. They are written for the ear, not the page, so they read naturally whether you record them yourself or use a text-to-speech voice.
+Notice the short sentences. They are written for the ear, not the page, so they sound natural when read aloud as narration.
 
 ## How long should it be?
 
@@ -80,13 +80,13 @@ One short paragraph per slide, matching the five beats above. Read it aloud once
 
 Use real screenshots, cropped tight to the feature you are describing. A single clear screenshot beats a collage.
 
-### Step 5: Pick a style that matches the brand
+### Step 5: Keep the look on brand
 
-A launch often suits a polished, confident look. In PowerPoint2Vid, the Keynote launch style places each slide as a rounded card on a dark stage with a drifting camera, which suits a product reveal. Minimal cinematic is quieter, with slow push-ins and lower-third captions. Kinetic poster suits a bolder, punchier brand.
+A launch often suits a polished, confident look. Use your brand colours and fonts in the deck so the finished scenes feel like your product, whether your brand is quiet and refined or bold and punchy.
 
 ### Step 6: Add captions
 
-Many people watch launch posts with the sound off. Burned-in captions mean the message still lands.
+Many people watch launch posts with the sound off. Captions mean the message still lands.
 
 ## Where to use your launch video
 
@@ -102,7 +102,7 @@ For more on placement, see [where to put an explainer video on your website](/bl
 
 ## Keep it current after launch
 
-Products change. Screens get redesigned, prices move, features are added. A video filmed with actors and a studio is expensive to update. A video built from slides is not: you edit the slide, update the speaker note and export again.
+Products change. Screens get redesigned, prices move, features are added. A video filmed with actors and a studio is expensive to update. A video built from slides is not: you edit the slide, update the speaker note and create the video again.
 
 Build this into your launch plan:
 
@@ -121,4 +121,4 @@ Build this into your launch plan:
 
 ## From launch deck to launch video
 
-Your launch deck already holds the story. The [PowerPoint to video converter](/) turns it into a narrated, styled video in your browser, reading your speaker notes aloud with a built-in voice and animating each slide. You can preview with voice straight away, and exporting the finished video is part of PowerPoint2Vid Pro, which you can compare on the [pricing page](/pricing). When the product changes, edit the deck and export again.
+Your launch deck already holds the story. The [PowerPoint to video converter](/) turns it into a narrated explainer video, with your speaker notes as the voiceover. Claude Opus 5.5 directs the video: it tightens the story, designs each slide as an animated scene and lands the key points on the word that names them, so a product reveal feels produced rather than presented. Download it as an MP4 with no watermark on Pro, which you can compare on the [pricing page](/pricing). When the product changes, edit the deck and create the video again.

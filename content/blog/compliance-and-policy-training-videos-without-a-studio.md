@@ -18,7 +18,7 @@ Compliance content has a few traits that make slides plus narration a good fit:
 - **The message must be the same for everyone.** A video delivers identical content to every employee, in every location, on every shift.
 - **It changes often.** Laws, thresholds and procedures get revised. Slides are quick to edit.
 - **People watch at different times.** New starters, part-time staff and remote teams can all complete it when it suits them.
-- **It may be sensitive.** Internal policies, incident examples and procedures often shouldn't be uploaded to outside services.
+- **It may be sensitive.** Internal policies, incident examples and procedures may be covered by your organisation's rules on online tools, so check them before you start.
 
 ## The compliance training video playbook
 
@@ -77,13 +77,13 @@ Compliance training must reach everyone, including staff who are deaf or hard of
 - Use strong contrast. WCAG AA guidance of 4.5:1 for normal text is a good target.
 - Don't rely on colour alone. "Do" and "Don't" should be labelled in words, not just green and red.
 
-### Step 7: Choose a calm style
+### Step 7: Keep the slides calm
 
-Compliance isn't a launch party. A restrained style helps the message feel serious and clear. In PowerPoint2Vid, Clean (full-bleed slides with shapes fading up) or Minimal cinematic suit this kind of content. Pick a simple transition such as crossfade.
+Compliance isn't a launch party. A restrained style helps the message feel serious and clear. Keep your slides plain, with one rule per slide and plenty of white space, so the polished animation supports the message rather than competing with it.
 
-### Step 8: Preview, review, export
+### Step 8: Preview, review, share
 
-Preview the video with voice and send it to the policy owner for sign-off before you export. Check every number, deadline and contact name against the policy.
+Watch the video through and send it to the policy owner for sign-off before you share it. Check every number, deadline and contact name against the policy.
 
 ## Updating the video when the policy changes
 
@@ -94,11 +94,11 @@ This is where slide-based video saves the most effort. When a threshold changes:
 3. Export the video again.
 4. Replace the old file in your LMS or intranet and note the new version date.
 
-There is no voice actor to rebook and no footage to reshoot. The text-to-speech voice reads the new wording with the same tone as before, so the updated section doesn't sound out of place.
+There is no voice actor to rebook and no footage to reshoot. The narration is generated from your notes, so the new wording is read in the same voice and pace as before and the updated section doesn't sound out of place.
 
-## Privacy for internal content
+## Check your policy for internal content
 
-Compliance decks often include internal procedures, incident examples or contact details. PowerPoint2Vid runs entirely in the browser. The .pptx is parsed, narrated and recorded on your own device, and the slides are never uploaded. That makes it easier to fit within internal data handling rules.
+Compliance decks often include internal procedures, incident examples or contact details. Before you upload a deck to any online tool, check your organisation's policy on using online tools with internal material, and remove anything you are not permitted to share.
 
 ## What this approach doesn't cover
 
@@ -122,4 +122,4 @@ If you need several people working across a team, email contact@powerpoint2vid.c
 
 ## Build your compliance video from the deck you already have
 
-Your policy deck is most of the way to a compliance training video already. Load it into the [PowerPoint to video converter](/), preview with narration and captions, and export once the policy owner is happy. When the rules change next year, edit the slides and export again.
+Your policy deck is most of the way to a compliance training video already. Load it into the [PowerPoint to video converter](/) and let your notes become the narration, with captions on. Claude Opus 5.5 directs the video: it keeps each rule to one clear scene and times the animation to the narration, so even a dry policy holds attention. Download it once the policy owner is happy. When the rules change next year, edit the slides and create the video again.

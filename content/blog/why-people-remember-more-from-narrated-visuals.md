@@ -95,4 +95,4 @@ The second version uses both channels well. The diagram carries the structure. T
 
 You don't need a studio to apply any of this. A well-designed deck with clear speaker notes already has the two ingredients: visuals and explanation. Converting it into video puts them together in time. For a full walkthrough aimed at lecturers, see [turning lecture slides into course videos](/blog/lecturers-turn-lecture-slides-into-course-videos).
 
-Drop your deck into the [PowerPoint to video converter](/). It reads your speaker notes aloud, can animate shapes in one by one as the narration runs, and can burn in captions sentence by sentence.
+Add your deck to the [PowerPoint to video converter](/) and your speaker notes become the narration. Claude Opus 5.5 directs the video, rebuilding diagrams and charts as animated scenes so each part appears on the word that names it, with captions to support viewers.

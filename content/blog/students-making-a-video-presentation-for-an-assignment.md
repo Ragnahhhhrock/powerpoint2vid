@@ -18,7 +18,7 @@ Before you open PowerPoint, read the assignment brief twice and the marking rubr
 
 - **Time limit.** Is it a maximum, a range, or a hard cut-off? Some markers stop watching at the limit.
 - **Format.** Does the unit accept a WebM file, or does it ask for MP4? Is there a file size limit on the submission portal?
-- **Your face or voice.** Some briefs require you to appear on camera or speak in your own voice. Check this first. If they do, a text-to-speech narrated video will not meet the requirement, and you should plan to record yourself.
+- **Your face or voice.** Some briefs require you to appear on camera or speak in your own voice. Check this first. If they do, a video narrated by a synthetic voice will not meet the requirement, and you should plan to record yourself.
 - **Captions and references.** Does the brief ask for a reference list slide, or captions?
 - **Criteria.** What earns the marks: structure, evidence, analysis, delivery?
 
@@ -34,7 +34,7 @@ Use a simple story structure. It works for almost any topic:
 4. **Evidence.** What supports it?
 5. **Next step or conclusion.** What should the viewer take away?
 
-Now map the structure to your time limit. A rough guide for spoken narration is that one slide with a few sentences of notes takes somewhere between 30 seconds and a minute. For a five-minute limit, plan around eight to ten slides, then adjust once you hear the preview.
+Now map the structure to your time limit. A rough guide for spoken narration is that one slide with a few sentences of notes takes somewhere between 30 seconds and a minute. For a five-minute limit, plan around eight to ten slides, then adjust once you play it back.
 
 ### Sample outline for a five-minute video
 
@@ -84,17 +84,16 @@ The earlier post on [how to write speaker notes that become a great voiceover](/
 
 ## Turn the deck into a video
 
-If your brief allows a narrated slide video, you can turn your .pptx straight into one in the browser.
+If your brief allows a narrated slide video, you can turn your .pptx straight into one.
 
 1. Save your deck as .pptx. If you built it in Google Slides, download it as Microsoft PowerPoint (.pptx). Keynote and Canva decks need exporting to .pptx first.
-2. Drop the file into PowerPoint2Vid. It runs in your browser, so your work is not uploaded.
-3. Choose the narration script. "Speaker notes, else slide text" is the default.
-4. Pick a voice and adjust the speaking speed. Available voices depend on your device and browser.
-5. Set a minimum seconds per slide so title and reference slides stay up long enough to read.
-6. Choose a video style. Clean or Paper & ink suit most academic work.
-7. Turn on burned-in captions if the brief asks for them, or if you want viewers to follow with the sound off.
-8. Preview the whole thing with the voice on and check your time.
-9. Export, keeping the tab in the foreground while it records.
+2. Upload the file to PowerPoint2Vid. Your speaker notes become the narration.
+3. Pick a voice and adjust the speaking speed.
+4. Turn on burned-in captions if the brief asks for them, or if you want viewers to follow with the sound off.
+5. Watch the whole video with the sound on and check your time.
+6. Download the video.
+
+If your course has rules about using online tools with your work, check them before you upload.
 
 If you need to speak in your own voice, PowerPoint's own video export lets you record narration and timings yourself. That is a better fit when the brief requires your voice.
 
@@ -107,10 +106,10 @@ Watch the finished video once from start to finish, with the rubric beside you.
 - Read the brief for time, format and any voice or camera requirement first.
 - Plan with a story structure and one idea per slide.
 - Write notes for the ear; they become the script.
-- Preview with the voice on and check the running time.
+- Watch with the sound on and check the running time.
 - Confirm the file format your portal accepts. WebM converts to MP4 with common tools if needed.
 - Submit early in case the upload is slow.
 
 ## Make your assignment video from your slides
 
-You have already done the hard part when your slides and notes are clear. Open the [PowerPoint to video converter](/), drop in your .pptx and preview your narrated presentation right away. If it suits your assignment, export it and submit with time to spare.
+You have already done the hard part when your slides and notes are clear. Upload your .pptx to the [PowerPoint to video converter](/). Claude Opus 5.5 directs the video: it tightens your argument, designs each slide as an animated scene and times the animation to your narration, so a marker sees a produced presentation, not slides with a voice over. If it suits your assignment, download it and submit with time to spare.

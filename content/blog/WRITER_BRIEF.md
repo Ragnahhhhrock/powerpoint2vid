@@ -40,15 +40,7 @@ Plain, confident, short sentences. Practical and specific; every section should 
 5. Be fair about alternatives (e.g. PowerPoint's own video export exists and records timings/narration you speak yourself). Don't disparage named competitors.
 
 ## Product facts (PowerPoint2Vid)
-- Runs entirely in the browser: the .pptx is parsed, animated, narrated and recorded on the user's device. Slides are never uploaded.
-- Input: PowerPoint .pptx files. Google Slides: download as Microsoft PowerPoint (.pptx) then drop it in (the Google Slides tab gives a download link). Other tools (Keynote, Canva) work by exporting to .pptx first. Old .ppt files need saving as .pptx first.
-- Narration: the browser's built-in text-to-speech voices read the speaker notes. Narration script options: speaker notes, else slide text (default); speaker notes only; slide text only; no narration (silent). Available voices depend on the device and browser. Speaking speed is adjustable.
-- Timing follows the speech; there's a "minimum seconds per slide" setting.
-- Six video styles: Clean (full-bleed, shapes fade up), Minimal cinematic (slow push-in, blur-in reveals, vignette, light grain, lower-third captions), Keynote launch (slide as a rounded card on a dark stage, drifting camera, glass captions), UI springs (warm-grey canvas, springy motion), Kinetic poster (hard cuts, shapes slam in, bold HUD labels), Paper & ink (slide pinned to paper, film grain, hand-drawn underline, typewriter-tape captions).
-- Transitions: crossfade, slide, zoom, none.
-- Options: animate shapes in one by one; burn in captions (sentence-by-sentence, burned into the video — there is no separate caption file export); gentle zoom on images; record narration into the video (in Chrome, choose "this tab" and tick "share tab audio").
-- Preview with voice is open to everyone. Exporting the video needs PowerPoint2Vid Pro: A$12 a month or A$99 a year (about A$8.25 a month). Unlimited slides and videos, no watermark, cancel any time.
-- Export: the browser records in real time (keep the tab in the foreground). Output is usually WebM, or MP4 in browsers that support it. WebM plays in Chrome, Edge, Firefox and most editors and converts to MP4 with common tools.
-- It does NOT do: AI avatars, stock footage, background music, timeline editing, voice cloning, recording your own microphone, direct upload to YouTube/LMS, caption files (SRT/VTT), team accounts (teams can email contact@powerpoint2vid.com).
+Read `content/blog/PRODUCT_CLAIMS.md`. It is the single source of truth for what to say and what not to say about the product. In short: PowerPoint2Vid turns an ordinary deck into a high-impact explainer video, with Claude Opus 5.5 acting as director and motion designer. Input is a .pptx (Google Slides, Keynote and Canva via export to .pptx). Speaker notes become the narration. Output is a downloadable video (MP4, with WebM available), no watermark. Pro is A$12 a month or A$99 a year. Do not make privacy, on-device, no-upload, browser-voice or feature-count claims.
+- It does NOT do: AI avatars, stock footage, voice cloning, recording your own microphone, direct upload to YouTube/LMS, team accounts (teams can email contact@powerpoint2vid.com).
 
 When done, report the list of files you wrote and confirm a case-insensitive grep for "free" returns nothing in them.

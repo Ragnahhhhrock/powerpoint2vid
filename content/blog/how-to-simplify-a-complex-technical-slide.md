@@ -72,7 +72,7 @@ You can do this two ways:
 1. **Duplicate the slide.** Slide A shows the first component, slide B adds the second, slide C adds the third. Each slide gets its own short speaker note.
 2. **Use builds.** Animate shapes in one at a time so each part appears as you talk about it.
 
-Both work well in video. In PowerPoint2Vid, the "animate shapes in one by one" option brings each shape in as the video plays, which gives a similar step-by-step reveal without extra slides.
+Both work well in video. In PowerPoint2Vid, key points are animated in and land on the word that names them, which gives a similar step-by-step reveal without extra slides.
 
 ## Simplify a technical presentation: a before and after example
 
@@ -101,7 +101,7 @@ The notes carry the detail you took off the slide, so write them the way you wou
 - Say numbers the way people say them: "about two seconds", not "1.97 s".
 - Point the viewer to the visual: "Look at the red arrow."
 
-If the deck will become a narrated video, the notes become the script. A text-to-speech voice reads them exactly as written, so a clean note means a clear voiceover. The post on [writing a voiceover script](/blog/writing-a-voiceover-script-pace-pauses-and-plain-words) has more on pace and pauses.
+If the deck will become a narrated video, the notes become the script. The narration follows them closely as written, so a clean note means a clear voiceover. The post on [writing a voiceover script](/blog/writing-a-voiceover-script-pace-pauses-and-plain-words) has more on pace and pauses.
 
 ## Quick checklist
 
@@ -116,4 +116,4 @@ If the deck will become a narrated video, the notes become the script. A text-to
 
 ## From simpler slides to a clearer video
 
-Simple technical slides are easier to follow live, and much easier to follow in a video where nobody can ask you to go back. Once your deck is cleaned up, drop the .pptx into the [PowerPoint to video converter](/) to hear your notes read aloud with each step revealed in turn. It runs in your browser, so internal diagrams and unpublished results never leave your device.
+Simple technical slides are easier to follow live, and much easier to follow in a video where nobody can ask you to go back. Once your deck is cleaned up, upload the .pptx to the [PowerPoint to video converter](/) to hear your notes read aloud with each step revealed in turn. Claude Opus 5.5 directs the video, so a dense architecture diagram is rebuilt as an animated scene that builds one component at a time, timed to your narration. If the deck holds internal diagrams or unpublished results, check your organisation's policy on using online tools before uploading.

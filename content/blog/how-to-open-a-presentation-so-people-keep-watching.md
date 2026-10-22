@@ -115,7 +115,7 @@ When the opening is read by a narrator voice, a few extra habits help:
 - **Keep the first sentence short.** It sets the rhythm.
 - **Avoid tricky words early.** If a name or acronym may be mispronounced, introduce it a little later.
 - **Match words to the screen.** The first spoken line should reflect the first slide's headline.
-- **Don't open with a long silence.** If your first slide has no notes, set a short minimum duration so it doesn't linger.
+- **Don't open with a long silence.** Give the first slide a spoken line in its notes so it never sits there silent.
 
 ## Quick checklist
 
@@ -127,4 +127,4 @@ When the opening is read by a narrator voice, a few extra habits help:
 
 ## Hear your opening before anyone else does
 
-The quickest way to test an opening is to hear it. Write it into the speaker notes, load the deck into the [PowerPoint to video converter](/) and preview it with a narrator voice. If the first twenty seconds don't make you want to keep watching, rewrite the first slide and try again.
+The quickest way to test an opening is to hear it. Write it into the speaker notes, upload the deck to the [PowerPoint to video converter](/) and listen to the result. Claude Opus 5.5 directs the video, so your opening line lands on a designed first scene with the headline timed to the narration. If the first twenty seconds don't make you want to keep watching, rewrite the first slide and try again.

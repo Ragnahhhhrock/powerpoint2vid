@@ -116,4 +116,4 @@ A post that gets views but no conversations hasn't done its job yet.
 
 ## Make the video from your deck first
 
-Before any of this, you need the video. Drop your short deck into the [PowerPoint to video converter](/) and your speaker notes become narration in the browser's built-in voice. Turn on burned-in captions for sound-off viewing, pick a style that suits your brand, and preview the result before exporting. The slides never leave your device, which helps when the deck includes client details you'd rather keep private.
+Before any of this, you need the video. Upload your short deck to the [PowerPoint to video converter](/) and your speaker notes become the narration. Claude Opus 5.5 directs the video, tightening the story and designing each scene so a feed-sized explainer looks produced, with captions burned in for sound-off viewing. Download the MP4 and post it. If the deck includes client details, check your organisation's policy before using any online tool with it.

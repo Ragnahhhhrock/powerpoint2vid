@@ -44,7 +44,7 @@ For narrated videos, the script decides the length. You can estimate it before m
 2. **Read it aloud at a natural pace and time it.** This is the most reliable method.
 3. **Add a little for pauses and transitions** between slides.
 
-Text-to-speech voices let you adjust speaking speed, but resist speeding up to fit a target length. Faster narration is harder to follow. Cut words instead.
+You can adjust the speaking speed, but resist speeding up to fit a target length. Faster narration is harder to follow. Cut words instead.
 
 ## How to cut a script without losing the message
 
@@ -94,7 +94,7 @@ Short is good, but not at the cost of clarity. Your video may be too short if:
 - Steps are skipped or rushed in a how-to.
 - Slides flash past before people can read them.
 
-In slide videos, a minimum time per slide prevents that last problem. Our post on [how long each slide should stay on screen](/blog/how-long-should-each-slide-stay-on-screen-in-a-video) covers slide-level timing in detail.
+In slide videos, giving each slide enough narration prevents that last problem. Our post on [how long each slide should stay on screen](/blog/how-long-should-each-slide-stay-on-screen-in-a-video) covers slide-level timing in detail.
 
 ## A series often beats one long video
 
@@ -110,4 +110,4 @@ When content keeps growing, split it. Three focused two-minute videos are easier
 
 ## Let your script set the pace
 
-With slide-based videos, length follows your words. In the [PowerPoint to video converter](/), timing follows the narration of your speaker notes, with a minimum seconds-per-slide setting so nothing flashes past. Trim the notes, preview the video in your browser with the voice on, and you'll see exactly how long it runs before you export.
+With slide-based videos, length follows your words. In the [PowerPoint to video converter](/), your speaker notes become the narration and the animation is timed to the voice. Claude Opus 5.5 directs the video, tightening the story so a short script still lands as a produced explainer. Trim the notes, watch the result, and you'll see exactly how long it runs before you share it.

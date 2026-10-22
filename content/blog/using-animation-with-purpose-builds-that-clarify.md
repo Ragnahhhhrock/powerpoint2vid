@@ -84,13 +84,13 @@ Each sentence lines up with one step. The other three original bullets moved to 
 
 ## How animation translates to video
 
-When you turn a deck into a video, you're no longer clicking to trigger each build. Timing has to come from somewhere else. In PowerPoint2Vid, the "animate shapes in one by one" option brings shapes in one after another as the narration plays, and the selected video style sets how they move, from the quiet fade-up of Clean to the hard slam-ins of Kinetic poster.
+When you turn a deck into a video, you're no longer clicking to trigger each build. Timing has to come from somewhere else. PowerPoint2Vid redesigns text-heavy slides into animated scenes and times each reveal to the narration, so points arrive as the voice reaches them.
 
 That means the same advice applies, just more strongly:
 
 - **Fewer, well-grouped shapes** give a cleaner reveal. If a slide has dozens of small text boxes, group the ones that belong together in PowerPoint first.
 - **Notes that follow slide order** keep voice and visuals in step.
-- **A matching style** matters. A compliance module suits Clean or Paper & ink. A product teaser can carry Kinetic poster.
+- **A matching tone** matters. A compliance module suits calm, restrained motion. A product teaser can carry bolder movement.
 
 For more on matching motion to slide changes, see [slide transitions that work in video (and ones that don't)](/blog/slide-transitions-that-work-in-video-and-ones-that-dont).
 
@@ -105,4 +105,4 @@ For more on matching motion to slide changes, see [slide transitions that work i
 
 ## From builds to video
 
-Purposeful builds make a live session easier to follow, and they make a video even better. Once your deck reveals one idea at a time, load it into the [PowerPoint to video converter](/), turn on "animate shapes in one by one", and preview with narration to check every point arrives just as the voice reaches it.
+Purposeful builds make a live session easier to follow, and they make a video even better. Once your deck reveals one idea at a time, bring it to the [PowerPoint to video converter](/). Claude Opus 5.5 directs the video: it designs each slide as an animated scene and times every build to your narration, so each training point lands just as the voice reaches it. Watch the result once to check the order matches your notes.

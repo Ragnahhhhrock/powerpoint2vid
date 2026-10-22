@@ -21,7 +21,7 @@ Moving that standard content into video helps in a few ways:
 - **Consistency.** Every new hire hears the same information, explained the same way.
 - **Timing.** People can start before the next scheduled session, or rewatch a section later.
 - **Time back for trainers.** Live sessions can focus on questions, introductions and discussion.
-- **Easy updates.** When a policy changes, you edit the slide and notes, then export again.
+- **Easy updates.** When a policy changes, you edit the slide and notes, then create the video again.
 
 ## Step 1: Audit your existing decks
 
@@ -63,31 +63,30 @@ Keep sentences short. Spell out acronyms the first time, because a new starter w
 
 ## Step 4: Convert the deck into an onboarding video from PowerPoint
 
-Open PowerPoint2Vid in your browser and drop in the .pptx. The file is processed on your own device, and slides are never uploaded. That matters for internal content like policies, systems screenshots and organisational information.
+Drop the .pptx into PowerPoint2Vid. Onboarding decks often hold policies, systems screenshots and organisational information, so check your organisation's policy on using online tools before you upload them.
 
 Then set it up:
 
-- **Narration.** Use speaker notes as the script. The voice comes from your browser's built-in text-to-speech voices, so the options depend on your device and browser. Pick one that sounds clear and set a comfortable speaking speed.
-- **Style.** For onboarding, Clean or UI springs tend to feel friendly and professional. Keep the same style across the whole series.
-- **Transitions.** Crossfade or slide work well and don't distract.
-- **Captions.** Turn on burned-in captions. They help people watching without sound and those reading in a second language.
-- **Minimum seconds per slide.** Set this so short slides don't rush past.
+- **Narration.** Your speaker notes become the script. Choose a voice that sounds clear and set a comfortable speaking speed.
+- **Story and design.** The deck is upgraded, not just recorded: the story is tightened and each slide becomes an animated scene. Keep the same look across the whole series.
+- **Captions.** They help people watching without sound and those reading in a second language.
+- **Pacing.** Make sure short slides have enough in the notes that they don't rush past.
 
-Preview with the voice before exporting. Listen for product names, internal acronyms or place names the voice mispronounces, and respell them in the notes so they sound right.
+Listen for product names, internal acronyms or place names the voice mispronounces, and respell them in the notes so they sound right.
 
-## Step 5: Export and share
+## Step 5: Download and share
 
-Exporting records the video in real time in your browser, so keep the tab in the foreground until it finishes. In Chrome, choose "this tab" and tick "share tab audio" to record the narration into the file. The output is usually WebM, or MP4 where the browser supports it.
+Download the finished video as an MP4, with WebM available.
 
-Then upload the videos to wherever new hires already look: your LMS, intranet or HR platform. Add each video to the onboarding checklist with a short description of what it covers.
+Then add the videos to wherever new hires already look: your LMS, intranet or HR platform. Add each video to the onboarding checklist with a short description of what it covers.
 
 ## Step 6: Keep the videos current
 
 The biggest advantage of slide-based video is how easy it is to update. When a policy changes:
 
 1. Edit the relevant slide and its speaker notes.
-2. Reload the deck and preview the changed section.
-3. Export again and replace the old file.
+2. Convert the updated deck and check the changed section.
+3. Download the new video and replace the old file.
 
 No re-recording. No booking voice talent. No re-shooting. Set a review date for each video, perhaps every six months, and assign an owner.
 
@@ -108,12 +107,12 @@ No re-recording. No booking voice talent. No re-shooting. Set a review date for 
 - Headlines rewritten to make a point
 - Speaker notes written as spoken explanations
 - Acronyms spelled out and checked for pronunciation
-- Same style and voice across the series
-- Captions turned on
+- Same voice and look across the series
+- Captions included
 - Owner and review date set for each video
 
 ## Turning onboarding decks into videos
 
-You already have the content. With clear speaker notes and a consistent style, a stack of onboarding decks becomes a tidy video series new hires can watch on their first day. For the core process, see [how to convert PowerPoint to video](/blog/how-to-convert-powerpoint-to-video-the-complete-guide), and for help picking a voice, read [choosing a narrator voice and speaking speed](/blog/choosing-a-narrator-voice-and-speaking-speed).
+You already have the content. With clear speaker notes, a stack of onboarding decks becomes a tidy video series new hires can watch on their first day. For the core process, see [how to convert PowerPoint to video](/blog/how-to-convert-powerpoint-to-video-the-complete-guide), and for help picking a voice, read [choosing a narrator voice and speaking speed](/blog/choosing-a-narrator-voice-and-speaking-speed).
 
-Drop your first deck into the [PowerPoint to video converter](/) and preview it with narration. When you're ready to export the whole series, see [pricing](/pricing) for Pro.
+Drop your first deck into the [PowerPoint to video converter](/). Claude Opus 5.5 directs each video: it tightens the story for a new starter, designs the scenes and times the animation to your narration, so a policy deck lands like a produced welcome rather than a recorded slideshow. When you're ready to do the whole series, see [pricing](/pricing) for Pro.

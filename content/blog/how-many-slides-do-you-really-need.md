@@ -99,7 +99,7 @@ In a narrated video, slide count matters a little differently. Viewers cannot as
 - Enough slides that the screen changes as the story moves.
 - Not so many that slides flash past before they can read the headline.
 
-When you turn a deck into a video with PowerPoint2Vid, timing follows the narration. A slide stays on screen while its speaker notes are read, and the "minimum seconds per slide" setting keeps short slides up long enough to read. So the length of your notes, more than the slide count, shapes the final running time.
+When you turn a deck into a video with PowerPoint2Vid, timing follows the narration. A slide stays on screen while its speaker notes are read, and the animation is timed to the voice. So the length of your notes, more than the slide count, shapes the final running time.
 
 That makes the method above useful for video too: one idea per slide, a short note for each, and the timing takes care of itself. For a deeper look, see [how long each slide should stay on screen in a video](/blog/how-long-should-each-slide-stay-on-screen-in-a-video) and [the one idea per slide rule](/blog/the-one-idea-per-slide-rule-and-when-to-break-it).
 
@@ -113,4 +113,4 @@ That makes the method above useful for video too: one idea per slide, a short no
 
 ## From the right number of slides to a video
 
-Once each slide carries one idea, the deck is easy to turn into a clear, well-paced video. Load your .pptx into the [PowerPoint to video converter](/) and preview it with narration to hear how the pacing feels. Adjust a note or a minimum time, and preview again until it flows.
+Once each slide carries one idea, the deck is easy to turn into a clear, well-paced video. Load your .pptx into the [PowerPoint to video converter](/) and watch how the pacing feels. Claude Opus 5.5 directs the video: it tightens the story, designs each slide as an animated scene and times it to your narration, so a lean deck plays like a produced explainer. Adjust a note and watch again until it flows.

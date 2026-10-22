@@ -80,15 +80,15 @@ The second version is warmer, simpler and easier to follow by ear.
 - **Large text and strong contrast.** Body text 24pt or larger, and contrast that meets WCAG guidance.
 - **A single, specific call to action.** One link, one ask.
 
-## Choosing a style and voice
+## Choosing a tone and voice
 
-For most nonprofit content, a calm style works well. Minimal cinematic suits serious, reflective stories. Paper & ink has a warm, handmade feel that suits community and education content. Clean is a safe choice for volunteer inductions and board briefings.
+For most nonprofit content, a calm tone works well. Serious, reflective stories suit restraint. Community and education content suits warmth. Volunteer inductions and board briefings suit a plain, clear approach.
 
-Try a few of the voices available in your browser, and adjust the speaking speed. A slightly slower pace gives emotional moments room to land. Turn on burned-in captions so the message comes through even with the sound off.
+Choose a voice and adjust the speaking speed. A slightly slower pace gives emotional moments room to land. Captions help the message come through even with the sound off.
 
-## Respect privacy
+## Handle sensitive material with care
 
-Nonprofit decks often include sensitive material: client stories, donor information, internal financials. PowerPoint2Vid runs entirely in your browser, so slides are never uploaded. It's still worth checking the deck before you export. Remove anything you wouldn't want shared publicly, since the finished video can travel anywhere.
+Nonprofit decks often include sensitive material: client stories, donor information, internal financials. Check your organisation's policy on using online tools before you upload a deck. Also remove anything you wouldn't want shared publicly, since the finished video can travel anywhere.
 
 ## Key takeaways
 
@@ -100,4 +100,4 @@ Nonprofit decks often include sensitive material: client stories, donor informat
 
 ## Turn your nonprofit presentation into a video
 
-Start with the deck you already use for talks or grant meetings. Tighten it, rewrite the notes for listening, and load it into the [PowerPoint to video converter](/). Preview it with narration and captions, and share the finished video wherever your supporters are. For more ideas on getting more from one deck, see [one deck, many videos](/blog/one-deck-many-videos-repurposing-your-presentations).
+Start with the deck you already use for talks or grant meetings. Tighten it, rewrite the notes for listening, and load it into the [PowerPoint to video converter](/). Claude Opus 5.5 directs the video: it sharpens the story, designs each scene and times the animation to your narration, so a modest grant-meeting deck lands like a produced appeal. Share the finished video wherever your supporters are. For more ideas on getting more from one deck, see [one deck, many videos](/blog/one-deck-many-videos-repurposing-your-presentations).

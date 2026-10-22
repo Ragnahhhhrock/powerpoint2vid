@@ -90,12 +90,7 @@ The transition into this slide can be a simple crossfade. The builds do the real
 
 ## How PowerPoint2Vid handles transitions
 
-PowerPoint2Vid applies its own transition between slides when it renders the video. You can choose from crossfade, slide, zoom or none. It also offers:
-
-- **Animate shapes in one by one**, which reveals elements on each slide in order.
-- **Six video styles** with their own motion, such as the slow push-in of Minimal cinematic, the springy motion of UI springs, or the hard cuts and slam-in shapes of Kinetic poster.
-
-Choose a transition that suits the style. Kinetic poster pairs naturally with hard cuts. Clean and Paper & ink suit a crossfade. For more on matching styles to content, see [how to choose a video style for your slide deck](/blog/how-to-choose-a-video-style-for-your-slide-deck).
+PowerPoint2Vid chooses the transitions for you, so you do not have to set one on every slide. It picks them to suit the content, adds polished motion within each scene and times the animation to the narration, so key points land on the word that names them. The principles above still apply if you are judging the result: calm for teaching, more energy for a promo. For more on matching the look to your content, see [how to choose a video style for your slide deck](/blog/how-to-choose-a-video-style-for-your-slide-deck).
 
 ## Quick checklist
 
@@ -103,9 +98,9 @@ Choose a transition that suits the style. Kinetic poster pairs naturally with ha
 - Section dividers mark big changes in content.
 - No 3D flips, particle effects or flashing.
 - Builds used to reveal content as the narration reaches it.
-- Transition style matches the overall video style.
+- Transition style matches the tone of the content.
 - Previewed at full length to check the rhythm.
 
 ## Try your transitions before you export
 
-Transitions are easiest to judge by watching. Load your deck into the [PowerPoint to video converter](/), try crossfade, slide, zoom and none, and preview each with narration. Pick the one that disappears into the story, and keep it for the whole video.
+Transitions are easiest to judge by watching. Upload your deck to the [PowerPoint to video converter](/) and see how it plays. Claude Opus 5.5 directs the video, choosing transitions that suit the story and timing each one to your narration, so the changes between slides help the viewer instead of distracting them.

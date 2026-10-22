@@ -72,7 +72,7 @@ Captions help viewers who are deaf or hard of hearing, people watching without s
 - Check that names, technical terms and acronyms are written in your notes the way you want them to appear.
 - Keep sentences short so each caption fits comfortably on screen.
 
-A note on formats: some platforms prefer a separate caption file (such as SRT or VTT) that viewers can switch on and off. Burned-in captions are part of the picture, so they're always visible and can't be restyled. Know what your LMS or institution expects. If a separate caption file is required, you may need to create one with another tool or your platform's captioning feature. For more on the why and how, see [captions on presentation videos](/blog/captions-on-presentation-videos-why-and-how).
+A note on formats: some platforms prefer a separate caption file (such as SRT or VTT) that viewers can switch on and off. Captions built into the picture are always visible but can't be switched off or restyled. Know what your LMS or institution expects. If a separate caption file is required, you may need to create one with your platform's captioning feature or another tool. For more on the why and how, see [captions on presentation videos](/blog/captions-on-presentation-videos-why-and-how).
 
 ## Pacing and motion
 
@@ -122,4 +122,4 @@ Use this as a final pass before you publish.
 
 ## Make your accessible slides into an accessible video
 
-Once your deck passes the checklist, turning it into a video is the easy part. The [PowerPoint to video converter](/) reads your speaker notes aloud using your browser's built-in voices, lets you adjust the speaking speed, and can burn in sentence-by-sentence captions. You can set a minimum seconds per slide, choose a calm style such as Clean with a crossfade transition, and preview everything with voice before you export. Your slides are processed in your browser and never uploaded, which suits course material you'd rather keep on your own device.
+Once your deck passes the checklist, turning it into a video is the easy part. The [PowerPoint to video converter](/) turns your speaker notes into the narration, lets you choose a voice and speaking speed, and adds captions. Claude Opus 5.5 directs the video: it tightens the story, designs each scene and times the animation to the narration, so key points land on the word that names them and learners can follow along. Watch the finished video once with the checklist above, then download the MP4. If the course material is sensitive, check your organisation's policy on using online tools with it first.

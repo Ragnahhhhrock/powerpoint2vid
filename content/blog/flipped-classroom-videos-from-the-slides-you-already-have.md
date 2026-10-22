@@ -55,7 +55,7 @@ Lecture slides are often built for a live room, where you can point and expand. 
 
 ## Write speaker notes students can follow
 
-In PowerPoint2Vid, the speaker notes become the narration, read by your browser's built-in text-to-speech voices. Write them for the ear.
+In PowerPoint2Vid, the speaker notes become the narration, read aloud as the narration. Write them for the ear.
 
 Here is an example for a slide titled "Demand falls when price rises":
 
@@ -80,14 +80,13 @@ That last line matters. It tells students why they are watching and what they wi
 ## Build the video
 
 1. Save your slides as .pptx. If you use Google Slides, download the deck as a Microsoft PowerPoint file first. Old .ppt files need saving as .pptx.
-2. Drop the file into PowerPoint2Vid.
-3. Choose the narration script. Speaker notes, falling back to slide text, is the default.
-4. Pick a style. Clean suits most teaching content. Paper & ink gives a warmer, hand-made feel.
-5. Turn on burned-in captions.
-6. Turn on "animate shapes in one by one" if you want points to appear as the narration reaches them.
-7. Preview with the voice, then export.
+2. Add the file to PowerPoint2Vid.
+3. Check your speaker notes. They become the narration.
+4. Choose a voice and speaking speed, and a look and feel. Clean and calm suits most teaching content; something warmer can suit humanities topics.
+5. Include captions.
+6. Review the video, then download it as an MP4 (WebM is also available).
 
-The export records in real time, so keep the tab in the foreground while it runs. The file is usually WebM, or MP4 in browsers that support it.
+Opus-directed scenes help here: key points land on the word that names them, so students can follow along without hunting the slide.
 
 ## Put the videos where students will find them
 
@@ -108,10 +107,10 @@ Tell students how long the videos are in total. "Twelve minutes of video before 
 - Trim slide text and move explanations into the notes
 - Write notes for the ear, with a link to class time
 - Check font size and contrast
-- Turn on burned-in captions
+- Include captions
 - Upload to the LMS beside the related activity
 - Tell students the total viewing time
 
 ## Start with one week
 
-You do not need to flip a whole course at once. Pick one week, take the slides you already have, and make two or three short videos. Drop the first deck into the [PowerPoint to video converter](/), preview it with narration, and see how it sounds. Your slides never leave your device, which keeps unpublished course material private. When the content changes next year, edit the notes and export again.
+You do not need to flip a whole course at once. Pick one week, take the slides you already have, and make two or three short videos. Drop the first deck into the [PowerPoint to video converter](/) and see how it sounds. Claude Opus 5.5 directs the video: it tightens the story, redesigns each slide as an animated scene and times the animation to your narration, so a lecture deck lands like a produced explainer. If the material is unpublished, check your institution's policy on using online tools before uploading. When the content changes next year, edit the notes and export again.

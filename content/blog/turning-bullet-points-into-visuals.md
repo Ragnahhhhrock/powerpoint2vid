@@ -104,9 +104,11 @@ Even then, keep it short. Three to five items, no full sentences, and text large
 Visual slides get better when narrated. Each part of a process or comparison can appear as the voice reaches it.
 
 - Write speaker notes that describe the visual in order, left to right or top to bottom.
-- Use the "animate shapes in one by one" option so parts of a diagram arrive in sequence.
-- Keep labels short so burned-in captions have room at the bottom of the frame.
-- Preview with voice and check each reveal lines up with the narration.
+- Build diagrams so their parts can arrive in sequence, one step or box at a time.
+- Keep labels short so captions have room at the bottom of the frame.
+- Watch the video and check each reveal lines up with the narration.
+
+If a slide is still text-heavy, PowerPoint2Vid redesigns it as an animated scene and times each reveal to the narration, but a clear slide to start with always gives a better result.
 
 ## Quick checklist
 
@@ -118,4 +120,4 @@ Visual slides get better when narrated. Each part of a process or comparison can
 
 ## From visual slides to a narrated video
 
-Once your bullets have become visuals, your deck is ready to explain itself. Drop the .pptx into the [PowerPoint to video converter](/), let the speaker notes carry the detail, and watch each visual build as the narration plays.
+Once your bullets have become visuals, your deck is ready to explain itself. Bring the .pptx to the [PowerPoint to video converter](/) and let the speaker notes carry the detail. Claude Opus 5.5 directs the video: it reads the whole deck, turns each process, comparison and chart into an animated scene, and lands every reveal on the word that names it.

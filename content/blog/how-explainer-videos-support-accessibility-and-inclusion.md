@@ -60,7 +60,7 @@ Add a label, an icon or a pattern alongside colour. "Above target" in text next 
 
 ### Keep motion gentle
 
-Choose calmer motion for content that needs focus. Clean and Minimal cinematic use gentle fades and slow camera movement. Avoid rapid flashing in any images or recordings you include.
+Choose a calm look and feel for content that needs focus, with gentle fades and slow movement. Avoid rapid flashing in any images or recordings you include.
 
 ### Use plain language
 
@@ -68,7 +68,7 @@ Short sentences. Common words. Explain terms the first time. Plain language help
 
 ### Give people time
 
-Let each slide stay on screen long enough to read. Narration timing helps, and the minimum seconds per slide setting gives text-heavy slides extra time. A slightly slower speaking speed can help with dense content.
+Let each slide stay on screen long enough to read. Narration timing helps, and text-heavy slides should get extra narration time. A slightly slower speaking speed can help with dense content.
 
 ## A quick example: one slide, made inclusive
 
@@ -104,4 +104,4 @@ Accessibility is about choice. The video is one good option among several.
 
 ## Make your next deck an accessible explainer video
 
-If your slides already follow these steps, you are most of the way there. Write descriptive speaker notes, check contrast and text size, then drop the deck into the [PowerPoint to video converter](/). Turn on burned-in captions, choose a calm style, and preview with narration before you export. Your slides stay on your own device the whole time.
+If your slides already follow these steps, you are most of the way there. Write descriptive speaker notes, check contrast and text size, then drop the deck into the [PowerPoint to video converter](/). Include burned-in captions, ask for a calm look and feel, and watch the result before you share it. Claude Opus 5.5 directs the video: it tightens the story and times gentle animation to your narration, so key points land on the word that names them and viewers can follow by ear and by eye. If the content is sensitive, check your organisation's policy on using online tools before uploading.

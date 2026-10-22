@@ -29,7 +29,7 @@ There are practical benefits too:
 
 - **Async by default.** People watch when it suits them. No calendar wrangling.
 - **Accessible.** Captions help people who are deaf or hard of hearing, people reading in a second language, and anyone watching in an open-plan office with the sound off.
-- **Easy to update.** When the policy changes, edit the slide and export again. No reshoot.
+- **Easy to update.** When the policy changes, edit the slide and create the video again. No reshoot.
 - **No camera needed.** Plenty of good communicators would rather not appear on video. Slides and a clear voice do the job.
 
 ## Email, meeting or video?
@@ -88,9 +88,9 @@ Short sentences. Dates said the way people say them. One action at the end.
 
 If you're producing internal training as well as updates, our post on [compliance and policy training videos](/blog/compliance-and-policy-training-videos-without-a-studio) covers that side in more depth.
 
-## Privacy matters for internal content
+## Check your policy for internal content
 
-Internal decks often contain information that shouldn't leave the organisation: unreleased changes, internal figures, staff details. Before you use any online tool, check where your file goes. Some services upload your slides to their servers for processing. Your IT or privacy team may have rules about that.
+Internal decks often contain sensitive information: unreleased changes, internal figures, staff details. Before you use any online tool, check your organisation's policy on using online tools with that kind of content.
 
 ## Key takeaways
 
@@ -102,4 +102,4 @@ Internal decks often contain information that shouldn't leave the organisation: 
 
 ## Make your next internal update from the deck you already have
 
-Most internal updates already exist as slides. Drop the .pptx into the [PowerPoint to video converter](/) and your speaker notes become narration in the browser's built-in voice, with captions burned in if you want them. Everything runs in your browser, so the slides are never uploaded, which suits internal content. When the process changes, edit the deck and export a new version.
+Most internal updates already exist as slides. Drop the .pptx into the [PowerPoint to video converter](/) and your speaker notes become narration, with captions. Claude Opus 5.5 directs the video: it tightens the message, designs each scene and times the animation to the voice, so a routine update lands like a produced briefing. When the process changes, edit the deck and create a new version.

@@ -81,7 +81,7 @@ When slides become a video, colour faces a couple of extra tests.
 
 - **Compression.** Video compression can make subtle gradients band and fine colour differences blur. Solid, distinct colours hold up better.
 - **Small screens.** On a phone, two similar shades may look identical. Make differences obvious.
-- **Style overlays.** Some video styles add a vignette, film grain or a dark stage around the slide. Preview your palette in the style you plan to use.
+- **Added effects.** Animation, transitions and captions put extra elements over your slides. Preview your palette in the finished video, not just in the deck.
 
 ## A before and after
 
@@ -104,10 +104,10 @@ The palette shrank from seven colours to three, and the slide now says exactly o
 - Text contrast checked against WCAG (4.5:1 for normal text)
 - Colour never used as the only way to carry meaning
 - Palette set in the slide master or theme
-- Previewed on a phone and in your chosen video style
+- Previewed on a phone and in the finished video
 
 ## Making your palette work in a slide video
 
 A tight palette is one of the things that makes a slide video look deliberate rather than thrown together. It also helps the viewer follow the narration, because the accent shows them where to look at each moment.
 
-Once your colours are set, drop the deck into the [PowerPoint to video converter](/) and preview it in a couple of the six video styles. Clean keeps your colours front and centre. Keynote launch places the slide on a dark stage, which can make a bright accent stand out. Pick the one that suits your brand.
+Once your colours are set, drop the deck into the [PowerPoint to video converter](/) and see how your colours hold up in motion. Claude Opus 5.5 directs the video, rebuilding charts as animated charts with the same numbers and bringing your accent in on the word that names it, so the colour roles you chose do real work on screen.

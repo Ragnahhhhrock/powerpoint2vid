@@ -103,7 +103,7 @@ When a deck becomes a video, a few more things matter.
 - **Captions.** Burned-in captions help viewers who are deaf or hard of hearing, those watching without sound, and people reading in a second language. Keep the slide itself light on text so captions don't compete with it.
 - **Narration that describes the visual.** Viewers with low vision benefit when the voice explains what a chart or diagram shows, not just "as you can see here".
 - **Readable at small sizes.** Video is often watched in a small window. Larger text and stronger contrast hold up better.
-- **Steady pacing.** Set a minimum time per slide so nothing flashes past.
+- **Steady pacing.** Choose a speaking speed that lets every slide be read before it changes.
 
 There's more on captions in [captions on presentation videos](/blog/captions-on-presentation-videos-why-and-how).
 
@@ -131,4 +131,4 @@ A viewer who can't see the chart clearly still gets the whole point.
 
 Every fix in this guide makes a slide video easier to follow: stronger contrast survives compression, bigger text reads on phones, and narration that describes visuals helps everyone. For more on how voice and visuals work together, see [why people remember more from narrated visuals](/blog/why-people-remember-more-from-narrated-visuals).
 
-When your deck is ready, drop it into the [PowerPoint to video converter](/). Turn on burned-in captions, set a minimum time per slide, and preview the result at a small window size to check everything stays readable.
+When your deck is ready, drop it into the [PowerPoint to video converter](/). Turn on burned-in captions and choose a steady speaking speed. Claude Opus 5.5 directs the video, designing each scene and timing the animation to the narration, so your accessible slides arrive as a clear, well-paced explainer. Watch the result at a small window size to check everything stays readable.

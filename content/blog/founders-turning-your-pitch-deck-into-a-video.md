@@ -2,7 +2,7 @@
 title: Founders: Turning Your Pitch Deck into a Video
 slug: founders-turning-your-pitch-deck-into-a-video
 date: 2026-12-30
-description: A founder's playbook for making a pitch deck video: tighten the story, script your notes, choose a style and share a narrated deck investors will watch.
+description: A founder's playbook for making a pitch deck video: tighten the story, script your notes, set the look and share a narrated deck investors will watch.
 keyword: pitch deck video
 pillar: playbook
 persona: marketer
@@ -45,7 +45,7 @@ Move detail into the speaker notes or an appendix you share separately.
 
 ## Step 2: Write the script in your speaker notes
 
-Your speaker notes become the narration, read by a text-to-speech voice. Write each note as two to four short spoken sentences.
+Your speaker notes become the narration, read aloud as the narration. Write each note as two to four short spoken sentences.
 
 Sample notes for three slides:
 
@@ -64,27 +64,27 @@ Tips for founder scripts:
 
 ## Step 3: Choose a look that fits your brand
 
-PowerPoint2Vid offers six video styles. For pitch decks, three tend to suit:
+Pick a direction that matches your brand and audience.
 
-| Style | Feel | Good for |
+| Direction | Feel | Good for |
 |---|---|---|
-| Keynote launch | Slide as a rounded card on a dark stage, drifting camera, glass captions | Product and tech startups wanting a polished launch feel |
-| Minimal cinematic | Slow push-in, blur-in reveals, vignette, lower-third captions | Calm, premium brands |
-| UI springs | Warm-grey canvas, springy motion | Software and app products |
+| Polished and modern | Sleek, confident, product-led | Product and tech startups wanting a launch feel |
+| Calm and premium | Slow, understated, spacious | Considered, high-end brands |
+| Bold and energetic | Punchy, fast-moving | A short teaser or consumer brand |
 
-Kinetic poster suits a bold, punchy teaser. Clean and Paper & ink work too, depending on your brand. The [guide to choosing a video style](/blog/how-to-choose-a-video-style-for-your-slide-deck) covers all six.
+The [guide to choosing a video style](/blog/how-to-choose-a-video-style-for-your-slide-deck) covers how to match the look and feel to your audience.
 
-Turn on "animate shapes in one by one" so each point appears as it is narrated, and burned-in captions so the video still works with the sound off.
+Include captions so the video still works with the sound off.
 
 ## Step 4: Preview, refine and export
 
 1. Drop your .pptx into PowerPoint2Vid. If your deck is in Google Slides, download it as .pptx first; Keynote and Canva decks need exporting to .pptx.
 2. Choose a voice and speaking speed. Pick one that sounds clear and confident at a moderate pace.
-3. Set a minimum seconds per slide so dense slides like the market or team slide stay up long enough.
-4. Preview from start to finish. Fix any mispronounced product names by rewriting them phonetically in the notes.
-5. Export, keeping the tab in the foreground. In Chrome, choose "this tab" and tick "share tab audio" to include narration.
+3. Make sure dense slides like the market or team slide get enough narration to stay up long enough.
+4. Watch it from start to finish. Fix any mispronounced product names by rewriting them phonetically in the notes.
+5. Download the video.
 
-Your slides are processed in your browser and never uploaded. That matters when the deck contains unreleased financials or product plans.
+If the deck contains unreleased financials or product plans, check your organisation's policy on using online tools before uploading.
 
 ## Step 5: Share it where it gets watched
 
@@ -93,7 +93,7 @@ Your slides are processed in your browser and never uploaded. That matters when 
 - **Your website.** A short version can sit on an "investors" or "about" page.
 - **After meetings.** Send it as a recap so the partner can share it internally.
 
-The output is usually WebM, or MP4 in browsers that support it. If a form requires MP4, convert the WebM with a common tool. For more on async pitching, see [sales teams: send a narrated pitch deck, not a cold PDF](/blog/sales-teams-send-a-narrated-pitch-deck-not-a-cold-pdf).
+The video downloads as an MP4, with WebM also available, so it suits most forms. For more on async pitching, see [sales teams: send a narrated pitch deck, not a cold PDF](/blog/sales-teams-send-a-narrated-pitch-deck-not-a-cold-pdf).
 
 ## Quick checklist
 
@@ -101,11 +101,11 @@ The output is usually WebM, or MP4 in browsers that support it. If a form requir
 - Headlines that make a point
 - Notes written as short spoken sentences
 - Product and company names checked for pronunciation
-- Style chosen to match your brand
+- Look and feel chosen to match your brand
 - Captions burned in for silent viewing
 - Full preview watched with sound on
 - File format checked for where you will share it
 
 ## Turn your pitch deck into a video today
 
-You already have the deck. Load it into the [PowerPoint to video converter](/), preview it with narration straight away, and refine the notes until the story lands. Exporting needs PowerPoint2Vid Pro, at A$12 a month or A$99 a year, with no watermark and the option to cancel any time.
+You already have the deck. Load it into the [PowerPoint to video converter](/), refine the notes until the story lands. Claude Opus 5.5 directs the video: it tightens your story, designs each slide as an animated scene and times the animation to your narration, so the traction and ask land the way they would in the room. Exporting needs PowerPoint2Vid Pro, at A$12 a month or A$99 a year, with no watermark and the option to cancel any time.

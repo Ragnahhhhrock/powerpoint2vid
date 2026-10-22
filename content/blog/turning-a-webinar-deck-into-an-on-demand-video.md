@@ -92,10 +92,10 @@ For more detail, read [how long should an explainer video be?](/blog/how-long-sh
 
 When you convert, a few settings matter for webinar content:
 
-- **Narration script:** "speaker notes only" keeps the voice on your rewritten script rather than reading slide text aloud.
-- **Captions:** burn them in. Many people watch on-demand content with the sound off at first.
-- **Minimum seconds per slide:** set this so title and section slides with no notes still stay on screen long enough to read.
-- **Style:** Clean or Minimal cinematic suit most business webinars. Kinetic poster works for a punchy social cut.
+- **Narration:** your speaker notes become the voice, so the rewritten script is what viewers hear. Choose a voice and speaking speed that suit your audience.
+- **Captions:** keep them on. Many people watch on-demand content with the sound off at first.
+- **Pacing:** make sure title and section slides with little or no narration still stay on screen long enough to read.
+- **Tone:** a calm, clean look suits most business webinars. A punchier, faster cut works for social.
 
 ## Step 6: Give it a home and a next step
 
@@ -109,10 +109,10 @@ Then publish it where people already look. That might be the webinar registratio
 - Every headline states a takeaway
 - Speaker notes rewritten for the ear, with no live-event references
 - Top questions answered on their own slides
-- Captions on, minimum slide time set
+- Captions on, pacing checked on slides with little narration
 - One clear call to action on the final slide
 - Video placed where registrants and new visitors will find it
 
 ## Turn your webinar slides into video
 
-You already have the hard part: a deck with a tested story and real audience questions. Load the trimmed .pptx into the [PowerPoint to video converter](/), preview it with narration, and adjust the notes until the pacing feels right. Everything runs in your browser, so your slides stay on your device. When you're happy with the preview, export the finished video with Pro and give your webinar a second life.
+You already have the hard part: a deck with a tested story and real audience questions. Bring the trimmed .pptx to the [PowerPoint to video converter](/). Claude Opus 5.5 directs the video: it tightens the story, turns plain webinar slides into animated scenes and times the animation to your narration, so the on-demand cut feels produced rather than recycled. Watch it through, adjust the notes until the pacing feels right, then download the MP4 and give your webinar a second life. If the webinar covered client or internal material, check your organisation's policy on using online tools first.

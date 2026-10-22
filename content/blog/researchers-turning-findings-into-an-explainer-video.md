@@ -72,7 +72,7 @@ Keep body text large enough to read on a phone screen, which means 24pt or large
 
 ## Step 5: Write speaker notes for a curious non-expert
 
-The narration comes from your speaker notes, read aloud by the browser's built-in text-to-speech voice. Write for someone smart who isn't in your field.
+The narration comes from your speaker notes, read aloud by a narrator voice. Write for someone smart who isn't in your field.
 
 - Replace jargon with plain words, or explain it once
 - Say numbers the way people say them
@@ -83,14 +83,14 @@ Here's a sample note for the proof slide:
 
 > We measured street surface temperatures across a range of suburbs during summer, and compared them with how much tree canopy each street had. The pattern was clear. Streets with more trees were cooler, and the difference was large enough to notice when you're walking outside.
 
-If a technical term sounds odd in the preview, spell it the way it should be said in the notes, or rephrase it.
+If a technical term sounds odd when you play it back, spell it the way it should be said in the notes, or rephrase it.
 
-## Step 6: Choose a style and add captions
+## Step 6: Choose a look and add captions
 
-Two styles tend to suit research content:
+Two looks tend to suit research content:
 
-- **Minimal cinematic:** calm, considered motion with lower-third captions. Good for serious topics.
-- **Paper & ink:** a handmade, notebook feel. Good for teaching and public-facing explainers.
+- **Calm and cinematic:** considered motion with lower-third captions. Good for serious topics.
+- **Handmade and notebook-like:** good for teaching and public-facing explainers.
 
 Turn on burned-in captions. They help viewers who are deaf or hard of hearing, people reading in a second language and anyone watching with the sound off. Captions are part of the video image, so they travel wherever the file goes.
 
@@ -113,9 +113,9 @@ In every description, include the full citation and a link to the paper.
 - Methods reduced to one slide
 - One chart, one message, direct labels
 - Notes in plain spoken language
-- Captions on, sensible style chosen
+- Captions on, sensible look chosen
 - Citation and paper link in every description
 
 ## Make your research explainer video from the slides you have
 
-Your conference deck is most of the way there. Trim it, rewrite the notes, and load the .pptx into the [PowerPoint to video converter](/). It runs in your browser, so unpublished results stay on your device. Preview with the narrator, adjust the wording until it sounds right, and export a video that explains your work to everyone who wasn't in the room.
+Your conference deck is most of the way there. Trim it, rewrite the notes, and load the .pptx into the [PowerPoint to video converter](/). Claude Opus 5.5 directs the video: it tightens the story, rebuilds your key chart as an animated chart with the same numbers and times each scene to your narration, so a conference deck lands like a produced explainer. Download the video and share it with everyone who wasn't in the room. If your work is unpublished, check your organisation's or publisher's policy before using any online tool with it.

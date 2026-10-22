@@ -10,15 +10,13 @@ persona: all
 
 The voice is the first thing viewers judge in a narrated video. A good text to speech narrator voice disappears into the background and lets the content do the talking. A poor match, or a speed that's slightly off, makes even good slides harder to follow. This post covers how to choose a voice, set the speed and write a script that sounds natural.
 
-## Where text-to-speech voices come from
+## Your speaker notes become the narration
 
-Most browsers and operating systems include built-in text-to-speech voices. The selection depends on your device, operating system and browser. A voice you see on a Windows laptop in Edge may not appear on a Mac in Safari or on a Chromebook.
+In PowerPoint2Vid, your speaker notes are the script. Whatever you write in the notes is what the narrator says, and you can choose a voice and a speaking speed for the whole video. That means:
 
-PowerPoint2Vid uses these built-in browser voices to read your speaker notes. That means:
-
-- **Your voice list depends on your device.** Two colleagues may see different options.
-- **Export on the machine with the voice you like.** If you switch computers, the narration may sound different.
-- **Some browsers offer more natural-sounding voices than others.** It's worth comparing the same script in two browsers if you have them.
+- **The script is yours to control.** Change a note and the narration changes with it.
+- **Voice and speed are separate choices.** You can keep the voice you like and still slow it down for dense slides.
+- **Preview before you commit.** The same script can feel quite different in two voices, so it's worth comparing them.
 
 ## How to choose a text to speech narrator voice
 
@@ -32,7 +30,7 @@ Think about who's listening.
 
 ### Match the accent where you can
 
-If your audience is mostly in one region, a voice with a familiar accent can feel more natural. Many devices include English voices for several regions, such as Australia, the UK and the US. Check pronunciation of local place names and terms.
+If your audience is mostly in one region, a voice with a familiar accent can feel more natural. Where English voices for several regions are on offer, such as Australia, the UK and the US, pick the one that suits your listeners. Check pronunciation of local place names and terms.
 
 ### Test with your own script
 
@@ -72,7 +70,7 @@ In PowerPoint2Vid, timing follows the speech, so each slide stays up as long as 
 
 ## Write for the voice, not the page
 
-Text-to-speech reads exactly what you write. A few habits make any voice sound better.
+A synthetic narrator reads exactly what you write. A few habits make any voice sound better.
 
 - **Short sentences.** They give the voice natural places to pause.
 - **Spoken numbers.** "About two thousand" sounds better than "approx. 2,000".
@@ -94,14 +92,14 @@ For captions on narrated videos, see [Captions on Presentation Videos: Why and H
 
 ## Quick checklist
 
-- Shortlist two or three voices available on your device
+- Shortlist two or three voices
 - Test each with a real paragraph from your notes
 - Check names, numbers and acronyms
 - Set the speed for the content and audience
 - Rewrite notes in short, spoken sentences
 - Set a minimum time per slide for quiet slides
-- Export on the device with the voice you chose
+- Use the same voice and speed across a series of videos
 
 ## Hear your deck in the PowerPoint to video converter
 
-The fastest way to choose a voice is to hear it read your own slides. Open the [PowerPoint to video converter](/), drop in your deck and preview it with a few voices and speeds. Preview is open to everyone, so you can settle on the right sound before you export.
+The fastest way to choose a voice is to hear it read your own slides. Open the [PowerPoint to video converter](/), drop in your deck and try a few voices and speeds. Claude Opus 5.5 directs the video around your narration, timing each animated scene to the voice so key points land on the word that names them. Settle on the right sound, then download the finished video.

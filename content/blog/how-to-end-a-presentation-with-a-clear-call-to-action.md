@@ -98,9 +98,9 @@ Notice what it does. It says "next step" so the listener knows the close has arr
 
 A live presenter can repeat the ask and point at the screen. A video can't, so build that into the deck:
 
-- Keep the call-to-action slide on screen long enough to read twice. If your converter has a minimum time per slide setting, set it so the last slide doesn't rush.
+- Keep the call-to-action slide on screen long enough to read twice. Write enough in the speaker notes that the narration doesn't rush the last slide.
 - Put the action in the slide headline, not only in the narration. Many people watch with the sound off.
-- Burn in captions so the spoken ask is also on screen.
+- Use captions so the spoken ask is also on screen.
 - Repeat the action in the text around the video, such as the email, page or post where you share it.
 
 ## Quick checklist
@@ -114,4 +114,4 @@ A live presenter can repeat the ask and point at the screen. A video can't, so b
 
 ## Turn your closing slide into a video that asks for the next step
 
-Once your ending is clear, a narrated video can deliver it to every prospect, client or student, every time, word for word. Drop your .pptx into the [PowerPoint to video converter](/), keep your call to action in the speaker notes, and the browser's built-in voice will read it over your closing slide. Turn on burned-in captions so the ask lands even with the sound off, then preview the result before you share it.
+Once your ending is clear, a narrated video can deliver it to every prospect, client or student, every time, word for word. Upload your .pptx to the [PowerPoint to video converter](/) and keep your call to action in the speaker notes. Claude Opus 5.5 directs the video: it designs the closing scene so the ask is the last thing on screen and times the animation to your narration, and captions help the ask land even with the sound off. Watch the finished video before you share it.

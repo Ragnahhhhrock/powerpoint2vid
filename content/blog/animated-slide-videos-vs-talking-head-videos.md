@@ -60,7 +60,7 @@ Some assignments and applications require you to appear on camera. If that is th
 
 A talking-head video needs a reasonably quiet room, decent light (a window in front of you helps), a steady camera at eye level and a microphone. Then you need to deliver the content well, which often takes several takes. Editing follows: trimming mistakes, adding slides or titles.
 
-An animated slide video starts with the deck you probably already have. The main work is in the speaker notes, which become the script. With a tool like PowerPoint2Vid, the browser's built-in text-to-speech voice reads those notes, the slides animate in one of six styles, and the video records in real time in your browser. If the narration needs to change, you change the note.
+An animated slide video starts with the deck you probably already have. The main work is in the speaker notes, which become the script. With a tool like PowerPoint2Vid, those notes become the narration in a voice and speed you choose, and the slides are redesigned as animated scenes. If the narration needs to change, you change the note.
 
 Here is what one slide might look like in each format.
 
@@ -97,4 +97,4 @@ If you answered "visual", "often" and "nobody in particular", a slide video is p
 
 ## Make a slide video from the deck you already have
 
-If a slide video fits your message, you are most of the way there already. Drop your .pptx into the [PowerPoint to video converter](/), choose a style and preview it with narration in your browser. When it is right, export it with Pro, from A$12 a month on the [pricing page](/pricing).
+If a slide video fits your message, you are most of the way there already. Drop your .pptx into the [PowerPoint to video converter](/), and let your notes become the narration. Claude Opus 5.5 directs the video, tightening the story and turning each slide into an animated scene, so the slide format has the polish that usually takes a talking-head shoot. Download the MP4 with no watermark on Pro, from A$12 a month on the [pricing page](/pricing).

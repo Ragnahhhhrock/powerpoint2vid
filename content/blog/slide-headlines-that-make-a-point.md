@@ -117,4 +117,4 @@ That gives viewers the point twice: once on screen, once in their ears. For more
 
 ## Let your headlines carry the video
 
-A deck with headlines that make a point is ready to explain itself, in a meeting, in an inbox or as a video. Open the [PowerPoint to video converter](/), add your deck and preview it with narration from your notes. Your prospect gets the argument even if they never open the attachment.
+A deck with headlines that make a point is ready to explain itself, in a meeting, in an inbox or as a video. Upload your deck to the [PowerPoint to video converter](/) and your notes become the narration. Claude Opus 5.5 directs the video, so each headline lands on screen as it is spoken and the argument comes through even if your prospect never opens the attachment.

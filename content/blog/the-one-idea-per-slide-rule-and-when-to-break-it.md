@@ -93,7 +93,7 @@ A five-step process is one idea if the point is the process as a whole. Show it 
 
 Builds let you show several items without overwhelming people. Reveal one point at a time, as you talk about it. The slide still ends up with several elements, but the audience meets them one by one.
 
-In video, this works well. PowerPoint2Vid's "animate shapes in one by one" option brings each shape in turn, which keeps a fuller slide from appearing all at once.
+In video, this works well. PowerPoint2Vid animates each scene so elements arrive as the narration names them, which keeps a fuller slide from appearing all at once.
 
 ## Quick checklist
 
@@ -113,4 +113,4 @@ In video, this works well. PowerPoint2Vid's "animate shapes in one by one" optio
 
 ## From tidy slides to a clear video
 
-A deck built on one idea per slide is already most of the way to a good video. Each slide becomes a clean scene with its own narration. When yours is ready, drop it into the [PowerPoint to video converter](/) and preview it with a voice. For the whole process, read [How to Convert PowerPoint to Video: The Complete Guide](/blog/how-to-convert-powerpoint-to-video-the-complete-guide).
+A deck built on one idea per slide is already most of the way to a good video. Each slide becomes a clean scene with its own narration. When yours is ready, upload it to the [PowerPoint to video converter](/). Claude Opus 5.5 directs the video, giving each single-idea slide its own animated scene timed to the narration, so every point gets a moment of its own. For the whole process, read [How to Convert PowerPoint to Video: The Complete Guide](/blog/how-to-convert-powerpoint-to-video-the-complete-guide).

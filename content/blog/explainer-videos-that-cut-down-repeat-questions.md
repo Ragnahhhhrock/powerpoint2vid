@@ -101,9 +101,9 @@ The fastest way to create new questions is an out-of-date video. Build upkeep in
 
 - Keep the source deck in a shared folder with a clear name.
 - Note the date and product version on the last slide.
-- When the product changes, update the screenshot and the note, then export again.
+- When the product changes, update the screenshot and the note, then create the video again.
 
-Because the narration comes from your notes, a change does not need anyone to re-record their voice. Edit the words, export the video, replace the link.
+Because the narration comes from your notes, a change does not need anyone to re-record their voice. Edit the words, create the video again, replace the link.
 
 ## How to tell if it's working
 
@@ -120,8 +120,8 @@ You don't need a dashboard to see a change. Keep it simple:
 - One question per video, a handful of slides, short notes written for the ear.
 - One step per slide, with the key button or field highlighted.
 - Place each video where the question usually starts.
-- Update the deck and re-export when the process changes.
+- Update the deck and recreate the video when the process changes.
 
 ## Turn your answers into videos from the slides you have
 
-Most teams already have the raw material: training decks, onboarding slides, screenshots in old emails. Drop a .pptx into the [PowerPoint to video converter](/) and your speaker notes are read aloud by your browser's built-in voices, with timing that follows the speech. You can preview with voice straight away, and the deck is processed on your device rather than uploaded. When you're ready to export, Pro is A$12 a month or A$99 a year, with unlimited videos and no watermark. Pick your top five questions this week, and let the videos handle the next round.
+Most teams already have the raw material: training decks, onboarding slides, screenshots in old emails. Drop a .pptx into the [PowerPoint to video converter](/) and your speaker notes become the narration. Claude Opus 5.5 directs the video: it designs each step as an animated scene and times the highlight to the words, so the button you mention is the one that lights up. Pro is A$12 a month or A$99 a year, with no watermark. Pick your top five questions this week, and let the videos handle the next round.

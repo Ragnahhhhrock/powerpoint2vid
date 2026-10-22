@@ -99,7 +99,7 @@ It takes an hour for a big deck. It saves that hour on every future update.
 
 When decks become narrated videos, consistency matters even more. Viewers notice when fonts jump or titles shift position between slides, because each slide fills the whole screen.
 
-A clean master also helps converters read your slides properly. Text in real placeholders and shapes is easier to animate and narrate than text flattened into images. And for trainers who update content often, a master means the cycle is simple: change the deck, export a new video, replace the old one. Our post on [employee onboarding videos](/blog/employee-onboarding-videos-from-your-existing-powerpoint) walks through that cycle.
+A clean master also helps converters read your slides properly. Text in real placeholders and shapes is easier to work with than text flattened into images. And for trainers who update content often, a master means the cycle is simple: change the deck, export a new video, replace the old one. Our post on [employee onboarding videos](/blog/employee-onboarding-videos-from-your-existing-powerpoint) walks through that cycle.
 
 ## Quick checklist
 
@@ -112,4 +112,4 @@ A clean master also helps converters read your slides properly. Text in real pla
 
 ## From tidy template to training video
 
-Once your decks are built on a solid master, turning them into training videos is quick. Drop the .pptx into the [PowerPoint to video converter](/), and your speaker notes become narration in the browser's built-in voice, with shapes animating in one by one if you choose. The deck is processed in your browser, so internal training content never gets uploaded. When the policy changes, update the slide and export again.
+Once your decks are built on a solid master, they are ready to become training videos. Upload the .pptx to the [PowerPoint to video converter](/) and your speaker notes become the narration. Claude Opus 5.5 directs the video, tightening the lesson flow and designing each step as an animated scene, so a consistent training deck lands like a produced explainer. When the policy changes, update the slide and download a fresh video. If the content is internal, check your organisation's policy on using online tools first.

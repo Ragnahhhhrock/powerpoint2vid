@@ -100,8 +100,8 @@ If you already have a deck on the topic, you have most of an explainer.
 1. **Trim the deck** to the slides that answer one question.
 2. **Give each slide one idea** and a headline that states it.
 3. **Write the narration** in the speaker notes, in short spoken sentences.
-4. **Convert it** with a tool that reads the notes aloud and animates the slides.
-5. **Preview, adjust and export.**
+4. **Convert it** with a tool that narrates the notes and animates the slides.
+5. **Preview, adjust and download.**
 
 For the step-by-step process, see [How to Convert PowerPoint to Video: The Complete Guide](/blog/how-to-convert-powerpoint-to-video-the-complete-guide). If captions are on your list, [Captions on Presentation Videos: Why and How](/blog/captions-on-presentation-videos-why-and-how) covers your options.
 
@@ -114,4 +114,4 @@ For the step-by-step process, see [How to Convert PowerPoint to Video: The Compl
 
 ## Turn your deck into an explainer
 
-If the explanation already lives in a slide deck, you don't need to start from scratch. Open the [PowerPoint to video converter](/), add your .pptx and preview it with narration from your speaker notes. Your slides stay on your device the whole time.
+If the explanation already lives in a slide deck, you don't need to start from scratch. Open the [PowerPoint to video converter](/), add your .pptx and your speaker notes become the narration. Claude Opus 5.5 directs the video, tightening the story and turning each slide into an animated scene, so a plain explanation lands like a produced explainer. If the deck covers anything sensitive, check your organisation's policy on using online tools before you upload it.

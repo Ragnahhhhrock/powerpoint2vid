@@ -63,7 +63,7 @@ Use only figures you can stand behind. If a number is still being finalised, say
 
 ## Step 3: Write the script in your own voice
 
-The narration comes from your speaker notes, read aloud by a text-to-speech voice. That means the words still need to sound like you, even if the voice isn't.
+The narration comes from your speaker notes, read aloud by a synthetic voice. That means the words still need to sound like you, even if the voice isn't.
 
 - Write the way you speak to your team
 - Short sentences, plain words
@@ -87,9 +87,9 @@ Some updates are hard: restructures, budget cuts, leadership changes. A video ca
 
 ## Step 5: Choose a style, voice and captions
 
-For all-hands content, Clean is a sensible default. It's straightforward and keeps attention on the message. Minimal cinematic works well for an annual vision or strategy update.
+For all-hands content, keep the look straightforward so attention stays on the message. A calmer, more cinematic feel suits an annual vision or strategy update.
 
-Test a few of the voices available in your browser and pick one that sounds clear and steady. Turn on burned-in captions: many staff will watch on their phones in noisy break rooms or with the sound off.
+Choose a voice and speaking speed that sounds clear and steady. Turn on captions: many staff will watch on their phones in noisy break rooms or with the sound off.
 
 ## Step 6: Share it where people will see it
 
@@ -102,9 +102,9 @@ Decide how staff will find the video:
 
 Pair it with a way to respond: a question form, a channel or the next live Q&A session. For more on internal video, see [explainer videos for internal communication](/blog/explainer-videos-for-internal-communication).
 
-## Keep it private
+## Check your policy first
 
-All-hands decks often include confidential results and plans. PowerPoint2Vid runs entirely in your browser, so the slides are never uploaded. Once exported, share the video through your usual internal channels with the right access settings.
+All-hands decks often include confidential results and plans. Before you upload a deck to any online tool, check your organisation's policy on using online tools for this kind of content. Once the video is ready, share it through your usual internal channels with the right access settings.
 
 ## Quick checklist
 
@@ -118,4 +118,4 @@ All-hands decks often include confidential results and plans. PowerPoint2Vid run
 
 ## Make your next all-hands a video
 
-Take the deck you'd normally present, trim it, rewrite the notes, and load it into the [PowerPoint to video converter](/). Preview the narration and timing, then export with Pro. See [pricing](/pricing) for plan details. Teams wanting to set this up across a business can email contact@powerpoint2vid.com.
+Take the deck you'd normally present, trim it, rewrite the notes, and load it into the [PowerPoint to video converter](/). Claude Opus 5.5 directs the video: it tightens the story, designs each scene and times the animation to your narration, so a quarterly update lands like a produced announcement rather than recorded slides. See [pricing](/pricing) for plan details. Teams wanting to set this up across a business can email contact@powerpoint2vid.com.

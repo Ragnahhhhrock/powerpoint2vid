@@ -61,16 +61,11 @@ Here is a sample script for a proof slide:
 
 > "Here's a team that looked a lot like yours. They were chasing renewals across three spreadsheets. After they moved to one shared view, their account managers stopped asking each other who owned what. That's the change we'd expect for you too."
 
-Read it aloud once. If you trip over a phrase, the text-to-speech voice probably will too.
+Read it aloud once. If you trip over a phrase, the narrator probably will too.
 
-### 4. Choose a style that suits your brand
+### 4. Make the deck look like your brand
 
-PowerPoint2Vid has six video styles. For sales, two tend to fit well:
-
-- **Clean** keeps your slides full-bleed with shapes fading up. It looks like your deck, just moving.
-- **Keynote launch** puts each slide on a rounded card on a dark stage with a slow drifting camera. It feels like a product announcement.
-
-Pick one, preview it with the voice, and adjust the speaking speed until it sounds natural.
+The video is built from your slides, so your brand comes through in them. Check that your logo, colours and fonts are consistent, and that each slide makes one point. PowerPoint2Vid takes care of the animated scenes and transitions. Then choose a voice and adjust the speaking speed until it sounds natural.
 
 ### 5. Turn on captions
 
@@ -98,11 +93,11 @@ This is async selling at its best. If you want the wider case for it, read [Asyn
 
 ## What a narrated deck will not do
 
-Be honest about the limits. A slide video is not a live demo, and it does not replace your relationship with the buyer. PowerPoint2Vid narrates with your browser's built-in voices rather than your own, so the video sounds polished and consistent but not personal. If a deal depends on your face and voice, record a short personal intro separately and send both. If you prefer to narrate yourself, PowerPoint's own video export can record your voice and timings as you present.
+Be honest about the limits. A slide video is not a live demo, and it does not replace your relationship with the buyer. PowerPoint2Vid narrates with a chosen voice rather than your own, so the video sounds polished and consistent but not personal. If a deal depends on your face and voice, record a short personal intro separately and send both. If you prefer to narrate yourself, PowerPoint's own video export can record your voice and timings as you present.
 
-## Keep your deck private
+## Check your policy first
 
-Sales decks often hold pricing, customer names and roadmap details. PowerPoint2Vid runs entirely in your browser. The .pptx is parsed, animated, narrated and recorded on your own device, and your slides are never uploaded. That makes it a sensible choice for confidential material.
+Sales decks often hold pricing, customer names and roadmap details. Before you use any online tool with client or commercial material, check your organisation's policy on what can be shared with it.
 
 ## Quick checklist
 
@@ -111,10 +106,10 @@ Sales decks often hold pricing, customer names and roadmap details. PowerPoint2V
 - End on one clear next step
 - Write headlines that make a claim
 - Write speaker notes as a spoken script
-- Preview with the voice and adjust speaking speed
+- Choose a voice and adjust speaking speed
 - Turn on burned-in captions for silent viewing
 - Send with a short email that states the length and the ask
 
 ## Turn your next sales deck into a video
 
-You already have the slides and you already know the pitch. Put the pitch into the speaker notes, drop the .pptx into the [PowerPoint to video converter](/), and preview it with narration before you decide on anything. Exporting the finished video needs Pro, and the plans are on the [pricing page](/pricing). Your next follow-up can be a narrated video pitch deck instead of a PDF that nobody opens.
+You already have the slides and you already know the pitch. Put the pitch into the speaker notes and upload the .pptx to the [PowerPoint to video converter](/). Claude Opus 5.5 directs the video: it tightens your story, designs each scene around the point of the slide and times the animation to your narration, so a prospect gets a produced pitch, not slides with a voice over. Pro starts at A$12 a month, and the plans are on the [pricing page](/pricing). Your next follow-up can be a narrated video pitch deck instead of a PDF that nobody opens.

@@ -16,7 +16,7 @@ This guide walks through preparing the file, uploading it and writing the detail
 
 ### Check the format
 
-YouTube accepts a wide range of video formats, including MP4 and WebM. If your tool exports WebM, you can usually upload it as is. If you need MP4 for other platforms, common conversion tools can handle it.
+YouTube accepts a wide range of video formats, including MP4 and WebM. An MP4 file uploads as is, and it is the safest choice if you will reuse the video on other platforms too.
 
 ### Watch it once, all the way through
 
@@ -112,7 +112,7 @@ YouTube lets you pick an auto-generated frame or upload a custom image, dependin
 
 ## Captions on YouTube
 
-If your video has burned-in captions, they're part of the picture and always visible. YouTube also offers its own automatic captions, which viewers can turn on or off. If you have burned-in captions, you may want to check YouTube's auto captions don't double up awkwardly for your viewers.
+If your video has captions built into the picture, they're always visible. YouTube also offers its own automatic captions, which viewers can turn on or off. In that case, check that YouTube's auto captions don't double up awkwardly for your viewers.
 
 ## Quick checklist
 
@@ -125,4 +125,4 @@ If your video has burned-in captions, they're part of the picture and always vis
 
 ## Make the video first
 
-All of this starts with a presentation video worth watching. Load your deck into the [PowerPoint to video converter](/), choose a style and turn on captions, then export the video from your browser. Your slide headlines and speaker notes give you the chapters and description, ready for YouTube.
+All of this starts with a presentation video worth watching. Bring your deck to the [PowerPoint to video converter](/) and download the finished MP4. Claude Opus 5.5 directs the video: it tightens the story, designs each scene and times the animation to your narration, so the video holds viewers long enough to benefit from your chapters. Your slide headlines and speaker notes give you the chapters and description, ready for YouTube.

@@ -88,9 +88,9 @@ Finish with exactly what you need from the viewer. "We'd like a decision on opti
 
 A client video should feel calm and professional.
 
-- **Style:** Clean or Minimal cinematic usually suit consulting work. Save bolder looks for marketing content.
+- **Look:** Keep the source slides restrained and professional. The video builds on them, so calm slides give a calm result.
 - **Transitions:** Crossfade or none. Nothing that distracts from the findings.
-- **Voice:** Try a few of the voices available on your device and pick one that sounds measured. Adjust the speaking speed so it doesn't feel rushed.
+- **Voice:** Try a few voices and pick one that sounds measured. Adjust the speaking speed so it doesn't feel rushed.
 - **Captions:** Turn them on. Executives often watch with the sound off.
 - **Branding:** Use your firm's slide master so the video matches the report.
 
@@ -100,7 +100,7 @@ Client reports often contain sensitive information. Before you make any video, c
 
 Practical points:
 
-- Use a tool that doesn't upload your slides to a third-party server. PowerPoint2Vid processes the deck in your browser, so the slides stay on your device. For more, see [why converting slides in your browser matters](/blog/private-by-design-why-converting-slides-in-your-browser-matters).
+- Check your firm's policy and the client's terms on using online tools before you upload any part of the report, and leave out anything you are not permitted to share.
 - Share the finished video through the same secure channel you use for the report, such as the client's document portal or your firm's file-sharing system.
 - Mark the title slide with the client name, date and a confidentiality note.
 
@@ -130,4 +130,4 @@ A sample email line:
 
 ## Turn your findings deck into a summary video
 
-You already did the hard work in the analysis. Turning the summary into a video should take an afternoon, not a production budget. Drop your summary deck into the [PowerPoint to video converter](/), let your speaker notes become the narration, preview it in your browser, and export a video your client can watch before the next meeting.
+You already did the hard work in the analysis. Turning the summary into a video should take an afternoon, not a production budget. Drop your summary deck into the [PowerPoint to video converter](/), and let your speaker notes become the narration. Claude Opus 5.5 directs the video: it tightens the story, rebuilds your charts as animated charts with the same numbers and times the animation to your voiceover, so findings land like a produced briefing. Download a video your client can watch before the next meeting.

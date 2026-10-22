@@ -114,7 +114,7 @@ A full chart shown all at once invites the eye to wander. Building it up keeps a
 - Add the comparison group.
 - Then add the highlighted bar or line.
 
-You can duplicate a slide and add one element on each copy, or use animation so shapes appear one at a time. In a video, PowerPoint2Vid's "animate shapes in one by one" option reveals each shape in turn as the narration plays.
+You can duplicate a slide and add one element on each copy, or use animation so shapes appear one at a time. In a video, PowerPoint2Vid rebuilds your charts as animated charts with the same numbers, so each part is revealed as the narration reaches it.
 
 ## Be honest with the data
 
@@ -138,4 +138,4 @@ A sceptical buyer or manager will look for these. Getting ahead of them strength
 
 ## Share the story as a narrated video
 
-A data story works even better when the client can watch it without you in the room. Drop your .pptx into the [PowerPoint to video converter](/) and your speaker notes become the narration, with each chart revealed as it is explained. Your figures stay on your device, because the slides are processed in your browser and never uploaded.
+A data story works even better when the client can watch it without you in the room. Upload your .pptx to the [PowerPoint to video converter](/) and your speaker notes become the narration. Claude Opus 5.5 directs the video: it sharpens the story arc, designs each scene and times the animation to your voice, so the insight lands on the word that names it. If your figures are commercially sensitive, check your organisation's policy on online tools first.

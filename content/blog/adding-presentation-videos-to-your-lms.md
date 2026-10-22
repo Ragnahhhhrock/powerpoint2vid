@@ -26,9 +26,9 @@ Shorter videos usually work better in an LMS. If your lecture deck runs to 60 sl
 
 ## Choose a format your presentation video LMS setup can play
 
-Most browser-based recorders, including ours, produce WebM, or MP4 in browsers that support it. WebM plays in Chrome, Edge and Firefox, and most video editors open it.
+PowerPoint2Vid exports an MP4 video file, with WebM available as an alternative. MP4 plays in nearly every LMS player and institutional video platform, and most video editors open it.
 
-Some LMS players and institutional video platforms prefer MP4. If yours does, convert the WebM file to MP4 with a common tool before uploading. Check your LMS help pages for accepted formats and file size limits, as these vary between institutions.
+If your platform prefers a different format, convert the file with a common tool before uploading. Check your LMS help pages for accepted formats and file size limits, as these vary between institutions.
 
 A few habits save trouble later:
 
@@ -98,7 +98,7 @@ For a broader view of the lecture-to-video workflow, see [Lecturers: Turn Lectur
 
 - Split long lectures into short, single-topic videos.
 - Check your LMS or video platform for accepted formats and size limits.
-- Convert WebM to MP4 if your platform needs it.
+- Export MP4, and convert the file if your platform needs another format.
 - Decide between direct upload and embedding from a video platform.
 - Burn in captions, and check whether your institution also needs caption files.
 - Publish the speaker notes as a transcript.
@@ -107,4 +107,4 @@ For a broader view of the lecture-to-video workflow, see [Lecturers: Turn Lectur
 
 ## From lecture slides to an LMS-ready video
 
-The work in this guide is mostly about placement and access. The video itself can come straight from the deck you already teach with. Drop your .pptx into the [PowerPoint to video converter](/), let your speaker notes become the narration, switch on captions and preview it with voice. Your slides stay on your device the whole time, which matters when course material is still in draft.
+The work in this guide is mostly about placement and access. The video itself can come straight from the deck you already teach with. Drop your .pptx into the [PowerPoint to video converter](/), let your speaker notes become the narration, choose a voice and speaking speed, and switch on captions. Claude Opus 5.5 directs the video: it tightens the story, designs each scene and times the animation to the narration, so a lecture lands like a produced explainer rather than recorded slides. If your course material is still in draft, check your institution's policy on using online tools first.

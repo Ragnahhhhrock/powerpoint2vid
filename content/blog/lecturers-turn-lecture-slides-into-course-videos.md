@@ -64,25 +64,24 @@ If your notes are a few dot points, they'll need rewriting. Write what you'd act
 **After:**
 "Osmosis is the movement of water across a membrane. Water moves from where it's more concentrated to where it's less concentrated. The membrane lets water through but blocks larger molecules. Here's an example. Put a plant cell in salty water and water leaves the cell. The cell shrinks."
 
-Short sentences work better for text-to-speech voices and for captions. Write technical terms out in full, and check how the voice pronounces them in the preview.
+Short sentences work better for synthetic voices and for captions. Write technical terms out in full, and listen to how the voice pronounces them before you share the video.
 
 ## Step 5: Convert and preview
 
 With PowerPoint2Vid, the steps are:
 
 1. Save the deck as .pptx. If it's in Google Slides, download it as Microsoft PowerPoint (.pptx).
-2. Drop it into the converter. The file is processed in your browser and isn't uploaded, which helps if your slides include unpublished material.
-3. Choose "speaker notes only" or the default "speaker notes, else slide text".
+2. Drop it into the converter. If your slides include unpublished material, check your institution's policy on using online tools first.
+3. Make sure your speaker notes hold the narration you want.
 4. Pick a voice and speaking speed. A slightly slower speed suits dense material.
-5. Choose a style. Clean or Paper & ink suit most teaching content.
-6. Turn on burned-in captions and "animate shapes in one by one" if you want points to appear as they're explained.
-7. Preview the whole video with sound.
+5. Turn on captions.
+6. Watch the whole video with sound.
 
 For the full process, see [How to Convert PowerPoint to Video: The Complete Guide](/blog/how-to-convert-powerpoint-to-video-the-complete-guide).
 
 ## Step 6: Add the videos to your LMS
 
-PowerPoint2Vid exports a video file, usually WebM, or MP4 in browsers that support it. It doesn't upload directly to Moodle, Canvas, Blackboard or other platforms, so you'll download the file and add it to your course yourself, or through your institution's video platform.
+PowerPoint2Vid gives you a video file to download, as MP4 with WebM available. It doesn't upload directly to Moodle, Canvas, Blackboard or other platforms, so you'll download the file and add it to your course yourself, or through your institution's video platform.
 
 Some tips:
 
@@ -107,4 +106,4 @@ Keep the .pptx alongside the video. When something changes, edit the slide or no
 
 ## Start with one lecture and the PowerPoint to video converter
 
-You don't need a studio or a microphone. You need one deck and an hour. Open the [PowerPoint to video converter](/), drop in your lecture slides and preview them with narration from your notes. When you're ready to export a semester's worth, [Pro](/pricing) covers unlimited videos.
+You don't need a studio or a microphone. You need one deck and an hour. Open the [PowerPoint to video converter](/), and drop in your lecture slides. Claude Opus 5.5 directs the video: it tightens the story, designs each scene and times the animation to your narration, so a lecture deck lands like a produced explainer. For a semester's worth, see [Pro](/pricing).

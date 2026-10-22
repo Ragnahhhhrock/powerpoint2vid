@@ -91,8 +91,8 @@ The chart shows the point. The narration explains why it matters and what happen
 When a deck becomes a narrated video, a few extra habits help.
 
 - **Size up.** Labels and values should be readable on a laptop or phone. Aim for the same 24pt minimum you use for body text where you can.
-- **Give it time.** A chart needs a little longer on screen than a headline slide. Write enough narration to cover it, or raise the minimum seconds per slide.
-- **Build it up.** If your chart is made from separate shapes, animating shapes in one by one can reveal the context first and the highlight last. A chart inserted as a single image will appear as one piece.
+- **Give it time.** A chart needs a little longer on screen than a headline slide. Write enough narration in the speaker notes to cover it.
+- **Build it up.** In the video, your charts are rebuilt as animated charts with the same numbers, so the context can appear first and the highlight last, landing as the narration names it.
 - **Say the number the way people say it.** Write "about half" or "forty thousand" in the notes, not "49.7%" or "40,000".
 - **Check contrast.** Grey bars on a grey background disappear. Use a light grey on a white background, or similar.
 
@@ -109,4 +109,4 @@ When a deck becomes a narrated video, a few extra habits help.
 
 ## Turn your data slides into a clear video
 
-A clean chart and a spoken explanation make a strong pair. The chart shows the evidence; the narration tells people what it means. When your charts pass the five-second test, add the explanation to the speaker notes and drop the deck into the [PowerPoint to video converter](/). Preview it with narration and check that each chart stays on screen long enough to read.
+A clean chart and a spoken explanation make a strong pair. The chart shows the evidence; the narration tells people what it means. When your charts pass the five-second test, add the explanation to the speaker notes and drop the deck into the [PowerPoint to video converter](/). Claude Opus 5.5 directs the video: it reads the whole deck, rebuilds each chart as an animated scene and times the reveal to your narration, so the highlighted bar lands on the word that names it. Then check that each chart stays on screen long enough to read.

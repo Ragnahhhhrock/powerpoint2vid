@@ -2,7 +2,7 @@
 title: How to Convert PowerPoint to Video: The Complete Guide
 slug: how-to-convert-powerpoint-to-video-the-complete-guide
 date: 2026-10-22
-description: Learn how to convert PowerPoint to video step by step: prepare your deck, add narration from speaker notes, choose a style, add captions and export.
+description: Learn how to convert PowerPoint to video step by step: prepare your deck, write narration in the speaker notes, pick a voice, then download the MP4.
 keyword: convert powerpoint to video
 pillar: convert
 persona: all
@@ -38,13 +38,13 @@ You can present the deck in slideshow mode and record your screen and microphone
 
 ### 3. A dedicated converter
 
-A converter takes the .pptx file and builds the video for you. PowerPoint2Vid, for example, reads your speaker notes aloud with a text-to-speech voice, animates the slides in a chosen style and records the result. You don't need to record your own voice, and when the deck changes you simply export again.
+A converter takes the .pptx file and builds the video for you. The best ones do more than record your slides. PowerPoint2Vid, for example, uses your speaker notes as the narration and upgrades the deck itself: Claude Opus 5.5 acts as director and motion designer, turning each slide into an animated scene. You don't need to record your own voice, and when the deck changes you simply make the video again.
 
 | Method | Narration | Updating later | Best for |
 |---|---|---|---|
 | PowerPoint export | You record your own voice | Re-record changed slides | Presenters happy to speak on mic |
 | Screen recording | You record live | Record again | Quick one-off walkthroughs |
-| Dedicated converter | Text-to-speech from notes | Edit notes, export again | Repeatable videos and decks that change |
+| Dedicated converter | Generated from your notes | Edit notes, convert again | Polished videos and decks that change |
 
 ## Before you start: get the deck ready for video
 
@@ -55,11 +55,11 @@ A deck built to be presented live often needs a little tidying before it works a
 - **Bigger text, less of it.** Aim for body text of 24pt or more. Move detail into the speaker notes, where it becomes narration.
 - **Use a 16:9 layout.** Most screens are widescreen, and so is most video.
 - **Check contrast.** WCAG AA asks for a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text. Light grey on white won't survive video compression or a phone screen.
-- **Remove anything private.** Hidden comments, old draft slides and internal notes have a way of ending up in front of the wrong audience.
+- **Remove anything sensitive.** Hidden comments, old draft slides and internal notes have a way of ending up in front of the wrong audience.
 
 ## Write speaker notes for the ear
 
-If you're using text-to-speech narration, your speaker notes are your script. Notes written as reminders to yourself don't sound good read aloud. Notes written as spoken sentences do.
+If your narration is generated from your notes, your speaker notes are your script. Notes written as reminders to yourself don't sound good read aloud. Notes written as spoken sentences do.
 
 Keep sentences short. Use the words you'd say, not the words you'd write in a report. Say numbers the way people say them. Spell out abbreviations the first time.
 
@@ -75,83 +75,52 @@ The second version is longer, but it's much easier to follow by ear.
 
 ## Step by step: converting with PowerPoint2Vid
 
-PowerPoint2Vid runs entirely in your browser. The .pptx file is parsed, animated, narrated and recorded on your own device. Your slides are never uploaded.
+PowerPoint2Vid is more than a converter. It takes an ordinary deck and returns an explainer video with a stronger story, animated scenes and polished transitions. Here is the whole job.
 
 ### Step 1: Get a .pptx file
 
 - **PowerPoint:** save as .pptx. Older .ppt files need to be saved as .pptx first.
-- **Google Slides:** download the deck as a Microsoft PowerPoint (.pptx) file. The Google Slides tab in the converter gives you a download link.
+- **Google Slides:** export the deck as a Microsoft PowerPoint (.pptx) file first.
 - **Keynote or Canva:** export the presentation to .pptx first, then use that file.
 
-### Step 2: Drop the deck in
+### Step 2: Upload the deck
 
-Drag the .pptx into the converter. It reads your slides and speaker notes.
+Upload the .pptx to the converter. Your speaker notes become the narration, so this is the moment to check they read well aloud. If your deck holds sensitive material, check your organisation's policy on using online tools before uploading.
 
-### Step 3: Choose what gets narrated
+### Step 3: Pick a voice and speed
 
-There are four narration script options:
+Choose a voice and a speaking speed. Slightly slower suits technical material. Listen to a sample and adjust until the pace feels natural for your content.
 
-1. Speaker notes, else slide text (the default). Slides with notes use the notes; slides without notes use the text on the slide.
-2. Speaker notes only.
-3. Slide text only.
-4. No narration, for a silent video.
+### Step 4: The video is directed and rendered
 
-### Step 4: Pick a voice and speed
+This is where PowerPoint2Vid differs from a plain converter. Claude Opus 5.5 reads the whole deck, tightens the story and redesigns each slide as an animated scene. Charts are rebuilt as animated charts with the same numbers, and key points land on the word that names them. It times the animation to the voice and adds captions and polished transitions between scenes. A slide that was a static list of bullets becomes something worth watching.
 
-Narration uses the text-to-speech voices built into your browser. Which voices you see depends on your device and browser, so try a few. Adjust the speaking speed until it sounds natural for your content. Slightly slower suits technical material.
+### Step 5: Download the MP4
 
-Timing follows the speech, so each slide stays up for as long as its narration lasts. Set the "minimum seconds per slide" option so that slides with short or no narration don't flash past.
+When the video is ready, download it. The file is an MP4, with WebM available if you need it. There is no watermark.
 
-### Step 5: Choose a video style
+### Step 6: Watch it through once
 
-There are six styles:
-
-- **Clean:** full-bleed slides with shapes fading up. A safe choice for most decks.
-- **Minimal cinematic:** slow push-in, blur-in reveals, vignette, light grain and lower-third captions.
-- **Keynote launch:** the slide sits as a rounded card on a dark stage, with a drifting camera and glass captions.
-- **UI springs:** a warm-grey canvas with springy motion.
-- **Kinetic poster:** hard cuts, shapes that slam in and bold HUD labels.
-- **Paper & ink:** the slide pinned to paper, with film grain, a hand-drawn underline and typewriter-tape captions.
-
-A training deck usually suits Clean or Paper & ink. A product launch might suit Keynote launch or Kinetic poster. Preview two or three before deciding.
-
-### Step 6: Set transitions and options
-
-Pick a transition between slides: crossfade, slide, zoom or none. Then choose the options you want:
-
-- **Animate shapes in one by one**, so points appear as they're discussed.
-- **Burn in captions**, shown sentence by sentence and burned into the video.
-- **Gentle zoom on images**, to add a little movement to photo slides.
-- **Record narration into the video.** In Chrome, choose "this tab" when asked what to share and tick "share tab audio".
-
-### Step 7: Preview
-
-Preview the video with the voice before you export. Preview is open to everyone, so you can check a whole deck before committing. Listen for words the voice says oddly, slides that move too fast and any text that looks different from your original.
-
-### Step 8: Export
-
-Exporting the video needs PowerPoint2Vid Pro. The browser records the video in real time, so a five-minute video takes about five minutes to export. Keep the tab in the foreground while it records.
+Play the whole video before you share it. Listen for words pronounced oddly and check that every number and name is right. If something is off, fix the speaker note and make the video again.
 
 ## Captions and accessibility
 
-Captions help people who are deaf or hard of hearing, people watching in a second language and anyone watching with the sound off. Turning on burned-in captions means they're always visible, on every platform, with no extra file to manage.
+Captions help people who are deaf or hard of hearing, people watching in a second language and anyone watching with the sound off. PowerPoint2Vid includes captions in the video, so they're always visible, on every platform, with no extra file to manage.
 
-Two things to know. First, burned-in captions can't be switched off by the viewer. Second, PowerPoint2Vid doesn't export a separate caption file such as SRT or VTT. If your platform or policy needs closed captions, use the platform's captioning tools, and your speaker notes give you an accurate transcript to start from.
+If your platform or policy needs closed captions that viewers can switch off, use the platform's captioning tools. Your speaker notes give you an accurate transcript to start from.
 
 ## After export: file formats and sharing
 
-The export is usually a WebM file, or MP4 in browsers that support it. WebM plays in Chrome, Edge, Firefox and most video editors, and you can convert it to MP4 with common tools if a platform asks for MP4.
-
-From there, upload it wherever your audience is: your website, your learning management system, YouTube, LinkedIn or an internal drive. PowerPoint2Vid doesn't upload directly to these platforms, so you'll download the file and upload it yourself.
+The export is an MP4, which plays almost everywhere, with WebM available if you need it. From there, upload it wherever your audience is: your website, your learning management system, YouTube, LinkedIn or an internal drive. PowerPoint2Vid doesn't publish to these platforms for you, so you'll download the file and upload it yourself.
 
 ## Common problems and quick fixes
 
-- **The video has no sound.** You probably didn't share tab audio. In Chrome, choose "this tab" and tick "share tab audio" when recording starts.
-- **The voice sounds different on another computer.** Voices come from the browser and device. Export on the machine whose voice you like.
-- **A slide disappears too quickly.** Add a sentence to its notes, or raise the minimum seconds per slide.
-- **The recording stutters.** Keep the tab in the foreground and close other heavy tabs and apps.
-- **The file won't open.** Check it's a .pptx, not a .ppt, .key or PDF.
 - **A word is mispronounced.** Rewrite it in the notes the way it sounds, or rephrase the sentence.
+- **The voice feels too fast or too slow.** Change the speaking speed and make the video again.
+- **A slide feels thin.** Add a sentence to its notes so the narration has something to say.
+- **The video feels flat.** Check each slide makes one clear point. The tighter the story in the deck, the stronger the finished scenes.
+- **The file won't open.** Check it's a .pptx, not a .ppt, .key or PDF.
+- **A number looks wrong.** Check the figure in the original deck and the speaker note, fix it there and make the video again.
 
 ## Quick checklist
 
@@ -159,12 +128,10 @@ From there, upload it wherever your audience is: your website, your learning man
 2. Body text 24pt or larger, with good contrast.
 3. Speaker notes written as spoken sentences.
 4. Deck saved as .pptx.
-5. Narration option, voice and speed chosen.
-6. Minimum seconds per slide set.
-7. Style, transition and captions chosen.
-8. Full preview watched and listened to.
-9. Tab audio shared, tab kept in the foreground during export.
+5. Voice and speed chosen.
+6. Story checked: one clear point per slide, in an order that builds.
+7. Finished MP4 downloaded and watched all the way through.
 
 ## Make your first video with the PowerPoint to video converter
 
-You already have the hardest part: a deck that explains something. Open the [PowerPoint to video converter](/), drop in your .pptx and preview it with a voice. When you're happy with how it looks and sounds, [PowerPoint2Vid Pro](/pricing) lets you export, at A$12 a month or A$99 a year, with unlimited slides and videos and no watermark.
+You already have the hardest part: a deck that explains something. Open the [PowerPoint to video converter](/), upload your .pptx and pick a voice. Claude Opus 5.5 directs the result, so your ordinary deck comes out as an explainer video with animated scenes and a tighter story, not slides with a voice over them. [PowerPoint2Vid Pro](/pricing) is A$12 a month or A$99 a year, with no watermark.

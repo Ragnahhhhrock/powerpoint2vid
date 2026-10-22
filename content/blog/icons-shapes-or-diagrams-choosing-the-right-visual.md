@@ -100,8 +100,8 @@ The slide shows the shape of the process. The narration fills in the detail.
 
 Diagrams become even more useful when the deck is turned into a narrated video, because you can reveal each part as it is mentioned.
 
-- **Build the diagram in order.** In PowerPoint2Vid, the "animate shapes in one by one" option brings shapes in individually, so a process diagram can appear step by step as the narration moves along.
-- **Check the order in preview.** Watch the slide build with voice before exporting. If a box arrives before the narration mentions it, adjust the deck or the notes until the two line up.
+- **Build the diagram in order.** A process diagram works best when it appears step by step as the narration moves along.
+- **Check the order.** Watch the finished video with the voice on. If a box arrives before the narration mentions it, adjust the deck or the notes until the two line up.
 - **Keep labels large.** Small text inside boxes is hard to read on a phone. Shorten the label rather than shrinking the font.
 - **Match the notes to the diagram.** Describe the steps in the same order they appear.
 
@@ -118,4 +118,4 @@ Charts follow similar rules. See [Designing Charts People Understand in Five Sec
 
 ## Turn clear diagrams into a training video
 
-A well-built diagram does half the teaching. Narration does the rest. When your deck is ready, drop it into the [PowerPoint to video converter](/), turn on shape-by-shape animation, and let your speaker notes walk learners through each step. When a procedure changes, edit the diagram and export again.
+A well-built diagram does half the teaching. Narration does the rest. When your deck is ready, drop it into the [PowerPoint to video converter](/) and let your speaker notes walk learners through each step. Claude Opus 5.5 directs the video: it rebuilds your diagram as an animated scene and lands each box on the word that names it, so a simple process flow reads like a produced explainer. When a procedure changes, edit the diagram and export again.

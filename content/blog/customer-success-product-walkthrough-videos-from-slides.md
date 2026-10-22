@@ -78,14 +78,14 @@ Sample notes for a three-step walkthrough:
 >
 > **Slide 4:** That's it. Your project appears in the left menu. Next, invite your team. There's a short video on that too.
 
-If your product names or acronyms are tricky for text-to-speech voices, spell them the way they should sound in the notes. Our post on [pronunciation tips for text-to-speech narration](/blog/pronunciation-tips-for-text-to-speech-narration) has more ideas.
+If your product names or acronyms are tricky for a synthetic narrator, spell them the way they should sound in the notes. Our post on [pronunciation tips for text-to-speech narration](/blog/pronunciation-tips-for-text-to-speech-narration) has more ideas.
 
 ## Step 5: Produce and check
 
-- Choose a calm style with gentle transitions. Walkthroughs should feel clear, not flashy.
+- Keep the slides calm and clear. Walkthroughs should feel helpful, not flashy.
 - Use a modest speaking speed so people can follow along in the product.
 - Burn in captions so customers can watch without sound.
-- Set a minimum time per slide so screenshots stay up long enough to read.
+- Leave each screenshot on screen long enough to read, with enough narration to cover it.
 - Watch the whole thing once as if you were a new customer.
 
 ## Step 6: Put the videos where customers look
@@ -106,7 +106,7 @@ Set a review rhythm, such as checking every walkthrough after each major release
 
 1. Swap the changed screenshot.
 2. Edit the speaker note if the step changed.
-3. Export again and replace the old file.
+3. Create the video again and replace the old file.
 
 Keep the source decks in a shared folder with clear names, so anyone on the team can update them.
 
@@ -123,4 +123,4 @@ Keep the source decks in a shared folder with clear names, so anyone on the team
 
 ## Build your first walkthrough this week
 
-Pick the question your team answers most often and turn it into a short deck. Then drop the .pptx into the [PowerPoint to video converter](/). Your speaker notes become narration in the browser's built-in voice, and the deck is processed on your own device, so even early-release screenshots stay private. Preview it, then export and add it to your onboarding emails.
+Pick the question your team answers most often and turn it into a short deck. Then drop the .pptx into the [PowerPoint to video converter](/). Your speaker notes become the narration in a voice and speed you choose. Claude Opus 5.5 directs the video: it designs each step as an animated scene and times the animation to the narration, so a screenshot walkthrough feels like a produced tutorial. If your screenshots show early-release features, check your organisation's policy on using online tools first. Then download the video and add it to your onboarding emails.

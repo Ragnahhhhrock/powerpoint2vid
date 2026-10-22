@@ -75,9 +75,9 @@ Agencies can produce high-end animated explainers, and for some campaigns that's
 5. **Convert the deck** into a narrated video.
 6. **Preview it with the sound on and off**, then export.
 
-With PowerPoint2Vid, the narration comes from your speaker notes using your browser's built-in voices, and you can choose from six video styles. Keynote launch or Kinetic poster suit a product launch; Clean suits a straightforward how-to. The deck is processed in your browser and isn't uploaded, which helps if the deck includes pricing or plans you haven't announced.
+With PowerPoint2Vid, the narration comes from your speaker notes, and you can choose a voice and speaking speed. The deck is upgraded rather than just recorded: stronger story, animated scenes, polished transitions and captions. If the deck includes pricing or plans you haven't announced, check your organisation's policy on online tools before you upload it.
 
-Be clear about what you're getting: this approach gives you a polished, narrated slide video. It doesn't add stock footage, background music or on-screen presenters. For most "here's how this works" explainers, you won't miss them.
+Be clear about what you're getting: a produced explainer built from your own slides and notes, not a filmed shoot with presenters. For most "here's how this works" explainers, that's all you need.
 
 ## Making the video work harder
 
@@ -96,4 +96,4 @@ Be clear about what you're getting: this approach gives you a polished, narrated
 
 ## Turn your sales deck into an explainer
 
-You've probably already explained your business in a slide deck. Drop it into the [PowerPoint to video converter](/), preview it with a voice and see how it looks in a few styles. When you're ready to publish, [Pro](/pricing) lets you export unlimited videos with no watermark, from A$12 a month.
+You've probably already explained your business in a slide deck. Upload it to the [PowerPoint to video converter](/). Claude Opus 5.5 directs the video: it tightens your message, designs each scene and times the animation to your narration, so a small business gets an explainer that looks produced without an agency. When you're ready to publish, [Pro](/pricing) gives you videos with no watermark, from A$12 a month.

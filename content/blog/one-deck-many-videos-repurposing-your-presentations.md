@@ -47,7 +47,7 @@ The full story, trimmed to essentials. Aim for one to two minutes. Open with the
 
 ### 2. Short social clips
 
-Pull single ideas into very short videos of three to five slides. Each clip should make sense on its own, without the rest of the deck. Social viewers often watch with the sound off, so burned-in captions matter here. A bold style such as Kinetic poster can help a clip stand out in a feed.
+Pull single ideas into very short videos of three to five slides. Each clip should make sense on its own, without the rest of the deck. Social viewers often watch with the sound off, so burned-in captions matter here. A bold, high-energy look can help a clip stand out in a feed.
 
 ### 3. The sales follow-up
 
@@ -55,7 +55,7 @@ After a call, send a narrated version tailored to that prospect's question. Keep
 
 ### 4. The onboarding version
 
-Drop the persuasion and keep the how-to. New customers need "how it works" and "getting started", not "why you should buy". A calmer style such as Clean or UI springs suits this better than a launch-style look.
+Drop the persuasion and keep the how-to. New customers need "how it works" and "getting started", not "why you should buy". A calmer, friendlier look suits this better than a launch-style one.
 
 ## Rewrite the notes for each audience
 
@@ -87,10 +87,10 @@ Repurposing goes wrong when nobody knows which file is current. A simple system 
 
 Video styles change how the same slides feel. A quick guide:
 
-- **Website hero:** Minimal cinematic or Keynote launch for a polished first impression.
-- **Social feed:** Kinetic poster for energy, or Paper & ink for a warmer, handmade look.
-- **Sales follow-up:** Clean, so the content leads.
-- **Onboarding:** Clean or UI springs for a friendly, product-like feel.
+- **Website hero:** A cinematic, polished feel for a strong first impression.
+- **Social feed:** Bold and energetic, or warmer and handmade, depending on your brand.
+- **Sales follow-up:** Clean and restrained, so the content leads.
+- **Onboarding:** Friendly and product-like.
 
 Keep the style consistent within each channel so viewers start to recognise your videos.
 
@@ -104,4 +104,4 @@ Keep the style consistent within each channel so viewers start to recognise your
 
 ## Turn one deck into a library of videos
 
-Repurposing works best when re-exporting is quick. Open the [PowerPoint to video converter](/), drop in each version of your deck, and preview them with voice side by side. With Pro, you can export as many videos as you need without a watermark. See the [pricing page](/pricing) for plans.
+Repurposing works best when re-exporting is quick. Open the [PowerPoint to video converter](/) and drop in each version of your deck. Claude Opus 5.5 directs every version separately: it tightens the story for that audience, designs the scenes and times the animation to the narration, so a website explainer and an onboarding module each feel made for their job. There is no watermark; see the [pricing page](/pricing) for plans.

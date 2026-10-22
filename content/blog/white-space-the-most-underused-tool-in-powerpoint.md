@@ -104,7 +104,7 @@ The best time to fix spacing is in the slide master. Set your margins, title pos
 
 Space matters more when a deck becomes a video. Viewers can't lean closer or flip back. A crowded slide may also lose detail when the video is compressed, while a clean one stays crisp.
 
-Space also gives motion room to work. In PowerPoint2Vid, shapes can animate in one by one, and styles like Minimal cinematic use slow push-ins and blur-in reveals. Those effects look calm on a spacious slide and chaotic on a full one. If you plan to burn in captions, leave the lower part of the slide clear so captions don't sit on top of your content.
+Space also gives motion room to work. Animated reveals, slow push-ins and gentle transitions look calm on a spacious slide and chaotic on a full one. If you plan to burn in captions, leave the lower part of the slide clear so captions don't sit on top of your content.
 
 For related advice on keeping text in check, see [how much text is too much on a slide](/blog/how-much-text-is-too-much-on-a-slide).
 
@@ -120,4 +120,4 @@ For related advice on keeping text in check, see [how much text is too much on a
 
 ## Give your spacious slides a voice
 
-A slide with room to breathe makes a clear frame in a video. When your deck is cleaned up, load it into the [PowerPoint to video converter](/) and watch the preview. Your speaker notes, which now hold the detail you moved off the slides, become the narration. The visuals stay calm, and the voice carries the explanation.
+A slide with room to breathe makes a clear frame in a video. When your deck is cleaned up, add it to the [PowerPoint to video converter](/). Your speaker notes, which now hold the detail you moved off the slides, become the narration. Claude Opus 5.5 directs the video and gives your uncluttered slides room to work as animated scenes, so the visuals stay calm and the voice carries the explanation.
