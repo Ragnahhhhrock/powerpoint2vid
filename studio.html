@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Make a Video | PowerPoint2Vid</title>
+<meta name="description" content="Upload your deck and PowerPoint2Vid turns it into a narrated, animated explainer video.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#6d4aff">
+<link rel="canonical" href="https://powerpoint2vid.com/studio">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/styles.css?v=202610212210">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3F8MGRVD2L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-3F8MGRVD2L');
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="PowerPoint2Vid, the PowerPoint to video converter, home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#6d4aff"/><rect x="12" y="16" width="40" height="28" rx="5" fill="#fff"/><path d="M28 24l12 6-12 6z" fill="#5b3df0"/><rect x="20" y="49" width="24" height="4" rx="2" fill="#fff" opacity=".85"/></svg>
+      <span>PowerPoint<b>2Vid</b></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="/">Converter</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="block">
+    <div class="wrap">
+      <div class="panel auth" style="max-width:720px">
+        <h1 class="auth__title">Make your video</h1>
+        <div id="gate" class="hint" hidden></div>
+        <div id="make" hidden>
+          <p class="muted">Upload a PowerPoint (.pptx) deck. Google Slides users: File &gt; Download &gt; Microsoft PowerPoint. Speaker notes become the narration.</p>
+          <form id="up" novalidate>
+            <div class="field">
+              <label for="file">Your deck (.pptx, up to 50 MB)</label>
+              <input id="file" type="file" accept=".pptx,application/vnd.openxmlformats-officedocument.presentationml.presentation" required>
+            </div>
+            <div class="field">
+              <label for="dir">Direction for the director <span class="muted">(optional)</span></label>
+              <input id="dir" type="text" maxlength="500" placeholder="e.g. Confident and upbeat. Keep it under two minutes.">
+            </div>
+            <p class="form-error" id="err" role="alert" hidden></p>
+            <button class="btn" id="go" type="submit">Make my video</button>
+            <span class="muted" id="quota" style="margin-left:12px"></span>
+          </form>
+          <h2 style="margin-top:32px;font-size:1.1rem">Your videos</h2>
+          <p class="muted" id="none">Nothing here yet.</p>
+          <div id="jobs"></div>
+          <p class="muted" style="font-size:.85rem;margin-top:16px">Longer decks take longer, so you can leave this page and come back. Finished videos are available for a few hours: download yours soon after it finishes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>© 2026 PowerPoint2Vid, the online PowerPoint to video converter · <a href="/pricing">Pricing</a> · <a href="/blog/">Blog</a> · <a href="mailto:contact@powerpoint2vid.com">contact@powerpoint2vid.com</a></div>
+    <div>another <a href="https://malgordon.com/" rel="noopener">Mal Gordon</a> creation</div>
+  </div>
+</footer>
+
+<script src="/js/account.js?v=202610212210"></script>
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  var timer = null;
+  function esc(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; }
+  var STEPS = { queued: 'Waiting for a free slot', ingest: 'Reading your deck', story: 'Planning the story', voice: 'Recording the narration', scenes: 'Designing each scene', review: 'Checking the draft', render: 'Rendering the video', done: 'Ready' };
+
+  function card(j) {
+    var h = '<div class="panel" style="margin:12px 0;padding:16px"><strong>' + esc(j.name) + '</strong> <span class="muted">' + new Date(j.createdAt).toLocaleString() + (j.slides ? ' &middot; ' + j.slides + ' slides' : '') + '</span>';
+    if (j.status === 'done') {
+      var base = '/api/jobs/' + j.id + '/';
+      h += '<video controls preload="metadata" playsinline poster="' + base + 'poster.jpg" style="width:100%;border-radius:12px;margin:12px 0;background:#080b1f"><source src="' + base + 'video.mp4" type="video/mp4"></video>' +
+        '<div class="controls"><a class="btn" href="' + base + 'video.mp4?download=1">Download MP4</a> <a class="btn btn--ghost" href="' + base + 'video.webm?download=1">WebM</a> <a class="btn btn--ghost" href="' + base + 'captions.vtt?download=1">Captions (.vtt)</a></div>';
+      if (j.degraded) h += '<p class="muted" style="font-size:.85rem">Some scenes use our standard design this time.</p>';
+    } else if (j.status === 'failed') {
+      h += '<p class="form-error">' + esc(j.message || 'We could not finish this video.') + ' This one was not counted against your allowance.</p>';
+    } else if (j.status === 'expired') {
+      h += '<p class="muted">This video has expired. Make it again from your deck.</p>';
+    } else {
+      h += '<div class="bar" style="margin:12px 0"><i style="width:' + Math.max(3, j.pct || 0) + '%"></i></div><p class="muted">' + esc(STEPS[j.step] || 'Working') + '&hellip;</p>';
+    }
+    return h + '</div>';
+  }
+
+  function show(jobs, usage) {
+    $('jobs').innerHTML = jobs.map(card).join('');
+    $('none').hidden = jobs.length > 0;
+    if (usage) { $('quota').textContent = usage.remaining + ' of ' + usage.limit + ' videos left this month'; $('go').disabled = !usage.remaining; }
+    var busy = jobs.filter(function (j) { return j.status === 'queued' || j.status === 'running'; });
+    clearTimeout(timer);
+    if (busy.length) timer = setTimeout(function () { Promise.all(busy.map(function (j) { return fetch('/api/jobs/' + j.id, { credentials: 'same-origin' }); })).then(load); }, 4000);
+  }
+  function load() {
+    return fetch('/api/jobs', { credentials: 'same-origin' }).then(function (r) { return r.json(); }).then(function (d) { if (d.jobs) show(d.jobs, d.usage); });
+  }
+
+  $('up').onsubmit = function (e) {
+    e.preventDefault();
+    var f = $('file').files[0], err = $('err'); err.hidden = true;
+    if (!f) { err.textContent = 'Choose a .pptx file first.'; err.hidden = false; return; }
+    if (!/\.pptx$/i.test(f.name)) { err.textContent = 'That is not a .pptx file. In Google Slides, use File > Download > Microsoft PowerPoint.'; err.hidden = false; return; }
+    $('go').disabled = true; $('go').textContent = 'Uploading\u2026';
+    fetch('/api/jobs', { method: 'POST', credentials: 'same-origin', body: f, headers: { 'Content-Type': 'application/octet-stream', 'x-filename': encodeURIComponent(f.name), 'x-direction': $('dir').value.trim() } })
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+      .then(function (res) {
+        if (!res.ok) throw new Error(res.j.error || 'Something went wrong.');
+        if (window.gtag) gtag('event', 'video_started');
+        $('file').value = ''; return load();
+      })
+      .catch(function (ex) { err.textContent = ex.message; err.hidden = false; })
+      .then(function () { $('go').textContent = 'Make my video'; if (!/0 of/.test($('quota').textContent)) $('go').disabled = false; });
+  };
+
+  window.P2V.get(true).then(function (me) {
+    var g = $('gate');
+    if (me.configured === false) { g.textContent = 'Accounts are not switched on for this site yet. Please check back soon.'; g.hidden = false; return; }
+    if (!me.loggedIn) { g.innerHTML = 'Please <a href="/account?next=%2Fstudio">log in or create an account</a> to make a video.'; g.hidden = false; return; }
+    if (!me.pro) { g.innerHTML = 'Making videos is part of Pro. <a href="/pricing">See plans</a>.'; g.hidden = false; return; }
+    $('make').hidden = false; load();
+  });
+})();
+</script>
+</body>
+</html>

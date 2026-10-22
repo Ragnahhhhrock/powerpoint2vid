@@ -1,0 +1,10 @@
+{
+  "name": "p2v-runner",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-01",
+  "containers": [
+    { "class_name": "Runner", "image": "../../studio/Dockerfile", "image_build_context": "../..", "instance_type": "standard-4", "max_instances": 1 }
+  ],
+  "durable_objects": { "bindings": [{ "class_name": "Runner", "name": "RUNNER" }] },
+  "migrations": [{ "new_sqlite_classes": ["Runner"], "tag": "v1" }]
+}
