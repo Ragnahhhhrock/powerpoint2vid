@@ -28,20 +28,20 @@
       },
       "storyboard": "dark sky; a sun rises from below frame with a bloom. On 'photons' streaks of light rain diagonally onto a solar panel that tilts into view in 3D; on 'electricity' the panel's cells light up row by row and the title typesets over it.",
       "audio": "audio/scene-0.wav",
-      "duration": 9,
+      "duration": 9.191,
       "beats": [
         {
           "t": 0.8,
-          "end": 4.399,
+          "end": 4.12,
           "text": "Sunlight carries energy in tiny packets called photons."
         },
         {
-          "t": 4.679,
-          "end": 7.512,
+          "t": 4.817,
+          "end": 8.091,
           "text": "This is how a solar panel turns them into electricity."
         }
       ],
-      "speechEnd": 7.512
+      "speechEnd": 8.091
     },
     {
       "file": "scenes/scene-1.js",
@@ -59,20 +59,20 @@
         "duration": 0.7
       },
       "audio": "audio/scene-1.wav",
-      "duration": 11.12,
+      "duration": 12.813,
       "beats": [
         {
           "t": 0.8,
-          "end": 4.48,
+          "end": 4.422,
           "text": "When a photon hits the silicon, it knocks an electron loose."
         },
         {
-          "t": 4.76,
-          "end": 10.02,
+          "t": 5.026,
+          "end": 11.713,
           "text": "The cell's built-in electric field pushes those electrons one way, and that flow is a current."
         }
       ],
-      "speechEnd": 10.02
+      "speechEnd": 11.713
     },
     {
       "file": "scenes/scene-2.js",
@@ -90,20 +90,20 @@
         "duration": 0.6
       },
       "audio": "audio/scene-2.wav",
-      "duration": 8.182,
+      "duration": 8.866,
       "beats": [
         {
           "t": 0.8,
-          "end": 2.518,
+          "end": 2.727,
           "text": "Panels produce direct current."
         },
         {
-          "t": 2.798,
-          "end": 7.082,
+          "t": 3.006,
+          "end": 7.766,
           "text": "An inverter switches it to alternating current, the kind your home runs on."
         }
       ],
-      "speechEnd": 7.082
+      "speechEnd": 7.766
     },
     {
       "file": "scenes/scene-3.js",
@@ -125,17 +125,18 @@
       "beats": [
         {
           "t": 0.8,
-          "end": 2.356,
+          "end": 2.402,
           "text": "Output follows the sun."
         },
         {
-          "t": 2.636,
-          "end": 6.931,
+          "t": 2.913,
+          "end": 7.58,
           "text": "It climbs through the morning, peaks around midday, and fades by evening."
         }
       ],
-      "speechEnd": 6.931
+      "speechEnd": 7.58
     }
   ],
-  "poster": 3.2
+  "poster": 3.2,
+  "voiceProvider": "elevenlabs"
 }

@@ -32,16 +32,16 @@
       "beats": [
         {
           "t": 0.8,
-          "end": 2.495,
+          "end": 2.182,
           "text": "Welcome to Harbour and Co."
         },
         {
-          "t": 2.775,
-          "end": 4.749,
+          "t": 2.507,
+          "end": 4.469,
           "text": "Here's what your first week looks like."
         }
       ],
-      "speechEnd": 4.749
+      "speechEnd": 4.469
     },
     {
       "file": "scenes/scene-1.js",
@@ -59,25 +59,25 @@
         "duration": 0.6
       },
       "audio": "audio/scene-1.wav",
-      "duration": 11.609,
+      "duration": 12.813,
       "beats": [
         {
           "t": 0.8,
-          "end": 3.319,
+          "end": 3.296,
           "text": "On Monday, you'll meet your team and your buddy."
         },
         {
-          "t": 3.599,
-          "end": 5.143,
+          "t": 3.737,
+          "end": 5.351,
           "text": "Midweek is tools training."
         },
         {
-          "t": 5.423,
-          "end": 10.509,
+          "t": 5.676,
+          "end": 11.713,
           "text": "On Thursday, you'll shadow a customer call, and Friday ends with a check-in with your manager."
         }
       ],
-      "speechEnd": 10.509
+      "speechEnd": 11.713
     },
     {
       "file": "scenes/scene-2.js",
@@ -99,26 +99,26 @@
       "beats": [
         {
           "t": 0.8,
-          "end": 3.424,
+          "end": 3.285,
           "text": "Everything we do comes back to three values."
         },
         {
-          "t": 3.704,
-          "end": 4.737,
+          "t": 3.668,
+          "end": 4.747,
           "text": "Customers first."
         },
         {
-          "t": 5.017,
-          "end": 6.027,
+          "t": 5.189,
+          "end": 6.129,
           "text": "Own the outcome."
         },
         {
-          "t": 6.307,
-          "end": 7.132,
+          "t": 6.303,
+          "end": 7.441,
           "text": "Keep it simple."
         }
       ],
-      "speechEnd": 7.132
+      "speechEnd": 7.441
     },
     {
       "file": "scenes/scene-3.js",
@@ -140,22 +140,23 @@
       "beats": [
         {
           "t": 0.8,
-          "end": 1.787,
+          "end": 1.798,
           "text": "Stuck on anything?"
         },
         {
-          "t": 2.067,
-          "end": 6.455,
+          "t": 2.124,
+          "end": 6.233,
           "text": "Your buddy is your first stop, and the people team is always one message away."
         },
         {
-          "t": 6.735,
-          "end": 7.745,
+          "t": 6.617,
+          "end": 7.766,
           "text": "Welcome aboard."
         }
       ],
-      "speechEnd": 7.745
+      "speechEnd": 7.766
     }
   ],
-  "poster": 2.4
+  "poster": 2.4,
+  "voiceProvider": "elevenlabs"
 }

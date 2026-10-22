@@ -35,7 +35,7 @@
     if (r.dir) Object.assign(r, { mp4: r.dir + '/video.mp4', webm: r.dir + '/video.webm', poster: r.dir + '/poster.jpg', vtt: r.dir + '/captions.vtt', deck: r.dir + '/deck.pptx', slideDir: r.dir });
   });
   // /assets is cached immutably: bump AV (scripts/revoice-examples.sh does) whenever the videos are re-rendered
-  const AV = '?v=202610220000';
+  const AV = '?v=202610221441';
   Object.values(REEL).forEach((r) => { ['mp4', 'webm', 'poster', 'vtt'].forEach((k) => { r[k] += AV; }); });
 
   /* ---------- hero: autoplays muted; button restarts it with sound ---------- */

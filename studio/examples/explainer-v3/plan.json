@@ -34,16 +34,16 @@
       "beats": [
         {
           "t": 0.8,
-          "end": 2.333,
+          "end": 2.425,
           "text": "This is an ordinary slide."
         },
         {
-          "t": 2.613,
-          "end": 3.901,
+          "t": 2.634,
+          "end": 4.376,
           "text": "Watch it get directed."
         }
       ],
-      "speechEnd": 3.901
+      "speechEnd": 4.376
     },
     {
       "file": "scenes/scene-1.js",
@@ -66,16 +66,16 @@
       "beats": [
         {
           "t": 0.8,
-          "end": 3.586,
+          "end": 3.935,
           "text": "a.i. reads your whole deck and tightens the story."
         },
         {
-          "t": 3.866,
-          "end": 5.828,
+          "t": 4.376,
+          "end": 6.651,
           "text": "Your speaker notes become the voiceover."
         }
       ],
-      "speechEnd": 5.828
+      "speechEnd": 6.651
     },
     {
       "file": "scenes/scene-2.js",
@@ -98,11 +98,11 @@
       "beats": [
         {
           "t": 0.8,
-          "end": 5.769,
+          "end": 6.744,
           "text": "Then it redesigns every slide as an animated scene, with each move timed to the narration."
         }
       ],
-      "speechEnd": 5.769
+      "speechEnd": 6.744
     },
     {
       "file": "scenes/scene-3.js",
@@ -125,16 +125,16 @@
       "beats": [
         {
           "t": 0.8,
-          "end": 2.449,
+          "end": 2.634,
           "text": "A flat chart becomes a moment."
         },
         {
-          "t": 2.729,
-          "end": 5.701,
+          "t": 3.076,
+          "end": 6.466,
           "text": "The numbers build, and the result lands as it's said."
         }
       ],
-      "speechEnd": 5.701
+      "speechEnd": 6.466
     },
     {
       "file": "scenes/scene-4.js",
@@ -153,20 +153,20 @@
         "duration": 0.6
       },
       "audio": "audio/scene-4.wav",
-      "duration": 10.6,
+      "duration": 11.467,
       "beats": [
         {
           "t": 0.8,
-          "end": 2.89,
+          "end": 3.052,
           "text": "Basic exports carry a watermark."
         },
         {
-          "t": 3.17,
-          "end": 9.091,
+          "t": 3.749,
+          "end": 10.367,
           "text": "Pro removes it, and includes ten a.i.-directed videos a month, from 29 Australian dollars."
         }
       ],
-      "speechEnd": 9.091
+      "speechEnd": 10.367
     },
     {
       "file": "scenes/scene-5.js",
@@ -189,16 +189,17 @@
       "beats": [
         {
           "t": 0.8,
-          "end": 3.203,
+          "end": 3.018,
           "text": "More than a PowerPoint to video converter."
         },
         {
-          "t": 3.483,
-          "end": 5.991,
+          "t": 3.459,
+          "end": 6.187,
           "text": "Go Pro at powerpoint2vid.com."
         }
       ],
-      "speechEnd": 5.991
+      "speechEnd": 6.187
     }
-  ]
+  ],
+  "voiceProvider": "elevenlabs"
 }

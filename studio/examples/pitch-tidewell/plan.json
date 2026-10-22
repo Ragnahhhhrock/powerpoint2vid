@@ -32,16 +32,16 @@
       "beats": [
         {
           "t": 0.8,
-          "end": 2.762,
+          "end": 2.437,
           "text": "Your support inbox never sleeps."
         },
         {
-          "t": 3.042,
-          "end": 4.041,
+          "t": 2.483,
+          "end": 3.911,
           "text": "Neither does Tidewell."
         }
       ],
-      "speechEnd": 4.041
+      "speechEnd": 3.911
     },
     {
       "file": "scenes/scene-1.js",
@@ -59,20 +59,20 @@
         "duration": 0.5
       },
       "audio": "audio/scene-1.wav",
-      "duration": 9.715,
+      "duration": 11.559,
       "beats": [
         {
           "t": 0.8,
-          "end": 4.55,
+          "end": 5.56,
           "text": "Tickets pile up overnight, and customers wait hours for a first reply."
         },
         {
-          "t": 4.83,
-          "end": 8.615,
+          "t": 5.885,
+          "end": 10.459,
           "text": "Meanwhile, your team answers the same five questions again and again."
         }
       ],
-      "speechEnd": 8.615
+      "speechEnd": 10.46
     },
     {
       "file": "scenes/scene-2.js",
@@ -90,20 +90,20 @@
         "duration": 0.7
       },
       "audio": "audio/scene-2.wav",
-      "duration": 8.914,
+      "duration": 11.327,
       "beats": [
         {
           "t": 0.8,
-          "end": 3.447,
+          "end": 4.295,
           "text": "Tidewell sorts every ticket by topic and urgency."
         },
         {
-          "t": 3.727,
-          "end": 7.814,
+          "t": 4.573,
+          "end": 10.227,
           "text": "It drafts the answer from your own help centre, and your team just reviews and sends."
         }
       ],
-      "speechEnd": 7.814
+      "speechEnd": 10.227
     },
     {
       "file": "scenes/scene-3.js",
@@ -121,21 +121,22 @@
         "duration": 0.6
       },
       "audio": "audio/scene-3.wav",
-      "duration": 8,
+      "duration": 8.634,
       "beats": [
         {
           "t": 0.8,
-          "end": 5.2,
+          "end": 5.874,
           "text": "In this example, first reply time fell from over nine hours to just over one."
         },
         {
-          "t": 5.48,
-          "end": 6.467,
+          "t": 6.199,
+          "end": 7.534,
           "text": "Book a demo today."
         }
       ],
-      "speechEnd": 6.467
+      "speechEnd": 7.534
     }
   ],
-  "poster": 2.6
+  "poster": 2.6,
+  "voiceProvider": "elevenlabs"
 }
