@@ -23,11 +23,11 @@ That means:
 - Punctuation shapes the rhythm. Commas and full stops create pauses.
 - Different voices guess differently. A name one voice handles well, another may not.
 
-In PowerPoint2Vid, narration uses your browser's built-in voices, and the voices on offer depend on your device and browser. So test on the machine you will export from.
+Because voices differ, listen to the finished narration before you share the video, and re-check if you switch voices.
 
 ## Find the problem words first
 
-Before you rewrite anything, listen. Preview the whole video with narration and note every word that sounds off. Common culprits in training decks:
+Before you rewrite anything, listen. Listen to the whole narration and note every word that sounds off. Common culprits in training decks:
 
 - Acronyms: WHS, HR, LMS, KPI, SOP
 - Product and system names
@@ -100,7 +100,7 @@ You can also slow the speaking speed slightly for dense content, such as a compl
 
 ## A note on captions
 
-If you burn in captions, check how your phonetic spellings look on screen. Captions follow the narration, so "Shiv-awn" may appear as written. For a name that appears often, you may prefer to find a voice that handles the real spelling, or to rephrase so the name is on the slide and the narration says "your manager".
+If your video has captions, check how your phonetic spellings look on screen. Captions follow the narration, so "Shiv-awn" may appear as written. For a name that appears often, you may prefer to find a voice that handles the real spelling, or to rephrase so the name is on the slide and the narration says "your manager".
 
 ## Build a team pronunciation list
 
@@ -118,17 +118,16 @@ New decks start from the list, and every video sounds consistent.
 
 ## Quick checklist
 
-- Preview the whole video with narration and note every problem word
+- Listen to the whole narration and note every problem word
 - Space out letter acronyms in the speaker notes
 - Write tricky names phonetically in the notes, correctly on the slide
 - Write numbers, dates and money the way people say them
 - Spell out symbols and units
 - Rephrase words with two pronunciations
 - Keep sentences short for natural rhythm
-- Check burned-in captions for phonetic spellings
-- Test on the device and browser you will export from
+- Check captions for phonetic spellings
 - Keep a shared pronunciation list for the team
 
 ## Get the narration right, then make the video
 
-Clear pronunciation makes a training video sound professional and keeps learners focused on the content. For more on writing the script itself, see [Writing a Voiceover Script: Pace, Pauses and Plain Words](/blog/writing-a-voiceover-script-pace-pauses-and-plain-words). When your speaker notes are ready, drop the deck into the [PowerPoint to video converter](/), preview it with narration, and fix any word that still sounds off before you export. When the policy changes, edit the notes and export again. No re-recording needed.
+Clear pronunciation makes a training video sound professional and keeps learners focused on the content. For more on writing the script itself, see [Writing a Voiceover Script: Pace, Pauses and Plain Words](/blog/writing-a-voiceover-script-pace-pauses-and-plain-words). When your speaker notes are ready, drop the deck into the [PowerPoint to video converter](/) and fix any word that still sounds off. Claude Opus 5.5 directs the video: it times the animation to your narration, so each term appears on screen just as the voice says it, which makes a careful pronunciation fix even more noticeable. When the policy changes, edit the notes and export again. No re-recording needed.

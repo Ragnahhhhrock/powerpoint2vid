@@ -87,7 +87,7 @@ Some tips:
 
 - **Name files clearly**, for example "BIO101 W3 Osmosis".
 - **Add a short description** saying what the video covers and how long it runs.
-- **Check your institution's caption requirements.** Burned-in captions are always visible. If you need a separate caption file, use your video platform's captioning tools; your speaker notes make a ready-made transcript.
+- **Check your institution's caption requirements.** Captions built into the video are always visible. If you need a separate caption file, use your video platform's captioning tools; your speaker notes make a ready-made transcript.
 - **Link the video from the activity it supports**, such as the week's pre-class task.
 
 ## Step 7: Plan for updates
@@ -106,4 +106,4 @@ Keep the .pptx alongside the video. When something changes, edit the slide or no
 
 ## Start with one lecture and the PowerPoint to video converter
 
-You don't need a studio or a microphone. You need one deck and an hour. Open the [PowerPoint to video converter](/), and drop in your lecture slides. Claude Opus 5.5 directs the video: it tightens the story, designs each scene and times the animation to your narration, so a lecture deck lands like a produced explainer. For a semester's worth, see [Pro](/pricing).
+You don't need a studio or a microphone. You need one deck and an hour. Open the [PowerPoint to video converter](/) and drop in your lecture slides. Claude Opus 5.5 directs the video: it tightens the story, designs each scene and times the animation to your narration, so a lecture deck lands like a produced explainer. For a semester's worth, see [Pro](/pricing).

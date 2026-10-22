@@ -56,7 +56,7 @@ The trade-offs are real too. It uses synthetic voices rather than your own, and 
 |---|---|---|
 | Narration | Your own recorded voice | A synthetic voice reading your speaker notes |
 | Timing | Recorded timings or fixed seconds per slide | Follows the narration, with a minimum per slide |
-| Animations | Your PowerPoint animations and transitions | Slides redesigned as animated scenes, directed by Claude Opus 5.5 |
+| Animations | Your PowerPoint animations and transitions | Slides redesigned as animated scenes, directed by AI |
 | Captions | Added separately | Included |
 | Updating content | Re-record changed slides | Edit the notes and export again |
 | Story and design | The slides as you built them | Story tightened and design upgraded |
@@ -100,4 +100,4 @@ Take a slide with the headline "New starters get their laptop on day one".
 
 ## Try both and compare
 
-The quickest way to decide is to see your own deck both ways. Export a short section from PowerPoint, then drop the same .pptx into the [PowerPoint to video converter](/). Claude Opus 5.5 directs the video: it tightens the story, designs each scene and times the animation to your narration, so you can judge a produced explainer against a straight export. For the full process from start to finish, the [complete guide to converting PowerPoint to video](/blog/how-to-convert-powerpoint-to-video-the-complete-guide) walks through every step.
+The quickest way to decide is to see your own deck both ways. Export a short section from PowerPoint, then drop the same .pptx into the [PowerPoint to video converter](/). The video is directed for you: it tightens the story, designs each scene and times the animation to your narration, so you can judge a produced explainer against a straight export. For the full process from start to finish, the [complete guide to converting PowerPoint to video](/blog/how-to-convert-powerpoint-to-video-the-complete-guide) walks through every step.
