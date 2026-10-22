@@ -28,20 +28,96 @@
       },
       "storyboard": "dark sky; a sun rises from below frame with a bloom. On 'photons' streaks of light rain diagonally onto a solar panel that tilts into view in 3D; on 'electricity' the panel's cells light up row by row and the title typesets over it.",
       "audio": "audio/scene-0.wav",
-      "duration": 9.191,
+      "duration": 9,
       "beats": [
         {
           "t": 0.8,
-          "end": 4.12,
-          "text": "Sunlight carries energy in tiny packets called photons."
+          "end": 4.167,
+          "text": "Sunlight carries energy in tiny packets called photons.",
+          "words": [
+            {
+              "w": "Sunlight",
+              "t": 0.8
+            },
+            {
+              "w": "carries",
+              "t": 1.38
+            },
+            {
+              "w": "energy",
+              "t": 1.752
+            },
+            {
+              "w": "in",
+              "t": 2.124
+            },
+            {
+              "w": "tiny",
+              "t": 2.274
+            },
+            {
+              "w": "packets",
+              "t": 2.681
+            },
+            {
+              "w": "called",
+              "t": 3.064
+            },
+            {
+              "w": "photons.",
+              "t": 3.366
+            }
+          ]
         },
         {
-          "t": 4.817,
-          "end": 8.091,
-          "text": "This is how a solar panel turns them into electricity."
+          "t": 4.863,
+          "end": 7.778,
+          "text": "This is how a solar panel turns them into electricity.",
+          "words": [
+            {
+              "w": "This",
+              "t": 4.863
+            },
+            {
+              "w": "is",
+              "t": 5.107
+            },
+            {
+              "w": "how",
+              "t": 5.235
+            },
+            {
+              "w": "a",
+              "t": 5.421
+            },
+            {
+              "w": "solar",
+              "t": 5.537
+            },
+            {
+              "w": "panel",
+              "t": 5.908
+            },
+            {
+              "w": "turns",
+              "t": 6.257
+            },
+            {
+              "w": "them",
+              "t": 6.593
+            },
+            {
+              "w": "into",
+              "t": 6.756
+            },
+            {
+              "w": "electricity.",
+              "t": 6.988
+            }
+          ]
         }
       ],
-      "speechEnd": 8.091
+      "speechEnd": 7.778
     },
     {
       "file": "scenes/scene-1.js",
@@ -59,20 +135,132 @@
         "duration": 0.7
       },
       "audio": "audio/scene-1.wav",
-      "duration": 12.813,
+      "duration": 11.292,
       "beats": [
         {
-          "t": 0.8,
-          "end": 4.422,
-          "text": "When a photon hits the silicon, it knocks an electron loose."
+          "t": 0.55,
+          "end": 4.068,
+          "text": "When a photon hits the silicon, it knocks an electron loose.",
+          "words": [
+            {
+              "w": "When",
+              "t": 0.55
+            },
+            {
+              "w": "a",
+              "t": 0.759
+            },
+            {
+              "w": "photon",
+              "t": 0.841
+            },
+            {
+              "w": "hits",
+              "t": 1.352
+            },
+            {
+              "w": "the",
+              "t": 1.607
+            },
+            {
+              "w": "silicon,",
+              "t": 1.735
+            },
+            {
+              "w": "it",
+              "t": 2.489
+            },
+            {
+              "w": "knocks",
+              "t": 2.71
+            },
+            {
+              "w": "an",
+              "t": 3.035
+            },
+            {
+              "w": "electron",
+              "t": 3.139
+            },
+            {
+              "w": "loose.",
+              "t": 3.592
+            }
+          ]
         },
         {
-          "t": 5.026,
-          "end": 11.713,
-          "text": "The cell's built-in electric field pushes those electrons one way, and that flow is a current."
+          "t": 4.765,
+          "end": 10.442,
+          "text": "The cell's built-in electric field pushes those electrons one way, and that flow is a current.",
+          "words": [
+            {
+              "w": "The",
+              "t": 4.765
+            },
+            {
+              "w": "cell's",
+              "t": 4.962
+            },
+            {
+              "w": "built-in",
+              "t": 5.427
+            },
+            {
+              "w": "electric",
+              "t": 5.868
+            },
+            {
+              "w": "field",
+              "t": 6.297
+            },
+            {
+              "w": "pushes",
+              "t": 6.657
+            },
+            {
+              "w": "those",
+              "t": 7.052
+            },
+            {
+              "w": "electrons",
+              "t": 7.319
+            },
+            {
+              "w": "one",
+              "t": 7.888
+            },
+            {
+              "w": "way,",
+              "t": 8.144
+            },
+            {
+              "w": "and",
+              "t": 8.736
+            },
+            {
+              "w": "that",
+              "t": 8.945
+            },
+            {
+              "w": "flow",
+              "t": 9.165
+            },
+            {
+              "w": "is",
+              "t": 9.653
+            },
+            {
+              "w": "a",
+              "t": 9.85
+            },
+            {
+              "w": "current.",
+              "t": 9.943
+            }
+          ]
         }
       ],
-      "speechEnd": 11.713
+      "speechEnd": 10.442
     },
     {
       "file": "scenes/scene-2.js",
@@ -90,20 +278,92 @@
         "duration": 0.6
       },
       "audio": "audio/scene-2.wav",
-      "duration": 8.866,
+      "duration": 7.728,
       "beats": [
         {
-          "t": 0.8,
-          "end": 2.727,
-          "text": "Panels produce direct current."
+          "t": 0.55,
+          "end": 2.477,
+          "text": "Panels produce direct current.",
+          "words": [
+            {
+              "w": "Panels",
+              "t": 0.55
+            },
+            {
+              "w": "produce",
+              "t": 1.014
+            },
+            {
+              "w": "direct",
+              "t": 1.444
+            },
+            {
+              "w": "current.",
+              "t": 1.943
+            }
+          ]
         },
         {
-          "t": 3.006,
-          "end": 7.766,
-          "text": "An inverter switches it to alternating current, the kind your home runs on."
+          "t": 2.988,
+          "end": 6.878,
+          "text": "An inverter switches it to alternating current, the kind your home runs on.",
+          "words": [
+            {
+              "w": "An",
+              "t": 2.988
+            },
+            {
+              "w": "inverter",
+              "t": 3.174
+            },
+            {
+              "w": "switches",
+              "t": 3.708
+            },
+            {
+              "w": "it",
+              "t": 4.126
+            },
+            {
+              "w": "to",
+              "t": 4.242
+            },
+            {
+              "w": "alternating",
+              "t": 4.393
+            },
+            {
+              "w": "current,",
+              "t": 4.904
+            },
+            {
+              "w": "the",
+              "t": 5.508
+            },
+            {
+              "w": "kind",
+              "t": 5.67
+            },
+            {
+              "w": "your",
+              "t": 5.937
+            },
+            {
+              "w": "home",
+              "t": 6.088
+            },
+            {
+              "w": "runs",
+              "t": 6.297
+            },
+            {
+              "w": "on.",
+              "t": 6.576
+            }
+          ]
         }
       ],
-      "speechEnd": 7.766
+      "speechEnd": 6.878
     },
     {
       "file": "scenes/scene-3.js",
@@ -121,20 +381,88 @@
         "duration": 0.5
       },
       "audio": "audio/scene-3.wav",
-      "duration": 9,
+      "duration": 8.904,
       "beats": [
         {
-          "t": 0.8,
-          "end": 2.402,
-          "text": "Output follows the sun."
+          "t": 0.55,
+          "end": 1.978,
+          "text": "Output follows the sun.",
+          "words": [
+            {
+              "w": "Output",
+              "t": 0.55
+            },
+            {
+              "w": "follows",
+              "t": 1.049
+            },
+            {
+              "w": "the",
+              "t": 1.398
+            },
+            {
+              "w": "sun.",
+              "t": 1.514
+            }
+          ]
         },
         {
-          "t": 2.913,
-          "end": 7.58,
-          "text": "It climbs through the morning, peaks around midday, and fades by evening."
+          "t": 2.419,
+          "end": 6.704,
+          "text": "It climbs through the morning, peaks around midday, and fades by evening.",
+          "words": [
+            {
+              "w": "It",
+              "t": 2.419
+            },
+            {
+              "w": "climbs",
+              "t": 2.617
+            },
+            {
+              "w": "through",
+              "t": 2.965
+            },
+            {
+              "w": "the",
+              "t": 3.174
+            },
+            {
+              "w": "morning,",
+              "t": 3.279
+            },
+            {
+              "w": "peaks",
+              "t": 3.882
+            },
+            {
+              "w": "around",
+              "t": 4.173
+            },
+            {
+              "w": "midday,",
+              "t": 4.521
+            },
+            {
+              "w": "and",
+              "t": 5.252
+            },
+            {
+              "w": "fades",
+              "t": 5.508
+            },
+            {
+              "w": "by",
+              "t": 5.902
+            },
+            {
+              "w": "evening.",
+              "t": 6.158
+            }
+          ]
         }
       ],
-      "speechEnd": 7.58
+      "speechEnd": 6.704
     }
   ],
   "poster": 3.2,

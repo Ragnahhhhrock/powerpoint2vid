@@ -32,16 +32,80 @@
       "beats": [
         {
           "t": 0.8,
-          "end": 2.182,
-          "text": "Welcome to Harbour and Co."
+          "end": 2.518,
+          "text": "Welcome to Harbour and Co.",
+          "words": [
+            {
+              "w": "Welcome",
+              "t": 0.8
+            },
+            {
+              "w": "to",
+              "t": 1.346
+            },
+            {
+              "w": "Harbour",
+              "t": 1.508
+            },
+            {
+              "w": "and",
+              "t": 1.845
+            },
+            {
+              "w": "Co.",
+              "t": 1.984
+            }
+          ]
         },
         {
-          "t": 2.507,
-          "end": 4.469,
-          "text": "Here's what your first week looks like."
+          "t": 2.901,
+          "end": 5.676,
+          "text": "Here's what your first week looks like, day by day.",
+          "words": [
+            {
+              "w": "Here's",
+              "t": 2.901
+            },
+            {
+              "w": "what",
+              "t": 3.203
+            },
+            {
+              "w": "your",
+              "t": 3.354
+            },
+            {
+              "w": "first",
+              "t": 3.528
+            },
+            {
+              "w": "week",
+              "t": 3.842
+            },
+            {
+              "w": "looks",
+              "t": 4.074
+            },
+            {
+              "w": "like,",
+              "t": 4.306
+            },
+            {
+              "w": "day",
+              "t": 4.852
+            },
+            {
+              "w": "by",
+              "t": 5.072
+            },
+            {
+              "w": "day.",
+              "t": 5.235
+            }
+          ]
         }
       ],
-      "speechEnd": 4.469
+      "speechEnd": 5.676
     },
     {
       "file": "scenes/scene-1.js",
@@ -59,25 +123,147 @@
         "duration": 0.6
       },
       "audio": "audio/scene-1.wav",
-      "duration": 12.813,
+      "duration": 11.396,
       "beats": [
         {
-          "t": 0.8,
-          "end": 3.296,
-          "text": "On Monday, you'll meet your team and your buddy."
+          "t": 0.55,
+          "end": 2.907,
+          "text": "On Monday, you'll meet your team and your buddy.",
+          "words": [
+            {
+              "w": "On",
+              "t": 0.55
+            },
+            {
+              "w": "Monday,",
+              "t": 0.771
+            },
+            {
+              "w": "you'll",
+              "t": 1.258
+            },
+            {
+              "w": "meet",
+              "t": 1.467
+            },
+            {
+              "w": "your",
+              "t": 1.63
+            },
+            {
+              "w": "team",
+              "t": 1.792
+            },
+            {
+              "w": "and",
+              "t": 2.117
+            },
+            {
+              "w": "your",
+              "t": 2.233
+            },
+            {
+              "w": "buddy.",
+              "t": 2.373
+            }
+          ]
         },
         {
-          "t": 3.737,
-          "end": 5.351,
-          "text": "Midweek is tools training."
+          "t": 3.348,
+          "end": 4.915,
+          "text": "Midweek is tools training.",
+          "words": [
+            {
+              "w": "Midweek",
+              "t": 3.348
+            },
+            {
+              "w": "is",
+              "t": 3.87
+            },
+            {
+              "w": "tools",
+              "t": 4.056
+            },
+            {
+              "w": "training.",
+              "t": 4.416
+            }
+          ]
         },
         {
-          "t": 5.676,
-          "end": 11.713,
-          "text": "On Thursday, you'll shadow a customer call, and Friday ends with a check-in with your manager."
+          "t": 5.426,
+          "end": 10.546,
+          "text": "On Thursday, you'll shadow a customer call, and Friday ends with a check-in with your manager.",
+          "words": [
+            {
+              "w": "On",
+              "t": 5.426
+            },
+            {
+              "w": "Thursday,",
+              "t": 5.658
+            },
+            {
+              "w": "you'll",
+              "t": 6.367
+            },
+            {
+              "w": "shadow",
+              "t": 6.599
+            },
+            {
+              "w": "a",
+              "t": 6.912
+            },
+            {
+              "w": "customer",
+              "t": 6.994
+            },
+            {
+              "w": "call,",
+              "t": 7.435
+            },
+            {
+              "w": "and",
+              "t": 8.085
+            },
+            {
+              "w": "Friday",
+              "t": 8.317
+            },
+            {
+              "w": "ends",
+              "t": 8.77
+            },
+            {
+              "w": "with",
+              "t": 9.037
+            },
+            {
+              "w": "a",
+              "t": 9.199
+            },
+            {
+              "w": "check-in",
+              "t": 9.269
+            },
+            {
+              "w": "with",
+              "t": 9.641
+            },
+            {
+              "w": "your",
+              "t": 9.792
+            },
+            {
+              "w": "manager.",
+              "t": 9.931
+            }
+          ]
         }
       ],
-      "speechEnd": 11.713
+      "speechEnd": 10.546
     },
     {
       "file": "scenes/scene-2.js",
@@ -95,30 +281,102 @@
         "duration": 0.5
       },
       "audio": "audio/scene-2.wav",
-      "duration": 9,
+      "duration": 8.524,
       "beats": [
         {
-          "t": 0.8,
-          "end": 3.285,
-          "text": "Everything we do comes back to three values."
+          "t": 0.55,
+          "end": 2.941,
+          "text": "Everything we do comes back to three values.",
+          "words": [
+            {
+              "w": "Everything",
+              "t": 0.55
+            },
+            {
+              "w": "we",
+              "t": 1.037
+            },
+            {
+              "w": "do",
+              "t": 1.188
+            },
+            {
+              "w": "comes",
+              "t": 1.432
+            },
+            {
+              "w": "back",
+              "t": 1.711
+            },
+            {
+              "w": "to",
+              "t": 1.955
+            },
+            {
+              "w": "three",
+              "t": 2.059
+            },
+            {
+              "w": "values.",
+              "t": 2.315
+            }
+          ]
         },
         {
-          "t": 3.668,
-          "end": 4.747,
-          "text": "Customers first."
+          "t": 3.267,
+          "end": 4.346,
+          "text": "Customers first.",
+          "words": [
+            {
+              "w": "Customers",
+              "t": 3.267
+            },
+            {
+              "w": "first.",
+              "t": 3.835
+            }
+          ]
         },
         {
-          "t": 5.189,
-          "end": 6.129,
-          "text": "Own the outcome."
+          "t": 4.729,
+          "end": 5.67,
+          "text": "Own the outcome.",
+          "words": [
+            {
+              "w": "Own",
+              "t": 4.729
+            },
+            {
+              "w": "the",
+              "t": 4.985
+            },
+            {
+              "w": "outcome.",
+              "t": 5.113
+            }
+          ]
         },
         {
-          "t": 6.303,
-          "end": 7.441,
-          "text": "Keep it simple."
+          "t": 6.053,
+          "end": 6.924,
+          "text": "Keep it simple.",
+          "words": [
+            {
+              "w": "Keep",
+              "t": 6.053
+            },
+            {
+              "w": "it",
+              "t": 6.308
+            },
+            {
+              "w": "simple.",
+              "t": 6.424
+            }
+          ]
         }
       ],
-      "speechEnd": 7.441
+      "speechEnd": 6.924
     },
     {
       "file": "scenes/scene-3.js",
@@ -136,25 +394,111 @@
         "duration": 0.6
       },
       "audio": "audio/scene-3.wav",
-      "duration": 9,
+      "duration": 10.064,
       "beats": [
         {
-          "t": 0.8,
-          "end": 1.798,
-          "text": "Stuck on anything?"
+          "t": 0.55,
+          "end": 1.583,
+          "text": "Stuck on anything?",
+          "words": [
+            {
+              "w": "Stuck",
+              "t": 0.55
+            },
+            {
+              "w": "on",
+              "t": 0.898
+            },
+            {
+              "w": "anything?",
+              "t": 1.049
+            }
+          ]
         },
         {
-          "t": 2.124,
-          "end": 6.233,
-          "text": "Your buddy is your first stop, and the people team is always one message away."
+          "t": 2.024,
+          "end": 6.517,
+          "text": "Your buddy is your first stop, and the people team is always one message away.",
+          "words": [
+            {
+              "w": "Your",
+              "t": 2.024
+            },
+            {
+              "w": "buddy",
+              "t": 2.268
+            },
+            {
+              "w": "is",
+              "t": 2.558
+            },
+            {
+              "w": "your",
+              "t": 2.674
+            },
+            {
+              "w": "first",
+              "t": 2.849
+            },
+            {
+              "w": "stop,",
+              "t": 3.104
+            },
+            {
+              "w": "and",
+              "t": 3.661
+            },
+            {
+              "w": "the",
+              "t": 3.847
+            },
+            {
+              "w": "people",
+              "t": 3.952
+            },
+            {
+              "w": "team",
+              "t": 4.265
+            },
+            {
+              "w": "is",
+              "t": 4.555
+            },
+            {
+              "w": "always",
+              "t": 4.811
+            },
+            {
+              "w": "one",
+              "t": 5.287
+            },
+            {
+              "w": "message",
+              "t": 5.577
+            },
+            {
+              "w": "away.",
+              "t": 5.96
+            }
+          ]
         },
         {
-          "t": 6.617,
-          "end": 7.766,
-          "text": "Welcome aboard."
+          "t": 6.959,
+          "end": 7.864,
+          "text": "Welcome aboard.",
+          "words": [
+            {
+              "w": "Welcome",
+              "t": 6.959
+            },
+            {
+              "w": "aboard.",
+              "t": 7.342
+            }
+          ]
         }
       ],
-      "speechEnd": 7.766
+      "speechEnd": 7.864
     }
   ],
   "poster": 2.4,

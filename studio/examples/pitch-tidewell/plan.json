@@ -32,16 +32,68 @@
       "beats": [
         {
           "t": 0.8,
-          "end": 2.437,
-          "text": "Your support inbox never sleeps."
+          "end": 2.855,
+          "text": "Your support inbox never sleeps.",
+          "words": [
+            {
+              "w": "Your",
+              "t": 0.8
+            },
+            {
+              "w": "support",
+              "t": 1.125
+            },
+            {
+              "w": "inbox",
+              "t": 1.497
+            },
+            {
+              "w": "never",
+              "t": 1.973
+            },
+            {
+              "w": "sleeps.",
+              "t": 2.286
+            }
+          ]
         },
         {
-          "t": 2.483,
-          "end": 3.911,
-          "text": "Neither does Tidewell."
+          "t": 3.064,
+          "end": 5.711,
+          "text": "Neither does Tidewell, your new overnight shift.",
+          "words": [
+            {
+              "w": "Neither",
+              "t": 3.064
+            },
+            {
+              "w": "does",
+              "t": 3.435
+            },
+            {
+              "w": "Tidewell,",
+              "t": 3.656
+            },
+            {
+              "w": "your",
+              "t": 4.271
+            },
+            {
+              "w": "new",
+              "t": 4.48
+            },
+            {
+              "w": "overnight",
+              "t": 4.736
+            },
+            {
+              "w": "shift.",
+              "t": 5.223
+            }
+          ]
         }
       ],
-      "speechEnd": 3.911
+      "speechEnd": 5.711
     },
     {
       "file": "scenes/scene-1.js",
@@ -59,20 +111,116 @@
         "duration": 0.5
       },
       "audio": "audio/scene-1.wav",
-      "duration": 11.559,
+      "duration": 9.864,
       "beats": [
         {
-          "t": 0.8,
-          "end": 5.56,
-          "text": "Tickets pile up overnight, and customers wait hours for a first reply."
+          "t": 0.55,
+          "end": 4.857,
+          "text": "Tickets pile up overnight, and customers wait hours for a first reply.",
+          "words": [
+            {
+              "w": "Tickets",
+              "t": 0.55
+            },
+            {
+              "w": "pile",
+              "t": 0.991
+            },
+            {
+              "w": "up",
+              "t": 1.328
+            },
+            {
+              "w": "overnight,",
+              "t": 1.479
+            },
+            {
+              "w": "and",
+              "t": 2.013
+            },
+            {
+              "w": "customers",
+              "t": 2.28
+            },
+            {
+              "w": "wait",
+              "t": 2.872
+            },
+            {
+              "w": "hours",
+              "t": 3.139
+            },
+            {
+              "w": "for",
+              "t": 3.661
+            },
+            {
+              "w": "a",
+              "t": 3.835
+            },
+            {
+              "w": "first",
+              "t": 3.905
+            },
+            {
+              "w": "reply.",
+              "t": 4.184
+            }
+          ]
         },
         {
-          "t": 5.885,
-          "end": 10.459,
-          "text": "Meanwhile, your team answers the same five questions again and again."
+          "t": 5.24,
+          "end": 9.014,
+          "text": "Meanwhile, your team answers the same five questions again and again.",
+          "words": [
+            {
+              "w": "Meanwhile,",
+              "t": 5.24
+            },
+            {
+              "w": "your",
+              "t": 5.798
+            },
+            {
+              "w": "team",
+              "t": 6.041
+            },
+            {
+              "w": "answers",
+              "t": 6.366
+            },
+            {
+              "w": "the",
+              "t": 6.784
+            },
+            {
+              "w": "same",
+              "t": 6.9
+            },
+            {
+              "w": "five",
+              "t": 7.179
+            },
+            {
+              "w": "questions",
+              "t": 7.469
+            },
+            {
+              "w": "again",
+              "t": 7.98
+            },
+            {
+              "w": "and",
+              "t": 8.352
+            },
+            {
+              "w": "again.",
+              "t": 8.491
+            }
+          ]
         }
       ],
-      "speechEnd": 10.46
+      "speechEnd": 9.014
     },
     {
       "file": "scenes/scene-2.js",
@@ -90,20 +238,120 @@
         "duration": 0.7
       },
       "audio": "audio/scene-2.wav",
-      "duration": 11.327,
+      "duration": 9.353,
       "beats": [
         {
-          "t": 0.8,
-          "end": 4.295,
-          "text": "Tidewell sorts every ticket by topic and urgency."
+          "t": 0.55,
+          "end": 3.673,
+          "text": "Tidewell sorts every ticket by topic and urgency.",
+          "words": [
+            {
+              "w": "Tidewell",
+              "t": 0.55
+            },
+            {
+              "w": "sorts",
+              "t": 1.073
+            },
+            {
+              "w": "every",
+              "t": 1.421
+            },
+            {
+              "w": "ticket",
+              "t": 1.746
+            },
+            {
+              "w": "by",
+              "t": 2.048
+            },
+            {
+              "w": "topic",
+              "t": 2.222
+            },
+            {
+              "w": "and",
+              "t": 2.64
+            },
+            {
+              "w": "urgency.",
+              "t": 2.849
+            }
+          ]
         },
         {
-          "t": 4.573,
-          "end": 10.227,
-          "text": "It drafts the answer from your own help centre, and your team just reviews and sends."
+          "t": 3.882,
+          "end": 8.503,
+          "text": "It drafts the answer from your own help centre, and your team just reviews and sends.",
+          "words": [
+            {
+              "w": "It",
+              "t": 3.882
+            },
+            {
+              "w": "drafts",
+              "t": 4.057
+            },
+            {
+              "w": "the",
+              "t": 4.416
+            },
+            {
+              "w": "answer",
+              "t": 4.567
+            },
+            {
+              "w": "from",
+              "t": 4.904
+            },
+            {
+              "w": "your",
+              "t": 5.078
+            },
+            {
+              "w": "own",
+              "t": 5.252
+            },
+            {
+              "w": "help",
+              "t": 5.45
+            },
+            {
+              "w": "centre,",
+              "t": 5.717
+            },
+            {
+              "w": "and",
+              "t": 6.193
+            },
+            {
+              "w": "your",
+              "t": 6.39
+            },
+            {
+              "w": "team",
+              "t": 6.553
+            },
+            {
+              "w": "just",
+              "t": 6.866
+            },
+            {
+              "w": "reviews",
+              "t": 7.261
+            },
+            {
+              "w": "and",
+              "t": 7.76
+            },
+            {
+              "w": "sends.",
+              "t": 7.946
+            }
+          ]
         }
       ],
-      "speechEnd": 10.227
+      "speechEnd": 8.503
     },
     {
       "file": "scenes/scene-3.js",
@@ -121,20 +369,100 @@
         "duration": 0.6
       },
       "audio": "audio/scene-3.wav",
-      "duration": 8.634,
+      "duration": 8.416,
       "beats": [
         {
-          "t": 0.8,
-          "end": 5.874,
-          "text": "In this example, first reply time fell from over nine hours to just over one."
+          "t": 0.55,
+          "end": 4.939,
+          "text": "In this example, first reply time fell from over nine hours to just over one.",
+          "words": [
+            {
+              "w": "In",
+              "t": 0.55
+            },
+            {
+              "w": "this",
+              "t": 0.713
+            },
+            {
+              "w": "example,",
+              "t": 0.899
+            },
+            {
+              "w": "first",
+              "t": 1.421
+            },
+            {
+              "w": "reply",
+              "t": 1.746
+            },
+            {
+              "w": "time",
+              "t": 2.106
+            },
+            {
+              "w": "fell",
+              "t": 2.408
+            },
+            {
+              "w": "from",
+              "t": 2.663
+            },
+            {
+              "w": "over",
+              "t": 2.907
+            },
+            {
+              "w": "nine",
+              "t": 3.163
+            },
+            {
+              "w": "hours",
+              "t": 3.418
+            },
+            {
+              "w": "to",
+              "t": 3.813
+            },
+            {
+              "w": "just",
+              "t": 3.964
+            },
+            {
+              "w": "over",
+              "t": 4.219
+            },
+            {
+              "w": "one.",
+              "t": 4.509
+            }
+          ]
         },
         {
-          "t": 6.199,
-          "end": 7.534,
-          "text": "Book a demo today."
+          "t": 5.113,
+          "end": 6.216,
+          "text": "Book a demo today.",
+          "words": [
+            {
+              "w": "Book",
+              "t": 5.113
+            },
+            {
+              "w": "a",
+              "t": 5.368
+            },
+            {
+              "w": "demo",
+              "t": 5.438
+            },
+            {
+              "w": "today.",
+              "t": 5.775
+            }
+          ]
         }
       ],
-      "speechEnd": 7.534
+      "speechEnd": 6.216
     }
   ],
   "poster": 2.6,
