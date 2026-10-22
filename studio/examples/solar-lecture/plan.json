@@ -1,0 +1,141 @@
+{
+  "title": "How solar panels work (lecture example)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0b1a2b",
+      "night": "#050d18",
+      "sun": "#ffb547",
+      "amber": "#ff7a1a",
+      "sky": "#3aa0ff",
+      "cell": "#16325c",
+      "paper": "#fbf6ec",
+      "muted": "#8fa3bd"
+    },
+    "motion": "Documentary science: slow camera drift, light that behaves like light (glow, bloom, streaks), particles with physical easing. Diagrams build exactly as the narrator names each part.",
+    "story": "A lecture deck becomes a short science explainer. Night-sky stage, a sun that recurs as a motif, one warm paper scene for the circuit diagram."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "Sunlight carries energy in tiny packets called photons. This is how a solar panel turns them into electricity.",
+      "minDuration": 9,
+      "slide": {
+        "title": "How solar panels work",
+        "text": "Physics 101 \u00b7 Week 6",
+        "notes": "Sunlight carries energy in tiny packets called photons. This is how a solar panel turns them into electricity.",
+        "image": "assets/slide-1.png"
+      },
+      "storyboard": "dark sky; a sun rises from below frame with a bloom. On 'photons' streaks of light rain diagonally onto a solar panel that tilts into view in 3D; on 'electricity' the panel's cells light up row by row and the title typesets over it.",
+      "audio": "audio/scene-0.wav",
+      "duration": 9,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.399,
+          "text": "Sunlight carries energy in tiny packets called photons."
+        },
+        {
+          "t": 4.679,
+          "end": 7.512,
+          "text": "This is how a solar panel turns them into electricity."
+        }
+      ],
+      "speechEnd": 7.512
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "When a photon hits the silicon, it knocks an electron loose. The cell's built-in electric field pushes those electrons one way, and that flow is a current.",
+      "minDuration": 7,
+      "slide": {
+        "title": "Inside a silicon cell",
+        "text": "Photons hit the silicon. Electrons are knocked loose. The cell's electric field pushes them one way",
+        "notes": "When a photon hits the silicon, it knocks an electron loose. The cell's built-in electric field pushes those electrons one way, and that flow is a current.",
+        "image": "assets/slide-2.png"
+      },
+      "storyboard": "zoom into a silicon lattice of glowing atoms. A photon streak hits on 'photon'; an electron pops free on 'loose'. On 'electric field' chevrons sweep across; on 'current' many electrons stream right in a river of light with a label.",
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.7
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 11.12,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.48,
+          "text": "When a photon hits the silicon, it knocks an electron loose."
+        },
+        {
+          "t": 4.76,
+          "end": 10.02,
+          "text": "The cell's built-in electric field pushes those electrons one way, and that flow is a current."
+        }
+      ],
+      "speechEnd": 10.02
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "Panels produce direct current. An inverter switches it to alternating current, the kind your home runs on.",
+      "minDuration": 7,
+      "slide": {
+        "title": "From panel to power point",
+        "text": "Panels make direct current (DC). An inverter converts it to AC. AC runs your home",
+        "notes": "Panels produce direct current. An inverter switches it to alternating current, the kind your home runs on.",
+        "image": "assets/slide-3.png"
+      },
+      "storyboard": "warm paper scene, engineering-diagram style. Panel, inverter and house are drawn as line art; a straight DC line flows from the panel on 'direct current', becomes a sine wave through the inverter on 'alternating', and the house windows light up on 'home'.",
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 8.182,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 2.518,
+          "text": "Panels produce direct current."
+        },
+        {
+          "t": 2.798,
+          "end": 7.082,
+          "text": "An inverter switches it to alternating current, the kind your home runs on."
+        }
+      ],
+      "speechEnd": 7.082
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Output follows the sun. It climbs through the morning, peaks around midday, and fades by evening.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Output across a sunny day",
+        "text": "6am: 0.2; 8am: 1.4; 10am: 3.1; 12pm: 3.9; 2pm: 3.5; 4pm: 2.0; 6pm: 0.3 (Power (kW))",
+        "notes": "Output follows the sun. It climbs through the morning, peaks around midday, and fades by evening.",
+        "image": "assets/slide-4.png"
+      },
+      "storyboard": "the plain line chart is shown, then the stage turns to a dusk-to-day sky. The sun travels an arc while the real data curve draws beneath it in sync; area fills amber; 'peaks' pins 3.9 kW at 12pm; on 'fades' the sky dims and the lecture title card settles.",
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.5
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 9,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 2.356,
+          "text": "Output follows the sun."
+        },
+        {
+          "t": 2.636,
+          "end": 6.931,
+          "text": "It climbs through the morning, peaks around midday, and fades by evening."
+        }
+      ],
+      "speechEnd": 6.931
+    }
+  ],
+  "poster": 3.2
+}

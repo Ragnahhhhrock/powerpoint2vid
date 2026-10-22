@@ -91,8 +91,8 @@ HEADER = """<a class="skip" href="#main">Skip to content</a>
       <span>PowerPoint<b>2Vid</b></span>
     </a>
     <nav class="nav" aria-label="Primary">
-      <a href="/#how">How to convert</a>
-      <a href="/#features">Features</a>
+      <a href="/#showcase">Showcase</a>
+      <a href="/#how">How Pro works</a>
       <a href="/pricing">Pricing</a>
       <a href="/blog/" aria-current="page">Blog</a>
     </nav>
@@ -102,7 +102,7 @@ HEADER = """<a class="skip" href="#main">Skip to content</a>
 
 FOOTER = """<footer class="site-footer">
   <div class="wrap">
-    <div>© 2026 PowerPoint2Vid, the online PowerPoint to video converter · <a href="/pricing">Pricing</a> · <a href="/blog/">Blog</a> · <a href="mailto:contact@powerpoint2vid.com">contact@powerpoint2vid.com</a></div>
+    <div>© 2026 PowerPoint2Vid, the online PowerPoint to video converter · <a href="/pricing">Pricing</a> · <a href="/basic">Basic converter</a> · <a href="/blog/">Blog</a> · <a href="mailto:contact@powerpoint2vid.com">contact@powerpoint2vid.com</a></div>
     <div>another <a href="https://malgordon.com/" rel="noopener">Mal Gordon</a> creation</div>
   </div>
 </footer>
@@ -176,9 +176,9 @@ def post_page(p, body_html, toc, related):
       <aside class="post-cta" aria-label="Try PowerPoint2Vid">
         <p class="post-cta__eyebrow">PowerPoint to video converter</p>
         <h2>Turn your next deck into an extraordinary video</h2>
-        <p>Drop in a .pptx and your speaker notes become the narration. Claude Opus 5.5 directs the video, turning each slide into an animated scene.</p>
+        <p>On Pro, Claude Opus 5.5 directs your deck: a tighter story, every slide redesigned as an animated scene, timed to your narration.</p>
         <div class="post-cta__actions">
-          <a class="btn btn--accent" href="/#app" data-cta="blog_post_convert">Convert PowerPoint to video</a>
+          <a class="btn btn--accent" href="/#showcase" data-cta="blog_post_showcase">See what Pro makes</a>
           <a class="btn btn--ghost" href="/pricing" data-cta="blog_post_pricing">See pricing</a>
         </div>
       </aside>
@@ -225,7 +225,7 @@ def index_page(posts):
         <h2>Got a deck? Make it a video.</h2>
         <p>The online PowerPoint to video converter that narrates your speaker notes, upgrades your slides into animated scenes and adds captions. Directed by Claude Opus 5.5.</p>
       </div>
-      <a class="btn btn--accent" href="/#app" data-cta="blog_index_convert">Convert PowerPoint to video</a>
+      <a class="btn btn--accent" href="/#showcase" data-cta="blog_index_showcase">Watch the Pro showcase</a>
     </div>
   </section>
 </main>

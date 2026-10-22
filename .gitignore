@@ -4,3 +4,4 @@ studio/node_modules/
 studio/examples/*/out/
 studio/examples/*/audio/
 studio/examples/*/scenes/*.bak
+studio/examples/*/render*.log

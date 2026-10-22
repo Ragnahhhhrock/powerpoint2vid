@@ -1,0 +1,161 @@
+{
+  "title": "Harbour and Co new starter induction (fictional company)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#1d1a16",
+      "night": "#13202c",
+      "navy": "#1f3a5f",
+      "red": "#d9483b",
+      "ochre": "#e8a33d",
+      "paper": "#f4efe4",
+      "sea": "#3f8fa6",
+      "muted": "#8a8170"
+    },
+    "motion": "Paper and ink: printed-matter feel, hand-drawn lines that draw on, stamps that thud with a small shake, paper cards with real shadows, gentle parallax. Calm and welcoming, never slick.",
+    "story": "A standard HR induction deck becomes a warm welcome film. Harbour motif (waves, a lighthouse beam) ties the scenes together. Ends on a friendly sign-off."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "Welcome to Harbour and Co. Here's what your first week looks like.",
+      "minDuration": 7,
+      "slide": {
+        "title": "Welcome to Harbour & Co",
+        "text": "New starter induction",
+        "notes": "Welcome to Harbour and Co. Here's what your first week looks like.",
+        "image": "assets/slide-1.png"
+      },
+      "storyboard": "paper stage with layered ink-drawn waves drifting. A lighthouse beam sweeps; on 'Welcome' the headline is printed in, and an ink underline draws itself. On 'first week' a paper calendar card slides up.",
+      "audio": "audio/scene-0.wav",
+      "duration": 7,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 2.495,
+          "text": "Welcome to Harbour and Co."
+        },
+        {
+          "t": 2.775,
+          "end": 4.749,
+          "text": "Here's what your first week looks like."
+        }
+      ],
+      "speechEnd": 4.749
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "On Monday, you'll meet your team and your buddy. Midweek is tools training. On Thursday, you'll shadow a customer call, and Friday ends with a check-in with your manager.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Your first week",
+        "text": "Mon: Meet your team and buddy. Tue-Wed: Systems and tools training. Thu: Shadow a customer call. Fri: Check-in with your manager",
+        "notes": "On Monday, you'll meet your team and your buddy. Midweek is tools training. On Thursday, you'll shadow a customer call, and Friday ends with a check-in with your manager.",
+        "image": "assets/slide-2.png"
+      },
+      "storyboard": "a hand-drawn route line runs left to right like a voyage chart through five day stops; a little boat travels it. Each day card pops on its spoken day with an ink icon (people, laptop, headset, coffee).",
+      "transition": {
+        "type": "wipeleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 11.609,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.319,
+          "text": "On Monday, you'll meet your team and your buddy."
+        },
+        {
+          "t": 3.599,
+          "end": 5.143,
+          "text": "Midweek is tools training."
+        },
+        {
+          "t": 5.423,
+          "end": 10.509,
+          "text": "On Thursday, you'll shadow a customer call, and Friday ends with a check-in with your manager."
+        }
+      ],
+      "speechEnd": 10.509
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "Everything we do comes back to three values. Customers first. Own the outcome. Keep it simple.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Our three values",
+        "text": "Customers first. Own the outcome. Keep it simple",
+        "notes": "Everything we do comes back to three values. Customers first. Own the outcome. Keep it simple.",
+        "image": "assets/slide-3.png"
+      },
+      "storyboard": "three big ink stamps slam down one per value on the spoken words, each with a small shake and ink splatter, numbered 1-2-3 in red.",
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.5
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 9,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.424,
+          "text": "Everything we do comes back to three values."
+        },
+        {
+          "t": 3.704,
+          "end": 4.737,
+          "text": "Customers first."
+        },
+        {
+          "t": 5.017,
+          "end": 6.027,
+          "text": "Own the outcome."
+        },
+        {
+          "t": 6.307,
+          "end": 7.132,
+          "text": "Keep it simple."
+        }
+      ],
+      "speechEnd": 7.132
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Stuck on anything? Your buddy is your first stop, and the people team is always one message away. Welcome aboard.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Need help?",
+        "text": "Ask your buddy first. The people team is one message away. Welcome aboard",
+        "notes": "Stuck on anything? Your buddy is your first stop, and the people team is always one message away. Welcome aboard.",
+        "image": "assets/slide-4.png"
+      },
+      "storyboard": "two paper speech bubbles with ink avatars (Buddy, People team) pop on their words, joined by a dotted line to 'you'. On 'Welcome aboard' a lighthouse beam sweeps across and the sign-off typesets with the Harbour and Co mark.",
+      "transition": {
+        "type": "smoothup",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 9,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 1.787,
+          "text": "Stuck on anything?"
+        },
+        {
+          "t": 2.067,
+          "end": 6.455,
+          "text": "Your buddy is your first stop, and the people team is always one message away."
+        },
+        {
+          "t": 6.735,
+          "end": 7.745,
+          "text": "Welcome aboard."
+        }
+      ],
+      "speechEnd": 7.745
+    }
+  ],
+  "poster": 2.4
+}

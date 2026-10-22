@@ -1,0 +1,24 @@
+{
+  "title": "Tidewell sales pitch (fictional company, example data)",
+  "brief": {
+    "font": "Inter",
+    "palette": {"ink": "#10201c", "night": "#0a1714", "teal": "#0fa89a", "mint": "#5eead4", "coral": "#ff6b4a", "paper": "#f5f3ee", "card": "#ffffff", "muted": "#6b7c77"},
+    "motion": "Product launch: warm canvas, springy UI reveals with a small overshoot, a cursor that acts, crisp counters. Camera eases in towards whatever is being said.",
+    "story": "A plain sales deck becomes a product launch film for a fictional helpdesk tool. Opens on a dark overflowing inbox (the pain), turns light for the product, ends on a bold result."
+  },
+  "poster": 2.6,
+  "slides": [
+    {"cover": true, "title": "Tidewell", "bullets": ["Customer support, without the backlog"],
+     "notes": "Your support inbox never sleeps. Neither does Tidewell.", "minDuration": 7,
+     "storyboard": "night stage, a phone-style notification stack keeps arriving and piling up. On 'Neither' a wave of teal light sweeps through, the notifications fold away and the Tidewell wordmark forms."},
+    {"title": "The problem", "bullets": ["Tickets pile up overnight", "Customers wait hours for a reply", "Agents answer the same questions again and again"],
+     "notes": "Tickets pile up overnight, and customers wait hours for a first reply. Meanwhile, your team answers the same five questions again and again.", "transition": {"type": "fadeblack", "duration": 0.5},
+     "storyboard": "a ticket queue counter climbs as a clock spins through the night; a 'waiting' timer ticks up in coral on 'hours'. On 'same five questions' five identical question cards repeat in a loop, stamped 'again'."},
+    {"title": "How Tidewell works", "bullets": ["Sorts every ticket by topic and urgency", "Drafts answers from your help centre", "Your team reviews and sends"],
+     "notes": "Tidewell sorts every ticket by topic and urgency. It drafts the answer from your own help centre, and your team just reviews and sends.", "transition": {"type": "circleopen", "duration": 0.7},
+     "storyboard": "light canvas, product UI. Tickets fly into three labelled lanes on 'sorts'; urgency pills light on 'urgency'. A reply drafts itself with help-centre article chips on 'help centre'; a cursor clicks Send on 'sends' and a green tick blooms."},
+    {"title": "Results", "chart": {"type": "column", "series": "First reply time (hours)", "categories": ["Before", "After"], "values": [9.4, 1.2]},
+     "notes": "In this example, first reply time fell from over nine hours to just over one. Book a demo today.", "transition": {"type": "smoothleft", "duration": 0.6}, "minDuration": 8,
+     "storyboard": "two giant bars on dark: 'Before' rises tall in coral to 9.4h, 'After' snaps down to 1.2h in teal on 'just over one'; a big '-87%' lands. On 'Book a demo' a button lands and a cursor clicks it. Small 'Example data · fictional company' label."}
+  ]
+}
