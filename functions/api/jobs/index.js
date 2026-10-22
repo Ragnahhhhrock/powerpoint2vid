@@ -1,14 +1,14 @@
-/* POST /api/jobs   body = the .pptx file (Content-Type: application/octet-stream), header x-filename, optional x-direction
+/* POST /api/jobs   body = the .pptx file (Content-Type: application/octet-stream), header x-filename, optional x-direction, x-voice
  *                  -> 202 {job, usage}      GET /api/jobs -> {jobs, usage}
  * Pro only; counts one video against the monthly allowance (refunded if the job fails). */
 import { json, newId } from '../../_lib/auth.js';
-import { MAX_BYTES, requirePro, runnerError, runner, usage, addUsage, pubJob } from '../../_lib/jobs.js';
+import { MAX_BYTES, requirePro, runnerError, runner, usage, addUsage, pubJob, voiceId, VOICES } from '../../_lib/jobs.js';
 
 export async function onRequestGet({ request, env }) {
   const a = await requirePro(request, env); if (a.res) return a.res;
   const ids = (await env.ACCOUNTS.get('jobs:' + a.uid, 'json')) || [];
   const jobs = (await Promise.all(ids.slice(0, 20).map((id) => env.ACCOUNTS.get('job:' + id, 'json')))).filter(Boolean).map(pubJob);
-  return json({ jobs, usage: await usage(env, a.uid) });
+  return json({ jobs, usage: await usage(env, a.uid), voices: env.ELEVENLABS_API_KEY ? VOICES : [] });
 }
 
 export async function onRequestPost({ request, env }) {
@@ -30,6 +30,10 @@ export async function onRequestPost({ request, env }) {
   const headers = { 'content-type': 'application/octet-stream' };
   const dir = (request.headers.get('x-direction') || '').trim().slice(0, 500);
   if (dir) headers['x-direction'] = dir.replace(/[\r\n]+/g, ' ');
+  if (env.ELEVENLABS_API_KEY) {
+    headers['x-voice'] = voiceId(request.headers.get('x-voice'));
+    headers['x-tts-key'] = env.ELEVENLABS_API_KEY.trim();
+  }
   let r;
   try { r = await runner(env, '/jobs/' + id, { method: 'PUT', body, headers }); } catch { r = null; }
   if (!r || r.status !== 202) return json({ error: 'We could not start your video. Please try again in a minute.' }, 502);

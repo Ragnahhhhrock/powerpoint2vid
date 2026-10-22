@@ -5,7 +5,7 @@ Server-side pipeline that turns ordinary slides into extraordinary explainer vid
 | File | Does |
 |---|---|
 | `runtime/` | Scene runtime: `scene.html`, `scene-runtime.js` (the `P2V.scene(ctx)` contract), GSAP |
-| `voice.py` | Narration per scene (Piper locally), sentence beats measured from real audio |
+| `voice.py` | Narration per scene: ElevenLabs when `ELEVENLABS_API_KEY` is set (voice via `P2V_TTS_VOICE`), Piper otherwise or on failure; sentence beats from real audio timestamps |
 | `render.mjs` | Frame-by-frame render in headless Chromium (`__seek(t)` per frame), transitions, audio mix, captions, poster, review keyframes |
 | `director.mjs` | Opus 5.5 passes: story, scenes, review loop, then final render |
 | `prompts/` | System prompts for the story, scene and review passes |

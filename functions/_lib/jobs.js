@@ -4,11 +4,23 @@
  *   RUNNER_URL      base URL of the runner, e.g. https://runner.powerpoint2vid.com
  *   RUNNER_SECRET   shared secret the runner expects in x-p2v-secret
  *   MONTHLY_VIDEOS  (optional) videos per Pro subscriber per month, default 10
+ *   ELEVENLABS_API_KEY (optional secret) narration voices; sent to the runner with each job. Without it, the local voice.
  * KV keys: job:<id> -> {id, uid, name, createdAt, status, step, pct, slides, degraded, charged}
  *          jobs:<uid> -> [id, ...] newest first (max 50)   usage:<uid>:<YYYY-MM> -> number */
 import { json, sessionUid, getSub, isAdmin, configError } from './auth.js';
 
 export const MAX_BYTES = 50 * 1048576;
+
+/* Narrator voices offered in /studio (ElevenLabs premade voices). First one is the default. */
+export const VOICES = [
+  { id: 'JBFqnCBsd6RMkjVDRZzb', name: 'George', desc: 'British, warm and measured' },
+  { id: 'IKne3meq5aSn9XLyUdCD', name: 'Charlie', desc: 'Australian, relaxed and friendly' },
+  { id: 'XrExE9yKIg1WjnnlVkGX', name: 'Matilda', desc: 'American, warm and clear' },
+  { id: 'Xb7hH8MSUJpSbSDYk0k2', name: 'Alice', desc: 'British, confident and crisp' },
+  { id: 'nPczCjzI2devNBz1zQrb', name: 'Brian', desc: 'American, deep and calm' },
+  { id: 'EXAVITQu4vr4xnSDxMaL', name: 'Sarah', desc: 'American, bright and upbeat' },
+];
+export const voiceId = (v) => (VOICES.find((x) => x.id === v) || VOICES[0]).id;
 export const ID_RE = /^[0-9a-f]{24}$/;
 export const monthKey = (uid, d = new Date()) => `usage:${uid}:${d.toISOString().slice(0, 7)}`;
 export const allowance = (env) => Math.max(0, parseInt(env.MONTHLY_VIDEOS || '10', 10) || 10);

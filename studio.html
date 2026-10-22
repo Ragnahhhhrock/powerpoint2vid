@@ -53,6 +53,10 @@
               <label for="dir">Direction for the director <span class="muted">(optional)</span></label>
               <input id="dir" type="text" maxlength="500" placeholder="e.g. Confident and upbeat. Keep it under two minutes.">
             </div>
+            <div class="field" id="voiceField" hidden>
+              <label for="voice">Narrator voice</label>
+              <select id="voice"></select>
+            </div>
             <p class="form-error" id="err" role="alert" hidden></p>
             <button class="btn" id="go" type="submit">Make my video</button>
             <span class="muted" id="quota" style="margin-left:12px"></span>
@@ -108,8 +112,16 @@
     clearTimeout(timer);
     if (busy.length) timer = setTimeout(function () { Promise.all(busy.map(function (j) { return fetch('/api/jobs/' + j.id, { credentials: 'same-origin' }); })).then(load); }, 4000);
   }
+  function voices(list) {
+    var sel = $('voice'); if (!list || !list.length || sel.options.length) return;
+    var saved = null; try { saved = localStorage.getItem('p2v-voice'); } catch (e) {}
+    sel.innerHTML = list.map(function (v) { return '<option value="' + esc(v.id) + '">' + esc(v.name) + ' \u2013 ' + esc(v.desc) + '</option>'; }).join('');
+    if (saved && list.some(function (v) { return v.id === saved; })) sel.value = saved;
+    sel.onchange = function () { try { localStorage.setItem('p2v-voice', sel.value); } catch (e) {} };
+    $('voiceField').hidden = false;
+  }
   function load() {
-    return fetch('/api/jobs', { credentials: 'same-origin' }).then(function (r) { return r.json(); }).then(function (d) { if (d.jobs) show(d.jobs, d.usage); });
+    return fetch('/api/jobs', { credentials: 'same-origin' }).then(function (r) { return r.json(); }).then(function (d) { voices(d.voices); if (d.jobs) show(d.jobs, d.usage); });
   }
 
   $('up').onsubmit = function (e) {
@@ -118,7 +130,7 @@
     if (!f) { err.textContent = 'Choose a .pptx file first.'; err.hidden = false; return; }
     if (!/\.pptx$/i.test(f.name)) { err.textContent = 'That is not a .pptx file. In Google Slides, use File > Download > Microsoft PowerPoint.'; err.hidden = false; return; }
     $('go').disabled = true; $('go').textContent = 'Uploading\u2026';
-    fetch('/api/jobs', { method: 'POST', credentials: 'same-origin', body: f, headers: { 'Content-Type': 'application/octet-stream', 'x-filename': encodeURIComponent(f.name), 'x-direction': $('dir').value.trim() } })
+    fetch('/api/jobs', { method: 'POST', credentials: 'same-origin', body: f, headers: { 'Content-Type': 'application/octet-stream', 'x-filename': encodeURIComponent(f.name), 'x-direction': $('dir').value.trim(), 'x-voice': $('voice').value || '' } })
       .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
       .then(function (res) {
         if (!res.ok) throw new Error(res.j.error || 'Something went wrong.');

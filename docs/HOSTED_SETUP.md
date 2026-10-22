@@ -18,14 +18,22 @@ Pieces: the **site** (Cloudflare Pages, already live) calls a **runner** (this r
    `npx wrangler secret put RUNNER_SECRET` (any long random string)
    `npx wrangler secret put ANTHROPIC_API_KEY` (your Anthropic key; skip it and jobs use the plain fallback design, no Opus)
 3. Note the Worker URL (`https://p2v-runner.<your-subdomain>.workers.dev`).
-4. **Pages > powerpoint2vid > Settings > Variables and Secrets**, add: `RUNNER_URL` (the Worker URL), `RUNNER_SECRET` (same value as step 2, as a Secret), optional `MONTHLY_VIDEOS` (default 10). Redeploy.
+4. **Pages > powerpoint2vid > Settings > Variables and Secrets**, add: `RUNNER_URL` (the Worker URL), `RUNNER_SECRET` (same value as step 2, as a Secret), optional `MONTHLY_VIDEOS` (default 10), and `ELEVENLABS_API_KEY` (Secret, for narration; done Oct 2026). Redeploy.
 5. Log in with a Pro account, open `/studio`, upload a small deck.
+
+## Narration voices (ElevenLabs)
+- `ELEVENLABS_API_KEY` lives in Pages. The job API sends it to the runner with each job (over HTTPS, behind `RUNNER_SECRET`); the runner keeps it in memory for that job only and never returns it. A runner secret of the same name, if set, takes priority.
+- Key settings in ElevenLabs: restricted, Text to Speech = Access, Voices = Read, everything else No Access, monthly credit cap a little under the plan's credits.
+- Voices offered in `/studio` are the list in `functions/_lib/jobs.js` (`VOICES`, first = default). Change the model with runner env `ELEVENLABS_MODEL` (default `eleven_multilingual_v2`).
+- `studio/voice.py` makes one request per scene with character timestamps, so sentence beats are exact; responses are cached on the runner so retries don't spend credits twice.
+- If ElevenLabs fails (quota, outage), the whole video falls back to the local Piper voice so the job still finishes (`voiceFallback` in plan.json).
+- Credits are roughly one per character of narration: a 10-slide deck is about 2,000 to 5,000.
 
 ## Known limits (be honest with customers)
 - Finished videos live on the runner for about 6 hours (`JOB_TTL_HOURS`), then expire. Persisting to R2 is the next step.
 - One video renders at a time (`P2V_CONCURRENCY=1`); a 5-slide deck took ~9 minutes of rendering on a 2-core machine in testing. Scale with `max_instances` and a queue before heavy use.
 - Cloudflare Containers wiring (`workers/runner`) was written against the docs and has not been deployed from here; the runner itself was tested locally.
-- GSAP (no-charge licence) and Piper voice (en_US-lessac) licences should be re-checked before launch.
+- GSAP (no-charge licence) and Piper voice (en_US-lessac, now fallback only) licences should be re-checked before launch.
 - Before turning this on publicly: add a privacy page and update the homepage FAQ line "Everything runs in your browser".
 
 ## Deploying from GitHub instead of a terminal

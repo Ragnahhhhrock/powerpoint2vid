@@ -1,6 +1,7 @@
 /* Cloudflare Worker that hosts the studio runner (studio/server.mjs) in a Cloudflare Container.
  * Pages Functions call this Worker over HTTPS (RUNNER_URL); it forwards every request to one container instance.
- * Secrets (wrangler secret put ...): RUNNER_SECRET (required), ANTHROPIC_API_KEY (enables Opus; without it jobs use the fallback). */
+ * Secrets (wrangler secret put ...): RUNNER_SECRET (required), ANTHROPIC_API_KEY (enables Opus; without it jobs use the fallback),
+ * ELEVENLABS_API_KEY (optional: otherwise the key comes from the Pages job API with each job, or the local voice is used). */
 import { Container } from '@cloudflare/containers';
 
 export class Runner extends Container {
@@ -8,7 +9,7 @@ export class Runner extends Container {
   sleepAfter = '45m';           // stays warm while jobs are polled; an idle container sleeps and its files go with it
   constructor(ctx, env) {
     super(ctx, env);
-    this.envVars = { RUNNER_SECRET: env.RUNNER_SECRET, ANTHROPIC_API_KEY: env.ANTHROPIC_API_KEY || '', P2V_CONCURRENCY: '1' };
+    this.envVars = { RUNNER_SECRET: env.RUNNER_SECRET, ANTHROPIC_API_KEY: env.ANTHROPIC_API_KEY || '', ELEVENLABS_API_KEY: env.ELEVENLABS_API_KEY || '', P2V_CONCURRENCY: '1' };
   }
 }
 
