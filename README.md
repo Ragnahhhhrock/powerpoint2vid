@@ -60,7 +60,7 @@ Fired from `js/app.js` via `gtag('event', ...)`. No file names or slide content 
 | `cta_click` / `contact_click` / `outbound_click` | Hero CTA, mailto, external links | `location`, `link_domain` |
 
 ## Homepage explainer video
-The hero autoplays `assets/example/explainer.mp4` muted on load (WebM fallback, captions in `explainer-captions.vtt`); "Play with sound" restarts it with narration. It is rendered by `scripts/make-styled-explainer.py`, which builds the 5-slide deck (`explainer-deck.pptx`), narrates it with Piper, then draws every frame in headless Chromium with the app's own parser and renderer in a chosen video style (default `keynote`), so it matches a real export. Files under `/assets/*` are cached immutably (see `_headers`), so if you regenerate the video, rename the files or purge the Cloudflare cache.
+The hero autoplays `assets/example-v3/explainer-v3.mp4` muted on load (WebM fallback, captions in `explainer-v3-captions.vtt`); "Play with sound" restarts it with narration. It is the Opus 5.5-directed example: scenes were written by Opus 5.5 and rendered with the `studio/` pipeline (source in `studio/examples/explainer-v3/`; render scenes 0-3 before scene 4, which uses stills from them). The older Basic-renderer build (`scripts/make-styled-explainer.py`, `assets/example/`) is no longer used on the homepage. Files under `/assets/*` are cached immutably (see `_headers`), so if you regenerate the video, rename the files or purge the Cloudflare cache.
 
 ## Regenerate share images
 `python3 scripts/make-images.py` (needs Pillow and the Inter font).

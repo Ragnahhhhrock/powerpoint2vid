@@ -11,8 +11,8 @@
     explainer: {
       title: 'Product explainer',
       desc: 'Five ordinary office slides, including a default bar chart. Pro rewrote the story, staged each slide as a scene and turned the chart into the moment the video builds to.',
-      base: '/assets/example-v2/explainer-v2', mp4: '/assets/example-v2/explainer-v2.mp4', webm: '/assets/example-v2/explainer-v2.webm',
-      poster: '/assets/example-v2/explainer-v2-poster.jpg', vtt: '/assets/example-v2/explainer-v2-captions.vtt', deck: '/assets/example-v2/explainer-v2-deck.pptx',
+      base: '/assets/example-v3/explainer-v3', mp4: '/assets/example-v3/explainer-v3.mp4', webm: '/assets/example-v3/explainer-v3.webm',
+      poster: '/assets/example-v3/explainer-v3-poster.jpg', vtt: '/assets/example-v3/explainer-v3-captions.vtt', deck: '/assets/example-v3/explainer-v3-deck.pptx',
       slides: 5, slideDir: '/assets/showcase/explainer'
     },
     lecture: {
