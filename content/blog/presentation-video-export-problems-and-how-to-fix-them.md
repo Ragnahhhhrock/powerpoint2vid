@@ -8,69 +8,66 @@ pillar: convert
 persona: all
 ---
 
-You hit export, wait for the recording, and the result is not quite right. The voice is missing, a font looks odd, or the file will not play where you need it. Most PowerPoint video export problems come from a handful of causes, and nearly all of them have a quick fix.
+You hit export, wait for the result, and the video is not quite right. The voice is missing, a font looks odd, or the file will not play where you need it. Most PowerPoint video export problems come from a handful of causes, and nearly all of them have a quick fix.
 
-This guide covers the problems people run into most when turning a deck into video in the browser, and what to do about each one.
+This guide covers the problems people run into most when turning a deck into video, and what to do about each one.
 
 ## Before you troubleshoot
 
 Run through three basics first. They solve a surprising number of issues.
 
-1. **Use an up-to-date browser.** Recording and speech features improve with browser updates.
-2. **Preview before you export.** If something is wrong in the preview, it will be wrong in the video.
-3. **Start with a short test.** Export a three-slide copy of your deck to check settings before recording the whole thing.
+1. **Check the deck itself.** If something is wrong in the slides or the notes, it will be wrong in the video.
+2. **Watch the whole file.** Play the finished video from start to finish, with sound on, in a normal media player.
+3. **Start with a short test.** Convert a three-slide copy of your deck to check fonts, images and narration before you commit to the whole thing.
 
 ## Common PowerPoint video export problems
 
 ### The video has no sound
 
-This is the most common issue. The preview speaks, but the exported video is silent.
-
-**Cause:** Narration is not being captured into the recording.
+**Cause:** The slides have no speaker notes, or the narration is switched off, or the player is muted.
 
 **Fix:**
-- Make sure "record narration into the video" is ticked.
-- When the browser asks what to share, choose "this tab".
-- In Chrome, tick "share tab audio". Without it, the video records without sound.
-- Check the narration script setting is not set to "no narration".
+- Check that each slide has the narration you expect in its speaker notes.
+- Check that narration has not been turned off for the video.
+- Play the file in a different player, and check the system volume.
 
 ### The video is choppy or skips
 
-**Cause:** The browser records in real time. If the tab goes into the background or the computer is busy, frames can drop.
+**Cause:** Usually the playback device, not the file. Very large images, long videos and slow connections can all make playback stutter.
 
 **Fix:**
-- Keep the PowerPoint2Vid tab in the foreground for the whole export.
-- Close other heavy tabs and apps, especially other video.
-- Plug in a laptop, as some devices slow down on battery.
-- Do not switch windows or let the screen sleep during the recording.
+- Download the video and play it from your computer rather than streaming it.
+- Compress very large images in the deck before converting.
+- Close other heavy apps and tabs, especially other video.
+- Try a different player or device to see if the stutter follows the file.
 
 ### Slides go by too fast
 
 **Cause:** Timing follows the speech. A slide with a short note, or no note, moves on quickly.
 
 **Fix:**
-- Raise the "minimum seconds per slide" setting.
 - Add a sentence or two to the speaker notes of slides that need more time.
 - Slow the speaking speed slightly.
+- Split a dense slide into two, each with its own narration.
 
 ### Slides take too long
 
-**Cause:** Long speaker notes, or slide text being read aloud.
+**Cause:** Long speaker notes, or too much text being read aloud.
 
 **Fix:**
-- Check the narration script setting. "Speaker notes, else slide text" will read slide text on slides with no notes. Choose "speaker notes only" if you want those slides silent.
 - Trim long notes into shorter sentences.
+- Cut anything the slide already shows.
 - Increase the speaking speed a little.
 
 ### The voice mispronounces words
 
-**Cause:** Text-to-speech reads exactly what is written.
+**Cause:** A synthetic voice reads exactly what is written.
 
 **Fix:**
 - Spell out acronyms or write them as they sound: "S-Q-L" or "sequel", depending on how your audience says it.
 - Write numbers as words where it helps: "twenty twenty-six", "about three thousand".
 - Remove symbols and URLs from notes.
-- Try a different voice. Available voices vary by device and browser, and some handle certain words better.
+- Try a different voice if the options include one that suits you better.
 
 Example fix:
 Before: "Our KPI dashboard (v2.3) launched 03/02."
@@ -80,59 +77,70 @@ The post on [text-to-speech pronunciation tips](/blog/pronunciation-tips-for-tex
 
 ### Fonts look different
 
-**Cause:** The font used in the deck is not available on the device rendering the video, so a substitute is shown.
+**Cause:** The font used in the deck is not embedded or not available where the deck is processed, so a substitute is shown.
 
 **Fix:**
 - Use widely available fonts for video work.
-- Check the preview closely for text that wraps or overflows.
-- If a specific brand font matters, test on the device you will export from.
+- Check the finished video closely for text that wraps or overflows.
+- Where a brand font matters, embed it when you save the .pptx, or test with a short copy first.
+
+### The file is too large
+
+**Cause:** Long videos, high-resolution images and busy backgrounds all add to file size.
+
+**Fix:**
+- Compress large photos in the deck before converting.
+- Split a long deck into several shorter videos.
+- Check the size limit of the platform you are uploading to, and convert or compress the video if it is over.
 
 ### The file will not open or upload
 
-**Cause:** The export is usually WebM, or MP4 in browsers that support it. Some platforms and apps expect MP4.
+**Cause:** Some platforms and apps expect a particular format or have size limits.
 
 **Fix:**
-- WebM plays in Chrome, Edge and Firefox, and in most video editors.
-- If a platform asks for MP4, convert the WebM with a common video conversion tool.
+- MP4 is the safest format for most platforms. WebM is available too, and plays in Chrome, Edge and Firefox and in most video editors.
+- If a platform asks for a format you do not have, convert the file with a common video conversion tool.
 - The [MP4 or WebM guide](/blog/mp4-or-webm-choosing-a-format-for-your-presentation-video) explains the difference.
 
-### The deck will not load
+### The deck will not load or looks wrong
 
-**Cause:** The file is not a .pptx.
+**Cause:** The file is not a .pptx, or the deck is very complex.
 
 **Fix:**
 - Older .ppt files need saving as .pptx in PowerPoint first.
 - Google Slides: download as Microsoft PowerPoint (.pptx).
 - Keynote and Canva: export to .pptx, then load that file.
+- For decks with heavy effects, embedded media or many layered objects, simplify a copy of the slide and try again.
 
 ## A quick troubleshooting table
 
 | Symptom | Most likely cause | First thing to try |
 |---|---|---|
-| No sound | Tab audio not shared | Tick "share tab audio" when choosing "this tab" |
-| Choppy video | Tab in background | Keep the tab in the foreground |
-| Slides too fast | Short or missing notes | Raise minimum seconds per slide |
-| Slides too slow | Slide text being read | Switch to speaker notes only |
+| No sound | Empty notes or muted player | Check the notes, then try another player |
+| Choppy video | Large images or slow playback | Play the downloaded file, compress images |
+| Slides too fast | Short or missing notes | Add a sentence to the notes |
+| Slides too slow | Long notes | Trim and tighten the script |
 | Odd pronunciation | Acronyms, symbols | Rewrite the note phonetically |
-| Font changed | Font not installed | Use a common font |
-| File will not play | WebM not supported | Convert to MP4 |
+| Font changed | Font not available | Use a common font |
+| File too large | Long video, big images | Compress images, split the deck |
+| File will not play | Format not supported | Use MP4, or convert |
 | Deck will not load | .ppt or other format | Save or export as .pptx |
 
 ## What PowerPoint's own export does differently
 
-PowerPoint's built-in video export is another route. It uses timings and narration you record yourself, and runs inside PowerPoint rather than the browser. If you have recorded your own voice and timings, it is a sensible option. If your problem is that you would rather not record your voice, a converter that reads speaker notes with a text-to-speech voice is the better fit.
+PowerPoint's built-in video export is another route. It uses timings and narration you record yourself, and runs inside PowerPoint. If you have recorded your own voice and timings, it is a sensible option. If you would rather not record your voice, a converter that reads speaker notes is the better fit.
 
 ## Quick checklist before you export again
 
-- Browser up to date
-- Narration recording ticked, "this tab" chosen, tab audio shared
-- Tab kept in the foreground
-- Other heavy apps closed
-- Minimum seconds per slide set
+- Deck saved as .pptx
+- Large images compressed
+- Common fonts used
 - Speaker notes cleaned of symbols and acronyms
-- Preview watched with sound on
-- Short test export played back
+- Slides that need more time have longer notes
+- Whole video watched with sound on
+- Format and file size match where it is going
+- Short test played back
 
 ## Get a clean export from your slides
 
-Most export issues disappear once the settings and notes are right. Open the [PowerPoint to video converter](/), load your .pptx, preview with the voice on, and export when it sounds right. Everything runs in your browser, so your slides are never uploaded.
+Most export issues disappear once the deck and notes are right. Open the [PowerPoint to video converter](/), load your .pptx and check the result. Claude Opus 5.5 directs the video: it tightens the story, redesigns each slide as an animated scene and times the animation to your narration, so pacing problems like rushed or overlong slides are far less likely to reach the final file.

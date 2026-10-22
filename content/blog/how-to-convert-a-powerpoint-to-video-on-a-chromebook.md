@@ -2,22 +2,21 @@
 title: How to Convert a PowerPoint to Video on a Chromebook
 slug: how-to-convert-a-powerpoint-to-video-on-a-chromebook
 date: 2026-12-13
-description: A step-by-step PowerPoint to video Chromebook guide: get a .pptx, add narration from speaker notes, burn in captions and export a video in Chrome.
+description: A step-by-step PowerPoint to video Chromebook guide: get a .pptx, write narration in speaker notes, add captions and download a finished video.
 keyword: powerpoint to video chromebook
 pillar: convert
 persona: educator
 ---
 
-Chromebooks are everywhere in schools and universities, but they do not run the desktop version of PowerPoint. That leaves many teachers wondering how to get from a slide deck to a narrated video. The good news is that a PowerPoint to video Chromebook workflow is straightforward, because everything you need can run in the Chrome browser.
+Chromebooks are everywhere in schools and universities, but they do not run the desktop version of PowerPoint. That leaves many teachers wondering how to get from a slide deck to a narrated video. The good news is that a PowerPoint to video Chromebook workflow is straightforward, because it works from any computer with a modern browser, Chromebooks included.
 
-This guide covers getting your deck into the right format, preparing it for narration, and exporting a video, all without installing desktop software.
+This guide covers getting your deck into the right format, preparing it for narration, and downloading a video, all without installing desktop software.
 
 ## What you need
 
-- A Chromebook with an up-to-date version of Chrome.
+- A Chromebook with an up-to-date version of Chrome, and an internet connection.
 - Your presentation as a PowerPoint .pptx file.
 - Speaker notes, if you want the video narrated from a script.
-- A quiet few minutes while the video records. The browser records in real time.
 
 If your deck is already a .pptx, skip to the section on preparing the deck. If it lives somewhere else, start below.
 
@@ -56,36 +55,33 @@ Here is a sample speaker note for a Year 9 science slide titled "Plants make the
 
 "Plants don't eat the way we do. They make their own food using sunlight, water and carbon dioxide. This process is called photosynthesis. It happens mostly in the leaves, inside tiny structures called chloroplasts."
 
-That reads naturally aloud and gives the text-to-speech voice clean sentences to work with. For more on this, see [How to Write Speaker Notes That Become a Great Voiceover](/blog/how-to-write-speaker-notes-that-become-a-great-voiceover).
+That reads naturally aloud and gives the narration clean sentences to work with. For more on this, see [How to Write Speaker Notes That Become a Great Voiceover](/blog/how-to-write-speaker-notes-that-become-a-great-voiceover).
 
 ## A PowerPoint to video Chromebook walkthrough
 
-PowerPoint2Vid runs entirely in the browser. Your .pptx is opened, animated, narrated and recorded on the Chromebook itself. The slides are not uploaded to a server, which is useful when course material includes student names or unreleased assessment details.
+PowerPoint2Vid works from any computer with a modern browser, so a Chromebook is fine. You upload the deck and download the finished video. If your course material includes student names or unreleased assessment details, check your school's policy on using online tools before uploading.
 
-1. **Open the converter in Chrome** and drop your .pptx onto the page, or browse to it in your Downloads folder.
-2. **Choose a narration script.** The default reads your speaker notes, and falls back to slide text where a slide has no notes. You can also pick notes only, slide text only, or no narration.
-3. **Pick a voice and speed.** The voices come from the browser's built-in text-to-speech, so the list depends on your device. Try two or three and listen to a full slide before deciding.
-4. **Pick a video style and transition.** Clean is a safe choice for teaching content. Paper & ink suits a softer, classroom feel.
-5. **Turn on captions** if you want them burned into the video. They appear sentence by sentence as the narration plays.
-6. **Set a minimum seconds per slide** so slides with short notes still stay on screen long enough to read.
-7. **Preview with voice.** Watch the whole thing once and note any slide that feels rushed or mispronounced.
-8. **Export.** In Chrome, when asked what to share, choose "this tab" and tick "share tab audio" so the narration is recorded into the video. Keep the tab in the foreground until recording finishes.
+1. **Open the converter in Chrome** and add your .pptx, or browse to it in your Downloads folder.
+2. **Check your speaker notes.** They become the narration, so slides without notes have little to say.
+3. **Pick a voice and speed.** Try two or three and listen to a full slide before deciding.
+4. **Include captions** if you want them burned into the video. They appear sentence by sentence as the narration plays.
+5. **Watch the whole video once** and note any slide that feels rushed or mispronounced. Fix the notes and try again.
+6. **Download the video** as an MP4, with WebM also available.
 
-Exporting needs PowerPoint2Vid Pro. Preview with voice is open to everyone, so you can check how your deck sounds before deciding.
+Downloading needs PowerPoint2Vid Pro.
 
 ## Chromebook tips
 
-A few things are specific to Chromebooks and lower-powered laptops.
+A few things are specific to Chromebooks.
 
-- **Plug in.** Recording a video in real time keeps the processor busy. Running on mains power avoids slowdowns.
-- **Close other tabs.** Fewer tabs means smoother animation.
-- **Stay on the tab.** Switching tabs or letting the screen sleep can interrupt the recording. Adjust sleep settings beforehand if your Chromebook dims quickly.
+- **Check your connection.** The deck goes online and the video comes back, so a stable Wi-Fi connection helps.
+- **Find your files.** The .pptx and the finished video both live in the Files app. Search Downloads if you lose one.
 - **Check storage.** Video files can be large. Make sure there is room in your Downloads folder, or move older files to Google Drive first.
-- **Test a short deck first.** Export a three-slide test before a 30-slide lecture.
+- **Test a short deck first.** Try a three-slide test before a 30-slide lecture.
 
 ## What you get
 
-The video usually saves as a WebM file, or MP4 where the browser supports it. WebM plays in Chrome and in most video editors, and you can upload it to many platforms directly. If your LMS or video platform asks for MP4, convert it with a common conversion tool before uploading.
+The video downloads as an MP4, with WebM also available, so you can upload it to your LMS or video platform directly.
 
 ## Quick checklist
 
@@ -93,9 +89,8 @@ The video usually saves as a WebM file, or MP4 where the browser supports it. We
 - Speaker notes written for the ear.
 - Voice and speed chosen after listening to a full slide.
 - Captions on, if your students need them.
-- Chromebook plugged in, other tabs closed.
-- "This tab" and "share tab audio" selected when exporting.
+- Stable connection and room in Downloads.
 
 ## A Chromebook is all you need
 
-You do not need a desktop app or a studio to turn a lesson into a video. Open the [PowerPoint to video converter](/) in Chrome, drop in your .pptx, and preview it with voice in a few minutes. If you want to export, you can see the Pro plans on the [pricing page](/pricing).
+You do not need a desktop app or a studio to turn a lesson into a video. Open the [PowerPoint to video converter](/) in Chrome and add your .pptx. Claude Opus 5.5 directs the video: it tightens the story, designs each slide as an animated scene and times the animation to your narration, so a classroom deck lands like a produced explainer. You can see the Pro plans on the [pricing page](/pricing).

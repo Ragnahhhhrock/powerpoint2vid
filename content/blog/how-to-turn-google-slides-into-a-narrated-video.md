@@ -2,7 +2,7 @@
 title: How to Turn Google Slides into a Narrated Video
 slug: how-to-turn-google-slides-into-a-narrated-video
 date: 2026-11-01
-description: Turn Google Slides to video with narration from your speaker notes. Download as .pptx, add a voice, captions and a style, then export a clean video file.
+description: Turn Google Slides to video with narration from your speaker notes. Download as .pptx, upload it, pick a voice and download a polished, narrated MP4.
 keyword: google slides to video
 pillar: convert
 persona: educator
@@ -16,7 +16,7 @@ This guide walks through the process step by step, with a focus on lecturers and
 
 Recording yourself live works, but it has costs. You need a quiet room, a decent microphone and a clean run without stumbles. When one fact changes next semester, you record the whole thing again.
 
-A narrated slide video works differently. The script sits in your speaker notes, so fixing a mistake means editing a line of text and exporting again. Students get the same clear explanation every time, and they can pause and replay at their own pace.
+A narrated slide video works differently. The script sits in your speaker notes, so fixing a mistake means editing a line of text and making the video again. Students get the same clear explanation every time, and they can pause and replay at their own pace.
 
 ## Step 1: Tidy the deck in Google Slides first
 
@@ -52,44 +52,39 @@ A few things to check after the download:
 
 - **Fonts.** If you used an unusual Google font, it may be swapped for a similar one. Preview the result and adjust if needed.
 - **Embedded videos.** Video clips inside slides usually don't carry across into a narrated video. Replace them with a still image or a screenshot.
-- **Complex animations.** Some Google Slides animations don't map exactly to PowerPoint. That's fine for video, because the converter applies its own motion.
+- **Complex animations.** Some Google Slides animations don't map exactly to PowerPoint. That's fine for video, because the converter designs its own motion.
 
 ## Step 4: Turn the Google Slides to video with narration
 
-Open PowerPoint2Vid in your browser. On the Google Slides tab you'll find a link to help with the download step. Drop in your .pptx file.
+Open PowerPoint2Vid in your browser and upload your .pptx file. If your deck contains unpublished research, student examples or assessment material, check your organisation's policy on using online tools before uploading.
 
-The file is read and processed on your own device. Your slides are never uploaded, which matters when a lecture deck contains unpublished research, student examples or assessment material.
+Then make a couple of choices:
 
-Then make a few choices:
+1. **Voice and speed.** Your speaker notes become the narration. Choose a voice and adjust the speaking speed so it sounds natural, not rushed.
+2. **Let the video be directed.** The deck is upgraded rather than just recorded: a stronger story, animated scenes, polished transitions and timing that follows the voice. Short slides, like section titles, get a proper moment on screen.
 
-1. **Narration script.** The default reads your speaker notes, and falls back to the slide text where a slide has no notes. You can also pick speaker notes only, slide text only, or no narration for a silent video.
-2. **Voice and speed.** Choose from the text-to-speech voices your browser and device provide. Adjust the speaking speed so it sounds natural, not rushed.
-3. **Minimum seconds per slide.** Timing follows the speech, so a slide stays up as long as its narration runs. Set a minimum so short slides, like section titles, don't flash past.
-4. **Video style.** There are six. For lectures, Clean or Paper & ink tend to suit teaching content. Minimal cinematic works well for a course introduction.
-5. **Transitions.** Crossfade, slide, zoom or none. Crossfade is a safe choice for teaching.
+## Step 5: Captions and teaching-friendly pacing
 
-## Step 5: Add captions and pacing options
+For course content, captions matter. They appear in the video itself, so they show up in any player without extra setup.
 
-For course content, captions are worth turning on. Burned-in captions appear sentence by sentence and become part of the video, so they show up in any player without extra setup.
-
-They help students who are deaf or hard of hearing, students reading in a second language, and anyone watching on a train with the sound off. Note that captions are burned into the picture, not delivered as a separate caption file. If your LMS needs an SRT or VTT file, you'll need to create that separately.
+They help students who are deaf or hard of hearing, students reading in a second language, and anyone watching on a train with the sound off. If your LMS needs a separate caption file, you'll need to create that separately, and your speaker notes give you an accurate transcript to start from.
 
 Two other options are useful for teaching:
 
-- **Animate shapes one by one.** Points appear in order, which helps students follow along.
-- **Gentle zoom on images.** Adds a little movement to diagrams and photos without distracting.
+- **Points that build in order.** Key points land on the word that names them, which helps students follow along.
+- **Charts rebuilt as animated charts.** The numbers stay the same, and the movement shows students where to look.
 
-## Step 6: Preview, then export
+## Step 6: Watch, then download
 
-Preview the whole video with the voice before exporting. Listen for:
+Watch the whole video before you share it. Listen for:
 
 - Words the voice mispronounces (technical terms and names are common culprits)
 - Slides where the narration runs much longer than others
 - Notes that read awkwardly out loud
 
-Fix these in the speaker notes. If you edit in Google Slides, download the .pptx again and reload it.
+Fix these in the speaker notes. If you edit in Google Slides, download the .pptx again and upload it.
 
-When you're happy, export. The browser records the video in real time, so keep the tab in the foreground while it runs. To record the narration into the file in Chrome, choose "this tab" when asked what to share and tick "share tab audio". The output is usually WebM, or MP4 in browsers that support it.
+When you're happy, download the video. It's an MP4, with WebM available if you need it.
 
 ## A sample slide, start to finish
 
@@ -108,13 +103,13 @@ That single slide takes about twenty seconds on screen. A twenty-slide lecture s
 - Speaker notes written as full spoken sentences
 - Body text 24pt or bigger
 - Downloaded as .pptx from Google Slides
-- Narration script, voice and speed chosen
-- Captions turned on for accessibility
-- Previewed with voice, mispronunciations fixed
-- Tab kept in the foreground during export
+- Voice and speed chosen
+- Captions kept on for accessibility
+- Finished video watched, mispronunciations fixed in the notes
+- MP4 downloaded and uploaded to your LMS
 
 ## Turning your Google Slides into course videos
 
 The hardest part of a narrated lecture video is the script, and if you've written good speaker notes, that part is done. The rest is a download and a few settings. For a broader look at the whole process, see [how to convert PowerPoint to video](/blog/how-to-convert-powerpoint-to-video-the-complete-guide).
 
-Download your deck as .pptx, drop it into the [PowerPoint to video converter](/), and preview it with a voice. If it works for your course, Pro lets you export as many videos as you need.
+Download your deck as .pptx and upload it to the [PowerPoint to video converter](/). Claude Opus 5.5 directs the video: it tightens the story, designs each scene and times the animation to your narration, so a lecture deck lands like a produced explainer. Pro starts at A$12 a month or A$99 a year.

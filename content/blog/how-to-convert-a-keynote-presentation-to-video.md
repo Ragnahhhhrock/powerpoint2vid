@@ -2,7 +2,7 @@
 title: How to Convert a Keynote Presentation to Video
 slug: how-to-convert-a-keynote-presentation-to-video
 date: 2026-12-28
-description: Two ways to go from Keynote to video: Keynote's own movie export, or exporting to PowerPoint for a narrated, styled video made from your presenter notes.
+description: Two ways to go from Keynote to video: Keynote's own movie export, or exporting to PowerPoint for a narrated, animated video made from your presenter notes.
 keyword: keynote to video
 pillar: convert
 persona: presenter
@@ -81,7 +81,7 @@ Open the .pptx if you can to check it. Watch for:
 4. Include captions if you want them.
 5. Watch the result, then download the video as an MP4 (WebM is also available).
 
-Keynote's builds will not carry over exactly, because the deck is redesigned as animated scenes. There is Mac-specific detail in [how to convert a PowerPoint to video on a Mac](/blog/how-to-convert-a-powerpoint-to-video-on-a-mac).
+There is more Mac-specific detail in [how to convert a PowerPoint to video on a Mac](/blog/how-to-convert-a-powerpoint-to-video-on-a-mac).
 
 ## Which route should you choose?
 

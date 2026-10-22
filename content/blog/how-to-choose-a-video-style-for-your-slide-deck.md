@@ -22,9 +22,9 @@ A look and feel is not a template that rewrites your message. Your content stays
 - **Captions.** Where they sit and how they look, if you turn them on.
 - **Texture.** Clean edges, film grain, vignette.
 
-PowerPoint2Vid upgrades the deck rather than just recording it. Claude Opus 5.5 directs the video, so deciding your tone and audience up front gives it a clear brief to work from.
+PowerPoint2Vid upgrades the deck rather than just recording it, so deciding your tone and audience up front gives you a clear brief to judge the result against.
 
-## Presentation video styles: six directions to consider
+## Presentation video styles: directions to consider
 
 These are generic directions, not a menu of presets. Use them to describe what you want.
 

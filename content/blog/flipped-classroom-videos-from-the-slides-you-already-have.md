@@ -86,7 +86,7 @@ That last line matters. It tells students why they are watching and what they wi
 5. Include captions.
 6. Review the video, then download it as an MP4 (WebM is also available).
 
-Opus-directed scenes help here: key points land on the word that names them, so students can follow along without hunting the slide.
+The animated scenes help here: key points land on the word that names them, so students can follow along without hunting the slide.
 
 ## Put the videos where students will find them
 

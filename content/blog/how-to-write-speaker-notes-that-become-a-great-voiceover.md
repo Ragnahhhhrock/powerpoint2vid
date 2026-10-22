@@ -42,7 +42,7 @@ Read your draft aloud. If you wouldn't say it in conversation, rewrite it. "Util
 
 ### 2. Keep sentences short
 
-Aim for one idea per sentence. A listener can't scan back up the page. Long sentences with several clauses are hard to follow by ear, and harder still for a text-to-speech voice to phrase well.
+Aim for one idea per sentence. A listener can't scan back up the page. Long sentences with several clauses are hard to follow by ear, and harder still for a voice to phrase well.
 
 ### 3. Spell out what the voice might trip on
 
@@ -72,7 +72,7 @@ A title slide might need one sentence. A dense results slide might need six. As 
 
 ## Use punctuation to shape the pace
 
-Text-to-speech voices take cues from punctuation. A full stop gives a short pause. A comma gives a smaller one. You can use this to control pacing without any special markup.
+Narration takes its cues from punctuation. A full stop gives a short pause. A comma gives a smaller one. You can use this to control pacing without any special markup.
 
 - Want a beat before a key number? End the sentence before it.
 - Want a list to sound like a list? Use commas between items.
@@ -107,8 +107,8 @@ It's six sentences. It points to the chart, explains the colours, tells the view
 Some slides don't need narration: a section divider, a quote, a closing contact slide. You have a few options:
 
 - **Add a one-line note** like "Part two: the results." It gives the slide a voice and keeps the rhythm going.
-- **Leave it empty** and let the converter fall back to reading the slide text.
-- **Rely on a minimum time per slide** so the slide still stays up long enough to read.
+- **Leave it empty** if the slide speaks for itself, and give it a moment of silence on screen.
+- **Keep the visual strong** so a slide with little narration still holds attention.
 
 ## Quick checklist
 
@@ -122,6 +122,6 @@ Some slides don't need narration: a section divider, a quote, a closing contact 
 
 ## From speaker notes to narrated video
 
-Once your notes read well aloud, the voiceover is effectively written. Drop your .pptx into the [PowerPoint to video converter](/) and it reads your speaker notes with your browser's built-in voices, timing each slide to the speech. You can choose speaker notes only, slide text only, or notes with a slide-text fallback, which is the default.
+Once your notes read well aloud, the voiceover is effectively written. Upload your .pptx to the [PowerPoint to video converter](/) and your speaker notes become the narration in the voice and speed you choose. Claude Opus 5.5 directs the video, timing each animation to the words so a point lands on the word that names it, and polishing the script where it can.
 
-Preview it, listen for any line that sounds stiff, fix it in the notes, and reload. For the full process from deck to file, see [how to convert PowerPoint to video](/blog/how-to-convert-powerpoint-to-video-the-complete-guide).
+Watch it, listen for any line that sounds stiff, fix it in the notes, and make the video again. For the full process from deck to file, see [how to convert PowerPoint to video](/blog/how-to-convert-powerpoint-to-video-the-complete-guide).

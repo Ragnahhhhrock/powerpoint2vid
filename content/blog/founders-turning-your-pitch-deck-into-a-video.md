@@ -108,4 +108,4 @@ The video downloads as an MP4, with WebM also available, so it suits most forms.
 
 ## Turn your pitch deck into a video today
 
-You already have the deck. Load it into the [PowerPoint to video converter](/), refine the notes until the story lands. Claude Opus 5.5 directs the video: it tightens your story, designs each slide as an animated scene and times the animation to your narration, so the traction and ask land the way they would in the room. Exporting needs PowerPoint2Vid Pro, at A$12 a month or A$99 a year, with no watermark and the option to cancel any time.
+You already have the deck. Load it into the [PowerPoint to video converter](/) and refine the notes until the story lands. Claude Opus 5.5 directs the video: it tightens your story, designs each slide as an animated scene and times the animation to your narration, so the traction and ask land the way they would in the room. Exporting needs PowerPoint2Vid Pro, at A$12 a month or A$99 a year, with no watermark and the option to cancel any time.

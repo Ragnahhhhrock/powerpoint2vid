@@ -57,7 +57,7 @@ Keep the version number in every file name. When the English source changes to v
 
 ## Step 4: Check the voice for each language
 
-Narration in PowerPoint2Vid uses your browser's built-in text-to-speech voices. Which voices are available depends on your device and browser, and many systems include voices for a range of languages beyond English. Before you plan a language version, open the voice list on the computer you'll export from and confirm there's a suitable voice for that language.
+Narration is read by a synthetic voice, and the quality of voices varies from language to language. Before you plan a language version, check the voices on offer for your language and confirm there's a suitable one.
 
 Then preview a few slides and listen closely:
 
@@ -65,11 +65,11 @@ Then preview a few slides and listen closely:
 - Are names, product terms and acronyms pronounced sensibly? If not, rephrase or spell them the way they should sound.
 - Is the speed right? Adjust the speaking speed for each language version if needed.
 
-If your device doesn't have a voice for a language, try another browser or device, or install the language voice through your operating system's settings if it offers one.
+If you can't find a voice you're happy with for a language, consider whether captions with a clear, simple script, or a human voiceover for that version, would serve your audience better.
 
 ## Step 5: Turn on captions
 
-Burned-in captions are especially useful for multilingual audiences. Viewers can read along while they listen, which helps with technical terms and accents. Captions appear sentence by sentence and are part of the video image, so they show wherever the file plays.
+Captions are especially useful for multilingual audiences. Viewers can read along while they listen, which helps with technical terms and accents.
 
 Captions follow the narration script, so they'll be in the same language as your translated notes.
 
@@ -102,10 +102,10 @@ The second version swaps "is down" and "straight away" for plainer phrases that 
 - Space left for longer text, no words inside images
 - Slide text and speaker notes both translated
 - One clearly versioned .pptx per language
-- Suitable voice confirmed on your export device
+- Suitable voice confirmed for each language
 - Captions on
 - Native-speaker review completed
 
 ## Export each language version
 
-Once each translated deck is ready, load it into the [PowerPoint to video converter](/), pick the matching voice, and preview with sound. Everything runs in your browser, so internal training material stays on your device. Repeat for each language and you'll have a full set of training videos from one well-built source deck. For more on getting the voice right, see [choosing a narrator voice and speaking speed](/blog/choosing-a-narrator-voice-and-speaking-speed).
+Once each translated deck is ready, load it into the [PowerPoint to video converter](/), and pick the matching voice. Claude Opus 5.5 directs each version: it tightens the story, designs the scenes and times the animation to the narration in that language, so every audience gets a produced explainer rather than a translated slideshow. If your training material is internal, check your organisation's policy on using online tools before you upload. Repeat for each language and you'll have a full set of training videos from one well-built source deck. For more on getting the voice right, see [choosing a narrator voice and speaking speed](/blog/choosing-a-narrator-voice-and-speaking-speed).

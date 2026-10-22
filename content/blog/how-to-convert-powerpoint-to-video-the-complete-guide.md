@@ -38,7 +38,7 @@ You can present the deck in slideshow mode and record your screen and microphone
 
 ### 3. A dedicated converter
 
-A converter takes the .pptx file and builds the video for you. The best ones do more than record your slides. PowerPoint2Vid, for example, uses your speaker notes as the narration and upgrades the deck itself: Claude Opus 5.5 acts as director and motion designer, turning each slide into an animated scene. You don't need to record your own voice, and when the deck changes you simply make the video again.
+A converter takes the .pptx file and builds the video for you. The best ones do more than record your slides. PowerPoint2Vid, for example, uses your speaker notes as the narration and upgrades the deck itself, turning each slide into an animated scene. You don't need to record your own voice, and when the deck changes you simply make the video again.
 
 | Method | Narration | Updating later | Best for |
 |---|---|---|---|
@@ -134,4 +134,4 @@ The export is an MP4, which plays almost everywhere, with WebM available if you 
 
 ## Make your first video with the PowerPoint to video converter
 
-You already have the hardest part: a deck that explains something. Open the [PowerPoint to video converter](/), upload your .pptx and pick a voice. Claude Opus 5.5 directs the result, so your ordinary deck comes out as an explainer video with animated scenes and a tighter story, not slides with a voice over them. [PowerPoint2Vid Pro](/pricing) is A$12 a month or A$99 a year, with no watermark.
+You already have the hardest part: a deck that explains something. Open the [PowerPoint to video converter](/), upload your .pptx and pick a voice. Claude directs the result, so your ordinary deck comes out as an explainer video with animated scenes and a tighter story, not slides with a voice over them. [PowerPoint2Vid Pro](/pricing) is A$12 a month or A$99 a year, with no watermark.

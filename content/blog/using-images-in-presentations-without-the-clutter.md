@@ -113,9 +113,9 @@ Before you build the final deck:
 
 When a deck becomes a video, images get more screen time and more attention than in a live talk. A few things to keep in mind:
 
-- **Motion helps static photos.** A slow zoom on an image keeps a long narrated slide from feeling frozen. PowerPoint2Vid has a "gentle zoom on images" option for exactly this.
-- **Builds can reveal images in order.** With "animate shapes in one by one", a photo can appear just as the narration mentions it.
-- **Captions need clear space.** If you plan to burn in captions, leave the bottom of the slide calm so caption text doesn't fight the picture.
+- **Motion helps static photos.** A slow zoom on an image keeps a long narrated slide from feeling frozen.
+- **Images can arrive in order.** A photo can appear just as the narration mentions it.
+- **Captions need clear space.** If you plan to use captions, leave the bottom of the slide calm so caption text doesn't fight the picture.
 
 ## Quick checklist
 
@@ -129,4 +129,4 @@ When a deck becomes a video, images get more screen time and more attention than
 
 ## Turn your image-led deck into a video
 
-A deck with fewer, bigger, well-cropped images makes a far better video than one stuffed with thumbnails. Once your slides are clean, drop the .pptx into the [PowerPoint to video converter](/). Your speaker notes become narration, images can zoom gently while the voice explains them, and the whole thing runs in your browser, so your slides never leave your device. Preview the result with voice, then adjust any slide where the picture and the words don't line up.
+A deck with fewer, bigger, well-cropped images makes a far better video than one stuffed with thumbnails. Once your slides are clean, bring the .pptx to the [PowerPoint to video converter](/). Your speaker notes become the narration, and Claude Opus 5.5 directs the video: it frames each image as a scene, with motion and timing that bring the picture in as the voice describes it. Watch the result, then adjust any slide where the picture and the words don't line up.
