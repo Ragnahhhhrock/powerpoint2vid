@@ -68,6 +68,7 @@ r = await list.onRequestPost({ request: up(cookie), env: { ...env, RUNNER_URL: '
 r = await signup.onRequestPost({ request: new Request(O + '/api/signup', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: 'Boss@Site.com', password: 'correct horse' }) }), env });
 const c3 = (r.headers.get('Set-Cookie') || '').split(';')[0];
 r = await list.onRequestPost({ request: up(c3), env: { ...env, ADMIN_EMAILS: 'someone@else.com' } }); assert.equal(r.status, 402); ok('not on admin list -> still needs Pro');
+runnerDown = false;
 const aenv = { ...env, ADMIN_EMAILS: 'x@y.com, boss@site.com', MONTHLY_VIDEOS: '1' };
 for (let k = 0; k < 3; k++) { r = await list.onRequestPost({ request: up(c3), env: aenv }); assert.equal(r.status, 202); }
 ok('admin: unlimited videos without a subscription');
