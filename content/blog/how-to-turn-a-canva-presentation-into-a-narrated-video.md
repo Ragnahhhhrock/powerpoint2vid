@@ -108,4 +108,4 @@ If you change the design itself, you can edit in Canva and export a fresh .pptx,
 
 ## From Canva to a narrated video
 
-Your Canva deck already has the design. The speaker notes add the voice. Upload the exported .pptx to the [PowerPoint to video converter](/) and Claude Opus 5.5 directs the video: it keeps your brand look, tightens the story and times the animation to the narration, so a launch deck lands like a produced brand film. Pro starts at A$12 a month or A$99 a year, with no watermark.
+Your Canva deck already has the design. The speaker notes add the voice. Upload the exported .pptx to the [PowerPoint to video converter](/) and Claude Opus 5.5 plays director: it keeps your brand look, tightens the story and times the animation to the narration, so a launch deck lands like a produced brand film. Pro starts at A$12 a month or A$99 a year, with no watermark.

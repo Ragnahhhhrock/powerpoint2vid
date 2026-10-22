@@ -49,7 +49,7 @@ This one is easy to forget. If your product, prices or policy change, how much d
 | Route | What you get | Trade-offs |
 |---|---|---|
 | Agency or studio | Strategy, script, custom design and animation, professional voice, project management | Highest spend, longer timelines, updates usually go back to the agency |
-| Deck-to-video service (such as PowerPoint2Vid) | Your deck goes in; Claude Opus 5.5 directs the video, redesigning slides as animated scenes and narrating from your speaker notes | Subscription (Pro from A$12 a month or A$99 a year); you supply the deck and notes |
+| Deck-to-video service (such as PowerPoint2Vid) | Your deck goes in; Claude Opus 5.5 acts as your director, redesigning slides as animated scenes and narrating from your speaker notes | Subscription (Pro from A$12 a month or A$99 a year); you supply the deck and notes |
 | Doing it yourself from slides | Your existing deck becomes the visuals; your speaker notes become the script | You own the writing and design; less custom than bespoke animation |
 
 ### When an agency is worth it

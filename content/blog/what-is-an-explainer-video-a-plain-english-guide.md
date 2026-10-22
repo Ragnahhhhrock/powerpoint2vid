@@ -114,4 +114,4 @@ For the step-by-step process, see [How to Convert PowerPoint to Video: The Compl
 
 ## Turn your deck into an explainer
 
-If the explanation already lives in a slide deck, you don't need to start from scratch. Open the [PowerPoint to video converter](/), add your .pptx and your speaker notes become the narration. Claude Opus 5.5 directs the video, tightening the story and turning each slide into an animated scene, so a plain explanation lands like a produced explainer. If the deck covers anything sensitive, check your organisation's policy on using online tools before you upload it.
+If the explanation already lives in a slide deck, you don't need to start from scratch. Open the [PowerPoint to video converter](/), add your .pptx and your speaker notes become the narration. Claude Opus 5.5 takes the director's chair, tightening the story and turning each slide into an animated scene, so a plain explanation lands like a produced explainer. If the deck covers anything sensitive, check your organisation's policy on using online tools before you upload it.

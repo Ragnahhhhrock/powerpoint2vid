@@ -125,4 +125,4 @@ If your video has captions built into the picture, they're always visible. YouTu
 
 ## Make the video first
 
-All of this starts with a presentation video worth watching. Bring your deck to the [PowerPoint to video converter](/) and download the finished MP4. Claude Opus 5.5 directs the video: it tightens the story, designs each scene and times the animation to your narration, so the video holds viewers long enough to benefit from your chapters. Your slide headlines and speaker notes give you the chapters and description, ready for YouTube.
+All of this starts with a presentation video worth watching. Bring your deck to the [PowerPoint to video converter](/) and download the finished MP4. Claude Opus 5.5 takes the director's chair: it tightens the story, designs each scene and times the animation to your narration, so the video holds viewers long enough to benefit from your chapters. Your slide headlines and speaker notes give you the chapters and description, ready for YouTube.

@@ -107,4 +107,4 @@ Many presenters use both: Keynote's export for a personal keynote, and a narrate
 
 ## Turn your Keynote deck into a narrated video
 
-Once your Keynote deck is exported as .pptx, open the [PowerPoint to video converter](/) and drop it in. Claude Opus 5.5 directs the video: it tightens the story, redesigns each Keynote slide as an animated scene and times the animation to your narration, so a deck built for a stage plays like a produced explainer. Download it with Pro when it looks and sounds right.
+Once your Keynote deck is exported as .pptx, open the [PowerPoint to video converter](/) and drop it in. Claude Opus 5.5 directs the finished video: it tightens the story, redesigns each Keynote slide as an animated scene and times the animation to your narration, so a deck built for a stage plays like a produced explainer. Download it with Pro when it looks and sounds right.

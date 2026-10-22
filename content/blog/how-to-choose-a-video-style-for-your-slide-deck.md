@@ -120,4 +120,4 @@ Whatever direction you pick, a few things hold true:
 
 ## Decide the direction, then see it on your deck
 
-Reading about looks only goes so far. Drop your .pptx into the [PowerPoint to video converter](/) with the direction in mind, and watch what comes back. Claude Opus 5.5 directs the video: it tightens the story, designs each scene and times the animation to your narration, so the tone you chose comes across in a produced explainer. If it is not quite right, adjust your notes and try again.
+Reading about looks only goes so far. Drop your .pptx into the [PowerPoint to video converter](/) with the direction in mind, and watch what comes back. Claude Opus 5.5 takes the director's chair: it tightens the story, designs each scene and times the animation to your narration, so the tone you chose comes across in a produced explainer. If it is not quite right, adjust your notes and try again.

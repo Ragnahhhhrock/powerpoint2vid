@@ -100,4 +100,4 @@ The video loads only when clicked. The headline and button work even if nobody w
 
 ## From deck to a fast, embeddable video
 
-A lean explainer starts with a focused deck. Build a short version of your presentation, drop it into the [PowerPoint to video converter](/) and download the MP4, with captions for viewers who have the sound off. Claude Opus 5.5 directs the video: it tightens the story to what a visitor needs, designs each scene and times the animation to the narration, so a short clip does the work of a longer one. Then embed it with the steps above, and your page stays quick.
+A lean explainer starts with a focused deck. Build a short version of your presentation, drop it into the [PowerPoint to video converter](/) and download the MP4, with captions for viewers who have the sound off. Claude Opus 5.5 acts as your director: it tightens the story to what a visitor needs, designs each scene and times the animation to the narration, so a short clip does the work of a longer one. Then embed it with the steps above, and your page stays quick.

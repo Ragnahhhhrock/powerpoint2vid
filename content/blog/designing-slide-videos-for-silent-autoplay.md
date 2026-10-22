@@ -109,4 +109,4 @@ For more on choosing voices, see [choosing a narrator voice and speaking speed](
 
 ## Build your silent-ready video from slides
 
-A deck with strong headlines is already halfway to a good silent autoplay video. Drop it into the [PowerPoint to video converter](/) and download an MP4 with captions. Claude Opus 5.5 directs the video: it sharpens the story, designs each scene to catch the eye in a feed and times the motion to your narration, so the picture carries the message even with the sound off.
+A deck with strong headlines is already halfway to a good silent autoplay video. Drop it into the [PowerPoint to video converter](/) and download an MP4 with captions. Claude Opus 5.5 art-directs the result: it sharpens the story, designs each scene to catch the eye in a feed and times the motion to your narration, so the picture carries the message even with the sound off.

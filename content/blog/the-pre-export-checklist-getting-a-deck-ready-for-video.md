@@ -104,4 +104,4 @@ Output is an MP4 file, with WebM available. MP4 plays almost everywhere, and Web
 
 ## Turn the checked deck into a video
 
-A deck that passes this checklist is ready. Open the [PowerPoint to video converter](/) and bring your .pptx. Claude Opus 5.5 directs the video: it tightens the story, redesigns each slide as an animated scene and times the animation to your narration, so a carefully checked deck becomes a produced explainer rather than slides with a voice over. Download the MP4 and share it wherever your audience watches.
+A deck that passes this checklist is ready. Open the [PowerPoint to video converter](/) and bring your .pptx. Claude Opus 5.5 plays director: it tightens the story, redesigns each slide as an animated scene and times the animation to your narration, so a carefully checked deck becomes a produced explainer rather than slides with a voice over. Download the MP4 and share it wherever your audience watches.

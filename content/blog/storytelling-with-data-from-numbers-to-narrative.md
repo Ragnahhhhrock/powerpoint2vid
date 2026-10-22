@@ -138,4 +138,4 @@ A sceptical buyer or manager will look for these. Getting ahead of them strength
 
 ## Share the story as a narrated video
 
-A data story works even better when the client can watch it without you in the room. Upload your .pptx to the [PowerPoint to video converter](/) and your speaker notes become the narration. Claude Opus 5.5 directs the video: it sharpens the story arc, designs each scene and times the animation to your voice, so the insight lands on the word that names it. If your figures are commercially sensitive, check your organisation's policy on online tools first.
+A data story works even better when the client can watch it without you in the room. Upload your .pptx to the [PowerPoint to video converter](/) and your speaker notes become the narration. Claude Opus 5.5 art-directs the result: it sharpens the story arc, designs each scene and times the animation to your voice, so the insight lands on the word that names it. If your figures are commercially sensitive, check your organisation's policy on online tools first.

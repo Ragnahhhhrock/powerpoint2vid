@@ -107,4 +107,4 @@ Watch the finished video once with the captions on. If anything feels tight agai
 
 ## Wide slides, ready for video
 
-A deck designed for 16:9 is already shaped like a video. Drop your .pptx into the [PowerPoint to video converter](/) and your wide layouts become full-frame scenes with narration and captions. Claude Opus 5.5 directs the video: it redesigns each slide to use the width, adds motion that suits the layout and times it to your voice, so a split-screen slide arrives as a produced scene, not a static picture.
+A deck designed for 16:9 is already shaped like a video. Drop your .pptx into the [PowerPoint to video converter](/) and your wide layouts become full-frame scenes with narration and captions. Claude Opus 5.5 plays director: it redesigns each slide to use the width, adds motion that suits the layout and times it to your voice, so a split-screen slide arrives as a produced scene, not a static picture.

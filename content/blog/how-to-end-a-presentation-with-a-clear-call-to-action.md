@@ -114,4 +114,4 @@ A live presenter can repeat the ask and point at the screen. A video can't, so b
 
 ## Turn your closing slide into a video that asks for the next step
 
-Once your ending is clear, a narrated video can deliver it to every prospect, client or student, every time, word for word. Upload your .pptx to the [PowerPoint to video converter](/) and keep your call to action in the speaker notes. Claude Opus 5.5 directs the video: it designs the closing scene so the ask is the last thing on screen and times the animation to your narration, and captions help the ask land even with the sound off. Watch the finished video before you share it.
+Once your ending is clear, a narrated video can deliver it to every prospect, client or student, every time, word for word. Upload your .pptx to the [PowerPoint to video converter](/) and keep your call to action in the speaker notes. Claude Opus 5.5 art-directs the result: it designs the closing scene so the ask is the last thing on screen and times the animation to your narration, and captions help the ask land even with the sound off. Watch the finished video before you share it.

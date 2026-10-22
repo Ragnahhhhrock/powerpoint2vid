@@ -5,7 +5,7 @@ export const POSTS = [
 "slug": "how-to-convert-powerpoint-to-video-the-complete-guide",
 "date": "2026-10-22",
 "title": "How to Convert PowerPoint to Video: The Complete Guide",
-"description": "Learn how to convert PowerPoint to video step by step: prepare your deck, add narration from speaker notes, choose a style, add captions and export.",
+"description": "Learn how to convert PowerPoint to video step by step: prepare your deck, write narration in the speaker notes, pick a voice, then download the MP4.",
 "pillar": "convert"
 },
 {
@@ -33,7 +33,7 @@ export const POSTS = [
 "slug": "powerpoint-to-video-converter-what-to-look-for-before-you-choose",
 "date": "2026-10-26",
 "title": "PowerPoint to Video Converter: What to Look For Before You Choose",
-"description": "Choosing a PowerPoint to video converter? Compare narration, privacy, styles, captions, export formats and pricing so you pick the right tool for your slides.",
+"description": "Choosing a PowerPoint to video converter? Compare narration, file handling, design quality, captions, formats and pricing so you pick the tool that fits your slides.",
 "pillar": "convert"
 },
 {
@@ -75,7 +75,7 @@ export const POSTS = [
 "slug": "how-to-turn-google-slides-into-a-narrated-video",
 "date": "2026-11-01",
 "title": "How to Turn Google Slides into a Narrated Video",
-"description": "Turn Google Slides to video with narration from your speaker notes. Download as .pptx, add a voice, captions and a style, then export a clean video file.",
+"description": "Turn Google Slides to video with narration from your speaker notes. Download as .pptx, upload it, pick a voice and download a polished, narrated MP4.",
 "pillar": "convert"
 },
 {
@@ -173,14 +173,14 @@ export const POSTS = [
 "slug": "powerpoints-built-in-video-export-vs-a-dedicated-converter",
 "date": "2026-11-15",
 "title": "PowerPoint's Built-in Video Export vs a Dedicated Converter",
-"description": "Should you save PowerPoint as video with the built-in export or use a dedicated converter? A fair comparison of narration, styles, captions and privacy.",
+"description": "Should you save PowerPoint as video with the built-in export or use a dedicated converter? A fair comparison of narration, design, captions and file handling.",
 "pillar": "convert"
 },
 {
 "slug": "how-to-choose-a-video-style-for-your-slide-deck",
 "date": "2026-11-16",
 "title": "How to Choose a Video Style for Your Slide Deck",
-"description": "A practical guide to presentation video styles. See what each of the six PowerPoint2Vid looks does and how to match one to your brand and audience.",
+"description": "A practical guide to presentation video styles. See which looks suit which decks and how to match the tone, pace and feel to your brand and audience.",
 "pillar": "convert"
 },
 {
@@ -271,7 +271,7 @@ export const POSTS = [
 "slug": "how-to-add-narration-to-powerpoint-without-recording-your-own-voice",
 "date": "2026-11-29",
 "title": "How to Add Narration to PowerPoint Without Recording Your Own Voice",
-"description": "Want to add voiceover to PowerPoint without a microphone? Here is how text-to-speech narration from speaker notes works, with scripts, settings and tips.",
+"description": "Want to add voiceover to PowerPoint without a microphone? Here is how narration from speaker notes works, with sample scripts and pacing tips.",
 "pillar": "convert"
 },
 {
@@ -327,7 +327,7 @@ export const POSTS = [
 "slug": "how-to-convert-a-powerpoint-to-video-on-a-mac",
 "date": "2026-12-07",
 "title": "How to Convert a PowerPoint to Video on a Mac",
-"description": "Three ways to convert PowerPoint to video on Mac computers, from PowerPoint's own export to Keynote and a browser converter, plus fixes for common snags.",
+"description": "Three ways to convert PowerPoint to video on Mac computers, from PowerPoint's own export to Keynote and an online converter, plus fixes for common snags.",
 "pillar": "convert"
 },
 {
@@ -369,14 +369,14 @@ export const POSTS = [
 "slug": "how-to-convert-a-powerpoint-to-video-on-a-chromebook",
 "date": "2026-12-13",
 "title": "How to Convert a PowerPoint to Video on a Chromebook",
-"description": "A step-by-step PowerPoint to video Chromebook guide: get a .pptx, add narration from speaker notes, burn in captions and export a video in Chrome.",
+"description": "A step-by-step PowerPoint to video Chromebook guide: get a .pptx, write narration in speaker notes, add captions and download a finished video.",
 "pillar": "convert"
 },
 {
-"slug": "private-by-design-why-converting-slides-in-your-browser-matters",
+"slug": "what-to-check-before-using-a-powerpoint-to-video-converter-with-confidential-slides",
 "date": "2026-12-14",
-"title": "Private by Design: Why Converting Slides in Your Browser Matters",
-"description": "Why a private PowerPoint to video converter matters for internal training decks, and what to check before you hand confidential slides to any online tool.",
+"title": "What to Check Before Using a PowerPoint to Video Converter With Confidential Slides",
+"description": "Looking for a private PowerPoint to video converter? Ask these questions before you upload HR, training or client slides, and prepare the deck first.",
 "pillar": "convert"
 },
 {
@@ -474,7 +474,7 @@ export const POSTS = [
 "slug": "how-to-convert-a-keynote-presentation-to-video",
 "date": "2026-12-28",
 "title": "How to Convert a Keynote Presentation to Video",
-"description": "Two ways to go from Keynote to video: Keynote's own movie export, or exporting to PowerPoint for a narrated, styled video made from your presenter notes.",
+"description": "Two ways to go from Keynote to video: Keynote's own movie export, or exporting to PowerPoint for a narrated, animated video made from your presenter notes.",
 "pillar": "convert"
 },
 {
@@ -488,7 +488,7 @@ export const POSTS = [
 "slug": "founders-turning-your-pitch-deck-into-a-video",
 "date": "2026-12-30",
 "title": "Founders: Turning Your Pitch Deck into a Video",
-"description": "A founder's playbook for making a pitch deck video: tighten the story, script your notes, choose a style and share a narrated deck investors will watch.",
+"description": "A founder's playbook for making a pitch deck video: tighten the story, script your notes, set the look and share a narrated deck investors will watch.",
 "pillar": "playbook"
 },
 {
@@ -523,7 +523,7 @@ export const POSTS = [
 "slug": "how-to-turn-a-canva-presentation-into-a-narrated-video",
 "date": "2027-01-04",
 "title": "How to Turn a Canva Presentation into a Narrated Video",
-"description": "Turn a Canva presentation to video with narration: export it as a .pptx, add speaker notes, check fonts and layout, then convert it in your browser.",
+"description": "Turn a Canva presentation to video with narration: export it as a .pptx, add speaker notes, check fonts and layout, then convert it to a video.",
 "pillar": "convert"
 },
 {
@@ -572,7 +572,7 @@ export const POSTS = [
 "slug": "pptx-to-video-a-five-minute-walkthrough",
 "date": "2027-01-11",
 "title": "PPTX to Video: A Five-Minute Walkthrough",
-"description": "A quick walkthrough of using a PPTX to video converter in your browser, from loading slides to choosing a voice, style and captions, then exporting.",
+"description": "A quick walkthrough of using a PPTX to video converter, from loading your slides to choosing a voice and captions, then downloading a finished video.",
 "pillar": "convert"
 },
 {

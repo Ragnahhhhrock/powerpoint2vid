@@ -127,4 +127,4 @@ Treat your first thumbnail as a draft. Once a video has been up for a while, loo
 
 ## Start with a good video, then give it a good front door
 
-A thumbnail can only earn the click. The video has to earn the watch. Build the video from your deck with the [PowerPoint to video converter](/): your speaker notes become narration, and Claude Opus 5.5 directs the video, designing each scene so your key points land with the voice, which gives you strong frames to pull a thumbnail from. Then make a thumbnail from your strongest slide, and give people a clear reason to press play.
+A thumbnail can only earn the click. The video has to earn the watch. Build the video from your deck with the [PowerPoint to video converter](/): your speaker notes become narration, and Claude Opus 5.5 art-directs the result, designing each scene so your key points land with the voice, which gives you strong frames to pull a thumbnail from. Then make a thumbnail from your strongest slide, and give people a clear reason to press play.

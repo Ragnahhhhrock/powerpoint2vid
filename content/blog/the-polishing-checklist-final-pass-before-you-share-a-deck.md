@@ -117,4 +117,4 @@ If you're turning the deck into a video, also see [the pre-export checklist](/bl
 
 ## Share it as a video too
 
-A polished deck is the best starting point for a narrated video. Once it's passed every check above, bring it to the [PowerPoint to video converter](/). Claude Opus 5.5 directs the video: it reads the whole deck, tightens the story and designs each slide as an animated scene, so a well-checked deck comes out as a produced explainer. Hearing your notes read aloud is one last, useful proofread: anything awkward, outdated or unclear stands out straight away.
+A polished deck is the best starting point for a narrated video. Once it's passed every check above, bring it to the [PowerPoint to video converter](/). Claude Opus 5.5 directs the finished video: it reads the whole deck, tightens the story and designs each slide as an animated scene, so a well-checked deck comes out as a produced explainer. Hearing your notes read aloud is one last, useful proofread: anything awkward, outdated or unclear stands out straight away.

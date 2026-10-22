@@ -107,4 +107,4 @@ Save video for topics people need to understand, not just look up.
 
 ## Start with the slides you already have
 
-If your training content already lives in slides, the video is mostly done. Drop the deck into the [PowerPoint to video converter](/), and let the speaker notes become the narration, with captions. Claude Opus 5.5 directs the video: it tightens the explanation and designs each scene so a sequence builds step by step, timed to the voice, which is the job video does better than a page of text. Then reuse the same notes for your written guide, so both always tell the same story.
+If your training content already lives in slides, the video is mostly done. Drop the deck into the [PowerPoint to video converter](/), and let the speaker notes become the narration, with captions. Claude Opus 5.5 art-directs the result: it tightens the explanation and designs each scene so a sequence builds step by step, timed to the voice, which is the job video does better than a page of text. Then reuse the same notes for your written guide, so both always tell the same story.

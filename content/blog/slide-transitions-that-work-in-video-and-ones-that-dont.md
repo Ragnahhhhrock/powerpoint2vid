@@ -103,4 +103,4 @@ PowerPoint2Vid chooses the transitions for you, so you do not have to set one on
 
 ## Try your transitions before you export
 
-Transitions are easiest to judge by watching. Upload your deck to the [PowerPoint to video converter](/) and see how it plays. Claude Opus 5.5 directs the video, choosing transitions that suit the story and timing each one to your narration, so the changes between slides help the viewer instead of distracting them.
+Transitions are easiest to judge by watching. Upload your deck to the [PowerPoint to video converter](/) and see how it plays. Claude Opus 5.5 is the director behind each video, choosing transitions that suit the story and timing each one to your narration, so the changes between slides help the viewer instead of distracting them.

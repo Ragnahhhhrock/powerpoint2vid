@@ -118,4 +118,4 @@ All-hands decks often include confidential results and plans. Before you upload 
 
 ## Make your next all-hands a video
 
-Take the deck you'd normally present, trim it, rewrite the notes, and load it into the [PowerPoint to video converter](/). Claude Opus 5.5 directs the video: it tightens the story, designs each scene and times the animation to your narration, so a quarterly update lands like a produced announcement rather than recorded slides. See [pricing](/pricing) for plan details. Teams wanting to set this up across a business can email contact@powerpoint2vid.com.
+Take the deck you'd normally present, trim it, rewrite the notes, and load it into the [PowerPoint to video converter](/). Claude Opus 5.5 acts as your director: it tightens the story, designs each scene and times the animation to your narration, so a quarterly update lands like a produced announcement rather than recorded slides. See [pricing](/pricing) for plan details. Teams wanting to set this up across a business can email contact@powerpoint2vid.com.

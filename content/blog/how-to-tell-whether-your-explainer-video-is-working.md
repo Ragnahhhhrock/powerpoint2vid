@@ -118,4 +118,4 @@ A simple monthly routine:
 
 ## Make changes quickly by editing the deck
 
-The easiest explainer to improve is one built from slides. If retention drops at slide 6, you edit slide 6 and its speaker notes, then make the video again. No reshoot, no booking a voice artist. With the [PowerPoint to video converter](/), your notes become the narration and Claude Opus 5.5 directs the video, tightening the story and timing the animation to the voice, so a revised slide comes back as a properly designed scene rather than a patch. That makes the measure, change, measure loop practical for a small team on a small budget.
+The easiest explainer to improve is one built from slides. If retention drops at slide 6, you edit slide 6 and its speaker notes, then make the video again. No reshoot, no booking a voice artist. With the [PowerPoint to video converter](/), your notes become the narration and Claude Opus 5.5 directs the finished video, tightening the story and timing the animation to the voice, so a revised slide comes back as a properly designed scene rather than a patch. That makes the measure, change, measure loop practical for a small team on a small budget.

@@ -130,4 +130,4 @@ A sample email line:
 
 ## Turn your findings deck into a summary video
 
-You already did the hard work in the analysis. Turning the summary into a video should take an afternoon, not a production budget. Drop your summary deck into the [PowerPoint to video converter](/), and let your speaker notes become the narration. Claude Opus 5.5 directs the video: it tightens the story, rebuilds your charts as animated charts with the same numbers and times the animation to your voiceover, so findings land like a produced briefing. Download a video your client can watch before the next meeting.
+You already did the hard work in the analysis. Turning the summary into a video should take an afternoon, not a production budget. Drop your summary deck into the [PowerPoint to video converter](/), and let your speaker notes become the narration. Claude Opus 5.5 acts as your director: it tightens the story, rebuilds your charts as animated charts with the same numbers and times the animation to your voiceover, so findings land like a produced briefing. Download a video your client can watch before the next meeting.

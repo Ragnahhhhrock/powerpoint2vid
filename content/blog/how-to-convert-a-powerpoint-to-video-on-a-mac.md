@@ -105,4 +105,4 @@ Check your Mac hasn't gone to sleep and your connection is steady, then try agai
 
 ## Try it on your Mac today
 
-If you'd rather not record your own voice, open the [PowerPoint to video converter](/) in your Mac's browser and upload your .pptx. Claude Opus 5.5 directs the video: it tightens the story, designs each scene and times the animation to your narration, so a deck you made on a Mac comes out as a produced explainer. If your deck holds sensitive material, check your organisation's policy on using online tools before uploading.
+If you'd rather not record your own voice, open the [PowerPoint to video converter](/) in your Mac's browser and upload your .pptx. Claude Opus 5.5 is the director behind each video: it tightens the story, designs each scene and times the animation to your narration, so a deck you made on a Mac comes out as a produced explainer. If your deck holds sensitive material, check your organisation's policy on using online tools before uploading.

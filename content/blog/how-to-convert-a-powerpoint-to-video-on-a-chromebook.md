@@ -93,4 +93,4 @@ The video downloads as an MP4, with WebM also available, so you can upload it to
 
 ## A Chromebook is all you need
 
-You do not need a desktop app or a studio to turn a lesson into a video. Open the [PowerPoint to video converter](/) in Chrome and add your .pptx. Claude Opus 5.5 directs the video: it tightens the story, designs each slide as an animated scene and times the animation to your narration, so a classroom deck lands like a produced explainer. You can see the Pro plans on the [pricing page](/pricing).
+You do not need a desktop app or a studio to turn a lesson into a video. Open the [PowerPoint to video converter](/) in Chrome and add your .pptx. Claude Opus 5.5 plays director: it tightens the story, designs each slide as an animated scene and times the animation to your narration, so a classroom deck lands like a produced explainer. You can see the Pro plans on the [pricing page](/pricing).

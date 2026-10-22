@@ -110,4 +110,4 @@ For L&D and HR teams, narrating from speaker notes has some practical benefits:
 
 ## Give your deck a voice without a microphone
 
-If your slides already have good speaker notes, you're most of the way there. Add the .pptx to the [PowerPoint to video converter](/) and choose a voice and speed. Claude Opus 5.5 directs the video: it polishes the narration from your notes, designs each scene and times the animation to the voice, so the result sounds and looks produced without a microphone. When a policy or process changes, edit the notes and export again.
+If your slides already have good speaker notes, you're most of the way there. Add the .pptx to the [PowerPoint to video converter](/) and choose a voice and speed. Claude Opus 5.5 acts as your director: it polishes the narration from your notes, designs each scene and times the animation to the voice, so the result sounds and looks produced without a microphone. When a policy or process changes, edit the notes and export again.

@@ -97,4 +97,4 @@ It doesn't export a separate caption file (SRT or VTT). If you need closed capti
 
 ## Add captions with the PowerPoint to video converter
 
-The quickest way to captioned slides is to start from notes you've already written. Open the [PowerPoint to video converter](/), drop in your deck, turn on burned-in captions and choose a voice. Claude Opus 5.5 directs the video, timing the animation and the captions to your narration so key points land on the word that names them. Preview it to see which sentences need trimming before you download.
+The quickest way to captioned slides is to start from notes you've already written. Open the [PowerPoint to video converter](/), drop in your deck, turn on burned-in captions and choose a voice. Claude Opus 5.5 plays director, timing the animation and the captions to your narration so key points land on the word that names them. Preview it to see which sentences need trimming before you download.

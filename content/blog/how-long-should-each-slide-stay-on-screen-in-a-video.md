@@ -113,4 +113,4 @@ For more on writing narration, see [how to write speaker notes that become a gre
 
 ## Get the timing right before you export
 
-The easiest way to judge slide timing is to watch the video. Load your deck into the [PowerPoint to video converter](/) and note any slide that feels rushed or slow. Claude Opus 5.5 directs the video, so the pacing of each scene is worked out from your narration and the animation lands with the voice. Adjust the speaker notes or the speaking speed, then watch it again. A little tuning makes a training video feel considered rather than mechanical.
+The easiest way to judge slide timing is to watch the video. Load your deck into the [PowerPoint to video converter](/) and note any slide that feels rushed or slow. Claude Opus 5.5 is the director behind each video, so the pacing of each scene is worked out from your narration and the animation lands with the voice. Adjust the speaker notes or the speaking speed, then watch it again. A little tuning makes a training video feel considered rather than mechanical.

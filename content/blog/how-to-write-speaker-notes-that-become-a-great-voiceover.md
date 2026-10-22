@@ -122,6 +122,6 @@ Some slides don't need narration: a section divider, a quote, a closing contact 
 
 ## From speaker notes to narrated video
 
-Once your notes read well aloud, the voiceover is effectively written. Upload your .pptx to the [PowerPoint to video converter](/) and your speaker notes become the narration in the voice and speed you choose. Claude Opus 5.5 directs the video, timing each animation to the words so a point lands on the word that names it, and polishing the script where it can.
+Once your notes read well aloud, the voiceover is effectively written. Upload your .pptx to the [PowerPoint to video converter](/) and your speaker notes become the narration in the voice and speed you choose. Claude Opus 5.5 art-directs the result, timing each animation to the words so a point lands on the word that names it, and polishing the script where it can.
 
 Watch it, listen for any line that sounds stiff, fix it in the notes, and make the video again. For the full process from deck to file, see [how to convert PowerPoint to video](/blog/how-to-convert-powerpoint-to-video-the-complete-guide).

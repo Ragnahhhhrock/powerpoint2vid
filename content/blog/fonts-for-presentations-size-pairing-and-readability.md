@@ -118,4 +118,4 @@ The second slide is easier to read in a room, on a laptop and in a video. It als
 
 When a deck becomes a video, every font decision is tested on smaller screens and through compression. Large, plain, high-contrast type survives that well. Thin, small, decorative type doesn't. For more on keeping slides focused, see [the one idea per slide rule](/blog/the-one-idea-per-slide-rule-and-when-to-break-it).
 
-When your fonts are set, drop the deck into the [PowerPoint to video converter](/) and watch the result at a small window size. Claude Opus 5.5 directs the video, redesigning each slide as an animated scene, but it still starts from your type choices, so if any text is hard to read, go back and make it bigger.
+When your fonts are set, drop the deck into the [PowerPoint to video converter](/) and watch the result at a small window size. Claude Opus 5.5 acts as your director, redesigning each slide as an animated scene, but it still starts from your type choices, so if any text is hard to read, go back and make it bigger.

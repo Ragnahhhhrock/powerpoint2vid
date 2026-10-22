@@ -127,4 +127,4 @@ Try these checks:
 
 ## Fixed slides make better videos too
 
-Every fix on this list also makes your deck work better as a video. Clear headlines, big text, strong contrast and calm animation all matter more when people watch on a phone. Once your deck is tidy, drop it into the [PowerPoint to video converter](/) and turn your speaker notes into narration. Claude Opus 5.5 directs the video: it tightens the story, designs each slide as an animated scene and times the animation to the voice, so a tidy deck becomes a polished explainer. Download it and share.
+Every fix on this list also makes your deck work better as a video. Clear headlines, big text, strong contrast and calm animation all matter more when people watch on a phone. Once your deck is tidy, drop it into the [PowerPoint to video converter](/) and turn your speaker notes into narration. Claude Opus 5.5 art-directs the result: it tightens the story, designs each slide as an animated scene and times the animation to the voice, so a tidy deck becomes a polished explainer. Download it and share.
