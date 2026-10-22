@@ -6,7 +6,7 @@
  *   MONTHLY_VIDEOS  (optional) videos per Pro subscriber per month, default 10
  * KV keys: job:<id> -> {id, uid, name, createdAt, status, step, pct, slides, degraded, charged}
  *          jobs:<uid> -> [id, ...] newest first (max 50)   usage:<uid>:<YYYY-MM> -> number */
-import { json, sessionUid, getSub, configError } from './auth.js';
+import { json, sessionUid, getSub, isAdmin, configError } from './auth.js';
 
 export const MAX_BYTES = 50 * 1048576;
 export const ID_RE = /^[0-9a-f]{24}$/;
@@ -30,6 +30,7 @@ export async function requirePro(request, env) {
 }
 
 export async function usage(env, uid) {
+  if (await isAdmin(env, uid)) return { used: 0, limit: 9999, remaining: 9999 };
   const used = parseInt((await env.ACCOUNTS.get(monthKey(uid))) || '0', 10) || 0;
   return { used, limit: allowance(env), remaining: Math.max(0, allowance(env) - used) };
 }

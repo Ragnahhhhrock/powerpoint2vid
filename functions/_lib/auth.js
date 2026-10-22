@@ -3,6 +3,7 @@
  *   ACCOUNTS               KV namespace (users, subscriptions)
  *   SESSION_SECRET         long random string used to sign session cookies
  *   STRIPE_WEBHOOK_SECRET  signing secret (whsec_...) of the Stripe webhook endpoint
+ *   ADMIN_EMAILS (optional) comma-separated emails that get all paid features without a subscription
  *   PORTAL_URL (optional)  Stripe customer portal login link, shown on the account page
  * KV keys: user:<email> -> user, uid:<id> -> email, sub:<id> -> subscription, cust:<stripeCustomerId> -> id */
 const enc = new TextEncoder();
@@ -64,7 +65,15 @@ export async function sessionUid(request, env) {
   return uid;
 }
 
+/* Admin accounts: emails listed in the ADMIN_EMAILS variable (comma separated) get every paid feature, no subscription. */
+export async function isAdmin(env, uid) {
+  if (!env.ADMIN_EMAILS) return false;
+  const email = await env.ACCOUNTS.get('uid:' + uid);
+  return !!email && env.ADMIN_EMAILS.split(',').map((e) => e.trim().toLowerCase()).filter(Boolean).includes(email.toLowerCase());
+}
+
 export async function getSub(env, uid) {
+  if (await isAdmin(env, uid)) return { active: true, plan: 'admin' };
   const s = await env.ACCOUNTS.get('sub:' + uid, 'json');
   return s || { active: false, plan: null };
 }

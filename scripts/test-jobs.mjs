@@ -63,4 +63,12 @@ r = await one.onRequestGet({ request: req('/api/jobs/' + id2, {}, cookie), env, 
 runnerDown = true; r = await list.onRequestPost({ request: up(cookie), env }); assert.equal(r.status, 502);
 r = await list.onRequestGet({ request: req('/api/jobs', {}, cookie), env }); assert.equal((await r.json()).usage.used, 1); ok('runner down: not charged');
 r = await list.onRequestPost({ request: up(cookie), env: { ...env, RUNNER_URL: '' } }); assert.equal(r.status, 503); ok('not configured -> 503');
+
+// admin: no subscription needed, no allowance
+r = await signup.onRequestPost({ request: new Request(O + '/api/signup', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: 'Boss@Site.com', password: 'correct horse' }) }), env });
+const c3 = (r.headers.get('Set-Cookie') || '').split(';')[0];
+r = await list.onRequestPost({ request: up(c3), env: { ...env, ADMIN_EMAILS: 'someone@else.com' } }); assert.equal(r.status, 402); ok('not on admin list -> still needs Pro');
+const aenv = { ...env, ADMIN_EMAILS: 'x@y.com, boss@site.com', MONTHLY_VIDEOS: '1' };
+for (let k = 0; k < 3; k++) { r = await list.onRequestPost({ request: up(c3), env: aenv }); assert.equal(r.status, 202); }
+ok('admin: unlimited videos without a subscription');
 console.log('all passed');
