@@ -63,7 +63,7 @@
           const end = b.end != null ? b.end : (ctx.beats[i + 1] ? ctx.beats[i + 1].t : ctx.dur - 1);
           if (!word) return b.t;
           const norm = (x) => String(x).toLowerCase().replace(/[^a-z0-9]/g, '');
-          const target = norm(word);
+          const target = norm(String(word).trim().split(/\s+/)[0]);   // a phrase is timed from its first word
           if (b.words && target) { const w = b.words.find((x) => norm(x.w).startsWith(target)) || b.words.find((x) => norm(x.w).includes(target)); if (w) return w.t; }
           const k = b.text.toLowerCase().indexOf(String(word).toLowerCase());
           return k < 0 ? b.t : b.t + (end - b.t) * (k / b.text.length);

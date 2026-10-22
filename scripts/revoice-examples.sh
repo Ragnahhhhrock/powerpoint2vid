@@ -3,7 +3,7 @@
 # The Basic demo (assets/example) is left alone.
 # Needs: ELEVENLABS_API_KEY, Python 3, Node + studio deps (npm ci in studio/), ffmpeg, Chromium (Playwright).
 # Usage (from repo root): scripts/revoice-examples.sh [only-id]
-#   ids: explainer lecture pitch onboarding
+#   ids: explainer lecture pitch onboarding (comma-separated for several, e.g. lecture,pitch)
 set -euo pipefail
 [ -n "${ELEVENLABS_API_KEY:-}" ] || { echo "ELEVENLABS_API_KEY is not set"; exit 1; }
 ONLY=${1:-}
@@ -18,7 +18,7 @@ onboarding|onboarding-harbour|XrExE9yKIg1WjnnlVkGX
 
 for row in $EXAMPLES; do
   IFS='|' read -r id ex voice <<<"$row"
-  [ -z "$ONLY" ] || [ "$ONLY" = "$id" ] || continue
+  [ -z "$ONLY" ] || [[ ",$ONLY," == *",$id,"* ]] || continue
   src=studio/examples/$ex
   echo "=== $id ($ex) voice $voice"
   P2V_TTS_VOICE=$voice DATA_DIR=$PWD/.tts-cache python3 studio/voice.py "$src"

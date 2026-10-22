@@ -18,7 +18,7 @@
   "scenes": [
     {
       "file": "scenes/scene-0.js",
-      "narration": "Your support inbox never sleeps. Neither does Tidewell.",
+      "narration": "Your support inbox never sleeps. Neither does Tidewell, your new overnight shift.",
       "minDuration": 7,
       "slide": {
         "title": "Tidewell",

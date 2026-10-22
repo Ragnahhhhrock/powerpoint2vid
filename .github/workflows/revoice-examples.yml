@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       only:
-        description: 'Just one video (explainer, lecture, pitch, onboarding). Leave empty for all.'
+        description: 'Only these videos, comma-separated (explainer, lecture, pitch, onboarding). Leave empty for all.'
         required: false
         default: ''
 permissions:

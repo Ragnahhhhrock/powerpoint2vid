@@ -18,7 +18,7 @@
   "scenes": [
     {
       "file": "scenes/scene-0.js",
-      "narration": "Welcome to Harbour and Co. Here's what your first week looks like.",
+      "narration": "Welcome to Harbour and Co. Here's what your first week looks like, day by day.",
       "minDuration": 7,
       "slide": {
         "title": "Welcome to Harbour & Co",
