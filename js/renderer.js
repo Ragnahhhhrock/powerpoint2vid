@@ -341,5 +341,19 @@
     finish(ctx, opts, Object.assign({ p }, info), impact);
   }
 
-  global.SlideRender = { drawSlide, drawFrame, drawStill, drawCaption, sentences };
+  /* Basic-plan watermark, bottom right, readable on light and dark slides. */
+  function drawWatermark(ctx) {
+    const cw = ctx.canvas.width, ch = ctx.canvas.height, size = Math.round(ch * 0.026);
+    ctx.save();
+    ctx.font = '700 ' + size + 'px ' + FONT;
+    const text = 'Made with PowerPoint2Vid Basic', pad = size * 0.6, w = ctx.measureText(text).width + pad * 2, h = size * 1.8;
+    const x = cw - w - ch * 0.03, y = ch * 0.03;
+    ctx.globalAlpha = 0.82; ctx.fillStyle = '#0e1330';
+    if (ctx.roundRect) { ctx.beginPath(); ctx.roundRect(x, y, w, h, h / 2); ctx.fill(); } else ctx.fillRect(x, y, w, h);
+    ctx.globalAlpha = 1; ctx.fillStyle = '#ffffff'; ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+    ctx.fillText(text, x + pad, y + h / 2);
+    ctx.restore();
+  }
+
+  global.SlideRender = { drawSlide, drawFrame, drawStill, drawCaption, drawWatermark, sentences };
 })(window);

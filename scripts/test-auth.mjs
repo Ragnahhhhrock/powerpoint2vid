@@ -14,7 +14,7 @@ const ACCOUNTS = {
   async get(k, type) { const v = store.get(k); return v === undefined ? null : type === 'json' ? JSON.parse(v) : v; },
   async put(k, v) { store.set(k, v); }
 };
-const env = { ACCOUNTS, SESSION_SECRET: 'test-secret-test-secret', STRIPE_WEBHOOK_SECRET: 'whsec_test' };
+const env = { ACCOUNTS, SESSION_SECRET: 'test-secret-test-secret', STRIPE_WEBHOOK_SECRET: 'whsec_test', STRIPE_LINK_PRO_MONTHLY: 'https://buy.stripe.com/test_pro' };
 const O = 'https://powerpoint2vid.com';
 const post = (path, body, cookie, headers = {}) => new Request(O + path, { method: 'POST', headers: Object.assign({ 'Content-Type': 'application/json' }, cookie ? { Cookie: cookie } : {}, headers), body: typeof body === 'string' ? body : JSON.stringify(body) });
 const get = (path, cookie) => new Request(O + path, { headers: cookie ? { Cookie: cookie } : {} });
@@ -48,11 +48,12 @@ const c2 = cookieOf(r); ok('login');
 const uid = c2.split('=')[1].split('.')[0];
 
 // checkout redirect
-r = await checkout.onRequestGet({ request: get('/checkout?plan=yearly'), env }); assert.equal(r.status, 302);
-assert.match(r.headers.get('Location'), /\/account\?mode=signup&next=%2Fcheckout%3Fplan%3Dyearly$/); ok('checkout sends signed-out users to sign up');
-r = await checkout.onRequestGet({ request: get('/checkout?plan=yearly', c2), env }); assert.equal(r.status, 302);
+r = await checkout.onRequestGet({ request: get('/checkout?plan=monthly'), env }); assert.equal(r.status, 302);
+assert.match(r.headers.get('Location'), /\/account\?mode=signup&next=%2Fcheckout%3Fplan%3Dmonthly$/); ok('checkout sends signed-out users to sign up');
+r = await checkout.onRequestGet({ request: get('/checkout?plan=monthly', c2), env }); assert.equal(r.status, 302);
 let loc = new URL(r.headers.get('Location')); assert.equal(loc.host, 'buy.stripe.com'); assert.equal(loc.searchParams.get('client_reference_id'), uid); assert.equal(loc.searchParams.get('prefilled_email'), 'mal@example.com'); ok('checkout attaches account id');
-r = await checkout.onRequestGet({ request: get('/checkout?plan=bogus', c2), env }); assert.equal(r.headers.get('Location'), O + '/pricing'); ok('unknown plan goes to pricing');
+r = await checkout.onRequestGet({ request: get('/checkout?plan=bogus', c2), env }); assert.equal(r.headers.get('Location'), O + '/pricing?unavailable=1'); ok('unknown plan goes to pricing');
+r = await checkout.onRequestGet({ request: get('/checkout?plan=monthly', c2), env: Object.assign({}, env, { STRIPE_LINK_PRO_MONTHLY: '' }) }); assert.equal(r.headers.get('Location'), O + '/pricing?unavailable=1'); ok('checkout fails closed without the Pro link');
 
 // webhook
 const completed = JSON.stringify({ type: 'checkout.session.completed', data: { object: { client_reference_id: uid, customer: 'cus_123', subscription: 'sub_123', payment_status: 'paid' } } });

@@ -39,7 +39,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,600..800&family=Inter:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/styles.css?v=202610220800">
-<link rel="stylesheet" href="/home.css?v=202610212230">
+<link rel="stylesheet" href="/home.css?v=202610221000">
 
 <!-- Google tag (gtag.js). Served first-party via Cloudflare Google tag gateway (measurement path /metrics). -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3F8MGRVD2L"></script>
@@ -64,8 +64,8 @@
       "featureList": ["Convert PowerPoint to video online", "Narration from speaker notes", "Animated reveals and transitions", "Burned-in captions", "Google Slides support via .pptx export", "Runs privately in the browser"],
       "operatingSystem": "Any (modern browser)",
       "offers": [
-        { "@type": "Offer", "name": "Pro monthly", "price": "12.00", "priceCurrency": "AUD", "url": "https://powerpoint2vid.com/pricing" },
-        { "@type": "Offer", "name": "Pro yearly", "price": "99.00", "priceCurrency": "AUD", "url": "https://powerpoint2vid.com/pricing" }
+        { "@type": "Offer", "name": "Basic", "price": "0.00", "priceCurrency": "AUD", "url": "https://powerpoint2vid.com/pricing" },
+        { "@type": "Offer", "name": "Pro monthly", "price": "29.00", "priceCurrency": "AUD", "url": "https://powerpoint2vid.com/pricing" }
       ],
       "email": "contact@powerpoint2vid.com",
       "author": { "@type": "Person", "name": "Mal Gordon", "url": "https://malgordon.com/" }
@@ -265,7 +265,7 @@
   <div class="app-head">
     <div class="wrap">
       <h2>Convert your PowerPoint to video</h2>
-      <p>Drop in a deck to preview it with narration straight away. Export the finished video with a Pro plan.</p>
+      <p>Drop in a deck to preview it with narration straight away. Export it on Basic with a watermark, or go Pro for Opus-directed videos with no watermark.</p>
     </div>
   </div>
   <section class="app" id="app" aria-labelledby="app-title">
@@ -412,7 +412,7 @@
   <section class="finale" data-dark aria-labelledby="finale-title">
     <div class="wrap">
       <h2 id="finale-title">Your next deck is already a video.</h2>
-      <p>Drop it in and hear it narrated in seconds. Pro plans start at A$8.25 a month, billed yearly.</p>
+      <p>Drop it in and hear it narrated in seconds. Start on Basic, then go Pro for Opus-directed videos from A$29 a month.</p>
       <div class="controls">
         <a class="btn btn--accent btn--lg" href="#app" data-cta="finale">Convert your deck</a>
         <a class="btn btn--dark btn--lg" href="/pricing" data-cta="finale_pricing">See pricing</a>
@@ -429,24 +429,25 @@
 </footer>
 
 <dialog class="paywall" id="paywall" aria-labelledby="paywall-title">
-  <h2 id="paywall-title">Go Pro to export your video</h2>
-  <p id="paywall-msg">Previewing is open to everyone. Exporting the finished video needs a PowerPoint2Vid Pro plan, from A$8.25 a month.</p>
-  <p>Your deck stays loaded in this tab. The buttons below open in a new tab so you can come back and export.</p>
+  <h2 id="paywall-title">Export on Basic, or go Pro</h2>
+  <p id="paywall-msg">Basic exports this video with a PowerPoint2Vid watermark. Pro removes the watermark and adds Opus-directed videos, where Claude Opus 5.5 tightens your story and redesigns each slide as an animated scene. Pro is A$29 a month with 10 Opus-directed videos included.</p>
+  <p>Your deck stays loaded in this tab. Plans and log in open in a new tab so you can come back and export.</p>
   <div class="controls">
-    <a class="btn btn--accent" id="paywall-plans" href="/pricing" target="_blank" rel="noopener">See plans</a>
+    <button class="btn btn--accent" id="paywall-basic" type="button">Export with watermark</button>
+    <a class="btn" id="paywall-plans" href="/pricing" target="_blank" rel="noopener">See Pro</a>
     <a class="btn" id="paywall-login" href="/account?next=%2F" target="_blank" rel="noopener">Log in</a>
     <button class="btn btn--ghost" id="paywall-retry" type="button">I've subscribed, continue</button>
-    <button class="btn btn--ghost" id="paywall-close" type="button">Close</button>
+    <button class="btn btn--ghost" id="paywall-close" type="button">Cancel</button>
   </div>
 </dialog>
 
-<script src="/js/account.js?v=202610212230"></script>
-<script src="/vendor/jszip.min.js?v=202610212230"></script>
-<script src="/js/pptx-parser.js?v=202610212230"></script>
-<script src="/js/video-styles.js?v=202610212230"></script>
-<script src="/js/renderer.js?v=202610212230"></script>
+<script src="/js/account.js?v=202610221000"></script>
+<script src="/vendor/jszip.min.js?v=202610221000"></script>
+<script src="/js/pptx-parser.js?v=202610221000"></script>
+<script src="/js/video-styles.js?v=202610221000"></script>
+<script src="/js/renderer.js?v=202610221000"></script>
 <script src="/js/app.js?v=202610220845"></script>
-<script src="/js/stats.js?v=202610212230"></script>
-<script src="/js/home.js?v=202610212230"></script>
+<script src="/js/stats.js?v=202610221000"></script>
+<script src="/js/home.js?v=202610221000"></script>
 </body>
 </html>

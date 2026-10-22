@@ -97,7 +97,7 @@ This is where PowerPoint2Vid differs from a plain converter. Claude Opus 5.5 rea
 
 ### Step 5: Download the MP4
 
-When the video is ready, download it. The file is an MP4, with WebM available if you need it. There is no watermark.
+When the video is ready, download it. The file is an MP4, with WebM available if you need it. Basic exports carry a watermark; Pro exports do not.
 
 ### Step 6: Watch it through once
 
@@ -134,4 +134,4 @@ The export is an MP4, which plays almost everywhere, with WebM available if you 
 
 ## Make your first video with the PowerPoint to video converter
 
-You already have the hardest part: a deck that explains something. Open the [PowerPoint to video converter](/), upload your .pptx and pick a voice. Claude directs the result, so your ordinary deck comes out as an explainer video with animated scenes and a tighter story, not slides with a voice over them. [PowerPoint2Vid Pro](/pricing) is A$12 a month or A$99 a year, with no watermark.
+You already have the hardest part: a deck that explains something. Open the [PowerPoint to video converter](/), upload your .pptx and pick a voice. Try it on Basic first. On Pro, Claude directs the result, so your ordinary deck comes out as an explainer video with animated scenes and a tighter story, not slides with a voice over them. [PowerPoint2Vid Pro](/pricing) is A$29 a month with 10 Opus-directed videos included and no watermark.

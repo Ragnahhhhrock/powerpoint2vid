@@ -165,6 +165,7 @@
           for (const c of caps) { acc += c.length / total; if (p <= acc) { shown = c; break; } }
           R.drawCaption(ctx, shown, o.style);
         }
+        if (recording && o.watermark) R.drawWatermark(ctx);
         setProgress((i + Math.min(1, el / est)) / deck.slides.length);
         await raf();
       }
@@ -183,29 +184,29 @@
   $('stop').onclick = stopAll;
   $('reset').onclick = () => { track('new_deck'); stopAll(); deck = null; $('file').value = ''; show(false); };
 
-  /* ---------- paywall: exporting needs an active Pro subscription (previewing stays open) ---------- */
-  const paywall = $('paywall');
-  async function canExport() {
+  /* ---------- plans: Basic exports carry a watermark; Pro removes it (and adds Opus-directed videos in Studio) ---------- */
+  const upsell = $('paywall');
+  let watermark = true;
+  async function exportPlan() {
     let me = await window.P2V.get();
-    if (me.pro) return true;
-    me = await window.P2V.get(true); // they may have just subscribed in another tab
-    if (me.pro) return true;
-    track('paywall_shown', { logged_in: !!me.loggedIn });
+    if (!me.pro) me = await window.P2V.get(true); // they may have just subscribed in another tab
+    if (me.pro) return 'pro';
+    track('upsell_shown', { logged_in: !!me.loggedIn });
     $('paywall-login').hidden = !!me.loggedIn;
-    $('paywall-msg').textContent = me.configured === false
-      ? 'Accounts are being set up. Exporting will be available shortly.'
-      : me.loggedIn
-        ? 'You are signed in as ' + me.email + ' but do not have an active plan. Previewing is open to everyone; exporting needs PowerPoint2Vid Pro, from A$8.25 a month.'
-        : 'Previewing is open to everyone. Exporting the finished video needs a PowerPoint2Vid Pro plan, from A$8.25 a month. Log in if you already have one.';
-    if (paywall.showModal) paywall.showModal(); else paywall.setAttribute('open', '');
-    return false;
+    return new Promise((resolve) => {
+      $('paywall-basic').onclick = () => { upsell.close(); resolve('basic'); };
+      $('paywall-close').onclick = () => { upsell.close(); resolve(null); };
+      $('paywall-retry').onclick = async () => { upsell.close(); const m = await window.P2V.get(true); resolve(m.pro ? 'pro' : 'basic'); };
+      if (upsell.showModal) upsell.showModal(); else upsell.setAttribute('open', '');
+    });
   }
-  $('paywall-close').onclick = () => paywall.close();
-  $('paywall-retry').onclick = async () => { paywall.close(); $('export').click(); };
 
   $('export').onclick = async () => {
-    if (!(await canExport())) return;
-    const o = opts();
+    const plan = await exportPlan();
+    if (!plan) return;
+    watermark = plan !== 'pro';
+    track('export_plan', { plan });
+    const o = Object.assign(opts(), { watermark });
     if (!window.MediaRecorder) { track('export_unsupported'); alert('Your browser cannot record video. Please use Chrome, Edge or Firefox on a desktop.'); return; }
     const stream = stage.captureStream(30);
     let displayStream = null;
@@ -235,7 +236,7 @@
     const a = document.createElement('a'); a.href = url; a.download = 'powerpoint2vid-explainer.' + ext; document.body.appendChild(a); a.click(); a.remove();
     count({ type: 'video', seconds: (Date.now() - t0) / 1000 });
     track('export_complete', { format: ext, slide_count: deck.slides.length, size_mb: +(chunks.reduce((n, c) => n + c.size, 0) / 1048576).toFixed(1) });
-    status('Exported powerpoint2vid-explainer.' + ext + '.'); setProgress(1);
+    status(watermark ? 'Exported powerpoint2vid-explainer.' + ext + ' (Basic, with watermark). Pro removes the watermark and adds Opus-directed videos.' : 'Exported powerpoint2vid-explainer.' + ext + '.'); setProgress(1);
   };
 
   /* ---------- hero explainer: autoplays muted; button restarts it with sound ---------- */
