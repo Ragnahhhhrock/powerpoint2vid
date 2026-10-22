@@ -5,3 +5,4 @@ studio/examples/*/out/
 studio/examples/*/audio/
 studio/examples/*/scenes/*.bak
 studio/examples/*/render*.log
+.tts-cache/

@@ -1,0 +1,38 @@
+name: Re-voice example videos
+# Re-narrates the Pro example videos with ElevenLabs and re-renders them, then commits the new files.
+# Needs repo secret ELEVENLABS_API_KEY (Settings > Secrets and variables > Actions). Run from the Actions tab.
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: 'Just one video (explainer, lecture, pitch, onboarding). Leave empty for all.'
+        required: false
+        default: ''
+permissions:
+  contents: write
+concurrency: revoice-examples
+jobs:
+  revoice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    container: mcr.microsoft.com/playwright:v1.48.0-jammy
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check the key is set
+        env: { K: '${{ secrets.ELEVENLABS_API_KEY }}' }
+        run: '[ -n "$K" ] || { echo "::error::Add the ELEVENLABS_API_KEY repo secret first"; exit 1; }'
+      - name: Install tools
+        run: |
+          apt-get update && apt-get install -y --no-install-recommends python3 ffmpeg fonts-inter fonts-liberation fonts-noto-core git
+          cd studio && npm ci
+      - name: Narrate and render
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: scripts/revoice-examples.sh "${{ inputs.only }}"
+      - name: Commit
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config user.name "Mal Gordon"; git config user.email "malgordonperth@gmail.com"
+          git add -A assets index.html js/showcase.js studio/examples
+          git commit -m "Re-voice Pro example videos with ElevenLabs narration" || { echo "nothing changed"; exit 0; }
+          git pull --rebase origin main && git push origin HEAD:main
