@@ -135,7 +135,7 @@ h3 { font-size: var(--fs-md); margin: 0 0 var(--s-2); font-weight: 700; }
 .field { margin-bottom: var(--s-4); }
 .field label, .field legend { display: block; font-weight: 600; font-size: var(--fs-sm); margin-bottom: var(--s-1); padding: 0; }
 .field small { color: var(--text-muted); font-size: var(--fs-xs); display: block; margin-top: var(--s-1); }
-select, input[type="text"], input[type="url"], textarea { width: 100%; font: inherit; font-size: var(--fs-sm); padding: var(--s-3); border-radius: var(--r-sm); border: 1px solid var(--ink-300); background: var(--white); color: var(--text); }
+select, input[type="text"], input[type="url"], input[type="password"], input[type="email"], textarea { width: 100%; font: inherit; font-size: var(--fs-sm); padding: var(--s-3); border-radius: var(--r-sm); border: 1px solid var(--ink-300); background: var(--white); color: var(--text); }
 input[type="range"] { width: 100%; accent-color: var(--primary); }
 fieldset { border: 0; padding: 0; margin: 0 0 var(--s-4); }
 .check { display: flex; gap: var(--s-2); align-items: flex-start; font-size: var(--fs-sm); margin-bottom: var(--s-2); }
