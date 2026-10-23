@@ -31,20 +31,33 @@ export function runnerError(env) {
 export const runner = (env, path, init = {}) =>
   fetch(env.RUNNER_URL.replace(/\/$/, '') + path, { ...init, headers: { ...(init.headers || {}), 'x-p2v-secret': env.RUNNER_SECRET } });
 
-/* Returns {uid} for a signed-in Pro user, or {res} with the error response to send. */
+/* Pay-per-video credits: KV credits:<uid> -> number of purchased videos left (never expire);
+ * KV paid:<uid> -> "1" once the account has bought a single video, so it keeps access to its finished videos. */
+export const creditsKey = (uid) => `credits:${uid}`;
+export async function credits(env, uid) {
+  return Math.max(0, parseInt((await env.ACCOUNTS.get(creditsKey(uid))) || '0', 10) || 0);
+}
+export async function addCredits(env, uid, delta) {
+  await env.ACCOUNTS.put(creditsKey(uid), String(Math.max(0, (await credits(env, uid)) + delta)));
+}
+
+/* Returns {uid} for a signed-in Pro subscriber or per-video buyer, or {res} with the error response to send. */
 export async function requirePro(request, env) {
   const bad = configError(env); if (bad) return { res: bad };
   const uid = await sessionUid(request, env);
   if (!uid) return { res: json({ error: 'Log in to make a video.' }, 401) };
   const sub = await getSub(env, uid);
-  if (!sub.active) return { res: json({ error: 'Pro is needed to make videos.' }, 402) };
+  if (!sub.active && !(await env.ACCOUNTS.get('paid:' + uid))) return { res: json({ error: 'Buy a video or get Pro to make videos.' }, 402) };
   return { uid };
 }
 
 export async function usage(env, uid) {
-  if (await isAdmin(env, uid)) return { used: 0, limit: 9999, remaining: 9999 };
+  if (await isAdmin(env, uid)) return { used: 0, limit: 9999, credits: 0, remaining: 9999 };
+  const sub = await getSub(env, uid);
   const used = parseInt((await env.ACCOUNTS.get(monthKey(uid))) || '0', 10) || 0;
-  return { used, limit: allowance(env), remaining: Math.max(0, allowance(env) - used) };
+  const limit = sub.active ? allowance(env) : 0;
+  const bought = await credits(env, uid);
+  return { used, limit, credits: bought, remaining: Math.max(0, limit - used) + bought };
 }
 export async function addUsage(env, uid, delta, when) {
   const k = monthKey(uid, when ? new Date(when) : new Date());

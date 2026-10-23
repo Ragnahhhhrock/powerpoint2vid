@@ -85,7 +85,7 @@
   var $ = function (id) { return document.getElementById(id); };
   var timer = null;
   function esc(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; }
-  var STEPS = { queued: 'Waiting for a free slot', ingest: 'Reading your deck', story: 'Planning the story', voice: 'Recording the narration', scenes: 'Designing each scene', review: 'Checking the draft', render: 'Rendering the video', done: 'Ready' };
+  var STEPS = { queued: 'Waiting for an open slot', ingest: 'Reading your deck', story: 'Planning the story', voice: 'Recording the narration', scenes: 'Designing each scene', review: 'Checking the draft', render: 'Rendering the video', done: 'Ready' };
 
   function card(j) {
     var h = '<div class="panel" style="margin:12px 0;padding:16px"><strong>' + esc(j.name) + '</strong> <span class="muted">' + new Date(j.createdAt).toLocaleString() + (j.slides ? ' &middot; ' + j.slides + ' slides' : '') + '</span>';
@@ -107,7 +107,7 @@
   function show(jobs, usage) {
     $('jobs').innerHTML = jobs.map(card).join('');
     $('none').hidden = jobs.length > 0;
-    if (usage) { $('quota').textContent = usage.remaining + ' of ' + usage.limit + ' videos left this month'; $('go').disabled = !usage.remaining; }
+    if (usage) { $('quota').textContent = (usage.limit ? usage.remaining + ' videos left (' + Math.max(0, usage.limit - usage.used) + ' of ' + usage.limit + ' this month' + (usage.credits ? ', ' + usage.credits + ' bought' : '') + ')' : usage.remaining + (usage.remaining === 1 ? ' video' : ' videos') + ' left'); $('go').disabled = !usage.remaining; }
     var busy = jobs.filter(function (j) { return j.status === 'queued' || j.status === 'running'; });
     clearTimeout(timer);
     if (busy.length) timer = setTimeout(function () { Promise.all(busy.map(function (j) { return fetch('/api/jobs/' + j.id, { credentials: 'same-origin' }); })).then(load); }, 4000);
@@ -145,7 +145,7 @@
     var g = $('gate');
     if (me.configured === false) { g.textContent = 'Accounts are not switched on for this site yet. Please check back soon.'; g.hidden = false; return; }
     if (!me.loggedIn) { g.innerHTML = 'Please <a href="/account?next=%2Fstudio">log in or create an account</a> to make a video.'; g.hidden = false; return; }
-    if (!me.pro) { g.innerHTML = 'Making videos is part of Pro. <a href="/pricing">See plans</a>.'; g.hidden = false; return; }
+    if (!me.pro && !me.paid) { g.innerHTML = 'Making videos needs Pro or a single-video purchase. <a href="/pricing">See plans</a>.'; g.hidden = false; return; }
     $('make').hidden = false; load();
   });
 })();

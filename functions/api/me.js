@@ -7,5 +7,6 @@ export async function onRequestGet({ request, env }) {
   const email = uid ? await env.ACCOUNTS.get('uid:' + uid) : null;
   if (!uid || !email) return json({ loggedIn: false, pro: false, configured: true });
   const sub = await getSub(env, uid);
-  return json({ loggedIn: true, email, pro: !!sub.active, plan: sub.plan || null, portalUrl: env.PORTAL_URL || null, configured: true });
+  const paid = !!(await env.ACCOUNTS.get('paid:' + uid));   // has bought a single video
+  return json({ loggedIn: true, email, pro: !!sub.active, paid, plan: sub.plan || null, portalUrl: env.PORTAL_URL || null, configured: true });
 }

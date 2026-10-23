@@ -1,4 +1,4 @@
-/* GET /checkout?plan=monthly
+/* GET /checkout?plan=monthly|video
  * Requires a signed-in account, then sends the user to the Stripe payment link with their account id attached
  * (client_reference_id) so the webhook can switch on Pro for exactly that account. */
 import { sessionUid } from './_lib/auth.js';
@@ -6,7 +6,9 @@ import { sessionUid } from './_lib/auth.js';
 /* Pro (A$29/month, 10 Opus-directed videos). Set the Stripe payment link as the Cloudflare variable
  * STRIPE_LINK_PRO_MONTHLY (optional override; the default is the live A$29 link below). The old A$12 monthly and A$99 yearly links are retired. */
 const PRO_MONTHLY = 'https://buy.stripe.com/7sY14f1PP6G1dRu32kaAw08';
-const links = (env) => ({ monthly: env.STRIPE_LINK_PRO_MONTHLY || PRO_MONTHLY });
+/* Single video (A$5, one-off). Override with the Cloudflare variable STRIPE_LINK_VIDEO. Redirects to /studio after payment. */
+const SINGLE_VIDEO = 'https://buy.stripe.com/cNiaEPeCB0hD14I46oaAw0a';
+const links = (env) => ({ monthly: env.STRIPE_LINK_PRO_MONTHLY || PRO_MONTHLY, video: env.STRIPE_LINK_VIDEO || SINGLE_VIDEO });
 
 export async function onRequestGet({ request, env }) {
   const url = new URL(request.url);

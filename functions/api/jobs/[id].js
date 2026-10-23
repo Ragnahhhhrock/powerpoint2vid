@@ -1,6 +1,14 @@
 /* GET /api/jobs/<id> -> {job}. Refreshes progress from the runner; refunds the video if the job failed. */
 import { json } from '../../_lib/auth.js';
-import { ID_RE, requirePro, runnerError, runner, addUsage, pubJob } from '../../_lib/jobs.js';
+import { ID_RE, requirePro, runnerError, runner, addUsage, addCredits, pubJob } from '../../_lib/jobs.js';
+
+/* Give back the monthly video, or the purchased video, that this job was charged to. */
+async function refund(env, uid, job) {
+  if (!job.charged) return;
+  const how = job.charged;
+  job.charged = false;
+  if (how === 'credit') await addCredits(env, uid, 1); else await addUsage(env, uid, -1, job.createdAt);
+}
 
 export async function onRequestGet({ request, env, params }) {
   const a = await requirePro(request, env); if (a.res) return a.res;
@@ -14,10 +22,10 @@ export async function onRequestGet({ request, env, params }) {
   if (r && r.ok) {
     const s = await r.json();
     Object.assign(job, { status: s.status, step: s.step, pct: s.pct, slides: s.slides, degraded: !!s.degraded });
-    if (s.status === 'failed') { job.message = s.msg || 'We could not finish this video.'; if (job.charged) { job.charged = false; await addUsage(env, a.uid, -1, job.createdAt); } }
+    if (s.status === 'failed') { job.message = s.msg || 'We could not finish this video.'; await refund(env, a.uid, job); }
   } else if (r && r.status === 404) {          // the runner forgot it (restart or clean-up)
     job.status = 'failed'; job.message = 'This video was lost when the server restarted. It has not been counted.';
-    if (job.charged) { job.charged = false; await addUsage(env, a.uid, -1, job.createdAt); }
+    await refund(env, a.uid, job);
   }
   await env.ACCOUNTS.put('job:' + id, JSON.stringify(job), { expirationTtl: 30 * 86400 });
   return json({ job: pubJob(job) });
