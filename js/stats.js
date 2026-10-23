@@ -1,7 +1,7 @@
-/* Homepage usage stats: fetched on load, hidden until 10+ videos exist, then count-up animated. */
+/* Homepage usage stats: fetched on load, hidden until 20+ videos exist, then count-up animated. */
 (function () {
   'use strict';
-  const MIN_VIDEOS = 10;
+  const MIN_VIDEOS = 20;
   const box = document.getElementById('stats');
   if (!box) return;
   const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;

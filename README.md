@@ -35,7 +35,7 @@ Flow: `/pricing` -> `/checkout?plan=monthly` -> (sign up or log in at `/account`
 Until steps 1 to 3 are done, exporting shows "Accounts are being set up" (it fails closed). Test the backend with `node scripts/test-auth.mjs` (no network needed).
 
 ## Usage stats (homepage)
-`functions/api/stats.js` (Cloudflare Pages Function) keeps four aggregate counters in KV: videos created, decks processed, slides, and video seconds. `js/stats.js` fetches them on page load and animates a stats strip, but only once **10+ videos** exist. Sample decks are not counted. Only numbers are stored, never files or content.
+`functions/api/stats.js` (Cloudflare Pages Function) keeps four aggregate counters in KV: videos created, decks processed, slides, and video seconds. `js/stats.js` fetches them on page load and animates a stats strip, but only once **20+ videos** exist (Basic exports and finished Pro videos both count). Sample decks are not counted. The strip appears on the homepage and on `/basic`. Only numbers are stored, never files or content.
 **Setup:** Cloudflare Pages > Settings > Functions > KV namespace bindings > add variable `STATS` pointing at a KV namespace (production and preview), then redeploy.
 
 ## Google tag gateway

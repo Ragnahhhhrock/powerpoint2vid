@@ -174,3 +174,10 @@ body.pro { background: var(--ink-950); color: var(--white); overflow-x: clip; }
 .px-finale { padding: var(--s-9) 0; text-align: center; background: radial-gradient(60% 90% at 50% 100%, rgb(109 74 255 / 45%), transparent 70%), var(--ink-950); }
 .px-finale h2 { font-size: clamp(2.2rem, 5vw, 4rem); letter-spacing: -0.04em; line-height: 1; margin: 0 auto var(--s-4); max-width: 16ch; }
 .px-finale p { color: var(--ink-300); font-size: var(--fs-lg); margin: 0 0 var(--s-6); }
+
+/* ================= USAGE STATS (dark strip under the hero; shown by js/stats.js at 20+ videos) ================= */
+.px-stats { padding: var(--s-7) 0 var(--s-5); }
+.px-stats .stats__grid li { background: rgb(255 255 255 / 6%); border: 1px solid rgb(255 255 255 / 12%); backdrop-filter: blur(8px); }
+.px-stats .stats__grid strong { font-family: var(--font-display); background: linear-gradient(100deg, #c8b9ff 0%, #ff9a7f 70%, #ff6b4a 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.px-stats .stats__grid span { color: var(--ink-300); }
+@media (prefers-reduced-motion: reduce) { .stats__grid li { transition: none; transform: none; } }
