@@ -1,107 +1,122 @@
-/* Scene 4 — "Your speaker notes are your script. Write them as spoken sentences, not reminders.
- * The longer version is much easier to follow by ear."
- * Storyboard: the headline builds word by word, and the tag flips SPEAKER NOTES → SCRIPT on "script".
- * The slide thumbnail drifts in at the top right. On "Write", two note cards rise. On "spoken",
- * the AFTER line types itself in. On "not reminders", the BEFORE note is struck through in coral
- * and dims. Its choppy waveform stutters while the spoken one flows. On "longer", the AFTER card
- * grows and glows mint. On "ear", an "EASIER BY EAR" pill pops in. */
+/* Scene 4: "Your speaker notes are your script. Write spoken sentences, not reminders.
+ * They run longer, but they're much easier to follow by ear."
+ * Storyboard: split screen on ink. The headline "Notes are your script." snaps in word by word.
+ * Left, labelled BEFORE, the terse grey note "Day 1 - laptop, accts (email, HRIS), buddy intro."
+ * jitters and is hard to read. On "spoken" the right half lights up as paper and
+ * "On your first day, three things happen." types in at 72px, with a mint waveform flowing beneath it.
+ * On "not reminders" the left note dims and gets a REMINDER stamp. On "run longer" the right card
+ * visibly stretches taller and ghost lines grow. On "by ear" a sky-blue ear icon glows beside the waveform. */
 P2V.scene((ctx) => {
   const { tl, el, stage } = ctx;
-  const W = (i, w, fb) => { try { const v = ctx.at(i, w); return Number.isFinite(v) ? v : fb; } catch (e) { return fb; } };
-  const tNotes = W(0, 'notes', 1.177), tScript = W(0, 'script.', 1.735);
-  const tWrite = W(1, 'Write', 2.454), tSpoken = W(1, 'spoken', 3.012), tNot = W(1, 'not', 4.289), tRem = W(1, 'reminders.', 4.486);
-  const tLonger = W(2, 'longer', 5.949), tEasier = W(2, 'easier', 6.994), tEar = W(2, 'ear.', 8.016);
-  const titleTimes = [0.55, tNotes, W(0, 'are', 1.444), W(0, 'your', 1.561), tScript];
+  const A = (b, w, f) => { const v = ctx.at(b, w); return (v == null || isNaN(v)) ? f : v; };
+  const tNotes = A(0, 'notes', 1.14), tAre = A(0, 'are', 1.39), tScript = A(0, 'script.', 1.68);
+  const tSpoken = A(1, 'spoken', 2.68), tSent = A(1, 'sentences,', 3.13), tNot = A(1, 'not', 3.92), tRem = A(1, 'reminders.', 4.13);
+  const tRun = A(2, 'run', 5.57), tLonger = A(2, 'longer,', 5.8), tFollow = A(2, 'follow', 7.22), tEar = A(2, 'ear.', 7.76);
+  const MONO = 'ui-monospace, Menlo, monospace';
 
-  stage.style.background = 'radial-gradient(60% 55% at 30% 20%, #1a1f52 0%, transparent 70%), radial-gradient(50% 50% at 85% 85%, rgba(109,74,255,.18), transparent 70%), var(--night)';
+  stage.style.background = 'radial-gradient(60% 55% at 70% 45%, #26304a 0%, var(--ink) 55%, var(--night) 100%)';
   const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 540px' });
+  const glow = el('div', 'abs', cam, { left: '900px', top: '120px', width: '1100px', height: '900px', background: 'radial-gradient(50% 50% at 50% 50%, rgba(247,244,238,.16), transparent 70%)', opacity: 0 });
 
-  /* tag + title */
-  const tag = el('div', 'abs', cam, { left: '144px', top: '104px', font: '600 22px/1 ui-monospace, Menlo, monospace', letterSpacing: '.16em', color: 'var(--muted)' });
-  const title = el('div', 'abs', cam, { left: '140px', top: '150px', width: '1300px', font: '800 84px/1.05 Inter Display, Inter', letterSpacing: '-.04em', color: '#fff', whiteSpace: 'nowrap' });
-  const words = ctx.split(title, 'Your notes are your script.', 'word');
-  const scriptW = words[words.length - 1];
-  Object.assign(scriptW.style, { background: 'linear-gradient(100deg, var(--violet-hi), var(--coral))', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent', paddingRight: '6px' });
+  /* headline */
+  const kicker = el('div', 'abs', cam, { left: '120px', top: '84px', font: `600 22px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--mist)', opacity: 0.8 });
+  kicker.textContent = 'STEP 2 · THE SCRIPT';
+  const head = el('div', 'abs', cam, { left: '120px', top: '122px', font: '800 66px/1 Inter Display, Inter', letterSpacing: '-.04em', color: '#fff', whiteSpace: 'nowrap' });
+  const hw = ['Notes', 'are', 'your', 'script.'].map((w, i) => {
+    const s = el('span', '', head, { display: 'inline-block', marginRight: '18px', color: i === 3 ? 'var(--sky)' : '#fff' });
+    s.textContent = w; return s;
+  });
 
-  /* slide thumbnail */
-  const thumb = el('div', 'abs', cam, { left: '1500px', top: '96px', width: '280px', height: '158px', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 24px 60px rgba(0,0,0,.55)', border: '1px solid rgba(255,255,255,.15)' });
-  const ti = el('img', 'abs', thumb, { inset: 0, width: '100%', height: '100%' }); ti.src = ctx.asset('slide-5.png');
-  const thumbTag = el('div', 'abs', cam, { left: '1500px', top: '268px', font: '600 16px/1 ui-monospace, Menlo, monospace', letterSpacing: '.14em', color: 'var(--muted)' });
-  thumbTag.textContent = 'SLIDE 5';
+  /* LEFT: before */
+  const L = el('div', 'abs', cam, { left: '120px', top: '300px', width: '780px', height: '440px', borderRadius: '24px', background: 'rgba(255,255,255,.04)', border: '2px solid rgba(201,207,219,.14)', boxShadow: '0 40px 90px rgba(0,0,0,.35)', boxSizing: 'border-box' });
+  const lLab = el('div', 'abs', L, { left: '56px', top: '48px', font: `700 22px/1 ${MONO}`, letterSpacing: '.18em', color: 'rgba(201,207,219,.6)' });
+  lLab.textContent = 'BEFORE';
+  const lNote = el('div', 'abs', L, { left: '56px', top: '110px', width: '660px', font: `500 40px/1.45 ${MONO}`, color: '#6f788c', letterSpacing: '-.01em' });
+  lNote.textContent = '"Day 1 - laptop, accts (email, HRIS), buddy intro."';
+  const stamp = el('div', 'abs', L, { left: '420px', top: '330px', padding: '12px 20px', border: '4px solid var(--signal)', borderRadius: '10px', font: `800 30px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--signal)', transform: 'rotate(-7deg)', opacity: 0 });
+  stamp.textContent = 'REMINDER';
 
-  /* cards */
-  const mkCard = (x, label, color) => {
-    const c = el('div', 'abs', cam, { left: x + 'px', top: '330px', width: '760px', height: '440px', borderRadius: '24px', background: 'linear-gradient(160deg, rgba(255,255,255,.07), rgba(255,255,255,.02))', border: '1px solid rgba(255,255,255,.12)', boxShadow: '0 40px 90px rgba(0,0,0,.45)', transformOrigin: '50% 50%' });
-    const l = el('div', 'abs', c, { left: '40px', top: '36px', font: '700 20px/1 ui-monospace, Menlo, monospace', letterSpacing: '.16em', color });
-    l.textContent = label;
-    const txt = el('div', 'abs', c, { left: '40px', top: '86px', width: '680px', font: '700 50px/1.18 Inter', letterSpacing: '-.02em', color: '#fff' });
-    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svg.setAttribute('width', '680'); svg.setAttribute('height', '110');
-    Object.assign(svg.style, { position: 'absolute', left: '40px', top: '300px', overflow: 'visible' });
-    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    path.setAttribute('fill', 'none'); path.setAttribute('stroke', color); path.setAttribute('stroke-width', '5'); path.setAttribute('stroke-linecap', 'round');
-    svg.appendChild(path); c.appendChild(svg);
-    return { c, l, txt, path };
-  };
-  const before = mkCard(140, 'BEFORE · REMINDER', 'var(--coral)');
-  before.txt.textContent = '“Day 1 - laptop, accts, buddy intro”';
-  before.txt.style.color = 'rgba(255,255,255,.85)';
-  const after = mkCard(1020, 'AFTER · SPOKEN', 'var(--mint)');
-  const chars = ctx.split(after.txt, '“On your first day, three things happen.”', 'char');
-  const strike = el('div', 'abs', before.c, { left: '30px', top: '142px', width: '700px', height: '8px', borderRadius: '4px', background: 'var(--coral)', boxShadow: '0 0 24px rgba(255,107,74,.8)', transformOrigin: '0% 50%', rotation: -3 });
-  const glow = el('div', 'abs', after.c, { inset: '-2px', borderRadius: '24px', border: '3px solid var(--mint)', boxShadow: '0 0 70px rgba(31,191,143,.55), inset 0 0 40px rgba(31,191,143,.15)', opacity: 0 });
-
-  const pill = el('div', 'abs', cam, { left: '1160px', top: '820px', width: '480px', height: '84px', borderRadius: '42px', background: 'var(--mint)', color: 'var(--night)', font: '800 34px/84px Inter', letterSpacing: '.02em', textAlign: 'center', boxShadow: '0 20px 60px rgba(31,191,143,.45)' });
-  pill.textContent = '✓ EASIER BY EAR';
+  /* RIGHT: after */
+  const R = el('div', 'abs', cam, { left: '960px', top: '300px', width: '840px', height: '440px', borderRadius: '24px', border: '2px dashed rgba(201,207,219,.25)', boxSizing: 'border-box', transformOrigin: '50% 50%' });
+  const paper = el('div', 'abs', R, { inset: '-2px', borderRadius: '24px', background: 'linear-gradient(160deg, #fffdf8, var(--paper))', boxShadow: '0 50px 120px rgba(0,0,0,.5), 0 0 80px rgba(247,244,238,.18)', opacity: 0 });
+  const rLab = el('div', 'abs', R, { left: '56px', top: '48px', font: `700 22px/1 ${MONO}`, letterSpacing: '.18em', color: '#3a8f74', opacity: 0 });
+  rLab.textContent = 'AFTER';
+  const rText = el('div', 'abs', R, { left: '56px', top: '96px', width: '740px', font: '800 72px/1.06 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--ink)' });
+  const words = ['On', 'your', 'first', 'day,', 'three', 'things', 'happen.'].map((w, i) => {
+    const s = el('span', '', rText, { display: 'inline-block', marginRight: '18px' }); s.textContent = w;
+    if (i === 3) el('br', '', rText);
+    return s;
+  });
+  const bars = [[640, 290], [590, 326], [420, 362]].map(([w, y]) => el('div', 'abs', R, { left: '56px', top: y + 'px', width: w + 'px', height: '16px', borderRadius: '8px', background: 'rgba(27,34,51,.13)', transformOrigin: '0% 50%' }));
+  const wave = el('div', 'abs', R, { left: '56px', bottom: '48px', width: '560px', height: '120px' });
+  wave.innerHTML = '<svg width="560" height="120"><path id="w2" fill="none" stroke="#3FD3A4" stroke-opacity=".35" stroke-width="3"/><path id="w1" fill="none" stroke="#3FD3A4" stroke-width="5" stroke-linecap="round"/></svg>';
+  const w1 = wave.querySelector('#w1'), w2 = wave.querySelector('#w2');
+  const ear = el('div', 'abs', R, { right: '48px', bottom: '40px', width: '136px', height: '136px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(91,140,255,.22), rgba(91,140,255,.06))', opacity: 0 });
+  ear.innerHTML = `<svg width="136" height="136" viewBox="0 0 136 136" fill="none" stroke="#5B8CFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 58 C40 38 54 26 70 26 C88 26 100 40 100 56 C100 70 90 74 84 84 C78 94 80 106 66 110 C56 113 48 106 48 98"/>
+    <path d="M56 58 C56 47 62 42 70 42 C79 42 85 49 85 57 C85 64 78 66 74 72"/>
+    <path d="M112 44 C118 52 118 64 112 72" stroke-width="5" opacity=".7"/></svg>`;
 
   ctx.fx.vignette({ strength: 0.5 });
   ctx.fx.grain({ opacity: 0.06 });
 
-  /* waveforms */
-  const wave = { b: 0, a: 0 };
-  const draw = (p, amp, t, choppy) => {
-    let d = '';
-    for (let x = 0; x <= 680; x += 8) {
-      let g = 1;
-      if (choppy) { const seg = Math.floor((x + t * 160) / 90); g = (seg % 3 === 1) ? 0.05 : (seg % 2 ? 1 : 0.55); }
-      const y = 55 + Math.sin(x * (choppy ? 0.11 : 0.045) + t * (choppy ? 9 : 5)) * Math.sin(x * 0.013 + t * 1.7) * 42 * amp * g;
-      d += (x ? 'L' : 'M') + x + ' ' + y.toFixed(1);
-    }
-    p.setAttribute('d', d);
-  };
+  /* procedural: jitter + waveform */
+  const st = { jit: 1, amp: 0 };
   ctx.onFrame((t) => {
-    tag.textContent = t < tScript ? 'SPEAKER NOTES' : 'SPEAKER NOTES = SCRIPT';
-    draw(before.path, wave.b, t, true);
-    draw(after.path, wave.a, t, false);
+    const j = st.jit;
+    gsap.set(lNote, { x: (Math.sin(t * 53) * 2.2 + Math.sin(t * 131) * 1.4) * j, y: (Math.cos(t * 71) * 1.6 + Math.sin(t * 157)) * j, skewX: Math.sin(t * 89) * 1.2 * j });
+    const mk = (ph, k) => {
+      let d = '';
+      for (let x = 0; x <= 560; x += 8) {
+        const env = Math.sin(Math.PI * x / 560);
+        const y = 60 + st.amp * env * k * (Math.sin(x * 0.045 - t * 6 + ph) * 26 + Math.sin(x * 0.11 + t * 4.3) * 14 + Math.sin(x * 0.023 - t * 2) * 8);
+        d += (x ? ' L' : 'M') + x + ' ' + y.toFixed(1);
+      }
+      return d;
+    };
+    w1.setAttribute('d', mk(0, 1)); w2.setAttribute('d', mk(1.7, 0.6));
   });
 
   /* ---- timeline ---- */
-  tl.to(cam, { scale: 1.035, duration: ctx.dur, ease: 'none' }, 0);
-  tl.from(tag, { opacity: 0, y: 12, duration: 0.5 }, 0.05);
-  tl.from(thumb, { opacity: 0, x: 80, rotation: 4, duration: 1.1, ease: 'power3.out' }, 0.05);
-  tl.from(thumbTag, { opacity: 0, duration: 0.5 }, 0.4);
-  tl.to(thumb, { y: -10, rotation: -1.5, duration: ctx.dur - 1, ease: 'sine.inOut' }, 1);
-  words.forEach((w, i) => tl.from(w, { opacity: 0, y: 40, duration: 0.5, ease: 'back.out(1.7)' }, titleTimes[i] - 0.08));
-  tl.fromTo(scriptW, { scale: 1 }, { scale: 1.12, duration: 0.18, yoyo: true, repeat: 1, ease: 'power2.out', immediateRender: false }, tScript + 0.1);
-  tl.fromTo(tag, { color: '#aab0d4' }, { color: '#8f75ff', duration: 0.3, immediateRender: false }, tScript);
+  gsap.set([L, R, lNote, ear, paper], { filter: 'blur(0px) brightness(1)' });
+  gsap.set(ear, { filter: 'drop-shadow(0 0 0px rgba(91,140,255,0))' });
+  gsap.set(hw, { opacity: 0, y: 30 });
+  gsap.set(words, { opacity: 0, y: 40 });
+  gsap.set(bars, { scaleX: 0, opacity: 0 });
+  gsap.set(lNote, { filter: 'blur(0.8px) brightness(1)' });
 
-  // "Write": cards rise
-  tl.from([before.c, after.c], { opacity: 0, y: 70, duration: 0.7, stagger: 0.12, ease: 'back.out(1.4)' }, tWrite - 0.2);
-  tl.to(wave, { b: 1, duration: 0.6 }, tWrite + 0.2);
-  // "spoken": after line types in
-  tl.from(chars, { opacity: 0, y: 14, duration: 0.25, stagger: Math.min(0.03, (tNot - tSpoken - 0.3) / chars.length) }, tSpoken - 0.05);
-  tl.to(wave, { a: 1, duration: 0.8 }, tSpoken + 0.3);
-  // "not reminders": strike + dim
-  gsap.set(strike, { scaleX: 0 });
-  gsap.set(before.c, { filter: 'brightness(1) saturate(1)' });
-  tl.to(strike, { scaleX: 1, duration: 0.35, ease: 'power3.in' }, tNot);
-  tl.to(before.c, { filter: 'brightness(.55) saturate(.6)', scale: 0.95, rotation: -1.5, duration: 0.6, ease: 'power2.out' }, tRem);
-  tl.to(wave, { b: 0.45, duration: 0.6 }, tRem);
-  // "longer": after card grows, glows
-  tl.to(after.c, { scale: 1.05, x: -20, duration: 0.7, ease: 'back.out(1.6)' }, tLonger - 0.1);
-  tl.to(glow, { opacity: 1, duration: 0.5 }, tLonger);
-  tl.to(wave, { a: 1.25, duration: 0.6 }, tEasier);
-  // "ear": pill pops
-  tl.from(pill, { opacity: 0, scale: 0.4, y: 30, duration: 0.6, ease: 'back.out(2)' }, tEar - 0.25);
-  tl.to(glow, { boxShadow: '0 0 110px rgba(31,191,143,.8), inset 0 0 50px rgba(31,191,143,.2)', duration: 0.5, yoyo: true, repeat: 1 }, tEar);
+  tl.from(L, { x: -50, opacity: 0, duration: 0.7 }, 0.05);
+  tl.from(R, { x: 50, opacity: 0, duration: 0.7 }, 0.15);
+  tl.from(kicker, { opacity: 0, duration: 0.5 }, 0.1);
+  tl.to(cam, { scale: 1.05, duration: ctx.dur, ease: 'none' }, 0);
+
+  // headline snaps on spoken words
+  [[0, tNotes], [1, tAre], [2, tAre + 0.1], [3, tScript]].forEach(([i, t]) =>
+    tl.to(hw[i], { opacity: 1, y: 0, duration: 0.45, ease: 'back.out(1.8)' }, t - 0.05));
+
+  // "spoken sentences": the right half lights up
+  tl.to(cam, { x: -30, duration: 1.6, ease: 'expo.inOut' }, tSpoken - 0.4);
+  tl.to(paper, { opacity: 1, duration: 0.45 }, tSpoken - 0.05);
+  tl.to(glow, { opacity: 1, duration: 0.8 }, tSpoken);
+  tl.fromTo(R, { scale: 0.97 }, { scale: 1, duration: 0.7, ease: 'back.out(1.8)', immediateRender: false }, tSpoken - 0.05);
+  tl.to(rLab, { opacity: 1, duration: 0.3 }, tSpoken);
+  tl.to(words, { opacity: 1, y: 0, duration: 0.5, ease: 'back.out(1.6)', stagger: Math.min(0.12, (tSent + 0.5 - tSpoken) / 7) }, tSpoken + 0.05);
+  tl.to(st, { amp: 1, duration: 0.9, ease: 'power2.out' }, tSent);
+  tl.to(L, { filter: 'blur(0px) brightness(.8)', duration: 0.6 }, tSpoken);
+
+  // "not reminders"
+  tl.to(L, { opacity: 0.55, scale: 0.96, duration: 0.6, ease: 'power2.out' }, tNot);
+  tl.fromTo(stamp, { opacity: 0, scale: 2 }, { opacity: 1, scale: 1, duration: 0.3, ease: 'power4.in', immediateRender: false }, tRem - 0.2);
+  tl.to(stamp, { y: 4, duration: 0.06, yoyo: true, repeat: 1 }, tRem + 0.1);
+
+  // "run longer": the card stretches
+  tl.to(R, { top: 230, height: 620, duration: 0.9, ease: 'back.out(1.3)' }, tRun - 0.05);
+  tl.to(bars, { scaleX: 1, opacity: 1, duration: 0.6, stagger: 0.1 }, tLonger);
+  tl.to(st, { jit: 0.4, duration: 1 }, tRun);
+
+  // "by ear"
+  tl.fromTo(ear, { opacity: 0, scale: 0.4, rotation: -15 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.6, ease: 'back.out(2)', immediateRender: false }, tEar - 0.2);
+  tl.to(ear, { filter: 'drop-shadow(0 0 26px rgba(91,140,255,.9))', duration: 0.5, ease: 'power2.out' }, tEar);
+  tl.to(ear, { filter: 'drop-shadow(0 0 14px rgba(91,140,255,.6))', duration: 0.8, ease: 'power1.inOut' }, tEar + 0.5);
+  tl.to(st, { amp: 1.3, duration: 0.5, yoyo: true, repeat: 1, ease: 'sine.inOut' }, tFollow);
 });

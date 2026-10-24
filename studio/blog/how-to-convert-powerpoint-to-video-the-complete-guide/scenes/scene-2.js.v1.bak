@@ -1,101 +1,133 @@
-/* Scene 2 — "You can export from PowerPoint and record yourself, or screen record a run-through.
- * A dedicated converter builds the video from your notes, so updates are easy."
- * Storyboard: the title "Three ways to convert your deck" builds word by word. Three live cards land
- * on their words: Export + record on "export" (its mic joins on "record"), Screen record on "screen"
- * (a REC dot pulses). On "converter" the third card rises as the hero and the other two dim. On
- * "builds" a progress bar fills. On "notes" note lines flow into a video frame. On "updates" a mint
- * badge pops. The original slide render overlaps its own title, so its three options are rebuilt as
- * cards instead of showing the image. */
+/* Scene 2 — "You have three ways to convert: export from PowerPoint, record your screen, or use a dedicated
+ * converter that builds the video from your notes."
+ * Storyboard: night stage with three tall closed doors numbered 1, 2, 3, rising in at the open. The title snaps
+ * in on "three". On "export" door one swings open onto a sky-blue export arrow. On "record" door two reveals a
+ * pulsing red record dot with a running REC timecode. On "dedicated" door three swings open in coral, light
+ * spills across the floor and the other doors dim. On "converter" speaker-note lines flow in, and on "builds"
+ * they collapse into a film strip that runs. The camera glides laterally, then slowly pushes toward door three. */
 P2V.scene((ctx) => {
-  const { tl, el, stage } = ctx;
-  const A = (i, w, f) => { const v = ctx.at(i, w); return (v == null || isNaN(v)) ? f : v; };
-  const tExport = A(0, 'export', 0.875), tRecord = A(0, 'record', 2.2), tScreen = A(0, 'screen', 3.49);
-  const tDed = A(1, 'dedicated', 5.53), tConv = A(1, 'converter', 6.1), tBuilds = A(1, 'builds', 6.68);
-  const tNotes = A(1, 'notes,', 7.85), tUpd = A(1, 'updates', 8.6);
+  const { tl, el, stage, at } = ctx;
+  const tThree = at(0, 'three'), tExport = at(0, 'export'), tRecord = at(0, 'record');
+  const tDed = at(0, 'dedicated'), tConv = at(0, 'converter'), tBuilds = at(0, 'builds'), tVideo = at(0, 'video');
+  const W = 340, H = 600, TOP = 230, FLOOR = TOP + H;
+  const MONO = '600 20px/1 ui-monospace, Menlo, monospace';
 
-  stage.style.background = 'radial-gradient(60% 55% at 50% 45%, #1a1f52 0%, var(--ink) 50%, var(--night) 100%)';
-  const glowBg = el('div', 'abs', stage, { left: '900px', top: '200px', width: '1100px', height: '900px', background: 'radial-gradient(closest-side, rgba(109,74,255,.35), transparent)', opacity: 0 });
-  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 560px' });
+  stage.style.background = 'radial-gradient(80% 70% at 50% 45%, #1a2238 0%, var(--night) 70%)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '1500px 540px' });
+  const backGlow = el('div', 'abs', cam, { left: '1100px', top: '120px', width: '800px', height: '820px', borderRadius: '50%', background: 'radial-gradient(closest-side, rgba(255,107,74,.35), transparent)', opacity: 0 });
 
-  /* title */
-  const title = el('div', 'abs', cam, { left: '0', width: '1920px', top: '110px', textAlign: 'center', font: '800 76px/1.05 Inter Display, Inter', letterSpacing: '-.04em', color: '#fff' });
-  const words = ctx.split(title, 'Three ways to convert your deck', 'word');
-  const kicker = el('div', 'abs', cam, { left: '0', width: '1920px', top: '70px', textAlign: 'center', font: '600 20px/1 ui-monospace, Menlo, monospace', letterSpacing: '.22em', color: 'var(--muted)' });
-  kicker.textContent = 'STEP 01 · CHOOSE A METHOD';
+  const title = el('div', 'abs', cam, { left: '160px', width: '1600px', top: '110px', textAlign: 'center', font: '800 64px/1 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--paper)' });
+  const tWords = ctx.split(title, 'Three ways to convert', 'word');
+  tWords.forEach((w) => { w.style.marginRight = '.22em'; });
 
-  /* cards */
-  const CW = 480, CH = 500, TOP = 330, XS = [180, 720, 1260];
-  const mkCard = (x, label, sub) => {
-    const c = el('div', 'abs', cam, { left: x + 'px', top: TOP + 'px', width: CW + 'px', height: CH + 'px', borderRadius: '28px',
-      background: 'linear-gradient(160deg, rgba(255,255,255,.09), rgba(255,255,255,.03))', border: '1px solid rgba(255,255,255,.12)',
-      boxShadow: '0 40px 90px rgba(0,0,0,.45)', transformOrigin: '50% 60%' });
-    const icon = el('div', 'abs', c, { left: '40px', top: '40px', width: '400px', height: '260px' });
-    const lab = el('div', 'abs', c, { left: '40px', width: '400px', top: '340px', font: '800 42px/1.1 Inter Display, Inter', letterSpacing: '-.03em', color: '#fff' });
-    lab.textContent = label;
-    const s = el('div', 'abs', c, { left: '40px', width: '400px', top: '410px', font: '600 18px/1 ui-monospace, Menlo, monospace', letterSpacing: '.16em', color: 'var(--muted)' });
-    s.textContent = sub;
-    return { c, icon };
-  };
-  const c1 = mkCard(XS[0], 'Export + record', 'POWERPOINT · MIC');
-  const c2 = mkCard(XS[1], 'Screen record', 'LIVE RUN-THROUGH');
-  const c3 = mkCard(XS[2], 'Dedicated converter', 'BUILT FROM NOTES');
+  el('div', 'abs', cam, { left: '160px', width: '1600px', top: FLOOR + 'px', height: '2px', background: 'linear-gradient(90deg, transparent, rgba(201,207,219,.35), transparent)' });
 
-  c1.icon.innerHTML = `<svg width="400" height="260" viewBox="0 0 400 260">
-    <rect x="20" y="40" width="230" height="150" rx="14" fill="rgba(255,255,255,.08)" stroke="#aab0d4" stroke-width="4"/>
-    <rect x="45" y="70" width="120" height="14" rx="7" fill="#aab0d4"/><rect x="45" y="100" width="170" height="10" rx="5" fill="rgba(170,176,212,.5)"/><rect x="45" y="122" width="140" height="10" rx="5" fill="rgba(170,176,212,.5)"/>
-    <path d="M200 150 L250 100 M222 98 L252 98 L252 128" stroke="#8f75ff" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    <g id="mic"><rect x="305" y="70" width="44" height="80" rx="22" fill="#ff6b4a"/><path d="M290 125 Q290 175 327 175 Q364 175 364 125" stroke="#ff6b4a" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M327 175 L327 205 M305 208 L349 208" stroke="#ff6b4a" stroke-width="7" stroke-linecap="round"/></g></svg>`;
-  c2.icon.innerHTML = `<svg width="400" height="260" viewBox="0 0 400 260">
-    <rect x="40" y="20" width="320" height="190" rx="16" fill="rgba(255,255,255,.08)" stroke="#aab0d4" stroke-width="4"/>
-    <path d="M160 245 L240 245 M200 210 L200 245" stroke="#aab0d4" stroke-width="6" stroke-linecap="round"/>
-    <rect x="80" y="70" width="150" height="14" rx="7" fill="#aab0d4"/><rect x="80" y="100" width="220" height="10" rx="5" fill="rgba(170,176,212,.5)"/><rect x="80" y="124" width="180" height="10" rx="5" fill="rgba(170,176,212,.5)"/>
-    <circle id="rec" cx="320" cy="50" r="12" fill="#ff6b4a"/><text x="250" y="57" fill="#ff6b4a" font-family="ui-monospace, Menlo, monospace" font-weight="700" font-size="18" letter-spacing="2">REC</text></svg>`;
-  c3.icon.innerHTML = `<svg width="400" height="260" viewBox="0 0 400 260">
-    <rect x="10" y="40" width="140" height="180" rx="14" fill="rgba(255,255,255,.1)" stroke="#aab0d4" stroke-width="4"/>
-    <g id="nl"><rect x="32" y="75" width="96" height="10" rx="5" fill="#8f75ff"/><rect x="32" y="105" width="80" height="10" rx="5" fill="#8f75ff"/><rect x="32" y="135" width="96" height="10" rx="5" fill="#8f75ff"/><rect x="32" y="165" width="60" height="10" rx="5" fill="#8f75ff"/></g>
-    <path id="arr" d="M168 130 L210 130 M196 116 L212 130 L196 144" stroke="#8f75ff" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect id="vf" x="225" y="55" width="170" height="150" rx="16" fill="rgba(109,74,255,.25)" stroke="#8f75ff" stroke-width="4"/>
-    <path id="play" d="M290 105 L290 155 L332 130 Z" fill="#fff"/></svg>`;
-  const pbTrack = el('div', 'abs', c3.c, { left: '40px', width: '400px', top: '458px', height: '8px', borderRadius: '4px', background: 'rgba(255,255,255,.1)', overflow: 'hidden' });
-  const pb = el('div', 'abs', pbTrack, { left: 0, top: 0, height: '100%', width: '100%', background: 'linear-gradient(90deg, #6d4aff, #8f75ff)', transformOrigin: '0 50%' });
+  const D = [
+    { cx: 420, hex: '#5B8CFF', rgb: '91,140,255', label: 'PowerPoint export', t: tExport },
+    { cx: 960, hex: '#FF3B3B', rgb: '255,59,59', label: 'Record screen', t: tRecord },
+    { cx: 1500, hex: '#FF6B4A', rgb: '255,107,74', label: 'Dedicated converter', t: tDed },
+  ];
 
-  const badge = el('div', 'abs', cam, { left: XS[2] + 'px', width: CW + 'px', top: TOP + CH + 46 + 'px', display: 'flex', justifyContent: 'center' });
-  const pill = el('div', '', badge, { padding: '18px 34px', borderRadius: '40px', background: 'rgba(31,191,143,.16)', border: '2px solid var(--mint)', font: '700 30px/1 Inter', color: '#d6fff1', letterSpacing: '-.01em', boxShadow: '0 0 40px rgba(31,191,143,.35)', whiteSpace: 'nowrap' });
-  pill.textContent = '✓  Updates are easy';
+  // light spill for door three (behind the door, on the floor)
+  const spill = el('div', 'abs', cam, { left: 1500 - W / 2 - 80 + 'px', top: FLOOR + 'px', width: W + 160 + 'px', height: '200px', clipPath: 'polygon(10% 0, 90% 0, 100% 100%, 0 100%)', background: 'linear-gradient(180deg, rgba(255,107,74,.5), rgba(255,107,74,0))', opacity: 0 });
 
-  ctx.fx.vignette({ strength: 0.5 });
+  D.forEach((d, i) => {
+    d.wrap = el('div', 'abs', cam, { left: d.cx - W / 2 + 'px', top: TOP + 'px', width: W + 'px', height: H + 'px', perspective: '1300px' });
+    d.inside = el('div', 'abs', d.wrap, { inset: 0, borderRadius: '10px 10px 0 0', overflow: 'hidden', background: `radial-gradient(90% 70% at 50% 40%, rgba(${d.rgb},.32), rgba(${d.rgb},.06) 70%), #0a0e18` });
+    el('div', 'abs', d.wrap, { inset: '-8px -8px 0 -8px', border: '8px solid #2a3350', borderBottom: 'none', borderRadius: '16px 16px 0 0', boxShadow: '0 30px 80px rgba(0,0,0,.5)' });
+    d.crack = el('div', 'abs', d.wrap, { left: '10px', right: '10px', bottom: '-2px', height: '4px', borderRadius: '2px', background: d.hex, boxShadow: `0 0 18px ${d.hex}`, opacity: 0.5 });
+    d.leaf = el('div', 'abs', d.wrap, { inset: 0, borderRadius: '10px 10px 0 0', transformOrigin: '0% 50%', background: 'linear-gradient(165deg, #2c3550 0%, #1B2233 60%, #151b2a 100%)', boxShadow: 'inset 0 0 0 1px rgba(255,255,255,.08), inset 0 2px 0 rgba(255,255,255,.12)' });
+    el('div', 'abs', d.leaf, { left: '34px', right: '34px', top: '40px', height: '230px', borderRadius: '8px', border: '2px solid rgba(255,255,255,.07)' });
+    el('div', 'abs', d.leaf, { left: '34px', right: '34px', top: '300px', height: '260px', borderRadius: '8px', border: '2px solid rgba(255,255,255,.07)' });
+    const num = el('div', 'abs', d.leaf, { left: 0, right: 0, top: '60px', textAlign: 'center', font: '900 200px/1 Inter Display, Inter', letterSpacing: '-.05em', color: 'rgba(247,244,238,.9)' });
+    num.textContent = String(i + 1);
+    el('div', 'abs', d.leaf, { right: '26px', top: '320px', width: '18px', height: '18px', borderRadius: '50%', background: 'radial-gradient(circle at 35% 35%, #e9e2d4, #8a8574)' });
+    d.idx = el('div', 'abs', cam, { left: d.cx - 200 + 'px', width: '400px', top: FLOOR + 34 + 'px', textAlign: 'center', font: MONO, letterSpacing: '.16em', color: d.hex });
+    d.idx.textContent = '0' + (i + 1);
+    d.lab = el('div', 'abs', cam, { left: d.cx - 200 + 'px', width: '400px', top: FLOOR + 66 + 'px', textAlign: 'center', font: '700 38px/1 Inter', letterSpacing: '-.03em', color: 'var(--paper)' });
+    d.lab.textContent = d.label;
+  });
+
+  /* door 1: export arrow */
+  const exp = el('div', 'abs', D[0].inside, { left: '70px', top: '190px', width: '200px', height: '200px', filter: 'drop-shadow(0 0 24px rgba(91,140,255,.8))' });
+  exp.innerHTML = `<svg width="200" height="200" viewBox="0 0 200 200" fill="none" stroke="#5B8CFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M30 120 V165 H170 V120"/><g id="arr"><path d="M100 135 V30"/><path d="M60 70 L100 30 L140 70"/></g></svg>`;
+  const arr = exp.querySelector('#arr');
+
+  /* door 2: record dot */
+  const halo = el('div', 'abs', D[1].inside, { left: '100px', top: '230px', width: '140px', height: '140px', borderRadius: '50%', border: '5px solid #FF3B3B', opacity: 0 });
+  const dot = el('div', 'abs', D[1].inside, { left: '110px', top: '240px', width: '120px', height: '120px', borderRadius: '50%', background: 'radial-gradient(circle at 38% 35%, #ff8a7a, #FF3B3B 60%, #c81e1e)', boxShadow: '0 0 60px rgba(255,59,59,.85)' });
+  const rec = el('div', 'abs', D[1].inside, { left: '0', right: '0', top: '420px', textAlign: 'center', font: '700 26px/1 ui-monospace, Menlo, monospace', letterSpacing: '.14em', color: '#ff8a7a' });
+
+  /* door 3: notes -> film strip */
+  const notes = el('div', 'abs', D[2].inside, { left: '50px', top: '130px', width: '240px', height: '150px' });
+  const lines = [220, 180, 235, 150].map((w, k) => el('div', 'abs', notes, { left: 0, top: k * 36 + 'px', width: w + 'px', height: '14px', borderRadius: '7px', background: 'var(--mist)', boxShadow: '0 0 14px rgba(255,255,255,.3)' }));
+  const strip = el('div', 'abs', D[2].inside, { left: '20px', top: '320px', width: '300px', height: '150px', borderRadius: '8px', overflow: 'hidden', background: '#0b0d14', boxShadow: '0 0 50px rgba(255,107,74,.6)', transformOrigin: '0% 50%' });
+  const holes = 'repeating-linear-gradient(90deg, rgba(247,244,238,.85) 0 14px, transparent 14px 28px)';
+  el('div', 'abs', strip, { left: '6px', right: '0', top: '8px', height: '12px', background: holes, borderRadius: '2px' });
+  el('div', 'abs', strip, { left: '6px', right: '0', bottom: '8px', height: '12px', background: holes, borderRadius: '2px' });
+  const track = el('div', 'abs', strip, { left: '10px', top: '30px', height: '90px', width: '900px' });
+  for (let k = 0; k < 8; k++) {
+    const f = el('div', 'abs', track, { left: k * 110 + 'px', top: 0, width: '100px', height: '90px', borderRadius: '4px', background: `linear-gradient(${140 + k * 20}deg, #ffb199, #FF6B4A 55%, #8a2e1e)` });
+    el('div', 'abs', f, { left: '14px', top: '20px', width: 30 + (k % 3) * 18 + 'px', height: '8px', borderRadius: '4px', background: 'rgba(255,255,255,.85)' });
+    el('div', 'abs', f, { left: '14px', top: '38px', width: '50px', height: '6px', borderRadius: '3px', background: 'rgba(255,255,255,.5)' });
+  }
+
+  ctx.fx.vignette({ strength: 0.55 });
   ctx.fx.grain({ opacity: 0.06 });
-
-  const mic = c1.icon.querySelector('#mic'), rec = c2.icon.querySelector('#rec');
-  const nl = c3.icon.querySelector('#nl'), arr = c3.icon.querySelector('#arr'), vf = c3.icon.querySelector('#vf'), play = c3.icon.querySelector('#play');
-  ctx.onFrame((t) => { if (t > tScreen) rec.setAttribute('opacity', (0.35 + 0.65 * (0.5 + 0.5 * Math.cos((t - tScreen) * 6))).toFixed(3)); });
+  ctx.onFrame((t) => {
+    const s = Math.max(0, t - tRecord);
+    const fr = Math.floor((s * 30) % 30);
+    rec.textContent = 'REC 00:0' + Math.floor(s) + ':' + String(fr).padStart(2, '0');
+  });
 
   /* ---- timeline ---- */
-  tl.from(kicker, { opacity: 0, y: -10, duration: 0.5 }, 0.05);
-  tl.from(words, { opacity: 0, y: 40, duration: 0.6, ease: 'back.out(1.7)', stagger: 0.09 }, 0.1);
-  tl.fromTo(cam, { scale: 1 }, { scale: 1.03, duration: ctx.dur, ease: 'none' }, 0);
+  gsap.set([...D.map((d) => d.idx), ...D.map((d) => d.lab)], { opacity: 0 });
+  gsap.set(tWords, { opacity: 0, y: 30 });
+  gsap.set(D.map((d) => d.leaf), { filter: 'brightness(1)' });
+  gsap.set([exp, dot, rec, ...lines], { opacity: 0 });
+  gsap.set(strip, { scaleX: 0, opacity: 0 });
 
-  [c1.c, c2.c, c3.c].forEach((c) => gsap.set(c, { filter: 'brightness(1)' }));
-  tl.from(c1.c, { opacity: 0, y: 90, scale: 0.9, duration: 0.8, ease: 'back.out(1.5)' }, tExport - 0.2);
-  gsap.set(mic, { opacity: 0, transformOrigin: '327px 140px' });
-  tl.fromTo(mic, { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.6, ease: 'back.out(2)', immediateRender: false }, tRecord - 0.05);
-  tl.from(c2.c, { opacity: 0, y: 90, scale: 0.9, duration: 0.8, ease: 'back.out(1.5)' }, tScreen - 0.2);
+  // opening: doors rise in, camera glides laterally
+  tl.from(D.map((d) => d.wrap), { y: 70, opacity: 0, duration: 0.9, stagger: 0.1, ease: 'back.out(1.3)' }, 0.02);
+  tl.fromTo(cam, { x: 70 }, { x: 0, duration: 5.4, ease: 'power2.inOut' }, 0);
+  tl.to(tWords, { opacity: 1, y: 0, duration: 0.55, stagger: 0.07, ease: 'back.out(1.7)' }, tThree - 0.05);
 
-  gsap.set([arr, vf, play], { opacity: 0.25 });
-  gsap.set(pb, { scaleX: 0 });
-  tl.from(c3.c, { opacity: 0, y: 110, scale: 0.85, duration: 0.9, ease: 'back.out(1.5)' }, tConv - 0.3);
-  tl.to([c1.c, c2.c], { opacity: 0.45, scale: 0.94, filter: 'brightness(.7)', duration: 0.7, ease: 'power2.inOut' }, tConv);
-  tl.to(c3.c, { scale: 1.06, y: -16, borderColor: 'rgba(143,117,255,.8)', boxShadow: '0 40px 100px rgba(0,0,0,.5), 0 0 80px rgba(109,74,255,.55)', duration: 0.8, ease: 'power2.inOut' }, tConv + 0.2);
-  tl.to(glowBg, { opacity: 1, duration: 1 }, tConv);
-  tl.to(badge, { y: -16, duration: 0.8, ease: 'power2.inOut' }, tConv + 0.2);
+  const openDoor = (d, t) => {
+    tl.to(d.leaf, { rotationY: -108, filter: 'brightness(.45)', duration: 1.1, ease: 'power3.inOut' }, t - 0.15);
+    tl.to(d.crack, { opacity: 0, duration: 0.4 }, t);
+    tl.fromTo(d.idx, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 }, t);
+    tl.fromTo(d.lab, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.55, ease: 'back.out(1.8)' }, t);
+  };
 
-  tl.to(pb, { scaleX: 1, duration: Math.max(0.8, tNotes + 0.4 - tBuilds), ease: 'power1.inOut' }, tBuilds);
-  tl.to(nl, { x: 18, duration: 0.25, yoyo: true, repeat: 1, ease: 'power2.inOut' }, tNotes - 0.2);
-  tl.to(arr, { opacity: 1, duration: 0.3 }, tNotes - 0.1);
-  tl.to(vf, { opacity: 1, duration: 0.4 }, tNotes);
-  gsap.set(play, { transformOrigin: '310px 130px' });
-  tl.fromTo(play, { scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.6, ease: 'back.out(2.2)', immediateRender: false }, tNotes + 0.05);
+  // 1 — export
+  openDoor(D[0], tExport);
+  tl.fromTo(exp, { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.7, ease: 'back.out(1.8)' }, tExport + 0.25);
+  tl.fromTo(arr, { y: 0 }, { y: -14, duration: 0.45, yoyo: true, repeat: 9, ease: 'sine.inOut', immediateRender: false }, tExport + 0.9);
 
-  tl.from(pill, { opacity: 0, scale: 0.6, y: 20, duration: 0.6, ease: 'back.out(2)' }, tUpd - 0.1);
-  tl.to(pill, { boxShadow: '0 0 70px rgba(31,191,143,.7)', duration: 0.5, yoyo: true, repeat: 1 }, tUpd + 0.5);
+  // 2 — record
+  openDoor(D[1], tRecord);
+  tl.fromTo(dot, { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.6, ease: 'back.out(2)' }, tRecord + 0.2);
+  tl.to(rec, { opacity: 1, duration: 0.3 }, tRecord + 0.4);
+  tl.fromTo(dot, { scale: 1 }, { scale: 0.86, duration: 0.42, yoyo: true, repeat: 11, ease: 'sine.inOut', immediateRender: false }, tRecord + 0.8);
+  for (let k = 0; k < 6; k++) {
+    tl.fromTo(halo, { scale: 0.85, opacity: 0.8 }, { scale: 1.9, opacity: 0, duration: 0.84, ease: 'power2.out', immediateRender: false }, tRecord + 0.8 + k * 0.84);
+  }
+
+  // 3 — dedicated converter, coral light
+  openDoor(D[2], tDed);
+  tl.to(spill, { opacity: 1, duration: 0.9, ease: 'power2.out' }, tDed + 0.2);
+  tl.to(backGlow, { opacity: 1, duration: 1.2, ease: 'power2.out' }, tDed + 0.2);
+  tl.to([D[0].wrap, D[1].wrap, D[0].lab, D[1].lab, D[0].idx, D[1].idx], { opacity: 0.4, duration: 0.8 }, tConv);
+  tl.fromTo(D[2].lab, { color: '#F7F4EE' }, { color: '#FFB199', duration: 0.6, immediateRender: false }, tConv);
+  tl.to(D[2].wrap, { filter: 'drop-shadow(0 0 40px rgba(255,107,74,.55))', duration: 0.8 }, tConv);
+
+  // notes flow in, then become a film strip
+  tl.fromTo(lines, { opacity: 0, x: -260 }, { opacity: 1, x: 0, duration: 0.6, stagger: 0.08, ease: 'back.out(1.4)' }, tConv + 0.15);
+  tl.to(lines, { y: (k) => 230 - k * 36, scaleX: 0.4, opacity: 0, duration: 0.5, stagger: 0.05, ease: 'power2.in' }, tBuilds - 0.1);
+  tl.to(strip, { scaleX: 1, opacity: 1, duration: 0.7, ease: 'back.out(1.5)' }, tBuilds + 0.25);
+  tl.fromTo(track, { x: 0 }, { x: -440, duration: ctx.dur - tVideo, ease: 'none', immediateRender: false }, tVideo);
+
+  // slow push toward door three
+  tl.to(cam, { scale: 1.1, duration: ctx.dur - 5.4, ease: 'power2.inOut' }, 5.4);
 });

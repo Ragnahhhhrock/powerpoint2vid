@@ -20,18 +20,18 @@
       "cover": true,
       "title": "How to Convert PowerPoint to Video",
       "bullets": [],
-      "notes": "Your slide deck already explains something well. Here's how to make it work without you in the room, from tidying the deck to sharing the finished file.",
-      "minDuration": 10
+      "notes": "Your slide deck already explains something well. Here's how to make it work without you in the room, by turning it into a video.",
+      "minDuration": 9
     },
     {
-      "title": "A video explains itself",
+      "title": "A video explains itself and travels",
       "bullets": [
         "It explains itself",
         "People watch when it suits them",
         "Everyone hears the same message",
         "It's easy to update"
       ],
-      "notes": "A deck on its own relies on a presenter. A video carries the slides and the explanation, so viewers can watch whenever suits them.",
+      "notes": "A deck on its own relies on a presenter. A video carries the slides and the explanation, and anyone can watch whenever suits them.",
       "minDuration": 10,
       "transition": {
         "type": "smoothleft",
@@ -45,8 +45,8 @@
         "Screen recording",
         "A dedicated converter"
       ],
-      "notes": "You can export from PowerPoint and record yourself, or screen record a run-through. A dedicated converter builds the video from your notes, so updates are easy.",
-      "minDuration": 11,
+      "notes": "You can export from PowerPoint, record your screen, or use a dedicated converter that builds the video from your notes. Each one has its place.",
+      "minDuration": 10,
       "transition": {
         "type": "circleopen",
         "duration": 0.6
@@ -58,9 +58,9 @@
         "One idea per slide",
         "Make the headline the point",
         "Body text 24pt or more",
-        "Use a 16:9 layout"
+        "16:9 layout with good contrast"
       ],
-      "notes": "Ten minutes of tidying saves a lot of re-exporting. Keep one idea per slide, and make each headline the point, like 'Returns are processed within five days'.",
+      "notes": "Tidy the deck first. Keep one idea per slide, make each headline the point, and move detail into the speaker notes, where it becomes narration.",
       "minDuration": 11,
       "transition": {
         "type": "fadeblack",
@@ -70,12 +70,11 @@
     {
       "title": "Write speaker notes for the ear",
       "bullets": [
-        "Before: \"Day 1 - laptop, accts, buddy intro\"",
+        "Before: \"Day 1 - laptop, accts (email, HRIS), buddy intro.\"",
         "After: \"On your first day, three things happen.\"",
-        "Short sentences, spoken words",
-        "Spell out abbreviations"
+        "Short sentences, spoken words"
       ],
-      "notes": "Your speaker notes are your script. Write them as spoken sentences, not reminders. The longer version is much easier to follow by ear.",
+      "notes": "Your speaker notes are your script. Write them as spoken sentences, not reminders. They run longer, but they're much easier to follow by ear.",
       "minDuration": 11,
       "transition": {
         "type": "smoothright",
@@ -83,14 +82,14 @@
       }
     },
     {
-      "title": "Ordinary slides in, extraordinary video out",
+      "title": "Ordinary deck in, explainer video out",
       "bullets": [
         "Upload your .pptx",
         "Pick a voice and speed",
-        "Try it on Basic first",
-        "Pro: a.i.-directed, no watermark"
+        "Download the MP4",
+        "Try Basic first"
       ],
-      "notes": "Upload your deck and pick a voice. Try it on Basic first. On Pro, a.i. directs your video with animated scenes and a tighter story. Visit powerpoint2vid.com.",
+      "notes": "Upload your deck and pick a voice. Try Basic first. On Pro, a.i. directs it into an explainer with animated scenes and a tighter story. Visit powerpoint2vid.com.",
       "minDuration": 12,
       "transition": {
         "type": "fade",

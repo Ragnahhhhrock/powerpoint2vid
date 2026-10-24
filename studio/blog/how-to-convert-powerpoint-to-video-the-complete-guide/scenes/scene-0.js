@@ -1,114 +1,127 @@
-/* Scene 0 — "Your slide deck already explains something well. Here's how to make it work without you
- * in the room, from tidying the deck to sharing the finished file."
- * Storyboard: on a dark stage the title "How to Convert PowerPoint to Video" builds word by word, with
- * "Video" in a violet→coral gradient. The original slide drifts in as a floating 3D card on "slide deck",
- * and a small presenter avatar docks beside it. On "work" a play button pops onto the card and a video
- * progress bar starts filling. On "without you" the presenter slides away. On "tidying" a roadmap line
- * draws from TIDY toward SHARE, and the end node ignites mint with a file icon on "sharing / finished file". */
+/* Scene 0: "Your slide deck already explains something well. Here's how to make it work without
+ * you in the room, by turning it into a video."
+ * Storyboard: a night stage. One 16:9 slide card (the deck's plain title, rebuilt) sits under a
+ * spotlight with dust motes, beside an empty lectern lit by its own cone. The camera pushes in slowly
+ * and glides once. On "without you in the room" the lectern and its light fade away and the slide stays
+ * lit, alone. On "turning" a coral play triangle stamps onto the card. The card then fills the frame,
+ * turns into a dark video frame, and "PowerPoint → Video" rises in 140px paper type on "video". A
+ * scrubber starts to play. */
 P2V.scene((ctx) => {
   const { tl, el, stage } = ctx;
-  const A = (i, w, f) => { const v = ctx.at(i, w); return (v == null || isNaN(v)) ? f : v; };
-  const tDeck = A(0, 'deck', 1.46), tExpl = A(0, 'explains', 2.17), tWell = A(0, 'well.', 3.09);
-  const tWork = A(1, 'work', 5.34), tWithout = A(1, 'without', 5.84), tRoom = A(1, 'room,', 6.6);
-  const tTidy = A(1, 'tidying', 7.5), tShare = A(1, 'sharing', 8.73), tFile = A(1, 'finished', 9.23);
-  const mono = '600 22px/1 ui-monospace, Menlo, monospace';
+  const tSlide = ctx.at(0, 'slide'), tWell = ctx.at(0, 'well');
+  const tWithout = ctx.at(1, 'without'), tRoom = ctx.at(1, 'room');
+  const tTurn = ctx.at(1, 'turning'), tVideo = ctx.at(1, 'video');
+  const zoomAt = tTurn + 0.2;
 
-  stage.style.background = 'radial-gradient(60% 60% at 75% 40%, #1b1f55 0%, var(--night) 70%)';
-  const glow = el('div', 'abs', stage, { left: '900px', top: '80px', width: '1100px', height: '800px', background: 'radial-gradient(closest-side, rgba(109,74,255,.35), transparent)', pointerEvents: 'none' });
-  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 540px' });
-  const persp = el('div', 'abs', cam, { inset: 0, perspective: '1800px' });
+  stage.style.background = 'radial-gradient(80% 70% at 46% 45%, #1a2236 0%, var(--night) 70%)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '880px 520px' });
 
-  /* ---- title ---- */
-  const kicker = el('div', 'abs', cam, { left: '150px', top: '190px', font: mono, letterSpacing: '.16em', color: 'var(--violet-hi)' });
-  kicker.textContent = 'THE COMPLETE GUIDE';
-  const lineStyle = { left: '144px', font: '900 104px/1 Inter Display, Inter', letterSpacing: '-.045em', color: '#fff', whiteSpace: 'nowrap' };
-  const l1 = el('div', 'abs', cam, { ...lineStyle, top: '250px' });
-  const l2 = el('div', 'abs', cam, { ...lineStyle, top: '370px' });
-  const l3 = el('div', 'abs', cam, { ...lineStyle, top: '490px' });
-  const w1 = ctx.split(l1, 'How to Convert', 'word');
-  const w2 = ctx.split(l2, 'PowerPoint', 'word');
-  const w3 = ctx.split(l3, 'to Video', 'word');
-  const words = [...w1, ...w2, ...w3];
-  const vid = w3[w3.length - 1];
-  Object.assign(vid.style, { background: 'linear-gradient(100deg, var(--violet-hi), var(--coral))', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent', paddingRight: '8px' });
+  /* light & floor */
+  const floorGlow = el('div', 'abs', cam, { left: '160px', top: '740px', width: '1700px', height: '240px', background: 'radial-gradient(closest-side, rgba(91,140,255,.10), transparent)' });
+  const pool = el('div', 'abs', cam, { left: '260px', top: '140px', width: '1240px', height: '800px', background: 'radial-gradient(closest-side, rgba(247,244,238,.13), transparent)' });
+  const cone = el('div', 'abs', cam, { left: '470px', top: '-80px', width: '820px', height: '1000px', background: 'linear-gradient(180deg, rgba(247,244,238,.18), rgba(247,244,238,.02))', clipPath: 'polygon(42% 0, 58% 0, 100% 100%, 0 100%)', filter: 'blur(20px)', mixBlendMode: 'screen' });
+  const lCone = el('div', 'abs', cam, { left: '1370px', top: '-80px', width: '400px', height: '1000px', background: 'linear-gradient(180deg, rgba(201,207,219,.12), rgba(201,207,219,.015))', clipPath: 'polygon(42% 0, 58% 0, 100% 100%, 0 100%)', filter: 'blur(16px)', mixBlendMode: 'screen' });
+  const lPool = el('div', 'abs', cam, { left: '1380px', top: '780px', width: '380px', height: '140px', background: 'radial-gradient(closest-side, rgba(201,207,219,.12), transparent)' });
 
-  /* ---- slide card ---- */
-  const CX = 1080, CY = 250, CW = 700, CH = 394;
-  const card = el('div', 'abs', persp, { left: CX + 'px', top: CY + 'px', width: CW + 'px', height: CH + 'px', borderRadius: '14px', overflow: 'hidden', background: '#fff',
-    boxShadow: '0 50px 110px rgba(0,0,0,.55), 0 0 80px rgba(109,74,255,.3)', transformOrigin: '50% 50%' });
-  const img = el('img', 'abs', card, { inset: 0, width: '100%', height: '100%', objectFit: 'cover' });
-  img.src = ctx.asset('slide-1.png');
-  const shade = el('div', 'abs', card, { inset: 0, background: 'linear-gradient(180deg, rgba(8,11,31,0) 50%, rgba(8,11,31,.55))', opacity: 0 });
-  const play = el('div', 'abs', card, { left: CW / 2 - 64 + 'px', top: CH / 2 - 64 + 'px', width: '128px', height: '128px', borderRadius: '50%', background: 'var(--violet)', boxShadow: '0 0 60px rgba(109,74,255,.8)' });
-  el('div', 'abs', play, { left: '50px', top: '36px', width: 0, height: 0, borderTop: '28px solid transparent', borderBottom: '28px solid transparent', borderLeft: '44px solid #fff' });
-  const barBg = el('div', 'abs', card, { left: '28px', right: '28px', bottom: '24px', height: '8px', borderRadius: '4px', background: 'rgba(255,255,255,.35)' });
-  const barFill = el('div', 'abs', barBg, { left: 0, top: 0, bottom: 0, width: '100%', borderRadius: '4px', background: 'linear-gradient(90deg, var(--violet-hi), var(--coral))', transformOrigin: '0 50%' });
-  const cardTag = el('div', 'abs', cam, { left: CX + 'px', top: CY - 46 + 'px', font: mono, letterSpacing: '.14em', color: 'var(--muted)' });
-  cardTag.textContent = 'YOUR DECK';
+  /* empty lectern silhouette */
+  const lect = el('div', 'abs', cam, { left: '1440px', top: '430px', width: '260px', height: '440px' });
+  lect.innerHTML = `<svg width="260" height="440" viewBox="0 0 260 440">
+    <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a3450"/><stop offset="1" stop-color="#141a29"/></linearGradient></defs>
+    <path d="M196 40 C 196 10, 170 -4, 150 6" fill="none" stroke="#3a4560" stroke-width="5" stroke-linecap="round"/>
+    <ellipse cx="146" cy="8" rx="9" ry="6" fill="#3a4560"/>
+    <polygon points="78,92 186,78 206,420 58,420" fill="url(#lg)" stroke="rgba(201,207,219,.18)" stroke-width="2"/>
+    <polygon points="8,66 252,30 252,60 8,98" fill="#2c3652" stroke="rgba(201,207,219,.3)" stroke-width="2" stroke-linejoin="round"/>
+    <rect x="34" y="416" width="196" height="16" rx="5" fill="#1d2438" stroke="rgba(201,207,219,.15)"/>
+  </svg>`;
 
-  /* presenter avatar */
-  const pres = el('div', 'abs', cam, { left: CX - 70 + 'px', top: CY + CH - 90 + 'px', width: '140px', height: '140px', borderRadius: '50%', background: 'radial-gradient(circle at 50% 35%, #2a2f6a, var(--ink))', border: '3px solid var(--violet-hi)', overflow: 'hidden', boxShadow: '0 20px 50px rgba(0,0,0,.5)' });
-  pres.innerHTML = '<svg width="140" height="140" viewBox="0 0 140 140"><circle cx="70" cy="56" r="24" fill="#aab0d4"/><path d="M26 140 C 30 98, 110 98, 114 140 Z" fill="#aab0d4"/></svg>';
-
-  /* ---- roadmap ---- */
-  const RY = 820, RX0 = 160, RX1 = 1760;
-  const track = el('div', 'abs', cam, { left: RX0 + 'px', top: RY + 'px', width: RX1 - RX0 + 'px', height: '4px', borderRadius: '2px', background: 'rgba(255,255,255,.1)' });
-  const prog = el('div', 'abs', cam, { left: RX0 + 'px', top: RY + 'px', width: RX1 - RX0 + 'px', height: '4px', borderRadius: '2px', background: 'linear-gradient(90deg, var(--violet), var(--mint))', transformOrigin: '0 50%', boxShadow: '0 0 20px rgba(31,191,143,.5)' });
-  const nodes = [0, 1, 2, 3].map((i) => {
-    const x = RX0 + (RX1 - RX0) * i / 3;
-    const big = i === 0 || i === 3;
-    const s = big ? 44 : 22;
-    return el('div', 'abs', cam, { left: x - s / 2 + 'px', top: RY + 2 - s / 2 + 'px', width: s + 'px', height: s + 'px', borderRadius: '50%', background: 'var(--ink)', border: '3px solid rgba(255,255,255,.25)', boxSizing: 'border-box' });
+  /* dust motes in the spotlight */
+  const motesBox = el('div', 'abs', cam, { inset: 0 });
+  const R = ctx.rand(7);
+  const motes = Array.from({ length: 30 }, () => {
+    const s = 2 + R() * 4;
+    const m = el('div', 'abs', motesBox, { left: 0, top: 0, width: s + 'px', height: s + 'px', borderRadius: '50%', background: 'rgba(247,244,238,.8)', filter: 'blur(1px)' });
+    return { m, x: 560 + R() * 640, y: R() * 900, sp: 8 + R() * 18, ph: R() * 6.28, sw: 10 + R() * 25 };
   });
-  const endFill = el('div', 'abs', cam, { left: RX1 - 40 + 'px', top: RY + 2 - 40 + 'px', width: '80px', height: '80px', borderRadius: '50%', background: 'var(--mint)', boxShadow: '0 0 60px rgba(31,191,143,.8)' });
-  endFill.innerHTML = '<svg width="80" height="80" viewBox="0 0 80 80"><path d="M27 20 h18 l10 10 v30 h-28 z" fill="#fff"/><path d="M45 20 v10 h10" fill="none" stroke="#1fbf8f" stroke-width="3"/><path d="M36 38 l10 7 l-10 7 z" fill="#1fbf8f"/></svg>';
-  const startRing = el('div', 'abs', cam, { left: RX0 - 22 + 'px', top: RY + 2 - 22 + 'px', width: '44px', height: '44px', borderRadius: '50%', background: 'var(--violet)', boxShadow: '0 0 40px rgba(109,74,255,.9)' });
-  const labA = el('div', 'abs', cam, { left: RX0 - 10 + 'px', top: RY + 54 + 'px', font: mono, letterSpacing: '.14em', color: '#fff' });
-  labA.textContent = 'TIDY THE DECK';
-  const labB = el('div', 'abs', cam, { left: RX1 - 410 + 'px', width: '420px', textAlign: 'right', top: RY + 54 + 'px', font: mono, letterSpacing: '.14em', color: 'var(--mint)' });
-  labB.textContent = 'SHARE THE FILE';
-  const ring = el('div', 'abs', cam, { left: RX1 - 60 + 'px', top: RY + 2 - 60 + 'px', width: '120px', height: '120px', borderRadius: '50%', border: '4px solid var(--mint)', boxSizing: 'border-box', opacity: 0 });
 
-  ctx.fx.vignette({ strength: 0.5 });
+  /* the slide card, with the plain deck title rebuilt */
+  const card = el('div', 'abs', cam, { left: '400px', top: '250px', width: '960px', height: '540px', background: 'var(--paper)', borderRadius: '18px', overflow: 'hidden', boxShadow: '0 50px 120px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.08)' });
+  const title = el('div', 'abs', card, { left: '80px', top: '74px', width: '800px', textAlign: 'center', font: '800 64px/1.08 Inter Display, Inter', letterSpacing: '-.035em', color: 'var(--ink)' });
+  const tWords = ctx.split(title, 'How to Convert PowerPoint to Video', 'word');
+  const rule = el('div', 'abs', card, { left: '420px', top: '242px', width: '120px', height: '4px', borderRadius: '2px', background: 'var(--mist)', transformOrigin: '50% 50%' });
+  const cLab = el('div', 'abs', card, { left: '40px', bottom: '30px', font: '600 16px/1 ui-monospace, Menlo, monospace', letterSpacing: '.16em', color: '#8a92a6' });
+  cLab.textContent = 'SLIDE 1 / 6';
+  const vfill = el('div', 'abs', card, { inset: 0, background: 'radial-gradient(70% 70% at 50% 40%, #222b42 0%, var(--night) 80%)', opacity: 0 });
+  const tri = el('div', 'abs', card, { left: '420px', top: '265px', width: '120px', height: '130px', filter: 'drop-shadow(0 0 22px rgba(255,107,74,.7))', opacity: 0 });
+  tri.innerHTML = `<svg width="120" height="130" viewBox="0 0 120 130"><path d="M22 14 L104 65 L22 116 Z" fill="#FF6B4A" stroke="#FF6B4A" stroke-width="18" stroke-linejoin="round"/></svg>`;
+  const ring = el('div', 'abs', card, { left: '390px', top: '240px', width: '180px', height: '180px', borderRadius: '50%', border: '5px solid #FF6B4A', opacity: 0 });
+
+  /* payoff headline + scrubber (screen layer) */
+  const head = el('div', 'abs', stage, { left: '80px', width: '1760px', top: '470px', textAlign: 'center', font: '900 140px/1 Inter Display, Inter', letterSpacing: '-.045em', color: 'var(--paper)', whiteSpace: 'nowrap', transformOrigin: '50% 60%' });
+  const hParts = [['PowerPoint', 'var(--paper)'], ['→', 'var(--signal)'], ['Video', 'var(--paper)']].map(([w, c], i) => {
+    const s = el('span', '', head, { display: 'inline-block', color: c, margin: i === 1 ? '0 .22em' : '0' });
+    s.textContent = w; return s;
+  });
+  const scrub = el('div', 'abs', stage, { left: '240px', width: '1440px', top: '870px', height: '6px', borderRadius: '3px', background: 'rgba(247,244,238,.16)', opacity: 0 });
+  const sFill = el('div', 'abs', scrub, { left: 0, top: 0, height: '6px', width: '0px', borderRadius: '3px', background: 'var(--signal)', boxShadow: '0 0 16px rgba(255,107,74,.7)' });
+  const sDot = el('div', 'abs', scrub, { left: '-9px', top: '-6px', width: '18px', height: '18px', borderRadius: '50%', background: 'var(--paper)' });
+  const prog = { p: 0 };
+
+  ctx.fx.vignette({ strength: 0.6 });
   ctx.fx.grain({ opacity: 0.06 });
 
+  ctx.onFrame((t) => {
+    motes.forEach((o) => {
+      const y = 860 - (((900 - o.y) + t * o.sp) % 900);
+      const x = o.x + Math.sin(t * 0.6 + o.ph) * o.sw;
+      o.m.style.transform = `translate(${x}px, ${y}px)`;
+      o.m.style.opacity = (0.25 + 0.35 * Math.sin(t * 1.3 + o.ph) ** 2).toFixed(3);
+    });
+    const w = prog.p * 1440;
+    sFill.style.width = w + 'px';
+    sDot.style.left = (w - 9) + 'px';
+  });
+
   /* ---- timeline ---- */
-  tl.to(cam, { scale: 1.04, duration: ctx.dur, ease: 'none' }, 0);
-  tl.fromTo(glow, { opacity: 0.6, x: -40 }, { opacity: 1, x: 40, duration: ctx.dur, ease: 'sine.inOut' }, 0);
-
-  tl.from(kicker, { opacity: 0, x: -20, duration: 0.6 }, 0.1);
-  tl.from(words, { opacity: 0, y: 70, rotationX: -70, transformOrigin: '50% 100%', duration: 0.8, ease: 'back.out(1.6)', stagger: 0.32 }, 0.2);
-
-  // slide card drifts in on "slide deck"
+  gsap.set(lect, { filter: 'blur(0px) brightness(1)' });
   gsap.set(card, { filter: 'brightness(1)' });
-  tl.fromTo(card, { opacity: 0, x: 160, y: 40, rotationY: -28, rotationX: 8 }, { opacity: 1, x: 0, y: 0, rotationY: -12, rotationX: 4, duration: 1.3, ease: 'expo.out' }, tDeck - 0.45);
-  tl.to(card, { rotationY: -4, rotationX: 1, y: -14, duration: ctx.dur - tDeck, ease: 'sine.inOut' }, tDeck + 0.85);
-  tl.from(cardTag, { opacity: 0, y: 12, duration: 0.5 }, tDeck);
 
-  // presenter docks beside the deck
-  tl.from(pres, { opacity: 0, scale: 0.3, duration: 0.6, ease: 'back.out(2)' }, tExpl);
-  tl.to(card, { boxShadow: '0 50px 110px rgba(0,0,0,.55), 0 0 120px rgba(143,117,255,.6)', duration: 0.4, yoyo: true, repeat: 1 }, tWell - 0.1);
+  // opening: stage lit, card rises in
+  tl.from([cone, pool], { opacity: 0, duration: 0.8, ease: 'power2.out' }, 0);
+  tl.from(card, { y: 40, opacity: 0, scale: 0.97, duration: 0.9, ease: 'back.out(1.4)' }, 0.05);
+  tl.from([lect, lCone, lPool], { opacity: 0, y: 20, duration: 0.9, stagger: 0.05 }, 0.3);
+  tl.from(tWords, { opacity: 0, y: 24, duration: 0.6, stagger: 0.06, ease: 'back.out(1.6)' }, tSlide);
+  tl.from(rule, { scaleX: 0, duration: 0.5 }, tSlide + 0.4);
+  tl.from(cLab, { opacity: 0, duration: 0.4 }, tSlide + 0.5);
+  // "well": the slide earns its light
+  tl.to(pool, { opacity: 1.3, scale: 1.04, duration: 0.8, ease: 'power2.out' }, tWell);
+  tl.to(card, { filter: 'brightness(1.06)', duration: 0.6, yoyo: true, repeat: 1 }, tWell);
 
-  // "work": becomes a video
-  gsap.set([play, barBg], { opacity: 0 });
-  tl.to(shade, { opacity: 1, duration: 0.4 }, tWork - 0.15);
-  tl.fromTo(play, { opacity: 0, scale: 0.2 }, { opacity: 1, scale: 1, duration: 0.6, ease: 'back.out(2)', immediateRender: false }, tWork - 0.15);
-  tl.to(barBg, { opacity: 1, duration: 0.3 }, tWork);
-  tl.fromTo(barFill, { scaleX: 0 }, { scaleX: 1, duration: ctx.dur - tWork, ease: 'none', immediateRender: false }, tWork);
+  // slow push-in with one lateral glide
+  tl.to(cam, { scale: 1.06, x: -40, duration: zoomAt, ease: 'power1.inOut' }, 0);
 
-  // "without you in the room": presenter leaves
-  tl.to(pres, { x: -120, opacity: 0, scale: 0.7, duration: 0.7, ease: 'power3.in' }, tWithout);
-  tl.to(play, { scale: 1.12, duration: 0.2, yoyo: true, repeat: 1, ease: 'power2.out' }, tRoom);
+  // "without you in the room": the lectern and its light leave
+  tl.to(lect, { opacity: 0, y: 30, filter: 'blur(6px) brightness(.5)', duration: 0.9, ease: 'power2.in' }, tWithout);
+  tl.to([lCone, lPool], { opacity: 0, duration: 0.9, ease: 'power2.in' }, tWithout + 0.1);
+  tl.to(cone, { opacity: 1.25, duration: 0.6 }, tRoom);
+  tl.to(card, { boxShadow: '0 50px 120px rgba(0,0,0,.55), 0 0 90px rgba(247,244,238,.18)', duration: 0.6 }, tRoom);
 
-  // roadmap
-  const rmIn = tTidy - 0.5;
-  tl.from([track, ...nodes], { opacity: 0, duration: 0.5, stagger: 0.05 }, rmIn);
-  tl.fromTo(startRing, { opacity: 0, scale: 0.2 }, { opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(2)' }, tTidy);
-  tl.from(labA, { opacity: 0, y: 16, duration: 0.5 }, tTidy);
-  tl.fromTo(prog, { scaleX: 0 }, { scaleX: 1, duration: tShare - tTidy + 0.15, ease: 'power2.inOut' }, tTidy);
-  nodes.slice(1, 3).forEach((n, i) => tl.to(n, { borderColor: 'var(--mint)', background: 'var(--mint)', duration: 0.25 }, tTidy + (tShare - tTidy) * (i + 1) / 3));
-  tl.from(labB, { opacity: 0, y: 16, duration: 0.5 }, tShare);
-  tl.fromTo(endFill, { opacity: 0, scale: 0.2, rotation: -20 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.6, ease: 'back.out(2.2)' }, tFile - 0.1);
-  tl.fromTo(ring, { opacity: 1, scale: 0.5 }, { opacity: 0, scale: 2, duration: 0.9, ease: 'power2.out', immediateRender: false }, tFile);
-  tl.to(endFill, { boxShadow: '0 0 100px rgba(31,191,143,1)', duration: 0.6, yoyo: true, repeat: 1 }, tFile + 0.5);
+  // "turning": the play triangle stamps on
+  tl.fromTo(tri, { opacity: 0, scale: 2.6, rotation: -14 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.32, ease: 'power4.in', immediateRender: false }, tTurn - 0.32);
+  tl.fromTo(ring, { opacity: 1, scale: 0.5 }, { opacity: 0, scale: 1.8, duration: 0.7, ease: 'power2.out', immediateRender: false }, tTurn);
+  tl.to(card, { y: 5, duration: 0.07, yoyo: true, repeat: 1, ease: 'power1.out' }, tTurn);
+
+  // the card fills the frame and becomes a video frame
+  tl.to(cam, { scale: 1, x: 0, duration: 0.95, ease: 'expo.inOut' }, zoomAt);
+  tl.to(card, { scale: 2.04, x: 80, y: 20, borderRadius: 0, duration: 0.95, ease: 'expo.inOut' }, zoomAt);
+  tl.to([...tWords, rule, cLab], { opacity: 0, duration: 0.3, ease: 'power2.in' }, zoomAt);
+  tl.to(vfill, { opacity: 1, duration: 0.6, ease: 'power2.inOut' }, zoomAt + 0.1);
+  tl.to(tri, { y: -163, scale: 0.6, duration: 0.95, ease: 'expo.inOut' }, zoomAt);
+  tl.to([motesBox, cone, pool, floorGlow], { opacity: 0, duration: 0.5 }, zoomAt);
+
+  // "video": the headline rises
+  tl.from(hParts, { opacity: 0, y: 90, duration: 0.7, stagger: 0.08, ease: 'back.out(1.5)' }, tVideo - 0.05);
+  tl.to(scrub, { opacity: 1, duration: 0.5 }, tVideo + 0.3);
+  tl.to(prog, { p: 0.3, duration: Math.max(0.5, ctx.dur - tVideo - 0.3), ease: 'none' }, tVideo + 0.3);
+  tl.to(head, { scale: 1.03, duration: Math.max(0.5, ctx.dur - tVideo), ease: 'power1.inOut' }, tVideo);
+  tl.to(tri, { filter: 'drop-shadow(0 0 40px rgba(255,107,74,.95))', duration: 0.6, yoyo: true, repeat: 1 }, tVideo + 0.3);
 });

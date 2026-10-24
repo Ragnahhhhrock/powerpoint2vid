@@ -1,136 +1,141 @@
-/* Scene 5 — "Upload your deck and pick a voice. Try it on Basic first. On Pro, A.I. directs your video
- * with animated scenes and a tighter story. Visit powerpoint2vid.com."
- * Storyboard: the slide title builds word by word and stays on top. On "Upload" the real slide (slide-6)
- * drifts off a deck stack into a glowing drop zone while a progress bar fills. On "voice" a voice card
- * pops with a live waveform. On "Basic" a Basic card springs in with a slide preview. On "Pro" a glowing
- * Pro card takes focus: an "AI-DIRECTED" chip lands on "A.I.", mini columns rise on "animated scenes",
- * and a scene strip snaps tight on "tighter". On "Visit" everything recedes and powerpoint2vid.com
- * builds letter by letter, then holds with an underline glow to the end. */
+/* Scene 5 — "Upload your deck, pick a voice, and download the MP4. Try Basic first. On Pro, AI directs an
+ * animated explainer. Visit powerpoint2vid.com."
+ * Storyboard: Night stage with a horizontal conveyor. On "Upload" a .pptx card drops in from the left.
+ * On "pick a voice" a waveform dial pops in and spins. On "MP4" a play-framed video slides out on the right.
+ * On "Basic" a coral "Try Basic first" pill pops. On "Pro" the camera glides right and the video blooms
+ * into six animated scene thumbnails. On "Visit" everything clears, and powerpoint2vid.com lands word by
+ * word at 130px paper type beside a coral play mark, holding to the end. Headline "Deck in, video out". */
 P2V.scene((ctx) => {
   const { tl, el, stage } = ctx;
-  const A = (i, w, f) => { const v = ctx.at(i, w); return (typeof v === 'number' && isFinite(v)) ? v : f; };
-  const tUpload = A(0, 'Upload', 0.55), tVoice = A(0, 'voice.', 1.84);
-  const tBasic = A(1, 'Basic', 3.07), tPro = A(2, 'Pro,', 4.8), tAI = A(2, 'A.I.', 5.28);
-  const tAnim = A(2, 'animated', 6.66), tTight = A(2, 'tighter', 7.88);
-  const tVisit = A(3, 'Visit', 9.26), tPP = A(3, 'PowerPoint', 9.64), tCom = A(3, 'com.', 10.95);
+  const A = (b, w) => ctx.at(b, w);
+  const tUpload = A(0, 'Upload'), tDeck = A(0, 'deck,'), tPick = A(0, 'pick'), tVoice = A(0, 'voice,'),
+    tDown = A(0, 'download'), tMP4 = A(0, 'MP4.'), tBasic = A(1, 'Basic'), tPro = A(2, 'Pro,'),
+    tAI = A(2, 'AI'), tAnim = A(2, 'animated'), tVisit = A(3, 'Visit'), tPP = A(3, 'PowerPoint'),
+    tTo = A(3, 'to'), tVid = A(3, 'vid'), tDot = A(3, 'dot'), tCom = A(3, 'com.');
   const MONO = 'ui-monospace, Menlo, monospace';
+  const TY = 600;
 
-  stage.style.background = 'radial-gradient(60% 55% at 50% 45%, #161b46 0%, var(--night) 75%)';
-  const glow = el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(35% 35% at 70% 60%, rgba(109,74,255,.22), transparent 70%)', opacity: 0.5 });
-  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 560px' });
+  stage.style.background = 'radial-gradient(60% 55% at 50% 58%, #1c2540 0%, var(--night) 75%)';
+  const glow = el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(30% 30% at 50% 56%, rgba(91,140,255,.16), transparent 70%)' });
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 600px' });
 
-  /* title */
-  const title = el('div', 'abs', cam, { left: '80px', width: '1760px', top: '100px', textAlign: 'center', font: '800 66px/1.1 Inter Display, Inter', letterSpacing: '-.035em', color: '#fff' });
-  const words = ctx.split(title, 'Ordinary slides in, extraordinary video out', 'word');
-  words.forEach((w, i) => { if (i >= 3) { w.style.background = 'linear-gradient(100deg,#c9bcff,#8f75ff)'; w.style.webkitBackgroundClip = 'text'; w.style.backgroundClip = 'text'; w.style.color = 'transparent'; } });
+  const head = el('div', 'abs', stage, { left: '160px', top: '110px', font: '800 84px/1 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--paper)', whiteSpace: 'nowrap' });
+  const hw = ctx.split(head, 'Deck in, video out', 'word');
 
-  /* ---------- phase 1: upload + voice ---------- */
-  const p1 = el('div', 'abs', cam, { inset: 0 });
-  const deckImgs = ['slide-4.png', 'slide-5.png', 'slide-6.png'];
-  const deck = deckImgs.map((n, i) => {
-    const c = el('div', 'abs', p1, { left: 200 + i * 14 + 'px', top: 420 - i * 10 + 'px', width: '480px', height: '270px', borderRadius: '10px', overflow: 'hidden', background: '#fff',
-      boxShadow: '0 30px 70px rgba(0,0,0,.5)', transform: `rotate(${(i - 2) * 3}deg)` });
-    const im = el('img', 'abs', c, { inset: 0, width: '100%', height: '100%' }); im.src = ctx.asset(n);
-    return c;
+  const track = el('div', 'abs', cam, { left: '160px', width: '1600px', top: TY + 'px', height: '2px', transformOrigin: '0 50%', background: 'linear-gradient(90deg, transparent, rgba(201,207,219,.35) 15%, rgba(201,207,219,.35) 85%, transparent)' });
+  const ticks = el('div', 'abs', cam, { left: '160px', width: '1600px', top: TY + 10 + 'px', height: '2px', backgroundImage: 'repeating-linear-gradient(90deg, rgba(201,207,219,.18) 0 2px, transparent 2px 40px)' });
+
+  const label = (txt, x, w) => { const l = el('div', 'abs', cam, { left: x + 'px', width: w + 'px', top: '424px', textAlign: 'center', font: `600 20px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--mist)' }); l.textContent = txt; return l; };
+
+  const card = el('div', 'abs', cam, { left: '190px', top: '490px', width: '300px', height: '220px', borderRadius: '16px', background: 'var(--paper)', boxShadow: '0 30px 70px rgba(0,0,0,.55)', overflow: 'hidden' });
+  el('div', 'abs', card, { left: 0, top: 0, width: '100%', height: '38px', background: 'var(--signal)' });
+  const ext = el('div', 'abs', card, { left: '18px', top: '9px', font: `700 18px/1 ${MONO}`, letterSpacing: '.1em', color: '#fff' }); ext.textContent = '.PPTX';
+  [[60, 180, 14], [92, 230, 8], [112, 200, 8], [132, 210, 8]].forEach(([y, w, h]) => el('div', 'abs', card, { left: '24px', top: y + 'px', width: w + 'px', height: h + 'px', borderRadius: '4px', background: y === 60 ? 'var(--ink)' : 'rgba(27,34,51,.25)' }));
+  el('div', 'abs', card, { left: '24px', top: '158px', width: '120px', height: '42px', borderRadius: '6px', background: 'rgba(91,140,255,.35)' });
+  const l1 = label('01 · UPLOAD', 190, 300);
+
+  const dial = el('div', 'abs', cam, { left: '820px', top: TY - 140 + 'px', width: '280px', height: '280px', borderRadius: '50%', background: 'radial-gradient(circle at 50% 40%, #26304d, var(--ink))', boxShadow: '0 0 60px rgba(91,140,255,.35), 0 30px 70px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.15)' });
+  const ring = el('div', 'abs', dial, { inset: '10px' });
+  ring.innerHTML = '<svg width="260" height="260" viewBox="0 0 260 260">' + Array.from({ length: 36 }, (_, i) => {
+    const a = (i / 36) * Math.PI * 2, r1 = 122, r2 = i % 3 === 0 ? 106 : 114;
+    return `<line x1="${130 + Math.cos(a) * r1}" y1="${130 + Math.sin(a) * r1}" x2="${130 + Math.cos(a) * r2}" y2="${130 + Math.sin(a) * r2}" stroke="${i === 0 ? '#FF6B4A' : 'rgba(201,207,219,.45)'}" stroke-width="${i === 0 ? 6 : 3}" stroke-linecap="round"/>`;
+  }).join('') + '</svg>';
+  const bars = Array.from({ length: 11 }, (_, i) => el('div', 'abs', dial, { left: 140 - 5 * 13 + i * 13 - 4 + 'px', top: '140px', width: '8px', height: '10px', borderRadius: '4px', background: 'var(--sky)', transform: 'translateY(-50%)' }));
+  const l2 = label('02 · VOICE', 810, 300);
+
+  const vid = el('div', 'abs', cam, { left: '1340px', top: TY - 118 + 'px', width: '420px', height: '236px', borderRadius: '18px', background: 'linear-gradient(135deg, #2a3557, #141b2e)', border: '3px solid rgba(201,207,219,.4)', boxShadow: '0 0 70px rgba(255,107,74,.25), 0 30px 70px rgba(0,0,0,.55)' });
+  const play = el('div', 'abs', vid, { left: '170px', top: '78px', width: '80px', height: '80px', borderRadius: '50%', background: 'var(--signal)', boxShadow: '0 0 40px rgba(255,107,74,.7)' });
+  el('div', 'abs', play, { left: '31px', top: '24px', width: 0, height: 0, borderTop: '16px solid transparent', borderBottom: '16px solid transparent', borderLeft: '26px solid #fff' });
+  const prog = el('div', 'abs', vid, { left: '20px', bottom: '16px', width: '380px', height: '5px', borderRadius: '3px', background: 'rgba(255,255,255,.15)' });
+  const progFill = el('div', 'abs', prog, { left: 0, top: 0, height: '100%', width: '100%', borderRadius: '3px', background: 'var(--signal)', transformOrigin: '0 50%' });
+  const mp4 = el('div', 'abs', vid, { right: '16px', top: '14px', font: `700 18px/1 ${MONO}`, letterSpacing: '.1em', color: 'var(--mist)' }); mp4.textContent = 'MP4';
+  const l3 = label('03 · DOWNLOAD', 1400, 300);
+
+  const pk = [0, 1].map(() => el('div', 'abs', cam, { left: 0, top: TY - 9 + 'px', width: '18px', height: '18px', borderRadius: '50%', background: 'var(--signal)', boxShadow: '0 0 24px 6px rgba(255,107,74,.6)', opacity: 0 }));
+
+  const pill = el('div', 'abs', cam, { left: '1400px', top: '744px', width: '300px', height: '64px', borderRadius: '32px', background: 'var(--signal)', boxShadow: '0 12px 40px rgba(255,107,74,.5)', font: '800 30px/64px Inter Display, Inter', letterSpacing: '-.02em', color: '#fff', textAlign: 'center' });
+  pill.textContent = 'Try Basic first';
+
+  const CX = 1550;
+  const OFF = [[-430, -200], [0, -270], [430, -200], [-430, 200], [0, 270], [430, 200]];
+  const COLS = ['var(--sky)', 'var(--mint)', 'var(--signal)', 'var(--mint)', 'var(--sky)', 'var(--signal)'];
+  const thumbs = OFF.map(([dx, dy], i) => {
+    const th = el('div', 'abs', cam, { left: CX + dx - 100 + 'px', top: TY + dy - 56 + 'px', width: '200px', height: '112px', borderRadius: '12px', overflow: 'hidden', background: 'linear-gradient(135deg, #222c4a, #121829)', border: '2px solid rgba(201,207,219,.3)', boxShadow: '0 18px 40px rgba(0,0,0,.5)' });
+    const bs = [0, 1, 2].map((k) => el('div', 'abs', th, { left: 30 + k * 50 + 'px', bottom: '18px', width: '34px', height: '60px', borderRadius: '5px 5px 2px 2px', background: COLS[i], transformOrigin: '50% 100%', opacity: 0.9 - k * 0.15 }));
+    const orb = el('div', 'abs', th, { left: '150px', top: '14px', width: '24px', height: '24px', borderRadius: '50%', background: 'rgba(247,244,238,.85)' });
+    return { th, bs, orb, dx, dy, i };
   });
-  const front = deck[2];
-  const zone = el('div', 'abs', p1, { left: '780px', top: '400px', width: '380px', height: '360px', borderRadius: '24px', border: '3px dashed rgba(170,176,212,.45)', background: 'rgba(14,19,48,.6)' });
-  zone.innerHTML = `<svg class="abs" style="left:150px;top:90px" width="80" height="80" viewBox="0 0 80 80"><path d="M40 60 V18 M22 34 L40 16 L58 34" fill="none" stroke="#aab0d4" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
-  const zl = el('div', 'abs', zone, { left: 0, right: 0, top: '200px', textAlign: 'center', font: `600 22px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--muted)' }); zl.textContent = 'UPLOAD .PPTX';
-  const pbar = el('div', 'abs', zone, { left: '50px', right: '50px', top: '270px', height: '10px', borderRadius: '5px', background: 'rgba(255,255,255,.08)', overflow: 'hidden' });
-  const pfill = el('div', 'abs', pbar, { left: 0, top: 0, bottom: 0, width: '100%', background: 'linear-gradient(90deg,#1fbf8f,#6ef0c4)', transformOrigin: '0 50%', transform: 'scaleX(0)' });
+  const proTag = el('div', 'abs', stage, { right: '160px', top: '128px', height: '52px', padding: '0 26px', borderRadius: '26px', border: '2px solid var(--sky)', font: `700 22px/48px ${MONO}`, letterSpacing: '.14em', color: 'var(--sky)', background: 'rgba(91,140,255,.1)' });
+  proTag.textContent = 'PRO · AI DIRECTED';
 
-  const voice = el('div', 'abs', p1, { left: '1260px', top: '430px', width: '460px', height: '300px', borderRadius: '24px', background: 'linear-gradient(160deg,#1b2160,#11163a)', boxShadow: '0 30px 80px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.12)' });
-  const vl = el('div', 'abs', voice, { left: '36px', top: '36px', font: `600 22px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--violet-hi)' }); vl.textContent = 'PICK A VOICE';
-  const mic = el('div', 'abs', voice, { left: '36px', top: '90px', width: '64px', height: '64px', borderRadius: '50%', background: 'var(--violet)', boxShadow: '0 0 30px rgba(109,74,255,.7)' });
-  mic.innerHTML = `<svg width="64" height="64" viewBox="0 0 64 64"><rect x="26" y="16" width="12" height="22" rx="6" fill="#fff"/><path d="M20 32 a12 12 0 0 0 24 0 M32 44 V50" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/></svg>`;
-  const wave = el('div', 'abs', voice, { left: '36px', right: '36px', top: '180px', height: '90px' });
-  const bars = Array.from({ length: 30 }, (_, i) => el('div', 'abs', wave, { left: i * 13 + 'px', width: '7px', top: '45px', height: '4px', borderRadius: '4px', background: i % 3 ? 'var(--violet-hi)' : '#c9bcff' }));
-  const wv = { a: 0.08 };
-  const rnd = ctx.rand(7); const ph = bars.map(() => rnd() * 6.28);
+  const endCam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 540px' });
+  const urlRow = el('div', 'abs', endCam, { left: 0, width: '1920px', top: '470px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '40px' });
+  const mark = el('div', '', urlRow, { position: 'relative', width: '130px', height: '130px', flex: '0 0 130px', borderRadius: '50%', background: 'var(--signal)', boxShadow: '0 0 80px rgba(255,107,74,.65)' });
+  el('div', 'abs', mark, { left: '50px', top: '38px', width: 0, height: 0, borderTop: '27px solid transparent', borderBottom: '27px solid transparent', borderLeft: '44px solid #fff' });
+  const url = el('div', '', urlRow, { position: 'relative', font: '800 130px/1 Inter Display, Inter', letterSpacing: '-.045em', color: 'var(--paper)', whiteSpace: 'nowrap' });
+  const parts = [['powerpoint', tPP], ['2', tTo], ['vid', tVid], ['.com', tDot]].map(([s, t]) => {
+    const sp = el('span', '', url, { display: 'inline-block', color: s === '2' ? 'var(--signal)' : 'var(--paper)' }); sp.textContent = s; return { sp, t };
+  });
+  const uline = el('div', 'abs', url, { left: '4px', right: '4px', bottom: '-22px', height: '6px', borderRadius: '3px', background: 'var(--signal)', transformOrigin: '0 50%' });
+  const kicker = el('div', 'abs', endCam, { left: 0, width: '1920px', top: '400px', textAlign: 'center', font: `600 24px/1 ${MONO}`, letterSpacing: '.24em', color: 'var(--mist)' });
+  kicker.textContent = 'DECK IN · VIDEO OUT';
 
-  /* ---------- phase 2: Basic vs Pro ---------- */
-  const p2 = el('div', 'abs', cam, { inset: 0 });
-  const card = (left, bg) => el('div', 'abs', p2, { left: left + 'px', top: '290px', width: '560px', height: '600px', borderRadius: '28px', background: bg, boxShadow: '0 40px 90px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.12)', transformOrigin: '50% 60%' });
-  const basic = card(320, 'linear-gradient(160deg,#1a1f4a,#10142f)');
-  const bl = el('div', 'abs', basic, { left: '40px', top: '40px', font: `700 24px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--mint)' }); bl.textContent = 'BASIC';
-  const bh = el('div', 'abs', basic, { left: '40px', top: '86px', font: '800 52px/1 Inter Display, Inter', letterSpacing: '-.035em', color: '#fff' }); bh.textContent = 'Try it first';
-  const prev = el('div', 'abs', basic, { left: '40px', top: '190px', width: '480px', height: '270px', borderRadius: '12px', overflow: 'hidden', background: '#fff', boxShadow: '0 20px 40px rgba(0,0,0,.4)' });
-  const pim = el('img', 'abs', prev, { inset: 0, width: '100%', height: '100%' }); pim.src = ctx.asset('slide-6.png');
-  const play = el('div', 'abs', prev, { left: '200px', top: '95px', width: '80px', height: '80px', borderRadius: '50%', background: 'rgba(8,11,31,.75)' });
-  play.innerHTML = `<svg width="80" height="80"><path d="M32 24 L58 40 L32 56 Z" fill="#fff"/></svg>`;
-  const bscrub = el('div', 'abs', basic, { left: '40px', top: '490px', width: '480px', height: '8px', borderRadius: '4px', background: 'rgba(255,255,255,.1)' });
-  const bscrubF = el('div', 'abs', bscrub, { left: 0, top: 0, bottom: 0, width: '100%', borderRadius: '4px', background: 'var(--mint)', transformOrigin: '0 50%', transform: 'scaleX(0)' });
-
-  const pro = card(1040, 'linear-gradient(160deg,#2a1f7a,#151245)');
-  pro.style.boxShadow = '0 40px 90px rgba(0,0,0,.5), 0 0 80px rgba(109,74,255,.45), inset 0 1px 0 rgba(255,255,255,.2)';
-  const pl = el('div', 'abs', pro, { left: '40px', top: '40px', font: `700 24px/1 ${MONO}`, letterSpacing: '.16em', color: '#c9bcff' }); pl.textContent = 'PRO';
-  const chipAI = el('div', 'abs', pro, { left: '40px', top: '86px', padding: '14px 22px', borderRadius: '40px', background: 'var(--violet)', font: '800 30px/1 Inter', letterSpacing: '-.01em', color: '#fff', boxShadow: '0 0 30px rgba(143,117,255,.7)', transformOrigin: '0 50%' });
-  chipAI.textContent = 'AI-directed';
-  const chipWM = el('div', 'abs', pro, { left: '270px', top: '86px', padding: '14px 22px', borderRadius: '40px', border: '2px solid rgba(201,188,255,.5)', font: '700 26px/1 Inter', color: '#e6e0ff', transformOrigin: '0 50%' });
-  chipWM.textContent = 'No watermark';
-  const mstage = el('div', 'abs', pro, { left: '40px', top: '180px', width: '480px', height: '250px', borderRadius: '14px', overflow: 'hidden', background: 'radial-gradient(70% 70% at 50% 70%, #241a6e, #0b0d28)' });
-  const mbars = [0.35, 0.55, 0.72, 1].map((v, i) => el('div', 'abs', mstage, { left: 70 + i * 92 + 'px', bottom: '30px', width: '64px', height: v * 170 + 'px', borderRadius: '8px 8px 2px 2px', transformOrigin: '50% 100%', transform: 'scaleY(0)',
-    background: i === 3 ? 'linear-gradient(180deg,#ffb199,#ff6b4a)' : 'linear-gradient(180deg,#8f75ff,#5b3df0)', boxShadow: i === 3 ? '0 0 30px rgba(255,107,74,.7)' : '0 0 20px rgba(109,74,255,.4)' }));
-  const strip = el('div', 'abs', pro, { left: '40px', top: '470px', width: '480px', height: '70px' });
-  const blocks = Array.from({ length: 6 }, (_, i) => el('div', 'abs', strip, { left: i * 82 + 'px', top: '12px', width: '62px', height: '46px', borderRadius: '8px', background: i % 2 ? '#5b3df0' : '#8f75ff', opacity: 0.85 }));
-
-  /* ---------- phase 3: URL ---------- */
-  const p3 = el('div', 'abs', cam, { inset: 0 });
-  const visit = el('div', 'abs', p3, { left: 0, right: 0, top: '430px', textAlign: 'center', font: `600 28px/1 ${MONO}`, letterSpacing: '.3em', color: 'var(--muted)' }); visit.textContent = 'VISIT';
-  const url = el('div', 'abs', p3, { left: '80px', right: '80px', top: '500px', textAlign: 'center', font: '900 130px/1.05 Inter Display, Inter', letterSpacing: '-.045em', color: '#fff', whiteSpace: 'nowrap' });
-  const chars = ctx.split(url, 'powerpoint2vid.com', 'char');
-  chars.forEach((c, i) => { if (i >= 10 && i < 14) c.style.color = 'var(--violet-hi)'; if (i >= 14) c.style.color = 'var(--muted)'; });
-  const uline = el('div', 'abs', p3, { left: '360px', width: '1200px', top: '668px', height: '8px', borderRadius: '4px', background: 'linear-gradient(90deg,#6d4aff,#ff6b4a)', boxShadow: '0 0 30px rgba(143,117,255,.8)', transformOrigin: '0 50%', transform: 'scaleX(0)' });
-
-  ctx.fx.vignette({ strength: 0.5 });
+  ctx.fx.vignette({ strength: 0.55 });
   ctx.fx.grain({ opacity: 0.06 });
 
+  const st = { amp: 0, pro: 0 };
   ctx.onFrame((t) => {
     bars.forEach((b, i) => {
-      const h = 4 + 80 * wv.a * (0.35 + 0.65 * Math.abs(Math.sin(t * 7 + ph[i]) * Math.sin(t * 3.1 + i * 0.4)));
-      b.style.height = h + 'px'; b.style.top = 45 - h / 2 + 'px';
+      const h = 10 + st.amp * (18 + 46 * Math.abs(Math.sin(t * 6.3 + i * 0.9) * Math.cos(t * 2.1 + i * 0.4)));
+      b.style.height = h.toFixed(1) + 'px';
+    });
+    thumbs.forEach((o) => {
+      o.bs.forEach((b, k) => { b.style.transform = `scaleY(${(0.35 + 0.65 * st.pro * (0.5 + 0.5 * Math.sin(t * 2.4 + o.i * 1.3 + k * 0.9))).toFixed(3)})`; });
+      o.orb.style.transform = `translate(${(-110 * st.pro * (0.5 + 0.5 * Math.sin(t * 1.6 + o.i))).toFixed(1)}px, 0)`;
     });
   });
 
-  /* ---------- timeline ---------- */
-  tl.to(cam, { scale: 1.04, x: -10, duration: ctx.dur, ease: 'none' }, 0);
-  tl.to(glow, { opacity: 1, duration: 4, yoyo: true, repeat: 2, ease: 'sine.inOut' }, 0);
-  tl.from(words, { opacity: 0, y: 40, rotationX: -60, duration: 0.6, stagger: 0.09, ease: 'back.out(1.6)' }, 0.05);
+  tl.from([track, ticks], { scaleX: 0, opacity: 0, duration: 0.9, ease: 'power3.out' }, 0.05);
+  tl.from(glow, { opacity: 0, duration: 0.8 }, 0);
+  tl.to(cam, { scale: 1.04, duration: tPro - 0.2, ease: 'power1.inOut' }, 0);
 
-  // phase 1
-  const deckIn = 0.05, deckDur = 0.4, deckStag = 0.04;
-  tl.from(deck, { opacity: 0, x: -120, duration: deckDur, stagger: deckStag }, deckIn);
-  const tMove = Math.max(tUpload, deckIn + 2 * deckStag + deckDur + 0.01);
-  tl.from(zone, { opacity: 0, scale: 0.9, duration: 0.6, ease: 'back.out(1.6)' }, 0.25);
-  tl.to(front, { x: 530, y: 30, scale: 0.42, rotation: 0, duration: 0.8, ease: 'power3.inOut' }, tMove);
-  tl.to(front, { opacity: 0, scale: 0.3, duration: 0.25, ease: 'power2.in' }, tMove + 0.75);
-  tl.to(zone, { borderColor: 'rgba(31,191,143,.9)', boxShadow: '0 0 60px rgba(31,191,143,.35)', duration: 0.3 }, tMove + 0.6);
-  tl.to(pfill, { scaleX: 1, duration: 0.9, ease: 'power2.inOut' }, tMove + 0.7);
-  tl.fromTo(voice, { opacity: 0, scale: 0.8, y: 30 }, { opacity: 1, scale: 1, y: 0, duration: 0.6, ease: 'back.out(1.8)' }, tVoice - 0.3);
-  tl.to(wv, { a: 1, duration: 0.5 }, tVoice);
-  tl.to(p1, { opacity: 0, y: -50, duration: 0.5, ease: 'power2.in' }, 2.4);
+  tl.from(card, { x: -520, y: -160, rotation: -14, opacity: 0, duration: 0.8, ease: 'back.out(1.5)' }, tUpload - 0.15);
+  tl.from(l1, { opacity: 0, y: 10, duration: 0.4 }, tUpload + 0.2);
+  tl.from(hw, { y: 40, opacity: 0, duration: 0.5, ease: 'back.out(1.6)', stagger: 0.08 }, tDeck);
 
-  // phase 2
-  gsap.set([basic, pro, chipAI, chipWM], { opacity: 0 });
-  gsap.set(basic, { filter: 'brightness(1)' });
-  tl.fromTo(basic, { opacity: 0, scale: 0.8, y: 60 }, { opacity: 1, scale: 1, y: 0, duration: 0.7, ease: 'back.out(1.6)', immediateRender: false }, tBasic - 0.25);
-  tl.to(bscrubF, { scaleX: 1, duration: 1.4, ease: 'none' }, tBasic + 0.3);
-  tl.fromTo(pro, { opacity: 0, scale: 0.8, y: 60 }, { opacity: 1, scale: 1.04, y: 0, duration: 0.75, ease: 'back.out(1.6)', immediateRender: false }, tPro - 0.3);
-  tl.to(basic, { opacity: 0.4, scale: 0.94, filter: 'brightness(0.8)', duration: 0.6 }, tPro);
-  tl.fromTo(chipAI, { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(2)', immediateRender: false }, tAI - 0.1);
-  tl.fromTo(chipWM, { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.5, immediateRender: false }, tAI + 0.35);
-  tl.to(mbars, { scaleY: 1, duration: 0.7, stagger: 0.1, ease: 'back.out(1.5)' }, tAnim - 0.1);
-  // tighter: blocks snap into an even 66px pitch (4px gaps), centred in the 480px strip
-  const PITCH = 66, OFF = (480 - (5 * PITCH + 62)) / 2;
-  blocks.forEach((b, i) => tl.to(b, { x: OFF + i * PITCH - i * 82, duration: 0.6, ease: 'expo.inOut' }, tTight));
-  tl.to(blocks, { background: '#8f75ff', opacity: 1, boxShadow: '0 0 18px rgba(143,117,255,.6)', duration: 0.4 }, tTight + 0.3);
-  tl.to(p2, { opacity: 0, scale: 0.9, y: -30, duration: 0.55, ease: 'power2.in', transformOrigin: '960px 600px' }, tVisit - 0.35);
+  tl.fromTo(pk[0], { x: 500, opacity: 1 }, { x: 820, opacity: 0, duration: 0.5, ease: 'power2.in', immediateRender: false }, tPick - 0.35);
+  tl.from(dial, { scale: 0, opacity: 0, duration: 0.7, ease: 'back.out(1.8)' }, tPick);
+  tl.from(l2, { opacity: 0, y: 10, duration: 0.4 }, tPick + 0.2);
+  tl.to(st, { amp: 1, duration: 0.5 }, tVoice);
+  tl.fromTo(ring, { rotation: 0 }, { rotation: 360, duration: 1.4, ease: 'expo.inOut', immediateRender: false }, tVoice - 0.1);
+  tl.to(ring, { rotation: '+=90', duration: tPro - (tVoice + 1.3), ease: 'none' }, tVoice + 1.3);
 
-  // phase 3
-  tl.from(visit, { opacity: 0, y: 20, letterSpacing: '.6em', duration: 0.6 }, tVisit);
-  tl.from(chars, { opacity: 0, y: 70, scale: 0.6, duration: 0.5, stagger: 0.045, ease: 'back.out(1.8)' }, tPP - 0.15);
-  tl.to(uline, { scaleX: 1, duration: 0.8, ease: 'expo.inOut' }, tCom - 0.2);
-  tl.to(uline, { boxShadow: '0 0 60px rgba(255,107,74,.9)', duration: 0.7, yoyo: true, repeat: 1, ease: 'sine.inOut' }, tCom + 0.7);
-  tl.to(url, { scale: 1.03, duration: ctx.dur - tCom, ease: 'sine.inOut', transformOrigin: '50% 50%' }, tCom);
+  tl.fromTo(pk[1], { x: 1100, opacity: 1 }, { x: 1340, opacity: 0, duration: 0.5, ease: 'power2.in', immediateRender: false }, tDown);
+  tl.from(vid, { x: -260, opacity: 0, scale: 0.85, duration: 0.8, ease: 'back.out(1.4)' }, tMP4 - 0.45);
+  tl.from(l3, { opacity: 0, y: 10, duration: 0.4 }, tMP4);
+  tl.from(play, { scale: 0, duration: 0.5, ease: 'back.out(2)' }, tMP4);
+  tl.fromTo(progFill, { scaleX: 0 }, { scaleX: 1, duration: tVisit - tMP4, ease: 'none' }, tMP4);
+
+  tl.from(pill, { scale: 0, y: 30, opacity: 0, duration: 0.6, ease: 'back.out(2)' }, tBasic);
+
+  tl.to(cam, { x: -300, scale: 1, duration: 1.1, ease: 'expo.inOut' }, tPro - 0.2);
+  tl.to([card, l1, l2, l3, ticks], { opacity: 0, duration: 0.5 }, tPro - 0.2);
+  tl.to(dial, { opacity: 0.15, duration: 0.6 }, tPro);
+  tl.to(pill, { opacity: 0.85, scale: 0.9, duration: 0.5 }, tPro);
+  thumbs.forEach((o, i) => {
+    tl.from(o.th, { x: -o.dx, y: -o.dy, scale: 0.2, opacity: 0, duration: 0.8, ease: 'back.out(1.5)' }, tAI - 0.15 + i * 0.07);
+  });
+  tl.to(st, { pro: 1, duration: 0.6 }, tAnim - 0.2);
+  tl.from(proTag, { y: -20, opacity: 0, duration: 0.5, ease: 'back.out(1.8)' }, tAI);
+  tl.to(cam, { scale: 1.03, duration: tVisit - tPro - 1, ease: 'power1.inOut' }, tPro + 0.9);
+
+  gsap.set(cam, { filter: 'blur(0px)' });
+  tl.to(cam, { opacity: 0, scale: 0.92, filter: 'blur(8px)', duration: 0.5, ease: 'power2.in' }, tVisit - 0.15);
+  tl.to([head, proTag], { opacity: 0, y: -20, duration: 0.4, ease: 'power2.in' }, tVisit - 0.15);
+  tl.from(mark, { scale: 0, rotation: -90, duration: 0.6, ease: 'back.out(1.8)' }, tVisit);
+  tl.from(kicker, { opacity: 0, y: 12, duration: 0.5 }, tVisit + 0.15);
+  parts.forEach((p) => tl.from(p.sp, { y: 70, opacity: 0, duration: 0.45, ease: 'back.out(1.7)' }, p.t - 0.05));
+  tl.from(uline, { scaleX: 0, duration: 0.6, ease: 'power3.inOut' }, tCom);
+  tl.to(mark, { boxShadow: '0 0 130px rgba(255,107,74,.95)', duration: 0.5, yoyo: true, repeat: 1 }, tCom);
+  tl.to(endCam, { scale: 1.05, duration: ctx.dur - tVisit, ease: 'power1.inOut' }, tVisit);
 });
