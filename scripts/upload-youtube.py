@@ -46,50 +46,8 @@ def front_matter(slug):
     return {k.strip(): v.strip() for k, v in (l.split(":", 1) for l in m.group(1).splitlines() if ":" in l)}
 
 
-def main():
-    slug = sys.argv[1]; dry = "--dry-run" in sys.argv
-    d = ROOT / "assets/blog-video" / slug
-    meta_path = d / "video.json"
-    meta = json.loads(meta_path.read_text())
-    if meta.get("youtubeId"):
-        print(f"already on YouTube: https://youtu.be/{meta['youtubeId']}"); return
-    fm = front_matter(slug)
-    title = fm["title"][:90] + " | PowerPoint2Vid"
-    desc = (f"{fm['description']}\n\nRead the full post: {SITE}/blog/{slug}\n\n"
-            f"PowerPoint2Vid turns ordinary slides into extraordinary explainer videos: {SITE}/\n\n"
-            f"Transcript:\n" + "\n".join(meta.get("transcript", [])))
-    if BANNED.search(title + desc): sys.exit("banned wording in the YouTube title or description")
-    tags = [t for t in (fm.get("keyword"), "PowerPoint to video converter", "explainer video", "presentation design") if t]
-    status = {"privacyStatus": "public", "selfDeclaredMadeForKids": False, "embeddable": True}
-    if os.environ.get("YT_PRIVACY") in ("private", "unlisted"):   # manual tests only: upload without publishing
-        status["privacyStatus"] = os.environ["YT_PRIVACY"]
-    snippet = {"title": title, "description": desc, "tags": tags, "categoryId": "27", "defaultLanguage": "en", "defaultAudioLanguage": "en"}
-    if dry:
-        print(json.dumps({"snippet": snippet, "status": status}, indent=1)[:1500]); return
-
-    token = access_token()
-    video = (d / "video.mp4").read_bytes()
-    # resumable upload: start a session, then send the file
-    r, _ = api("POST", "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status", token,
-               json.dumps({"snippet": snippet, "status": status}).encode(),
-               {"Content-Type": "application/json; charset=UTF-8", "X-Upload-Content-Type": "video/mp4", "X-Upload-Content-Length": str(len(video))}, raw=True)
-    up = r.headers["Location"]
-    vid = api("PUT", up, token, video, {"Content-Type": "video/mp4"})["id"]
-    meta["youtubeId"] = vid; meta_path.write_text(json.dumps(meta, indent=1, ensure_ascii=False))   # record straight away
-    print(f"uploaded: https://youtu.be/{vid} ({status['privacyStatus']})")
-
-    # captions and thumbnail are best effort: the video is already up
-    try:
-        b = uuid.uuid4().hex
-        part = json.dumps({"snippet": {"videoId": vid, "language": "en", "name": "English", "isDraft": False}})
-        body = (f"--{b}\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n{part}\r\n--{b}\r\nContent-Type: text/vtt\r\n\r\n").encode() + (d / "captions.vtt").read_bytes() + f"\r\n--{b}--".encode()
-        api("POST", "https://www.googleapis.com/upload/youtube/v3/captions?uploadType=multipart&part=snippet", token, body, {"Content-Type": f"multipart/related; boundary={b}"})
-        print("captions added")
-    except SystemExit as e: print("captions skipped:", e)
-    try:
-        api("POST", f"https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId={vid}&uploadType=media", token, (d / "poster.jpg").read_bytes(), {"Content-Type": "image/jpeg"})
-        print("thumbnail set")
-    except SystemExit as e: print("thumbnail skipped (the channel may need phone verification):", e)
+def set_thumbnail(token, vid, d, meta, meta_path):
+    set_thumbnail(token, vid, d, meta, meta_path)
 
 
 main()
