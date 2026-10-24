@@ -6,9 +6,8 @@ Reads  assets/blog-video/<slug>/{video.mp4,poster.jpg,captions.vtt,video.json}, 
 Writes assets/blog-video/<slug>/video.json  (adds "youtubeId" so a video is never uploaded twice)
 
 Needs env: YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN (one-time OAuth, see docs/BLOG_VIDEOS.md).
-The video is uploaded as private and scheduled to go public at 00:00 Perth time on the post's date, the moment the post goes live.
-If that moment has already passed (manual re-run) it is made public straight away.
-Until the Google project passes the YouTube API compliance audit, YouTube keeps API uploads private: publish them from YouTube Studio.
+The video is uploaded as public straight away (set YT_PRIVACY=private or unlisted for a test).
+If YouTube keeps API uploads private until the Google project passes the compliance audit, publish them from YouTube Studio.
 Quota: videos.insert 1,600 + captions.insert 400 + thumbnails.set 50 = 2,050 of the 10,000 daily units.
 Stdlib only."""
 import datetime, json, os, re, sys, urllib.error, urllib.parse, urllib.request, uuid
@@ -61,14 +60,9 @@ def main():
             f"Transcript:\n" + "\n".join(meta.get("transcript", [])))
     if BANNED.search(title + desc): sys.exit("banned wording in the YouTube title or description")
     tags = [t for t in (fm.get("keyword"), "PowerPoint to video converter", "explainer video", "presentation design") if t]
-    go_live = next(datetime.datetime.fromisoformat(c["date"]).replace(tzinfo=datetime.timezone(datetime.timedelta(hours=8)))
-                   for c in json.loads((ROOT / "content/blog/calendar.json").read_text()) if c["slug"] == slug)
-    future = go_live > datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(minutes=10)
-    status = {"privacyStatus": "private", "selfDeclaredMadeForKids": False, "embeddable": True}
-    if future: status["publishAt"] = go_live.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    else: status["privacyStatus"] = "public"
-    if os.environ.get("YT_PRIVACY") in ("private", "unlisted"):   # manual tests: upload without publishing
-        status = {k: v for k, v in status.items() if k != "publishAt"}; status["privacyStatus"] = os.environ["YT_PRIVACY"]; future = False
+    status = {"privacyStatus": "public", "selfDeclaredMadeForKids": False, "embeddable": True}
+    if os.environ.get("YT_PRIVACY") in ("private", "unlisted"):   # manual tests only: upload without publishing
+        status["privacyStatus"] = os.environ["YT_PRIVACY"]
     snippet = {"title": title, "description": desc, "tags": tags, "categoryId": "27", "defaultLanguage": "en", "defaultAudioLanguage": "en"}
     if dry:
         print(json.dumps({"snippet": snippet, "status": status}, indent=1)[:1500]); return
@@ -82,7 +76,7 @@ def main():
     up = r.headers["Location"]
     vid = api("PUT", up, token, video, {"Content-Type": "video/mp4"})["id"]
     meta["youtubeId"] = vid; meta_path.write_text(json.dumps(meta, indent=1, ensure_ascii=False))   # record straight away
-    print(f"uploaded: https://youtu.be/{vid} ({status['privacyStatus']}{', goes public ' + status.get('publishAt', '') if future else ''})")
+    print(f"uploaded: https://youtu.be/{vid} ({status['privacyStatus']})")
 
     # captions and thumbnail are best effort: the video is already up
     try:
