@@ -1,0 +1,102 @@
+{
+  "title": "Captions on Presentation Videos: Why and How (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Captions on Presentation Videos: Why and How",
+      "bullets": [],
+      "notes": "Turning lecture slides into video? Captions aren't an optional extra. They decide whether some of your audience can follow at all.",
+      "minDuration": 9
+    },
+    {
+      "title": "Captions help far more viewers",
+      "bullets": [
+        "Deaf or hard of hearing",
+        "Studying in a second language",
+        "Watching with the sound off",
+        "Anyone revising"
+      ],
+      "notes": "Captions help far more people than you'd think. Learners in a second language, people on a train with the sound off, and anyone scanning back while revising.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Burned-in or closed captions",
+      "bullets": [
+        "Burned-in: part of the video image",
+        "Closed: separate SRT or VTT track",
+        "Viewers can turn closed captions off",
+        "Many people use both"
+      ],
+      "notes": "Burned-in captions are always there, ideal for social feeds and email. Closed captions are a separate track viewers can switch off, often expected by an LMS.",
+      "minDuration": 11,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Write notes in short sentences",
+      "bullets": [
+        "Before: one long assessment sentence",
+        "After: \"It's worth forty per cent of your grade.\"",
+        "Write out \"approx\" and \"e.g.\"",
+        "Check names and course codes"
+      ],
+      "notes": "Captions are only as good as the words behind them. Break long sentences into short ones, write abbreviations out in full, and check names and jargon.",
+      "minDuration": 12,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Design slides with captions in mind",
+      "bullets": [
+        "Keep the bottom of each slide clear",
+        "Less text on the slide",
+        "Contrast ratio of at least 4.5:1",
+        "Don't rely on colour alone"
+      ],
+      "notes": "Captions sit near the bottom of the frame, so keep that area light. Use less text, strong contrast, and labels instead of colour alone.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Ordinary slides in, captioned video out",
+      "bullets": [
+        "Turn on burned-in captions",
+        "Speaker notes become the narration",
+        "Basic: no subscription needed",
+        "Pro: a.i. directs the video"
+      ],
+      "notes": "Start with Basic to caption your deck, no subscription needed. On Pro, a.i. directs, timing animation and captions to your narration. Try it at powerpoint2vid.com.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}

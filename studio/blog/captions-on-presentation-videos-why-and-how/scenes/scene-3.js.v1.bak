@@ -1,0 +1,135 @@
+/* Scene 3 — "Captions are only as good as the words behind them. Break long sentences into short ones,
+ * write abbreviations out in full, and check names and jargon."
+ * Storyboard: the original slide drifts in as a reference card while the headline builds word by word.
+ * "words" ignites in violet. On "Break" the slide recedes and three cards rise on their beats:
+ * 01 a long sentence (redacted bars) collapses into a short caption on "short".
+ * 02 "approx" and "e.g." are struck out and written in full on "full".
+ * 03 names, course codes and jargon get ticked on "names" and "jargon". */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const A = (i, w, f) => { const v = ctx.at(i, w); return v == null || isNaN(v) ? f : v; };
+  const tWords = A(0, 'words', 2.06), tBreak = A(1, 'Break', 3.52), tShort = A(1, 'short', 4.98),
+    tWrite = A(1, 'write', 5.86), tFull = A(1, 'full,', 7.35), tCheck = A(1, 'check', 8.18),
+    tNames = A(1, 'names', 8.52), tJargon = A(1, 'jargon.', 9.06);
+  const MONO = 'ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(70% 60% at 50% 35%, #1a1f52 0%, var(--night) 72%)';
+  const glow = el('div', 'abs', stage, { left: '-200px', top: '500px', width: '1000px', height: '800px', borderRadius: '50%', background: 'radial-gradient(closest-side, rgba(109,74,255,.22), transparent)' });
+  const glow2 = el('div', 'abs', stage, { left: '1200px', top: '-300px', width: '900px', height: '800px', borderRadius: '50%', background: 'radial-gradient(closest-side, rgba(255,107,74,.10), transparent)' });
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 560px' });
+
+  /* headline */
+  const title = el('div', 'abs', cam, { left: '120px', width: '1680px', top: '120px', textAlign: 'center', font: '800 84px/1.05 Inter Display, Inter', letterSpacing: '-.04em', color: '#fff' });
+  const words = 'Good captions start with good words.'.split(' ').map((w, i, arr) => {
+    const s = el('span', '', title, { display: 'inline-block', marginRight: i < arr.length - 1 ? '0.25em' : '0' });
+    s.textContent = w; return s;
+  });
+  const hiWord = words[5];
+  const kicker = el('div', 'abs', cam, { left: '120px', width: '1680px', top: '238px', textAlign: 'center', font: `600 22px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--muted)' });
+  kicker.textContent = 'WRITING NOTES FOR CAPTIONS';
+
+  /* source slide reference */
+  const slideCard = el('div', 'abs', cam, { left: '540px', top: '340px', width: '840px', height: '472px', borderRadius: '14px', overflow: 'hidden', boxShadow: '0 50px 110px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.08)' });
+  const si = el('img', 'abs', slideCard, { inset: 0, width: '100%', height: '100%' }); si.src = ctx.asset('slide-4.png');
+  const slideTag = el('div', 'abs', cam, { left: '540px', top: '836px', font: `600 20px/1 ${MONO}`, letterSpacing: '.12em', color: 'var(--muted)' });
+  slideTag.textContent = 'SLIDE 4 · AS WRITTEN';
+
+  /* cards */
+  const CW = 520, CH = 500, CT = 340;
+  const card = (i, label, accent) => {
+    const c = el('div', 'abs', cam, { left: 120 + i * (CW + 60) + 'px', top: CT + 'px', width: CW + 'px', height: CH + 'px', borderRadius: '24px', background: 'linear-gradient(180deg, rgba(30,36,84,.92), rgba(14,19,48,.92))', boxShadow: '0 40px 90px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.12)', border: '1px solid rgba(255,255,255,.07)', overflow: 'hidden' });
+    el('div', 'abs', c, { left: 0, top: 0, width: '100%', height: '6px', background: accent });
+    const l = el('div', 'abs', c, { left: '40px', top: '44px', font: `700 22px/1 ${MONO}`, letterSpacing: '.14em', color: accent }); l.textContent = label;
+    return c;
+  };
+  const c1 = card(0, '01 · SHORT SENTENCES', 'var(--violet-hi)');
+  const c2 = card(1, '02 · WRITE IT OUT', 'var(--coral)');
+  const c3 = card(2, '03 · CHECK', 'var(--mint)');
+
+  // card 1: long sentence -> short caption
+  const before = el('div', 'abs', c1, { left: '40px', top: '110px', width: '440px' });
+  const bl = el('div', '', before, { font: `600 18px/1 ${MONO}`, letterSpacing: '.12em', color: 'var(--muted)', marginBottom: '18px' }); bl.textContent = 'BEFORE';
+  const bars = [440, 410, 430, 300].map((w) => el('div', '', before, { width: w + 'px', height: '16px', borderRadius: '8px', background: 'rgba(170,176,212,.35)', marginBottom: '12px', transformOrigin: '0 50%' }));
+  const strike = el('div', 'abs', before, { left: '-6px', top: '70px', width: '452px', height: '5px', borderRadius: '3px', background: 'var(--coral)', transformOrigin: '0 50%', transform: 'rotate(-8deg)' });
+  const after = el('div', 'abs', c1, { left: '40px', top: '290px', width: '440px' });
+  const al = el('div', '', after, { font: `600 18px/1 ${MONO}`, letterSpacing: '.12em', color: 'var(--mint)', marginBottom: '16px' }); al.textContent = 'AFTER';
+  const capBox = el('div', '', after, { padding: '20px 24px', borderRadius: '12px', background: 'rgba(0,0,0,.6)', font: '700 34px/1.2 Inter', letterSpacing: '-.02em', color: '#fff', boxShadow: '0 0 40px rgba(109,74,255,.35)' });
+  capBox.textContent = '“It’s worth forty per cent of your grade.”';
+
+  // card 2: abbreviations
+  const pair = (y, ab, full) => {
+    const r = el('div', 'abs', c2, { left: '40px', top: y + 'px', width: '440px', height: '150px' });
+    const a = el('div', 'abs', r, { left: 0, top: 0, font: '800 52px/1 Inter', letterSpacing: '-.03em', color: 'var(--muted)' }); a.textContent = ab;
+    const s = el('div', 'abs', r, { left: '-6px', top: '26px', width: ab.length * 30 + 12 + 'px', height: '6px', borderRadius: '3px', background: 'var(--coral)', transformOrigin: '0 50%' });
+    const arrow = el('div', 'abs', r, { left: 0, top: '78px', font: '700 40px/1 Inter', color: 'var(--coral)' }); arrow.textContent = '→';
+    const f = el('div', 'abs', r, { left: '56px', top: '74px', font: '800 48px/1 Inter', letterSpacing: '-.03em', color: '#fff' }); f.textContent = full;
+    return { a, s, arrow, f };
+  };
+  const p1 = pair(120, 'approx', 'approximately'), p2 = pair(300, 'e.g.', 'for example');
+
+  // card 3: checklist
+  const checks = ['Names', 'Course codes', 'Jargon'].map((txt, i) => {
+    const r = el('div', 'abs', c3, { left: '40px', top: 130 + i * 110 + 'px', width: '440px', height: '84px', borderRadius: '16px', background: 'rgba(255,255,255,.05)' });
+    const box = el('div', 'abs', r, { left: '20px', top: '18px', width: '48px', height: '48px', borderRadius: '12px', border: '3px solid rgba(170,176,212,.5)' });
+    const tick = el('div', 'abs', r, { left: '20px', top: '18px', width: '48px', height: '48px', borderRadius: '12px', background: 'var(--mint)', boxShadow: '0 0 30px rgba(31,191,143,.6)', color: '#fff', font: '900 32px/48px Inter', textAlign: 'center' });
+    tick.textContent = '✓';
+    const t = el('div', 'abs', r, { left: '92px', top: '22px', font: '700 40px/1 Inter', letterSpacing: '-.02em', color: '#fff' }); t.textContent = txt;
+    return { r, tick };
+  });
+
+  ctx.fx.vignette({ strength: 0.5 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  /* ---- timeline ---- */
+  tl.to(cam, { scale: 1.03, duration: ctx.dur, ease: 'none' }, 0);
+  tl.to(glow, { x: 160, y: -60, duration: ctx.dur, ease: 'sine.inOut' }, 0);
+  tl.to(glow2, { x: -120, y: 40, duration: ctx.dur, ease: 'sine.inOut' }, 0);
+
+  // slide drifts in
+  gsap.set(slideCard, { filter: 'blur(0px) brightness(.9)' });
+  tl.fromTo(slideCard, { opacity: 0, y: 70, rotation: -2, scale: 0.94 }, { opacity: 1, y: 0, rotation: 0, scale: 1, duration: 1.2, ease: 'power3.out' }, 0.05);
+  tl.to(slideCard, { y: -20, rotation: 0.6, duration: 2.6, ease: 'none' }, 1.25);
+  tl.fromTo(slideTag, { opacity: 0 }, { opacity: 1, duration: 0.5 }, 0.4);
+
+  // title word by word
+  const tStart = 0.5, tEnd = Math.max(tWords, 1.2);
+  words.forEach((w, i) => {
+    tl.fromTo(w, { opacity: 0, y: 40, filter: 'blur(8px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.55, ease: 'back.out(1.6)' }, tStart + i * (tEnd - tStart) / (words.length - 1));
+  });
+  tl.to(hiWord, { color: '#a48fff', textShadow: '0 0 40px rgba(143,117,255,.8)', duration: 0.4 }, tWords);
+  tl.fromTo(kicker, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5 }, tWords + 0.3);
+
+  // slide recedes on "Break"
+  tl.to([slideCard, slideTag], { opacity: 0, y: '+=80', scale: 0.9, filter: 'blur(6px) brightness(.4)', duration: 0.6, ease: 'power2.in' }, tBreak - 0.45);
+
+  // card entrances
+  const enter = (c, t) => tl.fromTo(c, { opacity: 0, y: 120, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.75, ease: 'back.out(1.5)' }, t);
+  enter(c1, tBreak - 0.05);
+  enter(c2, tWrite - 0.15);
+  enter(c3, tCheck - 0.25);
+
+  // card 1
+  tl.fromTo(bars, { scaleX: 0 }, { scaleX: 1, duration: 0.5, stagger: 0.06, ease: 'power2.out' }, tBreak + 0.25);
+  tl.fromTo(strike, { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: 'power2.in' }, tShort - 0.3);
+  tl.to(bars, { opacity: 0.35, duration: 0.3 }, tShort - 0.05);
+  tl.fromTo(after, { opacity: 0, y: 30, scale: 0.9 }, { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'back.out(1.8)' }, tShort);
+
+  // card 2
+  [p1, p2].forEach((p, i) => {
+    gsap.set([p.arrow, p.f], { opacity: 0 });
+    gsap.set(p.s, { scaleX: 0 });
+    const t0 = tFull - 0.55 + i * 0.25;
+    tl.to(p.s, { scaleX: 1, duration: 0.25, ease: 'power2.in' }, t0);
+    tl.to(p.a, { opacity: 0.45, duration: 0.25 }, t0 + 0.2);
+    tl.to(p.arrow, { opacity: 1, duration: 0.3 }, t0 + 0.2);
+    tl.fromTo(p.f, { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.5, ease: 'back.out(1.8)', immediateRender: false }, t0 + 0.3);
+  });
+
+  // card 3
+  const tickTimes = [tNames, tNames + (tJargon - tNames) * 0.5, tJargon];
+  checks.forEach((c, i) => {
+    tl.fromTo(c.r, { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.45 }, tCheck + 0.05 + i * 0.08);
+    tl.fromTo(c.tick, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: 'back.out(2.4)' }, tickTimes[i]);
+    tl.to(c.r, { background: 'rgba(31,191,143,.12)', duration: 0.4 }, tickTimes[i]);
+  });
+});
