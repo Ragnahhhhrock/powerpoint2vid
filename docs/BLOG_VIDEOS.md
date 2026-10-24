@@ -1,5 +1,12 @@
 # Blog explainer videos
 
+## Automatic (daily)
+`.github/workflows/blog-video.yml` runs every day at 20:00 Perth time (12:00 UTC). It finds the post that goes live at the next Perth midnight (`scripts/next-blog-post.py`) and runs `scripts/make-blog-video.sh <slug>`: Opus turns the post into a plain deck (`studio/blog-spec.mjs`), the studio director designs and reviews the scenes, ElevenLabs narrates (George, one voice for every post), then the video is packaged, embedded and pushed. The post goes live at midnight with the video already on the page. If any step fails nothing is committed and the post goes live without a video.
+
+Needs repo secrets `ELEVENLABS_API_KEY` and `ANTHROPIC_API_KEY`. Run it by hand from the Actions tab with a slug to make or remake any post's video; tick *revoice* to keep the scenes and only re-narrate.
+
+## By hand (what the automation does)
+
 Every blog post gets a short explainer video made from its own content and embedded after the intro. The video is built the way a Pro video is: an ordinary deck goes in, a.i.-directed animated scenes come out (the scenes are written following `studio/prompts/scene.md`).
 
 ## Per post

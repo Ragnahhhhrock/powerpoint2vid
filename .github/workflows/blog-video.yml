@@ -1,0 +1,63 @@
+name: Blog explainer video
+# Every day at 20:00 Perth time (12:00 UTC) this makes the explainer video for the post that goes live at
+# 00:00 Perth tonight, embeds it in the post, and pushes to main (Cloudflare Pages deploys it).
+# If anything fails nothing is committed and the post goes live without a video.
+# Manual run: pick a post (slug) to make or remake its video; tick "revoice" to keep the scenes and only
+# re-narrate and re-render (e.g. swap the Piper voice for ElevenLabs on an earlier post).
+# Needs repo secrets ELEVENLABS_API_KEY and ANTHROPIC_API_KEY.
+on:
+  schedule:
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: 'Post slug (empty = the post that goes live at the next Perth midnight)'
+        required: false
+        default: ''
+      revoice:
+        description: 'Keep existing scenes, only re-narrate with ElevenLabs and re-render'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency: blog-video
+jobs:
+  video:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    container: mcr.microsoft.com/playwright:v1.64.1-jammy
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check keys
+        env:
+          E: ${{ secrets.ELEVENLABS_API_KEY }}
+          A: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          [ -n "$E" ] || { echo "::error::Add the ELEVENLABS_API_KEY repo secret"; exit 1; }
+          [ -n "$A" ] || [ "${{ inputs.revoice }}" = "true" ] || { echo "::error::Add the ANTHROPIC_API_KEY repo secret"; exit 1; }
+      - name: Install tools
+        run: |
+          apt-get update && apt-get install -y --no-install-recommends python3 python3-pip ffmpeg fonts-inter fonts-liberation fonts-noto-core git libreoffice-impress poppler-utils
+          pip3 install python-pptx markdown pillow
+          cd studio && npm ci
+      - name: Pick the post
+        id: pick
+        run: |
+          slug="${{ inputs.slug }}"
+          [ -n "$slug" ] || slug=$(python3 scripts/next-blog-post.py)
+          echo "slug=$slug" >> "$GITHUB_OUTPUT"
+          [ -n "$slug" ] && echo "making the video for $slug" || echo "no post goes live next; nothing to do"
+      - name: Make the video
+        if: steps.pick.outputs.slug != ''
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: scripts/make-blog-video.sh "${{ steps.pick.outputs.slug }}" ${{ inputs.revoice && '--revoice' || '' }}
+      - name: Commit and push
+        if: steps.pick.outputs.slug != ''
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config user.name "Mal Gordon"; git config user.email "malgordonperth@gmail.com"
+          git add -A assets/blog-video blog studio/blog functions/_lib
+          git commit -m "Add explainer video for ${{ steps.pick.outputs.slug }}" || { echo "nothing changed"; exit 0; }
+          git pull --rebase origin main && git push origin HEAD:main
