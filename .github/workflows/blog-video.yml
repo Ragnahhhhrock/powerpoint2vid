@@ -53,8 +53,19 @@ jobs:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: scripts/make-blog-video.sh "${{ steps.pick.outputs.slug }}" ${{ inputs.revoice && '--revoice' || '' }}
+      - name: Upload to YouTube
+        # Optional: needs YT_CLIENT_ID, YT_CLIENT_SECRET and YT_REFRESH_TOKEN repo secrets. A failure here never blocks the post.
+        if: steps.pick.outputs.slug != '' && inputs.revoice != true
+        continue-on-error: true
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          if [ -z "$YT_REFRESH_TOKEN" ]; then echo "YouTube secrets not set: skipping upload"; exit 0; fi
+          python3 scripts/upload-youtube.py "${{ steps.pick.outputs.slug }}"
       - name: Commit and push
-        if: steps.pick.outputs.slug != ''
+        if: always() && steps.pick.outputs.slug != ''
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git config user.name "Mal Gordon"; git config user.email "malgordonperth@gmail.com"

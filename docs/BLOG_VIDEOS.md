@@ -5,6 +5,9 @@
 
 Needs repo secrets `ELEVENLABS_API_KEY` and `ANTHROPIC_API_KEY`. Run it by hand from the Actions tab with a slug to make or remake any post's video; tick *revoice* to keep the scenes and only re-narrate.
 
+## YouTube (@PowerPoint2Vid)
+After a video is made, `scripts/upload-youtube.py` uploads it to the channel (title, description linking to the post plus transcript, captions, thumbnail). It uploads as private and schedules it public at 00:00 Perth on the post's date, when the post goes live. The video's id is stored in `assets/blog-video/<slug>/video.json` so it is never uploaded twice. Repo secrets: `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN` (Google Cloud project "My YouTube Uploader", OAuth web client "PowerPoint2Vid blog uploader", scope `https://www.googleapis.com/auth/youtube.upload` plus `youtube.force-ssl` for captions). Without them the step is skipped. Until the project passes Google's YouTube API audit, YouTube keeps API uploads private: publish them from YouTube Studio. If the token ever stops working (`invalid_grant`), redo the one-time sign-in in the OAuth Playground with the client's own credentials and replace `YT_REFRESH_TOKEN`.
+
 ## By hand (what the automation does)
 
 Every blog post gets a short explainer video made from its own content and embedded after the intro. The video is built the way a Pro video is: an ordinary deck goes in, a.i.-directed animated scenes come out (the scenes are written following `studio/prompts/scene.md`).
