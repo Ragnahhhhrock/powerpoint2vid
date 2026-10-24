@@ -18,8 +18,11 @@ out = job / "out"
 for f in ("video.mp4", "video.webm", "poster.jpg", "captions.vtt"):
     assert (out / f).exists(), f"missing {out / f}: render the job first (node studio/render.mjs studio/blog/{slug})"
 dst.mkdir(parents=True, exist_ok=True)
-shutil.copy(out / "video.mp4", dst / "video.mp4")
-shutil.copy(out / "video.webm", dst / "video.webm")
+# blog pages load a lighter 1280x720 encode than the 1080p master render
+subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(out / "video.mp4"), "-vf", "scale=1280:720", "-c:v", "libx264", "-preset", "slow",
+                "-crf", "25", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "112k", "-movflags", "+faststart", str(dst / "video.mp4")], check=True)
+subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(out / "video.mp4"), "-vf", "scale=1280:720", "-c:v", "libvpx-vp9", "-crf", "36", "-b:v", "0",
+                "-row-mt", "1", "-c:a", "libopus", "-b:a", "96k", str(dst / "video.webm")], check=True)
 shutil.copy(out / "captions.vtt", dst / "captions.vtt")
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(out / "poster.jpg"), "-vf", "scale=1280:-1", "-q:v", "3", str(dst / "poster.jpg")], check=True)
 dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(dst / "video.mp4")],

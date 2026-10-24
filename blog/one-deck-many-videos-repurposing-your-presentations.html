@@ -283,6 +283,9 @@ document.addEventListener('click', function (e) {
     }
   });
 })();
+document.querySelectorAll('.post-video video').forEach(function (v) {
+  v.addEventListener('play', function () { if (window.gtag) gtag('event', 'blog_video_play', { post: v.closest('.post-video').dataset.video }); }, { once: true });
+});
 </script>
 </body>
 </html>
