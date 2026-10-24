@@ -67,6 +67,8 @@ def main():
     status = {"privacyStatus": "private", "selfDeclaredMadeForKids": False, "embeddable": True}
     if future: status["publishAt"] = go_live.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     else: status["privacyStatus"] = "public"
+    if os.environ.get("YT_PRIVACY") in ("private", "unlisted"):   # manual tests: upload without publishing
+        status = {k: v for k, v in status.items() if k != "publishAt"}; status["privacyStatus"] = os.environ["YT_PRIVACY"]; future = False
     snippet = {"title": title, "description": desc, "tags": tags, "categoryId": "27", "defaultLanguage": "en", "defaultAudioLanguage": "en"}
     if dry:
         print(json.dumps({"snippet": snippet, "status": status}, indent=1)[:1500]); return

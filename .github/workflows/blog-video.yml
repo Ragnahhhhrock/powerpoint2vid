@@ -14,6 +14,10 @@ on:
         description: 'Post slug (empty = the post that goes live at the next Perth midnight)'
         required: false
         default: ''
+      upload_only:
+        description: 'Only upload the existing video to YouTube as private (a test; publish it from YouTube Studio)'
+        type: boolean
+        default: false
       revoice:
         description: 'Keep existing scenes, only re-narrate with ElevenLabs and re-render'
         type: boolean
@@ -48,16 +52,17 @@ jobs:
           echo "slug=$slug" >> "$GITHUB_OUTPUT"
           [ -n "$slug" ] && echo "making the video for $slug" || echo "no post goes live next; nothing to do"
       - name: Make the video
-        if: steps.pick.outputs.slug != ''
+        if: steps.pick.outputs.slug != '' && inputs.upload_only != true
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: scripts/make-blog-video.sh "${{ steps.pick.outputs.slug }}" ${{ inputs.revoice && '--revoice' || '' }}
       - name: Upload to YouTube
         # Optional: needs YT_CLIENT_ID, YT_CLIENT_SECRET and YT_REFRESH_TOKEN repo secrets. A failure here never blocks the post.
-        if: steps.pick.outputs.slug != '' && inputs.revoice != true
-        continue-on-error: true
+        if: steps.pick.outputs.slug != '' && (inputs.upload_only == true || inputs.revoice != true)
+        continue-on-error: ${{ inputs.upload_only != true }}
         env:
+          YT_PRIVACY: ${{ inputs.upload_only && 'private' || '' }}
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
