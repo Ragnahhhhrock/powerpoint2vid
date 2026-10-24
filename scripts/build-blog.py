@@ -143,10 +143,45 @@ document.addEventListener('click', function (e) {
     }
   });
 })();
+document.querySelectorAll('.post-video video').forEach(function (v) {
+  v.addEventListener('play', function () { if (window.gtag) gtag('event', 'blog_video_play', { post: v.closest('.post-video').dataset.video }); }, { once: true });
+});
 </script>
 </body>
 </html>
 """
+
+def iso_duration(sec):
+    sec = int(round(sec)); m, s_ = divmod(sec, 60)
+    return "PT" + (f"{m}M" if m else "") + f"{s_}S"
+
+def video_for(slug):
+    """Explainer video for a post, if one has been packaged (scripts/package-blog-video.py)."""
+    d = ROOT / "assets/blog-video" / slug
+    if not (d / "video.mp4").exists(): return None
+    meta = json.loads((d / "video.json").read_text()) if (d / "video.json").exists() else {}
+    return {"dir": f"/assets/blog-video/{slug}", "duration": meta.get("duration"), "transcript": meta.get("transcript", []),
+            "webm": (d / "video.webm").exists(), "vtt": (d / "captions.vtt").exists()}
+
+def video_figure(p, v):
+    secs = v["duration"]
+    length = f" ({int(round(secs))} seconds)" if secs else ""
+    track = f'<track kind="captions" src="{v["dir"]}/captions.vtt?v={VER}" srclang="en" label="English" default>' if v["vtt"] else ""
+    webm = f'<source src="{v["dir"]}/video.webm?v={VER}" type="video/webm">' if v["webm"] else ""
+    transcript = ""
+    if v["transcript"]:
+        paras = "".join(f"<p>{esc(t)}</p>" for t in v["transcript"])
+        transcript = f'<details class="post-video__transcript"><summary>Read the video transcript</summary>{paras}</details>'
+    return f"""<figure class="post-video" data-video="{p['slug']}">
+  <div class="post-video__frame">
+    <video controls preload="none" playsinline poster="{v['dir']}/poster.jpg?v={VER}" aria-label="{esc(p['title'])}: video summary">
+      <source src="{v['dir']}/video.mp4?v={VER}" type="video/mp4">{webm}{track}
+      Your browser can't play this video. <a href="{v['dir']}/video.mp4">Download it as an MP4</a>.
+    </video>
+  </div>
+  <figcaption>Watch the video version{length}. Made with PowerPoint2Vid Pro, where a.i. directs the video.</figcaption>
+  {transcript}
+</figure>"""
 
 def reading_time(md): return max(1, math.ceil(len(re.findall(r"\w+", md)) / 230))
 
@@ -186,7 +221,7 @@ def share_block(p, url):
             '</div><p class="share__status" role="status" aria-live="polite"></p></aside>')
 
 # ---------- post page ----------
-def post_page(p, body_html, toc, related):
+def post_page(p, body_html, toc, related, video=None):
     url = f"{SITE}/blog/{p['slug']}"
     img = f"{SITE}/assets/blog/{p['slug']}.png"
     ld = {
@@ -205,6 +240,15 @@ def post_page(p, body_html, toc, related):
                 {"@type": "ListItem", "position": 3, "name": p["title"], "item": url}]},
         ],
     }
+    if video:
+        vo = {"@type": "VideoObject", "name": p["title"] + " (video summary)", "description": p["description"],
+              "thumbnailUrl": f"{SITE}{video['dir']}/poster.jpg", "contentUrl": f"{SITE}{video['dir']}/video.mp4",
+              "uploadDate": p["date"] + "T00:00:00+08:00", "inLanguage": "en-AU"}
+        if video["duration"]: vo["duration"] = iso_duration(video["duration"])
+        if video["transcript"]: vo["transcript"] = " ".join(video["transcript"])
+        ld["@graph"].append(vo)
+        # embed straight after the intro paragraph
+        body_html = body_html.replace("</p>", "</p>\n" + video_figure(p, video), 1)
     extra = (f'<meta property="article:published_time" content="{p["date"]}T00:00:00+08:00">\n'
              f'<meta property="article:section" content="{esc(PILLARS[p["pillar"]])}">\n'
              f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n')
@@ -373,7 +417,7 @@ def main():
         same = [q for q in reversed(earlier) if q["pillar"] == p["pillar"]]
         other = [q for q in reversed(earlier) if q["pillar"] != p["pillar"]]
         related = (same[:2] + other)[:3]
-        (OUT / f"{p['slug']}.html").write_text(post_page(p, body_html, md.toc, related), encoding="utf-8")
+        (OUT / f"{p['slug']}.html").write_text(post_page(p, body_html, md.toc, related, video_for(p["slug"])), encoding="utf-8")
         if "--no-images" not in sys.argv: share_image(p)
     (OUT / "index.html").write_text(index_page(posts), encoding="utf-8")
     manifest = [{k: p[k] for k in ("slug", "date", "title", "description", "pillar")} for p in posts]

@@ -109,3 +109,11 @@
 .share__btn:hover, .share__btn:focus-visible { background: var(--primary); border-color: var(--primary); color: #fff; }
 .share__btn[hidden] { display: none; }
 .share__status { min-height: 1.2em; margin: var(--s-2) 0 0; font-size: var(--fs-xs); }
+/* Explainer video embedded after a post's intro (scripts/build-blog.py, assets/blog-video/<slug>/) */
+.post-video { margin: var(--s-6) 0; }
+.post-video__frame { border-radius: var(--r-lg); overflow: hidden; background: var(--ink-900); box-shadow: var(--shadow-lg); aspect-ratio: 16 / 9; }
+.post-video video { display: block; width: 100%; height: 100%; object-fit: cover; background: var(--ink-900); }
+.post-video figcaption { margin-top: var(--s-3); font-size: var(--fs-sm); color: var(--ink-500); }
+.post-video__transcript { margin-top: var(--s-3); font-size: var(--fs-sm); color: var(--ink-700); }
+.post-video__transcript summary { cursor: pointer; font-weight: 600; color: var(--primary); }
+.post-video__transcript p { margin: var(--s-2) 0; }

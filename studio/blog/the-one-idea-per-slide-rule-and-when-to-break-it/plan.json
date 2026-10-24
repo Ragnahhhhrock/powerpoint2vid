@@ -1,0 +1,219 @@
+{
+  "title": "The One Idea Per Slide Rule (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics: one big idea at a time, soft depth and glow, springy pops that land on the spoken word, slow camera drift, crisp slide-split mechanics that show a crowded slide breaking into clean single-idea slides.",
+    "story": "A crowded slide becomes four clear ones. Dark violet stage with a coral accent. The single glowing idea is the recurring motif: one thing in focus, everything else dimmed."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "If a slide needs two headlines, it's two slides. Here's why one idea per slide is the most useful rule in presentation design.",
+      "minDuration": 8,
+      "slide": {
+        "title": "One idea per slide",
+        "text": "A presentation design rule",
+        "notes": "If a slide needs two headlines, it's two slides. Here's why one idea per slide is the most useful rule in presentation design.",
+        "image": "assets/slide-1.png"
+      },
+      "storyboard": "dark violet stage. A single slide card floats in with a glow. Two headlines try to sit on it, on 'two headlines' a hairline splits the card into two cards that slide apart with a springy pop. The title 'One idea per slide' typesets large over the top as the cards settle.",
+      "audio": "audio/scene-0.wav",
+      "duration": 9.889,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.028,
+          "text": "If a slide needs two headlines, it's two slides."
+        },
+        {
+          "t": 4.308,
+          "end": 8.789,
+          "text": "Here's why one idea per slide is the most useful rule in presentation design."
+        }
+      ],
+      "speechEnd": 8.789
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Here's a typical crowded slide. A vague headline, and four separate ideas fighting for attention. Split it, and each point gets its own headline.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Q3 update",
+        "text": "Revenue up on last quarter. Two new enterprise customers signed. Churn rose in the small-business segment. Hiring two more account managers",
+        "notes": "Here's a typical crowded slide. A vague headline, and four separate ideas fighting for attention. Split it, and each point gets its own headline.",
+        "image": "assets/slide-2.png"
+      },
+      "storyboard": "a cluttered slide card titled 'Q3 update' with four bullet rows; the rows feel cramped and a faint noisy shimmer shows the clutter. On 'split it' the card shatters cleanly along the row lines into four fresh cards that fan out in a row, each with a bold single-sentence headline: 'Revenue grew again in Q3', 'Two enterprise customers signed', 'Small-business churn is rising', 'Hiring two account managers'. Land each new headline as the narrator says 'own headline'.",
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 11,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 2.692,
+          "text": "Here's a typical crowded slide."
+        },
+        {
+          "t": 2.972,
+          "end": 6.606,
+          "text": "A vague headline, and four separate ideas fighting for attention."
+        },
+        {
+          "t": 6.886,
+          "end": 9.557,
+          "text": "Split it, and each point gets its own headline."
+        }
+      ],
+      "speechEnd": 9.557
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "The audience knows where to look. What they see stays in step with what they hear. And in a video, every new idea means a fresh picture on screen.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Why the rule works",
+        "text": "The audience knows where to look. What they see matches what they hear. It works better as video. Easier to update",
+        "notes": "The audience knows where to look. What they see stays in step with what they hear. And in a video, every new idea means a fresh picture on screen.",
+        "image": "assets/slide-3.png"
+      },
+      "storyboard": "three glowing icon-orbs build in a row, one per phrase: an eye / focus ring on 'where to look', an ear plus eye linked by a pulsing line on 'in step with what they hear', then a film strip whose frames flip through different pictures on 'fresh picture'. Each orb lights up on its phrase while the others dim.",
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.7
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 10.877,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 2.727,
+          "text": "The audience knows where to look."
+        },
+        {
+          "t": 3.007,
+          "end": 5.457,
+          "text": "What they see stays in step with what they hear."
+        },
+        {
+          "t": 5.737,
+          "end": 9.777,
+          "text": "And in a video, every new idea means a fresh picture on screen."
+        }
+      ],
+      "speechEnd": 9.777
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "It's a default, not a law. Break it for comparisons, summaries, reference slides and process diagrams, where seeing several things together is the whole point.",
+      "minDuration": 10,
+      "slide": {
+        "title": "When to break the rule",
+        "text": "Comparisons. Summaries and agendas. Reference slides. Process diagrams",
+        "notes": "It's a default, not a law. Break it for comparisons, summaries, reference slides and process diagrams, where seeing several things together is the whole point.",
+        "image": "assets/slide-4.png"
+      },
+      "storyboard": "paper-light scene for contrast. Four small slide-thumbnails appear in a 2x2 grid, each drawn in line art: two columns for comparisons, a short list for summaries, a table for reference, a five-step flow for process. Each pops in on the word that names it with a coral underline sweep.",
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.5
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 11.062,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 2.611,
+          "text": "It's a default, not a law."
+        },
+        {
+          "t": 2.891,
+          "end": 9.962,
+          "text": "Break it for comparisons, summaries, reference slides and process diagrams, where seeing several things together is the whole point."
+        }
+      ],
+      "speechEnd": 9.962
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Builds let a fuller slide show several items without overwhelming anyone. Each point arrives as you talk about it.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Reveal one point at a time",
+        "text": "Builds show several items. Reveal each as you talk about it",
+        "notes": "Builds let a fuller slide show several items without overwhelming anyone. Each point arrives as you talk about it.",
+        "image": "assets/slide-5.png"
+      },
+      "storyboard": "one fuller slide with four elements. Each element slides in on its own beat while earlier ones dim slightly and the newest glows with a violet ring, so there is always exactly one thing in focus. A thin timeline dot tracks along the bottom.",
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 8.74,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.91,
+          "text": "Builds let a fuller slide show several items without overwhelming anyone."
+        },
+        {
+          "t": 5.19,
+          "end": 7.14,
+          "text": "Each point arrives as you talk about it."
+        }
+      ],
+      "speechEnd": 7.14
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "A deck built on one idea per slide is already most of the way to a good video. On Pro, a.i. directs it, giving every idea its own animated scene, timed to the narration. Try it at powerpoint2vid.com.",
+      "minDuration": 11,
+      "slide": {
+        "title": "From tidy slides to a clear video",
+        "text": "On Pro, a.i. directs the video. powerpoint2vid.com",
+        "notes": "A deck built on one idea per slide is already most of the way to a good video. On Pro, a.i. directs it, giving every idea its own animated scene, timed to the narration. Try it at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "storyboard": "a row of clean single-idea slide cards turns into a film strip that plays; they flow into one big 16:9 video frame with a play button, glow bloom. On 'a.i. directs' a small label 'Directed by a.i.' pops with a sparkle sweep; the final beat settles on the wordmark PowerPoint2Vid and 'powerpoint2vid.com' with a soft pulse.",
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 15.878,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 5.467,
+          "text": "A deck built on one idea per slide is already most of the way to a good video."
+        },
+        {
+          "t": 5.747,
+          "end": 11.181,
+          "text": "On Pro, a.i. directs it, giving every idea its own animated scene, timed to the narration."
+        },
+        {
+          "t": 11.461,
+          "end": 13.678,
+          "text": "Try it at powerpoint2vid.com."
+        }
+      ],
+      "speechEnd": 13.678
+    }
+  ],
+  "poster": 4.2,
+  "voiceProvider": "piper"
+}

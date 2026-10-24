@@ -27,7 +27,7 @@ persona: <persona from calendar>
 - End with a short H2 section that ties the topic back to turning slides into video, linking to the converter at `/` with anchor text containing "PowerPoint to video converter" (e.g. `[PowerPoint to video converter](/)`). Mention `/pricing` only where it fits naturally (at most once).
 - Include at least one concrete example (a sample slide headline, a before/after rewrite, a sample speaker-note script, etc.).
 - Internal links to other blog posts: only to posts whose calendar date is EARLIER than this post's date, as `/blog/<slug>`, at most 2, and only where genuinely relevant. Never link to a post dated the same day or later.
-- No images (none are available). No HTML. No emoji.
+- No images in the markdown. No HTML. No emoji. The post's explainer video is added after writing, see `docs/BLOG_VIDEOS.md`: write the post first, then build its video from the finished content.
 
 ## Voice
 Plain, confident, short sentences. Practical and specific; every section should give the reader something to do. Australian spelling (colour, organise, optimise, centre). Write for the post's persona but keep it useful to anyone. No hype words ("revolutionary", "game-changer", "unlock", "elevate", "seamless", "delve"). Don't open with "In today's fast-paced world" or similar.
