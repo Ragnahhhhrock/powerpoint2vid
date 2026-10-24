@@ -39,8 +39,8 @@ Hard rules for every word you write: never the letters "free" (not "free", "free
 
 const SCHEMA = {
   type: 'object', additionalProperties: false, required: ['slides'],
-  properties: { slides: { type: 'array', minItems: 5, maxItems: 6, items: { type: 'object', additionalProperties: false, required: ['title', 'bullets', 'notes', 'minDuration'],
-    properties: { title: { type: 'string' }, bullets: { type: 'array', items: { type: 'string' }, maxItems: 4 }, notes: { type: 'string' }, minDuration: { type: 'number' } } } } },
+  properties: { slides: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['title', 'bullets', 'notes', 'minDuration'],
+    properties: { title: { type: 'string' }, bullets: { type: 'array', items: { type: 'string' } }, notes: { type: 'string' }, minDuration: { type: 'number' } } } } },
 };
 
 let out;
@@ -57,6 +57,8 @@ for (let attempt = 1; ; attempt++) {
   break;
 }
 
+if (out.slides.length < 5 || out.slides.length > 6) { console.error(`blog-spec: got ${out.slides.length} slides, expected 5 or 6`); process.exit(2); }
+out.slides.forEach((s) => { s.bullets = s.bullets.slice(0, 4); });
 const slides = out.slides.map((s, i) => ({ ...(i === 0 ? { cover: true } : {}), ...s, ...(i ? { transition: { type: ['smoothleft', 'circleopen', 'fadeblack', 'smoothright', 'fade'][(i - 1) % 5], duration: 0.6 } } : {}) }));
 // guard rails: house rules apply to the script before anything is rendered
 const BANNED = /free|costs? nothing|on-device|no upload|never leaves|\bprivate\b|\bsecure\b|claude|opus|anthropic|elevenlabs/i;
