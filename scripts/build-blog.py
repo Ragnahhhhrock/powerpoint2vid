@@ -7,6 +7,7 @@ post can be built and committed ahead of its publish date.
 Run: python3 scripts/build-blog.py   (needs: markdown, Pillow, Inter font)
 """
 import datetime, html, json, math, pathlib, re, sys
+import urllib.parse
 import markdown
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -14,7 +15,7 @@ SRC = ROOT / "content/blog"
 OUT = ROOT / "blog"
 IMG = ROOT / "assets/blog"
 SITE = "https://powerpoint2vid.com"
-VER = "20261022a"
+VER = "20261024a"
 GA = "G-3F8MGRVD2L"
 
 PILLARS = {
@@ -111,6 +112,37 @@ document.addEventListener('click', function (e) {
   var a = e.target.closest && e.target.closest('a[data-cta]');
   if (a && window.gtag) gtag('event', 'cta_click', { location: a.dataset.cta });
 });
+/* Social shares -> GA4 recommended event "share" (method, content_type, item_id). */
+(function () {
+  var box = document.querySelector('.share');
+  if (!box) return;
+  var status = box.querySelector('.share__status');
+  function track(method) {
+    try {
+      if (window.gtag) gtag('event', 'share', {
+        method: method, content_type: 'blog_post', item_id: box.dataset.slug,
+        pillar: box.dataset.pillar, page_title: box.dataset.title
+      });
+    } catch (e) { /* analytics must never break the page */ }
+  }
+  function say(m) { if (status) status.textContent = m; }
+  var native = box.querySelector('[data-share="native"]');
+  if (native && navigator.share) native.hidden = false;
+  box.addEventListener('click', function (e) {
+    var el = e.target.closest && e.target.closest('[data-share]');
+    if (!el) return;
+    var m = el.dataset.share;
+    if (m === 'copy_link') {
+      var done = function () { say('Link copied'); track('copy_link'); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(box.dataset.url).then(done, function () { say('Copy failed'); });
+      else say('Copy failed');
+    } else if (m === 'native') {
+      navigator.share({ title: box.dataset.title, url: box.dataset.url }).then(function () { track('native_share'); }, function () { /* cancelled */ });
+    } else {
+      track(m);
+    }
+  });
+})();
 </script>
 </body>
 </html>
@@ -126,6 +158,32 @@ def card(p, featured=False):
   <p class="post-card__desc">{esc(p['description'])}</p>
   <p class="post-card__meta"><time datetime="{p['date']}">{fmt_date(p['date'])}</time> · {p['minutes']} min read</p>
 </article>"""
+
+
+# ---------- social share ----------
+SHARE_NETWORKS = [
+    ("linkedin", "LinkedIn", "https://www.linkedin.com/sharing/share-offsite/?url={u}"),
+    ("x", "X", "https://twitter.com/intent/tweet?url={u}&text={t}"),
+    ("facebook", "Facebook", "https://www.facebook.com/sharer/sharer.php?u={u}"),
+    ("reddit", "Reddit", "https://www.reddit.com/submit?url={u}&title={t}"),
+    ("whatsapp", "WhatsApp", "https://wa.me/?text={t}%20{u}"),
+    ("email", "Email", "mailto:?subject={t}&body={u}"),
+]
+
+def share_block(p, url):
+    """Share buttons. Clicks send the GA4 recommended `share` event (see FOOTER script)."""
+    q = lambda v: urllib.parse.quote(v, safe="")
+    items = []
+    for key, label, tpl in SHARE_NETWORKS:
+        tracked = f"{url}?utm_source={key}&utm_medium=social&utm_campaign=blog_share"
+        href = tpl.format(u=q(tracked), t=q(p["title"]))
+        ext = ' target="_blank" rel="noopener noreferrer"' if key != "email" else ""
+        items.append(f'<a class="share__btn" href="{href}"{ext} data-share="{key}">{label}</a>')
+    items.append('<button class="share__btn" type="button" data-share="copy_link">Copy link</button>')
+    items.append('<button class="share__btn share__btn--native" type="button" data-share="native" hidden>Share…</button>')
+    return (f'<aside class="share" aria-label="Share this post" data-url="{url}" data-title="{esc(p["title"])}" data-slug="{p["slug"]}" data-pillar="{p["pillar"]}">'
+            '<p class="share__label">Share this post</p><div class="share__row">' + "".join(items) +
+            '</div><p class="share__status" role="status" aria-live="polite"></p></aside>')
 
 # ---------- post page ----------
 def post_page(p, body_html, toc, related):
@@ -173,6 +231,7 @@ def post_page(p, body_html, toc, related):
       <div class="prose">
 {body_html}
       </div>
+      {share_block(p, url)}
       <aside class="post-cta" aria-label="Try PowerPoint2Vid">
         <p class="post-cta__eyebrow">PowerPoint to video converter</p>
         <h2>Turn your next deck into an extraordinary video</h2>

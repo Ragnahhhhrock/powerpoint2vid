@@ -29,8 +29,8 @@
 <meta property="article:published_time" content="2026-10-31T00:00:00+08:00">
 <meta property="article:section" content="Better Presentations">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "Slide Headlines That Make a Point", "description": "A practical guide to slide headline writing: turn topic labels into clear statements, with before-and-after examples for sales decks, reports and pitches.", "datePublished": "2026-10-31T00:00:00+08:00", "dateModified": "2026-10-31T00:00:00+08:00", "mainEntityOfPage": "https://powerpoint2vid.com/blog/slide-headlines-that-make-a-point", "image": "https://powerpoint2vid.com/assets/blog/slide-headlines-that-make-a-point.png", "keywords": "slide headline writing", "articleSection": "Better Presentations", "wordCount": 900, "author": {"@type": "Person", "name": "Mal Gordon", "url": "https://malgordon.com/"}, "publisher": {"@type": "Organization", "name": "PowerPoint2Vid", "url": "https://powerpoint2vid.com/", "logo": {"@type": "ImageObject", "url": "https://powerpoint2vid.com/assets/icon-512.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://powerpoint2vid.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://powerpoint2vid.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Slide Headlines That Make a Point", "item": "https://powerpoint2vid.com/blog/slide-headlines-that-make-a-point"}]}]}</script>
-<link rel="stylesheet" href="/styles.css?v=20261022a">
-<link rel="stylesheet" href="/blog.css?v=20261022a">
+<link rel="stylesheet" href="/styles.css?v=20261024a">
+<link rel="stylesheet" href="/blog.css?v=20261024a">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3F8MGRVD2L"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -188,6 +188,7 @@
 <h2 id="let-your-headlines-carry-the-video">Let your headlines carry the video</h2>
 <p>A deck with headlines that make a point is ready to explain itself, in a meeting, in an inbox or as a video. Upload your deck to the <a href="/">PowerPoint to video converter</a> and your notes become the narration. a.i. directs the finished video, so each headline lands on screen as it is spoken and the argument comes through even if your prospect never opens the attachment.</p>
       </div>
+      <aside class="share" aria-label="Share this post" data-url="https://powerpoint2vid.com/blog/slide-headlines-that-make-a-point" data-title="Slide Headlines That Make a Point" data-slug="slide-headlines-that-make-a-point" data-pillar="craft"><p class="share__label">Share this post</p><div class="share__row"><a class="share__btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fpowerpoint2vid.com%2Fblog%2Fslide-headlines-that-make-a-point%3Futm_source%3Dlinkedin%26utm_medium%3Dsocial%26utm_campaign%3Dblog_share" target="_blank" rel="noopener noreferrer" data-share="linkedin">LinkedIn</a><a class="share__btn" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fpowerpoint2vid.com%2Fblog%2Fslide-headlines-that-make-a-point%3Futm_source%3Dx%26utm_medium%3Dsocial%26utm_campaign%3Dblog_share&text=Slide%20Headlines%20That%20Make%20a%20Point" target="_blank" rel="noopener noreferrer" data-share="x">X</a><a class="share__btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpowerpoint2vid.com%2Fblog%2Fslide-headlines-that-make-a-point%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dblog_share" target="_blank" rel="noopener noreferrer" data-share="facebook">Facebook</a><a class="share__btn" href="https://www.reddit.com/submit?url=https%3A%2F%2Fpowerpoint2vid.com%2Fblog%2Fslide-headlines-that-make-a-point%3Futm_source%3Dreddit%26utm_medium%3Dsocial%26utm_campaign%3Dblog_share&title=Slide%20Headlines%20That%20Make%20a%20Point" target="_blank" rel="noopener noreferrer" data-share="reddit">Reddit</a><a class="share__btn" href="https://wa.me/?text=Slide%20Headlines%20That%20Make%20a%20Point%20https%3A%2F%2Fpowerpoint2vid.com%2Fblog%2Fslide-headlines-that-make-a-point%3Futm_source%3Dwhatsapp%26utm_medium%3Dsocial%26utm_campaign%3Dblog_share" target="_blank" rel="noopener noreferrer" data-share="whatsapp">WhatsApp</a><a class="share__btn" href="mailto:?subject=Slide%20Headlines%20That%20Make%20a%20Point&body=https%3A%2F%2Fpowerpoint2vid.com%2Fblog%2Fslide-headlines-that-make-a-point%3Futm_source%3Demail%26utm_medium%3Dsocial%26utm_campaign%3Dblog_share" data-share="email">Email</a><button class="share__btn" type="button" data-share="copy_link">Copy link</button><button class="share__btn share__btn--native" type="button" data-share="native" hidden>Share…</button></div><p class="share__status" role="status" aria-live="polite"></p></aside>
       <aside class="post-cta" aria-label="Try PowerPoint2Vid">
         <p class="post-cta__eyebrow">PowerPoint to video converter</p>
         <h2>Turn your next deck into an extraordinary video</h2>
@@ -229,6 +230,37 @@ document.addEventListener('click', function (e) {
   var a = e.target.closest && e.target.closest('a[data-cta]');
   if (a && window.gtag) gtag('event', 'cta_click', { location: a.dataset.cta });
 });
+/* Social shares -> GA4 recommended event "share" (method, content_type, item_id). */
+(function () {
+  var box = document.querySelector('.share');
+  if (!box) return;
+  var status = box.querySelector('.share__status');
+  function track(method) {
+    try {
+      if (window.gtag) gtag('event', 'share', {
+        method: method, content_type: 'blog_post', item_id: box.dataset.slug,
+        pillar: box.dataset.pillar, page_title: box.dataset.title
+      });
+    } catch (e) { /* analytics must never break the page */ }
+  }
+  function say(m) { if (status) status.textContent = m; }
+  var native = box.querySelector('[data-share="native"]');
+  if (native && navigator.share) native.hidden = false;
+  box.addEventListener('click', function (e) {
+    var el = e.target.closest && e.target.closest('[data-share]');
+    if (!el) return;
+    var m = el.dataset.share;
+    if (m === 'copy_link') {
+      var done = function () { say('Link copied'); track('copy_link'); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(box.dataset.url).then(done, function () { say('Copy failed'); });
+      else say('Copy failed');
+    } else if (m === 'native') {
+      navigator.share({ title: box.dataset.title, url: box.dataset.url }).then(function () { track('native_share'); }, function () { /* cancelled */ });
+    } else {
+      track(m);
+    }
+  });
+})();
 </script>
 </body>
 </html>
