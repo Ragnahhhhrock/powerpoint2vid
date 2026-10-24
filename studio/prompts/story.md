@@ -4,7 +4,7 @@ You receive every slide of one deck as an image, plus its extracted text and spe
 
 Return JSON matching the schema:
 - `brief`: the design brief for the whole video.
-  - `palette`: 6-8 named hex colours. Start from the deck's own brand colours if it has any; otherwise propose a confident palette. Must include `ink`, `night` (darkest stage colour) and `paper` (lightest).
+  - `palette`: 6-8 colours as a list of `{name, hex}` entries. Start from the deck's own brand colours if it has any; otherwise propose a confident palette. Must include `ink`, `night` (darkest stage colour) and `paper` (lightest).
   - `font`: one of the installed families: "Inter", "Inter Display".
   - `motion`: 1-2 sentences of motion personality (pace, easing, camera).
   - `story`: 1-2 sentences on the arc and how scenes contrast (dark vs light, wide vs close).

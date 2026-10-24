@@ -82,7 +82,7 @@ const STORY_SCHEMA = {
   type: 'object', additionalProperties: false, required: ['brief', 'scenes'],
   properties: {
     brief: { type: 'object', additionalProperties: false, required: ['palette', 'font', 'motion', 'story'], properties: {
-      palette: { type: 'object', additionalProperties: { type: 'string' } }, font: { type: 'string' }, motion: { type: 'string' }, story: { type: 'string' } } },
+      palette: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['name', 'hex'], properties: { name: { type: 'string' }, hex: { type: 'string' } } } }, font: { type: 'string' }, motion: { type: 'string' }, story: { type: 'string' } } },
     scenes: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['slide_index', 'narration', 'storyboard', 'min_duration'], properties: {
       slide_index: { type: 'integer' }, narration: { type: 'string' }, storyboard: { type: 'string' }, transition: { type: 'string' }, min_duration: { type: 'number' } } } },
   },
@@ -100,6 +100,8 @@ async function story() {
   else { try { out = await claude({ system: prompt('story'), content, schema: STORY_SCHEMA, tag: 'story' }); } catch (e) { console.warn('story failed, using slides-only story:', e.message); out = mockStory(plan); plan.degraded = true; } }
   if (!out) return;
   plan.brief = out.brief;
+  // the schema returns the palette as [{name, hex}] (open-ended objects are not allowed in structured output); the rest of the pipeline wants {name: hex}
+  if (Array.isArray(plan.brief.palette)) plan.brief.palette = Object.fromEntries(plan.brief.palette.map((c) => [c.name, c.hex]));
   plan.scenes = out.scenes.map((s, i) => ({
     file: `scenes/scene-${i}.js`, narration: s.narration, storyboard: s.storyboard, minDuration: s.min_duration,
     slide: slides[s.slide_index] || slides[i], ...(i && s.transition ? { transition: { type: s.transition, duration: s.transition === 'cut' ? 0 : 0.6 } } : {}),
