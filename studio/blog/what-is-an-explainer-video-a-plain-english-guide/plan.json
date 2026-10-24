@@ -1,0 +1,823 @@
+{
+  "title": "What Is an Explainer Video? A Plain-English Guide (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0F1424",
+      "ink": "#1B2238",
+      "paper": "#F7F4EE",
+      "signal": "#FF6B4A",
+      "sky": "#4C8DFF",
+      "mint": "#3FC79A",
+      "mist": "#9AA3B8"
+    },
+    "font": "Inter Display",
+    "motion": "Calm, confident pace with soft ease-out arrivals and short snappy holds; the camera drifts slowly and pushes in only when a key word lands.",
+    "story": "A question opens in the dark, the answer builds in bright paper scenes of features and story shape, then a dark comparison and a light accessibility beat lead to a warm, focused call to action. Wide establishing frames alternate with close typographic push-ins."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "Ever been asked what an explainer video actually is? It's a short video that explains one thing clearly. Here's the plain-English version.",
+      "storyboard": "Night stage; a single blinking cursor types 'What is an explainer video?' in 120px paper type, the question mark in signal coral. On 'one thing clearly' the words dissolve away until only a single coral dot remains centre frame, glowing. Slow push-in on the dot as 'Here's the plain-English version' plays. The original's cropped title is rebuilt cleanly; nothing else kept.",
+      "minDuration": 8,
+      "slide": {
+        "title": "What Is an Explainer Video?",
+        "text": "",
+        "notes": "Ever been asked what an explainer video actually is? It's a short video that explains one thing clearly. Here's the plain-English version.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 9.568,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.691,
+          "text": "Ever been asked what an explainer video actually is?",
+          "words": [
+            {
+              "w": "Ever",
+              "t": 0.8
+            },
+            {
+              "w": "been",
+              "t": 1.067
+            },
+            {
+              "w": "asked",
+              "t": 1.276
+            },
+            {
+              "w": "what",
+              "t": 1.613
+            },
+            {
+              "w": "an",
+              "t": 1.787
+            },
+            {
+              "w": "explainer",
+              "t": 1.903
+            },
+            {
+              "w": "video",
+              "t": 2.414
+            },
+            {
+              "w": "actually",
+              "t": 2.774
+            },
+            {
+              "w": "is?",
+              "t": 3.215
+            }
+          ]
+        },
+        {
+          "t": 4.202,
+          "end": 6.907,
+          "text": "It's a short video that explains one thing clearly.",
+          "words": [
+            {
+              "w": "It's",
+              "t": 4.202
+            },
+            {
+              "w": "a",
+              "t": 4.422
+            },
+            {
+              "w": "short",
+              "t": 4.504
+            },
+            {
+              "w": "video",
+              "t": 4.782
+            },
+            {
+              "w": "that",
+              "t": 5.142
+            },
+            {
+              "w": "explains",
+              "t": 5.305
+            },
+            {
+              "w": "one",
+              "t": 5.874
+            },
+            {
+              "w": "thing",
+              "t": 6.094
+            },
+            {
+              "w": "clearly.",
+              "t": 6.338
+            }
+          ]
+        },
+        {
+          "t": 7.081,
+          "end": 8.718,
+          "text": "Here's the plain-English version.",
+          "words": [
+            {
+              "w": "Here's",
+              "t": 7.081
+            },
+            {
+              "w": "the",
+              "t": 7.406
+            },
+            {
+              "w": "plain-English",
+              "t": 7.522
+            },
+            {
+              "w": "version.",
+              "t": 8.149
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.718
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Every explainer answers one question and moves from problem to answer. Narration explains while visuals show. The goal is understanding, not advertising.",
+      "storyboard": "The coral dot from the last scene lands on a paper stage and becomes the first of three icons in a wide row. On 'one question' a question mark appears beside 'One subject'; on 'problem to answer' an arrow draws left to right labelled 'A clear structure'; on 'narration explains while visuals show' a speech bubble and picture frame click together over 'Words and pictures together'. On 'understanding, not advertising' a megaphone icon fades out in mist grey while a lightbulb brightens in mint. Bullets are rebuilt as these three icon cards.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Three features make an explainer",
+        "text": "One subject. A clear structure. Words and pictures together",
+        "notes": "Every explainer answers one question and moves from problem to answer. Narration explains while visuals show. The goal is understanding, not advertising.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 11.43,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.555,
+          "text": "Every explainer answers one question and moves from problem to answer.",
+          "words": [
+            {
+              "w": "Every",
+              "t": 0.55
+            },
+            {
+              "w": "explainer",
+              "t": 0.875
+            },
+            {
+              "w": "answers",
+              "t": 1.467
+            },
+            {
+              "w": "one",
+              "t": 1.896
+            },
+            {
+              "w": "question",
+              "t": 2.129
+            },
+            {
+              "w": "and",
+              "t": 2.686
+            },
+            {
+              "w": "moves",
+              "t": 2.953
+            },
+            {
+              "w": "from",
+              "t": 3.22
+            },
+            {
+              "w": "problem",
+              "t": 3.417
+            },
+            {
+              "w": "to",
+              "t": 3.8
+            },
+            {
+              "w": "answer.",
+              "t": 3.94
+            }
+          ]
+        },
+        {
+          "t": 5.066,
+          "end": 7.666,
+          "text": "Narration explains while visuals show.",
+          "words": [
+            {
+              "w": "Narration",
+              "t": 5.066
+            },
+            {
+              "w": "explains",
+              "t": 5.635
+            },
+            {
+              "w": "while",
+              "t": 6.261
+            },
+            {
+              "w": "visuals",
+              "t": 6.621
+            },
+            {
+              "w": "show.",
+              "t": 7.097
+            }
+          ]
+        },
+        {
+          "t": 8.049,
+          "end": 10.58,
+          "text": "The goal is understanding, not advertising.",
+          "words": [
+            {
+              "w": "The",
+              "t": 8.049
+            },
+            {
+              "w": "goal",
+              "t": 8.235
+            },
+            {
+              "w": "is",
+              "t": 8.548
+            },
+            {
+              "w": "understanding,",
+              "t": 8.723
+            },
+            {
+              "w": "not",
+              "t": 9.512
+            },
+            {
+              "w": "advertising.",
+              "t": 9.756
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.58
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "Animation and live action take serious effort. Narrated slides do the same job, and many organisations already explain their biggest ideas in decks.",
+      "storyboard": "Night stage, three horizontal effort bars as an animated chart. On 'animation' the first bar fills long in sky blue labelled 'Animated illustration: high effort'; on 'live action' the second fills equally long. On 'narrated slides' the third bar fills only a short stretch in coral, labelled 'low effort', and the camera pans to it. On 'already explain their biggest ideas in decks' a stack of slide thumbnails slides in beside it. Headline 'The shortest route' sits top-left at 96px.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Narrated slides are the shortest route",
+        "text": "Animated illustration: high effort. Live action: high effort. Narrated slides: low effort",
+        "notes": "Animation and live action take serious effort. Narrated slides do the same job, and many organisations already explain their biggest ideas in decks.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 10.769,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.406,
+          "text": "Animation and live action take serious effort.",
+          "words": [
+            {
+              "w": "Animation",
+              "t": 0.55
+            },
+            {
+              "w": "and",
+              "t": 1.2
+            },
+            {
+              "w": "live",
+              "t": 1.386
+            },
+            {
+              "w": "action",
+              "t": 1.676
+            },
+            {
+              "w": "take",
+              "t": 2.129
+            },
+            {
+              "w": "serious",
+              "t": 2.443
+            },
+            {
+              "w": "effort.",
+              "t": 2.919
+            }
+          ]
+        },
+        {
+          "t": 3.847,
+          "end": 9.919,
+          "text": "Narrated slides do the same job, and many organisations already explain their biggest ideas in decks.",
+          "words": [
+            {
+              "w": "Narrated",
+              "t": 3.847
+            },
+            {
+              "w": "slides",
+              "t": 4.37
+            },
+            {
+              "w": "do",
+              "t": 4.834
+            },
+            {
+              "w": "the",
+              "t": 4.985
+            },
+            {
+              "w": "same",
+              "t": 5.101
+            },
+            {
+              "w": "job,",
+              "t": 5.392
+            },
+            {
+              "w": "and",
+              "t": 5.914
+            },
+            {
+              "w": "many",
+              "t": 6.158
+            },
+            {
+              "w": "organisations",
+              "t": 6.425
+            },
+            {
+              "w": "already",
+              "t": 7.226
+            },
+            {
+              "w": "explain",
+              "t": 7.69
+            },
+            {
+              "w": "their",
+              "t": 8.19
+            },
+            {
+              "w": "biggest",
+              "t": 8.364
+            },
+            {
+              "w": "ideas",
+              "t": 8.735
+            },
+            {
+              "w": "in",
+              "t": 9.2
+            },
+            {
+              "w": "decks.",
+              "t": 9.351
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.919
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "A reliable shape is situation, problem, answer, proof, next step. Keep words and pictures matched, so when you say order page, viewers see it.",
+      "storyboard": "Paper stage; a curved story path draws across the frame with five stops lighting up in sequence as each word is spoken: situation, problem, answer, proof, next step. The camera then pushes in to the 'answer' stop, which opens into a simple order-page mockup. Exactly on 'order page' the mockup's 'Start a return' button highlights in coral, demonstrating the match. The quote is kept as a small caption under the mockup.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Follow a simple story",
+        "text": "Situation, problem, answer, proof, next step. \"Start a return from your order page.\". Words and pictures match",
+        "notes": "A reliable shape is situation, problem, answer, proof, next step. Keep words and pictures matched, so when you say order page, viewers see it.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 11.187,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 5.414,
+          "text": "A reliable shape is situation, problem, answer, proof, next step.",
+          "words": [
+            {
+              "w": "A",
+              "t": 0.55
+            },
+            {
+              "w": "reliable",
+              "t": 0.713
+            },
+            {
+              "w": "shape",
+              "t": 1.223
+            },
+            {
+              "w": "is",
+              "t": 1.595
+            },
+            {
+              "w": "situation,",
+              "t": 1.757
+            },
+            {
+              "w": "problem,",
+              "t": 2.698
+            },
+            {
+              "w": "answer,",
+              "t": 3.36
+            },
+            {
+              "w": "proof,",
+              "t": 4.056
+            },
+            {
+              "w": "next",
+              "t": 4.637
+            },
+            {
+              "w": "step.",
+              "t": 4.915
+            }
+          ]
+        },
+        {
+          "t": 5.856,
+          "end": 10.337,
+          "text": "Keep words and pictures matched, so when you say order page, viewers see it.",
+          "words": [
+            {
+              "w": "Keep",
+              "t": 5.856
+            },
+            {
+              "w": "words",
+              "t": 6.169
+            },
+            {
+              "w": "and",
+              "t": 6.529
+            },
+            {
+              "w": "pictures",
+              "t": 6.68
+            },
+            {
+              "w": "matched,",
+              "t": 7.133
+            },
+            {
+              "w": "so",
+              "t": 7.841
+            },
+            {
+              "w": "when",
+              "t": 8.015
+            },
+            {
+              "w": "you",
+              "t": 8.178
+            },
+            {
+              "w": "say",
+              "t": 8.317
+            },
+            {
+              "w": "order",
+              "t": 8.549
+            },
+            {
+              "w": "page,",
+              "t": 8.839
+            },
+            {
+              "w": "viewers",
+              "t": 9.373
+            },
+            {
+              "w": "see",
+              "t": 9.791
+            },
+            {
+              "w": "it.",
+              "t": 10.024
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.337
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Every extra minute should earn its place. Add captions and readable text, so people watching with the sound off can still follow along.",
+      "storyboard": "Ink stage, a timeline ruler shrinks from wide to tight on 'earn its place', with 'Split it' stamped in mint. On 'captions' a phone frame slides up showing a muted speaker icon and a crisp caption bar at the bottom. On 'readable text' the caption snaps from low-contrast grey to bold paper-on-night, high contrast. Hold on the phone, centred with generous space.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Keep it short and accessible",
+        "text": "Can't sum it up in one sentence? Split it. Captions for sound-off viewers. Good contrast and readable text",
+        "notes": "Every extra minute should earn its place. Add captions and readable text, so people watching with the sound off can still follow along.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "smoothup",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 10,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.837,
+          "text": "Every extra minute should earn its place.",
+          "words": [
+            {
+              "w": "Every",
+              "t": 0.55
+            },
+            {
+              "w": "extra",
+              "t": 0.922
+            },
+            {
+              "w": "minute",
+              "t": 1.305
+            },
+            {
+              "w": "should",
+              "t": 1.63
+            },
+            {
+              "w": "earn",
+              "t": 1.909
+            },
+            {
+              "w": "its",
+              "t": 2.118
+            },
+            {
+              "w": "place.",
+              "t": 2.28
+            }
+          ]
+        },
+        {
+          "t": 3.279,
+          "end": 8.468,
+          "text": "Add captions and readable text, so people watching with the sound off can still follow along.",
+          "words": [
+            {
+              "w": "Add",
+              "t": 3.279
+            },
+            {
+              "w": "captions",
+              "t": 3.58
+            },
+            {
+              "w": "and",
+              "t": 4.126
+            },
+            {
+              "w": "readable",
+              "t": 4.277
+            },
+            {
+              "w": "text,",
+              "t": 4.683
+            },
+            {
+              "w": "so",
+              "t": 5.392
+            },
+            {
+              "w": "people",
+              "t": 5.601
+            },
+            {
+              "w": "watching",
+              "t": 5.949
+            },
+            {
+              "w": "with",
+              "t": 6.367
+            },
+            {
+              "w": "the",
+              "t": 6.541
+            },
+            {
+              "w": "sound",
+              "t": 6.657
+            },
+            {
+              "w": "off",
+              "t": 6.994
+            },
+            {
+              "w": "can",
+              "t": 7.203
+            },
+            {
+              "w": "still",
+              "t": 7.388
+            },
+            {
+              "w": "follow",
+              "t": 7.702
+            },
+            {
+              "w": "along.",
+              "t": 8.015
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.468
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "Your speaker notes become the narration. On Pro, A.I. directs the video, so a plain deck lands like a produced explainer. Try Basic first at powerpoint2vid.com.",
+      "storyboard": "Night stage; a plain white slide floats in with a speaker-notes panel beneath it. On 'become the narration' the notes lift off as a sound waveform in coral. On 'A.I. directs the video' the plain slide transforms into a colourful animated frame, camera pulling wide. On 'Try Basic first' the frame settles and 'powerpoint2vid.com' rises at 110px in paper with a coral underline, holding for two seconds.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Turn your deck into an explainer",
+        "text": "Trim to one question. One idea per slide. Narration in the speaker notes",
+        "notes": "Your speaker notes become the narration. On Pro, a.i. directs the video, so a plain deck lands like a produced explainer. Try Basic first at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 13.35,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.605,
+          "text": "Your speaker notes become the narration.",
+          "words": [
+            {
+              "w": "Your",
+              "t": 0.55
+            },
+            {
+              "w": "speaker",
+              "t": 0.771
+            },
+            {
+              "w": "notes",
+              "t": 1.177
+            },
+            {
+              "w": "become",
+              "t": 1.467
+            },
+            {
+              "w": "the",
+              "t": 1.816
+            },
+            {
+              "w": "narration.",
+              "t": 1.92
+            }
+          ]
+        },
+        {
+          "t": 2.93,
+          "end": 7.83,
+          "text": "On Pro, A.I. directs the video, so a plain deck lands like a produced explainer.",
+          "words": [
+            {
+              "w": "On",
+              "t": 2.93
+            },
+            {
+              "w": "Pro,",
+              "t": 3.174
+            },
+            {
+              "w": "A.I.",
+              "t": 3.569
+            },
+            {
+              "w": "directs",
+              "t": 3.952
+            },
+            {
+              "w": "the",
+              "t": 4.347
+            },
+            {
+              "w": "video,",
+              "t": 4.463
+            },
+            {
+              "w": "so",
+              "t": 5.09
+            },
+            {
+              "w": "a",
+              "t": 5.287
+            },
+            {
+              "w": "plain",
+              "t": 5.368
+            },
+            {
+              "w": "deck",
+              "t": 5.717
+            },
+            {
+              "w": "lands",
+              "t": 6.053
+            },
+            {
+              "w": "like",
+              "t": 6.413
+            },
+            {
+              "w": "a",
+              "t": 6.587
+            },
+            {
+              "w": "produced",
+              "t": 6.657
+            },
+            {
+              "w": "explainer.",
+              "t": 7.11
+            }
+          ]
+        },
+        {
+          "t": 8.213,
+          "end": 11.15,
+          "text": "Try Basic first at powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 8.213
+            },
+            {
+              "w": "Basic",
+              "t": 8.526
+            },
+            {
+              "w": "first",
+              "t": 8.956
+            },
+            {
+              "w": "at",
+              "t": 9.351
+            },
+            {
+              "w": "PowerPoint",
+              "t": 9.467
+            },
+            {
+              "w": "to",
+              "t": 10.036
+            },
+            {
+              "w": "vid",
+              "t": 10.163
+            },
+            {
+              "w": "dot",
+              "t": 10.419
+            },
+            {
+              "w": "com.",
+              "t": 10.674
+            }
+          ]
+        }
+      ],
+      "speechEnd": 11.15
+    }
+  ],
+  "voiceProvider": "elevenlabs"
+}

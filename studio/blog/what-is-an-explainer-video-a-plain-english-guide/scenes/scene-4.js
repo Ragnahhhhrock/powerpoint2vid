@@ -1,0 +1,121 @@
+/* Scene 4 — "Every extra minute should earn its place. Add captions and readable text, so people
+ * watching with the sound off can still follow along."
+ * Storyboard: an ink stage. A wide timeline ruler compresses to a tight one on "earn its place", and
+ * "Split it" stamps in mint. On "captions" a phone slides up, showing a muted speaker icon and a
+ * caption bar. On "readable text" the caption snaps from low-contrast grey to bold paper-on-night.
+ * The caption follows the narration word by word. Hold on the centred phone. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const W = ctx.beats[1] && ctx.beats[1].words ? ctx.beats[1].words : [];
+  const earn = ctx.at(0, 'earn'), place = ctx.at(0, 'place'), extra = ctx.at(0, 'extra');
+  const caps = ctx.at(1, 'captions'), readable = ctx.at(1, 'readable');
+  const sound = ctx.at(1, 'sound'), off = ctx.at(1, 'off');
+  const MONO = 'ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(65% 60% at 50% 45%, #27304d 0%, var(--ink) 55%, var(--night) 100%)';
+  const glow = el('div', 'abs', stage, { left: '560px', top: '140px', width: '800px', height: '800px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(76,141,255,.18), transparent 65%)' });
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 540px' });
+
+  /* ---------- part 1: ruler ---------- */
+  const rg = el('div', 'abs', cam, { inset: 0 });
+  const head = el('div', 'abs', rg, { left: '160px', width: '1600px', top: '300px', textAlign: 'center', font: '800 84px/1 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--paper)' });
+  const hw = ctx.split(head, 'Every minute earns its place', 'word');
+  hw.forEach((s) => (s.style.marginRight = '0.22em'));
+  const lab = el('div', 'abs', rg, { left: '160px', width: '1600px', top: '430px', textAlign: 'center', font: `600 22px/1 ${MONO}`, letterSpacing: '.18em', color: 'var(--mist)' });
+  lab.textContent = 'RUNTIME';
+  const RY = 600, N = 25;
+  const track = el('div', 'abs', rg, { top: RY + 'px', height: '6px', borderRadius: '3px', background: 'rgba(154,163,184,.35)' });
+  const fill = el('div', 'abs', rg, { top: RY + 'px', height: '6px', borderRadius: '3px', background: 'var(--mint)', boxShadow: '0 0 24px rgba(63,199,154,.7)', opacity: 0 });
+  const ticks = Array.from({ length: N }, (_, i) => el('div', 'abs', rg, { top: RY + (i % 4 === 0 ? -26 : -14) + 'px', width: '3px', height: (i % 4 === 0 ? 26 : 14) + 'px', background: 'rgba(247,244,238,.55)', borderRadius: '2px' }));
+  const knob = el('div', 'abs', rg, { top: RY - 11 + 'px', width: '28px', height: '28px', borderRadius: '50%', background: 'var(--paper)', boxShadow: '0 0 30px rgba(247,244,238,.6)' });
+  const R = { w: 1400 };
+  const stamp = el('div', 'abs', rg, { left: '1180px', top: '650px', padding: '14px 30px', border: '5px solid var(--mint)', borderRadius: '14px', font: '900 64px/1 Inter Display, Inter', letterSpacing: '-.03em', color: 'var(--mint)', transform: 'rotate(-8deg)', textShadow: '0 0 30px rgba(63,199,154,.5)', opacity: 0 });
+  stamp.textContent = 'Split it';
+
+  /* ---------- part 2: phone ---------- */
+  const PW = 440, PH = 860, PX = 960 - PW / 2, PY = 110;
+  const phone = el('div', 'abs', cam, { left: PX + 'px', top: PY + 'px', width: PW + 'px', height: PH + 'px', borderRadius: '64px', background: '#0a0d18', boxShadow: '0 60px 120px rgba(0,0,0,.6), 0 0 0 3px rgba(255,255,255,.12), 0 0 80px rgba(76,141,255,.2)' });
+  const screen = el('div', 'abs', phone, { left: '16px', top: '16px', right: '16px', bottom: '16px', borderRadius: '50px', overflow: 'hidden', background: 'linear-gradient(170deg, #3a4670 0%, #222a46 55%, #151a2e 100%)' });
+  el('div', 'abs', screen, { left: '154px', top: '16px', width: '100px', height: '28px', borderRadius: '14px', background: '#05070d' });
+  el('div', 'abs', screen, { left: '-60px', top: '120px', width: '300px', height: '300px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,107,74,.35), transparent 70%)' });
+  const head2 = el('div', 'abs', screen, { left: '149px', top: '230px', width: '110px', height: '110px', borderRadius: '50%', background: 'linear-gradient(160deg, #9aa3b8, #6b7590)' });
+  const body = el('div', 'abs', screen, { left: '94px', top: '360px', width: '220px', height: '260px', borderRadius: '110px 110px 20px 20px', background: 'linear-gradient(170deg, #4c8dff, #2d5cc0)' });
+  const mute = el('div', 'abs', screen, { right: '22px', top: '64px', width: '72px', height: '72px', borderRadius: '50%', background: 'rgba(15,20,36,.75)', border: '2px solid rgba(255,107,74,.8)' });
+  mute.innerHTML = `<svg width="72" height="72" viewBox="0 0 72 72"><path d="M18 30h8l10-8v28l-10-8h-8z" fill="#F7F4EE"/><path d="M43 29l12 14M55 29L43 43" stroke="#FF6B4A" stroke-width="4" stroke-linecap="round"/></svg>`;
+  const ring = el('div', 'abs', screen, { right: '22px', top: '64px', width: '72px', height: '72px', borderRadius: '50%', border: '3px solid var(--signal)', opacity: 0 });
+
+  const P1 = ['Add', 'captions', 'and', 'readable', 'text,'];
+  const P2 = ['so', 'people', 'watching', 'with', 'the', 'sound', 'off', 'can', 'still', 'follow', 'along.'];
+  const timeOf = (i, w) => (W[i] ? W[i].t : ctx.at(1, w.replace(/[.,]/g, '')));
+  const mkCap = (bg, color, weight, border) => {
+    const box = el('div', 'abs', screen, { left: '22px', right: '22px', bottom: '40px', padding: '16px 20px', borderRadius: '14px', background: bg, border, font: `${weight} 25px/1.3 Inter`, color, textAlign: 'center', transformOrigin: '50% 100%' });
+    const mk = (arr, off0) => {
+      const line = el('div', '', box, {});
+      return { line, spans: arr.map((w, k) => { const s = el('span', '', line, { display: 'inline-block', marginRight: '0.28em' }); s.textContent = w; return { s, t: timeOf(off0 + k, w) }; }) };
+    };
+    return { box, a: mk(P1, 0), b: mk(P2, 5) };
+  };
+  const lo = mkCap('rgba(154,163,184,.14)', '#6a7186', 500, '1px solid transparent');
+  const hi = mkCap('var(--night)', 'var(--paper)', 800, '2px solid rgba(247,244,238,.25)');
+  hi.box.style.boxShadow = '0 10px 30px rgba(0,0,0,.5)';
+
+  /* side annotations: SOUND OFF points at the mute icon (right), HIGH CONTRAST at the caption (left) */
+  const noteL = el('div', 'abs', cam, { left: '1310px', width: '420px', top: '215px', font: `600 22px/1 ${MONO}`, letterSpacing: '.18em', color: 'var(--signal)' });
+  noteL.textContent = 'SOUND OFF';
+  const lineL = el('div', 'abs', cam, { left: '1160px', top: '225px', width: '130px', height: '2px', background: 'var(--signal)', transformOrigin: '0% 50%' });
+  const noteR = el('div', 'abs', cam, { left: '200px', width: '420px', top: '836px', textAlign: 'right', font: `600 22px/1 ${MONO}`, letterSpacing: '.18em', color: 'var(--mint)' });
+  noteR.textContent = '✓ HIGH CONTRAST';
+  const lineR = el('div', 'abs', cam, { left: '640px', top: '847px', width: '115px', height: '2px', background: 'var(--mint)', transformOrigin: '100% 50%' });
+  gsap.set([lineL, lineR], { scaleX: 0 });
+  gsap.set([noteL, noteR], { opacity: 0 });
+
+  ctx.fx.vignette({ strength: 0.5 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  ctx.onFrame((t) => {
+    const L = 960 - R.w / 2;
+    track.style.left = L + 'px'; track.style.width = R.w + 'px';
+    fill.style.left = L + 'px'; fill.style.width = R.w + 'px';
+    ticks.forEach((tk, i) => (tk.style.left = L + (i / (N - 1)) * R.w - 1.5 + 'px'));
+    knob.style.left = L + R.w - 14 + 'px';
+    const second = t >= 5.3;
+    [lo, hi].forEach((c) => {
+      c.a.line.style.display = second ? 'none' : 'block';
+      c.b.line.style.display = second ? 'block' : 'none';
+      (second ? c.b : c.a).spans.forEach(({ s, t: wt }) => (s.style.opacity = t >= wt - 0.05 ? 1 : 0.3));
+    });
+  });
+
+  /* ---------- timeline ---------- */
+  tl.to(cam, { scale: 1.04, duration: ctx.dur, ease: 'none' }, 0);
+  tl.to(glow, { x: 40, y: -30, duration: ctx.dur, ease: 'sine.inOut' }, 0);
+  tl.from([track, ...ticks, knob], { opacity: 0, y: 20, duration: 0.6, stagger: 0.012 }, 0.05);
+  tl.from(lab, { opacity: 0, duration: 0.5 }, 0.2);
+  tl.from(hw, { opacity: 0, y: 40, duration: 0.6, ease: 'back.out(1.6)', stagger: 0.1 }, 0.45);
+  tl.to(R, { w: 1600, duration: 0.6, ease: 'power2.out' }, extra);
+  tl.to(R, { w: 560, duration: 0.6, ease: 'expo.inOut' }, earn - 0.25);
+  tl.to(fill, { opacity: 1, duration: 0.3 }, earn + 0.3);
+  tl.fromTo(stamp, { scale: 2.4, opacity: 0, rotation: -18 }, { scale: 1, opacity: 1, rotation: -8, duration: 0.35, ease: 'power4.in', immediateRender: false }, place - 0.2);
+  tl.to(stamp, { y: 6, duration: 0.07, yoyo: true, repeat: 1 }, place + 0.15);
+  gsap.set(rg, { filter: 'blur(0px)' });
+  tl.to(rg, { y: -120, opacity: 0, filter: 'blur(8px)', duration: 0.55, ease: 'power2.in' }, caps - 0.6);
+
+  gsap.set(phone, { y: 1000 });
+  tl.to(phone, { y: 0, duration: 0.9, ease: 'expo.out' }, caps - 0.4);
+  tl.from([head2, body], { y: 60, opacity: 0, duration: 0.6, stagger: 0.08 }, caps);
+  tl.from(mute, { scale: 0, duration: 0.5, ease: 'back.out(2)' }, caps + 0.2);
+  tl.from(lo.box, { y: 40, opacity: 0, duration: 0.5, ease: 'back.out(1.5)' }, caps + 0.1);
+  gsap.set(hi.box, { opacity: 0 });
+
+  tl.to(lo.box, { opacity: 0, duration: 0.1 }, readable);
+  tl.fromTo(hi.box, { opacity: 0, scale: 1.12 }, { opacity: 1, scale: 1, duration: 0.45, ease: 'back.out(2)', immediateRender: false }, readable);
+  tl.to(lineR, { scaleX: 1, duration: 0.4 }, readable + 0.2);
+  tl.fromTo(noteR, { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.45, immediateRender: false }, readable + 0.35);
+  tl.to(cam, { scale: 1.09, duration: 0.9, ease: 'expo.inOut' }, readable + 0.1);
+
+  tl.to(lineL, { scaleX: 1, duration: 0.4 }, sound);
+  tl.fromTo(noteL, { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.45, immediateRender: false }, sound + 0.1);
+  tl.fromTo(ring, { scale: 1, opacity: 1 }, { scale: 2.2, opacity: 0, duration: 0.8, ease: 'power2.out', immediateRender: false }, off);
+  tl.to(mute, { scale: 1.15, duration: 0.15, yoyo: true, repeat: 1, ease: 'power2.out' }, off);
+  tl.to(cam, { scale: 1.06, duration: ctx.dur - (readable + 1.2), ease: 'power1.inOut' }, readable + 1.2);
+});

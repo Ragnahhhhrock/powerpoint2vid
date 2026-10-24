@@ -1,0 +1,97 @@
+{
+  "title": "What Is an Explainer Video? A Plain-English Guide (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "What Is an Explainer Video?",
+      "bullets": [],
+      "notes": "Ever been asked what an explainer video actually is? It's a short video that explains one thing clearly. Here's the plain-English version.",
+      "minDuration": 9
+    },
+    {
+      "title": "Three features make an explainer",
+      "bullets": [
+        "One subject",
+        "A clear structure",
+        "Words and pictures together"
+      ],
+      "notes": "Every explainer answers one question and moves from problem to answer. Narration explains while visuals show. The goal is understanding, not advertising.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Narrated slides are the shortest route",
+      "bullets": [
+        "Animated illustration: high effort",
+        "Live action: high effort",
+        "Narrated slides: low effort"
+      ],
+      "notes": "Animation and live action take serious effort. Narrated slides do the same job, and many organisations already explain their biggest ideas in decks.",
+      "minDuration": 10,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Follow a simple story",
+      "bullets": [
+        "Situation, problem, answer, proof, next step",
+        "\"Start a return from your order page.\"",
+        "Words and pictures match"
+      ],
+      "notes": "A reliable shape is situation, problem, answer, proof, next step. Keep words and pictures matched, so when you say order page, viewers see it.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Keep it short and accessible",
+      "bullets": [
+        "Can't sum it up in one sentence? Split it",
+        "Captions for sound-off viewers",
+        "Good contrast and readable text"
+      ],
+      "notes": "Every extra minute should earn its place. Add captions and readable text, so people watching with the sound off can still follow along.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Turn your deck into an explainer",
+      "bullets": [
+        "Trim to one question",
+        "One idea per slide",
+        "Narration in the speaker notes"
+      ],
+      "notes": "Your speaker notes become the narration. On Pro, a.i. directs the video, so a plain deck lands like a produced explainer. Try Basic first at powerpoint2vid.com.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}

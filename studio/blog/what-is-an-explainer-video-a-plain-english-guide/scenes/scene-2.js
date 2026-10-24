@@ -1,0 +1,91 @@
+/* Scene 2 — "Animation and live action take serious effort. Narrated slides do the same job, and many
+ * organisations already explain their biggest ideas in decks."
+ * Storyboard: night stage, headline "The shortest route" top-left (96px), three effort bars. On "Animation"
+ * the first bar fills long in sky blue (HIGH EFFORT); on "live action" the second fills equally long. On
+ * "Narrated slides" the camera pushes toward the third bar, the others dim, a short coral bar fills (LOW EFFORT).
+ * On "already … decks" a fanned stack of the deck's slide thumbnails slides in beside it; on "decks" the top card glows. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const A = ctx.at(0, 'Animation'), LIVE = ctx.at(0, 'live'), SER = ctx.at(0, 'serious');
+  const NAR = ctx.at(1, 'Narrated'), SLD = ctx.at(1, 'slides'), SAME = ctx.at(1, 'same');
+  const ALR = ctx.at(1, 'already'), DECKS = ctx.at(1, 'decks');
+
+  stage.style.background = 'radial-gradient(60% 55% at 30% 70%, #1d2645 0%, var(--night) 70%)';
+  const glow = el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(35% 30% at 25% 75%, rgba(255,107,74,.18), transparent 70%)', opacity: 0 });
+  const drift = el('div', 'abs', stage, { inset: 0 });
+  const cam = el('div', 'abs', drift, { inset: 0, transformOrigin: '120px 780px' });
+
+  const head = el('div', 'abs', stage, { left: '120px', top: '88px', font: '800 96px/1 Inter Display, Inter', letterSpacing: '-.045em', color: 'var(--paper)', whiteSpace: 'nowrap' });
+  head.textContent = 'The shortest route';
+  const kicker = el('div', 'abs', stage, { left: '124px', top: '206px', font: '600 20px/1 ui-monospace, Menlo, monospace', letterSpacing: '.16em', color: 'var(--mist)' });
+  kicker.textContent = 'EFFORT TO PRODUCE';
+
+  const X = 120, TRACK = 1100, H = 64;
+  const ROWS = [
+    { name: 'Animated illustration', tag: 'HIGH EFFORT', top: 420, w: 1000, col: 'var(--sky)', rgb: '76,141,255' },
+    { name: 'Live action', tag: 'HIGH EFFORT', top: 600, w: 1000, col: 'var(--sky)', rgb: '76,141,255' },
+    { name: 'Narrated slides', tag: 'LOW EFFORT', top: 780, w: 254, col: 'var(--signal)', rgb: '255,107,74' },
+  ];
+  const rows = ROWS.map((r) => {
+    const g = el('div', 'abs', cam, { left: 0, top: 0, width: '1920px', height: '1080px' });
+    const name = el('div', 'abs', g, { left: X + 'px', top: r.top - 56 + 'px', font: '700 38px/1 Inter Display, Inter', letterSpacing: '-.03em', color: 'var(--paper)', whiteSpace: 'nowrap' });
+    name.textContent = r.name;
+    const track = el('div', 'abs', g, { left: X + 'px', top: r.top + 'px', width: TRACK + 'px', height: H + 'px', borderRadius: '14px', background: 'rgba(255,255,255,.05)', boxShadow: 'inset 0 0 0 1px rgba(255,255,255,.07)' });
+    const fill = el('div', 'abs', g, { left: X + 'px', top: r.top + 'px', width: '0px', height: H + 'px', borderRadius: '14px', overflow: 'hidden',
+      background: `linear-gradient(90deg, rgba(${r.rgb},.75), ${r.col})`, boxShadow: `0 0 40px rgba(${r.rgb},.4), inset 0 1px 0 rgba(255,255,255,.35)` });
+    const stripes = el('div', 'abs', fill, { inset: 0, backgroundImage: 'repeating-linear-gradient(-45deg, rgba(255,255,255,.10) 0 14px, transparent 14px 28px)', backgroundSize: '40px 40px' });
+    const tag = el('div', 'abs', g, { left: X + r.w + 24 + 'px', top: r.top + 18 + 'px', font: '700 26px/1 ui-monospace, Menlo, monospace', letterSpacing: '.14em', color: r.col, whiteSpace: 'nowrap', transformOrigin: '0% 50%' });
+    tag.textContent = r.tag;
+    if (r.w > 800) gsap.set(tag, { left: X + r.w - 260 + 'px', color: '#fff' });
+    return { ...r, g, name, track, fill, stripes, tag };
+  });
+
+  const stack = el('div', 'abs', cam, { left: '1260px', top: '610px', width: '400px', height: '260px' });
+  const thumbs = [1, 2, 3, 4, 5, 6].map((n, i) => {
+    const card = el('div', 'abs', stack, { left: i * 16 + 'px', top: i * -12 + 'px', width: '320px', height: '180px', borderRadius: '10px', overflow: 'hidden', background: 'var(--paper)',
+      boxShadow: '0 24px 50px rgba(0,0,0,.5)', transformOrigin: '50% 100%' });
+    const im = el('img', 'abs', card, { inset: 0, width: '100%', height: '100%', objectFit: 'cover' }); im.src = ctx.asset(`slide-${n}.png`);
+    return card;
+  });
+  const top = thumbs[5];
+  const stackLab = el('div', 'abs', cam, { left: '1260px', top: '890px', font: '600 22px/1 ui-monospace, Menlo, monospace', letterSpacing: '.16em', color: 'var(--mist)', whiteSpace: 'nowrap' });
+  stackLab.textContent = 'ALREADY IN YOUR DECKS';
+  const ring = el('div', 'abs', cam, { left: '1350px', top: '490px', width: '300px', height: '300px', borderRadius: '50%', border: '5px solid var(--signal)', opacity: 0 });
+
+  ctx.fx.vignette({ strength: 0.55 });
+  ctx.fx.grain({ opacity: 0.06 });
+  ctx.onFrame((t) => rows.forEach((r, i) => { r.stripes.style.backgroundPosition = `${(t * (i === 2 ? 30 : 60)) % 40}px 0px`; }));
+
+  tl.to(drift, { x: -24, y: -10, duration: ctx.dur, ease: 'none' }, 0);
+  tl.from(head, { y: 40, opacity: 0, duration: 0.8 }, 0.05);
+  tl.from(kicker, { opacity: 0, x: -20, duration: 0.6 }, 0.3);
+  rows.forEach((r, i) => {
+    tl.from([r.name, r.track], { opacity: 0, y: 20, duration: 0.6, stagger: 0.05 }, 0.15 + i * 0.1);
+  });
+  gsap.set(rows.map((r) => r.tag), { opacity: 0 });
+
+  const fillRow = (r, t, d, ease) => {
+    tl.to(r.fill, { width: r.w + 'px', duration: d, ease }, t);
+    tl.fromTo(r.tag, { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(2)', immediateRender: false }, t + d - 0.25);
+  };
+  fillRow(rows[0], A, 1.3, 'power2.inOut');
+  fillRow(rows[1], LIVE, 1.3, 'power2.inOut');
+  tl.to([rows[0].fill, rows[1].fill], { boxShadow: '0 0 70px rgba(76,141,255,.7), inset 0 1px 0 rgba(255,255,255,.35)', duration: 0.35, yoyo: true, repeat: 1, ease: 'sine.inOut' }, SER + 0.2);
+  tl.to([rows[0].fill, rows[1].fill], { x: 4, duration: 0.05, yoyo: true, repeat: 5, ease: 'none' }, SER + 0.3);
+
+  tl.to(cam, { scale: 1.08, y: -40, duration: 1.2, ease: 'expo.inOut' }, NAR - 0.2);
+  tl.to([rows[0].g, rows[1].g], { opacity: 0.32, duration: 0.7 }, NAR);
+  tl.to(glow, { opacity: 1, duration: 1 }, NAR);
+  tl.to(rows[2].fill, { width: rows[2].w + 'px', duration: 0.7, ease: 'back.out(1.6)' }, SLD);
+  tl.fromTo(rows[2].tag, { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(2)', immediateRender: false }, SAME - 0.1);
+  tl.to(rows[2].fill, { boxShadow: '0 0 70px rgba(255,107,74,.75), inset 0 1px 0 rgba(255,255,255,.35)', duration: 0.5 }, SAME);
+
+  thumbs.forEach((c, i) => {
+    tl.fromTo(c, { x: 700, opacity: 0, rotation: 12 }, { x: 0, opacity: 1, rotation: -6 + i * 2.2, duration: 0.8, ease: 'back.out(1.4)', immediateRender: false }, ALR - 0.1 + i * 0.1);
+  });
+  gsap.set(thumbs, { opacity: 0 });
+  tl.from(stackLab, { opacity: 0, y: 14, duration: 0.6 }, ALR + 0.6);
+  tl.to(top, { y: -14, scale: 1.04, boxShadow: '0 0 60px rgba(255,107,74,.6), 0 30px 60px rgba(0,0,0,.5)', duration: 0.5, ease: 'back.out(2)' }, DECKS);
+  tl.fromTo(ring, { scale: 0.5, opacity: 0.9 }, { scale: 1.6, opacity: 0, duration: 0.9, ease: 'power2.out', immediateRender: false }, DECKS);
+  tl.to(cam, { scale: 1.11, duration: ctx.dur - DECKS, ease: 'power1.inOut' }, DECKS);
+});
