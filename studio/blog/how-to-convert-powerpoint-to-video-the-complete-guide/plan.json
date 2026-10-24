@@ -1,0 +1,881 @@
+{
+  "title": "How to Convert PowerPoint to Video: The Complete Guide (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#080b1f",
+      "ink": "#0e1330",
+      "violet": "#6d4aff",
+      "violet-hi": "#8f75ff",
+      "coral": "#ff6b4a",
+      "mint": "#1fbf8f",
+      "paper": "#f8f7fc",
+      "muted": "#aab0d4"
+    },
+    "font": "Inter",
+    "motion": "Confident, smooth easing; one idea per beat.",
+    "story": "How to Convert PowerPoint to Video: The Complete Guide (blog explainer)"
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "Your slide deck already explains something well. Here's how to make it work without you in the room, from tidying the deck to sharing the finished file.",
+      "storyboard": "Template scene: title builds word by word, key lines land on their beats, slide image drifts in.",
+      "minDuration": 6,
+      "slide": {
+        "title": "How to Convert PowerPoint to Video",
+        "text": "",
+        "notes": "Your slide deck already explains something well. Here's how to make it work without you in the room, from tidying the deck to sharing the finished file.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 10.984,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.633,
+          "text": "Your slide deck already explains something well.",
+          "words": [
+            {
+              "w": "Your",
+              "t": 0.8
+            },
+            {
+              "w": "slide",
+              "t": 1.102
+            },
+            {
+              "w": "deck",
+              "t": 1.462
+            },
+            {
+              "w": "already",
+              "t": 1.764
+            },
+            {
+              "w": "explains",
+              "t": 2.17
+            },
+            {
+              "w": "something",
+              "t": 2.716
+            },
+            {
+              "w": "well.",
+              "t": 3.087
+            }
+          ]
+        },
+        {
+          "t": 4.446,
+          "end": 10.134,
+          "text": "Here's how to make it work without you in the room, from tidying the deck to sharing the finished file.",
+          "words": [
+            {
+              "w": "Here's",
+              "t": 4.446
+            },
+            {
+              "w": "how",
+              "t": 4.794
+            },
+            {
+              "w": "to",
+              "t": 4.933
+            },
+            {
+              "w": "make",
+              "t": 5.026
+            },
+            {
+              "w": "it",
+              "t": 5.212
+            },
+            {
+              "w": "work",
+              "t": 5.34
+            },
+            {
+              "w": "without",
+              "t": 5.839
+            },
+            {
+              "w": "you",
+              "t": 6.222
+            },
+            {
+              "w": "in",
+              "t": 6.384
+            },
+            {
+              "w": "the",
+              "t": 6.477
+            },
+            {
+              "w": "room,",
+              "t": 6.605
+            },
+            {
+              "w": "from",
+              "t": 7.267
+            },
+            {
+              "w": "tidying",
+              "t": 7.499
+            },
+            {
+              "w": "the",
+              "t": 7.998
+            },
+            {
+              "w": "deck",
+              "t": 8.114
+            },
+            {
+              "w": "to",
+              "t": 8.544
+            },
+            {
+              "w": "sharing",
+              "t": 8.73
+            },
+            {
+              "w": "the",
+              "t": 9.124
+            },
+            {
+              "w": "finished",
+              "t": 9.229
+            },
+            {
+              "w": "file.",
+              "t": 9.577
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.134
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "A deck on its own relies on a presenter. A video carries the slides and the explanation, so viewers can watch whenever suits them.",
+      "storyboard": "Template scene: title builds word by word, key lines land on their beats, slide image drifts in.",
+      "minDuration": 6,
+      "slide": {
+        "title": "A video explains itself",
+        "text": "It explains itself. People watch when it suits them. Everyone hears the same message. It's easy to update",
+        "notes": "A deck on its own relies on a presenter. A video carries the slides and the explanation, so viewers can watch whenever suits them.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "wipeleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 9.074,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.895,
+          "text": "A deck on its own relies on a presenter.",
+          "words": [
+            {
+              "w": "A",
+              "t": 0.55
+            },
+            {
+              "w": "deck",
+              "t": 0.713
+            },
+            {
+              "w": "on",
+              "t": 0.98
+            },
+            {
+              "w": "its",
+              "t": 1.084
+            },
+            {
+              "w": "own",
+              "t": 1.27
+            },
+            {
+              "w": "relies",
+              "t": 1.595
+            },
+            {
+              "w": "on",
+              "t": 1.966
+            },
+            {
+              "w": "a",
+              "t": 2.071
+            },
+            {
+              "w": "presenter.",
+              "t": 2.141
+            }
+          ]
+        },
+        {
+          "t": 3.406,
+          "end": 8.224,
+          "text": "A video carries the slides and the explanation, so viewers can watch whenever suits them.",
+          "words": [
+            {
+              "w": "A",
+              "t": 3.406
+            },
+            {
+              "w": "video",
+              "t": 3.545
+            },
+            {
+              "w": "carries",
+              "t": 3.94
+            },
+            {
+              "w": "the",
+              "t": 4.358
+            },
+            {
+              "w": "slides",
+              "t": 4.486
+            },
+            {
+              "w": "and",
+              "t": 4.985
+            },
+            {
+              "w": "the",
+              "t": 5.113
+            },
+            {
+              "w": "explanation,",
+              "t": 5.252
+            },
+            {
+              "w": "so",
+              "t": 6.227
+            },
+            {
+              "w": "viewers",
+              "t": 6.436
+            },
+            {
+              "w": "can",
+              "t": 6.773
+            },
+            {
+              "w": "watch",
+              "t": 6.959
+            },
+            {
+              "w": "whenever",
+              "t": 7.237
+            },
+            {
+              "w": "suits",
+              "t": 7.574
+            },
+            {
+              "w": "them.",
+              "t": 7.888
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.224
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "You can export from PowerPoint and record yourself, or screen record a run-through. A dedicated converter builds the video from your notes, so updates are easy.",
+      "storyboard": "Template scene: title builds word by word, key lines land on their beats, slide image drifts in.",
+      "minDuration": 6,
+      "slide": {
+        "title": "Three ways to convert your deck",
+        "text": "PowerPoint's own video export. Screen recording. A dedicated converter",
+        "notes": "You can export from PowerPoint and record yourself, or screen record a run-through. A dedicated converter builds the video from your notes, so updates are easy.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "slideup",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 10.525,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.95,
+          "text": "You can export from PowerPoint and record yourself, or screen record a run-through.",
+          "words": [
+            {
+              "w": "You",
+              "t": 0.55
+            },
+            {
+              "w": "can",
+              "t": 0.724
+            },
+            {
+              "w": "export",
+              "t": 0.875
+            },
+            {
+              "w": "from",
+              "t": 1.27
+            },
+            {
+              "w": "PowerPoint",
+              "t": 1.456
+            },
+            {
+              "w": "and",
+              "t": 2.048
+            },
+            {
+              "w": "record",
+              "t": 2.199
+            },
+            {
+              "w": "yourself,",
+              "t": 2.57
+            },
+            {
+              "w": "or",
+              "t": 3.255
+            },
+            {
+              "w": "screen",
+              "t": 3.487
+            },
+            {
+              "w": "record",
+              "t": 3.859
+            },
+            {
+              "w": "a",
+              "t": 4.23
+            },
+            {
+              "w": "run-through.",
+              "t": 4.323
+            }
+          ]
+        },
+        {
+          "t": 5.391,
+          "end": 9.675,
+          "text": "A dedicated converter builds the video from your notes, so updates are easy.",
+          "words": [
+            {
+              "w": "A",
+              "t": 5.391
+            },
+            {
+              "w": "dedicated",
+              "t": 5.531
+            },
+            {
+              "w": "converter",
+              "t": 6.1
+            },
+            {
+              "w": "builds",
+              "t": 6.68
+            },
+            {
+              "w": "the",
+              "t": 7.028
+            },
+            {
+              "w": "video",
+              "t": 7.133
+            },
+            {
+              "w": "from",
+              "t": 7.481
+            },
+            {
+              "w": "your",
+              "t": 7.667
+            },
+            {
+              "w": "notes,",
+              "t": 7.853
+            },
+            {
+              "w": "so",
+              "t": 8.41
+            },
+            {
+              "w": "updates",
+              "t": 8.596
+            },
+            {
+              "w": "are",
+              "t": 9.014
+            },
+            {
+              "w": "easy.",
+              "t": 9.165
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.675
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Ten minutes of tidying saves a lot of re-exporting. Keep one idea per slide, and make each headline the point, like 'Returns are processed within five days'.",
+      "storyboard": "Template scene: title builds word by word, key lines land on their beats, slide image drifts in.",
+      "minDuration": 6,
+      "slide": {
+        "title": "Get the deck ready for video",
+        "text": "One idea per slide. Make the headline the point. Body text 24pt or more. Use a 16:9 layout",
+        "notes": "Ten minutes of tidying saves a lot of re-exporting. Keep one idea per slide, and make each headline the point, like 'Returns are processed within five days'.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 10.571,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.359,
+          "text": "Ten minutes of tidying saves a lot of re-exporting.",
+          "words": [
+            {
+              "w": "Ten",
+              "t": 0.55
+            },
+            {
+              "w": "minutes",
+              "t": 0.805
+            },
+            {
+              "w": "of",
+              "t": 1.095
+            },
+            {
+              "w": "tidying",
+              "t": 1.211
+            },
+            {
+              "w": "saves",
+              "t": 1.722
+            },
+            {
+              "w": "a",
+              "t": 2.07
+            },
+            {
+              "w": "lot",
+              "t": 2.152
+            },
+            {
+              "w": "of",
+              "t": 2.326
+            },
+            {
+              "w": "re-exporting.",
+              "t": 2.442
+            }
+          ]
+        },
+        {
+          "t": 3.684,
+          "end": 9.721,
+          "text": "Keep one idea per slide, and make each headline the point, like 'Returns are processed within five days'.",
+          "words": [
+            {
+              "w": "Keep",
+              "t": 3.684
+            },
+            {
+              "w": "one",
+              "t": 3.963
+            },
+            {
+              "w": "idea",
+              "t": 4.183
+            },
+            {
+              "w": "per",
+              "t": 4.566
+            },
+            {
+              "w": "slide,",
+              "t": 4.764
+            },
+            {
+              "w": "and",
+              "t": 5.182
+            },
+            {
+              "w": "make",
+              "t": 5.309
+            },
+            {
+              "w": "each",
+              "t": 5.518
+            },
+            {
+              "w": "headline",
+              "t": 5.751
+            },
+            {
+              "w": "the",
+              "t": 6.145
+            },
+            {
+              "w": "point,",
+              "t": 6.261
+            },
+            {
+              "w": "like",
+              "t": 7.26
+            },
+            {
+              "w": "'Returns",
+              "t": 7.504
+            },
+            {
+              "w": "are",
+              "t": 7.98
+            },
+            {
+              "w": "processed",
+              "t": 8.073
+            },
+            {
+              "w": "within",
+              "t": 8.56
+            },
+            {
+              "w": "five",
+              "t": 8.874
+            },
+            {
+              "w": "days'.",
+              "t": 9.187
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.721
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Your speaker notes are your script. Write them as spoken sentences, not reminders. The longer version is much easier to follow by ear.",
+      "storyboard": "Template scene: title builds word by word, key lines land on their beats, slide image drifts in.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Write speaker notes for the ear",
+        "text": "Before: \"Day 1 - laptop, accts, buddy intro\". After: \"On your first day, three things happen.\". Short sentences, spoken words. Spell out abbreviations",
+        "notes": "Your speaker notes are your script. Write them as spoken sentences, not reminders. The longer version is much easier to follow by ear.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 9.411,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.28,
+          "text": "Your speaker notes are your script.",
+          "words": [
+            {
+              "w": "Your",
+              "t": 0.55
+            },
+            {
+              "w": "speaker",
+              "t": 0.783
+            },
+            {
+              "w": "notes",
+              "t": 1.177
+            },
+            {
+              "w": "are",
+              "t": 1.444
+            },
+            {
+              "w": "your",
+              "t": 1.561
+            },
+            {
+              "w": "script.",
+              "t": 1.735
+            }
+          ]
+        },
+        {
+          "t": 2.454,
+          "end": 5.171,
+          "text": "Write them as spoken sentences, not reminders.",
+          "words": [
+            {
+              "w": "Write",
+              "t": 2.454
+            },
+            {
+              "w": "them",
+              "t": 2.756
+            },
+            {
+              "w": "as",
+              "t": 2.919
+            },
+            {
+              "w": "spoken",
+              "t": 3.012
+            },
+            {
+              "w": "sentences,",
+              "t": 3.441
+            },
+            {
+              "w": "not",
+              "t": 4.289
+            },
+            {
+              "w": "reminders.",
+              "t": 4.486
+            }
+          ]
+        },
+        {
+          "t": 5.775,
+          "end": 8.561,
+          "text": "The longer version is much easier to follow by ear.",
+          "words": [
+            {
+              "w": "The",
+              "t": 5.775
+            },
+            {
+              "w": "longer",
+              "t": 5.949
+            },
+            {
+              "w": "version",
+              "t": 6.251
+            },
+            {
+              "w": "is",
+              "t": 6.622
+            },
+            {
+              "w": "much",
+              "t": 6.75
+            },
+            {
+              "w": "easier",
+              "t": 6.994
+            },
+            {
+              "w": "to",
+              "t": 7.365
+            },
+            {
+              "w": "follow",
+              "t": 7.493
+            },
+            {
+              "w": "by",
+              "t": 7.795
+            },
+            {
+              "w": "ear.",
+              "t": 8.016
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.561
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "Upload your deck and pick a voice. Try it on Basic first. On Pro, a.i. directs your video with animated scenes and a tighter story. Visit powerpoint2vid.com.",
+      "storyboard": "Template scene: title builds word by word, key lines land on their beats, slide image drifts in.",
+      "minDuration": 14,
+      "slide": {
+        "title": "Ordinary slides in, extraordinary video out",
+        "text": "Upload your .pptx. Pick a voice and speed. Try it on Basic first. Pro: a.i.-directed, no watermark",
+        "notes": "Upload your deck and pick a voice. Try it on Basic first. On Pro, a.i. directs your video with animated scenes and a tighter story. Visit powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "wipeleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 13.663,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.35,
+          "text": "Upload your deck and pick a voice.",
+          "words": [
+            {
+              "w": "Upload",
+              "t": 0.55
+            },
+            {
+              "w": "your",
+              "t": 0.991
+            },
+            {
+              "w": "deck",
+              "t": 1.154
+            },
+            {
+              "w": "and",
+              "t": 1.432
+            },
+            {
+              "w": "pick",
+              "t": 1.56
+            },
+            {
+              "w": "a",
+              "t": 1.757
+            },
+            {
+              "w": "voice.",
+              "t": 1.839
+            }
+          ]
+        },
+        {
+          "t": 2.524,
+          "end": 4.091,
+          "text": "Try it on Basic first.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 2.524
+            },
+            {
+              "w": "it",
+              "t": 2.802
+            },
+            {
+              "w": "on",
+              "t": 2.918
+            },
+            {
+              "w": "Basic",
+              "t": 3.069
+            },
+            {
+              "w": "first.",
+              "t": 3.522
+            }
+          ]
+        },
+        {
+          "t": 4.532,
+          "end": 8.874,
+          "text": "On Pro, a.i. directs your video with animated scenes and a tighter story.",
+          "words": [
+            {
+              "w": "On",
+              "t": 4.532
+            },
+            {
+              "w": "Pro,",
+              "t": 4.799
+            },
+            {
+              "w": "A.I.",
+              "t": 5.275
+            },
+            {
+              "w": "directs",
+              "t": 5.67
+            },
+            {
+              "w": "your",
+              "t": 6.018
+            },
+            {
+              "w": "video",
+              "t": 6.181
+            },
+            {
+              "w": "with",
+              "t": 6.483
+            },
+            {
+              "w": "animated",
+              "t": 6.657
+            },
+            {
+              "w": "scenes",
+              "t": 7.203
+            },
+            {
+              "w": "and",
+              "t": 7.632
+            },
+            {
+              "w": "a",
+              "t": 7.795
+            },
+            {
+              "w": "tighter",
+              "t": 7.876
+            },
+            {
+              "w": "story.",
+              "t": 8.236
+            }
+          ]
+        },
+        {
+          "t": 9.258,
+          "end": 11.463,
+          "text": "Visit powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Visit",
+              "t": 9.258
+            },
+            {
+              "w": "PowerPoint",
+              "t": 9.641
+            },
+            {
+              "w": "to",
+              "t": 10.21
+            },
+            {
+              "w": "vid",
+              "t": 10.337
+            },
+            {
+              "w": "dot",
+              "t": 10.674
+            },
+            {
+              "w": "com.",
+              "t": 10.953
+            }
+          ]
+        }
+      ],
+      "speechEnd": 11.463
+    }
+  ],
+  "degraded": true,
+  "voiceProvider": "elevenlabs"
+}

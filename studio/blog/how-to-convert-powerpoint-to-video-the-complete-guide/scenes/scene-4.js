@@ -1,0 +1,103 @@
+/* Scene 4 — "Your speaker notes are your script. Write them as spoken sentences, not reminders.
+ * The longer version is much easier to follow by ear."
+ * Storyboard: the headline builds word by word, and the tag flips SPEAKER NOTES → SCRIPT on "script".
+ * The slide thumbnail drifts in at the top right. On "Write", two note cards rise. On "spoken",
+ * the AFTER line types itself in. On "not reminders", the BEFORE note is struck through in coral
+ * and dims. Its choppy waveform stutters while the spoken one flows. On "longer", the AFTER card
+ * grows and glows mint. On "ear", an "EASIER BY EAR" pill pops in. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const W = (i, w, fb) => { try { const v = ctx.at(i, w); return Number.isFinite(v) ? v : fb; } catch (e) { return fb; } };
+  const tNotes = W(0, 'notes', 1.177), tScript = W(0, 'script.', 1.735);
+  const tWrite = W(1, 'Write', 2.454), tSpoken = W(1, 'spoken', 3.012), tNot = W(1, 'not', 4.289), tRem = W(1, 'reminders.', 4.486);
+  const tLonger = W(2, 'longer', 5.949), tEasier = W(2, 'easier', 6.994), tEar = W(2, 'ear.', 8.016);
+  const titleTimes = [0.55, tNotes, W(0, 'are', 1.444), W(0, 'your', 1.561), tScript];
+
+  stage.style.background = 'radial-gradient(60% 55% at 30% 20%, #1a1f52 0%, transparent 70%), radial-gradient(50% 50% at 85% 85%, rgba(109,74,255,.18), transparent 70%), var(--night)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 540px' });
+
+  const tag = el('div', 'abs', cam, { left: '144px', top: '104px', font: '600 22px/1 ui-monospace, Menlo, monospace', letterSpacing: '.16em', color: 'var(--muted)' });
+  const title = el('div', 'abs', cam, { left: '140px', top: '150px', width: '1300px', font: '800 84px/1.05 Inter Display, Inter', letterSpacing: '-.04em', color: '#fff', whiteSpace: 'nowrap' });
+  const words = ctx.split(title, 'Your notes are your script.', 'word');
+  const scriptW = words[words.length - 1];
+  Object.assign(scriptW.style, { background: 'linear-gradient(100deg, var(--violet-hi), var(--coral))', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent', paddingRight: '6px' });
+
+  const thumb = el('div', 'abs', cam, { left: '1500px', top: '96px', width: '280px', height: '158px', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 24px 60px rgba(0,0,0,.55)', border: '1px solid rgba(255,255,255,.15)' });
+  const ti = el('img', 'abs', thumb, { inset: 0, width: '100%', height: '100%' }); ti.src = ctx.asset('slide-5.png');
+  const thumbTag = el('div', 'abs', cam, { left: '1500px', top: '268px', font: '600 16px/1 ui-monospace, Menlo, monospace', letterSpacing: '.14em', color: 'var(--muted)' });
+  thumbTag.textContent = 'SLIDE 5';
+
+  const mkCard = (x, label, color) => {
+    const c = el('div', 'abs', cam, { left: x + 'px', top: '330px', width: '760px', height: '440px', borderRadius: '24px', background: 'linear-gradient(160deg, rgba(255,255,255,.07), rgba(255,255,255,.02))', border: '1px solid rgba(255,255,255,.12)', boxShadow: '0 40px 90px rgba(0,0,0,.45)', transformOrigin: '50% 50%' });
+    const l = el('div', 'abs', c, { left: '40px', top: '36px', font: '700 20px/1 ui-monospace, Menlo, monospace', letterSpacing: '.16em', color });
+    l.textContent = label;
+    const txt = el('div', 'abs', c, { left: '40px', top: '86px', width: '680px', font: '700 50px/1.18 Inter', letterSpacing: '-.02em', color: '#fff' });
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('width', '680'); svg.setAttribute('height', '110');
+    Object.assign(svg.style, { position: 'absolute', left: '40px', top: '300px', overflow: 'visible' });
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('fill', 'none'); path.setAttribute('stroke', color); path.setAttribute('stroke-width', '5'); path.setAttribute('stroke-linecap', 'round');
+    svg.appendChild(path); c.appendChild(svg);
+    return { c, l, txt, path };
+  };
+  const before = mkCard(140, 'BEFORE · REMINDER', 'var(--coral)');
+  before.txt.textContent = '“Day 1 - laptop, accts, buddy intro”';
+  before.txt.style.color = 'rgba(255,255,255,.85)';
+  const after = mkCard(1020, 'AFTER · SPOKEN', 'var(--mint)');
+  const chars = [];
+  const afterWords = '“On your first day, three things happen.”'.split(' ');
+  afterWords.forEach((wd, wi) => {
+    const ws = el('span', '', after.txt, { display: 'inline-block', whiteSpace: 'nowrap' });
+    for (const ch of wd) { const s = el('span', '', ws, { display: 'inline-block' }); s.textContent = ch; chars.push(s); }
+    if (wi < afterWords.length - 1) after.txt.appendChild(document.createTextNode(' '));
+  });
+  const strike = el('div', 'abs', before.c, { left: '30px', top: '142px', width: '700px', height: '8px', borderRadius: '4px', background: 'var(--coral)', boxShadow: '0 0 24px rgba(255,107,74,.8)', transformOrigin: '0% 50%' });
+  const glow = el('div', 'abs', after.c, { inset: '-2px', borderRadius: '24px', border: '3px solid var(--mint)', boxShadow: '0 0 70px rgba(31,191,143,.55), inset 0 0 40px rgba(31,191,143,.15)', opacity: 0 });
+
+  const pill = el('div', 'abs', cam, { left: '1160px', top: '820px', width: '480px', height: '84px', borderRadius: '42px', background: 'var(--mint)', color: 'var(--night)', font: '800 34px/84px Inter', letterSpacing: '.02em', textAlign: 'center', boxShadow: '0 20px 60px rgba(31,191,143,.45)' });
+  pill.textContent = '✓ EASIER BY EAR';
+
+  ctx.fx.vignette({ strength: 0.5 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  const wave = { b: 0, a: 0 };
+  const draw = (p, amp, t, choppy) => {
+    let d = '';
+    for (let x = 0; x <= 680; x += 8) {
+      let g = 1;
+      if (choppy) { const seg = Math.floor((x + t * 160) / 90); g = (seg % 3 === 1) ? 0.05 : (seg % 2 ? 1 : 0.55); }
+      const y = 55 + Math.sin(x * (choppy ? 0.11 : 0.045) + t * (choppy ? 9 : 5)) * Math.sin(x * 0.013 + t * 1.7) * 42 * amp * g;
+      d += (x ? 'L' : 'M') + x + ' ' + y.toFixed(1);
+    }
+    p.setAttribute('d', d);
+  };
+  ctx.onFrame((t) => {
+    tag.textContent = t < tScript ? 'SPEAKER NOTES' : 'SPEAKER NOTES = SCRIPT';
+    draw(before.path, wave.b, t, true);
+    draw(after.path, wave.a, t, false);
+  });
+
+  tl.to(cam, { scale: 1.035, duration: ctx.dur, ease: 'none' }, 0);
+  tl.from(tag, { opacity: 0, y: 12, duration: 0.5 }, 0.05);
+  tl.from(thumb, { opacity: 0, x: 80, rotation: 4, duration: 1.1, ease: 'power3.out' }, 0.05);
+  tl.from(thumbTag, { opacity: 0, duration: 0.5 }, 0.4);
+  tl.to(thumb, { y: -10, rotation: -1.5, duration: ctx.dur - 1, ease: 'sine.inOut' }, 1);
+  words.forEach((w, i) => tl.from(w, { opacity: 0, y: 40, duration: 0.5, ease: 'back.out(1.7)' }, titleTimes[i] - 0.08));
+  tl.fromTo(scriptW, { scale: 1 }, { scale: 1.12, duration: 0.18, yoyo: true, repeat: 1, ease: 'power2.out', immediateRender: false }, tScript + 0.1);
+  tl.fromTo(tag, { color: '#aab0d4' }, { color: '#8f75ff', duration: 0.3, immediateRender: false }, tScript);
+
+  tl.from([before.c, after.c], { opacity: 0, y: 70, duration: 0.7, stagger: 0.12, ease: 'back.out(1.4)' }, tWrite - 0.2);
+  tl.to(wave, { b: 1, duration: 0.6 }, tWrite + 0.2);
+  tl.from(chars, { opacity: 0, y: 14, duration: 0.25, stagger: Math.min(0.03, (tNot - tSpoken - 0.3) / chars.length) }, tSpoken - 0.05);
+  tl.to(wave, { a: 1, duration: 0.8 }, tSpoken + 0.3);
+  gsap.set(strike, { scaleX: 0, rotation: -3 });
+  gsap.set(before.c, { filter: 'brightness(1) saturate(1)' });
+  tl.to(strike, { scaleX: 1, duration: 0.35, ease: 'power3.in' }, tNot);
+  tl.to(before.c, { filter: 'brightness(.55) saturate(.6)', scale: 0.95, rotation: -1.5, duration: 0.6, ease: 'power2.out' }, tRem);
+  tl.to(wave, { b: 0.45, duration: 0.6 }, tRem);
+  tl.to(after.c, { scale: 1.05, x: -20, duration: 0.7, ease: 'back.out(1.6)' }, tLonger - 0.1);
+  tl.to(glow, { opacity: 1, duration: 0.5 }, tLonger);
+  tl.to(wave, { a: 1.25, duration: 0.6 }, tEasier);
+  tl.from(pill, { opacity: 0, scale: 0.4, y: 30, duration: 0.6, ease: 'back.out(2)' }, tEar - 0.25);
+  tl.to(glow, { boxShadow: '0 0 110px rgba(31,191,143,.8), inset 0 0 50px rgba(31,191,143,.2)', duration: 0.5, yoyo: true, repeat: 1 }, tEar);
+});

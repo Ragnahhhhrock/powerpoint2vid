@@ -1,0 +1,101 @@
+{
+  "title": "How to Convert PowerPoint to Video: The Complete Guide (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "How to Convert PowerPoint to Video",
+      "bullets": [],
+      "notes": "Your slide deck already explains something well. Here's how to make it work without you in the room, from tidying the deck to sharing the finished file.",
+      "minDuration": 10
+    },
+    {
+      "title": "A video explains itself",
+      "bullets": [
+        "It explains itself",
+        "People watch when it suits them",
+        "Everyone hears the same message",
+        "It's easy to update"
+      ],
+      "notes": "A deck on its own relies on a presenter. A video carries the slides and the explanation, so viewers can watch whenever suits them.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Three ways to convert your deck",
+      "bullets": [
+        "PowerPoint's own video export",
+        "Screen recording",
+        "A dedicated converter"
+      ],
+      "notes": "You can export from PowerPoint and record yourself, or screen record a run-through. A dedicated converter builds the video from your notes, so updates are easy.",
+      "minDuration": 11,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Get the deck ready for video",
+      "bullets": [
+        "One idea per slide",
+        "Make the headline the point",
+        "Body text 24pt or more",
+        "Use a 16:9 layout"
+      ],
+      "notes": "Ten minutes of tidying saves a lot of re-exporting. Keep one idea per slide, and make each headline the point, like 'Returns are processed within five days'.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Write speaker notes for the ear",
+      "bullets": [
+        "Before: \"Day 1 - laptop, accts, buddy intro\"",
+        "After: \"On your first day, three things happen.\"",
+        "Short sentences, spoken words",
+        "Spell out abbreviations"
+      ],
+      "notes": "Your speaker notes are your script. Write them as spoken sentences, not reminders. The longer version is much easier to follow by ear.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Ordinary slides in, extraordinary video out",
+      "bullets": [
+        "Upload your .pptx",
+        "Pick a voice and speed",
+        "Try it on Basic first",
+        "Pro: a.i.-directed, no watermark"
+      ],
+      "notes": "Upload your deck and pick a voice. Try it on Basic first. On Pro, a.i. directs your video with animated scenes and a tighter story. Visit powerpoint2vid.com.",
+      "minDuration": 12,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}
