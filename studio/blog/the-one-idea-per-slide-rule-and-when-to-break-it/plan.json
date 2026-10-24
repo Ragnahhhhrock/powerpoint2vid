@@ -28,20 +28,116 @@
       },
       "storyboard": "dark violet stage. A single slide card floats in with a glow. Two headlines try to sit on it, on 'two headlines' a hairline splits the card into two cards that slide apart with a springy pop. The title 'One idea per slide' typesets large over the top as the cards settle.",
       "audio": "audio/scene-0.wav",
-      "duration": 9.889,
+      "duration": 9.626,
       "beats": [
         {
           "t": 0.8,
-          "end": 4.028,
-          "text": "If a slide needs two headlines, it's two slides."
+          "end": 3.772,
+          "text": "If a slide needs two headlines, it's two slides.",
+          "words": [
+            {
+              "w": "If",
+              "t": 0.8
+            },
+            {
+              "w": "a",
+              "t": 0.997
+            },
+            {
+              "w": "slide",
+              "t": 1.079
+            },
+            {
+              "w": "needs",
+              "t": 1.473
+            },
+            {
+              "w": "two",
+              "t": 1.74
+            },
+            {
+              "w": "headlines,",
+              "t": 1.984
+            },
+            {
+              "w": "it's",
+              "t": 2.646
+            },
+            {
+              "w": "two",
+              "t": 2.867
+            },
+            {
+              "w": "slides.",
+              "t": 3.087
+            }
+          ]
         },
         {
-          "t": 4.308,
-          "end": 8.789,
-          "text": "Here's why one idea per slide is the most useful rule in presentation design."
+          "t": 4.469,
+          "end": 8.776,
+          "text": "Here's why one idea per slide is the most useful rule in presentation design.",
+          "words": [
+            {
+              "w": "Here's",
+              "t": 4.469
+            },
+            {
+              "w": "why",
+              "t": 4.759
+            },
+            {
+              "w": "one",
+              "t": 5.026
+            },
+            {
+              "w": "idea",
+              "t": 5.223
+            },
+            {
+              "w": "per",
+              "t": 5.607
+            },
+            {
+              "w": "slide",
+              "t": 5.804
+            },
+            {
+              "w": "is",
+              "t": 6.21
+            },
+            {
+              "w": "the",
+              "t": 6.326
+            },
+            {
+              "w": "most",
+              "t": 6.442
+            },
+            {
+              "w": "useful",
+              "t": 6.675
+            },
+            {
+              "w": "rule",
+              "t": 7.069
+            },
+            {
+              "w": "in",
+              "t": 7.371
+            },
+            {
+              "w": "presentation",
+              "t": 7.499
+            },
+            {
+              "w": "design.",
+              "t": 8.172
+            }
+          ]
         }
       ],
-      "speechEnd": 8.789
+      "speechEnd": 8.776
     },
     {
       "file": "scenes/scene-1.js",
@@ -62,22 +158,124 @@
       "duration": 11,
       "beats": [
         {
-          "t": 0.8,
-          "end": 2.692,
-          "text": "Here's a typical crowded slide."
+          "t": 0.55,
+          "end": 2.315,
+          "text": "Here's a typical crowded slide.",
+          "words": [
+            {
+              "w": "Here's",
+              "t": 0.55
+            },
+            {
+              "w": "a",
+              "t": 0.829
+            },
+            {
+              "w": "typical",
+              "t": 0.898
+            },
+            {
+              "w": "crowded",
+              "t": 1.316
+            },
+            {
+              "w": "slide.",
+              "t": 1.746
+            }
+          ]
         },
         {
-          "t": 2.972,
-          "end": 6.606,
-          "text": "A vague headline, and four separate ideas fighting for attention."
+          "t": 2.489,
+          "end": 6.111,
+          "text": "A vague headline, and four separate ideas fighting for attention.",
+          "words": [
+            {
+              "w": "A",
+              "t": 2.489
+            },
+            {
+              "w": "vague",
+              "t": 2.628
+            },
+            {
+              "w": "headline,",
+              "t": 2.965
+            },
+            {
+              "w": "and",
+              "t": 3.638
+            },
+            {
+              "w": "four",
+              "t": 3.859
+            },
+            {
+              "w": "separate",
+              "t": 4.126
+            },
+            {
+              "w": "ideas",
+              "t": 4.509
+            },
+            {
+              "w": "fighting",
+              "t": 4.95
+            },
+            {
+              "w": "for",
+              "t": 5.333
+            },
+            {
+              "w": "attention.",
+              "t": 5.484
+            }
+          ]
         },
         {
-          "t": 6.886,
-          "end": 9.557,
-          "text": "Split it, and each point gets its own headline."
+          "t": 6.715,
+          "end": 9.432,
+          "text": "Split it, and each point gets its own headline.",
+          "words": [
+            {
+              "w": "Split",
+              "t": 6.715
+            },
+            {
+              "w": "it,",
+              "t": 7.11
+            },
+            {
+              "w": "and",
+              "t": 7.388
+            },
+            {
+              "w": "each",
+              "t": 7.586
+            },
+            {
+              "w": "point",
+              "t": 7.806
+            },
+            {
+              "w": "gets",
+              "t": 8.108
+            },
+            {
+              "w": "its",
+              "t": 8.34
+            },
+            {
+              "w": "own",
+              "t": 8.514
+            },
+            {
+              "w": "headline.",
+              "t": 8.781
+            }
+          ]
         }
       ],
-      "speechEnd": 9.557
+      "speechEnd": 9.432
     },
     {
       "file": "scenes/scene-2.js",
@@ -95,25 +293,147 @@
         "duration": 0.7
       },
       "audio": "audio/scene-2.wav",
-      "duration": 10.877,
+      "duration": 10.003,
       "beats": [
         {
-          "t": 0.8,
-          "end": 2.727,
-          "text": "The audience knows where to look."
+          "t": 0.55,
+          "end": 2.14,
+          "text": "The audience knows where to look.",
+          "words": [
+            {
+              "w": "The",
+              "t": 0.55
+            },
+            {
+              "w": "audience",
+              "t": 0.735
+            },
+            {
+              "w": "knows",
+              "t": 1.142
+            },
+            {
+              "w": "where",
+              "t": 1.409
+            },
+            {
+              "w": "to",
+              "t": 1.618
+            },
+            {
+              "w": "look.",
+              "t": 1.734
+            }
+          ]
         },
         {
-          "t": 3.007,
-          "end": 5.457,
-          "text": "What they see stays in step with what they hear."
+          "t": 2.651,
+          "end": 5.205,
+          "text": "What they see stays in step with what they hear.",
+          "words": [
+            {
+              "w": "What",
+              "t": 2.651
+            },
+            {
+              "w": "they",
+              "t": 2.883
+            },
+            {
+              "w": "see",
+              "t": 3.104
+            },
+            {
+              "w": "stays",
+              "t": 3.383
+            },
+            {
+              "w": "in",
+              "t": 3.742
+            },
+            {
+              "w": "step",
+              "t": 3.882
+            },
+            {
+              "w": "with",
+              "t": 4.218
+            },
+            {
+              "w": "what",
+              "t": 4.381
+            },
+            {
+              "w": "they",
+              "t": 4.544
+            },
+            {
+              "w": "hear.",
+              "t": 4.753
+            }
+          ]
         },
         {
-          "t": 5.737,
-          "end": 9.777,
-          "text": "And in a video, every new idea means a fresh picture on screen."
+          "t": 5.414,
+          "end": 9.153,
+          "text": "And in a video, every new idea means a fresh picture on screen.",
+          "words": [
+            {
+              "w": "And",
+              "t": 5.414
+            },
+            {
+              "w": "in",
+              "t": 5.623
+            },
+            {
+              "w": "a",
+              "t": 5.728
+            },
+            {
+              "w": "video,",
+              "t": 5.797
+            },
+            {
+              "w": "every",
+              "t": 6.448
+            },
+            {
+              "w": "new",
+              "t": 6.796
+            },
+            {
+              "w": "idea",
+              "t": 6.982
+            },
+            {
+              "w": "means",
+              "t": 7.353
+            },
+            {
+              "w": "a",
+              "t": 7.609
+            },
+            {
+              "w": "fresh",
+              "t": 7.701
+            },
+            {
+              "w": "picture",
+              "t": 7.992
+            },
+            {
+              "w": "on",
+              "t": 8.363
+            },
+            {
+              "w": "screen.",
+              "t": 8.549
+            }
+          ]
         }
       ],
-      "speechEnd": 9.777
+      "speechEnd": 9.153
     },
     {
       "file": "scenes/scene-3.js",
@@ -131,20 +451,124 @@
         "duration": 0.5
       },
       "audio": "audio/scene-3.wav",
-      "duration": 11.062,
+      "duration": 11.489,
       "beats": [
         {
-          "t": 0.8,
-          "end": 2.611,
-          "text": "It's a default, not a law."
+          "t": 0.55,
+          "end": 2.349,
+          "text": "It's a default, not a law.",
+          "words": [
+            {
+              "w": "It's",
+              "t": 0.55
+            },
+            {
+              "w": "a",
+              "t": 0.782
+            },
+            {
+              "w": "default,",
+              "t": 0.863
+            },
+            {
+              "w": "not",
+              "t": 1.537
+            },
+            {
+              "w": "a",
+              "t": 1.757
+            },
+            {
+              "w": "law.",
+              "t": 1.862
+            }
+          ]
         },
         {
-          "t": 2.891,
-          "end": 9.962,
-          "text": "Break it for comparisons, summaries, reference slides and process diagrams, where seeing several things together is the whole point."
+          "t": 3.046,
+          "end": 10.639,
+          "text": "Break it for comparisons, summaries, reference slides and process diagrams, where seeing several things together is the whole point.",
+          "words": [
+            {
+              "w": "Break",
+              "t": 3.046
+            },
+            {
+              "w": "it",
+              "t": 3.359
+            },
+            {
+              "w": "for",
+              "t": 3.476
+            },
+            {
+              "w": "comparisons,",
+              "t": 3.615
+            },
+            {
+              "w": "summaries,",
+              "t": 4.532
+            },
+            {
+              "w": "reference",
+              "t": 5.24
+            },
+            {
+              "w": "slides",
+              "t": 5.635
+            },
+            {
+              "w": "and",
+              "t": 6.065
+            },
+            {
+              "w": "process",
+              "t": 6.227
+            },
+            {
+              "w": "diagrams,",
+              "t": 6.68
+            },
+            {
+              "w": "where",
+              "t": 7.969
+            },
+            {
+              "w": "seeing",
+              "t": 8.236
+            },
+            {
+              "w": "several",
+              "t": 8.572
+            },
+            {
+              "w": "things",
+              "t": 8.921
+            },
+            {
+              "w": "together",
+              "t": 9.176
+            },
+            {
+              "w": "is",
+              "t": 9.629
+            },
+            {
+              "w": "the",
+              "t": 9.768
+            },
+            {
+              "w": "whole",
+              "t": 9.884
+            },
+            {
+              "w": "point.",
+              "t": 10.14
+            }
+          ]
         }
       ],
-      "speechEnd": 9.962
+      "speechEnd": 10.639
     },
     {
       "file": "scenes/scene-4.js",
@@ -162,20 +586,100 @@
         "duration": 0.6
       },
       "audio": "audio/scene-4.wav",
-      "duration": 8.74,
+      "duration": 8.651,
       "beats": [
         {
-          "t": 0.8,
-          "end": 4.91,
-          "text": "Builds let a fuller slide show several items without overwhelming anyone."
+          "t": 0.55,
+          "end": 4.497,
+          "text": "Builds let a fuller slide show several items without overwhelming anyone.",
+          "words": [
+            {
+              "w": "Builds",
+              "t": 0.55
+            },
+            {
+              "w": "let",
+              "t": 0.967
+            },
+            {
+              "w": "a",
+              "t": 1.142
+            },
+            {
+              "w": "fuller",
+              "t": 1.223
+            },
+            {
+              "w": "slide",
+              "t": 1.536
+            },
+            {
+              "w": "show",
+              "t": 1.966
+            },
+            {
+              "w": "several",
+              "t": 2.221
+            },
+            {
+              "w": "items",
+              "t": 2.616
+            },
+            {
+              "w": "without",
+              "t": 3.034
+            },
+            {
+              "w": "overwhelming",
+              "t": 3.394
+            },
+            {
+              "w": "anyone.",
+              "t": 3.951
+            }
+          ]
         },
         {
-          "t": 5.19,
-          "end": 7.14,
-          "text": "Each point arrives as you talk about it."
+          "t": 4.938,
+          "end": 7.051,
+          "text": "Each point arrives as you talk about it.",
+          "words": [
+            {
+              "w": "Each",
+              "t": 4.938
+            },
+            {
+              "w": "point",
+              "t": 5.217
+            },
+            {
+              "w": "arrives",
+              "t": 5.542
+            },
+            {
+              "w": "as",
+              "t": 6.029
+            },
+            {
+              "w": "you",
+              "t": 6.146
+            },
+            {
+              "w": "talk",
+              "t": 6.273
+            },
+            {
+              "w": "about",
+              "t": 6.505
+            },
+            {
+              "w": "it.",
+              "t": 6.796
+            }
+          ]
         }
       ],
-      "speechEnd": 7.14
+      "speechEnd": 7.051
     },
     {
       "file": "scenes/scene-5.js",
@@ -193,27 +697,201 @@
         "duration": 0.6
       },
       "audio": "audio/scene-5.wav",
-      "duration": 15.878,
+      "duration": 15.753,
       "beats": [
         {
-          "t": 0.8,
-          "end": 5.467,
-          "text": "A deck built on one idea per slide is already most of the way to a good video."
+          "t": 0.55,
+          "end": 4.822,
+          "text": "A deck built on one idea per slide is already most of the way to a good video.",
+          "words": [
+            {
+              "w": "A",
+              "t": 0.55
+            },
+            {
+              "w": "deck",
+              "t": 0.712
+            },
+            {
+              "w": "built",
+              "t": 1.026
+            },
+            {
+              "w": "on",
+              "t": 1.339
+            },
+            {
+              "w": "one",
+              "t": 1.525
+            },
+            {
+              "w": "idea",
+              "t": 1.746
+            },
+            {
+              "w": "per",
+              "t": 2.129
+            },
+            {
+              "w": "slide",
+              "t": 2.303
+            },
+            {
+              "w": "is",
+              "t": 2.721
+            },
+            {
+              "w": "already",
+              "t": 2.849
+            },
+            {
+              "w": "most",
+              "t": 3.174
+            },
+            {
+              "w": "of",
+              "t": 3.429
+            },
+            {
+              "w": "the",
+              "t": 3.522
+            },
+            {
+              "w": "way",
+              "t": 3.638
+            },
+            {
+              "w": "to",
+              "t": 3.835
+            },
+            {
+              "w": "a",
+              "t": 3.963
+            },
+            {
+              "w": "good",
+              "t": 4.044
+            },
+            {
+              "w": "video.",
+              "t": 4.242
+            }
+          ]
         },
         {
-          "t": 5.747,
-          "end": 11.181,
-          "text": "On Pro, a.i. directs it, giving every idea its own animated scene, timed to the narration."
+          "t": 5.205,
+          "end": 10.987,
+          "text": "On Pro, a.i. directs it, giving every idea its own animated scene, timed to the narration.",
+          "words": [
+            {
+              "w": "On",
+              "t": 5.205
+            },
+            {
+              "w": "Pro,",
+              "t": 5.438
+            },
+            {
+              "w": "A.I.",
+              "t": 5.89
+            },
+            {
+              "w": "directs",
+              "t": 6.25
+            },
+            {
+              "w": "it,",
+              "t": 6.75
+            },
+            {
+              "w": "giving",
+              "t": 7.028
+            },
+            {
+              "w": "every",
+              "t": 7.365
+            },
+            {
+              "w": "idea",
+              "t": 7.713
+            },
+            {
+              "w": "its",
+              "t": 8.131
+            },
+            {
+              "w": "own",
+              "t": 8.305
+            },
+            {
+              "w": "animated",
+              "t": 8.584
+            },
+            {
+              "w": "scene,",
+              "t": 9.13
+            },
+            {
+              "w": "timed",
+              "t": 9.699
+            },
+            {
+              "w": "to",
+              "t": 10.093
+            },
+            {
+              "w": "the",
+              "t": 10.209
+            },
+            {
+              "w": "narration.",
+              "t": 10.314
+            }
+          ]
         },
         {
-          "t": 11.461,
-          "end": 13.678,
-          "text": "Try it at powerpoint2vid.com."
+          "t": 11.428,
+          "end": 13.553,
+          "text": "Try it at powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 11.428
+            },
+            {
+              "w": "it",
+              "t": 11.695
+            },
+            {
+              "w": "at",
+              "t": 11.812
+            },
+            {
+              "w": "PowerPoint",
+              "t": 11.928
+            },
+            {
+              "w": "to",
+              "t": 12.462
+            },
+            {
+              "w": "vid",
+              "t": 12.589
+            },
+            {
+              "w": "dot",
+              "t": 12.845
+            },
+            {
+              "w": "com.",
+              "t": 13.089
+            }
+          ]
         }
       ],
-      "speechEnd": 13.678
+      "speechEnd": 13.553
     }
   ],
   "poster": 4.2,
-  "voiceProvider": "piper"
+  "voiceProvider": "elevenlabs"
 }
