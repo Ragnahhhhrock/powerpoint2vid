@@ -6,7 +6,7 @@ Private, online **PowerPoint to video converter** at https://powerpoint2vid.com.
 - **Render/animate:** `js/renderer.js` draws slides to canvas with reveal animations, transitions and captions.
 - **Video styles:** `js/video-styles.js` presets (cinematic, keynote, UI springs, kinetic poster, paper & ink) adapted from [awesome-opus5-5-videos](https://github.com/yihui-dev/awesome-opus5-5-videos) prompts. See `docs/VIDEO_STYLES.md`.
 - **Narrate + record:** `js/app.js` uses the Web Speech API for voice and MediaRecorder for export (WebM, or MP4 where supported).
-- **Design system:** `docs/STYLE_GUIDE.md` and `/style-guide.html`.
+- **Design system:** `docs/STYLE_GUIDE.md` (internal; the public `/style-guide` page was removed and `/docs/*` returns 404).
 - **v2 (planned):** server-side a.i. motion-director pipeline. See `docs/ARCHITECTURE.md`.
 
 ## Deploy (Cloudflare Pages)
