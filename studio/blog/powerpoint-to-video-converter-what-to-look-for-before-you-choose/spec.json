@@ -1,0 +1,102 @@
+{
+  "title": "PowerPoint to Video Converter: What to Look For Before You Choose (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Choosing a PowerPoint to Video Converter",
+      "bullets": [
+        "What to look for before you choose"
+      ],
+      "notes": "Every PowerPoint to video converter makes different trade-offs. Before you pick one, here are the questions worth asking, so the tool fits your work.",
+      "minDuration": 9
+    },
+    {
+      "title": "Start with what the video must do",
+      "bullets": [
+        "Who's watching?",
+        "Where will it live?",
+        "How often will it change?",
+        "How sensitive is the content?"
+      ],
+      "notes": "Be clear about the job first. Your audience, platform, update schedule and how sensitive the content is will make most of the decisions for you.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Narration: record it or write it",
+      "bullets": [
+        "You record your voice",
+        "Narration read from your speaker notes",
+        "Edit text, not re-record"
+      ],
+      "notes": "If your deck changes often, narration from your notes is easier to maintain. Fixing a sentence means editing text, not recording it all again.",
+      "minDuration": 10,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Check files, design and story",
+      "bullets": [
+        "Check your organisation's policy before you upload",
+        "Preview a real deck, not a demo",
+        "Does it rework the story, scenes and motion?"
+      ],
+      "notes": "For sensitive material, check your organisation's policy on online tools before uploading. Then preview a real deck, and ask whether the tool improves it or just plays it back.",
+      "minDuration": 12,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Timing, captions, format and price",
+      "bullets": [
+        "Timing follows the narration",
+        "Captions burned in or SRT/VTT",
+        "MP4 is the most widely accepted",
+        "Watermarks, limits, easy cancelling"
+      ],
+      "notes": "Look for timing that follows the speech, captions for viewers with the sound off, an MP4 your platform accepts, and clear limits on price and watermarks.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Test drive with your own deck",
+      "bullets": [
+        "Ordinary slides in, extraordinary video out",
+        "Basic: try it, no subscription needed",
+        "Pro: a.i. directs the video",
+        "powerpoint2vid.com"
+      ],
+      "notes": "Turn a real deck into video. On Pro, a.i. directs it, tightening the story and timing animation to your narration. Try it first on Basic at powerpoint2vid.com.",
+      "minDuration": 12,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+/* Scene 2 — "Start with the job the video must do. Who's watching, where it will live, how often it
+ * changes, and how sensitive the content is will decide most things."
+ * Storyboard: bright paper stage. The headline "What must it do?" builds top-left in ink. Four icon tiles
+ * drop into a 2x2 grid, each on its cue: a face on "Who's watching", a screen on "where it will live",
+ * a loop on "how often it changes", a padlock on "how sensitive". On "decide most things" the tiles slide
+ * together and lock into one signal-coloured arrow pointing right, with the four icons riding inside it. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const W = (i, w) => ctx.at(i, w);
+  const tJob = W(0, 'job'), tWho = W(1, "Who's"), tWhere = W(1, 'where'), tOften = W(1, 'often') - 0.25,
+    tSens = W(1, 'sensitive') - 0.15, tDecide = W(1, 'decide'), tMost = W(1, 'most');
+
+  stage.style.background = 'radial-gradient(80% 70% at 35% 30%, #fffdf7 0%, var(--paper) 55%, #ebe5d8 100%)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 560px' });
+
+  // soft light blobs
+  el('div', 'abs', cam, { left: '1250px', top: '-200px', width: '900px', height: '900px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(245,184,65,.16), transparent 65%)' });
+  el('div', 'abs', cam, { left: '-300px', top: '600px', width: '900px', height: '900px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(43,181,163,.10), transparent 65%)' });
+
+  /* headline */
+  const tag = el('div', 'abs', cam, { left: '140px', top: '96px', font: '600 22px/1 ui-monospace, Menlo, monospace', letterSpacing: '.16em', color: 'var(--mist)' });
+  tag.textContent = 'STEP 1 · THE JOB';
+  const head = el('div', 'abs', cam, { left: '136px', top: '136px', font: '800 104px/1 Inter Display, Inter', letterSpacing: '-.045em', color: 'var(--ink)', whiteSpace: 'nowrap' });
+  const words = ctx.split(head, 'What must it do?', 'word');
+  const underline = el('div', 'abs', cam, { left: '140px', top: '258px', width: '820px', height: '8px', borderRadius: '4px', background: 'var(--signal)', transformOrigin: '0% 50%' });
+
+  /* icons */
+  const S = (inner, c) => `<svg viewBox="0 0 64 64" width="100%" height="100%" fill="none" stroke="${c}" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">${inner}</svg>`;
+  const ICONS = [
+    '<circle cx="32" cy="24" r="11"/><path d="M12 54c2-11 10-17 20-17s18 6 20 17"/>',
+    '<rect x="8" y="12" width="48" height="32" rx="4"/><path d="M24 54h16M32 44v10"/>',
+    '<path d="M50 30a18 18 0 1 1-6-13"/><path d="M46 8v10H36"/>',
+    '<rect x="14" y="28" width="36" height="26" rx="5"/><path d="M22 28v-7a10 10 0 0 1 20 0v7"/><path d="M32 39v6"/>'
+  ];
+  const TINTS = ['#2BB5A3', '#F5B841', '#FF6B4A', '#6f7a92'];
+  const LABELS = ["Who's watching?", 'Where will it live?', 'How often will it change?', 'How sensitive is it?'];
+
+  /* tiles */
+  const TW = 560, TH = 250, GAP = 40, GX = (1920 - (TW * 2 + GAP)) / 2, GY = 320;
+  const CX = 960, CY = GY + TH + GAP / 2;
+  const tiles = LABELS.map((lab, i) => {
+    const c = i % 2, r = Math.floor(i / 2);
+    const x = GX + c * (TW + GAP), y = GY + r * (TH + GAP);
+    const t = el('div', 'abs', cam, { left: x + 'px', top: y + 'px', width: TW + 'px', height: TH + 'px', borderRadius: '30px', background: '#fff',
+      boxShadow: '0 30px 70px rgba(26,31,46,.12), 0 4px 12px rgba(26,31,46,.06)', display: 'flex', alignItems: 'center', gap: '34px', padding: '0 40px', boxSizing: 'border-box' });
+    const ic = el('div', '', t, { width: '130px', height: '130px', flex: '0 0 130px', borderRadius: '50%', background: TINTS[i] + '22', padding: '28px', boxSizing: 'border-box' });
+    ic.innerHTML = S(ICONS[i], TINTS[i]);
+    const l = el('div', '', t, { font: '700 40px/1.15 Inter Display, Inter', letterSpacing: '-.03em', color: 'var(--ink)', width: '320px' });
+    l.textContent = lab;
+    return { t, ic, dx: CX - (x + TW / 2), dy: CY - (y + TH / 2) };
+  });
+
+  /* the arrow */
+  const AW = 1240, AH = 320, AX = (1920 - AW) / 2, AY = CY - AH / 2;
+  const arrow = el('div', 'abs', cam, { left: AX + 'px', top: AY + 'px', width: AW + 'px', height: AH + 'px', transformOrigin: '0% 50%', filter: 'drop-shadow(0 30px 50px rgba(255,107,74,.35))' });
+  arrow.innerHTML = `<svg width="${AW}" height="${AH}" viewBox="0 0 ${AW} ${AH}"><defs><linearGradient id="ag" x1="0" x2="1"><stop offset="0" stop-color="#ff8a6c"/><stop offset="1" stop-color="#FF6B4A"/></linearGradient></defs>
+    <path d="M30 70 H960 V10 L1230 160 L960 310 V250 H30 Q10 250 10 230 V90 Q10 70 30 70 Z" fill="url(#ag)"/></svg>`;
+  const inner = [0, 1, 2, 3].map((i) => {
+    const d = el('div', 'abs', arrow, { left: 90 + i * 215 + 'px', top: AH / 2 - 62 + 'px', width: '124px', height: '124px', borderRadius: '50%', background: 'rgba(255,255,255,.95)', padding: '26px', boxSizing: 'border-box', boxShadow: '0 8px 20px rgba(140,40,20,.25)' });
+    d.innerHTML = S(ICONS[i], 'var(--ink)');
+    return d;
+  });
+  const decides = el('div', 'abs', cam, { left: AX + 'px', top: AY + AH + 40 + 'px', width: AW + 'px', textAlign: 'center', font: '600 26px/1 ui-monospace, Menlo, monospace', letterSpacing: '.2em', color: 'var(--ink)' });
+  decides.textContent = 'THE JOB DECIDES MOST THINGS';
+
+  ctx.fx.vignette({ strength: 0.25 });
+  ctx.fx.grain({ opacity: 0.05 });
+
+  /* ---- timeline ---- */
+  tl.to(cam, { scale: 1.03, x: -10, duration: ctx.dur, ease: 'none' }, 0);
+  tl.from(tag, { opacity: 0, x: -20, duration: 0.6 }, 0.05);
+  tl.from(words, { opacity: 0, y: 40, duration: 0.7, stagger: 0.08, ease: 'back.out(1.6)' }, 0.1);
+  tl.fromTo(underline, { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: 'expo.out' }, tJob);
+
+  [tWho, tWhere, tOften, tSens].forEach((t, i) => {
+    const { t: tile, ic } = tiles[i];
+    tl.fromTo(tile, { opacity: 0, y: -90, rotation: i % 2 ? 3 : -3, scale: 0.92 },
+      { opacity: 1, y: 0, rotation: 0, scale: 1, duration: 0.7, ease: 'back.out(1.6)' }, t - 0.1);
+    tl.fromTo(ic, { scale: 0.4 }, { scale: 1, duration: 0.6, ease: 'back.out(2)' }, t + 0.05);
+  });
+
+  // "decide most things": tiles converge and lock into the arrow
+  const m = tDecide - 0.35;
+  tiles.forEach((tt, i) => {
+    tl.to(tt.t, { x: tt.dx, y: tt.dy, scale: 0.4, opacity: 0, duration: 0.5, ease: 'power3.in' }, m + i * 0.03);
+  });
+  tl.fromTo(arrow, { scaleX: 0, opacity: 0 }, { scaleX: 1, opacity: 1, duration: 0.7, ease: 'back.out(1.3)' }, tDecide);
+  tl.fromTo(inner, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, stagger: 0.07, ease: 'back.out(2)' }, tDecide + 0.2);
+  tl.fromTo(decides, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.6 }, tMost);
+  tl.to(cam, { scale: 1.08, duration: 1.4, ease: 'expo.inOut' }, tDecide);
+  tl.to(arrow, { x: 24, duration: Math.max(0.5, ctx.dur - tMost), ease: 'sine.inOut' }, tMost);
+});
