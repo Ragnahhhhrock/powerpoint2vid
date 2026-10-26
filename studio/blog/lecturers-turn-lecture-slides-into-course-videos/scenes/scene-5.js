@@ -1,0 +1,136 @@
+/* Scene 5 (final): "Start with one lecture: one deck and an hour. On Pro, A.I. directs the video, timing each
+ * scene to your narration. Try one on Basic at powerpoint2vid.com."
+ * Storyboard: a wide night stage echoes the opening archive, with dim deck cards drifting in the dark.
+ * On "one lecture" a single deck card glides to centre. An amber clock sweeps a full turn and reads "ONE HOUR".
+ * On "A.I. directs" a narration waveform draws beneath the card and teal scene markers snap onto it.
+ * On "Try one on Basic" the card and clock lift away. "Start with one lecture" sets at 130px, and a
+ * "TRY IT ON BASIC" chip appears with powerpoint2vid.com in amber, holding to the end. */
+P2V.scene((ctx) => {
+  const { tl, el, stage, rand } = ctx;
+  const R = rand(51);
+  const lecture = ctx.at(0, 'lecture:'), deck = ctx.at(0, 'deck'), hour = ctx.at(0, 'hour.');
+  const pro = ctx.at(1, 'Pro,'), directs = ctx.at(1, 'directs'), narr = ctx.at(1, 'narration.');
+  const markT = [ctx.at(1, 'directs'), ctx.at(1, 'video,'), ctx.at(1, 'timing'), ctx.at(1, 'scene'), ctx.at(1, 'narration.')];
+  const tryT = ctx.at(2, 'Try'), basic = ctx.at(2, 'Basic'), ppt = ctx.at(2, 'PowerPoint'), com = ctx.at(2, 'com.');
+  const MONO = 'ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(60% 55% at 50% 42%, #1b2a44 0%, var(--night) 70%, #0a1220 100%)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 500px' });
+
+  /* the archive: dim deck cards in the dark */
+  const archive = el('div', 'abs', cam, { inset: 0 });
+  const arch = [];
+  for (let i = 0; i < 12; i++) {
+    const col = i % 6, row = Math.floor(i / 6);
+    const w = 240 + R() * 60;
+    const c = el('div', 'abs', archive, { left: 60 + col * 310 + R() * 40 + 'px', top: (row ? 720 : 70) + R() * 90 + 'px', width: w + 'px', height: w * 0.5625 + 'px',
+      borderRadius: '6px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,.5)', transform: `rotate(${(R() - 0.5) * 10}deg)` });
+    const im = el('img', 'abs', c, { inset: 0, width: '100%', height: '100%', objectFit: 'cover' });
+    im.src = ctx.asset('slide-' + (1 + (i % 5)) + '.png');
+    arch.push(c);
+  }
+  gsap.set(archive, { opacity: 0.16, filter: 'blur(2px) grayscale(.6)' });
+
+  /* main composition */
+  const comp = el('div', 'abs', cam, { inset: 0 });
+  const stack = el('div', 'abs', comp, { left: '580px', top: '150px', width: '760px', height: '428px' });
+  [2, 1].forEach((k) => el('div', 'abs', stack, { inset: 0, borderRadius: '12px', background: 'var(--chalk)', opacity: 0.25 + 0.2 * (2 - k),
+    transform: `translate(${k * 16}px, ${-k * 14}px)`, boxShadow: '0 20px 50px rgba(0,0,0,.4)' }));
+  const card = el('div', 'abs', stack, { inset: 0, borderRadius: '12px', overflow: 'hidden', background: 'var(--paper)',
+    boxShadow: '0 50px 100px rgba(0,0,0,.6), 0 0 80px rgba(31,163,154,.18)' });
+  /* designed deck card: clean title slide, no overlapping source text */
+  el('div', 'abs', card, { left: 0, top: 0, width: '14px', height: '100%', background: 'var(--teal)' });
+  const cLab = el('div', 'abs', card, { left: '70px', top: '60px', font: `600 20px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--slate)' });
+  cLab.textContent = 'LECTURE 01';
+  el('div', 'abs', card, { left: '70px', top: '110px', width: '460px', height: '34px', borderRadius: '8px', background: 'var(--ink)' });
+  el('div', 'abs', card, { left: '70px', top: '160px', width: '320px', height: '34px', borderRadius: '8px', background: 'var(--ink)' });
+  [0, 1, 2].forEach((i) => {
+    el('div', 'abs', card, { left: '70px', top: 252 + i * 46 + 'px', width: '12px', height: '12px', borderRadius: '50%', background: 'var(--amber)' });
+    el('div', 'abs', card, { left: '100px', top: 252 + i * 46 + 'px', width: [420, 360, 300][i] + 'px', height: '12px', borderRadius: '6px', background: 'rgba(28,36,51,.22)' });
+  });
+  el('div', 'abs', card, { right: '60px', top: '230px', width: '170px', height: '130px', borderRadius: '10px', background: 'linear-gradient(140deg, rgba(31,163,154,.35), rgba(242,169,59,.35))' });
+  const deckLab = el('div', 'abs', comp, { left: '580px', top: '608px', font: `600 22px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--chalk)' });
+  deckLab.textContent = 'ONE DECK';
+
+  const clock = el('div', 'abs', comp, { left: '1420px', top: '250px', width: '220px', height: '220px', filter: 'drop-shadow(0 0 30px rgba(242,169,59,.35))' });
+  clock.innerHTML = `<svg width="220" height="220" viewBox="0 0 220 220">
+    <circle cx="110" cy="110" r="96" fill="rgba(242,169,59,.07)" stroke="rgba(242,169,59,.35)" stroke-width="3"/>
+    <circle id="ca" cx="110" cy="110" r="78" fill="none" stroke="#F2A93B" stroke-width="14" stroke-dasharray="490.1" stroke-dashoffset="490.1" transform="rotate(-90 110 110)" stroke-linecap="round" opacity=".9"/>
+    <line id="ch" x1="110" y1="110" x2="110" y2="44" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="110" cy="110" r="9" fill="#fff"/></svg>`;
+  const arcC = clock.querySelector('#ca'), hand = clock.querySelector('#ch');
+  gsap.set(hand, { svgOrigin: '110 110' });
+  const hourLab = el('div', 'abs', comp, { left: '1400px', width: '260px', textAlign: 'center', top: '498px', font: `600 22px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--amber)' });
+  hourLab.textContent = 'ONE HOUR';
+
+  /* narration waveform + scene markers */
+  const waveWrap = el('div', 'abs', cam, { left: '340px', top: '730px', width: '1240px', height: '180px' });
+  let bars = '';
+  const N = 88;
+  for (let i = 0; i < N; i++) {
+    const env = 0.35 + 0.65 * Math.abs(Math.sin(i * 0.23 + 0.6));
+    const h = 12 + R() * 90 * env;
+    bars += `<rect x="${i * 14.1}" y="${90 - h / 2}" width="7" height="${h}" rx="3.5" fill="rgba(228,233,240,.55)"/>`;
+  }
+  waveWrap.innerHTML = `<svg width="1240" height="180">${bars}</svg>`;
+  gsap.set(waveWrap, { clipPath: 'inset(0px 1240px 0px 0px)' });
+  const proTag = el('div', 'abs', cam, { left: '340px', top: '636px', font: `600 20px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--teal)' });
+  proTag.textContent = 'PRO · AI DIRECTED';
+  const mx = [0.08, 0.27, 0.49, 0.7, 0.93];
+  const markers = mx.map((f, i) => {
+    const m = el('div', 'abs', cam, { left: 340 + f * 1240 - 2 + 'px', top: '720px', width: '4px', height: '200px', borderRadius: '2px',
+      background: 'var(--teal)', boxShadow: '0 0 18px rgba(31,163,154,.8)', transformOrigin: '50% 50%' });
+    const tagM = el('div', 'abs', m, { left: '-22px', top: '-44px', width: '48px', height: '32px', borderRadius: '8px', background: 'var(--teal)',
+      font: `700 16px/32px ${MONO}`, textAlign: 'center', color: 'var(--night)' });
+    tagM.textContent = String(i + 1).padStart(2, '0');
+    return m;
+  });
+
+  /* final lockup */
+  const chip = el('div', 'abs', cam, { left: '760px', width: '400px', top: '228px', height: '48px', borderRadius: '24px', border: '2px solid rgba(31,163,154,.7)',
+    font: `600 20px/44px ${MONO}`, letterSpacing: '.16em', textAlign: 'center', color: 'var(--teal)', background: 'rgba(31,163,154,.08)' });
+  chip.textContent = 'TRY IT ON BASIC';
+  const head = el('div', 'abs', cam, { left: '80px', width: '1760px', top: '320px', textAlign: 'center', font: '800 130px/1.05 Inter Display, Inter',
+    letterSpacing: '-.045em', color: '#fff', whiteSpace: 'nowrap' });
+  const words = ctx.split(head, 'Start with one lecture', 'word');
+  const url = el('div', 'abs', cam, { left: '80px', width: '1760px', top: '500px', textAlign: 'center', font: '700 80px/1.1 Inter Display, Inter',
+    letterSpacing: '-.03em', color: 'var(--amber)', textShadow: '0 0 40px rgba(242,169,59,.35)' });
+  url.textContent = 'powerpoint2vid.com';
+  const uline = el('div', 'abs', cam, { left: '610px', width: '700px', top: '608px', height: '4px', borderRadius: '2px', background: 'var(--amber)', transformOrigin: '0% 50%' });
+
+  ctx.fx.vignette({ strength: 0.6 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  /* ---- timeline ---- */
+  tl.to(cam, { scale: 1.05, duration: ctx.dur, ease: 'none' }, 0);
+  tl.from(archive, { opacity: 0, duration: 0.6, ease: 'power2.out' }, 0);
+  tl.fromTo(arch, { y: 20 }, { y: -20, duration: ctx.dur, ease: 'none', stagger: 0 }, 0);
+
+  // one lecture: the card glides in from the archive
+  gsap.set(stack, { opacity: 0 });
+  tl.fromTo(stack, { x: -620, y: 120, rotation: -8, scale: 0.55, opacity: 0 }, { x: 0, y: 0, rotation: 0, scale: 1, opacity: 1, duration: 1.1, ease: 'power3.out', immediateRender: false }, lecture - 0.45);
+  tl.to(archive, { opacity: 0.08, duration: 1 }, lecture);
+  tl.from(deckLab, { opacity: 0, y: 14, duration: 0.5 }, deck - 0.1);
+  tl.from(clock, { opacity: 0, scale: 0.6, duration: 0.6, ease: 'back.out(1.8)', transformOrigin: '50% 50%' }, deck + 0.1);
+  tl.to(arcC, { attr: { 'stroke-dashoffset': 0 }, duration: 1.1, ease: 'power2.inOut' }, deck + 0.3);
+  tl.to(hand, { rotation: 360, duration: 1.1, ease: 'power2.inOut' }, deck + 0.3);
+  tl.from(hourLab, { opacity: 0, y: 14, duration: 0.5, ease: 'back.out(1.6)' }, hour);
+
+  // A.I. directs: the waveform draws and scene markers snap on
+  tl.from(proTag, { opacity: 0, x: -20, duration: 0.5 }, pro);
+  tl.to(waveWrap, { clipPath: 'inset(0px 0px 0px 0px)', duration: narr - pro + 0.3, ease: 'power1.inOut' }, pro - 0.1);
+  markers.forEach((m, i) => {
+    tl.fromTo(m, { opacity: 0, scaleY: 0, y: -30 }, { opacity: 1, scaleY: 1, y: 0, duration: 0.45, ease: 'back.out(2)' }, markT[i] - 0.05);
+  });
+  tl.to(card, { boxShadow: '0 50px 100px rgba(0,0,0,.6), 0 0 120px rgba(31,163,154,.45)', duration: 0.6, yoyo: true, repeat: 1 }, directs);
+
+  // Try one on Basic: lockup
+  tl.to(comp, { opacity: 0, y: -60, scale: 0.92, duration: 0.6, ease: 'power2.in', transformOrigin: '960px 380px' }, tryT - 0.35);
+  tl.to([waveWrap, ...markers], { opacity: 0.4, duration: 0.8 }, tryT);
+  tl.to(proTag, { opacity: 0, duration: 0.4 }, tryT);
+  tl.from(words, { opacity: 0, y: 60, duration: 0.6, ease: 'back.out(1.5)', stagger: 0.08 }, tryT);
+  tl.from(chip, { opacity: 0, scale: 0.7, duration: 0.5, ease: 'back.out(2)' }, basic - 0.1);
+  tl.from(url, { opacity: 0, y: 30, scale: 0.94, duration: 0.6, ease: 'back.out(1.6)' }, ppt - 0.1);
+  tl.from(uline, { scaleX: 0, duration: Math.max(0.6, com - ppt), ease: 'power2.inOut' }, ppt + 0.1);
+  tl.to(url, { textShadow: '0 0 70px rgba(242,169,59,.75)', duration: 0.5, yoyo: true, repeat: 1 }, com);
+});

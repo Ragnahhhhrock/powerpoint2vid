@@ -1,0 +1,129 @@
+/* Scene 3 — "Swap dot points for what you'd actually say to a student. Short sentences work better
+ * for voices and captions, so check how technical terms are pronounced."
+ * Storyboard: bright paper stage, close split screen. Left card: slate shorthand dot point
+ * "Osmosis – water moves high to low conc." On "actually say" it is struck through in coral and the
+ * right card writes on "Osmosis is the movement of water across a membrane." On "voices and captions"
+ * a teal waveform pulses beneath and a caption bar slides up. On "pronounced" the word "Osmosis"
+ * highlights in amber with a small speaker icon; gentle push-in toward it. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const W = (i, w) => ctx.at(i, w);
+  const tSwap = W(0, 'Swap'), tActually = W(0, 'actually'), tSay = W(0, 'say');
+  const tShort = W(1, 'Short'), tVoices = W(1, 'voices'), tCaptions = W(1, 'captions,');
+  const tCheck = W(1, 'check'), tPron = W(1, 'pronounced.');
+  const MONO = '600 20px/1 ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(80% 70% at 50% 40%, #fffdf8 0%, var(--paper) 60%, #ebe5d9 100%)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '1300px 400px' });
+
+  // soft light blobs
+  el('div', 'abs', cam, { left: '-200px', top: '-200px', width: '900px', height: '900px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(31,163,154,.08), transparent 65%)' });
+  el('div', 'abs', cam, { left: '1200px', top: '400px', width: '900px', height: '900px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(242,169,59,.08), transparent 65%)' });
+
+  const card = (x, labelTxt, labelCol) => {
+    const c = el('div', 'abs', cam, { left: x + 'px', top: '170px', width: '800px', height: '500px', borderRadius: '28px', background: '#fff',
+      boxShadow: '0 40px 90px rgba(28,36,51,.12), 0 4px 14px rgba(28,36,51,.06)' });
+    const lab = el('div', 'abs', c, { left: '60px', top: '52px', font: MONO, letterSpacing: '.16em', color: labelCol });
+    lab.textContent = labelTxt;
+    return c;
+  };
+  const left = card(120, 'DOT POINT', 'var(--slate)');
+  const right = card(1000, "WHAT YOU'D SAY", 'var(--teal)');
+
+  /* left: shorthand, line by line, with coral strikes */
+  const lbox = el('div', 'abs', left, { left: '60px', top: '120px', width: '680px' });
+  const strikes = [];
+  ['Osmosis –', 'water moves', 'high to low conc.'].forEach((ln) => {
+    const row = el('div', '', lbox, { marginBottom: '14px' });
+    const s = el('span', '', row, { position: 'relative', display: 'inline-block', font: 'italic 500 62px/1.15 Inter, sans-serif', letterSpacing: '-.02em', color: 'var(--slate)' });
+    s.textContent = ln;
+    const st = el('div', 'abs', s, { left: '-8px', right: '-8px', top: '50%', height: '7px', borderRadius: '4px', background: 'var(--coral)', transformOrigin: '0% 50%', transform: 'rotate(-1.5deg)' });
+    strikes.push(st);
+  });
+  const lineTxt = el('div', 'abs', left, { left: '60px', bottom: '50px', font: MONO, letterSpacing: '.14em', color: 'var(--coral)' });
+  lineTxt.textContent = '✕ NOTES, NOT SPEECH';
+
+  /* right: spoken sentence */
+  const rbox = el('div', 'abs', right, { left: '60px', top: '120px', width: '680px', font: '800 62px/1.18 Inter Display, Inter', letterSpacing: '-.035em', color: 'var(--ink)' });
+  const words = ctx.split(rbox, 'Osmosis is the movement of water across a membrane.', 'word');
+  const osm = words[0];
+  osm.style.position = 'relative';
+  osm.style.zIndex = '1';
+  const hl = el('div', 'abs', osm, { left: '-10px', right: '-10px', top: '8%', bottom: '2%', borderRadius: '10px', background: 'var(--amber)', zIndex: -1, transformOrigin: '0% 50%', opacity: 0.85 });
+  const spk = el('div', 'abs', osm, { left: '50%', top: '-92px', width: '84px', height: '72px', marginLeft: '-42px', transformOrigin: '50% 100%' });
+  spk.innerHTML = `<svg width="84" height="72" viewBox="0 0 84 72"><rect x="2" y="2" width="80" height="58" rx="16" fill="#1C2433"/>
+    <path d="M14 60 L26 70 L30 60Z" fill="#1C2433"/>
+    <path d="M18 24 h8 l10 -9 v32 l-10 -9 h-8z" fill="#F2A93B"/>
+    <path class="w1" d="M44 22 q6 9 0 18" stroke="#F2A93B" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path class="w2" d="M52 15 q12 16 0 32" stroke="#F2A93B" stroke-width="4" fill="none" stroke-linecap="round"/></svg>`;
+  const waves = spk.querySelectorAll('.w1, .w2');
+  const okTag = el('div', 'abs', right, { left: '60px', bottom: '50px', font: MONO, letterSpacing: '.14em', color: 'var(--teal)' });
+  okTag.textContent = '✓ ONE SHORT SENTENCE';
+
+  /* waveform */
+  const wave = el('div', 'abs', cam, { left: '448px', top: '725px', width: '1024px', height: '110px' });
+  const N = 64, bars = [];
+  for (let i = 0; i < N; i++) {
+    bars.push(el('div', 'abs', wave, { left: i * 16 + 'px', top: '5px', width: '8px', height: '100px', borderRadius: '4px', background: 'var(--teal)', boxShadow: '0 0 14px rgba(31,163,154,.35)' }));
+  }
+  const amp = { a: 0 };
+
+  /* caption bar */
+  const cap = el('div', 'abs', cam, { left: '400px', width: '1120px', top: '880px', height: '86px', borderRadius: '18px', background: 'rgba(15,26,43,.92)',
+    boxShadow: '0 24px 60px rgba(15,26,43,.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', font: '600 34px/1 Inter', color: '#fff', letterSpacing: '-.01em' });
+  const capOsm = el('span', '', cap, { color: '#fff', marginRight: '10px' }); capOsm.textContent = 'Osmosis';
+  el('span', '', cap).textContent = 'is the movement of water across a membrane.';
+  const ccTag = el('div', 'abs', cap, { left: '18px', top: '-30px', font: '700 16px/1 ui-monospace, Menlo, monospace', letterSpacing: '.16em', color: 'var(--slate)' });
+  ccTag.textContent = 'CC';
+
+  ctx.fx.vignette({ strength: 0.25 });
+  ctx.fx.grain({ opacity: 0.05 });
+
+  ctx.onFrame((t) => {
+    bars.forEach((b, i) => {
+      const env = Math.sin((i / (N - 1)) * Math.PI);
+      const v = Math.abs(Math.sin(t * 8.3 + i * 0.63) * Math.sin(t * 3.7 + i * 0.27)) * 0.8 + 0.12;
+      b.style.transform = `scaleY(${0.06 + amp.a * env * v})`;
+    });
+  });
+
+  /* ---- timeline ---- */
+  gsap.set(strikes, { scaleX: 0 });
+  gsap.set([lineTxt, okTag, wave, spk], { opacity: 0 });
+  gsap.set(hl, { scaleX: 0 });
+  gsap.set(words, { opacity: 0, y: 24 });
+  gsap.set(cap, { y: 220, opacity: 0 });
+  gsap.set(left, { filter: 'saturate(1) blur(0px)' });
+
+  tl.from(left, { y: 40, opacity: 0, duration: 0.6 }, 0.0);
+  tl.from(right, { y: 40, opacity: 0, duration: 0.6 }, 0.12);
+  tl.from(lbox.children, { x: -30, opacity: 0, duration: 0.5, stagger: 0.08 }, 0.15);
+  tl.to(cam, { scale: 1.03, duration: tPron - 0.4, ease: 'sine.inOut' }, 0);
+  tl.to(left, { y: -6, duration: 0.25, yoyo: true, repeat: 1, ease: 'sine.inOut' }, tSwap);
+
+  // "actually say": strike, then write on
+  tl.to(strikes, { scaleX: 1, duration: 0.35, stagger: 0.12, ease: 'power2.inOut' }, tActually);
+  tl.to(lineTxt, { opacity: 1, duration: 0.4 }, tActually + 0.4);
+  tl.to(words, { opacity: 1, y: 0, duration: 0.5, stagger: 0.1, ease: 'back.out(1.6)' }, tSay - 0.1);
+
+  // "Short sentences": focus shifts right
+  tl.to(left, { opacity: 0.55, scale: 0.97, filter: 'saturate(.4) blur(1px)', duration: 0.7, ease: 'power2.out' }, tShort);
+  tl.to(right, { y: -10, boxShadow: '0 50px 110px rgba(31,163,154,.22), 0 4px 14px rgba(28,36,51,.06)', duration: 0.7 }, tShort);
+  tl.to(okTag, { opacity: 1, duration: 0.4 }, tShort + 0.3);
+
+  // "voices": waveform pulses
+  tl.to(wave, { opacity: 1, duration: 0.3 }, tVoices - 0.2);
+  tl.to(amp, { a: 1, duration: 0.5, ease: 'power2.out' }, tVoices - 0.1);
+  // "captions": caption bar slides up
+  tl.to(cap, { y: 0, opacity: 1, duration: 0.7, ease: 'back.out(1.4)' }, tCaptions - 0.15);
+  tl.to(amp, { a: 0.55, duration: 0.8, ease: 'sine.inOut' }, tCaptions + 0.8);
+
+  // "check how technical terms are pronounced"
+  tl.to(cam, { scale: 1.08, duration: 1.4, ease: 'expo.inOut' }, tCheck);
+  tl.to(hl, { scaleX: 1, duration: 0.4, ease: 'power3.out' }, tPron - 0.1);
+  tl.to(capOsm, { color: '#F2A93B', duration: 0.3 }, tPron);
+  tl.fromTo(spk, { opacity: 0, scale: 0.3, y: 20 }, { opacity: 1, scale: 1, y: 0, duration: 0.55, ease: 'back.out(2)', immediateRender: false }, tPron);
+  tl.fromTo(waves, { opacity: 0.2 }, { opacity: 1, duration: 0.3, stagger: 0.12, yoyo: true, repeat: 3, ease: 'sine.inOut', immediateRender: false }, tPron + 0.4);
+  tl.to(amp, { a: 1, duration: 0.3, yoyo: true, repeat: 1 }, tPron);
+  tl.to(cam, { scale: 1.1, duration: ctx.dur - (tCheck + 1.4), ease: 'sine.inOut' }, tCheck + 1.4);
+});

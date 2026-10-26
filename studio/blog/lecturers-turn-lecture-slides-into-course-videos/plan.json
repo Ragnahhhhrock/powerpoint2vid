@@ -1,0 +1,901 @@
+{
+  "title": "Lecturers: Turn Lecture Slides into Course Videos (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0F1A2B",
+      "ink": "#1C2433",
+      "paper": "#F7F4EE",
+      "chalk": "#E4E9F0",
+      "teal": "#1FA39A",
+      "amber": "#F2A93B",
+      "coral": "#E8665A",
+      "slate": "#8A95A8"
+    },
+    "font": "Inter Display",
+    "motion": "Calm, assured pacing with soft ease-out arrivals and gentle push-ins; elements snap into place on their keywords, then breathe.",
+    "story": "From a dusty archive of lecture decks to finished course videos: dark, wide opening and close, with bright paper-toned working scenes in the middle that zoom in close on the craft of splitting, rewriting and publishing."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "You already have years of lecture decks. Turned into video, they can teach on their own: before class, for revision, or for an online cohort.",
+      "storyboard": "Night stage, wide shot: a tall stack of slide-deck cards glows faintly like an archive shelf. On 'years of lecture decks' the camera slowly pushes in as the stack fans out. On 'turned into video' the top card gains a teal play button and starts to glow. On 'before class', 'revision' and 'online cohort', three small amber labels orbit outward from the card, one per word. The headline 'Turn Lecture Slides into Course Videos' sets in at 120px and holds; the original grey list is rebuilt as the orbiting labels, with 'students who missed the session' implied by the 'revision' and 'before class' beats only if space allows.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Turn Lecture Slides into Course Videos",
+        "text": "Before class. For revision. For students who missed the session. For an online cohort",
+        "notes": "You already have years of lecture decks. Turned into video, they can teach on their own, before class, for revision, or for an online cohort.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 10.241,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 2.797,
+          "text": "You already have years of lecture decks.",
+          "words": [
+            {
+              "w": "You",
+              "t": 0.8
+            },
+            {
+              "w": "already",
+              "t": 1.032
+            },
+            {
+              "w": "have",
+              "t": 1.392
+            },
+            {
+              "w": "years",
+              "t": 1.589
+            },
+            {
+              "w": "of",
+              "t": 1.891
+            },
+            {
+              "w": "lecture",
+              "t": 2.019
+            },
+            {
+              "w": "decks.",
+              "t": 2.344
+            }
+          ]
+        },
+        {
+          "t": 3.076,
+          "end": 9.391,
+          "text": "Turned into video, they can teach on their own: before class, for revision, or for an online cohort.",
+          "words": [
+            {
+              "w": "Turned",
+              "t": 3.076
+            },
+            {
+              "w": "into",
+              "t": 3.435
+            },
+            {
+              "w": "video,",
+              "t": 3.656
+            },
+            {
+              "w": "they",
+              "t": 4.306
+            },
+            {
+              "w": "can",
+              "t": 4.492
+            },
+            {
+              "w": "teach",
+              "t": 4.655
+            },
+            {
+              "w": "on",
+              "t": 4.91
+            },
+            {
+              "w": "their",
+              "t": 5.014
+            },
+            {
+              "w": "own:",
+              "t": 5.235
+            },
+            {
+              "w": "before",
+              "t": 5.827
+            },
+            {
+              "w": "class,",
+              "t": 6.21
+            },
+            {
+              "w": "for",
+              "t": 6.895
+            },
+            {
+              "w": "revision,",
+              "t": 7.081
+            },
+            {
+              "w": "or",
+              "t": 7.824
+            },
+            {
+              "w": "for",
+              "t": 8.045
+            },
+            {
+              "w": "an",
+              "t": 8.207
+            },
+            {
+              "w": "online",
+              "t": 8.323
+            },
+            {
+              "w": "cohort.",
+              "t": 8.764
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.391
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Don't start with your whole course. Begin where video helps most, like one assessment explainer. Every student needs it, and it saves you answering the same emails.",
+      "storyboard": "Paper stage. A grid of twelve slate course cards fills the frame; on 'whole course' they dim and slide back. On 'helps most' four teal tags drop in: 'Tricky concepts', 'Stable content', 'Procedures', 'Flipped weeks'. On 'one assessment explainer' a single card lifts forward, the camera pushing close. On 'same emails' a pile of coral envelope icons flies in and dissolves against the card. Original bullets are rebuilt as the four tags; text kept minimal.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Start with decks where video helps most",
+        "text": "Concepts students regularly struggle with. Stable content. Procedures. Pre-class content for weeks you want to flip",
+        "notes": "Don't start with your whole course. A good first project is one assessment explainer. Every student needs it, and it saves you answering the same emails.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 11.5,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.326,
+          "text": "Don't start with your whole course.",
+          "words": [
+            {
+              "w": "Don't",
+              "t": 0.55
+            },
+            {
+              "w": "start",
+              "t": 0.851
+            },
+            {
+              "w": "with",
+              "t": 1.2
+            },
+            {
+              "w": "your",
+              "t": 1.351
+            },
+            {
+              "w": "whole",
+              "t": 1.513
+            },
+            {
+              "w": "course.",
+              "t": 1.792
+            }
+          ]
+        },
+        {
+          "t": 2.5,
+          "end": 6.134,
+          "text": "Begin where video helps most, like one assessment explainer.",
+          "words": [
+            {
+              "w": "Begin",
+              "t": 2.5
+            },
+            {
+              "w": "where",
+              "t": 2.872
+            },
+            {
+              "w": "video",
+              "t": 3.081
+            },
+            {
+              "w": "helps",
+              "t": 3.487
+            },
+            {
+              "w": "most,",
+              "t": 3.835
+            },
+            {
+              "w": "like",
+              "t": 4.462
+            },
+            {
+              "w": "one",
+              "t": 4.706
+            },
+            {
+              "w": "assessment",
+              "t": 4.903
+            },
+            {
+              "w": "explainer.",
+              "t": 5.402
+            }
+          ]
+        },
+        {
+          "t": 6.947,
+          "end": 10.65,
+          "text": "Every student needs it, and it saves you answering the same emails.",
+          "words": [
+            {
+              "w": "Every",
+              "t": 6.947
+            },
+            {
+              "w": "student",
+              "t": 7.306
+            },
+            {
+              "w": "needs",
+              "t": 7.713
+            },
+            {
+              "w": "it,",
+              "t": 8.038
+            },
+            {
+              "w": "and",
+              "t": 8.282
+            },
+            {
+              "w": "it",
+              "t": 8.479
+            },
+            {
+              "w": "saves",
+              "t": 8.595
+            },
+            {
+              "w": "you",
+              "t": 8.92
+            },
+            {
+              "w": "answering",
+              "t": 9.094
+            },
+            {
+              "w": "the",
+              "t": 9.547
+            },
+            {
+              "w": "same",
+              "t": 9.663
+            },
+            {
+              "w": "emails.",
+              "t": 9.942
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.65
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "A fifty-minute lecture rarely works as one fifty-minute video. Give each concept its own short video, so students can find the part they need later.",
+      "storyboard": "Chalk stage, wide. A long bar labelled 'Week 3: Cell Biology, 48 slides' stretches across the frame. On 'rarely works' it shudders. On 'each concept its own' it cleaves into three teal segments: 'Cell membrane, 8 slides', 'Active vs passive transport, 10 slides', 'Osmosis worked example, 9 slides', sliding apart into stacked cards. On 'find the part they need' a cursor taps the osmosis card and it pops forward in amber. The slide counts are kept exactly.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Split one lecture into short videos",
+        "text": "Before: Week 3 Lecture: Cell Biology (48 slides). What a cell membrane does (8 slides). Active vs passive transport (10 slides). Worked example: osmosis in plant cells (9 slides)",
+        "notes": "A fifty-minute lecture rarely works as one fifty-minute video. Give each concept its own short video, so students can find the part they need later.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 10.49,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.242,
+          "text": "A fifty-minute lecture rarely works as one fifty-minute video.",
+          "words": [
+            {
+              "w": "A",
+              "t": 0.55
+            },
+            {
+              "w": "fifty-minute",
+              "t": 0.713
+            },
+            {
+              "w": "lecture",
+              "t": 1.293
+            },
+            {
+              "w": "rarely",
+              "t": 1.885
+            },
+            {
+              "w": "works",
+              "t": 2.268
+            },
+            {
+              "w": "as",
+              "t": 2.64
+            },
+            {
+              "w": "one",
+              "t": 2.814
+            },
+            {
+              "w": "fifty-minute",
+              "t": 3.081
+            },
+            {
+              "w": "video.",
+              "t": 3.638
+            }
+          ]
+        },
+        {
+          "t": 4.683,
+          "end": 9.64,
+          "text": "Give each concept its own short video, so students can find the part they need later.",
+          "words": [
+            {
+              "w": "Give",
+              "t": 4.683
+            },
+            {
+              "w": "each",
+              "t": 4.939
+            },
+            {
+              "w": "concept",
+              "t": 5.148
+            },
+            {
+              "w": "its",
+              "t": 5.67
+            },
+            {
+              "w": "own",
+              "t": 5.844
+            },
+            {
+              "w": "short",
+              "t": 6.134
+            },
+            {
+              "w": "video,",
+              "t": 6.448
+            },
+            {
+              "w": "so",
+              "t": 7.202
+            },
+            {
+              "w": "students",
+              "t": 7.411
+            },
+            {
+              "w": "can",
+              "t": 7.806
+            },
+            {
+              "w": "find",
+              "t": 7.992
+            },
+            {
+              "w": "the",
+              "t": 8.271
+            },
+            {
+              "w": "part",
+              "t": 8.387
+            },
+            {
+              "w": "they",
+              "t": 8.642
+            },
+            {
+              "w": "need",
+              "t": 8.816
+            },
+            {
+              "w": "later.",
+              "t": 9.06
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.64
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Swap dot points for what you'd actually say to a student. Short sentences work better for voices and captions, so check how technical terms are pronounced.",
+      "storyboard": "Paper stage, close split screen. Left, in slate shorthand: 'Osmosis - water moves high to low conc.' On 'actually say' it is struck through in coral and the right side writes on: 'Osmosis is the movement of water across a membrane.' On 'voices and captions' a teal waveform pulses beneath and a caption bar slides up. On 'pronounced' the word 'Osmosis' highlights in amber with a small speaker icon.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Write speaker notes as narration",
+        "text": "Before: \"Osmosis - water moves high to low conc.\". After: \"Osmosis is the movement of water across a membrane.\". Short sentences suit voices and captions",
+        "notes": "Swap dot points for what you'd actually say to a student. Short sentences work better for voices and captions, so check how technical terms are pronounced.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "wipeleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 10.479,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.604,
+          "text": "Swap dot points for what you'd actually say to a student.",
+          "words": [
+            {
+              "w": "Swap",
+              "t": 0.55
+            },
+            {
+              "w": "dot",
+              "t": 0.922
+            },
+            {
+              "w": "points",
+              "t": 1.154
+            },
+            {
+              "w": "for",
+              "t": 1.618
+            },
+            {
+              "w": "what",
+              "t": 1.804
+            },
+            {
+              "w": "you'd",
+              "t": 1.967
+            },
+            {
+              "w": "actually",
+              "t": 2.164
+            },
+            {
+              "w": "say",
+              "t": 2.547
+            },
+            {
+              "w": "to",
+              "t": 2.803
+            },
+            {
+              "w": "a",
+              "t": 2.93
+            },
+            {
+              "w": "student.",
+              "t": 3.012
+            }
+          ]
+        },
+        {
+          "t": 4.207,
+          "end": 9.629,
+          "text": "Short sentences work better for voices and captions, so check how technical terms are pronounced.",
+          "words": [
+            {
+              "w": "Short",
+              "t": 4.207
+            },
+            {
+              "w": "sentences",
+              "t": 4.567
+            },
+            {
+              "w": "work",
+              "t": 5.159
+            },
+            {
+              "w": "better",
+              "t": 5.485
+            },
+            {
+              "w": "for",
+              "t": 5.798
+            },
+            {
+              "w": "voices",
+              "t": 5.949
+            },
+            {
+              "w": "and",
+              "t": 6.344
+            },
+            {
+              "w": "captions,",
+              "t": 6.483
+            },
+            {
+              "w": "so",
+              "t": 7.389
+            },
+            {
+              "w": "check",
+              "t": 7.598
+            },
+            {
+              "w": "how",
+              "t": 7.865
+            },
+            {
+              "w": "technical",
+              "t": 8.027
+            },
+            {
+              "w": "terms",
+              "t": 8.515
+            },
+            {
+              "w": "are",
+              "t": 8.851
+            },
+            {
+              "w": "pronounced.",
+              "t": 8.956
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.629
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Pick a voice and a slightly slower speed for dense material, turn on captions, and watch it all with sound. Then download the MP4 and add it to your course yourself.",
+      "storyboard": "Ink stage. A clean video player sits centre. On 'voice' and 'slower speed' a dial eases down; on 'captions' a CC toggle flips teal. On 'with sound' a waveform runs across the timeline. On 'download the MP4' a file tile drops out of the player labelled 'BIO101 W3 Osmosis.mp4' and glides into a slate LMS course folder on 'add it to your course'. The original four bullets are rebuilt as these interface beats.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Preview, then add it to your LMS",
+        "text": "Pick a voice and speaking speed. Turn on captions. Download as MP4. Name files clearly: \"BIO101 W3 Osmosis\"",
+        "notes": "Choose a slightly slower speed for dense material, and watch the whole video with sound. Then download the MP4 and add it to your course yourself.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "smoothup",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 11.78,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 6.971,
+          "text": "Pick a voice and a slightly slower speed for dense material, turn on captions, and watch it all with sound.",
+          "words": [
+            {
+              "w": "Pick",
+              "t": 0.55
+            },
+            {
+              "w": "a",
+              "t": 0.794
+            },
+            {
+              "w": "voice",
+              "t": 0.864
+            },
+            {
+              "w": "and",
+              "t": 1.352
+            },
+            {
+              "w": "a",
+              "t": 1.549
+            },
+            {
+              "w": "slightly",
+              "t": 1.619
+            },
+            {
+              "w": "slower",
+              "t": 2.025
+            },
+            {
+              "w": "speed",
+              "t": 2.373
+            },
+            {
+              "w": "for",
+              "t": 2.722
+            },
+            {
+              "w": "dense",
+              "t": 2.884
+            },
+            {
+              "w": "material,",
+              "t": 3.198
+            },
+            {
+              "w": "turn",
+              "t": 4.231
+            },
+            {
+              "w": "on",
+              "t": 4.533
+            },
+            {
+              "w": "captions,",
+              "t": 4.695
+            },
+            {
+              "w": "and",
+              "t": 5.45
+            },
+            {
+              "w": "watch",
+              "t": 5.659
+            },
+            {
+              "w": "it",
+              "t": 5.914
+            },
+            {
+              "w": "all",
+              "t": 6.019
+            },
+            {
+              "w": "with",
+              "t": 6.181
+            },
+            {
+              "w": "sound.",
+              "t": 6.355
+            }
+          ]
+        },
+        {
+          "t": 7.412,
+          "end": 10.93,
+          "text": "Then download the MP4 and add it to your course yourself.",
+          "words": [
+            {
+              "w": "Then",
+              "t": 7.412
+            },
+            {
+              "w": "download",
+              "t": 7.714
+            },
+            {
+              "w": "the",
+              "t": 8.143
+            },
+            {
+              "w": "MP4",
+              "t": 8.271
+            },
+            {
+              "w": "and",
+              "t": 9.153
+            },
+            {
+              "w": "add",
+              "t": 9.362
+            },
+            {
+              "w": "it",
+              "t": 9.548
+            },
+            {
+              "w": "to",
+              "t": 9.641
+            },
+            {
+              "w": "your",
+              "t": 9.745
+            },
+            {
+              "w": "course",
+              "t": 9.931
+            },
+            {
+              "w": "yourself.",
+              "t": 10.233
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.93
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "Start with one lecture: one deck and an hour. On Pro, A.I. directs the video, timing each scene to your narration. Try one on Basic at powerpoint2vid.com.",
+      "storyboard": "Night stage, wide, echoing the opening archive. A single deck card glides to centre on 'one lecture'; a small amber clock reads 'one hour'. On 'A.I. directs' teal scene markers snap along a narration waveform beneath the card. On 'Try one on Basic' the headline 'Start with one lecture' sets at 130px with 'powerpoint2vid.com' in amber below, holding for the final beat.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Start with one lecture",
+        "text": "One deck and an hour. Try it on Basic. On Pro, a.i. directs the video",
+        "notes": "On Pro, a.i. directs the video, timing each scene to your narration so a lecture lands like a produced explainer. Try one on Basic at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 14.047,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.453,
+          "text": "Start with one lecture: one deck and an hour.",
+          "words": [
+            {
+              "w": "Start",
+              "t": 0.55
+            },
+            {
+              "w": "with",
+              "t": 0.922
+            },
+            {
+              "w": "one",
+              "t": 1.119
+            },
+            {
+              "w": "lecture:",
+              "t": 1.351
+            },
+            {
+              "w": "one",
+              "t": 2.106
+            },
+            {
+              "w": "deck",
+              "t": 2.361
+            },
+            {
+              "w": "and",
+              "t": 2.686
+            },
+            {
+              "w": "an",
+              "t": 2.861
+            },
+            {
+              "w": "hour.",
+              "t": 2.965
+            }
+          ]
+        },
+        {
+          "t": 4.056,
+          "end": 8.294,
+          "text": "On Pro, A.I. directs the video, timing each scene to your narration.",
+          "words": [
+            {
+              "w": "On",
+              "t": 4.056
+            },
+            {
+              "w": "Pro,",
+              "t": 4.323
+            },
+            {
+              "w": "A.I.",
+              "t": 4.8
+            },
+            {
+              "w": "directs",
+              "t": 5.171
+            },
+            {
+              "w": "the",
+              "t": 5.554
+            },
+            {
+              "w": "video,",
+              "t": 5.67
+            },
+            {
+              "w": "timing",
+              "t": 6.309
+            },
+            {
+              "w": "each",
+              "t": 6.75
+            },
+            {
+              "w": "scene",
+              "t": 6.994
+            },
+            {
+              "w": "to",
+              "t": 7.307
+            },
+            {
+              "w": "your",
+              "t": 7.412
+            },
+            {
+              "w": "narration.",
+              "t": 7.574
+            }
+          ]
+        },
+        {
+          "t": 8.619,
+          "end": 11.847,
+          "text": "Try one on Basic at powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 8.619
+            },
+            {
+              "w": "one",
+              "t": 8.979
+            },
+            {
+              "w": "on",
+              "t": 9.176
+            },
+            {
+              "w": "Basic",
+              "t": 9.327
+            },
+            {
+              "w": "at",
+              "t": 9.734
+            },
+            {
+              "w": "PowerPoint",
+              "t": 9.85
+            },
+            {
+              "w": "to",
+              "t": 10.604
+            },
+            {
+              "w": "vid",
+              "t": 10.802
+            },
+            {
+              "w": "dot",
+              "t": 11.046
+            },
+            {
+              "w": "com.",
+              "t": 11.301
+            }
+          ]
+        }
+      ],
+      "speechEnd": 11.847
+    }
+  ],
+  "voiceProvider": "elevenlabs"
+}

@@ -1,0 +1,128 @@
+/* Scene 0 — "You already have years of lecture decks. Turned into video, they can teach on their own:
+ * before class, for revision, or for an online cohort."
+ * Storyboard: night stage, wide. A faint archive stack of deck cards glows under the headline
+ * "Turn Lecture Slides / into Course Videos", which sets in at 120px and holds. On "years of lecture decks"
+ * the camera starts a slow push-in and the stack fans out. On "video" the front card lights up and a teal
+ * play button pops onto it, with a progress bar starting to run. On "before class", "revision" and
+ * "online cohort", amber labels orbit out from the card, one per word, and settle and breathe. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const W = (i, w) => ctx.at(i, w);
+  const tYears = W(0, 'years'), tLecture = W(0, 'lecture'), tVideo = W(1, 'video,');
+  const tBefore = W(1, 'before'), tRevision = W(1, 'revision,'), tCohort = W(1, 'cohort.');
+  const tOnline = W(1, 'online');
+
+  stage.style.background = 'radial-gradient(60% 70% at 68% 60%, #1a2a44 0%, var(--night) 70%)';
+  const glow = el('div', 'abs', stage, { left: '760px', top: '260px', width: '1100px', height: '760px', borderRadius: '50%',
+    background: 'radial-gradient(closest-side, rgba(31,163,154,.18), transparent)', opacity: 0.5 });
+
+  /* dust motes in the archive */
+  const dustLayer = el('div', 'abs', stage, { inset: 0 });
+  const r = ctx.rand(7);
+  const dust = Array.from({ length: 42 }, () => {
+    const d = el('div', 'abs', dustLayer, { width: '3px', height: '3px', borderRadius: '50%', background: 'var(--chalk)' });
+    return { d, x: 700 + r() * 1150, y: 200 + r() * 820, s: 6 + r() * 14, ph: r() * 6.28, o: 0.08 + r() * 0.22 };
+  });
+
+  /* headline */
+  const head = el('div', 'abs', stage, { left: '120px', top: '110px', font: '900 120px/1 Inter Display, Inter', letterSpacing: '-.045em', color: '#fff' });
+  const l1 = el('div', '', head, { whiteSpace: 'nowrap' });
+  const l2 = el('div', '', head, { whiteSpace: 'nowrap', marginTop: '6px' });
+  const c1 = ctx.split(l1, 'Turn Lecture Slides', 'char');
+  const l2a = el('span', '', l2, { display: 'inline-block', marginRight: '.26em' });
+  const l2b = el('span', '', l2, { display: 'inline-block', color: 'var(--teal)' });
+  const c2 = [...ctx.split(l2a, 'into', 'char'), ...ctx.split(l2b, 'Course Videos', 'char')];
+
+  /* camera with the stack */
+  const CX = 1300, CY = 640, CWID = 560, CH = 315;
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: `${CX}px ${CY}px` });
+  const shelf = el('div', 'abs', cam, { left: CX - 520 + 'px', top: CY + 200 + 'px', width: '1040px', height: '2px',
+    background: 'linear-gradient(90deg, transparent, rgba(228,233,240,.3), transparent)' });
+
+  const N = 7;
+  const cards = Array.from({ length: N }, (_, i) => {
+    const c = el('div', 'abs', cam, { left: CX - CWID / 2 + 'px', top: CY - CH / 2 + 'px', width: CWID + 'px', height: CH + 'px',
+      borderRadius: '14px', background: 'var(--paper)', overflow: 'hidden', transformOrigin: '50% 135%',
+      boxShadow: '0 30px 70px rgba(0,0,0,.55)' });
+    el('div', 'abs', c, { left: '44px', top: '42px', width: 180 + (i * 53) % 140 + 'px', height: '24px', borderRadius: '6px', background: 'var(--ink)' });
+    [0, 1, 2].forEach((k) => {
+      el('div', 'abs', c, { left: '44px', top: 106 + k * 46 + 'px', width: '12px', height: '12px', borderRadius: '50%', background: 'var(--slate)' });
+      el('div', 'abs', c, { left: '72px', top: 106 + k * 46 + 'px', width: 300 - ((i + k) * 37) % 120 + 'px', height: '12px', borderRadius: '6px', background: 'rgba(138,149,168,.55)' });
+    });
+    const shade = el('div', 'abs', c, { inset: 0, background: 'var(--night)', opacity: 0.55 + (N - 1 - i) * 0.05 });
+    const back = N - 1 - i;
+    gsap.set(c, { x: back * 5, y: -back * 14, scale: 1 - back * 0.025 });
+    return { c, shade, i };
+  });
+  const front = cards[N - 1];
+
+  /* play button + progress on the front card */
+  const play = el('div', 'abs', front.c, { left: CWID / 2 - 70 + 'px', top: CH / 2 - 70 + 'px', width: '140px', height: '140px', borderRadius: '50%',
+    background: 'var(--teal)', boxShadow: '0 0 0 12px rgba(31,163,154,.25), 0 20px 50px rgba(31,163,154,.6)' });
+  el('div', 'abs', play, { left: '54px', top: '40px', width: 0, height: 0, borderTop: '30px solid transparent', borderBottom: '30px solid transparent', borderLeft: '46px solid #fff' });
+  const track = el('div', 'abs', front.c, { left: '24px', right: '24px', bottom: '20px', height: '8px', borderRadius: '4px', background: 'rgba(28,36,51,.15)' });
+  const prog = el('div', 'abs', track, { left: 0, top: 0, bottom: 0, width: '100%', borderRadius: '4px', background: 'var(--teal)', transformOrigin: '0% 50%' });
+  gsap.set(prog, { scaleX: 0 });
+  gsap.set([play, track], { opacity: 0 });
+  gsap.set(play, { scale: 0.2 });
+
+  /* orbit ring */
+  const ring = el('div', 'abs', stage, { left: 0, top: 0, width: '1920px', height: '1080px', opacity: 0 });
+  ring.innerHTML = `<svg width="1920" height="1080"><ellipse id="orb" cx="${CX}" cy="${CY}" rx="520" ry="300" fill="none" stroke="#F2A93B" stroke-opacity=".35" stroke-width="2" stroke-dasharray="4 14"/></svg>`;
+  const orb = ring.querySelector('#orb');
+
+  /* amber labels */
+  const LAB = [['Before class', -600, 290, tBefore], ['For revision', 330, -265, tRevision], ['Online cohort', 300, 280, tCohort]];
+  const labels = LAB.map(([txt, dx, dy, t]) => {
+    const o = el('div', 'abs', stage, { left: CX + 'px', top: CY + 'px' });
+    const inner = el('div', '', o, { display: 'flex', alignItems: 'center', gap: '14px', padding: '16px 28px', borderRadius: '40px', whiteSpace: 'nowrap',
+      background: 'rgba(242,169,59,.14)', border: '2px solid var(--amber)', boxShadow: '0 0 40px rgba(242,169,59,.3)',
+      font: '700 30px/1 ui-monospace, Menlo, monospace', letterSpacing: '.08em', color: 'var(--amber)', textTransform: 'uppercase' });
+    el('div', '', inner, { width: '12px', height: '12px', borderRadius: '50%', background: 'var(--amber)' });
+    const s = el('span', '', inner); s.textContent = txt;
+    gsap.set(o, { xPercent: -50, yPercent: -50, opacity: 0, scale: 0.3 });
+    return { o, inner, dx, dy, t, ph: dx * 0.01 };
+  });
+
+  ctx.fx.vignette({ strength: 0.6 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  ctx.onFrame((t) => {
+    dust.forEach((p) => {
+      const y = p.y - ((t * p.s) % 900);
+      p.d.style.transform = `translate(${p.x + Math.sin(t * 0.6 + p.ph) * 12}px, ${y < 150 ? y + 900 : y}px)`;
+      p.d.style.opacity = p.o * (0.6 + 0.4 * Math.sin(t * 1.3 + p.ph));
+    });
+    orb.setAttribute('stroke-dashoffset', -t * 18);
+    labels.forEach((l) => { l.inner.style.transform = `translateY(${Math.sin(t * 1.4 + l.ph) * 5}px)`; });
+  });
+
+  /* ---- timeline ---- */
+  gsap.set(cam, { scale: 0.93 });
+  tl.from(cards.map((c) => c.c), { opacity: 0, y: '+=40', duration: 0.9, stagger: 0.05, ease: 'power2.out' }, 0);
+  tl.from([...c1, ...c2], { opacity: 0, y: 50, duration: 0.7, stagger: 0.018, ease: 'back.out(1.6)' }, 0.15);
+  tl.to(glow, { opacity: 1, duration: 3, ease: 'sine.inOut' }, 0.5);
+
+  tl.to(cam, { scale: 1.04, duration: ctx.dur - tYears, ease: 'power1.inOut' }, tYears);
+  cards.slice(0, N - 1).forEach((c) => {
+    const k = c.i - 2.5;
+    tl.to(c.c, { x: k * 70, y: -26 - Math.abs(k) * 4, rotation: k * 5, scale: 0.94, duration: 1.3, ease: 'expo.inOut' }, tLecture - 0.2 + c.i * 0.03);
+  });
+
+  tl.to(front.shade, { opacity: 0, duration: 0.6, ease: 'power2.out' }, tVideo - 0.3);
+  tl.to(cards.slice(0, N - 1).map((c) => c.shade), { opacity: 0.75, duration: 0.8 }, tVideo);
+  tl.to(front.c, { scale: 1.06, y: -14, boxShadow: '0 0 90px rgba(31,163,154,.55), 0 30px 70px rgba(0,0,0,.55)', duration: 0.8, ease: 'back.out(1.5)' }, tVideo - 0.1);
+  tl.to(play, { opacity: 1, scale: 1, duration: 0.6, ease: 'back.out(2)' }, tVideo);
+  tl.to(track, { opacity: 1, duration: 0.4 }, tVideo + 0.2);
+  tl.to(prog, { scaleX: 0.85, duration: ctx.dur - tVideo - 0.3, ease: 'none' }, tVideo + 0.3);
+  tl.to(play, { boxShadow: '0 0 0 22px rgba(31,163,154,.12), 0 20px 70px rgba(31,163,154,.8)', duration: 0.9, yoyo: true, repeat: 1, ease: 'sine.inOut' }, W(1, 'teach'));
+
+  tl.to(ring, { opacity: 1, duration: 0.8 }, tBefore - 0.4);
+  labels.forEach((l, i) => {
+    const ang = Math.atan2(l.dy, l.dx) + (i === 1 ? 0.7 : -0.7);
+    const mid = { x: Math.cos(ang) * 260, y: Math.sin(ang) * 200 };
+    const t0 = (i === 2 ? tOnline : l.t) - 0.25;
+    tl.to(l.o, { opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(1.8)' }, t0);
+    tl.to(l.o, { motionPath: { path: [{ x: 0, y: 0 }, mid, { x: l.dx, y: l.dy }], curviness: 1.3 }, duration: 0.95, ease: 'power3.out' }, t0);
+  });
+});

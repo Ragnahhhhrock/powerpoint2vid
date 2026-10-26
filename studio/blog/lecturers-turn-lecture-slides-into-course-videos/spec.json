@@ -1,0 +1,105 @@
+{
+  "title": "Lecturers: Turn Lecture Slides into Course Videos (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Turn Lecture Slides into Course Videos",
+      "bullets": [
+        "Before class",
+        "For revision",
+        "For students who missed the session",
+        "For an online cohort"
+      ],
+      "notes": "You already have years of lecture decks. Turned into video, they can teach on their own, before class, for revision, or for an online cohort.",
+      "minDuration": 10
+    },
+    {
+      "title": "Start with decks where video helps most",
+      "bullets": [
+        "Concepts students regularly struggle with",
+        "Stable content",
+        "Procedures",
+        "Pre-class content for weeks you want to flip"
+      ],
+      "notes": "Don't start with your whole course. A good first project is one assessment explainer. Every student needs it, and it saves you answering the same emails.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Split one lecture into short videos",
+      "bullets": [
+        "Before: Week 3 Lecture: Cell Biology (48 slides)",
+        "What a cell membrane does (8 slides)",
+        "Active vs passive transport (10 slides)",
+        "Worked example: osmosis in plant cells (9 slides)"
+      ],
+      "notes": "A fifty-minute lecture rarely works as one fifty-minute video. Give each concept its own short video, so students can find the part they need later.",
+      "minDuration": 11,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Write speaker notes as narration",
+      "bullets": [
+        "Before: \"Osmosis - water moves high to low conc.\"",
+        "After: \"Osmosis is the movement of water across a membrane.\"",
+        "Short sentences suit voices and captions"
+      ],
+      "notes": "Swap dot points for what you'd actually say to a student. Short sentences work better for voices and captions, so check how technical terms are pronounced.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Preview, then add it to your LMS",
+      "bullets": [
+        "Pick a voice and speaking speed",
+        "Turn on captions",
+        "Download as MP4",
+        "Name files clearly: \"BIO101 W3 Osmosis\""
+      ],
+      "notes": "Choose a slightly slower speed for dense material, and watch the whole video with sound. Then download the MP4 and add it to your course yourself.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Start with one lecture",
+      "bullets": [
+        "One deck and an hour",
+        "Try it on Basic",
+        "On Pro, a.i. directs the video"
+      ],
+      "notes": "On Pro, a.i. directs the video, timing each scene to your narration so a lecture lands like a produced explainer. Try one on Basic at powerpoint2vid.com.",
+      "minDuration": 10,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}

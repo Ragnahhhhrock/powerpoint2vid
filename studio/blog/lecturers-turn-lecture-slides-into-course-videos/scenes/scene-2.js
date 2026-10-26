@@ -1,0 +1,104 @@
+/* Scene 3 (index 2): "A fifty-minute lecture rarely works as one fifty-minute video.
+ * Give each concept its own short video, so students can find the part they need later."
+ * Storyboard: chalk stage, wide. One long ink bar, "Week 3: Cell Biology · 48 slides", stretches
+ * across the frame with 48 slide ticks. On "rarely works" it shudders with a coral flash. On "each"
+ * three cut lines appear. On "concept / its own" it cleaves into three teal segments that slide apart
+ * into cards: Cell membrane (8 slides), Active vs passive transport (10), Osmosis worked example (9).
+ * On "find the part they need" a cursor glides in and taps the osmosis card, which pops forward in amber. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const T = (i, w, f) => { const v = ctx.at(i, w); return (v == null || isNaN(v)) ? f : v; };
+  const fifty = T(0, 'fifty-minute', 0.71), works = T(0, 'works', 2.27), video = T(0, 'video.', 3.64);
+  const each = T(1, 'each', 4.94), concept = T(1, 'concept', 5.15), own = T(1, 'own', 5.84);
+  const find = T(1, 'find', 7.99), part = T(1, 'part', 8.39), need = T(1, 'need', 8.82);
+  const mono = 'ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(80% 70% at 50% 45%, #f4f7fa 0%, var(--chalk) 60%, #cfd7e2 100%)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 540px' });
+
+  el('div', 'abs', cam, { left: '-200px', top: '-300px', width: '1100px', height: '900px', borderRadius: '50%', background: 'radial-gradient(closest-side, rgba(31,163,154,.10), transparent)' });
+  el('div', 'abs', cam, { left: '1100px', top: '500px', width: '1100px', height: '900px', borderRadius: '50%', background: 'radial-gradient(closest-side, rgba(242,169,59,.10), transparent)' });
+
+  const head = el('div', 'abs', cam, { left: '160px', top: '250px', font: `600 24px/1 ${mono}`, letterSpacing: '.14em', color: 'var(--slate)' });
+  const headB = el('div', 'abs', cam, { left: '160px', top: '310px', font: `600 24px/1 ${mono}`, letterSpacing: '.14em', color: 'var(--teal)' });
+  head.textContent = '1 LECTURE · 1 VIDEO · 50 MIN';
+  headB.textContent = '3 CONCEPTS · 3 SHORT VIDEOS';
+  gsap.set(headB, { opacity: 0 });
+
+  const BX = 160, BW = 1600, BY = 470, BH = 140;
+  const bar = el('div', 'abs', cam, { left: BX + 'px', top: BY + 'px', width: BW + 'px', height: BH + 'px', borderRadius: '18px', background: 'var(--ink)', overflow: 'hidden', transformOrigin: '0% 50%', boxShadow: '0 30px 70px rgba(15,26,43,.28)' });
+  for (let i = 1; i < 48; i++) el('div', 'abs', bar, { left: (BW / 48) * i + 'px', top: '96px', width: '2px', height: '30px', background: 'rgba(228,233,240,.16)' });
+  const barTitle = el('div', 'abs', bar, { left: '40px', top: '36px', font: '800 46px/1 Inter Display, Inter', letterSpacing: '-.03em', color: '#fff', whiteSpace: 'nowrap' });
+  barTitle.textContent = 'Week 3: Cell Biology';
+  const barCount = el('div', 'abs', bar, { right: '40px', top: '44px', font: `600 28px/1 ${mono}`, letterSpacing: '.1em', color: 'var(--amber)' });
+  barCount.textContent = '48 SLIDES';
+  const crack = el('div', 'abs', bar, { inset: 0, background: 'var(--coral)', opacity: 0, mixBlendMode: 'screen' });
+
+  const SEG = [[8, 'Cell membrane'], [10, 'Active vs passive transport'], [9, 'Osmosis worked example']];
+  let acc = 0;
+  const segX = SEG.map(([n]) => { const x = BX + (acc / 48) * BW; acc += n; return [x, (n / 48) * BW]; });
+  const cutXs = [segX[1][0], segX[2][0], segX[2][0] + segX[2][1]];
+  const cuts = cutXs.map((x) => el('div', 'abs', cam, { left: x - 2 + 'px', top: BY - 30 + 'px', width: '4px', height: BH + 60 + 'px', borderRadius: '2px', background: 'var(--teal)', boxShadow: '0 0 18px rgba(31,163,154,.8)', transformOrigin: '50% 50%', opacity: 0 }));
+
+  const CW = 500, CH = 320, CY = 380, CX = [160, 710, 1260];
+  const cards = SEG.map(([n, name], i) => {
+    const c = el('div', 'abs', cam, { left: segX[i][0] + 'px', top: BY + 'px', width: segX[i][1] + 'px', height: BH + 'px', borderRadius: '18px', backgroundColor: '#1C2433', overflow: 'hidden', transformOrigin: '50% 50%', boxShadow: '0 30px 70px rgba(15,26,43,.25)', opacity: 0 });
+    const inner = el('div', 'abs', c, { left: 0, top: 0, width: CW + 'px', height: CH + 'px', opacity: 0 });
+    const k = el('div', 'abs', inner, { left: '36px', top: '34px', font: `600 20px/1 ${mono}`, letterSpacing: '.14em', color: 'rgba(255,255,255,.75)' });
+    k.textContent = 'VIDEO ' + (i + 1);
+    const t = el('div', 'abs', inner, { left: '36px', top: '76px', width: '428px', font: '800 38px/1.1 Inter Display, Inter', letterSpacing: '-.03em', color: '#fff' });
+    t.textContent = name;
+    const play = el('div', 'abs', inner, { left: '36px', top: '226px', width: '60px', height: '60px', borderRadius: '50%', background: 'rgba(255,255,255,.22)' });
+    play.innerHTML = '<svg width="60" height="60"><path d="M25 19 L42 30 L25 41 Z" fill="#fff"/></svg>';
+    const cnt = el('div', 'abs', inner, { right: '36px', top: '246px', font: `700 26px/1 ${mono}`, letterSpacing: '.08em', color: '#fff' });
+    cnt.textContent = n + ' SLIDES';
+    return { c, inner, k, t, cnt, play };
+  });
+  const osm = cards[2];
+
+  const ripple = el('div', 'abs', cam, { left: 0, top: 0, width: '120px', height: '120px', borderRadius: '50%', border: '5px solid var(--amber)', opacity: 0, zIndex: 9 });
+  const cursor = el('div', 'abs', cam, { left: 0, top: 0, width: '60px', height: '70px', transformOrigin: '6px 6px', filter: 'drop-shadow(0 8px 14px rgba(15,26,43,.35))', zIndex: 10 });
+  cursor.innerHTML = '<svg width="60" height="70"><path d="M6 4 L6 52 L18 40 L27 60 L35 56 L26 37 L44 37 Z" fill="#0F1A2B" stroke="#fff" stroke-width="3" stroke-linejoin="round"/></svg>';
+  gsap.set(cursor, { x: 1960, y: 1120 });
+
+  ctx.fx.vignette({ strength: 0.25 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  tl.to(cam, { scale: 1.035, duration: ctx.dur, ease: 'none' }, 0);
+  tl.from(bar, { scaleX: 0.02, opacity: 0, duration: 1.0, ease: 'expo.out' }, 0);
+  tl.from(head, { opacity: 0, y: 14, duration: 0.6 }, 0.2);
+  tl.from(barTitle, { opacity: 0, x: -30, duration: 0.6 }, Math.min(fifty, 0.5));
+  tl.from(barCount, { opacity: 0, x: 30, duration: 0.6 }, Math.min(fifty, 0.5) + 0.15);
+
+  tl.to(bar, { x: 14, rotation: 0.4, duration: 0.06, yoyo: true, repeat: 7, ease: 'sine.inOut' }, works - 0.05);
+  tl.fromTo(crack, { opacity: 0 }, { opacity: 0.45, duration: 0.12, yoyo: true, repeat: 1, immediateRender: false }, works);
+  tl.to(bar, { boxShadow: '0 30px 70px rgba(232,102,90,.35)', duration: 0.5, yoyo: true, repeat: 1 }, works);
+  tl.to(head, { color: '#E8665A', duration: 0.3 }, video - 0.4);
+
+  tl.fromTo(cuts, { opacity: 0, scaleY: 0 }, { opacity: 1, scaleY: 1, duration: 0.35, stagger: 0.07, ease: 'back.out(2)', immediateRender: false }, each - 0.1);
+  tl.to([barTitle, barCount], { opacity: 0, duration: 0.25 }, each);
+  tl.set(cards.map((k) => k.c), { opacity: 1 }, concept - 0.02);
+  tl.to(bar, { opacity: 0, duration: 0.2 }, concept);
+  tl.to(cuts, { opacity: 0, duration: 0.3 }, concept + 0.05);
+  cards.forEach((k, i) => {
+    tl.to(k.c, { left: CX[i], top: CY, width: CW, height: CH, borderRadius: 24, backgroundColor: '#1FA39A', duration: 0.95, ease: 'expo.inOut' }, concept + i * 0.06);
+    tl.to(k.inner, { opacity: 1, duration: 0.4 }, concept + 0.4 + i * 0.08);
+    tl.fromTo(k.inner, { y: 20 }, { y: 0, duration: 0.6, ease: 'back.out(1.6)', immediateRender: false }, concept + 0.4 + i * 0.08);
+  });
+  tl.to(head, { opacity: 0, duration: 0.3 }, concept);
+  tl.to(headB, { opacity: 1, duration: 0.5 }, concept + 0.3);
+
+  cards.forEach((k, i) => tl.to(k.c, { y: -6, duration: 1.2, yoyo: true, repeat: 1, ease: 'sine.inOut' }, own + 0.8 + i * 0.15));
+
+  // cursor taps the play button, then rests below the card so nothing is covered
+  const tx = CX[2] + 66, ty = CY + 256;
+  tl.to(cursor, { x: tx, y: ty, duration: Math.max(0.6, part - (find - 0.5) - 0.05), ease: 'power3.inOut' }, find - 0.5);
+  tl.to(cursor, { scale: 0.82, duration: 0.09, yoyo: true, repeat: 1, ease: 'power2.inOut' }, part);
+  tl.fromTo(ripple, { scale: 0.3, opacity: 1, x: tx - 60, y: ty - 60 }, { scale: 2.2, opacity: 0, duration: 0.8, ease: 'power2.out', immediateRender: false }, part + 0.05);
+  tl.to(osm.c, { scale: 1.09, y: -24, backgroundColor: '#F2A93B', boxShadow: '0 40px 90px rgba(242,169,59,.55)', zIndex: 5, duration: 0.6, ease: 'back.out(1.8)' }, part + 0.08);
+  tl.to([osm.t, osm.cnt], { color: '#1C2433', duration: 0.4 }, part + 0.08);
+  tl.to(osm.k, { color: 'rgba(28,36,51,.7)', duration: 0.4 }, part + 0.08);
+  tl.to(osm.play, { backgroundColor: 'rgba(28,36,51,.85)', duration: 0.4 }, part + 0.08);
+  tl.to([cards[0].c, cards[1].c], { opacity: 0.45, scale: 0.97, duration: 0.6 }, need - 0.2);
+  tl.to(cursor, { x: tx + 40, y: ty + 150, duration: 0.8, ease: 'power2.out' }, need + 0.1);
+});

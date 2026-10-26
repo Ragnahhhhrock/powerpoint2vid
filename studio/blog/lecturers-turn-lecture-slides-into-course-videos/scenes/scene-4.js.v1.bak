@@ -1,0 +1,157 @@
+/* Scene 4 — "Pick a voice and a slightly slower speed for dense material, turn on captions, and watch it all
+ * with sound. Then download the MP4 and add it to your course yourself."
+ * Storyboard: ink stage, a clean video player sits centre-left with a settings panel beside it. On "voice"
+ * a voice chip selects; on "slower speed" the dial needle eases from 1.00× to 0.90×. On "captions" the CC toggle
+ * flips teal and captions appear in the player. On "with sound" a waveform runs across the timeline. On
+ * "download the MP4" a file tile, BIO101 W3 Osmosis.mp4, drops out of the player. On "add it to your course"
+ * it glides into a slate LMS course folder. The slide's four bullets become these four interface beats. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const A = (i, w) => ctx.at(i, w);
+  const tVoice = A(0, 'voice'), tSlower = A(0, 'slower'), tCap = A(0, 'captions'), tWatch = A(0, 'watch'), tSound = A(0, 'sound.');
+  const tDown = A(1, 'download'), tMp4 = A(1, 'MP4'), tAdd = A(1, 'add'), tCourse = A(1, 'course');
+  const MONO = 'ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(60% 60% at 45% 45%, #26324a 0%, var(--ink) 55%, var(--night) 100%)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 540px' });
+  const glow = el('div', 'abs', cam, { left: '200px', top: '120px', width: '1260px', height: '720px', borderRadius: '50%', background: 'radial-gradient(closest-side, rgba(31,163,154,.18), transparent)', filter: 'blur(20px)' });
+
+  /* ---------- player ---------- */
+  const PL = 260, PT = 170, PW = 1080, PH = 608;
+  const player = el('div', 'abs', cam, { left: PL + 'px', top: PT + 'px', width: PW + 'px', height: PH + 'px', borderRadius: '22px', overflow: 'hidden', background: '#0b1220', boxShadow: '0 50px 110px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.08)' });
+  const video = el('div', 'abs', player, { left: 0, top: 0, width: PW + 'px', height: '528px', background: 'radial-gradient(80% 90% at 30% 30%, #1d4b55 0%, #12283a 60%, #0d1828 100%)', overflow: 'hidden' });
+  const vt = el('div', 'abs', video, { left: '56px', top: '48px', font: '800 56px/1 Inter Display, Inter', letterSpacing: '-.04em', color: '#fff' }); vt.textContent = 'Osmosis';
+  const vs = el('div', 'abs', video, { left: '60px', top: '118px', font: `600 18px/1 ${MONO}`, letterSpacing: '.14em', color: 'rgba(255,255,255,.55)' }); vs.textContent = 'BIO101 · WEEK 3';
+  const membrane = el('div', 'abs', video, { left: '538px', top: '170px', width: '4px', height: '300px', background: 'repeating-linear-gradient(180deg, rgba(228,233,240,.8) 0 14px, transparent 14px 26px)' });
+  const r = ctx.rand(7);
+  const dots = Array.from({ length: 26 }, (_, i) => {
+    const d = el('div', 'abs', video, { left: 0, top: 0, width: '16px', height: '16px', borderRadius: '50%', background: i % 3 ? 'rgba(120,210,230,.85)' : 'rgba(242,169,59,.9)' });
+    return { d, x: 120 + r() * 360, y: 190 + r() * 260, s: 10 + r() * 30, ph: r() * 6.28, cross: i % 3 !== 0 && i % 2 === 0 };
+  });
+  const caption = el('div', 'abs', video, { left: '140px', width: '800px', bottom: '28px', textAlign: 'center', font: '600 30px/1.3 Inter', color: '#fff' });
+  const capIn = el('span', '', caption, { background: 'rgba(0,0,0,.72)', padding: '8px 18px', borderRadius: '8px' });
+  capIn.textContent = 'Water moves toward the higher solute side.';
+
+  const bar = el('div', 'abs', player, { left: 0, top: '528px', width: PW + 'px', height: '80px', background: '#0e1626', borderTop: '1px solid rgba(255,255,255,.07)' });
+  const play = el('div', 'abs', bar, { left: '34px', top: '26px', width: 0, height: 0, borderLeft: '24px solid #fff', borderTop: '14px solid transparent', borderBottom: '14px solid transparent' });
+  const track = el('div', 'abs', bar, { left: '96px', top: '20px', width: '700px', height: '40px' });
+  const rail = el('div', 'abs', track, { left: 0, top: '18px', width: '700px', height: '4px', borderRadius: '2px', background: 'rgba(255,255,255,.14)' });
+  const cv = el('canvas', 'abs', track, { left: 0, top: 0, width: '700px', height: '40px' }); cv.width = 700; cv.height = 40;
+  const g = cv.getContext('2d');
+  const head = el('div', 'abs', track, { left: '-7px', top: '13px', width: '14px', height: '14px', borderRadius: '50%', background: '#fff', boxShadow: '0 0 12px rgba(31,163,154,.9)' });
+  const spd = el('div', 'abs', bar, { left: '826px', top: '27px', font: `700 24px/1 ${MONO}`, color: 'rgba(255,255,255,.8)' });
+  const cc = el('div', 'abs', bar, { left: '920px', top: '22px', width: '56px', height: '36px', borderRadius: '7px', border: '2px solid rgba(255,255,255,.4)', font: '800 18px/32px Inter', textAlign: 'center', color: 'rgba(255,255,255,.6)', boxSizing: 'border-box' }); cc.textContent = 'CC';
+  const dl = el('div', 'abs', bar, { left: '1000px', top: '18px', width: '48px', height: '44px', borderRadius: '10px', transformOrigin: '50% 50%' });
+  dl.innerHTML = '<svg width="48" height="44" viewBox="0 0 48 44"><path d="M24 8v20M15 20l9 9 9-9M12 36h24" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+  /* ---------- settings panel ---------- */
+  const panel = el('div', 'abs', cam, { left: '1400px', top: PT + 'px', width: '440px', height: PH + 'px', borderRadius: '22px', background: 'rgba(255,255,255,.045)', boxShadow: '0 0 0 1px rgba(255,255,255,.08), 0 40px 90px rgba(0,0,0,.4)' });
+  const lab = (txt, top) => { const l = el('div', 'abs', panel, { left: '36px', top: top + 'px', font: `600 18px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--slate)' }); l.textContent = txt; return l; };
+  lab('VOICE', 38);
+  const chips = ['Ava', 'Leo', 'Mia'].map((n, i) => {
+    const c = el('div', 'abs', panel, { left: 36 + i * 128 + 'px', top: '72px', width: '112px', height: '52px', borderRadius: '26px', border: '2px solid rgba(255,255,255,.18)', boxSizing: 'border-box', font: '700 22px/48px Inter', textAlign: 'center', color: 'rgba(255,255,255,.7)' });
+    c.textContent = n; return c;
+  });
+  lab('SPEED', 172);
+  const dial = el('div', 'abs', panel, { left: '70px', top: '206px', width: '300px', height: '170px' });
+  dial.innerHTML = `<svg width="300" height="170" viewBox="0 0 300 170">
+    <path d="M30 150 A120 120 0 0 1 270 150" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="14" stroke-linecap="round"/>
+    <path d="M30 150 A120 120 0 0 1 270 150" fill="none" stroke="#1FA39A" stroke-width="14" stroke-linecap="round" stroke-dasharray="377" stroke-dashoffset="188" id="darc"/>
+    <g id="needle"><line x1="150" y1="150" x2="150" y2="50" stroke="#F2A93B" stroke-width="6" stroke-linecap="round"/></g>
+    <circle cx="150" cy="150" r="12" fill="#F2A93B"/></svg>`;
+  const needle = dial.querySelector('#needle'), darc = dial.querySelector('#darc');
+  const readout = el('div', 'abs', panel, { left: 0, width: '440px', top: '388px', textAlign: 'center', font: '800 54px/1 Inter Display, Inter', letterSpacing: '-.03em', color: '#fff', fontVariantNumeric: 'tabular-nums' });
+  lab('CAPTIONS', 506);
+  const tog = el('div', 'abs', panel, { left: '308px', top: '490px', width: '96px', height: '52px', borderRadius: '26px', background: 'rgba(255,255,255,.16)' });
+  const knob = el('div', 'abs', tog, { left: '6px', top: '6px', width: '40px', height: '40px', borderRadius: '50%', background: '#fff', boxShadow: '0 4px 10px rgba(0,0,0,.35)' });
+
+  /* ---------- LMS folder ---------- */
+  const FL = 1400, FT = 250;
+  const folder = el('div', 'abs', cam, { left: FL + 'px', top: FT + 'px', width: '440px', height: '500px', borderRadius: '8px 22px 22px 22px', background: 'linear-gradient(180deg, #9aa5b8, #8A95A8 40%, #6f7a8e)', boxShadow: '0 40px 90px rgba(0,0,0,.5)' });
+  el('div', 'abs', folder, { left: 0, top: '-34px', width: '170px', height: '40px', borderRadius: '14px 14px 0 0', background: '#9aa5b8' });
+  const ft = el('div', 'abs', folder, { left: '30px', top: '30px', font: '800 44px/1 Inter Display, Inter', letterSpacing: '-.03em', color: 'var(--night)' }); ft.textContent = 'BIO101';
+  const fs = el('div', 'abs', folder, { left: '32px', top: '86px', font: `700 17px/1 ${MONO}`, letterSpacing: '.14em', color: 'rgba(15,26,43,.65)' }); fs.textContent = 'WEEK 3 · COURSE';
+  ['W3 Lecture slides.pdf', 'W3 Reading list'].forEach((n, i) => {
+    const row = el('div', 'abs', folder, { left: '20px', top: 140 + i * 100 + 'px', width: '400px', height: '84px', borderRadius: '14px', background: 'rgba(247,244,238,.55)', font: '600 23px/84px Inter', color: 'rgba(15,26,43,.75)', paddingLeft: '24px', boxSizing: 'border-box' });
+    row.textContent = n;
+  });
+  const slot = el('div', 'abs', folder, { left: '20px', top: '340px', width: '400px', height: '84px', borderRadius: '14px', border: '3px dashed rgba(15,26,43,.35)', boxSizing: 'border-box' });
+
+  /* ---------- file tile ---------- */
+  const TL0 = 600, TT0 = 800;
+  const tile = el('div', 'abs', cam, { left: TL0 + 'px', top: TT0 + 'px', width: '400px', height: '84px', borderRadius: '14px', background: 'var(--paper)', boxShadow: '0 24px 50px rgba(0,0,0,.45)', transformOrigin: '50% 50%' });
+  const ic = el('div', 'abs', tile, { left: '14px', top: '14px', width: '56px', height: '56px', borderRadius: '10px', background: 'var(--coral)', font: '800 16px/56px Inter', textAlign: 'center', color: '#fff' }); ic.textContent = 'MP4';
+  const tn = el('div', 'abs', tile, { left: '84px', top: 0, font: '700 22px/84px Inter', letterSpacing: '-.01em', color: 'var(--night)', whiteSpace: 'nowrap' }); tn.textContent = 'BIO101 W3 Osmosis.mp4';
+  const check = el('div', 'abs', cam, { left: FL + 372 + 'px', top: FT + 330 + 'px', width: '44px', height: '44px', borderRadius: '50%', background: 'var(--teal)', boxShadow: '0 0 24px rgba(31,163,154,.8)' });
+  check.innerHTML = '<svg width="44" height="44"><path d="M13 23l6 6 12-13" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+  ctx.fx.vignette({ strength: 0.5 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  /* ---------- state + frame ---------- */
+  const S = { speed: 1.0, wave: 0, prog: 0.08, amp: 0 };
+  const hs = Array.from({ length: 70 }, () => 0.25 + r() * 0.75);
+  ctx.onFrame((t) => {
+    const ang = (S.speed - 1) * 180; // 1.0 = up, ±0.5 = ±90°
+    needle.setAttribute('transform', `rotate(${ang} 150 150)`);
+    darc.setAttribute('stroke-dashoffset', String(377 - 377 * ((S.speed - 0.5) / 1)));
+    readout.textContent = S.speed.toFixed(2) + '×';
+    spd.textContent = S.speed.toFixed(1) + '×';
+    head.style.transform = `translateX(${S.prog * 700}px)`;
+    g.clearRect(0, 0, 700, 40);
+    const n = Math.floor(hs.length * S.wave);
+    for (let i = 0; i < n; i++) {
+      const x = i * 10 + 2, h = 4 + 30 * hs[i] * S.amp * (0.6 + 0.4 * Math.sin(t * 9 + i * 0.8));
+      g.fillStyle = x / 700 < S.prog ? 'rgba(31,163,154,.95)' : 'rgba(228,233,240,.45)';
+      g.fillRect(x, 20 - h / 2, 5, h);
+    }
+    dots.forEach((o) => {
+      let x = o.x + Math.sin(t * 1.2 + o.ph) * o.s;
+      if (o.cross) x += ((t * 40 + o.ph * 60) % 520);
+      if (x > 1000) x -= 880;
+      const y = o.y + Math.cos(t * 1.5 + o.ph) * 10;
+      o.d.style.transform = `translate(${x}px, ${y}px)`;
+    });
+  });
+
+  /* ---------- timeline ---------- */
+  gsap.set([caption, check], { opacity: 0 });
+  gsap.set(folder, { opacity: 0, y: 50 });
+  gsap.set(tile, { opacity: 0, scale: 0.6, y: -140 });
+  tl.from([player, glow], { opacity: 0, y: 40, scale: 0.97, duration: 0.8 }, 0);
+  tl.from(panel, { opacity: 0, x: 40, duration: 0.8 }, 0.15);
+  tl.to(cam, { scale: 1.035, x: -12, duration: ctx.dur, ease: 'none' }, 0);
+
+  // voice
+  tl.to(chips[0], { background: '#1FA39A', borderColor: '#1FA39A', color: '#fff', boxShadow: '0 0 30px rgba(31,163,154,.6)', duration: 0.3 }, tVoice);
+  tl.fromTo(chips[0], { scale: 0.85 }, { scale: 1, duration: 0.6, ease: 'back.out(2)', immediateRender: false }, tVoice);
+  // slower speed
+  tl.to(S, { speed: 0.9, duration: 1.1, ease: 'power2.inOut' }, tSlower);
+  tl.fromTo(readout, { color: '#fff' }, { color: '#F2A93B', duration: 0.4, immediateRender: false }, A(0, 'speed'));
+  // captions
+  tl.to(tog, { background: '#1FA39A', boxShadow: '0 0 28px rgba(31,163,154,.7)', duration: 0.3 }, tCap - 0.1);
+  tl.to(knob, { x: 44, duration: 0.45, ease: 'back.out(1.8)' }, tCap - 0.1);
+  tl.to(cc, { borderColor: '#1FA39A', background: '#1FA39A', color: '#fff', duration: 0.3 }, tCap);
+  tl.fromTo(caption, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, immediateRender: false }, tCap + 0.1);
+  // watch with sound
+  tl.to(play, { borderLeftColor: '#1FA39A', scale: 1.2, duration: 0.3, yoyo: true, repeat: 1 }, tWatch);
+  tl.to(S, { prog: 0.62, duration: ctx.dur - tWatch, ease: 'none' }, tWatch);
+  tl.to(S, { wave: 1, duration: 1.0, ease: 'power2.out' }, tSound - 0.55);
+  tl.to(S, { amp: 1, duration: 0.6 }, tSound - 0.55);
+
+  // download the MP4
+  tl.to(dl, { background: 'rgba(232,102,90,.9)', scale: 1.15, duration: 0.3, ease: 'back.out(2)' }, tDown - 0.1);
+  tl.to(dl, { scale: 1, duration: 0.4 }, tDown + 0.25);
+  tl.to(tile, { opacity: 1, scale: 1, y: 0, duration: 0.7, ease: 'back.out(1.5)' }, tDown + 0.05);
+  tl.fromTo(ic, { scale: 1 }, { scale: 1.2, duration: 0.18, yoyo: true, repeat: 1, immediateRender: false }, tMp4);
+  tl.to(panel, { opacity: 0, x: 40, duration: 0.5, ease: 'power2.in' }, tMp4 - 0.1);
+  tl.to(folder, { opacity: 1, y: 0, duration: 0.7, ease: 'back.out(1.3)' }, tMp4 + 0.3);
+  // add it to your course
+  const dx = FL + 20 - TL0, dy = FT + 340 - TT0;
+  tl.to(tile, { x: dx, duration: 0.95, ease: 'power3.inOut' }, tAdd - 0.15);
+  tl.to(tile, { y: dy, duration: 0.95, ease: 'back.inOut(1.2)' }, tAdd - 0.15);
+  tl.to(tile, { rotation: 4, duration: 0.45, ease: 'power2.out', yoyo: true, repeat: 1 }, tAdd - 0.15);
+  tl.to(slot, { opacity: 0, duration: 0.2 }, tAdd + 0.7);
+  tl.fromTo(check, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: 'back.out(2.2)', immediateRender: false }, tCourse + 0.25);
+  tl.to(folder, { boxShadow: '0 40px 90px rgba(0,0,0,.5), 0 0 60px rgba(31,163,154,.45)', duration: 0.5 }, tCourse + 0.25);
+});
