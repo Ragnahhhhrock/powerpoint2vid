@@ -65,6 +65,11 @@
           <h1 class="auth__title">Your account</h1>
           <p class="muted" id="who"></p>
           <div class="hint" id="plan-box"></div>
+          <form id="form-redeem" class="controls" hidden>
+            <input id="redeem-code" type="text" placeholder="Have a code?" autocomplete="off" aria-label="Pro code">
+            <button class="btn" type="submit">Redeem</button>
+            <span class="status" id="redeem-msg"></span>
+          </form>
           <div class="controls">
             <a class="btn btn--accent" id="go-pricing" href="/pricing">See plans</a>
             <a class="btn" id="go-app" href="/">Open the converter</a>
@@ -127,6 +132,14 @@
     fetch('/api/logout', { method: 'POST', credentials: 'same-origin' }).then(function () { location.href = '/'; });
   };
 
+  $('form-redeem').addEventListener('submit', function (e) {
+    e.preventDefault();
+    fetch('/api/redeem', { method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'same-origin',
+      body: JSON.stringify({ code: $('redeem-code').value }) })
+      .then(function (r) { return r.json(); })
+      .then(function (d) { if (d.ok) location.reload(); else $('redeem-msg').textContent = d.error || 'Something went wrong.'; });
+  });
+
   window.P2V.get(true).then(function (me) {
     if (me.configured === false) { $('not-configured').hidden = false; return; }
     if (!me.loggedIn) { setMode(mode); $('auth-out').hidden = false; return; }
@@ -138,9 +151,10 @@
     } else {
       $('plan-box').textContent = 'You do not have an active plan yet. Choose a plan to export videos.';
       $('go-app').className = 'btn btn--ghost';
+      $('form-redeem').hidden = false;
     }
     var m = $('manage');
-    if (me.pro) { m.hidden = false; m.href = me.portalUrl || 'mailto:contact@powerpoint2vid.com?subject=Manage%20my%20subscription'; }
+    if (me.pro && me.plan !== 'gift') { m.hidden = false; m.href = me.portalUrl || 'mailto:contact@powerpoint2vid.com?subject=Manage%20my%20subscription'; }
   });
 })();
 </script>
