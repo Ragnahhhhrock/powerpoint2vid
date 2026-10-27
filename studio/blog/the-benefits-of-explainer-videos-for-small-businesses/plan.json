@@ -1,0 +1,865 @@
+{
+  "title": "The Benefits of Explainer Videos for Small Businesses (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0F1A2B",
+      "ink": "#1C2433",
+      "paper": "#F7F4EE",
+      "amber": "#F2A541",
+      "teal": "#2BB3A3",
+      "coral": "#E8604C",
+      "mist": "#9AA6B8"
+    },
+    "font": "Inter Display",
+    "motion": "Confident, unhurried pace with soft ease-out arrivals and springy pops on key words; the camera drifts slowly and pushes in on payoffs.",
+    "story": "We move from the noisy, repetitive day of a small business (dark night stage) into the calm of one well-made video (warm paper stages), alternating dark and light, wide and close, and ending on a bright, focused call to action."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "Your small business answers the same questions every day. What if you explained it well once, and a video kept doing the job for you?",
+      "storyboard": "Night stage: speech-bubble question marks pop in one after another until they crowd the frame, echoing 'the same questions every day'. On 'explained it well once' they all collapse into a single amber play button at centre. The camera pushes in as the headline 'Explain it well once' sets beneath it at 140px in paper white. The small line 'For small businesses' fades in in mist. The original slide's overlapping title is rebuilt cleanly; the clutter is cut.",
+      "minDuration": 9,
+      "slide": {
+        "title": "The Benefits of Explainer Videos",
+        "text": "For small businesses. Explain it well once",
+        "notes": "Your small business answers the same questions every day. What if you explained it well once, and a video kept doing the job for you?",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 9.347,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.179,
+          "text": "Your small business answers the same questions every day.",
+          "words": [
+            {
+              "w": "Your",
+              "t": 0.8
+            },
+            {
+              "w": "small",
+              "t": 1.09
+            },
+            {
+              "w": "business",
+              "t": 1.415
+            },
+            {
+              "w": "answers",
+              "t": 1.949
+            },
+            {
+              "w": "the",
+              "t": 2.402
+            },
+            {
+              "w": "same",
+              "t": 2.518
+            },
+            {
+              "w": "questions",
+              "t": 2.797
+            },
+            {
+              "w": "every",
+              "t": 3.343
+            },
+            {
+              "w": "day.",
+              "t": 3.656
+            }
+          ]
+        },
+        {
+          "t": 4.62,
+          "end": 8.497,
+          "text": "What if you explained it well once, and a video kept doing the job for you?",
+          "words": [
+            {
+              "w": "What",
+              "t": 4.62
+            },
+            {
+              "w": "if",
+              "t": 4.852
+            },
+            {
+              "w": "you",
+              "t": 4.968
+            },
+            {
+              "w": "explained",
+              "t": 5.131
+            },
+            {
+              "w": "it",
+              "t": 5.63
+            },
+            {
+              "w": "well",
+              "t": 5.746
+            },
+            {
+              "w": "once,",
+              "t": 6.036
+            },
+            {
+              "w": "and",
+              "t": 6.593
+            },
+            {
+              "w": "a",
+              "t": 6.779
+            },
+            {
+              "w": "video",
+              "t": 6.849
+            },
+            {
+              "w": "kept",
+              "t": 7.244
+            },
+            {
+              "w": "doing",
+              "t": 7.453
+            },
+            {
+              "w": "the",
+              "t": 7.696
+            },
+            {
+              "w": "job",
+              "t": 7.812
+            },
+            {
+              "w": "for",
+              "t": 8.045
+            },
+            {
+              "w": "you?",
+              "t": 8.196
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.497
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Every small business fields the same questions daily. A short video answers each one the same way, without anyone on your team stopping what they're doing.",
+      "storyboard": "Paper stage, wide. Three customer bubbles slide in from the left in ink: 'How does delivery work?', 'What's included in the basic plan?', 'How do I book?'. On 'a short video' a teal video card appears on the right and lines draw from each bubble into it. On 'the same way' three identical answer cards stamp out in unison. The headline 'Same answer, every customer' holds at the top in 100px. Bullet layout is cut.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Explain once, reuse many times",
+        "text": "\"How does delivery work?\". \"What's included in the basic plan?\". \"How do I book?\". Same answer for every customer",
+        "notes": "Every small business fields the same questions daily. A short video answers each one the same way, without anyone on your team stopping what they're doing.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 10.351,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.649,
+          "text": "Every small business fields the same questions daily.",
+          "words": [
+            {
+              "w": "Every",
+              "t": 0.55
+            },
+            {
+              "w": "small",
+              "t": 0.898
+            },
+            {
+              "w": "business",
+              "t": 1.2
+            },
+            {
+              "w": "fields",
+              "t": 1.699
+            },
+            {
+              "w": "the",
+              "t": 2.129
+            },
+            {
+              "w": "same",
+              "t": 2.256
+            },
+            {
+              "w": "questions",
+              "t": 2.535
+            },
+            {
+              "w": "daily.",
+              "t": 3.046
+            }
+          ]
+        },
+        {
+          "t": 4.033,
+          "end": 9.501,
+          "text": "A short video answers each one the same way, without anyone on your team stopping what they're doing.",
+          "words": [
+            {
+              "w": "A",
+              "t": 4.033
+            },
+            {
+              "w": "short",
+              "t": 4.195
+            },
+            {
+              "w": "video",
+              "t": 4.485
+            },
+            {
+              "w": "answers",
+              "t": 4.915
+            },
+            {
+              "w": "each",
+              "t": 5.333
+            },
+            {
+              "w": "one",
+              "t": 5.612
+            },
+            {
+              "w": "the",
+              "t": 5.821
+            },
+            {
+              "w": "same",
+              "t": 5.937
+            },
+            {
+              "w": "way,",
+              "t": 6.215
+            },
+            {
+              "w": "without",
+              "t": 6.842
+            },
+            {
+              "w": "anyone",
+              "t": 7.213
+            },
+            {
+              "w": "on",
+              "t": 7.608
+            },
+            {
+              "w": "your",
+              "t": 7.724
+            },
+            {
+              "w": "team",
+              "t": 7.898
+            },
+            {
+              "w": "stopping",
+              "t": 8.247
+            },
+            {
+              "w": "what",
+              "t": 8.641
+            },
+            {
+              "w": "they're",
+              "t": 8.781
+            },
+            {
+              "w": "doing.",
+              "t": 9.001
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.501
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "Video shows the steps while it explains them. It works when you're offline, keeps every detail accurate and on brand, and captions help more people understand.",
+      "storyboard": "Night stage split into four tiles that light up one at a time. On 'shows the steps' a numbered 1-2-3 path animates in teal. On 'when you're offline' a moon rises over a clock reading late night, with 'Nights & weekends'. On 'accurate and on brand' identical amber cards line up. On 'captions' a muted speaker icon gets a caption bar sliding in. The headline 'Clearer. Consistent. Always on.' settles across the top at 110px.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Clearer, consistent and always on",
+        "text": "Shows the steps while explaining them. Works at night and on weekends. Every customer hears the same message. Captions for sound-off viewers",
+        "notes": "Video shows the steps while it explains them. It works when you're offline, keeps every detail accurate and on brand, and captions help more people understand.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 11,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.011,
+          "text": "Video shows the steps while it explains them.",
+          "words": [
+            {
+              "w": "Video",
+              "t": 0.55
+            },
+            {
+              "w": "shows",
+              "t": 1.026
+            },
+            {
+              "w": "the",
+              "t": 1.328
+            },
+            {
+              "w": "steps",
+              "t": 1.455
+            },
+            {
+              "w": "while",
+              "t": 1.838
+            },
+            {
+              "w": "it",
+              "t": 2.059
+            },
+            {
+              "w": "explains",
+              "t": 2.187
+            },
+            {
+              "w": "them.",
+              "t": 2.686
+            }
+          ]
+        },
+        {
+          "t": 3.452,
+          "end": 9.965,
+          "text": "It works when you're offline, keeps every detail accurate and on brand, and captions help more people understand.",
+          "words": [
+            {
+              "w": "It",
+              "t": 3.452
+            },
+            {
+              "w": "works",
+              "t": 3.638
+            },
+            {
+              "w": "when",
+              "t": 3.963
+            },
+            {
+              "w": "you're",
+              "t": 4.102
+            },
+            {
+              "w": "offline,",
+              "t": 4.288
+            },
+            {
+              "w": "keeps",
+              "t": 5.031
+            },
+            {
+              "w": "every",
+              "t": 5.356
+            },
+            {
+              "w": "detail",
+              "t": 5.681
+            },
+            {
+              "w": "accurate",
+              "t": 6.134
+            },
+            {
+              "w": "and",
+              "t": 6.622
+            },
+            {
+              "w": "on",
+              "t": 6.773
+            },
+            {
+              "w": "brand,",
+              "t": 6.947
+            },
+            {
+              "w": "and",
+              "t": 7.655
+            },
+            {
+              "w": "captions",
+              "t": 7.864
+            },
+            {
+              "w": "help",
+              "t": 8.386
+            },
+            {
+              "w": "more",
+              "t": 8.63
+            },
+            {
+              "w": "people",
+              "t": 8.839
+            },
+            {
+              "w": "understand.",
+              "t": 9.164
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.965
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Pick the spot where a clear explanation would change what people do. That might be your homepage, a welcome email, or the follow-up after a first call.",
+      "storyboard": "Paper stage with a customer-journey line drawn left to right in ink. On 'homepage' a browser frame pops up labelled 'What we do in 90 seconds'; on 'welcome email' an envelope opens to 'Getting started'; on 'follow-up' a sales chat bubble shows 'Narrated pitch deck'. A fourth quieter node, 'New hires: onboarding', fades in mist. The camera tracks along the line, and the headline 'Start where it changes behaviour' holds above.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Start where explanation changes behaviour",
+        "text": "Homepage: \"What we do in 90 seconds\". Welcome email: \"Getting started\". Sales follow-up: narrated pitch deck. New hires: onboarding walkthrough",
+        "notes": "Pick the spot where a clear explanation would change what people do. That might be your homepage, a welcome email or the follow-up after a first call.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 10.978,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.416,
+          "text": "Pick the spot where a clear explanation would change what people do.",
+          "words": [
+            {
+              "w": "Pick",
+              "t": 0.55
+            },
+            {
+              "w": "the",
+              "t": 0.84
+            },
+            {
+              "w": "spot",
+              "t": 0.968
+            },
+            {
+              "w": "where",
+              "t": 1.433
+            },
+            {
+              "w": "a",
+              "t": 1.7
+            },
+            {
+              "w": "clear",
+              "t": 1.781
+            },
+            {
+              "w": "explanation",
+              "t": 2.118
+            },
+            {
+              "w": "would",
+              "t": 2.861
+            },
+            {
+              "w": "change",
+              "t": 3.07
+            },
+            {
+              "w": "what",
+              "t": 3.441
+            },
+            {
+              "w": "people",
+              "t": 3.604
+            },
+            {
+              "w": "do.",
+              "t": 3.94
+            }
+          ]
+        },
+        {
+          "t": 5.113,
+          "end": 10.128,
+          "text": "That might be your homepage, a welcome email, or the follow-up after a first call.",
+          "words": [
+            {
+              "w": "That",
+              "t": 5.113
+            },
+            {
+              "w": "might",
+              "t": 5.38
+            },
+            {
+              "w": "be",
+              "t": 5.601
+            },
+            {
+              "w": "your",
+              "t": 5.752
+            },
+            {
+              "w": "homepage,",
+              "t": 5.926
+            },
+            {
+              "w": "a",
+              "t": 6.669
+            },
+            {
+              "w": "welcome",
+              "t": 6.796
+            },
+            {
+              "w": "email,",
+              "t": 7.18
+            },
+            {
+              "w": "or",
+              "t": 8.085
+            },
+            {
+              "w": "the",
+              "t": 8.306
+            },
+            {
+              "w": "follow-up",
+              "t": 8.433
+            },
+            {
+              "w": "after",
+              "t": 8.909
+            },
+            {
+              "w": "a",
+              "t": 9.2
+            },
+            {
+              "w": "first",
+              "t": 9.281
+            },
+            {
+              "w": "call.",
+              "t": 9.618
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.128
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Use situation, problem, answer, proof, next step. For a local bookkeeper, that's five slides, a sentence or two each, and about a minute of video.",
+      "storyboard": "Night stage, close. Five cards deal in on each spoken word: Situation, Problem, Answer, Proof, Next step. The Problem card flips to show 'Your BAS takes a whole weekend' in coral, and Next step flips to 'Book a fifteen-minute call' in teal. On 'about a minute' the cards snap into a timeline, and a stopwatch sweeps to 1:00. The headline '5 slides = 1-minute script' lands at 120px.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Five slides make a one-minute script",
+        "text": "Situation, problem, answer, proof, next step. Problem: \"Your BAS takes a whole weekend\". Next step: \"Book a fifteen-minute call\"",
+        "notes": "Use situation, problem, answer, proof, next step. For a local bookkeeper, that's five slides, a sentence or two of narration each, and about a minute of video.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 11.175,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.392,
+          "text": "Use situation, problem, answer, proof, next step.",
+          "words": [
+            {
+              "w": "Use",
+              "t": 0.55
+            },
+            {
+              "w": "situation,",
+              "t": 0.851
+            },
+            {
+              "w": "problem,",
+              "t": 1.722
+            },
+            {
+              "w": "answer,",
+              "t": 2.361
+            },
+            {
+              "w": "proof,",
+              "t": 2.953
+            },
+            {
+              "w": "next",
+              "t": 3.58
+            },
+            {
+              "w": "step.",
+              "t": 3.858
+            }
+          ]
+        },
+        {
+          "t": 4.834,
+          "end": 10.325,
+          "text": "For a local bookkeeper, that's five slides, a sentence or two each, and about a minute of video.",
+          "words": [
+            {
+              "w": "For",
+              "t": 4.834
+            },
+            {
+              "w": "a",
+              "t": 5.019
+            },
+            {
+              "w": "local",
+              "t": 5.101
+            },
+            {
+              "w": "bookkeeper,",
+              "t": 5.426
+            },
+            {
+              "w": "that's",
+              "t": 6.053
+            },
+            {
+              "w": "five",
+              "t": 6.331
+            },
+            {
+              "w": "slides,",
+              "t": 6.645
+            },
+            {
+              "w": "a",
+              "t": 7.283
+            },
+            {
+              "w": "sentence",
+              "t": 7.434
+            },
+            {
+              "w": "or",
+              "t": 7.864
+            },
+            {
+              "w": "two",
+              "t": 7.991
+            },
+            {
+              "w": "each,",
+              "t": 8.27
+            },
+            {
+              "w": "and",
+              "t": 8.792
+            },
+            {
+              "w": "about",
+              "t": 8.99
+            },
+            {
+              "w": "a",
+              "t": 9.245
+            },
+            {
+              "w": "minute",
+              "t": 9.338
+            },
+            {
+              "w": "of",
+              "t": 9.628
+            },
+            {
+              "w": "video.",
+              "t": 9.733
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.325
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "Start with the deck you already have. On Pro, AI directs the video, so it looks produced without an agency. Try Basic first at powerpoint2vid.com.",
+      "storyboard": "Paper stage. A plain slide deck thumbnail sits at centre; on 'deck you already have' it gets a gentle highlight. On 'AI directs the video' it unfolds into a polished amber-framed video player that starts playing. Three small steps tick beneath it: 'Pick one question', 'Trim your deck', 'Write notes'. On 'Try Basic first' the URL powerpoint2vid.com sets large at 130px in ink with an amber underline, and holds.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Turn your sales deck into an explainer",
+        "text": "Pick one question. Trim your deck. Write narration in the speaker notes. Try Basic, publish with Pro",
+        "notes": "Start with the deck you already have. On Pro, a.i. directs the video, so it looks produced without an agency. Try Basic first at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 13.199,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.373,
+          "text": "Start with the deck you already have.",
+          "words": [
+            {
+              "w": "Start",
+              "t": 0.55
+            },
+            {
+              "w": "with",
+              "t": 0.898
+            },
+            {
+              "w": "the",
+              "t": 1.037
+            },
+            {
+              "w": "deck",
+              "t": 1.153
+            },
+            {
+              "w": "you",
+              "t": 1.409
+            },
+            {
+              "w": "already",
+              "t": 1.56
+            },
+            {
+              "w": "have.",
+              "t": 1.897
+            }
+          ]
+        },
+        {
+          "t": 2.976,
+          "end": 7.516,
+          "text": "On Pro, AI directs the video, so it looks produced without an agency.",
+          "words": [
+            {
+              "w": "On",
+              "t": 2.976
+            },
+            {
+              "w": "Pro,",
+              "t": 3.232
+            },
+            {
+              "w": "AI",
+              "t": 3.789
+            },
+            {
+              "w": "directs",
+              "t": 4.184
+            },
+            {
+              "w": "the",
+              "t": 4.648
+            },
+            {
+              "w": "video,",
+              "t": 4.764
+            },
+            {
+              "w": "so",
+              "t": 5.484
+            },
+            {
+              "w": "it",
+              "t": 5.67
+            },
+            {
+              "w": "looks",
+              "t": 5.751
+            },
+            {
+              "w": "produced",
+              "t": 5.96
+            },
+            {
+              "w": "without",
+              "t": 6.413
+            },
+            {
+              "w": "an",
+              "t": 6.726
+            },
+            {
+              "w": "agency.",
+              "t": 6.831
+            }
+          ]
+        },
+        {
+          "t": 8.027,
+          "end": 10.999,
+          "text": "Try Basic first at powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 8.027
+            },
+            {
+              "w": "Basic",
+              "t": 8.363
+            },
+            {
+              "w": "first",
+              "t": 8.816
+            },
+            {
+              "w": "at",
+              "t": 9.211
+            },
+            {
+              "w": "PowerPoint",
+              "t": 9.339
+            },
+            {
+              "w": "to",
+              "t": 9.884
+            },
+            {
+              "w": "vid",
+              "t": 10.012
+            },
+            {
+              "w": "dot",
+              "t": 10.279
+            },
+            {
+              "w": "com.",
+              "t": 10.523
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.999
+    }
+  ],
+  "voiceProvider": "elevenlabs"
+}

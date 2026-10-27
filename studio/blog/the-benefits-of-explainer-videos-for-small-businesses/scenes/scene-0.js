@@ -1,0 +1,80 @@
+/* Scene 0 — "Your small business answers the same questions every day. What if you explained it well once,
+ * and a video kept doing the job for you?"
+ * Storyboard: Night stage. Speech-bubble question marks pop in one after another, faster and faster, until
+ * they crowd the frame ("the same questions every day"). On "explained… well once" they all get sucked into
+ * the centre and collapse into a single amber play button. The camera pushes in as "Explain it well once"
+ * sets beneath it at 140px in paper white; "For small businesses" fades in in mist. The overlapping
+ * original title is rebuilt cleanly and the clutter is cut. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const R = ctx.rand(7);
+  const explained = ctx.at(1, 'explained'), well = ctx.at(1, 'well'), once = ctx.at(1, 'once,'), video = ctx.at(1, 'video');
+  const CX = 960, CY = 390;
+
+  stage.style.background = 'radial-gradient(70% 65% at 50% 40%, #1a2a44 0%, var(--night) 70%)';
+  const glow = el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(30% 30% at 50% 36%, rgba(242,165,65,.28), transparent 70%)', opacity: 0 });
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: `${CX}px 480px` });
+
+  /* ---- question bubbles ---- */
+  const COLS = 7, ROWS = 4, N = COLS * ROWS - 2;
+  const slots = [];
+  for (let r = 0; r < ROWS; r++) for (let c = 0; c < COLS; c++) slots.push([c, r]);
+  for (let i = slots.length - 1; i > 0; i--) { const j = Math.floor(R() * (i + 1)); [slots[i], slots[j]] = [slots[j], slots[i]]; }
+  const accents = ['var(--amber)', 'var(--teal)', 'var(--coral)', 'var(--mist)', 'var(--mist)', 'var(--mist)'];
+  const bubbles = slots.slice(0, N).map(([c, r], i) => {
+    const s = 110 + R() * 70;
+    const x = 210 + c * 250 + (R() - 0.5) * 90, y = 180 + r * 230 + (R() - 0.5) * 70;
+    const col = accents[Math.floor(R() * accents.length)];
+    const outer = el('div', 'abs', cam, { left: x - s / 2 + 'px', top: y - s / 2 + 'px', width: s + 'px', height: s * 0.82 + 'px' });
+    const inner = el('div', 'abs', outer, { inset: 0 });
+    const body = el('div', 'abs', inner, { inset: 0, borderRadius: s * 0.28 + 'px', background: 'linear-gradient(160deg, #26324a, var(--ink))',
+      border: `3px solid ${col}`, boxShadow: '0 24px 50px rgba(0,0,0,.45)', display: 'flex', alignItems: 'center', justifyContent: 'center',
+      font: `900 ${s * 0.5}px/1 Inter Display, Inter`, color: col });
+    body.textContent = '?';
+    const flip = R() > 0.5;
+    el('div', 'abs', inner, { width: s * 0.2 + 'px', height: s * 0.2 + 'px', bottom: -s * 0.08 + 'px', [flip ? 'left' : 'right']: s * 0.2 + 'px',
+      background: 'var(--ink)', borderRight: `3px solid ${col}`, borderBottom: `3px solid ${col}`, transform: 'rotate(45deg)' });
+    const u = i / (N - 1);
+    return { outer, inner, x, y, rot: (R() - 0.5) * 16, ph: R() * 6.28, t: 0.15 + 3.6 * Math.pow(u, 0.7), d: Math.hypot(x - CX, y - CY) };
+  });
+
+  /* ---- play button ---- */
+  const play = el('div', 'abs', cam, { left: CX - 125 + 'px', top: CY - 125 + 'px', width: '250px', height: '250px', borderRadius: '50%',
+    background: 'radial-gradient(circle at 35% 30%, #ffd08a, var(--amber) 55%, #c9781e)', boxShadow: '0 0 80px rgba(242,165,65,.6), 0 30px 60px rgba(0,0,0,.4)', opacity: 0 });
+  play.innerHTML = '<svg width="250" height="250" style="position:absolute;inset:0"><path d="M102 78 L182 125 L102 172 Z" fill="#0F1A2B" stroke="#0F1A2B" stroke-width="10" stroke-linejoin="round"/></svg>';
+  const rings = [0, 1].map(() => el('div', 'abs', cam, { left: CX - 125 + 'px', top: CY - 125 + 'px', width: '250px', height: '250px', borderRadius: '50%', border: '5px solid var(--amber)', opacity: 0 }));
+
+  /* ---- headline ---- */
+  const head = el('div', 'abs', cam, { left: '80px', width: '1760px', top: '590px', textAlign: 'center', font: '800 140px/1.05 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--paper)' });
+  const words = ctx.split(head, 'Explain it well once', 'word');
+  const sub = el('div', 'abs', cam, { left: '80px', width: '1760px', top: '780px', textAlign: 'center', font: '600 30px/1 ui-monospace, Menlo, monospace', letterSpacing: '.22em', color: 'var(--mist)', opacity: 0 });
+  sub.textContent = 'FOR SMALL BUSINESSES';
+
+  ctx.fx.vignette({ strength: 0.55 });
+  ctx.fx.grain({ opacity: 0.06 });
+  ctx.onFrame((t) => bubbles.forEach((b) => {
+    b.inner.style.transform = `translateY(${Math.sin(t * 1.4 + b.ph) * 7}px) rotate(${b.rot + Math.sin(t * 0.9 + b.ph) * 2}deg)`;
+  }));
+
+  /* ---- timeline ---- */
+  gsap.set(rings, { opacity: 0 });
+  tl.fromTo(cam, { scale: 1.04 }, { scale: 1, duration: explained, ease: 'none' }, 0);
+  bubbles.forEach((b) => {
+    tl.fromTo(b.outer, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: 'back.out(1.9)' }, b.t);
+  });
+  tl.to(bubbles.map((b) => b.outer), { x: (i) => (CX - bubbles[i].x) * 0.06, y: (i) => (CY - bubbles[i].y) * 0.06, duration: 0.5, ease: 'power2.inOut' }, explained - 0.5);
+  const collapseDur = Math.max(0.45, well - explained);
+  tl.to(bubbles.map((b) => b.outer), {
+    x: (i) => CX - bubbles[i].x, y: (i) => CY - bubbles[i].y, scale: 0.15, opacity: 0, duration: collapseDur * 0.85, ease: 'power3.in',
+    stagger: (i) => (bubbles[i].d / 1100) * collapseDur * 0.25,
+  }, explained);
+  tl.fromTo(play, { scale: 0, opacity: 0, rotation: -40 }, { scale: 1, opacity: 1, rotation: 0, duration: 0.7, ease: 'back.out(1.8)' }, well - 0.05);
+  rings.forEach((r, i) => tl.fromTo(r, { scale: 1, opacity: 0.9 }, { scale: 2.4, opacity: 0, duration: 1.1, ease: 'power2.out', immediateRender: false }, well + i * 0.18));
+  tl.to(glow, { opacity: 1, duration: 0.8 }, well);
+
+  tl.fromTo(words, { y: 70, opacity: 0, filter: 'blur(8px)' }, { y: 0, opacity: 1, filter: 'blur(0px)', duration: 0.7, stagger: 0.09, ease: 'power3.out' }, once - 0.1);
+  tl.fromTo(sub, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.8 }, video);
+
+  tl.to(cam, { scale: 1.07, duration: ctx.dur - once, ease: 'power1.inOut' }, once);
+  tl.to(play, { boxShadow: '0 0 130px rgba(242,165,65,.85), 0 30px 60px rgba(0,0,0,.4)', duration: 0.7, yoyo: true, repeat: 1, ease: 'sine.inOut' }, ctx.at(1, 'job'));
+});

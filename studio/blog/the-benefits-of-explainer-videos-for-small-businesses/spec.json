@@ -1,0 +1,104 @@
+{
+  "title": "The Benefits of Explainer Videos for Small Businesses (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "The Benefits of Explainer Videos",
+      "bullets": [
+        "For small businesses",
+        "Explain it well once"
+      ],
+      "notes": "Your small business answers the same questions every day. What if you explained it well once, and a video kept doing the job for you?",
+      "minDuration": 9
+    },
+    {
+      "title": "Explain once, reuse many times",
+      "bullets": [
+        "\"How does delivery work?\"",
+        "\"What's included in the basic plan?\"",
+        "\"How do I book?\"",
+        "Same answer for every customer"
+      ],
+      "notes": "Every small business fields the same questions daily. A short video answers each one the same way, without anyone on your team stopping what they're doing.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Clearer, consistent and always on",
+      "bullets": [
+        "Shows the steps while explaining them",
+        "Works at night and on weekends",
+        "Every customer hears the same message",
+        "Captions for sound-off viewers"
+      ],
+      "notes": "Video shows the steps while it explains them. It works when you're offline, keeps every detail accurate and on brand, and captions help more people understand.",
+      "minDuration": 11,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Start where explanation changes behaviour",
+      "bullets": [
+        "Homepage: \"What we do in 90 seconds\"",
+        "Welcome email: \"Getting started\"",
+        "Sales follow-up: narrated pitch deck",
+        "New hires: onboarding walkthrough"
+      ],
+      "notes": "Pick the spot where a clear explanation would change what people do. That might be your homepage, a welcome email or the follow-up after a first call.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Five slides make a one-minute script",
+      "bullets": [
+        "Situation, problem, answer, proof, next step",
+        "Problem: \"Your BAS takes a whole weekend\"",
+        "Next step: \"Book a fifteen-minute call\""
+      ],
+      "notes": "Use situation, problem, answer, proof, next step. For a local bookkeeper, that's five slides, a sentence or two of narration each, and about a minute of video.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Turn your sales deck into an explainer",
+      "bullets": [
+        "Pick one question",
+        "Trim your deck",
+        "Write narration in the speaker notes",
+        "Try Basic, publish with Pro"
+      ],
+      "notes": "Start with the deck you already have. On Pro, a.i. directs the video, so it looks produced without an agency. Try Basic first at powerpoint2vid.com.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}
