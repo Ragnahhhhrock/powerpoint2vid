@@ -1,0 +1,891 @@
+{
+  "title": "Choosing a Narrator Voice and Speaking Speed (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0E1220",
+      "ink": "#1A1F33",
+      "paper": "#F6F3EC",
+      "signal": "#FF6B4A",
+      "wave": "#5B8CFF",
+      "mint": "#3FD1A3",
+      "mist": "#A7AEC4"
+    },
+    "font": "Inter Display",
+    "motion": "Calm, speech-paced motion with soft ease-out curves; elements breathe in time with a living waveform, and the camera drifts slowly, pushing in only on key words.",
+    "story": "A voice waveform is the recurring hero: born on a dark stage, tested and tuned in light paper scenes, then returning to night for a confident call to action. Wide, airy layouts alternate with tight close-ups on single words."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "The voice is the first thing viewers judge in a narrated video. Here's how to choose a narrator voice and speed that let your content do the talking.",
+      "storyboard": "Night stage, total silence, a single flat line across centre. On 'voice' the line ripples into a wave-blue waveform that pulses with the narration. On 'first thing viewers judge' a coral eye-ring briefly circles the wave. The title 'Voice and Speed' rises at 140px beneath it on 'choose', and the camera eases slowly in as 'content do the talking' lands, the waveform settling into a steady rhythm.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Choosing a Narrator Voice and Speed",
+        "text": "",
+        "notes": "The voice is the first thing viewers judge in a narrated video. Here's how to choose a narrator voice and speed that let your content do the talking.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 9.394,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.016,
+          "text": "The voice is the first thing viewers judge in a narrated video.",
+          "words": [
+            {
+              "w": "The",
+              "t": 0.8
+            },
+            {
+              "w": "voice",
+              "t": 1.021
+            },
+            {
+              "w": "is",
+              "t": 1.288
+            },
+            {
+              "w": "the",
+              "t": 1.404
+            },
+            {
+              "w": "first",
+              "t": 1.531
+            },
+            {
+              "w": "thing",
+              "t": 1.822
+            },
+            {
+              "w": "viewers",
+              "t": 2.089
+            },
+            {
+              "w": "judge",
+              "t": 2.472
+            },
+            {
+              "w": "in",
+              "t": 2.797
+            },
+            {
+              "w": "a",
+              "t": 2.925
+            },
+            {
+              "w": "narrated",
+              "t": 3.006
+            },
+            {
+              "w": "video.",
+              "t": 3.459
+            }
+          ]
+        },
+        {
+          "t": 4.457,
+          "end": 8.544,
+          "text": "Here's how to choose a narrator voice and speed that let your content do the talking.",
+          "words": [
+            {
+              "w": "Here's",
+              "t": 4.457
+            },
+            {
+              "w": "how",
+              "t": 4.736
+            },
+            {
+              "w": "to",
+              "t": 4.863
+            },
+            {
+              "w": "choose",
+              "t": 4.98
+            },
+            {
+              "w": "a",
+              "t": 5.258
+            },
+            {
+              "w": "narrator",
+              "t": 5.351
+            },
+            {
+              "w": "voice",
+              "t": 5.816
+            },
+            {
+              "w": "and",
+              "t": 6.141
+            },
+            {
+              "w": "speed",
+              "t": 6.315
+            },
+            {
+              "w": "that",
+              "t": 6.779
+            },
+            {
+              "w": "let",
+              "t": 6.965
+            },
+            {
+              "w": "your",
+              "t": 7.116
+            },
+            {
+              "w": "content",
+              "t": 7.278
+            },
+            {
+              "w": "do",
+              "t": 7.708
+            },
+            {
+              "w": "the",
+              "t": 7.847
+            },
+            {
+              "w": "talking.",
+              "t": 7.963
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.544
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Don't judge a voice on its sample sentence. Paste in a real paragraph with the hard bits: names, numbers, acronyms. Compare two or three, then pick the easiest to follow.",
+      "storyboard": "Paper stage. A tidy grey sample sentence appears and on 'Don't judge' is struck through in coral. On 'real paragraph' a block of text slides in with three highlighted chips \u2014 a name, a number, an acronym \u2014 popping on 'names, numbers, acronyms'. On 'two or three' three small waveforms stack on the right; on 'easiest to follow' two dim to mist and one glows mint and enlarges. Bullet list from the slide is rebuilt as these visuals; audience and accent bullets cut for focus.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Test voices with your own script",
+        "text": "Match the voice to the audience. Pick a familiar accent where you can. Check names, numbers and acronyms. Compare two or three, not twenty",
+        "notes": "Don't judge a voice on its sample sentence. Paste in a real paragraph with the hard bits, then pick the voice that's easiest to follow.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 11.616,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.802,
+          "text": "Don't judge a voice on its sample sentence.",
+          "words": [
+            {
+              "w": "Don't",
+              "t": 0.55
+            },
+            {
+              "w": "judge",
+              "t": 0.863
+            },
+            {
+              "w": "a",
+              "t": 1.142
+            },
+            {
+              "w": "voice",
+              "t": 1.223
+            },
+            {
+              "w": "on",
+              "t": 1.56
+            },
+            {
+              "w": "its",
+              "t": 1.699
+            },
+            {
+              "w": "sample",
+              "t": 1.838
+            },
+            {
+              "w": "sentence.",
+              "t": 2.222
+            }
+          ]
+        },
+        {
+          "t": 3.011,
+          "end": 7.597,
+          "text": "Paste in a real paragraph with the hard bits: names, numbers, acronyms.",
+          "words": [
+            {
+              "w": "Paste",
+              "t": 3.011
+            },
+            {
+              "w": "in",
+              "t": 3.383
+            },
+            {
+              "w": "a",
+              "t": 3.499
+            },
+            {
+              "w": "real",
+              "t": 3.58
+            },
+            {
+              "w": "paragraph",
+              "t": 3.824
+            },
+            {
+              "w": "with",
+              "t": 4.335
+            },
+            {
+              "w": "the",
+              "t": 4.474
+            },
+            {
+              "w": "hard",
+              "t": 4.601
+            },
+            {
+              "w": "bits:",
+              "t": 4.845
+            },
+            {
+              "w": "names,",
+              "t": 5.786
+            },
+            {
+              "w": "numbers,",
+              "t": 6.32
+            },
+            {
+              "w": "acronyms.",
+              "t": 6.831
+            }
+          ]
+        },
+        {
+          "t": 8.038,
+          "end": 10.766,
+          "text": "Compare two or three, then pick the easiest to follow.",
+          "words": [
+            {
+              "w": "Compare",
+              "t": 8.038
+            },
+            {
+              "w": "two",
+              "t": 8.456
+            },
+            {
+              "w": "or",
+              "t": 8.665
+            },
+            {
+              "w": "three,",
+              "t": 8.804
+            },
+            {
+              "w": "then",
+              "t": 9.141
+            },
+            {
+              "w": "pick",
+              "t": 9.338
+            },
+            {
+              "w": "the",
+              "t": 9.582
+            },
+            {
+              "w": "easiest",
+              "t": 9.733
+            },
+            {
+              "w": "to",
+              "t": 10.163
+            },
+            {
+              "w": "follow.",
+              "t": 10.29
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.766
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "Speed matters as much as the voice. Too slow feels patronising, too fast loses people. If captions flick past, slow down; if you want to skip, speed up.",
+      "storyboard": "Ink stage with a large horizontal speed dial spanning the frame, marker centred on 'default'. On 'too slow' the marker drags left and the zone glows coral; on 'too fast' it whips right and blurs. On 'captions flick past' a caption strip races by and the marker eases back slightly left; on 'speed up' it nudges right. The four content types sit as small labels on the dial: Dense, Policy, Product, Social at their deck positions.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Set the speed for the content",
+        "text": "Dense material: a little slower than default. Policy and instructions: default or slightly slower. Product overviews: default. Social clips: default or slightly faster",
+        "notes": "Speed matters as much as the voice. Too slow feels patronising, too fast loses people. If captions flick past, slow down; if you want to skip, speed up.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 12.024,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.431,
+          "text": "Speed matters as much as the voice.",
+          "words": [
+            {
+              "w": "Speed",
+              "t": 0.55
+            },
+            {
+              "w": "matters",
+              "t": 0.968
+            },
+            {
+              "w": "as",
+              "t": 1.293
+            },
+            {
+              "w": "much",
+              "t": 1.444
+            },
+            {
+              "w": "as",
+              "t": 1.665
+            },
+            {
+              "w": "the",
+              "t": 1.792
+            },
+            {
+              "w": "voice.",
+              "t": 1.92
+            }
+          ]
+        },
+        {
+          "t": 3.035,
+          "end": 6.46,
+          "text": "Too slow feels patronising, too fast loses people.",
+          "words": [
+            {
+              "w": "Too",
+              "t": 3.035
+            },
+            {
+              "w": "slow",
+              "t": 3.29
+            },
+            {
+              "w": "feels",
+              "t": 3.615
+            },
+            {
+              "w": "patronising,",
+              "t": 3.905
+            },
+            {
+              "w": "too",
+              "t": 4.811
+            },
+            {
+              "w": "fast",
+              "t": 5.066
+            },
+            {
+              "w": "loses",
+              "t": 5.566
+            },
+            {
+              "w": "people.",
+              "t": 5.972
+            }
+          ]
+        },
+        {
+          "t": 7.063,
+          "end": 11.174,
+          "text": "If captions flick past, slow down; if you want to skip, speed up.",
+          "words": [
+            {
+              "w": "If",
+              "t": 7.063
+            },
+            {
+              "w": "captions",
+              "t": 7.261
+            },
+            {
+              "w": "flick",
+              "t": 7.76
+            },
+            {
+              "w": "past,",
+              "t": 8.05
+            },
+            {
+              "w": "slow",
+              "t": 8.526
+            },
+            {
+              "w": "down;",
+              "t": 8.84
+            },
+            {
+              "w": "if",
+              "t": 9.409
+            },
+            {
+              "w": "you",
+              "t": 9.548
+            },
+            {
+              "w": "want",
+              "t": 9.652
+            },
+            {
+              "w": "to",
+              "t": 9.803
+            },
+            {
+              "w": "skip,",
+              "t": 9.908
+            },
+            {
+              "w": "speed",
+              "t": 10.477
+            },
+            {
+              "w": "up.",
+              "t": 10.849
+            }
+          ]
+        }
+      ],
+      "speechEnd": 11.174
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "A synthetic narrator reads exactly what you write. So 'Q3 rev. up 8%' becomes 'Revenue in the third quarter rose eight per cent.'",
+      "storyboard": "Paper stage, close framing. 'Q3 rev. up 8%' sits at 150px in ink, cramped. On 'becomes' each fragment unfolds in place: 'Q3' stretches into 'third quarter', 'rev.' into 'Revenue', '8%' into 'eight per cent', finishing with a coral full stop. A small waveform beneath smooths out as the sentence completes, holding on the clean spoken line.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Write for the voice, not the page",
+        "text": "Short sentences. Spoken numbers. Spell out abbreviations. Full stops for pauses",
+        "notes": "A synthetic narrator reads exactly what you write. So 'Q3 rev. up 8%' becomes 'Revenue in the third quarter rose eight per cent.'",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "smoothup",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 10.212,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.359,
+          "text": "A synthetic narrator reads exactly what you write.",
+          "words": [
+            {
+              "w": "A",
+              "t": 0.55
+            },
+            {
+              "w": "synthetic",
+              "t": 0.701
+            },
+            {
+              "w": "narrator",
+              "t": 1.281
+            },
+            {
+              "w": "reads",
+              "t": 1.815
+            },
+            {
+              "w": "exactly",
+              "t": 2.105
+            },
+            {
+              "w": "what",
+              "t": 2.593
+            },
+            {
+              "w": "you",
+              "t": 2.755
+            },
+            {
+              "w": "write.",
+              "t": 2.895
+            }
+          ]
+        },
+        {
+          "t": 3.603,
+          "end": 4.625,
+          "text": "So 'Q3 rev.",
+          "words": [
+            {
+              "w": "So",
+              "t": 3.603
+            },
+            {
+              "w": "'Q3",
+              "t": 3.847
+            },
+            {
+              "w": "rev.",
+              "t": 4.427
+            }
+          ]
+        },
+        {
+          "t": 5.066,
+          "end": 9.362,
+          "text": "up 8%' becomes 'Revenue in the third quarter rose eight per cent.'",
+          "words": [
+            {
+              "w": "up",
+              "t": 5.066
+            },
+            {
+              "w": "8%'",
+              "t": 5.403
+            },
+            {
+              "w": "becomes",
+              "t": 6.285
+            },
+            {
+              "w": "'Revenue",
+              "t": 6.668
+            },
+            {
+              "w": "in",
+              "t": 7.109
+            },
+            {
+              "w": "the",
+              "t": 7.202
+            },
+            {
+              "w": "third",
+              "t": 7.33
+            },
+            {
+              "w": "quarter",
+              "t": 7.643
+            },
+            {
+              "w": "rose",
+              "t": 8.177
+            },
+            {
+              "w": "eight",
+              "t": 8.502
+            },
+            {
+              "w": "per",
+              "t": 8.711
+            },
+            {
+              "w": "cent.'",
+              "t": 8.851
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.362
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Each slide stays up as long as its narration lasts. For quiet slides or silent loops, set a minimum time per slide so nothing flashes past.",
+      "storyboard": "Night stage, wide timeline of slide blocks. On 'as long as its narration' each block stretches to match a waveform above it. On 'quiet slides' one block has no waveform and shrinks to a sliver that flickers; on 'minimum time' a mint bracket snaps it open to a fixed width with a small clock icon. Camera tracks gently right along the timeline.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Timing follows the speech",
+        "text": "Each slide lasts as long as its narration. Set a minimum time per slide. No narration option for silent loops",
+        "notes": "Each slide stays up as long as its narration lasts. For quiet slides or silent loops, set a minimum time per slide so nothing flashes past.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 10.236,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.557,
+          "text": "Each slide stays up as long as its narration lasts.",
+          "words": [
+            {
+              "w": "Each",
+              "t": 0.55
+            },
+            {
+              "w": "slide",
+              "t": 0.829
+            },
+            {
+              "w": "stays",
+              "t": 1.247
+            },
+            {
+              "w": "up",
+              "t": 1.595
+            },
+            {
+              "w": "as",
+              "t": 1.827
+            },
+            {
+              "w": "long",
+              "t": 1.955
+            },
+            {
+              "w": "as",
+              "t": 2.141
+            },
+            {
+              "w": "its",
+              "t": 2.245
+            },
+            {
+              "w": "narration",
+              "t": 2.419
+            },
+            {
+              "w": "lasts.",
+              "t": 2.942
+            }
+          ]
+        },
+        {
+          "t": 4.068,
+          "end": 9.386,
+          "text": "For quiet slides or silent loops, set a minimum time per slide so nothing flashes past.",
+          "words": [
+            {
+              "w": "For",
+              "t": 4.068
+            },
+            {
+              "w": "quiet",
+              "t": 4.242
+            },
+            {
+              "w": "slides",
+              "t": 4.602
+            },
+            {
+              "w": "or",
+              "t": 5.009
+            },
+            {
+              "w": "silent",
+              "t": 5.159
+            },
+            {
+              "w": "loops,",
+              "t": 5.578
+            },
+            {
+              "w": "set",
+              "t": 6.17
+            },
+            {
+              "w": "a",
+              "t": 6.46
+            },
+            {
+              "w": "minimum",
+              "t": 6.542
+            },
+            {
+              "w": "time",
+              "t": 6.948
+            },
+            {
+              "w": "per",
+              "t": 7.25
+            },
+            {
+              "w": "slide",
+              "t": 7.447
+            },
+            {
+              "w": "so",
+              "t": 7.935
+            },
+            {
+              "w": "nothing",
+              "t": 8.132
+            },
+            {
+              "w": "flashes",
+              "t": 8.422
+            },
+            {
+              "w": "past.",
+              "t": 8.817
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.386
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "On Pro, a.i. directs the video, timing each animated scene to your narration. Try Basic first, then hear your deck at powerpoint2vid.com.",
+      "storyboard": "Night stage warming to ink. Two cards: 'Basic' with narration, captions, transitions icons on the left, 'Pro' on the right, which lifts and glows wave-blue on 'a.i. directs'. On 'Try Basic first' the Basic card pulses mint. On 'powerpoint2vid.com' cards fade and the opening waveform returns, forming an underline beneath the URL at 120px, holding to the end.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Hear your own deck read aloud",
+        "text": "Speaker notes become the narration. Choose a voice and speaking speed. Basic: narration, captions, transitions. Pro: a.i. directs the video",
+        "notes": "On Pro, a.i. directs the video, timing each animated scene to your narration. Try Basic first, then hear your deck at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 11.585,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 5.299,
+          "text": "On Pro, a.i. directs the video, timing each animated scene to your narration.",
+          "words": [
+            {
+              "w": "On",
+              "t": 0.55
+            },
+            {
+              "w": "Pro,",
+              "t": 0.794
+            },
+            {
+              "w": "A.I.",
+              "t": 1.34
+            },
+            {
+              "w": "directs",
+              "t": 1.711
+            },
+            {
+              "w": "the",
+              "t": 2.083
+            },
+            {
+              "w": "video,",
+              "t": 2.187
+            },
+            {
+              "w": "timing",
+              "t": 2.849
+            },
+            {
+              "w": "each",
+              "t": 3.29
+            },
+            {
+              "w": "animated",
+              "t": 3.534
+            },
+            {
+              "w": "scene",
+              "t": 4.056
+            },
+            {
+              "w": "to",
+              "t": 4.381
+            },
+            {
+              "w": "your",
+              "t": 4.498
+            },
+            {
+              "w": "narration.",
+              "t": 4.66
+            }
+          ]
+        },
+        {
+          "t": 5.542,
+          "end": 9.385,
+          "text": "Try Basic first, then hear your deck at powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 5.542
+            },
+            {
+              "w": "Basic",
+              "t": 5.867
+            },
+            {
+              "w": "first,",
+              "t": 6.262
+            },
+            {
+              "w": "then",
+              "t": 6.843
+            },
+            {
+              "w": "hear",
+              "t": 7.063
+            },
+            {
+              "w": "your",
+              "t": 7.261
+            },
+            {
+              "w": "deck",
+              "t": 7.412
+            },
+            {
+              "w": "at",
+              "t": 7.644
+            },
+            {
+              "w": "PowerPoint",
+              "t": 7.772
+            },
+            {
+              "w": "to",
+              "t": 8.306
+            },
+            {
+              "w": "vid",
+              "t": 8.445
+            },
+            {
+              "w": "dot",
+              "t": 8.665
+            },
+            {
+              "w": "com.",
+              "t": 8.898
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.385
+    }
+  ],
+  "voiceProvider": "elevenlabs"
+}

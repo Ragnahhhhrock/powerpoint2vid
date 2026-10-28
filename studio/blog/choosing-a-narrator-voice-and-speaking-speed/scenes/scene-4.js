@@ -1,0 +1,161 @@
+/* Scene 4 — "Each slide stays up as long as its narration lasts. For quiet slides or silent loops,
+ * set a minimum time per slide so nothing flashes past."
+ * Storyboard: night stage, a wide timeline of slide blocks with a voice waveform lane above it.
+ * Waveforms draw in; on "as long as its narration" each block stretches to match the waveform above it.
+ * On "quiet slides" one block has no waveform, shrinks to a sliver and flickers; on "minimum time" a mint
+ * bracket snaps it open to a fixed width with a small ticking clock. The camera tracks gently right
+ * and pushes in on "minimum". */
+P2V.scene((ctx) => {
+  const { tl, el, stage, at, dur } = ctx;
+  const T = {
+    long: at(0, 'long'), narr: at(0, 'narration'), quiet: at(1, 'quiet'), silent: at(1, 'silent'),
+    min: at(1, 'minimum'), time: at(1, 'time'), flashes: at(1, 'flashes'),
+  };
+  const rr = (i) => { const v = ctx.rand(i); return typeof v === 'function' ? v() : v; };
+
+  stage.style.background = 'radial-gradient(60% 55% at 55% 58%, #1b2344 0%, var(--night) 72%)';
+  el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(35% 30% at 30% 42%, rgba(91,140,255,.14), transparent 70%)' });
+  const mintGlow = el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(30% 30% at 58% 62%, rgba(63,209,163,.16), transparent 70%)', opacity: 0 });
+
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 620px' });
+  const cv = el('canvas', 'abs', cam, { left: 0, top: 0, width: '2400px', height: '1080px' });
+  cv.width = 2400; cv.height = 1080;
+  const g = cv.getContext('2d');
+
+  const head = el('div', 'abs', stage, { left: '120px', top: '110px', font: '800 76px/1 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--paper)' });
+  head.textContent = 'Timing follows the speech';
+  const tag = el('div', 'abs', stage, { left: '124px', top: '206px', font: '600 20px/1 ui-monospace, Menlo, monospace', letterSpacing: '.14em', color: 'var(--mist)' });
+  tag.textContent = 'SLIDE LENGTH = NARRATION LENGTH';
+
+  const X0 = 200, GAP = 28, BTOP = 600, BH = 150, BASE = 470;
+  const slides = [
+    { w: 460, narr: true }, { w: 340, narr: true }, { w: 180, narr: false }, { w: 400, narr: true },
+  ].map((s, i) => {
+    s.bw = { v: 180 };
+    s.rev = { v: 0 };
+    s.m = { v: 0 };
+    s.outer = el('div', 'abs', cam, { top: BTOP + 'px', height: BH + 'px', left: '0px', width: '180px', borderRadius: '14px' });
+    s.face = el('div', 'abs', s.outer, {
+      inset: 0, borderRadius: '14px', overflow: 'hidden',
+      background: 'linear-gradient(180deg, #252c4a 0%, #171c31 100%)', border: '1px solid rgba(255,255,255,.09)',
+      boxShadow: '0 30px 60px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.08)',
+    });
+    el('div', 'abs', s.face, { left: 0, right: 0, top: 0, height: '6px', background: s.narr ? 'var(--wave)' : 'var(--mist)', opacity: s.narr ? 0.9 : 0.5 });
+    const lab = el('div', 'abs', s.face, { left: '20px', top: '26px', font: '600 18px/1 ui-monospace, Menlo, monospace', letterSpacing: '.14em', color: 'var(--mist)', whiteSpace: 'nowrap' });
+    lab.textContent = 'SLIDE ' + (i + 1);
+    el('div', 'abs', s.face, { left: '20px', top: '70px', width: '110px', height: '12px', borderRadius: '6px', background: 'rgba(246,243,236,.18)' });
+    el('div', 'abs', s.face, { left: '20px', top: '94px', width: '76px', height: '12px', borderRadius: '6px', background: 'rgba(246,243,236,.10)' });
+    const n = Math.floor(s.w / 9);
+    s.amp = Array.from({ length: n }, (_, j) => 0.25 + 0.75 * rr(i * 300 + j + 11));
+    return s;
+  });
+  const quiet = slides[2];
+  quiet.qa = { v: 0 };
+
+  const qLab = el('div', 'abs', cam, { top: '780px', width: '300px', textAlign: 'center', font: '600 18px/1 ui-monospace, Menlo, monospace', letterSpacing: '.14em', color: 'var(--mist)', opacity: 0 });
+  qLab.textContent = 'NO NARRATION';
+  const bracket = el('div', 'abs', cam, { top: '768px', height: '28px', border: '4px solid var(--mint)', borderTop: 'none', borderRadius: '0 0 10px 10px', boxShadow: '0 8px 24px rgba(63,209,163,.35)', opacity: 0, transformOrigin: '50% 0%' });
+  const clockG = el('div', 'abs', cam, { top: '822px', width: '360px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '14px', opacity: 0 });
+  clockG.innerHTML = `<svg width="44" height="44" viewBox="0 0 44 44"><circle cx="22" cy="22" r="18" fill="none" stroke="#3FD1A3" stroke-width="3.5"/><line id="hand" x1="22" y1="22" x2="22" y2="10" stroke="#3FD1A3" stroke-width="3.5" stroke-linecap="round"/><circle cx="22" cy="22" r="2.5" fill="#3FD1A3"/></svg>`;
+  const clockTxt = el('div', '', clockG, { font: '700 22px/1 ui-monospace, Menlo, monospace', letterSpacing: '.14em', color: 'var(--mint)', whiteSpace: 'nowrap' });
+  clockTxt.textContent = 'MINIMUM TIME';
+  const hand = clockG.querySelector('#hand');
+
+  const ph = el('div', 'abs', cam, { left: X0 + 'px', top: '360px', width: '3px', height: '440px', background: 'var(--signal)', boxShadow: '0 0 18px rgba(255,107,74,.8)', borderRadius: '2px', opacity: 0 });
+  el('div', 'abs', ph, { left: '-7px', top: '-8px', width: '17px', height: '17px', borderRadius: '50%', background: 'var(--signal)' });
+
+  ctx.fx.vignette({ strength: 0.5 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  ctx.onFrame((t) => {
+    let x = X0;
+    const xs = [];
+    slides.forEach((s) => {
+      const slot = s.narr ? s.w : s.bw.v;
+      xs.push(x);
+      s.outer.style.left = x + 'px';
+      s.outer.style.width = s.bw.v + 'px';
+      x += slot + GAP;
+    });
+    let fo = 1;
+    if (t > T.quiet + 0.35 && t < T.min) fo = (Math.sin(t * 41) + Math.sin(t * 17.3 + 1)) > 0.3 ? 1 : 0.2;
+    quiet.face.style.opacity = fo;
+    const qx = xs[2], qw = quiet.bw.v, qc = qx + qw / 2;
+    qLab.style.left = qc - 150 + 'px';
+    bracket.style.left = qx - 10 + 'px';
+    bracket.style.width = qw + 20 + 'px';
+    clockG.style.left = qc - 180 + 'px';
+    hand.setAttribute('transform', `rotate(${(t * 220) % 360} 22 22)`);
+
+    g.clearRect(0, 0, 2400, 1080);
+    g.fillStyle = 'rgba(167,174,196,.22)';
+    g.fillRect(120, 370, 2200, 2);
+    for (let k = 0; k < 56; k++) { const h = k % 5 === 0 ? 14 : 7; g.fillRect(120 + k * 40, 372, 2, h); }
+    slides.forEach((s, i) => {
+      const sx = xs[i];
+      if (s.narr) {
+        const n = s.amp.length, shown = n * s.rev.v;
+        g.save();
+        g.shadowColor = 'rgba(91,140,255,.8)';
+        g.shadowBlur = 10 + 10 * s.m.v;
+        g.fillStyle = '#5B8CFF';
+        for (let j = 0; j < shown; j++) {
+          const u = j / (n - 1);
+          const env = Math.pow(Math.sin(Math.PI * Math.min(1, Math.max(0, u * 1.04 - 0.02))), 0.5);
+          const breathe = 0.82 + 0.18 * Math.sin(t * 3.2 + j * 0.45 + i);
+          const h = Math.max(2, 64 * env * s.amp[j] * breathe);
+          g.globalAlpha = 0.7 + 0.3 * s.m.v;
+          g.fillRect(sx + j * 9, BASE - h, 5, h * 2);
+        }
+        g.restore();
+        if (s.m.v > 0) {
+          g.save();
+          g.globalAlpha = 0.55 * s.m.v;
+          g.strokeStyle = '#A7AEC4';
+          g.lineWidth = 2;
+          g.setLineDash([4, 7]);
+          [sx, sx + s.w - 4].forEach((lx) => { g.beginPath(); g.moveTo(lx + 2, BASE + 70); g.lineTo(lx + 2, BTOP - 8); g.stroke(); });
+          g.restore();
+        }
+      } else if (quiet.qa.v > 0) {
+        g.save();
+        g.globalAlpha = 0.6 * quiet.qa.v;
+        g.strokeStyle = '#A7AEC4';
+        g.lineWidth = 3;
+        g.setLineDash([6, 8]);
+        g.beginPath(); g.moveTo(sx, BASE); g.lineTo(sx + Math.max(qw, 18), BASE); g.stroke();
+        g.restore();
+      }
+    });
+  });
+
+  tl.from(head, { y: 30, opacity: 0, duration: 0.8 }, 0.05);
+  tl.from(tag, { opacity: 0, duration: 0.6 }, 0.35);
+  tl.from(slides.map((s) => s.outer), { y: 50, opacity: 0, duration: 0.8, ease: 'back.out(1.5)', stagger: 0.08 }, 0.1);
+  tl.to(ph, { opacity: 1, duration: 0.5 }, 0.4);
+  tl.to(ph, { x: 1480, duration: dur - 0.4, ease: 'none' }, 0.4);
+
+  [0, 1, 3].forEach((i, k) => tl.to(slides[i].rev, { v: 1, duration: 1.1, ease: 'power2.out' }, 0.35 + k * 0.25));
+
+  [0, 1, 3].forEach((i, k) => {
+    const s = slides[i], t0 = T.long - 0.1 + k * 0.2;
+    tl.to(s.bw, { v: s.w, duration: 0.85, ease: 'back.out(1.2)' }, t0);
+    tl.to(s.m, { v: 1, duration: 0.5 }, t0 + 0.2);
+  });
+
+  tl.to(quiet.qa, { v: 1, duration: 0.5 }, T.quiet - 0.25);
+  tl.to(quiet.bw, { v: 18, duration: 0.6, ease: 'power3.inOut' }, T.quiet);
+  tl.fromTo(qLab, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, immediateRender: false }, T.silent);
+
+  tl.to(qLab, { opacity: 0, duration: 0.25 }, T.min - 0.2);
+  tl.fromTo(bracket, { opacity: 0, scaleY: 0.2 }, { opacity: 1, scaleY: 1, duration: 0.4, ease: 'back.out(2)', immediateRender: false }, T.min - 0.1);
+  tl.to(quiet.bw, { v: 280, duration: 0.75, ease: 'back.out(1.6)' }, T.min);
+  tl.fromTo(quiet.outer, { boxShadow: '0 0 0px rgba(63,209,163,0)' }, { boxShadow: '0 0 60px rgba(63,209,163,.55)', duration: 0.6, immediateRender: false }, T.min + 0.2);
+  tl.to(mintGlow, { opacity: 1, duration: 1 }, T.min);
+  tl.fromTo(clockG, { opacity: 0, scale: 0.6, y: 10 }, { opacity: 1, scale: 1, y: 0, duration: 0.6, ease: 'back.out(1.8)', immediateRender: false }, T.time - 0.05);
+
+  tl.to(bracket, { boxShadow: '0 8px 40px rgba(63,209,163,.8)', duration: 0.45, yoyo: true, repeat: 1, ease: 'sine.inOut' }, T.flashes);
+
+  tl.fromTo(cam, { x: 0 }, { x: -40, duration: dur, ease: 'sine.inOut', immediateRender: false }, 0);
+  tl.to(cam, { scale: 1.06, duration: 1.5, ease: 'expo.inOut' }, T.min - 0.4);
+});

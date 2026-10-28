@@ -1,0 +1,129 @@
+/* Scene 1 — "Don't judge a voice on its sample sentence. Paste in a real paragraph with the hard bits:
+ * names, numbers, acronyms. Compare two or three, then pick the easiest to follow."
+ * Storyboard: Paper stage. A tidy grey sample sentence appears; on "Don't judge" a coral line strikes it
+ * through. On "real paragraph" a block of real script slides in, and three chips light up in turn:
+ * a name, a number, an acronym. On "two or three" three live voice waveforms stack on the right.
+ * On "easiest to follow" two dim to mist and one glows mint and enlarges. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const judge = ctx.at(0, "judge"), paste = ctx.at(1, 'Paste'), para = ctx.at(1, 'paragraph');
+  const tNames = ctx.at(1, 'names,'), tNums = ctx.at(1, 'numbers,'), tAcr = ctx.at(1, 'acronyms.');
+  const compare = ctx.at(2, 'Compare'), two = ctx.at(2, 'two'), three = ctx.at(2, 'three,');
+  const easiest = ctx.at(2, 'easiest'), follow = ctx.at(2, 'follow.');
+  const MONO = 'ui-monospace, Menlo, monospace';
+  const LX = 160;
+
+  stage.style.background = 'radial-gradient(60% 70% at 30% 35%, #ffffff 0%, var(--paper) 60%, #ebe6db 100%)';
+  const glowR = el('div', 'abs', stage, { left: '1100px', top: '120px', width: '900px', height: '900px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(91,140,255,.12), transparent 65%)' });
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 540px' });
+
+  /* ---- sample sentence ---- */
+  const sample = el('div', 'abs', cam, { left: LX + 'px', top: '150px', transformOrigin: '0% 50%' });
+  const sLab = el('div', '', sample, { font: `600 20px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--mist)', marginBottom: '22px' });
+  sLab.textContent = 'SAMPLE SENTENCE';
+  const sWrap = el('div', '', sample, { position: 'relative', display: 'inline-block' });
+  const sText = el('div', '', sWrap, { font: '600 50px/1.2 Inter Display, Inter', letterSpacing: '-.02em', color: '#9298ab' });
+  sText.textContent = 'The quick brown fox jumps over the lazy dog.';
+  const strike = el('div', 'abs', sWrap, { left: '-10px', right: '-10px', top: '50%', height: '7px', marginTop: '-2px', borderRadius: '4px', background: 'var(--signal)', transformOrigin: '0% 50%', boxShadow: '0 4px 16px rgba(255,107,74,.4)' });
+
+  /* ---- real paragraph ---- */
+  const block = el('div', 'abs', cam, { left: LX + 'px', top: '380px', width: '980px', padding: '44px 52px 64px', boxSizing: 'border-box', background: '#fff', borderRadius: '26px', boxShadow: '0 40px 90px rgba(26,31,51,.13), 0 2px 0 rgba(26,31,51,.04)' });
+  const pLab = el('div', '', block, { font: `600 20px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--signal)', marginBottom: '26px' });
+  pLab.textContent = 'YOUR REAL SCRIPT';
+  const pText = el('div', '', block, { font: '600 50px/1.75 Inter Display, Inter', letterSpacing: '-.02em', color: 'var(--ink)' });
+  const chipDefs = [
+    ['Siobhán Ní Bhriain', 'NAME', '91,140,255', '#3d6ae0'],
+    ['£1,284.50', 'NUMBER', '255,107,74', '#d8432a'],
+    ['HMRC', 'ACRONYM', '63,209,163', '#1c9c76'],
+  ];
+  const chips = [];
+  const addText = (s) => pText.appendChild(document.createTextNode(s));
+  const addChip = (d) => {
+    const c = el('span', '', pText, { position: 'relative', display: 'inline-block', padding: '0 12px', margin: '0 -4px', borderRadius: '12px', lineHeight: '1.2', background: `rgba(${d[2]},0)` });
+    c.textContent = d[0];
+    const tag = el('span', 'abs', c, { left: '12px', top: '100%', marginTop: '4px', font: `700 15px/1 ${MONO}`, letterSpacing: '.14em', color: d[3], whiteSpace: 'nowrap' });
+    tag.textContent = d[1];
+    chips.push({ c, tag, d });
+  };
+  addChip(chipDefs[0]); addText(' confirmed '); addChip(chipDefs[1]); addText(' is due once the '); addChip(chipDefs[2]); addText(' review closes.');
+
+  /* ---- three voice waveforms ---- */
+  const NB = 40;
+  const waves = [0, 1, 2].map((k) => {
+    const card = el('div', 'abs', cam, { left: '1250px', top: 250 + k * 210 + 'px', width: '540px', height: '170px', borderRadius: '22px', background: '#fff', boxShadow: '0 30px 70px rgba(26,31,51,.12)', border: '2px solid rgba(26,31,51,.05)', boxSizing: 'border-box', transformOrigin: '50% 50%' });
+    const lab = el('div', 'abs', card, { left: '28px', top: '22px', font: `700 18px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--mist)' });
+    lab.textContent = 'VOICE ' + 'ABC'[k];
+    const svgNS = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(svgNS, 'svg');
+    svg.setAttribute('width', '540'); svg.setAttribute('height', '110');
+    Object.assign(svg.style, { position: 'absolute', left: '-2px', top: '46px' });
+    card.appendChild(svg);
+    const rects = [];
+    for (let i = 0; i < NB; i++) {
+      const r = document.createElementNS(svgNS, 'rect');
+      r.setAttribute('x', 30 + i * 12); r.setAttribute('width', 7); r.setAttribute('rx', 3.5);
+      svg.appendChild(r); rects.push(r);
+    }
+    gsap.set(rects, { fill: '#5B8CFF' });
+    return { card, lab, rects, amp: { a: 0 }, k };
+  });
+  const win = waves[1];
+  const badge = el('div', 'abs', win.card, { right: '24px', top: '16px', padding: '8px 14px', borderRadius: '999px', background: 'var(--mint)', font: `800 16px/1 ${MONO}`, letterSpacing: '.12em', color: '#0b3a2c' });
+  badge.textContent = 'EASIEST TO FOLLOW';
+
+  const R = ctx.rand(7);
+  const phases = waves.map(() => Array.from({ length: NB }, () => R() * 6.28));
+  const speeds = [9, 5.5, 13], jag = [0.9, 0.35, 0.75];
+  ctx.onFrame((t) => {
+    waves.forEach((w, k) => {
+      w.rects.forEach((r, i) => {
+        const env = Math.pow(Math.sin(Math.PI * (i + 0.5) / NB), 0.6);
+        const osc = 0.35 + 0.65 * Math.abs(Math.sin(t * speeds[k] * 0.5 + i * 0.45 + phases[k][i] * jag[k]));
+        const h = Math.max(6, 96 * w.amp.a * env * osc);
+        r.setAttribute('height', h.toFixed(1)); r.setAttribute('y', (55 - h / 2).toFixed(1));
+      });
+    });
+  });
+
+  ctx.fx.vignette({ strength: 0.22 });
+  ctx.fx.grain({ opacity: 0.05 });
+
+  /* ---- timeline ---- */
+  tl.to(cam, { scale: 1.03, x: -8, duration: ctx.dur, ease: 'none' }, 0);
+  tl.to(glowR, { x: -40, y: 30, duration: ctx.dur, ease: 'sine.inOut' }, 0);
+
+  gsap.set(strike, { scaleX: 0 });
+  tl.from(sLab, { opacity: 0, y: 14, duration: 0.5 }, 0.05);
+  tl.from(sText, { opacity: 0, y: 26, duration: 0.7 }, 0.1);
+  tl.to(strike, { scaleX: 1, duration: 0.55, ease: 'power2.inOut' }, judge - 0.15);
+  tl.to(sText, { color: '#b9bccb', duration: 0.5 }, judge + 0.2);
+  tl.to(sample, { scale: 0.72, y: -40, opacity: 0.55, duration: 0.8, ease: 'expo.inOut' }, paste - 0.1);
+
+  tl.from(block, { opacity: 0, x: -70, y: 30, duration: 0.85, ease: 'power3.out' }, para - 0.35);
+  chips.forEach(({ c, tag, d }, i) => {
+    const t = [tNames, tNums, tAcr][i] - 0.08;
+    gsap.set(tag, { opacity: 0 });
+    tl.to(c, { backgroundColor: `rgba(${d[2]},.2)`, color: d[3], duration: 0.3, ease: 'power2.out' }, t);
+    tl.fromTo(c, { scale: 1 }, { scale: 1.1, duration: 0.18, yoyo: true, repeat: 1, ease: 'power2.out', immediateRender: false }, t);
+    tl.fromTo(tag, { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.35, ease: 'back.out(2)', immediateRender: false }, t + 0.08);
+  });
+
+  tl.to([block, sample], { opacity: (i) => (i ? 0.3 : 0.6), duration: 0.6 }, compare);
+  waves.forEach((w, k) => {
+    const t = (k === 0 ? two : k === 1 ? ctx.at(2, 'or') : three) - 0.12;
+    tl.from(w.card, { opacity: 0, x: 80, scale: 0.92, duration: 0.6, ease: 'back.out(1.6)' }, t);
+    tl.to(w.amp, { a: 1, duration: 0.6, ease: 'power2.out' }, t + 0.1);
+  });
+
+  gsap.set(badge, { opacity: 0 });
+  [waves[0], waves[2]].forEach((w) => {
+    tl.to(w.rects, { fill: '#A7AEC4', duration: 0.5 }, easiest - 0.1);
+    tl.to(w.card, { opacity: 0.45, scale: 0.94, duration: 0.6 }, easiest - 0.1);
+    tl.to(w.amp, { a: 0.45, duration: 0.6 }, easiest - 0.1);
+  });
+  tl.to(win.rects, { fill: '#3FD1A3', duration: 0.45 }, easiest - 0.1);
+  tl.to(win.card, { scale: 1.12, x: -30, borderColor: 'rgba(63,209,163,.9)', boxShadow: '0 0 70px rgba(63,209,163,.45), 0 30px 70px rgba(26,31,51,.14)', duration: 0.7, ease: 'back.out(1.6)' }, easiest - 0.1);
+  tl.to(win.lab, { color: '#1c9c76', duration: 0.4 }, easiest);
+  tl.fromTo(badge, { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(2)', immediateRender: false }, follow - 0.15);
+  tl.to(cam, { x: -20, duration: ctx.dur - easiest, ease: 'power1.inOut' }, easiest);
+});

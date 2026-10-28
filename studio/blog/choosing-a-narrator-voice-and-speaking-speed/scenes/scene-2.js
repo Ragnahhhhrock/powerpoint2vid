@@ -1,0 +1,136 @@
+/* Scene 2 — "Speed matters as much as the voice. Too slow feels patronising, too fast loses people.
+ * If captions flick past, slow down; if you want to skip, speed up."
+ * Storyboard: ink stage, a wide horizontal speed dial spans the frame with its marker on DEFAULT, and
+ * the voice waveform breathes above it, its density following the marker. On "too slow" the marker
+ * drags left and the slow zone glows coral. On "too fast" it whips right and blurs. On "captions flick
+ * past" a caption strip races by and the marker eases slightly left on "slow down", then nudges right
+ * on "speed up". The deck's content types sit on the dial: Dense, Policy, Product, Social. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const A = (b, w) => ctx.at(b, w);
+  const tSpeed = A(0, 'Speed'), tVoice = A(0, 'voice.'), tSlow = A(1, 'slow'), tFast = A(1, 'fast'), tPeople = A(1, 'people.');
+  const tCap = A(2, 'captions'), tSlow2 = A(2, 'slow'), tSkip = A(2, 'skip,'), tUp = A(2, 'speed');
+
+  const L = 200, R = 1720, C = 960, TY = 640;
+  stage.style.background = 'radial-gradient(60% 55% at 50% 45%, #262c48 0%, var(--ink) 55%, var(--night) 100%)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 560px' });
+
+  const head = el('div', 'abs', cam, { left: '160px', top: '96px', font: '800 84px/1 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--paper)', whiteSpace: 'nowrap' });
+  const chars = ctx.split(head, 'Speed matters.', 'char');
+  const kicker = el('div', 'abs', cam, { left: '164px', top: '200px', font: '600 22px/1 ui-monospace, Menlo, monospace', letterSpacing: '.16em', color: 'var(--mist)' });
+  kicker.textContent = 'SET THE SPEED FOR THE CONTENT';
+
+  const NS = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(NS, 'svg');
+  svg.setAttribute('width', '1920'); svg.setAttribute('height', '1080');
+  svg.style.cssText = 'position:absolute;left:0;top:0;overflow:visible';
+  cam.appendChild(svg);
+  const wGlow = document.createElementNS(NS, 'path'), wave = document.createElementNS(NS, 'path');
+  [wGlow, wave].forEach((p) => { p.setAttribute('fill', 'none'); p.setAttribute('stroke-linecap', 'round'); svg.appendChild(p); });
+  wGlow.setAttribute('stroke-width', '14'); wGlow.style.opacity = '.22'; wGlow.style.filter = 'blur(8px)';
+  wave.setAttribute('stroke-width', '4');
+
+  const zSlow = el('div', 'abs', cam, { left: L + 'px', top: TY - 40 + 'px', width: '360px', height: '80px', borderRadius: '40px', background: 'radial-gradient(60% 100% at 25% 50%, rgba(255,107,74,.75), transparent 75%)', opacity: 0 });
+  const zFast = el('div', 'abs', cam, { left: R - 360 + 'px', top: TY - 40 + 'px', width: '360px', height: '80px', borderRadius: '40px', background: 'radial-gradient(60% 100% at 75% 50%, rgba(91,140,255,.8), transparent 75%)', opacity: 0 });
+
+  const track = el('div', 'abs', cam, { left: L + 'px', top: TY - 4 + 'px', width: R - L + 'px', height: '8px', borderRadius: '4px', transformOrigin: '50% 50%',
+    background: 'linear-gradient(90deg, var(--signal) 0%, rgba(167,174,196,.5) 28%, rgba(167,174,196,.5) 72%, var(--wave) 100%)' });
+  const ticks = [];
+  for (let i = 0; i <= 24; i++) {
+    const x = L + (i / 24) * (R - L), major = i % 6 === 0;
+    ticks.push(el('div', 'abs', cam, { left: x - 1 + 'px', top: TY + 14 + 'px', width: '2px', height: (major ? 22 : 12) + 'px', background: major ? 'rgba(246,243,236,.6)' : 'rgba(167,174,196,.3)' }));
+  }
+  // end labels sit BELOW the track so the marker's needle/readout never crosses them
+  const endLab = (txt, x, align, color) => {
+    const d = el('div', 'abs', cam, { left: (align === 'left' ? x : x - 300) + 'px', width: '300px', top: TY + 60 + 'px', textAlign: align, font: '700 22px/1 ui-monospace, Menlo, monospace', letterSpacing: '.16em', color });
+    d.textContent = txt; return d;
+  };
+  const labSlow = endLab('TOO SLOW', L, 'left', 'var(--signal)');
+  const labFast = endLab('TOO FAST', R, 'right', 'var(--wave)');
+
+  const types = [['Dense', 820, 0], ['Policy', 905, 1], ['Product', C, 0], ['Social', 1040, 1]];
+  const typeEls = types.map(([name, x, row]) => {
+    const top = TY + 52 + row * 70;
+    const stem = el('div', 'abs', cam, { left: x - 1 + 'px', top: TY + 12 + 'px', width: '2px', height: top - TY - 8 + 'px', background: 'rgba(63,209,163,.45)', transformOrigin: '50% 0%' });
+    const dot = el('div', 'abs', cam, { left: x - 6 + 'px', top: TY - 6 + 'px', width: '12px', height: '12px', borderRadius: '50%', background: 'var(--mint)', boxShadow: '0 0 14px rgba(63,209,163,.8)' });
+    const lab = el('div', 'abs', cam, { left: x - 90 + 'px', width: '180px', top: top + 'px', textAlign: 'center', font: '700 30px/1 Inter', letterSpacing: '-.02em', color: 'var(--paper)' });
+    lab.textContent = name;
+    return { stem, dot, lab };
+  });
+
+  const marker = el('div', 'abs', cam, { left: 0, top: 0, width: '0px', height: '0px' });
+  const needle = el('div', 'abs', marker, { left: '-2px', top: TY - 130 + 'px', width: '4px', height: '130px', borderRadius: '2px', background: 'linear-gradient(180deg, transparent, var(--paper))' });
+  const knob = el('div', 'abs', marker, { left: '-26px', top: TY - 26 + 'px', width: '52px', height: '52px', borderRadius: '50%', background: 'var(--paper)', boxShadow: '0 0 0 6px rgba(246,243,236,.15), 0 0 40px rgba(246,243,236,.5), 0 12px 30px rgba(0,0,0,.5)' });
+  const read = el('div', 'abs', marker, { left: '-160px', width: '320px', top: TY - 176 + 'px', textAlign: 'center', font: '700 24px/1 ui-monospace, Menlo, monospace', letterSpacing: '.18em', color: 'var(--paper)' });
+
+  const strip = el('div', 'abs', cam, { left: 0, top: '900px', height: '64px', padding: '0 34px', borderRadius: '12px', background: 'rgba(14,18,32,.85)', border: '1px solid rgba(246,243,236,.15)',
+    font: '600 34px/64px Inter', color: 'var(--paper)', whiteSpace: 'nowrap', boxShadow: '0 20px 50px rgba(0,0,0,.45)', opacity: 0 });
+  strip.textContent = 'Revenue in the third quarter rose eight per cent, and the team';
+  gsap.set(strip, { x: 1960, filter: 'blur(0px)' });
+
+  ctx.fx.vignette({ strength: 0.5 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  const m = { x: C, blur: 0, a: 0 };
+  const zoneTxt = (x) => (x < 480 ? 'TOO SLOW' : x > 1440 ? 'TOO FAST' : x < 930 ? 'SLOWER' : x > 990 ? 'FASTER' : 'DEFAULT');
+  ctx.onFrame((t) => {
+    const s = Math.max(-1, Math.min(1, (m.x - C) / (R - C - 130)));
+    gsap.set(marker, { x: m.x, filter: `blur(${m.blur}px)` });
+    read.textContent = zoneTxt(m.x);
+    read.style.color = s < -0.6 ? 'var(--signal)' : s > 0.6 ? 'var(--wave)' : 'var(--paper)';
+    const k = 0.018 * (1 + 0.85 * s), ph = t * (3 + 3 * s);
+    let d = '';
+    for (let x = 260; x <= 1660; x += 6) {
+      const u = (x - 260) / 1400, env = Math.sin(Math.PI * u) ** 1.5;
+      const y = 400 + m.a * env * (Math.sin(x * k - ph) * 52 + Math.sin(x * k * 2.3 + ph * 1.4) * 16);
+      d += (x === 260 ? 'M' : 'L') + x + ' ' + y.toFixed(1);
+    }
+    wave.setAttribute('d', d); wGlow.setAttribute('d', d);
+    const col = s < -0.6 ? '#FF6B4A' : s > 0.6 ? '#5B8CFF' : '#A9C2FF';
+    wave.setAttribute('stroke', col); wGlow.setAttribute('stroke', col);
+  });
+
+  /* ---- timeline ---- */
+  tl.from(track, { scaleX: 0, duration: 1.0, ease: 'expo.out' }, 0);
+  tl.from(ticks, { opacity: 0, y: 10, duration: 0.4, stagger: 0.015 }, 0.1);
+  tl.from(marker, { opacity: 0, duration: 0.5 }, 0.2);
+  tl.from(knob, { scale: 0, duration: 0.6, ease: 'back.out(2)' }, 0.25);
+  tl.to(m, { a: 1, duration: 1.2, ease: 'power2.out' }, 0.1);
+  tl.from(chars, { opacity: 0, y: 40, duration: 0.6, stagger: 0.03, ease: 'back.out(1.6)' }, tSpeed - 0.15);
+  tl.from(kicker, { opacity: 0, x: -20, duration: 0.6 }, tSpeed + 0.3);
+  tl.from([labSlow, labFast], { opacity: 0, duration: 0.6 }, 0.8);
+  typeEls.forEach((o, i) => {
+    const t0 = tVoice - 0.3 + i * 0.1;
+    tl.from(o.dot, { scale: 0, duration: 0.5, ease: 'back.out(2)' }, t0);
+    tl.from(o.stem, { scaleY: 0, duration: 0.4 }, t0 + 0.05);
+    tl.from(o.lab, { opacity: 0, y: 16, duration: 0.5, ease: 'back.out(1.6)' }, t0 + 0.1);
+  });
+
+  tl.to(m, { x: 330, duration: 1.1, ease: 'power2.inOut' }, tSlow - 0.15);
+  tl.to(zSlow, { opacity: 1, duration: 0.6 }, tSlow + 0.2);
+  tl.to(labSlow, { scale: 1.15, transformOrigin: '0% 50%', duration: 0.5, ease: 'back.out(2)' }, tSlow + 0.3);
+  tl.to(zSlow, { opacity: 0, duration: 0.3 }, tFast - 0.15);
+  tl.to(labSlow, { scale: 1, duration: 0.3 }, tFast - 0.15);
+  tl.to(m, { x: 1590, duration: 0.38, ease: 'power4.inOut' }, tFast - 0.1);
+  tl.to(m, { blur: 10, duration: 0.19, yoyo: true, repeat: 1, ease: 'power2.in' }, tFast - 0.1);
+  tl.to(zFast, { opacity: 1, duration: 0.3 }, tFast + 0.15);
+  tl.to(labFast, { scale: 1.15, transformOrigin: '100% 50%', duration: 0.4, ease: 'back.out(2)' }, tFast + 0.2);
+  tl.to(cam, { scale: 1.05, x: -40, duration: 0.6, ease: 'expo.inOut' }, tFast - 0.1);
+  tl.to([zFast], { opacity: 0, duration: 0.5 }, tPeople + 0.4);
+  tl.to(labFast, { scale: 1, duration: 0.4 }, tPeople + 0.4);
+  tl.to(m, { x: C, duration: 0.9, ease: 'power3.inOut' }, tPeople + 0.35);
+  tl.to(cam, { scale: 1.01, x: 0, duration: 1.0, ease: 'expo.inOut' }, tPeople + 0.35);
+
+  // captions flick past: longer pass so it is on screen through the line
+  tl.to(strip, { opacity: 1, duration: 0.15 }, tCap - 0.1);
+  tl.to(strip, { x: -1500, duration: 1.7, ease: 'power1.in' }, tCap - 0.1);
+  tl.to(strip, { filter: 'blur(3px)', duration: 0.8, ease: 'power2.in' }, tCap + 0.6);
+  tl.to(strip, { opacity: 0, duration: 0.15 }, tCap + 1.45);
+  tl.to(m, { x: 880, duration: 0.9, ease: 'power2.out' }, tSlow2 - 0.1);
+  tl.to(typeEls[0].lab, { color: '#3FD1A3', duration: 0.4 }, tSlow2);
+  tl.to(typeEls[0].lab, { color: '#F6F3EC', duration: 0.4 }, tSkip);
+  tl.to(m, { x: 1030, duration: 0.7, ease: 'back.out(1.6)' }, tUp - 0.05);
+  tl.to(typeEls[3].lab, { color: '#3FD1A3', scale: 1.1, duration: 0.4, ease: 'back.out(2)' }, tUp + 0.1);
+  tl.to(cam, { scale: 1.04, duration: Math.max(0.5, ctx.dur - tUp), ease: 'power1.inOut' }, tUp);
+  tl.to(knob, { boxShadow: '0 0 0 10px rgba(63,209,163,.25), 0 0 60px rgba(63,209,163,.7), 0 12px 30px rgba(0,0,0,.5)', duration: 0.5 }, tUp + 0.1);
+});

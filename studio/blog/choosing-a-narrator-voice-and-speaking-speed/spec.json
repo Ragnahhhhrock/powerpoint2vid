@@ -1,0 +1,101 @@
+{
+  "title": "Choosing a Narrator Voice and Speaking Speed (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Choosing a Narrator Voice and Speed",
+      "bullets": [],
+      "notes": "The voice is the first thing viewers judge in a narrated video. Here's how to choose a narrator voice and speed that let your content do the talking.",
+      "minDuration": 8
+    },
+    {
+      "title": "Test voices with your own script",
+      "bullets": [
+        "Match the voice to the audience",
+        "Pick a familiar accent where you can",
+        "Check names, numbers and acronyms",
+        "Compare two or three, not twenty"
+      ],
+      "notes": "Don't judge a voice on its sample sentence. Paste in a real paragraph with the hard bits, then pick the voice that's easiest to follow.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Set the speed for the content",
+      "bullets": [
+        "Dense material: a little slower than default",
+        "Policy and instructions: default or slightly slower",
+        "Product overviews: default",
+        "Social clips: default or slightly faster"
+      ],
+      "notes": "Speed matters as much as the voice. Too slow feels patronising, too fast loses people. If captions flick past, slow down; if you want to skip, speed up.",
+      "minDuration": 12,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Write for the voice, not the page",
+      "bullets": [
+        "Short sentences",
+        "Spoken numbers",
+        "Spell out abbreviations",
+        "Full stops for pauses"
+      ],
+      "notes": "A synthetic narrator reads exactly what you write. So 'Q3 rev. up 8%' becomes 'Revenue in the third quarter rose eight per cent.'",
+      "minDuration": 11,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Timing follows the speech",
+      "bullets": [
+        "Each slide lasts as long as its narration",
+        "Set a minimum time per slide",
+        "No narration option for silent loops"
+      ],
+      "notes": "Each slide stays up as long as its narration lasts. For quiet slides or silent loops, set a minimum time per slide so nothing flashes past.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Hear your own deck read aloud",
+      "bullets": [
+        "Speaker notes become the narration",
+        "Choose a voice and speaking speed",
+        "Basic: narration, captions, transitions",
+        "Pro: a.i. directs the video"
+      ],
+      "notes": "On Pro, a.i. directs the video, timing each animated scene to your narration. Try Basic first, then hear your deck at powerpoint2vid.com.",
+      "minDuration": 10,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}
