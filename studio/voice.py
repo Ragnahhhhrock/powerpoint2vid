@@ -25,6 +25,7 @@ LEAD_NEXT, TAIL_NEXT, END_HOLD, MAX_HOLD = 0.55, 0.85, 2.2, 1.6   # ElevenLabs: 
 SR_11 = 24000                          # ElevenLabs pcm_24000: 16-bit mono
 DEFAULT_VOICE = "JBFqnCBsd6RMkjVDRZzb"  # George: warm, measured narrator
 API = os.environ.get("ELEVENLABS_BASE", "https://api.elevenlabs.io")
+STATS = {"billed": 0, "cached": 0}      # characters sent to ElevenLabs vs served from the take cache
 
 
 def sentences(text):
@@ -54,7 +55,13 @@ def eleven_request(text, prev, nxt, voice, model, speed, key, cache):
     h = hashlib.sha256(json.dumps([voice, body], sort_keys=True).encode()).hexdigest()
     hit = cache / f"{h}.json"
     if hit.exists():
-        return json.loads(hit.read_text())
+        try:
+            out = json.loads(hit.read_text())
+            if out.get("audio"):
+                STATS["cached"] += len(text)
+                return out
+        except (ValueError, OSError):
+            pass   # truncated or unreadable entry: treat as a miss and synthesise again
     req = urllib.request.Request(
         f"{API}/v1/text-to-speech/{voice}/with-timestamps?output_format=pcm_{SR_11}",
         data=json.dumps(body).encode(), method="POST",
@@ -73,8 +80,10 @@ def eleven_request(text, prev, nxt, voice, model, speed, key, cache):
             if attempt < 2: time.sleep(3 * (attempt + 1)); continue
             raise RuntimeError(f"ElevenLabs unreachable: {e.reason}")
     out = {"audio": data["audio_base64"], "alignment": data.get("alignment") or data.get("normalized_alignment")}
+    STATS["billed"] += len(text)
     cache.mkdir(parents=True, exist_ok=True)
-    hit.write_text(json.dumps(out))
+    tmp = hit.with_name(f"{hit.name}.{os.getpid()}.tmp")   # write then rename, so a killed run never leaves a half file
+    tmp.write_text(json.dumps(out)); tmp.replace(hit)
     return out
 
 
@@ -244,6 +253,8 @@ def main():
         narrate()
     plan["voiceProvider"] = provider
     (job / "plan.json").write_text(json.dumps(plan, indent=2))
+    if STATS["billed"] or STATS["cached"]:
+        print(f"ElevenLabs usage: {STATS['billed']} chars billed, {STATS['cached']} chars from cache")
 
 
 if __name__ == "__main__":

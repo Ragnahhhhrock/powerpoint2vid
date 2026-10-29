@@ -25,6 +25,12 @@ jobs:
         run: |
           apt-get update && apt-get install -y --no-install-recommends python3 ffmpeg fonts-inter fonts-liberation fonts-noto-core git
           cd studio && npm ci
+      - name: Restore narration cache
+        uses: actions/cache@v4
+        with:
+          path: .tts-cache
+          key: tts-cache-${{ github.run_id }}
+          restore-keys: tts-cache-
       - name: Narrate and render
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}

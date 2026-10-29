@@ -44,6 +44,13 @@ jobs:
           apt-get update && apt-get install -y --no-install-recommends python3 python3-pip ffmpeg fonts-inter fonts-liberation fonts-noto-core git libreoffice-impress poppler-utils
           pip3 install python-pptx markdown pillow
           cd studio && npm ci
+      - name: Restore narration cache
+        # Keeps ElevenLabs responses between runs, so a retry or re-voice of the same script spends no credits.
+        uses: actions/cache@v4
+        with:
+          path: .tts-cache
+          key: tts-cache-${{ github.run_id }}
+          restore-keys: tts-cache-
       - name: Pick the post
         id: pick
         run: |
