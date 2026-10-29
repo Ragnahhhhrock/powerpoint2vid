@@ -1,0 +1,859 @@
+{
+  "title": "Slide Headlines That Make a Point (blog explainer)",
+  "brief": {
+    "palette": {
+      "ink": "#14161F",
+      "night": "#0B0D17",
+      "paper": "#F6F3EC",
+      "signal": "#FF5A3C",
+      "mint": "#2EC4A0",
+      "slate": "#8A90A6",
+      "butter": "#FFD166"
+    },
+    "font": "Inter Display",
+    "motion": "Editorial and decisive: type snaps in with fast ease-out (200-300ms), holds still, then labels get struck through and rewritten like an editor's pen. Camera moves are slow push-ins and one lateral dolly, never floaty.",
+    "story": "From vague to pointed: the problem lives on a dark night stage where grey labels sit inert, the fixes play out on bright paper like a writer's desk, and the finale returns to night with headlines glowing in signal coral. Wide typographic tableaus alternate with tight close-ups on single words."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "Most slide headlines are labels, like Overview or Pricing. They tell you what a slide is about, but not what it's saying. Let's change that.",
+      "storyboard": "Night stage. Grey label words 'Overview' and 'Pricing' drop in at 140px on 'Overview or Pricing', sitting flat and lifeless like file tabs. On 'not what it's saying' a coral question mark blinks beside each one. On 'Let's change that' a coral pen stroke underlines empty space and the title 'Headlines that make a point' writes itself in at 120px. Slow push-in throughout; the original blank title slide is rebuilt entirely.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Slide Headlines That Make a Point",
+        "text": "",
+        "notes": "Most slide headlines are labels like Overview or Pricing. They say what a slide is about, but not what it's saying. Let's change that.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 10.114,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.295,
+          "text": "Most slide headlines are labels, like Overview or Pricing.",
+          "words": [
+            {
+              "w": "Most",
+              "t": 0.8
+            },
+            {
+              "w": "slide",
+              "t": 1.16
+            },
+            {
+              "w": "headlines",
+              "t": 1.531
+            },
+            {
+              "w": "are",
+              "t": 2.031
+            },
+            {
+              "w": "labels,",
+              "t": 2.135
+            },
+            {
+              "w": "like",
+              "t": 2.878
+            },
+            {
+              "w": "Overview",
+              "t": 3.134
+            },
+            {
+              "w": "or",
+              "t": 3.598
+            },
+            {
+              "w": "Pricing.",
+              "t": 3.726
+            }
+          ]
+        },
+        {
+          "t": 4.62,
+          "end": 7.673,
+          "text": "They tell you what a slide is about, but not what it's saying.",
+          "words": [
+            {
+              "w": "They",
+              "t": 4.62
+            },
+            {
+              "w": "tell",
+              "t": 4.84
+            },
+            {
+              "w": "you",
+              "t": 5.049
+            },
+            {
+              "w": "what",
+              "t": 5.165
+            },
+            {
+              "w": "a",
+              "t": 5.328
+            },
+            {
+              "w": "slide",
+              "t": 5.409
+            },
+            {
+              "w": "is",
+              "t": 5.746
+            },
+            {
+              "w": "about,",
+              "t": 5.862
+            },
+            {
+              "w": "but",
+              "t": 6.524
+            },
+            {
+              "w": "not",
+              "t": 6.709
+            },
+            {
+              "w": "what",
+              "t": 6.86
+            },
+            {
+              "w": "it's",
+              "t": 7.023
+            },
+            {
+              "w": "saying.",
+              "t": 7.197
+            }
+          ]
+        },
+        {
+          "t": 8.277,
+          "end": 9.264,
+          "text": "Let's change that.",
+          "words": [
+            {
+              "w": "Let's",
+              "t": 8.277
+            },
+            {
+              "w": "change",
+              "t": 8.579
+            },
+            {
+              "w": "that.",
+              "t": 8.927
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.264
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "A label like Q3 results leaves people guessing. Q3 revenue beat target by a comfortable margin gives the chart a job: proving it.",
+      "storyboard": "Still night, but now a phone silhouette fills the center as the visual metaphor for skimming. On 'Q3 results' a grey headline sits atop a muted bar chart, and three faint question marks float up. On 'beat target' a coral pen strikes through the label and rewrites it as 'Q3 revenue beat target by a comfortable margin'. On 'proving it' the chart's bars rise in mint and the final bar clears a dashed target line. Bullets cut; the skimming-on-phone idea lives in the device frame.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Labels make the audience do the work",
+        "text": "\"Q3 results\" leaves people guessing. \"Q3 revenue beat target by a comfortable margin\". Prospects skim headlines on their phone",
+        "notes": "A label leaves people guessing, and some draw no conclusion at all. A headline that makes a point gives the chart a job: proving it.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 10,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.441,
+          "text": "A label like Q3 results leaves people guessing.",
+          "words": [
+            {
+              "w": "A",
+              "t": 0.55
+            },
+            {
+              "w": "label",
+              "t": 0.724
+            },
+            {
+              "w": "like",
+              "t": 1.049
+            },
+            {
+              "w": "Q3",
+              "t": 1.258
+            },
+            {
+              "w": "results",
+              "t": 1.78
+            },
+            {
+              "w": "leaves",
+              "t": 2.245
+            },
+            {
+              "w": "people",
+              "t": 2.547
+            },
+            {
+              "w": "guessing.",
+              "t": 2.883
+            }
+          ]
+        },
+        {
+          "t": 3.951,
+          "end": 9.048,
+          "text": "Q3 revenue beat target by a comfortable margin gives the chart a job: proving it.",
+          "words": [
+            {
+              "w": "Q3",
+              "t": 3.951
+            },
+            {
+              "w": "revenue",
+              "t": 4.52
+            },
+            {
+              "w": "beat",
+              "t": 4.95
+            },
+            {
+              "w": "target",
+              "t": 5.194
+            },
+            {
+              "w": "by",
+              "t": 5.6
+            },
+            {
+              "w": "a",
+              "t": 5.774
+            },
+            {
+              "w": "comfortable",
+              "t": 5.867
+            },
+            {
+              "w": "margin",
+              "t": 6.343
+            },
+            {
+              "w": "gives",
+              "t": 7.075
+            },
+            {
+              "w": "the",
+              "t": 7.33
+            },
+            {
+              "w": "chart",
+              "t": 7.458
+            },
+            {
+              "w": "a",
+              "t": 7.748
+            },
+            {
+              "w": "job:",
+              "t": 7.853
+            },
+            {
+              "w": "proving",
+              "t": 8.387
+            },
+            {
+              "w": "it.",
+              "t": 8.781
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.048
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "Ask so what: what should the audience conclude? Then say it in one short, specific sentence. Onboarding now takes two days instead of five beats onboarding time.",
+      "storyboard": "Hard switch to paper. A giant 'So what?' at 160px slams in on 'so what', then shrinks to the top-left corner. On 'one short, specific sentence' a ruler graphic marks 'one line, two at most'. On 'two days instead of five' the label 'Onboarding time' in slate is crossed out and the sentence types out beneath it, with '2 days' and '5' highlighted in butter. Camera dollies right to follow the type.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Ask \"so what?\" and write a sentence",
+        "text": "Ask \"so what?\". Write a full sentence with a verb. One line, two at most. Be specific, with figures you can back up",
+        "notes": "Ask what the audience should conclude, then say it in a short, specific sentence. \"Onboarding now takes two days instead of five\" beats \"Onboarding time\".",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 11,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.069,
+          "text": "Ask so what: what should the audience conclude?",
+          "words": [
+            {
+              "w": "Ask",
+              "t": 0.55
+            },
+            {
+              "w": "so",
+              "t": 0.887
+            },
+            {
+              "w": "what:",
+              "t": 1.084
+            },
+            {
+              "w": "what",
+              "t": 1.49
+            },
+            {
+              "w": "should",
+              "t": 1.699
+            },
+            {
+              "w": "the",
+              "t": 1.885
+            },
+            {
+              "w": "audience",
+              "t": 2.001
+            },
+            {
+              "w": "conclude?",
+              "t": 2.361
+            }
+          ]
+        },
+        {
+          "t": 3.511,
+          "end": 6.007,
+          "text": "Then say it in one short, specific sentence.",
+          "words": [
+            {
+              "w": "Then",
+              "t": 3.511
+            },
+            {
+              "w": "say",
+              "t": 3.778
+            },
+            {
+              "w": "it",
+              "t": 3.998
+            },
+            {
+              "w": "in",
+              "t": 4.126
+            },
+            {
+              "w": "one",
+              "t": 4.265
+            },
+            {
+              "w": "short,",
+              "t": 4.509
+            },
+            {
+              "w": "specific",
+              "t": 4.846
+            },
+            {
+              "w": "sentence.",
+              "t": 5.38
+            }
+          ]
+        },
+        {
+          "t": 6.251,
+          "end": 10.07,
+          "text": "Onboarding now takes two days instead of five beats onboarding time.",
+          "words": [
+            {
+              "w": "Onboarding",
+              "t": 6.251
+            },
+            {
+              "w": "now",
+              "t": 6.866
+            },
+            {
+              "w": "takes",
+              "t": 7.052
+            },
+            {
+              "w": "two",
+              "t": 7.319
+            },
+            {
+              "w": "days",
+              "t": 7.528
+            },
+            {
+              "w": "instead",
+              "t": 7.864
+            },
+            {
+              "w": "of",
+              "t": 8.201
+            },
+            {
+              "w": "five",
+              "t": 8.305
+            },
+            {
+              "w": "beats",
+              "t": 8.631
+            },
+            {
+              "w": "onboarding",
+              "t": 8.967
+            },
+            {
+              "w": "time.",
+              "t": 9.525
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.07
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Now read your headlines in order, as a list. In a rewritten sales deck, the new headlines alone make a complete pitch.",
+      "storyboard": "Paper stage, wide two-column layout. Left column shows slate labels 'About us', 'Pricing', 'Next steps'; on 'in order' arrows sweep across and the right column fills: 'We help mid-sized retailers cut stock write-offs', 'One flat monthly fee, scaled to your number of stores', 'A two-week pilot with three of your stores'. On 'alone' the left column fades away and the camera pushes into the right column, which reads top to bottom as a single story with a mint bracket labeled 'the pitch'.",
+      "minDuration": 11,
+      "slide": {
+        "title": "The headlines alone should tell the story",
+        "text": "\"About us\" \u2192 \"We help mid-sized retailers cut stock write-offs\". \"Pricing\" \u2192 \"One flat monthly fee, scaled to your number of stores\". \"Next steps\" \u2192 \"A two-week pilot with three of your stores\"",
+        "notes": "Read your headlines in order, as a list. In the rewritten sales deck, the right-hand column on its own is a complete pitch.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 8.628,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.779,
+          "text": "Now read your headlines in order, as a list.",
+          "words": [
+            {
+              "w": "Now",
+              "t": 0.55
+            },
+            {
+              "w": "read",
+              "t": 0.805
+            },
+            {
+              "w": "your",
+              "t": 1.014
+            },
+            {
+              "w": "headlines",
+              "t": 1.165
+            },
+            {
+              "w": "in",
+              "t": 1.595
+            },
+            {
+              "w": "order,",
+              "t": 1.734
+            },
+            {
+              "w": "as",
+              "t": 2.059
+            },
+            {
+              "w": "a",
+              "t": 2.222
+            },
+            {
+              "w": "list.",
+              "t": 2.303
+            }
+          ]
+        },
+        {
+          "t": 3.104,
+          "end": 7.028,
+          "text": "In a rewritten sales deck, the new headlines alone make a complete pitch.",
+          "words": [
+            {
+              "w": "In",
+              "t": 3.104
+            },
+            {
+              "w": "a",
+              "t": 3.266
+            },
+            {
+              "w": "rewritten",
+              "t": 3.371
+            },
+            {
+              "w": "sales",
+              "t": 3.847
+            },
+            {
+              "w": "deck,",
+              "t": 4.242
+            },
+            {
+              "w": "the",
+              "t": 4.671
+            },
+            {
+              "w": "new",
+              "t": 4.834
+            },
+            {
+              "w": "headlines",
+              "t": 5.02
+            },
+            {
+              "w": "alone",
+              "t": 5.484
+            },
+            {
+              "w": "make",
+              "t": 5.856
+            },
+            {
+              "w": "a",
+              "t": 6.053
+            },
+            {
+              "w": "complete",
+              "t": 6.123
+            },
+            {
+              "w": "pitch.",
+              "t": 6.552
+            }
+          ]
+        }
+      ],
+      "speechEnd": 7.028
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "In a narrated video, your notes become the voiceover. Open by restating the headline aloud, so the point lands twice: on screen and in their ears.",
+      "storyboard": "Split stage: left half paper with headline 'Implementation takes four steps and about three weeks', right half night with a sound waveform. On 'voiceover' the waveform pulses mint. On 'restating the headline' the words 'four steps' and 'three weeks' light butter on both sides simultaneously. On 'lands twice' two coral pins drop, one on the screen icon, one on an ear icon, and hold.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Notes restate the headline, then explain",
+        "text": "Headline: \"Implementation takes four steps and about three weeks\". Notes: \"Getting started takes about three weeks, in four steps.\". The point lands twice: on screen and in their ears",
+        "notes": "When a deck becomes a narrated video, the notes become the voiceover. Open by restating the headline aloud, so viewers get the point twice.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "smoothup",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 11.094,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.65,
+          "text": "In a narrated video, your notes become the voiceover.",
+          "words": [
+            {
+              "w": "In",
+              "t": 0.55
+            },
+            {
+              "w": "a",
+              "t": 0.736
+            },
+            {
+              "w": "narrated",
+              "t": 0.829
+            },
+            {
+              "w": "video,",
+              "t": 1.351
+            },
+            {
+              "w": "your",
+              "t": 1.99
+            },
+            {
+              "w": "notes",
+              "t": 2.199
+            },
+            {
+              "w": "become",
+              "t": 2.466
+            },
+            {
+              "w": "the",
+              "t": 2.779
+            },
+            {
+              "w": "voiceover.",
+              "t": 2.896
+            }
+          ]
+        },
+        {
+          "t": 4.347,
+          "end": 10.244,
+          "text": "Open by restating the headline aloud, so the point lands twice: on screen and in their ears.",
+          "words": [
+            {
+              "w": "Open",
+              "t": 4.347
+            },
+            {
+              "w": "by",
+              "t": 4.753
+            },
+            {
+              "w": "restating",
+              "t": 4.962
+            },
+            {
+              "w": "the",
+              "t": 5.554
+            },
+            {
+              "w": "headline",
+              "t": 5.682
+            },
+            {
+              "w": "aloud,",
+              "t": 6.077
+            },
+            {
+              "w": "so",
+              "t": 6.738
+            },
+            {
+              "w": "the",
+              "t": 6.913
+            },
+            {
+              "w": "point",
+              "t": 7.029
+            },
+            {
+              "w": "lands",
+              "t": 7.331
+            },
+            {
+              "w": "twice:",
+              "t": 7.69
+            },
+            {
+              "w": "on",
+              "t": 8.422
+            },
+            {
+              "w": "screen",
+              "t": 8.677
+            },
+            {
+              "w": "and",
+              "t": 9.153
+            },
+            {
+              "w": "in",
+              "t": 9.339
+            },
+            {
+              "w": "their",
+              "t": 9.455
+            },
+            {
+              "w": "ears.",
+              "t": 9.676
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.244
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "On Pro, a.i. directs your video, landing each headline as it's spoken. Ordinary slides in, extraordinary video out. Try Basic first, no subscription needed, at powerpoint2vid.com.",
+      "storyboard": "Night stage, finale. A stack of plain white slides slides in from the left; on 'directs your video' they pass through a coral frame and emerge as glowing headline cards. On 'Ordinary slides in, extraordinary video out' the two phrases flank the frame at 110px. On 'Try Basic first' a mint pill reads 'No subscription needed', and on 'powerpoint2vid.com' the URL settles center at 120px and holds.",
+      "minDuration": 12,
+      "slide": {
+        "title": "Let your headlines carry the video",
+        "text": "Speaker notes become the narration. On Pro, a.i. directs the video. Try Basic first, no subscription needed",
+        "notes": "On Pro, a.i. directs your video, landing each headline on screen as it's spoken. Ordinary slides in, extraordinary video out, at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 15.51,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 5.055,
+          "text": "On Pro, a.i. directs your video, landing each headline as it's spoken.",
+          "words": [
+            {
+              "w": "On",
+              "t": 0.55
+            },
+            {
+              "w": "Pro,",
+              "t": 0.817
+            },
+            {
+              "w": "A.I.",
+              "t": 1.444
+            },
+            {
+              "w": "directs",
+              "t": 1.862
+            },
+            {
+              "w": "your",
+              "t": 2.222
+            },
+            {
+              "w": "video,",
+              "t": 2.373
+            },
+            {
+              "w": "landing",
+              "t": 3.023
+            },
+            {
+              "w": "each",
+              "t": 3.464
+            },
+            {
+              "w": "headline",
+              "t": 3.72
+            },
+            {
+              "w": "as",
+              "t": 4.161
+            },
+            {
+              "w": "it's",
+              "t": 4.3
+            },
+            {
+              "w": "spoken.",
+              "t": 4.439
+            }
+          ]
+        },
+        {
+          "t": 5.299,
+          "end": 8.213,
+          "text": "Ordinary slides in, extraordinary video out.",
+          "words": [
+            {
+              "w": "Ordinary",
+              "t": 5.299
+            },
+            {
+              "w": "slides",
+              "t": 5.844
+            },
+            {
+              "w": "in,",
+              "t": 6.274
+            },
+            {
+              "w": "extraordinary",
+              "t": 6.692
+            },
+            {
+              "w": "video",
+              "t": 7.377
+            },
+            {
+              "w": "out.",
+              "t": 7.783
+            }
+          ]
+        },
+        {
+          "t": 8.654,
+          "end": 13.31,
+          "text": "Try Basic first, no subscription needed, at powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 8.654
+            },
+            {
+              "w": "Basic",
+              "t": 8.991
+            },
+            {
+              "w": "first,",
+              "t": 9.385
+            },
+            {
+              "w": "no",
+              "t": 10.117
+            },
+            {
+              "w": "subscription",
+              "t": 10.303
+            },
+            {
+              "w": "needed,",
+              "t": 10.918
+            },
+            {
+              "w": "at",
+              "t": 11.464
+            },
+            {
+              "w": "PowerPoint",
+              "t": 11.661
+            },
+            {
+              "w": "to",
+              "t": 12.207
+            },
+            {
+              "w": "vid",
+              "t": 12.334
+            },
+            {
+              "w": "dot",
+              "t": 12.59
+            },
+            {
+              "w": "com.",
+              "t": 12.822
+            }
+          ]
+        }
+      ],
+      "speechEnd": 13.31
+    }
+  ],
+  "voiceProvider": "elevenlabs"
+}

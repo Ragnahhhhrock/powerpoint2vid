@@ -1,0 +1,98 @@
+{
+  "title": "Slide Headlines That Make a Point (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Slide Headlines That Make a Point",
+      "bullets": [],
+      "notes": "Most slide headlines are labels like Overview or Pricing. They say what a slide is about, but not what it's saying. Let's change that.",
+      "minDuration": 9
+    },
+    {
+      "title": "Labels make the audience do the work",
+      "bullets": [
+        "\"Q3 results\" leaves people guessing",
+        "\"Q3 revenue beat target by a comfortable margin\"",
+        "Prospects skim headlines on their phone"
+      ],
+      "notes": "A label leaves people guessing, and some draw no conclusion at all. A headline that makes a point gives the chart a job: proving it.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Ask \"so what?\" and write a sentence",
+      "bullets": [
+        "Ask \"so what?\"",
+        "Write a full sentence with a verb",
+        "One line, two at most",
+        "Be specific, with figures you can back up"
+      ],
+      "notes": "Ask what the audience should conclude, then say it in a short, specific sentence. \"Onboarding now takes two days instead of five\" beats \"Onboarding time\".",
+      "minDuration": 11,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "The headlines alone should tell the story",
+      "bullets": [
+        "\"About us\" → \"We help mid-sized retailers cut stock write-offs\"",
+        "\"Pricing\" → \"One flat monthly fee, scaled to your number of stores\"",
+        "\"Next steps\" → \"A two-week pilot with three of your stores\""
+      ],
+      "notes": "Read your headlines in order, as a list. In the rewritten sales deck, the right-hand column on its own is a complete pitch.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Notes restate the headline, then explain",
+      "bullets": [
+        "Headline: \"Implementation takes four steps and about three weeks\"",
+        "Notes: \"Getting started takes about three weeks, in four steps.\"",
+        "The point lands twice: on screen and in their ears"
+      ],
+      "notes": "When a deck becomes a narrated video, the notes become the voiceover. Open by restating the headline aloud, so viewers get the point twice.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Let your headlines carry the video",
+      "bullets": [
+        "Speaker notes become the narration",
+        "On Pro, a.i. directs the video",
+        "Try Basic first, no subscription needed"
+      ],
+      "notes": "On Pro, a.i. directs your video, landing each headline on screen as it's spoken. Ordinary slides in, extraordinary video out, at powerpoint2vid.com.",
+      "minDuration": 10,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}
