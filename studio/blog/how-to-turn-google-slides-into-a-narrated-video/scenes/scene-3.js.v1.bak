@@ -1,0 +1,18 @@
+/* Template scene (fallback) */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx; const D = {"title":"Download as .pptx, then choose a voice","lines":["File menu, Download, PowerPoint (.pptx). Swap embedded videos for a still image. Choose a voice and speaking speed. Keep captions on for accessibility"],"image":"slide-4.png","first":false};
+  stage.style.background = 'var(--night)';
+  const glow = el('div', 'abs', stage, { width: '1100px', height: '1100px', left: '1000px', top: '-300px', borderRadius: '50%', background: 'var(--violet)', filter: 'blur(160px)', opacity: 0.45 });
+  const pic = el('div', 'abs', stage, { right: '110px', top: '210px', width: '760px', height: '430px', borderRadius: '22px', overflow: 'hidden', boxShadow: '0 40px 100px rgba(0,0,0,.5)', background: '#fff' });
+  const im = el('img', 'abs', pic, { inset: 0, width: '100%', height: '100%', objectFit: 'contain' }); im.src = ctx.asset(D.image);
+  const h = el('div', 'abs', stage, { left: '110px', top: D.lines.length ? '190px' : '400px', width: D.lines.length ? '920px' : '1500px', font: '800 ' + (D.title.length > 40 ? 76 : 96) + 'px/1.05 Inter', letterSpacing: '-.04em', color: '#fff' });
+  const words = D.title.split(' ').map((w, k) => { const sp = el('span', '', h, { display: 'inline-block', marginRight: '.25em' }); sp.textContent = w; return sp; });
+  const list = D.lines.map((t) => { const r = el('div', 'abs', stage, { position: 'relative', left: '110px', width: '900px', font: '500 40px/1.3 Inter', color: 'rgba(255,255,255,.88)' }); r.textContent = t; return r; });
+  if (list.length) { const box = el('div', 'abs', stage, { left: '110px', top: '520px', width: '920px', display: 'flex', flexDirection: 'column', gap: '18px' }); list.forEach((r) => { r.style.position = 'static'; box.appendChild(r); }); }
+  ctx.fx.vignette({ strength: 0.45 }); ctx.fx.grain({ opacity: 0.05 });
+  tl.to(glow, { x: -180, y: 120, duration: ctx.dur, ease: 'sine.inOut' }, 0);
+  tl.from(pic, { x: 140, opacity: 0, scale: 0.94, duration: 0.9, ease: 'power3.out' }, 0.3);
+  tl.to(im, { scale: 1.06, duration: ctx.dur, ease: 'none' }, 0);
+  words.forEach((w, k) => tl.from(w, { yPercent: 70, opacity: 0, duration: 0.5, ease: 'back.out(1.6)' }, 0.2 + k * 0.08));
+  list.forEach((r, k) => tl.from(r, { x: -40, opacity: 0, duration: 0.5, ease: 'power2.out' }, Math.max(0.9, ctx.beat(Math.min(k + 1, ctx.beats.length - 1)) - 0.1 + (ctx.beats.length > 1 ? 0 : k * 0.9))));
+});

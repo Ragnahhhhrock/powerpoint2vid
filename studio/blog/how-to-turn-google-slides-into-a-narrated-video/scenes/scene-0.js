@@ -1,0 +1,120 @@
+/* Scene 0 — "Your lectures already live in Google Slides. The slides carry the visuals, and the speaker
+ * notes carry your words. Here's how to turn them into a narrated video."
+ * Storyboard: night stage. A slide card floats centre-frame, its cluttered original title rebuilt cleanly,
+ * with ghost deck cards fanning behind on "lectures" and a GOOGLE SLIDES tag on "Google". On "visuals"
+ * the card glows signal blue. On "notes" a paper-white notes panel slides out beneath it and its lines
+ * type in. On "turn" the notes fold back into the card, the card settles into a 16:9 video frame and the
+ * headline "Slides → Narrated Video" sets at 130px. On "narrated" a play button pops, and on "video" a
+ * mint waveform starts pulsing beneath the frame. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const A = (b, w) => ctx.at(b, w);
+  const tLect = A(0, 'lectures'), tGoogle = A(0, 'Google'), tVis = A(1, 'visuals,'), tNotes = A(1, 'notes'),
+        tWords = A(1, 'words.'), tTurn = A(2, 'turn'), tNarr = A(2, 'narrated'), tVideo = A(2, 'video.');
+  const MONO = 'ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(60% 55% at 50% 45%, #1a2440 0%, var(--night) 70%)';
+  const glowBg = el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(35% 30% at 50% 45%, rgba(61,123,255,.28), transparent 70%)', opacity: 0 });
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 540px' });
+
+  const ghosts = [0, 1].map((i) => el('div', 'abs', cam, {
+    left: '520px', top: '200px', width: '880px', height: '495px', borderRadius: '18px',
+    background: i ? '#2a3350' : '#3a4462', boxShadow: '0 30px 60px rgba(0,0,0,.4)', transformOrigin: '50% 100%', opacity: 0 }));
+
+  const notes = el('div', 'abs', cam, { left: '520px', top: '640px', width: '880px', height: '240px', borderRadius: '16px',
+    background: 'var(--paper)', boxShadow: '0 30px 70px rgba(0,0,0,.45)', overflow: 'hidden', opacity: 0, transformOrigin: '50% 0%' });
+  const nLab = el('div', 'abs', notes, { left: '48px', top: '34px', font: `700 20px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--slate)' });
+  nLab.textContent = 'SPEAKER NOTES';
+  const lineW = [784, 720, 760, 470];
+  const lines = lineW.map((w, i) => el('div', 'abs', notes, { left: '48px', top: 84 + i * 36 + 'px', width: w + 'px', height: '14px', borderRadius: '7px',
+    background: 'rgba(27,34,51,.22)', transformOrigin: '0% 50%' }));
+  const caret = el('div', 'abs', notes, { left: '48px', top: '78px', width: '3px', height: '26px', background: 'var(--signal)', opacity: 0 });
+
+  const card = el('div', 'abs', cam, { left: '520px', top: '200px', width: '880px', height: '495px', borderRadius: '18px', overflow: 'hidden',
+    background: 'var(--paper)', boxShadow: '0 40px 90px rgba(0,0,0,.55), 0 0 0px rgba(61,123,255,0)', outline: '3px solid rgba(61,123,255,0)', transformOrigin: '50% 50%' });
+  const cTitle = el('div', 'abs', card, { left: '70px', top: '90px', width: '740px', font: '800 58px/1.08 Inter Display, Inter', letterSpacing: '-.035em', color: 'var(--ink)' });
+  cTitle.textContent = 'Turn Google Slides into a Narrated Video';
+  const cBar = el('div', 'abs', card, { left: '72px', top: '250px', width: '90px', height: '6px', borderRadius: '3px', background: 'var(--signal)', transformOrigin: '0% 50%' });
+  const cSub1 = el('div', 'abs', card, { left: '72px', top: '300px', font: '500 30px/1 Inter', color: 'var(--slate)' });
+  cSub1.textContent = 'Slides carry the visuals.';
+  const cSub2 = el('div', 'abs', card, { left: '72px', top: '350px', font: '500 30px/1 Inter', color: 'var(--slate)' });
+  cSub2.textContent = 'Speaker notes carry the words.';
+  const over = el('div', 'abs', card, { inset: 0, background: 'linear-gradient(180deg, rgba(14,20,36,.25), rgba(14,20,36,.7))', opacity: 0 });
+  const play = el('div', 'abs', card, { left: '370px', top: '177px', width: '140px', height: '140px', borderRadius: '50%',
+    background: 'rgba(255,255,255,.95)', boxShadow: '0 0 60px rgba(60,203,154,.6)', opacity: 0 });
+  el('div', 'abs', play, { left: '54px', top: '40px', width: 0, height: 0, borderTop: '30px solid transparent', borderBottom: '30px solid transparent', borderLeft: '46px solid var(--night)' });
+  const track = el('div', 'abs', card, { left: '40px', right: '40px', bottom: '30px', height: '6px', borderRadius: '3px', background: 'rgba(255,255,255,.3)', opacity: 0 });
+  const prog = el('div', 'abs', track, { left: 0, top: 0, height: '100%', width: '0%', borderRadius: '3px', background: 'var(--mint)' });
+
+  const tag = el('div', 'abs', cam, { left: '522px', top: '150px', font: `700 22px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--slate)', opacity: 0 });
+  tag.innerHTML = '<span style="color:var(--signal)">●</span>&nbsp; GOOGLE SLIDES · LECTURE';
+
+  const head = el('div', 'abs', stage, { left: '80px', width: '1760px', top: '100px', textAlign: 'center', font: '900 130px/1 Inter Display, Inter', letterSpacing: '-.045em', color: '#fff', whiteSpace: 'nowrap' });
+  const hw = [];
+  ['Slides', '→', 'Narrated', 'Video'].forEach((w, i) => {
+    const s = el('span', '', head, { display: 'inline-block', margin: '0 .14em', color: i === 1 ? 'var(--signal)' : '#fff' });
+    s.textContent = w; hw.push(s);
+  });
+
+  const N = 48, wave = el('div', 'abs', stage, { left: '576px', top: '870px', width: '768px', height: '90px', opacity: 0 });
+  const wb = Array.from({ length: N }, (_, i) => el('div', 'abs', wave, { left: i * 16 + 'px', top: '45px', width: '8px', height: '8px', borderRadius: '4px', background: 'var(--mint)', boxShadow: '0 0 12px rgba(60,203,154,.6)' }));
+  const W = { on: 0 }, P = { p: 0 }, C = { on: 0 };
+  ctx.onFrame((t) => {
+    wb.forEach((b, i) => {
+      const a = 0.5 + 0.5 * Math.sin(t * 7 + i * 0.55) * Math.sin(t * 2.3 + i * 0.21);
+      const h = 8 + W.on * (12 + 66 * a * (0.6 + 0.4 * Math.sin(i * 0.37)));
+      b.style.height = h + 'px'; b.style.top = 45 - h / 2 + 'px';
+    });
+    prog.style.width = P.p * 100 + '%';
+    caret.style.opacity = C.on * (Math.floor(t * 3) % 2 ? 0.2 : 1);
+  });
+
+  ctx.fx.vignette({ strength: 0.5 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  /* ---- timeline ---- */
+  tl.to(cam, { scale: 1.035, duration: ctx.dur, ease: 'none' }, 0);
+  gsap.set(card, { filter: 'blur(0px)' });
+  tl.from(card, { y: 40, opacity: 0, filter: 'blur(8px)', duration: 0.8 }, 0.05);
+  tl.from([cTitle, cSub1, cSub2], { y: 16, opacity: 0, duration: 0.6, stagger: 0.12 }, 0.3);
+  tl.from(cBar, { scaleX: 0, duration: 0.6 }, 0.5);
+  tl.to(ghosts[0], { opacity: 1, rotation: -4, x: -30, y: 10, duration: 0.8, ease: 'back.out(1.5)' }, tLect - 0.1);
+  tl.to(ghosts[1], { opacity: 1, rotation: 5, x: 34, y: 14, duration: 0.8, ease: 'back.out(1.5)' }, tLect);
+  tl.fromTo(tag, { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.5 }, tGoogle - 0.1);
+
+  tl.to(card, { boxShadow: '0 40px 90px rgba(0,0,0,.55), 0 0 90px rgba(61,123,255,.75)', outline: '3px solid rgba(61,123,255,1)', duration: 0.6 }, tVis - 0.1);
+  tl.to(glowBg, { opacity: 1, duration: 0.8 }, tVis - 0.1);
+  tl.to(cSub1, { color: '#3D7BFF', duration: 0.4 }, tVis - 0.1);
+
+  tl.to(ghosts, { opacity: 0, duration: 0.5 }, tNotes - 0.5);
+  tl.to(tag, { opacity: 0, duration: 0.4 }, tNotes - 0.5);
+  tl.to(card, { y: -80, duration: 0.7, ease: 'power3.inOut' }, tNotes - 0.5);
+  tl.fromTo(notes, { y: -200, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'back.out(1.3)', immediateRender: false }, tNotes - 0.2);
+  tl.to(cSub2, { color: '#FF6B57', duration: 0.4 }, tNotes);
+  gsap.set(lines, { scaleX: 0 });
+  tl.set(C, { on: 1 }, tNotes + 0.2);
+  lines.forEach((l, i) => {
+    const t0 = tNotes + 0.3 + i * 0.32;
+    tl.to(l, { scaleX: 1, duration: 0.32, ease: 'none' }, t0);
+    tl.set(caret, { top: 78 + i * 36 + 'px' }, t0);
+    tl.to(caret, { x: lineW[i], duration: 0.32, ease: 'none' }, t0);
+    if (i < 3) tl.set(caret, { x: 0 }, t0 + 0.32);
+  });
+  tl.to(lines, { background: 'rgba(255,107,87,.55)', duration: 0.4, stagger: 0.05 }, tWords);
+
+  // "turn": notes fold into the card, card moves down into a video frame BEFORE the headline sets
+  const fuse = tTurn - 0.1;
+  tl.set(C, { on: 0 }, fuse);
+  tl.to(notes, { y: -160, scaleY: 0.2, opacity: 0, duration: 0.45, ease: 'power3.in' }, fuse);
+  tl.to(card, { y: 122.5, scale: 1.0909, outline: '3px solid rgba(60,203,154,.9)', boxShadow: '0 40px 90px rgba(0,0,0,.6), 0 0 80px rgba(60,203,154,.45)', duration: 0.9, ease: 'expo.inOut' }, fuse);
+  tl.to(glowBg, { opacity: 0.6, duration: 0.8 }, fuse);
+  tl.from(hw, { y: 50, opacity: 0, duration: 0.7, stagger: 0.08, ease: 'back.out(1.6)' }, fuse + 0.6);
+  // "narrated": card text recedes, play button + overlay
+  tl.to([cTitle, cBar, cSub1, cSub2], { opacity: 0.18, duration: 0.4 }, tNarr - 0.15);
+  tl.to([over, track], { opacity: 1, duration: 0.4 }, tNarr - 0.15);
+  tl.fromTo(play, { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: 'back.out(2)', immediateRender: false }, tNarr);
+  tl.to(wave, { opacity: 1, duration: 0.4 }, tVideo - 0.2);
+  tl.to(W, { on: 1, duration: 0.6, ease: 'power2.out' }, tVideo - 0.1);
+  tl.to(P, { p: 0.35, duration: ctx.dur - tVideo, ease: 'none' }, tVideo);
+  tl.to(play, { boxShadow: '0 0 110px rgba(60,203,154,.9)', duration: 0.6, yoyo: true, repeat: 1 }, tVideo);
+});

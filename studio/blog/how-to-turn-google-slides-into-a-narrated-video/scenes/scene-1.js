@@ -1,0 +1,158 @@
+/* Scene 2 — "Recording live needs a quiet room and a clean run. With narrated slides, fixing a mistake
+ * means editing one line of text, then making the video again."
+ * Storyboard: split screen on paper. Left: slate line-art studio mic ("quiet room") and camera with a
+ * red REC dot ("clean run"). Both get crossed out in coral on "run". The camera pushes right to a single
+ * speaker-notes line. A cursor appears on "fixing", selects one word on "editing", swaps it on "one",
+ * and the line flashes mint on "line". On "making the video again" a refresh arrow spins and a fresh
+ * video thumbnail pops out. On-screen: "Edit a line, not a lecture." A small pause icon in the corner
+ * carries the slide's pause/replay bullet. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const W = (i, word, fb) => { const v = ctx.at(i, word); return (typeof v === 'number' && isFinite(v)) ? v : fb; };
+  const tRec = W(0, 'Recording', 0.55), tQuiet = W(0, 'quiet', 1.76), tClean = W(0, 'clean', 2.77), tRun = W(0, 'run.', 3.1);
+  const tWith = W(1, 'With', 4.115), tSlides = W(1, 'slides,', 4.835), tFix = W(1, 'fixing', 5.52), tEdit = W(1, 'editing', 6.75);
+  const tOne = W(1, 'one', 7.2), tLine = W(1, 'line', 7.42), tMaking = W(1, 'making', 8.7), tVideo = W(1, 'video', 9.08), tAgain = W(1, 'again.', 9.44);
+  const SHIFT = 700;
+  const MONO = 'ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(70% 70% at 40% 35%, #ffffff 0%, var(--paper) 60%, #ebe6dc 100%)';
+  const drift = el('div', 'abs', stage, { inset: 0, transformOrigin: '50% 50%' });
+  const world = el('div', 'abs', drift, { left: 0, top: 0, width: '3000px', height: '1080px' });
+
+  const left = el('div', 'abs', world, { left: 0, top: 0, width: '980px', height: '1080px' });
+  const lHead = el('div', 'abs', left, { left: '160px', top: '170px', font: '800 72px/1 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--ink)' });
+  lHead.textContent = 'Recording live';
+  const lTag = el('div', 'abs', left, { left: '164px', top: '262px', font: `600 20px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--slate)' });
+  lTag.textContent = 'THE OLD WAY';
+
+  const mic = el('div', 'abs', left, { left: '240px', top: '350px', width: '240px', height: '330px' });
+  mic.innerHTML = `<svg width="240" height="330" fill="none" stroke="#8A93A6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <rect class="d" pathLength="1" x="80" y="20" width="80" height="150" rx="40"/>
+    <path class="d" pathLength="1" d="M95 60 H145 M95 90 H145 M95 120 H145"/>
+    <path class="d" pathLength="1" d="M50 120 Q50 220 120 220 Q190 220 190 120"/>
+    <path class="d" pathLength="1" d="M120 220 V290 M70 300 H170"/></svg>`;
+  const cam = el('div', 'abs', left, { left: '580px', top: '400px', width: '320px', height: '220px' });
+  cam.innerHTML = `<svg width="320" height="220" fill="none" stroke="#8A93A6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <rect class="d" pathLength="1" x="10" y="30" width="220" height="160" rx="18"/>
+    <path class="d" pathLength="1" d="M230 85 L300 50 L300 170 L230 135 Z"/></svg>`;
+  const recDot = el('div', 'abs', cam, { left: '42px', top: '58px', width: '30px', height: '30px', borderRadius: '50%', background: '#e8382a', boxShadow: '0 0 18px rgba(232,56,42,.6)', opacity: 0 });
+  const recTxt = el('div', 'abs', cam, { left: '84px', top: '62px', font: `700 24px/1 ${MONO}`, letterSpacing: '.1em', color: '#e8382a' });
+  recTxt.textContent = 'REC';
+
+  const labStyle = { top: '710px', width: '300px', textAlign: 'center', font: '700 36px/1 Inter', letterSpacing: '-.02em', color: 'var(--ink)' };
+  const labQuiet = el('div', 'abs', left, { ...labStyle, left: '210px' }); labQuiet.textContent = 'quiet room';
+  const labClean = el('div', 'abs', left, { ...labStyle, left: '590px' }); labClean.textContent = 'clean run';
+
+  const cross = el('div', 'abs', left, { left: 0, top: 0, width: '980px', height: '1080px' });
+  cross.innerHTML = `<svg width="980" height="1080" fill="none" stroke="#FF6B57" stroke-width="10" stroke-linecap="round">
+    <path class="x1" pathLength="1" d="M230 370 L500 680"/>
+    <path class="s1" pathLength="1" d="M230 732 L490 724"/>
+    <path class="x2" pathLength="1" d="M580 400 L900 640"/>
+    <path class="s2" pathLength="1" d="M620 732 L860 724"/></svg>`;
+
+  const divider = el('div', 'abs', world, { left: '979px', top: '140px', width: '2px', height: '800px', background: 'linear-gradient(180deg, transparent, rgba(138,147,166,.45), transparent)', transformOrigin: '50% 50%' });
+  const rPanel = el('div', 'abs', world, { left: '981px', top: 0, width: '2000px', height: '1080px', background: 'linear-gradient(90deg, rgba(61,123,255,.05), transparent 40%)' });
+  const rTag = el('div', 'abs', world, { left: '1080px', top: '262px', font: `600 20px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--signal)' });
+  rTag.textContent = 'NARRATED SLIDES';
+
+  const head = el('div', 'abs', world, { left: 80 + SHIFT + 'px', width: '1760px', top: '160px', textAlign: 'center', font: '800 88px/1 Inter Display, Inter', letterSpacing: '-.045em', color: 'var(--ink)' });
+  head.innerHTML = 'Edit a line, <span style="color:var(--signal)">not a lecture.</span>';
+
+  const card = el('div', 'abs', world, { left: 380 + SHIFT + 'px', top: '370px', width: '1160px', height: '200px', borderRadius: '22px', background: '#fff', boxShadow: '0 30px 80px rgba(14,20,36,.14), 0 2px 0 rgba(14,20,36,.04)', overflow: 'hidden' });
+  const cardBar = el('div', 'abs', card, { left: 0, top: 0, width: '8px', height: '100%', background: 'var(--slate)' });
+  const cardFlash = el('div', 'abs', card, { inset: 0, background: 'linear-gradient(90deg, rgba(60,203,154,.35), rgba(60,203,154,.08))', opacity: 0 });
+  const cLab = el('div', 'abs', card, { left: '60px', top: '38px', font: `600 20px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--slate)' });
+  cLab.textContent = 'SPEAKER NOTES';
+  const line = el('div', 'abs', card, { left: '60px', top: '96px', whiteSpace: 'nowrap', font: '600 56px/1.1 Inter', letterSpacing: '-.025em', color: 'var(--ink)' });
+  const pre = el('span', '', line, {}); pre.textContent = 'Plants turn sunlight into ';
+  const wbox = el('span', '', line, { display: 'inline-grid', verticalAlign: 'bottom' });
+  const oldW = el('span', '', wbox, { gridArea: '1/1', padding: '0 6px', margin: '0 -6px', borderRadius: '8px', color: 'var(--coral)', backgroundColor: 'rgba(61,123,255,0)' });
+  oldW.textContent = 'salt.';
+  const newW = el('span', '', wbox, { gridArea: '1/1', color: '#1f9e74' });
+  newW.textContent = 'sugar.';
+  const cursor = el('span', '', line, { display: 'inline-block', width: '4px', height: '58px', marginLeft: '6px', verticalAlign: '-8px', background: 'var(--signal)', borderRadius: '2px' });
+
+  const refresh = el('div', 'abs', world, { left: 650 + SHIFT + 'px', top: '665px', width: '180px', height: '180px', transformOrigin: '50% 50%' });
+  refresh.innerHTML = `<svg width="180" height="180" fill="none" stroke="#3D7BFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M150 90 A60 60 0 1 1 132 47"/><path d="M134 14 L134 50 L98 50"/></svg>`;
+  const thumb = el('div', 'abs', world, { left: 900 + SHIFT + 'px', top: '642px', width: '400px', height: '225px', borderRadius: '16px', overflow: 'hidden', transformOrigin: '20% 50%',
+    background: 'radial-gradient(80% 90% at 30% 20%, #2a3a6b 0%, var(--night) 70%)', boxShadow: '0 30px 70px rgba(14,20,36,.35), 0 0 60px rgba(60,203,154,.25)' });
+  const play = el('div', 'abs', thumb, { left: '160px', top: '72px', width: '80px', height: '80px', borderRadius: '50%', background: 'rgba(255,255,255,.14)', border: '2px solid rgba(255,255,255,.5)' });
+  el('div', 'abs', play, { left: '31px', top: '23px', width: 0, height: 0, borderTop: '17px solid transparent', borderBottom: '17px solid transparent', borderLeft: '26px solid #fff' });
+  const tTag = el('div', 'abs', thumb, { left: '20px', top: '20px', font: `700 16px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--mint)' });
+  tTag.textContent = 'NEW VIDEO';
+  el('div', 'abs', thumb, { left: '20px', right: '20px', bottom: '20px', height: '6px', borderRadius: '3px', background: 'rgba(255,255,255,.18)' });
+  const prog = el('div', 'abs', thumb, { left: '20px', width: '360px', bottom: '20px', height: '6px', borderRadius: '3px', background: 'var(--mint)', transformOrigin: '0% 50%' });
+
+  const pauseWrap = el('div', 'abs', world, { left: 1400 + SHIFT + 'px', top: '80px', width: '360px', height: '60px' });
+  const pLab = el('div', 'abs', pauseWrap, { right: '76px', top: '21px', font: `600 18px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--slate)', whiteSpace: 'nowrap' });
+  pLab.textContent = 'PAUSE · REPLAY';
+  const pIcon = el('div', 'abs', pauseWrap, { right: 0, top: 0, width: '60px', height: '60px', borderRadius: '50%', background: 'var(--ink)', boxShadow: '0 10px 30px rgba(14,20,36,.25)' });
+  el('div', 'abs', pIcon, { left: '21px', top: '19px', width: '6px', height: '22px', borderRadius: '2px', background: 'var(--paper)' });
+  el('div', 'abs', pIcon, { left: '33px', top: '19px', width: '6px', height: '22px', borderRadius: '2px', background: 'var(--paper)' });
+
+  ctx.fx.vignette({ strength: 0.25 });
+  ctx.fx.grain({ opacity: 0.05 });
+
+  const cur = { v: 0, solid: 0 };
+  const rec = { v: 0 };
+  ctx.onFrame((t) => {
+    const blink = (Math.floor(t * 2.4) % 2) ? 0.1 : 1;
+    cursor.style.opacity = String(cur.v * Math.max(blink, cur.solid));
+    const rb = t > tClean && t < tRun + 0.2 ? ((Math.floor(t * 3) % 2) ? 0.35 : 1) : 1;
+    recDot.style.opacity = String(rec.v * rb);
+  });
+
+  const draws = (root, sel) => Array.from(root.querySelectorAll(sel));
+  const micP = draws(mic, '.d'), camP = draws(cam, '.d');
+  const [x1, s1, x2, s2] = ['.x1', '.s1', '.x2', '.s2'].map((s) => cross.querySelector(s));
+  gsap.set([...micP, ...camP, x1, s1, x2, s2], { strokeDasharray: 1, strokeDashoffset: 1 });
+  gsap.set([recTxt, labQuiet, labClean, head, card, refresh, thumb, pauseWrap, rTag], { opacity: 0 });
+  gsap.set(recDot, { scale: 0 });
+  gsap.set(newW, { opacity: 0, y: 40 });
+  gsap.set(prog, { scaleX: 0 });
+
+  tl.to(drift, { scale: 1.035, duration: ctx.dur, ease: 'none' }, 0);
+  tl.from(divider, { scaleY: 0, duration: 1.0, ease: 'power2.out' }, 0.05);
+  tl.from(rPanel, { opacity: 0, duration: 1 }, 0.1);
+  tl.from(lHead, { opacity: 0, y: 30, duration: 0.7 }, 0.1);
+  tl.from(lTag, { opacity: 0, duration: 0.5 }, 0.35);
+  tl.to(rTag, { opacity: 1, duration: 0.5 }, 0.5);
+  tl.to(micP, { strokeDashoffset: 0, duration: 1.1, stagger: 0.12, ease: 'power2.inOut' }, 0.25);
+  tl.fromTo(labQuiet, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, ease: 'back.out(1.7)', immediateRender: false }, tQuiet - 0.05);
+  tl.to(camP, { strokeDashoffset: 0, duration: 0.9, stagger: 0.12, ease: 'power2.inOut' }, tQuiet + 0.3);
+  tl.to(rec, { v: 1, duration: 0.2 }, tClean - 0.05);
+  tl.to(recDot, { scale: 1, duration: 0.45, ease: 'back.out(2)' }, tClean - 0.05);
+  tl.fromTo(recTxt, { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.45, ease: 'back.out(2)', immediateRender: false }, tClean);
+  tl.fromTo(labClean, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, ease: 'back.out(1.7)', immediateRender: false }, tClean);
+  tl.to(x1, { strokeDashoffset: 0, duration: 0.3, ease: 'power2.in' }, tRun - 0.05);
+  tl.to(s1, { strokeDashoffset: 0, duration: 0.25, ease: 'power2.in' }, tRun + 0.1);
+  tl.to(x2, { strokeDashoffset: 0, duration: 0.3, ease: 'power2.in' }, tRun + 0.2);
+  tl.to(s2, { strokeDashoffset: 0, duration: 0.25, ease: 'power2.in' }, tRun + 0.35);
+  tl.to([mic, cam, labQuiet, labClean], { opacity: 0.45, duration: 0.5 }, tRun + 0.3);
+
+  const push = tWith - 0.15;
+  tl.to(world, { x: -SHIFT, duration: 1.3, ease: 'expo.inOut' }, push);
+  tl.to([left, rTag], { opacity: 0, duration: 0.7, ease: 'power2.in' }, push);
+  tl.to([divider, rPanel], { opacity: 0, duration: 0.6 }, push + 0.4);
+  tl.fromTo(card, { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.9, immediateRender: false }, push + 0.6);
+  tl.fromTo(head, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, ease: 'back.out(1.4)', immediateRender: false }, Math.max(push + 0.8, tSlides - 0.1));
+
+  tl.to(cur, { v: 1, duration: 0.2 }, tFix);
+  tl.to(oldW, { backgroundColor: 'rgba(61,123,255,.2)', duration: 0.25 }, tEdit);
+  tl.to(cur, { solid: 1, duration: 0.05 }, tEdit);
+  tl.to(oldW, { opacity: 0, y: -40, duration: 0.3, ease: 'power2.in' }, tOne - 0.05);
+  tl.to(newW, { opacity: 1, y: 0, duration: 0.45, ease: 'back.out(1.8)' }, tOne + 0.15);
+  tl.to(cur, { solid: 0, duration: 0.05 }, tOne + 0.6);
+  tl.fromTo(cardFlash, { opacity: 0 }, { opacity: 1, duration: 0.18, yoyo: true, repeat: 1, immediateRender: false }, tLine + 0.15);
+  tl.to(cardBar, { background: '#3CCB9A', duration: 0.3 }, tLine + 0.15);
+  tl.to(card, { boxShadow: '0 30px 90px rgba(60,203,154,.35), 0 2px 0 rgba(14,20,36,.04)', duration: 0.4 }, tLine + 0.15);
+  tl.to(card, { scale: 1.02, duration: 0.2, yoyo: true, repeat: 1, ease: 'power2.out' }, tLine + 0.15);
+
+  tl.fromTo(refresh, { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.45, ease: 'back.out(1.8)', immediateRender: false }, tMaking - 0.3);
+  tl.to(refresh, { rotation: 540, duration: 1.4, ease: 'power2.inOut' }, tMaking - 0.1);
+  tl.fromTo(thumb, { opacity: 0, scale: 0.2, x: -160 }, { opacity: 1, scale: 1, x: 0, duration: 0.7, ease: 'back.out(1.6)', immediateRender: false }, tVideo - 0.05);
+  tl.to(prog, { scaleX: 1, duration: Math.max(0.8, ctx.dur - tVideo - 0.2), ease: 'none' }, tVideo + 0.3);
+  tl.fromTo(pauseWrap, { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.5, ease: 'back.out(1.6)', immediateRender: false }, tAgain);
+  tl.to(thumb, { y: -6, duration: 1.2, ease: 'sine.inOut' }, tVideo + 0.8);
+});

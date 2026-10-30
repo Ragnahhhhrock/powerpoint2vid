@@ -1,0 +1,885 @@
+{
+  "title": "How to Turn Google Slides into a Narrated Video (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0E1424",
+      "ink": "#1B2233",
+      "paper": "#F7F4EE",
+      "slate": "#8A93A6",
+      "signal": "#3D7BFF",
+      "coral": "#FF6B57",
+      "mint": "#3CCB9A"
+    },
+    "font": "Inter Display",
+    "motion": "Calm, confident pacing with soft ease-out arrivals and gentle push-ins; elements snap into place on their spoken word, then breathe. Camera drifts slowly, never shakes.",
+    "story": "From a cluttered, plain-text deck to a polished film: we open dark and cinematic, move through bright paper-toned how-to steps, and close back on night with a glowing call to action. Wide establishing shots alternate with tight close-ups on a single line of text."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "Your lectures already live in Google Slides. The slides carry the visuals, and the speaker notes carry your words. Here's how to turn them into a narrated video.",
+      "storyboard": "Night stage. A single slide card floats centre-frame; on 'carry the visuals' it glows signal blue, and on 'carry your words' a notes panel slides out beneath it in paper white with typing lines. On 'narrated video' the card and notes fuse into a 16:9 video frame with a play triangle and an audio waveform pulsing in mint. Headline 'Slides → Narrated Video' sets at 130px. The overlapping title and subtitle text from the original is rebuilt cleanly; nothing else kept.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Turn Google Slides into a Narrated Video",
+        "text": "Slides carry the visuals. Speaker notes carry the words",
+        "notes": "Your lectures already live in Google Slides. The slides carry the visuals, and the speaker notes carry your words. Here's how to turn them into a narrated video.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 11.379,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.331,
+          "text": "Your lectures already live in Google Slides.",
+          "words": [
+            {
+              "w": "Your",
+              "t": 0.8
+            },
+            {
+              "w": "lectures",
+              "t": 1.102
+            },
+            {
+              "w": "already",
+              "t": 1.531
+            },
+            {
+              "w": "live",
+              "t": 1.961
+            },
+            {
+              "w": "in",
+              "t": 2.193
+            },
+            {
+              "w": "Google",
+              "t": 2.321
+            },
+            {
+              "w": "Slides.",
+              "t": 2.669
+            }
+          ]
+        },
+        {
+          "t": 3.772,
+          "end": 7.661,
+          "text": "The slides carry the visuals, and the speaker notes carry your words.",
+          "words": [
+            {
+              "w": "The",
+              "t": 3.772
+            },
+            {
+              "w": "slides",
+              "t": 3.935
+            },
+            {
+              "w": "carry",
+              "t": 4.376
+            },
+            {
+              "w": "the",
+              "t": 4.724
+            },
+            {
+              "w": "visuals,",
+              "t": 4.84
+            },
+            {
+              "w": "and",
+              "t": 5.49
+            },
+            {
+              "w": "the",
+              "t": 5.676
+            },
+            {
+              "w": "speaker",
+              "t": 5.781
+            },
+            {
+              "w": "notes",
+              "t": 6.199
+            },
+            {
+              "w": "carry",
+              "t": 6.57
+            },
+            {
+              "w": "your",
+              "t": 6.895
+            },
+            {
+              "w": "words.",
+              "t": 7.081
+            }
+          ]
+        },
+        {
+          "t": 8.103,
+          "end": 10.529,
+          "text": "Here's how to turn them into a narrated video.",
+          "words": [
+            {
+              "w": "Here's",
+              "t": 8.103
+            },
+            {
+              "w": "how",
+              "t": 8.405
+            },
+            {
+              "w": "to",
+              "t": 8.544
+            },
+            {
+              "w": "turn",
+              "t": 8.648
+            },
+            {
+              "w": "them",
+              "t": 8.915
+            },
+            {
+              "w": "into",
+              "t": 9.066
+            },
+            {
+              "w": "a",
+              "t": 9.298
+            },
+            {
+              "w": "narrated",
+              "t": 9.403
+            },
+            {
+              "w": "video.",
+              "t": 9.914
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.529
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Recording live needs a quiet room and a clean run. With narrated slides, fixing a mistake means editing one line of text, then making the video again.",
+      "storyboard": "Split screen on paper. Left: a studio microphone and a red REC dot under 'quiet room' and 'clean run', drawn in slate line art, then crossed out in coral. Camera pushes right to a single line of text; on 'editing one line' a cursor swaps one word and the line flashes mint. On 'making the video again' a circular refresh arrow spins and a fresh video thumbnail pops out. On-screen: 'Edit a line, not a lecture.' The student pause/replay bullet becomes a small pause icon in the corner.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Narrate slides instead of recording lectures",
+        "text": "No studio, microphone or clean run needed. Fix a mistake by editing a line. Students pause and replay at their pace",
+        "notes": "Recording live needs a quiet room and a clean run. With narrated slides, fixing a mistake means editing one line of text, then making the video again.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 10.805,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.604,
+          "text": "Recording live needs a quiet room and a clean run.",
+          "words": [
+            {
+              "w": "Recording",
+              "t": 0.55
+            },
+            {
+              "w": "live",
+              "t": 1.084
+            },
+            {
+              "w": "needs",
+              "t": 1.409
+            },
+            {
+              "w": "a",
+              "t": 1.665
+            },
+            {
+              "w": "quiet",
+              "t": 1.758
+            },
+            {
+              "w": "room",
+              "t": 2.118
+            },
+            {
+              "w": "and",
+              "t": 2.489
+            },
+            {
+              "w": "a",
+              "t": 2.698
+            },
+            {
+              "w": "clean",
+              "t": 2.768
+            },
+            {
+              "w": "run.",
+              "t": 3.105
+            }
+          ]
+        },
+        {
+          "t": 4.115,
+          "end": 9.955,
+          "text": "With narrated slides, fixing a mistake means editing one line of text, then making the video again.",
+          "words": [
+            {
+              "w": "With",
+              "t": 4.115
+            },
+            {
+              "w": "narrated",
+              "t": 4.347
+            },
+            {
+              "w": "slides,",
+              "t": 4.835
+            },
+            {
+              "w": "fixing",
+              "t": 5.52
+            },
+            {
+              "w": "a",
+              "t": 5.914
+            },
+            {
+              "w": "mistake",
+              "t": 5.972
+            },
+            {
+              "w": "means",
+              "t": 6.472
+            },
+            {
+              "w": "editing",
+              "t": 6.75
+            },
+            {
+              "w": "one",
+              "t": 7.203
+            },
+            {
+              "w": "line",
+              "t": 7.424
+            },
+            {
+              "w": "of",
+              "t": 7.656
+            },
+            {
+              "w": "text,",
+              "t": 7.76
+            },
+            {
+              "w": "then",
+              "t": 8.48
+            },
+            {
+              "w": "making",
+              "t": 8.701
+            },
+            {
+              "w": "the",
+              "t": 8.991
+            },
+            {
+              "w": "video",
+              "t": 9.084
+            },
+            {
+              "w": "again.",
+              "t": 9.444
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.955
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "Reminder notes won't work as a script. Write full sentences, the way you'd explain the slide to a student sitting right next to you.",
+      "storyboard": "Close-up on paper. The 'Before' note 'Sampling bias - convenience samples - eg uni students' appears in clipped slate shorthand; on 'won't work' it shakes and fades coral. On 'full sentences' it rewrites itself into 'Here's the problem with convenience samples.' in large ink type, 110px. On 'sitting right next to you' a speech-bubble tail grows from the sentence. Small caption: 'Short sentences, one idea at a time.'",
+      "minDuration": 10,
+      "slide": {
+        "title": "Write speaker notes for the ear",
+        "text": "Before: Sampling bias - convenience samples - eg uni students. After: Here's the problem with convenience samples.. Short sentences, one idea at a time",
+        "notes": "Reminder notes won't work as a script. Write full sentences, the way you'd explain the slide to a student sitting right next to you.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 9.105,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.64,
+          "text": "Reminder notes won't work as a script.",
+          "words": [
+            {
+              "w": "Reminder",
+              "t": 0.55
+            },
+            {
+              "w": "notes",
+              "t": 1.038
+            },
+            {
+              "w": "won't",
+              "t": 1.317
+            },
+            {
+              "w": "work",
+              "t": 1.56
+            },
+            {
+              "w": "as",
+              "t": 1.862
+            },
+            {
+              "w": "a",
+              "t": 2.002
+            },
+            {
+              "w": "script.",
+              "t": 2.083
+            }
+          ]
+        },
+        {
+          "t": 2.814,
+          "end": 7.505,
+          "text": "Write full sentences, the way you'd explain the slide to a student sitting right next to you.",
+          "words": [
+            {
+              "w": "Write",
+              "t": 2.814
+            },
+            {
+              "w": "full",
+              "t": 3.139
+            },
+            {
+              "w": "sentences,",
+              "t": 3.453
+            },
+            {
+              "w": "the",
+              "t": 4.265
+            },
+            {
+              "w": "way",
+              "t": 4.416
+            },
+            {
+              "w": "you'd",
+              "t": 4.556
+            },
+            {
+              "w": "explain",
+              "t": 4.741
+            },
+            {
+              "w": "the",
+              "t": 5.194
+            },
+            {
+              "w": "slide",
+              "t": 5.31
+            },
+            {
+              "w": "to",
+              "t": 5.682
+            },
+            {
+              "w": "a",
+              "t": 5.81
+            },
+            {
+              "w": "student",
+              "t": 5.891
+            },
+            {
+              "w": "sitting",
+              "t": 6.32
+            },
+            {
+              "w": "right",
+              "t": 6.622
+            },
+            {
+              "w": "next",
+              "t": 6.843
+            },
+            {
+              "w": "to",
+              "t": 7.087
+            },
+            {
+              "w": "you.",
+              "t": 7.203
+            }
+          ]
+        }
+      ],
+      "speechEnd": 7.505
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "In Google Slides, download your deck as a PowerPoint file. Upload it, choose a voice and speed that sounds natural, and keep captions on for every student.",
+      "storyboard": "Ink stage, three-step horizontal track. Step 1 on 'download': a File › Download › PowerPoint (.pptx) menu path animates and a .pptx file drops down. Step 2 on 'choose a voice and speed': the file slides right into a voice picker with a speed slider settling mid-track in signal blue. Step 3 on 'captions on': a CC toggle flips mint and caption bars appear under a video frame. The 'swap embedded videos for a still image' tip appears as a small footnote chip.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Download as .pptx, then choose a voice",
+        "text": "File menu, Download, PowerPoint (.pptx). Swap embedded videos for a still image. Choose a voice and speaking speed. Keep captions on for accessibility",
+        "notes": "In Google Slides, download your deck as a PowerPoint file. Upload it, choose a voice and speed that sounds natural, and keep captions on for every student.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 11,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.916,
+          "text": "In Google Slides, download your deck as a PowerPoint file.",
+          "words": [
+            {
+              "w": "In",
+              "t": 0.55
+            },
+            {
+              "w": "Google",
+              "t": 0.759
+            },
+            {
+              "w": "Slides,",
+              "t": 1.095
+            },
+            {
+              "w": "download",
+              "t": 1.792
+            },
+            {
+              "w": "your",
+              "t": 2.256
+            },
+            {
+              "w": "deck",
+              "t": 2.43
+            },
+            {
+              "w": "as",
+              "t": 2.709
+            },
+            {
+              "w": "a",
+              "t": 2.813
+            },
+            {
+              "w": "PowerPoint",
+              "t": 2.895
+            },
+            {
+              "w": "file.",
+              "t": 3.405
+            }
+          ]
+        },
+        {
+          "t": 4.16,
+          "end": 9.594,
+          "text": "Upload it, choose a voice and speed that sounds natural, and keep captions on for every student.",
+          "words": [
+            {
+              "w": "Upload",
+              "t": 4.16
+            },
+            {
+              "w": "it,",
+              "t": 4.648
+            },
+            {
+              "w": "choose",
+              "t": 4.961
+            },
+            {
+              "w": "a",
+              "t": 5.309
+            },
+            {
+              "w": "voice",
+              "t": 5.391
+            },
+            {
+              "w": "and",
+              "t": 5.704
+            },
+            {
+              "w": "speed",
+              "t": 5.832
+            },
+            {
+              "w": "that",
+              "t": 6.18
+            },
+            {
+              "w": "sounds",
+              "t": 6.343
+            },
+            {
+              "w": "natural,",
+              "t": 6.691
+            },
+            {
+              "w": "and",
+              "t": 7.364
+            },
+            {
+              "w": "keep",
+              "t": 7.562
+            },
+            {
+              "w": "captions",
+              "t": 7.806
+            },
+            {
+              "w": "on",
+              "t": 8.305
+            },
+            {
+              "w": "for",
+              "t": 8.525
+            },
+            {
+              "w": "every",
+              "t": 8.688
+            },
+            {
+              "w": "student.",
+              "t": 8.99
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.594
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Listen for mispronounced names and awkward lines, then fix them in your speaker notes. A twenty-slide segment becomes a focused video of roughly seven to ten minutes.",
+      "storyboard": "Paper stage. A waveform scrolls with headphones icon; on 'mispronounced names' and 'awkward lines' two coral flags pin to the wave, then on 'fix them' they turn mint as the notes panel corrects. Camera pulls wide on 'twenty-slide segment': twenty small slide tiles stack and compress into one video bar labelled '≈ 7–10 min' at 140px. Small MP4 / WebM chips sit beneath.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Watch the whole video before sharing",
+        "text": "Mispronounced technical terms and names. Narration that runs much longer. Notes that read awkwardly out loud. Download as MP4, WebM available",
+        "notes": "Listen for mispronounced names and awkward lines, then fix them in your speaker notes. A twenty-slide segment becomes a focused video of roughly seven to ten minutes.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "wipeleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 11,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 5.136,
+          "text": "Listen for mispronounced names and awkward lines, then fix them in your speaker notes.",
+          "words": [
+            {
+              "w": "Listen",
+              "t": 0.55
+            },
+            {
+              "w": "for",
+              "t": 0.945
+            },
+            {
+              "w": "mispronounced",
+              "t": 1.084
+            },
+            {
+              "w": "names",
+              "t": 1.758
+            },
+            {
+              "w": "and",
+              "t": 2.141
+            },
+            {
+              "w": "awkward",
+              "t": 2.303
+            },
+            {
+              "w": "lines,",
+              "t": 2.652
+            },
+            {
+              "w": "then",
+              "t": 3.383
+            },
+            {
+              "w": "fix",
+              "t": 3.639
+            },
+            {
+              "w": "them",
+              "t": 3.894
+            },
+            {
+              "w": "in",
+              "t": 4.045
+            },
+            {
+              "w": "your",
+              "t": 4.138
+            },
+            {
+              "w": "speaker",
+              "t": 4.3
+            },
+            {
+              "w": "notes.",
+              "t": 4.672
+            }
+          ]
+        },
+        {
+          "t": 5.577,
+          "end": 9.815,
+          "text": "A twenty-slide segment becomes a focused video of roughly seven to ten minutes.",
+          "words": [
+            {
+              "w": "A",
+              "t": 5.577
+            },
+            {
+              "w": "twenty-slide",
+              "t": 5.728
+            },
+            {
+              "w": "segment",
+              "t": 6.436
+            },
+            {
+              "w": "becomes",
+              "t": 6.854
+            },
+            {
+              "w": "a",
+              "t": 7.203
+            },
+            {
+              "w": "focused",
+              "t": 7.307
+            },
+            {
+              "w": "video",
+              "t": 7.725
+            },
+            {
+              "w": "of",
+              "t": 8.155
+            },
+            {
+              "w": "roughly",
+              "t": 8.294
+            },
+            {
+              "w": "seven",
+              "t": 8.654
+            },
+            {
+              "w": "to",
+              "t": 8.979
+            },
+            {
+              "w": "ten",
+              "t": 9.084
+            },
+            {
+              "w": "minutes.",
+              "t": 9.316
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.815
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "Ordinary slides in, extraordinary video out. On Pro, a.i. directs your lecture video, timing each scene to your narration. Try Basic first at powerpoint2vid.com.",
+      "storyboard": "Back to night. On 'ordinary slides in' a plain grey slide slides in from left; on 'extraordinary video out' it bursts into a vivid, colour-graded video frame on the right. On 'timing each scene' scene blocks snap to a mint waveform beneath. Final hold: 'powerpoint2vid.com' at 120px in paper, with 'Basic: try it free, watermarked · Pro from A$29 a month' in slate below.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Ordinary slides in, extraordinary video out",
+        "text": "Basic: try it, with a watermark. Pro: a.i.-directed lecture videos. From A$29 a month",
+        "notes": "Ordinary slides in, extraordinary video out. On Pro, a.i. directs your lecture video, timing each scene to your narration. Try Basic first at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 14.36,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.406,
+          "text": "Ordinary slides in, extraordinary video out.",
+          "words": [
+            {
+              "w": "Ordinary",
+              "t": 0.55
+            },
+            {
+              "w": "slides",
+              "t": 1.061
+            },
+            {
+              "w": "in,",
+              "t": 1.467
+            },
+            {
+              "w": "extraordinary",
+              "t": 1.85
+            },
+            {
+              "w": "video",
+              "t": 2.547
+            },
+            {
+              "w": "out.",
+              "t": 2.942
+            }
+          ]
+        },
+        {
+          "t": 4.103,
+          "end": 8.584,
+          "text": "On Pro, a.i. directs your lecture video, timing each scene to your narration.",
+          "words": [
+            {
+              "w": "On",
+              "t": 4.103
+            },
+            {
+              "w": "Pro,",
+              "t": 4.358
+            },
+            {
+              "w": "A.I.",
+              "t": 4.788
+            },
+            {
+              "w": "directs",
+              "t": 5.113
+            },
+            {
+              "w": "your",
+              "t": 5.473
+            },
+            {
+              "w": "lecture",
+              "t": 5.647
+            },
+            {
+              "w": "video,",
+              "t": 5.949
+            },
+            {
+              "w": "timing",
+              "t": 6.611
+            },
+            {
+              "w": "each",
+              "t": 7.028
+            },
+            {
+              "w": "scene",
+              "t": 7.272
+            },
+            {
+              "w": "to",
+              "t": 7.586
+            },
+            {
+              "w": "your",
+              "t": 7.69
+            },
+            {
+              "w": "narration.",
+              "t": 7.853
+            }
+          ]
+        },
+        {
+          "t": 9.281,
+          "end": 12.16,
+          "text": "Try Basic first at powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 9.281
+            },
+            {
+              "w": "Basic",
+              "t": 9.606
+            },
+            {
+              "w": "first",
+              "t": 10.012
+            },
+            {
+              "w": "at",
+              "t": 10.395
+            },
+            {
+              "w": "PowerPoint",
+              "t": 10.523
+            },
+            {
+              "w": "to",
+              "t": 11.057
+            },
+            {
+              "w": "vid",
+              "t": 11.185
+            },
+            {
+              "w": "dot",
+              "t": 11.417
+            },
+            {
+              "w": "com.",
+              "t": 11.649
+            }
+          ]
+        }
+      ],
+      "speechEnd": 12.16
+    }
+  ],
+  "voiceProvider": "elevenlabs",
+  "degraded": true
+}

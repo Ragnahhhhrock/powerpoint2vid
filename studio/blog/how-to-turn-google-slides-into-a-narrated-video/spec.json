@@ -1,0 +1,102 @@
+{
+  "title": "How to Turn Google Slides into a Narrated Video (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Turn Google Slides into a Narrated Video",
+      "bullets": [
+        "Slides carry the visuals",
+        "Speaker notes carry the words"
+      ],
+      "notes": "Your lectures already live in Google Slides. The slides carry the visuals, and the speaker notes carry your words. Here's how to turn them into a narrated video.",
+      "minDuration": 9
+    },
+    {
+      "title": "Narrate slides instead of recording lectures",
+      "bullets": [
+        "No studio, microphone or clean run needed",
+        "Fix a mistake by editing a line",
+        "Students pause and replay at their pace"
+      ],
+      "notes": "Recording live needs a quiet room and a clean run. With narrated slides, fixing a mistake means editing one line of text, then making the video again.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Write speaker notes for the ear",
+      "bullets": [
+        "Before: Sampling bias - convenience samples - eg uni students",
+        "After: Here's the problem with convenience samples.",
+        "Short sentences, one idea at a time"
+      ],
+      "notes": "Reminder notes won't work as a script. Write full sentences, the way you'd explain the slide to a student sitting right next to you.",
+      "minDuration": 11,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Download as .pptx, then choose a voice",
+      "bullets": [
+        "File menu, Download, PowerPoint (.pptx)",
+        "Swap embedded videos for a still image",
+        "Choose a voice and speaking speed",
+        "Keep captions on for accessibility"
+      ],
+      "notes": "In Google Slides, download your deck as a PowerPoint file. Upload it, choose a voice and speed that sounds natural, and keep captions on for every student.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Watch the whole video before sharing",
+      "bullets": [
+        "Mispronounced technical terms and names",
+        "Narration that runs much longer",
+        "Notes that read awkwardly out loud",
+        "Download as MP4, WebM available"
+      ],
+      "notes": "Listen for mispronounced names and awkward lines, then fix them in your speaker notes. A twenty-slide segment becomes a focused video of roughly seven to ten minutes.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Ordinary slides in, extraordinary video out",
+      "bullets": [
+        "Basic: try it, with a watermark",
+        "Pro: a.i.-directed lecture videos",
+        "From A$29 a month"
+      ],
+      "notes": "Ordinary slides in, extraordinary video out. On Pro, a.i. directs your lecture video, timing each scene to your narration. Try Basic first at powerpoint2vid.com.",
+      "minDuration": 10,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}
