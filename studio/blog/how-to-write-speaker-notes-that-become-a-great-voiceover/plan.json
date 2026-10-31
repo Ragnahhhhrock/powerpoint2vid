@@ -1,0 +1,1019 @@
+{
+  "title": "How to Write Speaker Notes That Become a Great Voiceover (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0E1220",
+      "ink": "#1A1F2E",
+      "paper": "#F6F2EA",
+      "coral": "#FF6B57",
+      "teal": "#2EC4B6",
+      "amber": "#FFB547",
+      "slate": "#8A93A6"
+    },
+    "font": "Inter Display",
+    "motion": "Calm, conversational pace with soft ease-out arrivals and gentle push-ins; words animate like speech, landing in rhythm with the voice. A waveform motif threads through every scene.",
+    "story": "We move from messy, scribbled notes on a dark stage to clean, spoken sentences on warm paper, alternating night and light scenes as each technique tidies the script, and ending on a bright waveform that becomes the finished video."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "Your speaker notes are written for you, not for a listener. Here's how to turn rough notes into a voiceover that sounds clear and natural.",
+      "storyboard": "Night stage. Scribbled, crossed-out note fragments in slate float in a loose cloud. On 'for you' they huddle together; on 'not for a listener' a coral speaker icon appears and the cloud ignores it. On 'voiceover' the fragments straighten into one clean line that becomes a teal waveform, and the headline 'Written to be heard' rises in 140px paper type. Original title and subtitle are rebuilt; overlapping text cut.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Speaker Notes That Become a Great Voiceover",
+        "text": "Written to be heard. From rough notes to a clear script",
+        "notes": "Your speaker notes are written for you, not for a listener. Here's how to turn rough notes into a voiceover that sounds clear and natural.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 9.83,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.668,
+          "text": "Your speaker notes are written for you, not for a listener.",
+          "words": [
+            {
+              "w": "Your",
+              "t": 0.8
+            },
+            {
+              "w": "speaker",
+              "t": 1.079
+            },
+            {
+              "w": "notes",
+              "t": 1.462
+            },
+            {
+              "w": "are",
+              "t": 1.706
+            },
+            {
+              "w": "written",
+              "t": 1.81
+            },
+            {
+              "w": "for",
+              "t": 2.1
+            },
+            {
+              "w": "you,",
+              "t": 2.263
+            },
+            {
+              "w": "not",
+              "t": 2.646
+            },
+            {
+              "w": "for",
+              "t": 2.855
+            },
+            {
+              "w": "a",
+              "t": 3.006
+            },
+            {
+              "w": "listener.",
+              "t": 3.076
+            }
+          ]
+        },
+        {
+          "t": 4.179,
+          "end": 8.23,
+          "text": "Here's how to turn rough notes into a voiceover that sounds clear and natural.",
+          "words": [
+            {
+              "w": "Here's",
+              "t": 4.179
+            },
+            {
+              "w": "how",
+              "t": 4.538
+            },
+            {
+              "w": "to",
+              "t": 4.689
+            },
+            {
+              "w": "turn",
+              "t": 4.794
+            },
+            {
+              "w": "rough",
+              "t": 5.084
+            },
+            {
+              "w": "notes",
+              "t": 5.363
+            },
+            {
+              "w": "into",
+              "t": 5.665
+            },
+            {
+              "w": "a",
+              "t": 5.897
+            },
+            {
+              "w": "voiceover",
+              "t": 5.99
+            },
+            {
+              "w": "that",
+              "t": 6.535
+            },
+            {
+              "w": "sounds",
+              "t": 6.709
+            },
+            {
+              "w": "clear",
+              "t": 7.081
+            },
+            {
+              "w": "and",
+              "t": 7.429
+            },
+            {
+              "w": "natural.",
+              "t": 7.592
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.23
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Rough notes work on stage, but a voice needs full sentences. Instead of 'results, three groups, control flat', say: let's look at the results. We tested three groups.",
+      "storyboard": "Paper stage, split layout. Left: the fragment 'Results - 3 groups - control flat' in choppy slate type with gaps, labelled 'Notes'. On 'full sentences' a coral arrow sweeps right and the script line 'Let's look at the results. We tested three groups.' types on in ink, labelled 'Script'. Camera drifts gently to the right half. Headline 'Fragments \u2192 Sentences' holds top.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Notes Are Fragments, Scripts Are Sentences",
+        "text": "Notes: 'Results - 3 groups - control flat'. Script: 'Let's look at the results. We tested three groups.'. Tells the viewer where to look. Links to the next slide",
+        "notes": "Rough notes work on stage, but a voice needs full sentences. A real script tells the viewer where to look and links smoothly to the next slide.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 12.604,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.242,
+          "text": "Rough notes work on stage, but a voice needs full sentences.",
+          "words": [
+            {
+              "w": "Rough",
+              "t": 0.55
+            },
+            {
+              "w": "notes",
+              "t": 0.875
+            },
+            {
+              "w": "work",
+              "t": 1.2
+            },
+            {
+              "w": "on",
+              "t": 1.514
+            },
+            {
+              "w": "stage,",
+              "t": 1.676
+            },
+            {
+              "w": "but",
+              "t": 2.303
+            },
+            {
+              "w": "a",
+              "t": 2.477
+            },
+            {
+              "w": "voice",
+              "t": 2.559
+            },
+            {
+              "w": "needs",
+              "t": 2.86
+            },
+            {
+              "w": "full",
+              "t": 3.128
+            },
+            {
+              "w": "sentences.",
+              "t": 3.395
+            }
+          ]
+        },
+        {
+          "t": 4.683,
+          "end": 9.873,
+          "text": "Instead of 'results, three groups, control flat', say: let's look at the results.",
+          "words": [
+            {
+              "w": "Instead",
+              "t": 4.683
+            },
+            {
+              "w": "of",
+              "t": 5.101
+            },
+            {
+              "w": "'results,",
+              "t": 5.217
+            },
+            {
+              "w": "three",
+              "t": 5.891
+            },
+            {
+              "w": "groups,",
+              "t": 6.193
+            },
+            {
+              "w": "control",
+              "t": 6.692
+            },
+            {
+              "w": "flat',",
+              "t": 7.203
+            },
+            {
+              "w": "say:",
+              "t": 8.016
+            },
+            {
+              "w": "let's",
+              "t": 8.573
+            },
+            {
+              "w": "look",
+              "t": 8.828
+            },
+            {
+              "w": "at",
+              "t": 9.002
+            },
+            {
+              "w": "the",
+              "t": 9.084
+            },
+            {
+              "w": "results.",
+              "t": 9.2
+            }
+          ]
+        },
+        {
+          "t": 10.314,
+          "end": 11.754,
+          "text": "We tested three groups.",
+          "words": [
+            {
+              "w": "We",
+              "t": 10.314
+            },
+            {
+              "w": "tested",
+              "t": 10.512
+            },
+            {
+              "w": "three",
+              "t": 10.93
+            },
+            {
+              "w": "groups.",
+              "t": 11.208
+            }
+          ]
+        }
+      ],
+      "speechEnd": 11.754
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "A real script tells the viewer where to look, and links smoothly to the next slide.",
+      "storyboard": "Ink stage. A miniature slide frame sits centre; on 'where to look' a teal spotlight circle glides onto a chart within it. On 'links smoothly' a second frame slides in from the right connected by an amber thread. Two short labels only: 'Where to look' and 'What's next'.",
+      "minDuration": 8,
+      "slide": {
+        "title": "Notes Are Fragments, Scripts Are Sentences",
+        "text": "Notes: 'Results - 3 groups - control flat'. Script: 'Let's look at the results. We tested three groups.'. Tells the viewer where to look. Links to the next slide",
+        "notes": "Rough notes work on stage, but a voice needs full sentences. A real script tells the viewer where to look and links smoothly to the next slide.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 6.713,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 5.113,
+          "text": "A real script tells the viewer where to look, and links smoothly to the next slide.",
+          "words": [
+            {
+              "w": "A",
+              "t": 0.55
+            },
+            {
+              "w": "real",
+              "t": 0.747
+            },
+            {
+              "w": "script",
+              "t": 1.038
+            },
+            {
+              "w": "tells",
+              "t": 1.479
+            },
+            {
+              "w": "the",
+              "t": 1.804
+            },
+            {
+              "w": "viewer",
+              "t": 1.92
+            },
+            {
+              "w": "where",
+              "t": 2.222
+            },
+            {
+              "w": "to",
+              "t": 2.442
+            },
+            {
+              "w": "look,",
+              "t": 2.559
+            },
+            {
+              "w": "and",
+              "t": 3.081
+            },
+            {
+              "w": "links",
+              "t": 3.313
+            },
+            {
+              "w": "smoothly",
+              "t": 3.592
+            },
+            {
+              "w": "to",
+              "t": 4.033
+            },
+            {
+              "w": "the",
+              "t": 4.149
+            },
+            {
+              "w": "next",
+              "t": 4.265
+            },
+            {
+              "w": "slide.",
+              "t": 4.521
+            }
+          ]
+        }
+      ],
+      "speechEnd": 5.113
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Write the way you speak. 'Utilise' becomes 'use'. 'In order to' becomes 'to'. Keep one idea per sentence, because a listener can't scan back up the page.",
+      "storyboard": "Paper stage with huge centred type. On 'utilise' the word appears at 150px, then shrinks and morphs into 'use' in coral. On 'in order to' the phrase collapses letter by letter into 'to'. On 'can't scan back up' a faint page scrolls upward and a slate arrow tries to go back, then fades. Title rebuilt as small kicker 'Write the way you speak'.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Write the Way You Speak",
+        "text": "'Utilise' becomes 'use'. 'In order to' becomes 'to'. One idea per sentence. Read your draft aloud",
+        "notes": "Read your draft aloud. If you wouldn't say it in conversation, rewrite it. Keep sentences short, because a listener can't scan back up the page.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 11.709,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 1.885,
+          "text": "Write the way you speak.",
+          "words": [
+            {
+              "w": "Write",
+              "t": 0.55
+            },
+            {
+              "w": "the",
+              "t": 0.91
+            },
+            {
+              "w": "way",
+              "t": 1.026
+            },
+            {
+              "w": "you",
+              "t": 1.2
+            },
+            {
+              "w": "speak.",
+              "t": 1.339
+            }
+          ]
+        },
+        {
+          "t": 2.326,
+          "end": 4.044,
+          "text": "'Utilise' becomes 'use'.",
+          "words": [
+            {
+              "w": "'Utilise'",
+              "t": 2.326
+            },
+            {
+              "w": "becomes",
+              "t": 3.0
+            },
+            {
+              "w": "'use'.",
+              "t": 3.406
+            }
+          ]
+        },
+        {
+          "t": 4.323,
+          "end": 6.064,
+          "text": "'In order to' becomes 'to'.",
+          "words": [
+            {
+              "w": "'In",
+              "t": 4.323
+            },
+            {
+              "w": "order",
+              "t": 4.555
+            },
+            {
+              "w": "to'",
+              "t": 4.822
+            },
+            {
+              "w": "becomes",
+              "t": 5.1
+            },
+            {
+              "w": "'to'.",
+              "t": 5.484
+            }
+          ]
+        },
+        {
+          "t": 6.668,
+          "end": 10.859,
+          "text": "Keep one idea per sentence, because a listener can't scan back up the page.",
+          "words": [
+            {
+              "w": "Keep",
+              "t": 6.668
+            },
+            {
+              "w": "one",
+              "t": 6.97
+            },
+            {
+              "w": "idea",
+              "t": 7.179
+            },
+            {
+              "w": "per",
+              "t": 7.562
+            },
+            {
+              "w": "sentence,",
+              "t": 7.724
+            },
+            {
+              "w": "because",
+              "t": 8.433
+            },
+            {
+              "w": "a",
+              "t": 8.723
+            },
+            {
+              "w": "listener",
+              "t": 8.804
+            },
+            {
+              "w": "can't",
+              "t": 9.176
+            },
+            {
+              "w": "scan",
+              "t": 9.477
+            },
+            {
+              "w": "back",
+              "t": 9.872
+            },
+            {
+              "w": "up",
+              "t": 10.07
+            },
+            {
+              "w": "the",
+              "t": 10.232
+            },
+            {
+              "w": "page.",
+              "t": 10.348
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.859
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Abbreviations, symbols and numbers can come out oddly. So 3.5% becomes three and a half per cent, and n=240 becomes two hundred and forty participants.",
+      "storyboard": "Night stage. Tile '3.5%' sits centre; a teal waveform below glitches in coral on 'oddly'. On 'three and a half per cent' the tile flips to the spelled-out phrase and the waveform smooths. Then 'n=240' flips to 'two hundred and forty participants'. Small side chips 'e.g. \u2192 for example' and 'vs \u2192 versus' ease in as data labels, kept from the slide.",
+      "minDuration": 12,
+      "slide": {
+        "title": "Spell Out What the Voice Trips On",
+        "text": "3.5% \u2192 three and a half per cent. e.g. \u2192 for example. n=240 \u2192 two hundred and forty participants. vs \u2192 versus, or compared with",
+        "notes": "Abbreviations, symbols and numbers can come out oddly. Write them in your notes exactly the way you want them heard.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 12.256,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.94,
+          "text": "Abbreviations, symbols and numbers can come out oddly.",
+          "words": [
+            {
+              "w": "Abbreviations,",
+              "t": 0.55
+            },
+            {
+              "w": "symbols",
+              "t": 1.63
+            },
+            {
+              "w": "and",
+              "t": 2.071
+            },
+            {
+              "w": "numbers",
+              "t": 2.21
+            },
+            {
+              "w": "can",
+              "t": 2.779
+            },
+            {
+              "w": "come",
+              "t": 2.988
+            },
+            {
+              "w": "out",
+              "t": 3.174
+            },
+            {
+              "w": "oddly.",
+              "t": 3.359
+            }
+          ]
+        },
+        {
+          "t": 4.219,
+          "end": 11.406,
+          "text": "So 3.5% becomes three and a half per cent, and n=240 becomes two hundred and forty participants.",
+          "words": [
+            {
+              "w": "So",
+              "t": 4.219
+            },
+            {
+              "w": "3.5%",
+              "t": 4.451
+            },
+            {
+              "w": "becomes",
+              "t": 5.612
+            },
+            {
+              "w": "three",
+              "t": 5.983
+            },
+            {
+              "w": "and",
+              "t": 6.215
+            },
+            {
+              "w": "a",
+              "t": 6.32
+            },
+            {
+              "w": "half",
+              "t": 6.401
+            },
+            {
+              "w": "per",
+              "t": 6.599
+            },
+            {
+              "w": "cent,",
+              "t": 6.738
+            },
+            {
+              "w": "and",
+              "t": 7.365
+            },
+            {
+              "w": "n=240",
+              "t": 7.585
+            },
+            {
+              "w": "becomes",
+              "t": 9.083
+            },
+            {
+              "w": "two",
+              "t": 9.489
+            },
+            {
+              "w": "hundred",
+              "t": 9.722
+            },
+            {
+              "w": "and",
+              "t": 10.0
+            },
+            {
+              "w": "forty",
+              "t": 10.128
+            },
+            {
+              "w": "participants.",
+              "t": 10.512
+            }
+          ]
+        }
+      ],
+      "speechEnd": 11.406
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "Narration takes its cues from punctuation. A full stop is a short pause. A comma, a smaller one. There was one exception. Low-light images.",
+      "storyboard": "Paper stage, a horizontal timeline waveform runs across. On 'full stop' a big coral dot drops in and the waveform flattens into a wide gap; on 'comma' an amber comma makes a narrower gap. On 'one exception. Low-light images.' the example sentence appears in 110px ink with the full stop glowing, and 'Low-light images.' isolated on its own line. Camera slowly pushes in on the pause.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Use Punctuation to Shape the Pace",
+        "text": "Full stop: a short pause. Comma: a smaller pause. 'There was one exception. Low-light images.'",
+        "notes": "Narration takes its cues from punctuation. Put an important phrase in its own short sentence, and the listener gets time to absorb each point.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "smoothup",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 11,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.023,
+          "text": "Narration takes its cues from punctuation.",
+          "words": [
+            {
+              "w": "Narration",
+              "t": 0.55
+            },
+            {
+              "w": "takes",
+              "t": 1.154
+            },
+            {
+              "w": "its",
+              "t": 1.432
+            },
+            {
+              "w": "cues",
+              "t": 1.595
+            },
+            {
+              "w": "from",
+              "t": 1.966
+            },
+            {
+              "w": "punctuation.",
+              "t": 2.164
+            }
+          ]
+        },
+        {
+          "t": 3.301,
+          "end": 5.113,
+          "text": "A full stop is a short pause.",
+          "words": [
+            {
+              "w": "A",
+              "t": 3.301
+            },
+            {
+              "w": "full",
+              "t": 3.452
+            },
+            {
+              "w": "stop",
+              "t": 3.719
+            },
+            {
+              "w": "is",
+              "t": 4.079
+            },
+            {
+              "w": "a",
+              "t": 4.219
+            },
+            {
+              "w": "short",
+              "t": 4.288
+            },
+            {
+              "w": "pause.",
+              "t": 4.59
+            }
+          ]
+        },
+        {
+          "t": 5.554,
+          "end": 7.098,
+          "text": "A comma, a smaller one.",
+          "words": [
+            {
+              "w": "A",
+              "t": 5.554
+            },
+            {
+              "w": "comma,",
+              "t": 5.728
+            },
+            {
+              "w": "a",
+              "t": 6.25
+            },
+            {
+              "w": "smaller",
+              "t": 6.39
+            },
+            {
+              "w": "one.",
+              "t": 6.808
+            }
+          ]
+        },
+        {
+          "t": 7.342,
+          "end": 8.514,
+          "text": "There was one exception.",
+          "words": [
+            {
+              "w": "There",
+              "t": 7.342
+            },
+            {
+              "w": "was",
+              "t": 7.562
+            },
+            {
+              "w": "one",
+              "t": 7.713
+            },
+            {
+              "w": "exception.",
+              "t": 7.887
+            }
+          ]
+        },
+        {
+          "t": 8.688,
+          "end": 9.884,
+          "text": "Low-light images.",
+          "words": [
+            {
+              "w": "Low-light",
+              "t": 8.688
+            },
+            {
+              "w": "images.",
+              "t": 9.211
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.884
+    },
+    {
+      "file": "scenes/scene-6.js",
+      "narration": "Write full, short sentences, spell numbers as words, and read it aloud once. On Pro, a.i. directs the video, timing each scene to your words. Try Basic first at powerpoint2vid.com.",
+      "storyboard": "Night stage. Three teal checkmarks tick in on 'full, short sentences', 'numbers as words', 'read it aloud'. On 'a.i. directs the video' the checklist folds into a glowing waveform that unfurls into a video frame with scenes snapping to the beat. On 'powerpoint2vid.com' the URL lands at 120px in paper with a coral 'Try Basic first' button, holding for two seconds.",
+      "minDuration": 12,
+      "slide": {
+        "title": "Read It Aloud, Then Make the Video",
+        "text": "Full, short sentences in every note. Numbers written as spoken words. Read aloud once before converting",
+        "notes": "Your polished notes become the narration. On Pro, a.i. directs the video, timing each scene to your words. Try Basic first at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-6.wav",
+      "duration": 15.115,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 5.252,
+          "text": "Write full, short sentences, spell numbers as words, and read it aloud once.",
+          "words": [
+            {
+              "w": "Write",
+              "t": 0.55
+            },
+            {
+              "w": "full,",
+              "t": 0.899
+            },
+            {
+              "w": "short",
+              "t": 1.212
+            },
+            {
+              "w": "sentences,",
+              "t": 1.526
+            },
+            {
+              "w": "spell",
+              "t": 2.362
+            },
+            {
+              "w": "numbers",
+              "t": 2.721
+            },
+            {
+              "w": "as",
+              "t": 3.047
+            },
+            {
+              "w": "words,",
+              "t": 3.197
+            },
+            {
+              "w": "and",
+              "t": 3.766
+            },
+            {
+              "w": "read",
+              "t": 3.987
+            },
+            {
+              "w": "it",
+              "t": 4.196
+            },
+            {
+              "w": "aloud",
+              "t": 4.312
+            },
+            {
+              "w": "once.",
+              "t": 4.707
+            }
+          ]
+        },
+        {
+          "t": 5.856,
+          "end": 9.803,
+          "text": "On Pro, a.i. directs the video, timing each scene to your words.",
+          "words": [
+            {
+              "w": "On",
+              "t": 5.856
+            },
+            {
+              "w": "Pro,",
+              "t": 6.123
+            },
+            {
+              "w": "A.I.",
+              "t": 6.541
+            },
+            {
+              "w": "directs",
+              "t": 6.913
+            },
+            {
+              "w": "the",
+              "t": 7.296
+            },
+            {
+              "w": "video,",
+              "t": 7.4
+            },
+            {
+              "w": "timing",
+              "t": 8.004
+            },
+            {
+              "w": "each",
+              "t": 8.457
+            },
+            {
+              "w": "scene",
+              "t": 8.689
+            },
+            {
+              "w": "to",
+              "t": 8.979
+            },
+            {
+              "w": "your",
+              "t": 9.084
+            },
+            {
+              "w": "words.",
+              "t": 9.281
+            }
+          ]
+        },
+        {
+          "t": 9.978,
+          "end": 12.915,
+          "text": "Try Basic first at powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 9.978
+            },
+            {
+              "w": "Basic",
+              "t": 10.303
+            },
+            {
+              "w": "first",
+              "t": 10.756
+            },
+            {
+              "w": "at",
+              "t": 11.127
+            },
+            {
+              "w": "PowerPoint",
+              "t": 11.255
+            },
+            {
+              "w": "to",
+              "t": 11.824
+            },
+            {
+              "w": "vid",
+              "t": 11.951
+            },
+            {
+              "w": "dot",
+              "t": 12.172
+            },
+            {
+              "w": "com.",
+              "t": 12.427
+            }
+          ]
+        }
+      ],
+      "speechEnd": 12.915
+    }
+  ],
+  "voiceProvider": "elevenlabs"
+}

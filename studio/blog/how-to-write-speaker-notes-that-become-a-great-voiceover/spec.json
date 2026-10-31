@@ -1,0 +1,103 @@
+{
+  "title": "How to Write Speaker Notes That Become a Great Voiceover (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Speaker Notes That Become a Great Voiceover",
+      "bullets": [
+        "Written to be heard",
+        "From rough notes to a clear script"
+      ],
+      "notes": "Your speaker notes are written for you, not for a listener. Here's how to turn rough notes into a voiceover that sounds clear and natural.",
+      "minDuration": 9
+    },
+    {
+      "title": "Notes Are Fragments, Scripts Are Sentences",
+      "bullets": [
+        "Notes: 'Results - 3 groups - control flat'",
+        "Script: 'Let's look at the results. We tested three groups.'",
+        "Tells the viewer where to look",
+        "Links to the next slide"
+      ],
+      "notes": "Rough notes work on stage, but a voice needs full sentences. A real script tells the viewer where to look and links smoothly to the next slide.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Write the Way You Speak",
+      "bullets": [
+        "'Utilise' becomes 'use'",
+        "'In order to' becomes 'to'",
+        "One idea per sentence",
+        "Read your draft aloud"
+      ],
+      "notes": "Read your draft aloud. If you wouldn't say it in conversation, rewrite it. Keep sentences short, because a listener can't scan back up the page.",
+      "minDuration": 10,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Spell Out What the Voice Trips On",
+      "bullets": [
+        "3.5% → three and a half per cent",
+        "e.g. → for example",
+        "n=240 → two hundred and forty participants",
+        "vs → versus, or compared with"
+      ],
+      "notes": "Abbreviations, symbols and numbers can come out oddly. Write them in your notes exactly the way you want them heard.",
+      "minDuration": 10,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Use Punctuation to Shape the Pace",
+      "bullets": [
+        "Full stop: a short pause",
+        "Comma: a smaller pause",
+        "'There was one exception. Low-light images.'"
+      ],
+      "notes": "Narration takes its cues from punctuation. Put an important phrase in its own short sentence, and the listener gets time to absorb each point.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Read It Aloud, Then Make the Video",
+      "bullets": [
+        "Full, short sentences in every note",
+        "Numbers written as spoken words",
+        "Read aloud once before converting"
+      ],
+      "notes": "Your polished notes become the narration. On Pro, a.i. directs the video, timing each scene to your words. Try Basic first at powerpoint2vid.com.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+/* Scene 5 — "Narration takes its cues from punctuation. A full stop is a short pause. A comma, a smaller one.
+ * There was one exception. Low-light images."
+ * Storyboard: warm paper stage, a live waveform runs across the frame. On "full stop" a big coral dot drops
+ * into the wave and the bars around it flatten into a wide silent gap ("SHORT PAUSE"). On "comma" an amber
+ * comma drops in and opens a narrower gap ("SMALLER PAUSE"). On "There was one exception." the wave lifts
+ * away and the example sentence speaks itself in 110px ink. The full stop glows coral and "Low-light images."
+ * lands alone on its own line. The camera drifts throughout and pushes in on the pause. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const A = (i, w) => ctx.at(i, w);
+  const tStop = A(1, 'stop'), tComma = A(2, 'comma,'), tSmaller = A(2, 'smaller');
+  const tThere = A(3, 'There'), tExc = A(3, 'exception.'), tLow = A(4, 'Low-light'), tImg = A(4, 'images.');
+  const MONO = '600 22px/1 ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(80% 70% at 50% 45%, #fffdf8 0%, var(--paper) 60%, #ebe4d6 100%)';
+  el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(40% 35% at 70% 40%, rgba(255,181,71,.10), transparent 70%), radial-gradient(45% 40% at 25% 65%, rgba(46,196,182,.08), transparent 70%)' });
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 600px' });
+
+  const eyebrow = el('div', 'abs', cam, { left: '160px', top: '120px', font: MONO, letterSpacing: '.16em', color: 'var(--slate)' });
+  eyebrow.textContent = 'PUNCTUATION SHAPES THE PACE';
+
+  const WY = 470, X0 = 160, X1 = 1760, STEP = 12;
+  const wave = el('div', 'abs', cam, { inset: 0, transformOrigin: '960px 470px' });
+  const NS = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(NS, 'svg');
+  svg.setAttribute('width', '1920'); svg.setAttribute('height', '1080');
+  svg.style.position = 'absolute'; svg.style.left = '0'; svg.style.top = '0';
+  svg.innerHTML = `<defs><linearGradient id="wg" x1="0" x2="1"><stop offset="0" stop-color="#2EC4B6"/><stop offset=".55" stop-color="#1A1F2E"/><stop offset="1" stop-color="#2EC4B6"/></linearGradient></defs>`;
+  const path = document.createElementNS(NS, 'path');
+  path.setAttribute('fill', 'none'); path.setAttribute('stroke', 'url(#wg)');
+  path.setAttribute('stroke-width', '6'); path.setAttribute('stroke-linecap', 'round');
+  svg.appendChild(path); wave.appendChild(svg);
+
+  const rnd = ctx.rand(5);
+  const N = Math.floor((X1 - X0) / STEP) + 1;
+  const seeds = Array.from({ length: N }, () => [rnd(), rnd() * 6.28]);
+  const env = { a: 0.25 };
+  const gStop = { k: 0, cx: 1220, hw: 160 }, gComma = { k: 0, cx: 640, hw: 70 };
+
+  const dot = el('div', 'abs', wave, { left: gStop.cx - 34 + 'px', top: WY - 34 + 'px', width: '68px', height: '68px', borderRadius: '50%', background: 'var(--coral)', boxShadow: '0 14px 30px rgba(255,107,87,.45), 0 0 50px rgba(255,107,87,.35)' });
+  const comma = el('div', 'abs', wave, { left: gComma.cx - 70 + 'px', top: WY - 168 + 'px', width: '140px', textAlign: 'center', font: '900 210px/210px Inter Display, Inter', color: 'var(--amber)', textShadow: '0 14px 30px rgba(255,181,71,.45)' });
+  comma.textContent = ',';
+
+  const bracket = (g, color, text) => {
+    const b = el('div', 'abs', wave, { left: g.cx - g.hw + 'px', top: WY + 130 + 'px', width: g.hw * 2 + 'px', height: '16px', borderLeft: `3px solid ${color}`, borderRight: `3px solid ${color}`, borderTop: `3px solid ${color}`, borderRadius: '4px 4px 0 0', transformOrigin: '50% 0%' });
+    const l = el('div', 'abs', wave, { left: g.cx - 200 + 'px', width: '400px', top: WY + 166 + 'px', textAlign: 'center', font: MONO, letterSpacing: '.16em', color });
+    l.textContent = text;
+    return [b, l];
+  };
+  const [bS, lS] = bracket(gStop, 'var(--coral)', 'SHORT PAUSE');
+  const [bC, lC] = bracket(gComma, '#d98a10', 'SMALLER PAUSE');
+
+  const line1 = el('div', 'abs', cam, { left: '80px', right: '80px', top: '520px', textAlign: 'center', font: '800 110px/1.1 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--ink)', whiteSpace: 'nowrap' });
+  const w1 = ['There', 'was', 'one', 'exception'].map((w, i) => {
+    const s = el('span', '', line1, { display: 'inline-block', marginRight: i < 3 ? '.25em' : '0' }); s.textContent = w; return s;
+  });
+  const stopSpan = el('span', '', line1, { display: 'inline-block', color: 'var(--coral)', transformOrigin: '50% 80%' });
+  stopSpan.textContent = '.';
+  const line2 = el('div', 'abs', cam, { left: '80px', right: '80px', top: '700px', textAlign: 'center', font: '800 110px/1.1 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--ink)', whiteSpace: 'nowrap' });
+  const w2 = ['Low-light', 'images.'].map((w, i) => {
+    const s = el('span', '', line2, { display: 'inline-block', marginRight: i < 1 ? '.25em' : '0' }); s.textContent = w; return s;
+  });
+  const pauseMark = el('div', 'abs', cam, { left: '760px', width: '400px', top: '660px', height: '3px', background: 'linear-gradient(90deg, transparent, rgba(255,107,87,.6), transparent)', transformOrigin: '50% 50%' });
+
+  ctx.fx.vignette({ strength: 0.25 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  const gapMask = (x, g) => {
+    if (g.k <= 0) return 1;
+    const d = Math.abs(x - g.cx);
+    const m = d < g.hw ? 0 : d < g.hw + 50 ? (d - g.hw) / 50 : 1;
+    return 1 - g.k * (1 - m);
+  };
+  ctx.onFrame((t) => {
+    let d = '';
+    for (let i = 0; i < N; i++) {
+      const x = X0 + i * STEP, u = (x - X0) / (X1 - X0);
+      const taper = Math.pow(Math.sin(Math.PI * u), 0.6);
+      const [r, ph] = seeds[i];
+      const base = 0.3 + 0.7 * Math.abs(Math.sin(x * 0.011 + t * 1.3) * Math.sin(x * 0.027 - t * 2.1 + ph * 0.2));
+      const jitter = 0.75 + 0.25 * Math.sin(t * 3.2 + ph) * r;
+      const mask = gapMask(x, gStop) * gapMask(x, gComma);
+      const a = Math.max(2, 120 * env.a * taper * base * jitter * mask);
+      d += `M${x} ${(WY - a).toFixed(1)}L${x} ${(WY + a).toFixed(1)}`;
+    }
+    path.setAttribute('d', d);
+  });
+
+  gsap.set([dot, comma, bS, lS, bC, lC, ...w1, stopSpan, ...w2, pauseMark], { opacity: 0 });
+  gsap.set(stopSpan, { textShadow: '0 0 0px rgba(255,107,87,0)' });
+  tl.to(env, { a: 1, duration: 1.2, ease: 'power2.out' }, 0);
+  tl.from(eyebrow, { opacity: 0, y: 14, duration: 0.7 }, 0.1);
+  tl.to(cam, { scale: 1.035, duration: 7, ease: 'none' }, 0);
+
+  tl.fromTo(dot, { y: -420, opacity: 1, scale: 0.8 }, { y: 0, opacity: 1, scale: 1, duration: 0.6, ease: 'bounce.out', immediateRender: false }, tStop - 0.35);
+  tl.to(gStop, { k: 1, duration: 0.7, ease: 'power3.out' }, tStop + 0.05);
+  tl.fromTo(bS, { opacity: 0, scaleX: 0.2 }, { opacity: 1, scaleX: 1, duration: 0.6, ease: 'back.out(1.6)', immediateRender: false }, A(1, 'short'));
+  tl.fromTo(lS, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, immediateRender: false }, A(1, 'pause.'));
+
+  tl.fromTo(comma, { y: -420, opacity: 1, rotation: -20 }, { y: 0, opacity: 1, rotation: 0, duration: 0.6, ease: 'back.out(1.8)', immediateRender: false }, tComma - 0.3);
+  tl.to(gComma, { k: 1, duration: 0.6, ease: 'power3.out' }, tComma + 0.1);
+  tl.fromTo(bC, { opacity: 0, scaleX: 0.2 }, { opacity: 1, scaleX: 1, duration: 0.6, ease: 'back.out(1.6)', immediateRender: false }, tSmaller);
+  tl.fromTo(lC, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, immediateRender: false }, tSmaller + 0.15);
+
+  tl.to(wave, { y: -230, scale: 0.72, duration: 0.9, ease: 'expo.inOut' }, tThere - 0.4);
+  tl.to([bS, lS, bC, lC], { opacity: 0, duration: 0.4 }, tThere - 0.4);
+  tl.to(eyebrow, { opacity: 0.6, duration: 0.4 }, tThere - 0.4);
+  const wt = [A(3, 'There'), A(3, 'was'), A(3, 'one'), tExc];
+  w1.forEach((s, i) => tl.fromTo(s, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: 'back.out(1.6)', immediateRender: false }, wt[i] - 0.05));
+  const glowT = tExc + 0.45;
+  tl.fromTo(stopSpan, { opacity: 0, scale: 2.4 }, { opacity: 1, scale: 1, duration: 0.4, ease: 'back.out(2)', immediateRender: false }, glowT);
+  tl.to(stopSpan, { textShadow: '0 0 34px rgba(255,107,87,.9)', duration: 0.5, ease: 'power2.out' }, glowT + 0.1);
+  tl.to(dot, { scale: 1.3, boxShadow: '0 14px 30px rgba(255,107,87,.5), 0 0 90px rgba(255,107,87,.8)', duration: 0.4, yoyo: true, repeat: 1, ease: 'power2.inOut' }, glowT);
+  tl.fromTo(pauseMark, { opacity: 0, scaleX: 0 }, { opacity: 1, scaleX: 1, duration: 0.5, immediateRender: false }, glowT + 0.05);
+
+  tl.to(cam, { scale: 1.09, duration: ctx.dur - glowT + 0.2, ease: 'power2.inOut' }, glowT - 0.2);
+
+  tl.fromTo(w2[0], { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.5, ease: 'back.out(1.6)', immediateRender: false }, tLow - 0.05);
+  tl.fromTo(w2[1], { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.5, ease: 'back.out(1.6)', immediateRender: false }, tImg - 0.05);
+  tl.to(stopSpan, { textShadow: '0 0 18px rgba(255,107,87,.6)', duration: 0.8, ease: 'sine.inOut', yoyo: true, repeat: 1 }, tImg + 0.3);
+});
