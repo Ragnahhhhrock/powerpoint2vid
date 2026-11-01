@@ -1,0 +1,933 @@
+{
+  "title": "\"Fonts for Presentations: Size, Pairing and Readability\" (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0E1116",
+      "ink": "#1B1F27",
+      "paper": "#F7F4EE",
+      "signal": "#FFC23D",
+      "coral": "#FF5E57",
+      "teal": "#2EC4B6",
+      "slate": "#8A93A3"
+    },
+    "font": "Inter Display",
+    "motion": "Calm, confident pacing with soft ease-out landings; type is the actor, so letters scale, sharpen and settle rather than fly. The camera makes slow push-ins and occasional rack-focus blurs to simulate bad screens.",
+    "story": "We open in the dark with blurry, squinting text, move through warm paper scenes where type gets fixed one rule at a time, peak on a before/after split, and land back on a crisp night stage with a bright call to action."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "When fonts are right, nobody notices them. When they're wrong, people squint, lose the thread, or stop reading. Here's how to choose fonts that stay readable.",
+      "storyboard": "Night stage. The word 'Readability' sits huge at 150px, perfectly crisp, and nearly invisible in slate against the dark on 'nobody notices them'. On 'squint' it blurs and shrinks, on 'lose the thread' letters drift apart, on 'stop reading' it fades almost out. On 'stay readable' it snaps back sharp in paper white with a signal-yellow underline, camera pushing in slowly. Original title text kept as the hero word; the cramped layout is cut.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Fonts for Presentations: Size, Pairing, Readability",
+        "text": "",
+        "notes": "When fonts are right, nobody notices them. When they're wrong, people squint, lose the thread or stop reading. Here's how to choose fonts that stay readable.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 10.59,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.134,
+          "text": "When fonts are right, nobody notices them.",
+          "words": [
+            {
+              "w": "When",
+              "t": 0.8
+            },
+            {
+              "w": "fonts",
+              "t": 1.09
+            },
+            {
+              "w": "are",
+              "t": 1.415
+            },
+            {
+              "w": "right,",
+              "t": 1.543
+            },
+            {
+              "w": "nobody",
+              "t": 1.984
+            },
+            {
+              "w": "notices",
+              "t": 2.356
+            },
+            {
+              "w": "them.",
+              "t": 2.843
+            }
+          ]
+        },
+        {
+          "t": 3.377,
+          "end": 7.011,
+          "text": "When they're wrong, people squint, lose the thread, or stop reading.",
+          "words": [
+            {
+              "w": "When",
+              "t": 3.377
+            },
+            {
+              "w": "they're",
+              "t": 3.586
+            },
+            {
+              "w": "wrong,",
+              "t": 3.807
+            },
+            {
+              "w": "people",
+              "t": 4.19
+            },
+            {
+              "w": "squint,",
+              "t": 4.55
+            },
+            {
+              "w": "lose",
+              "t": 5.119
+            },
+            {
+              "w": "the",
+              "t": 5.409
+            },
+            {
+              "w": "thread,",
+              "t": 5.548
+            },
+            {
+              "w": "or",
+              "t": 5.955
+            },
+            {
+              "w": "stop",
+              "t": 6.152
+            },
+            {
+              "w": "reading.",
+              "t": 6.466
+            }
+          ]
+        },
+        {
+          "t": 7.522,
+          "end": 9.74,
+          "text": "Here's how to choose fonts that stay readable.",
+          "words": [
+            {
+              "w": "Here's",
+              "t": 7.522
+            },
+            {
+              "w": "how",
+              "t": 7.812
+            },
+            {
+              "w": "to",
+              "t": 7.952
+            },
+            {
+              "w": "choose",
+              "t": 8.068
+            },
+            {
+              "w": "fonts",
+              "t": 8.358
+            },
+            {
+              "w": "that",
+              "t": 8.706
+            },
+            {
+              "w": "stay",
+              "t": 8.892
+            },
+            {
+              "w": "readable.",
+              "t": 9.182
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.74
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Projectors wash out contrast, laptops shrink everything, and video adds compression. Choose fonts with open letter shapes, a generous x-height and solid strokes that hold up in all three.",
+      "storyboard": "Ink stage with three screen frames side by side: a projector beam, a laptop, a video player. On 'wash out' the projector's sample letter 'a' fades grey; on 'shrink' the laptop's letter tiny; on 'compression' the video's letter turns blocky. Camera pushes into a single giant 'a' on paper: on 'open letter shapes' its counter glows teal, on 'x-height' a signal-yellow guide line rises, on 'solid strokes' the stems thicken. The letter returns crisp to all three screens. The four bullets are rebuilt as these three labelled callouts; 'distinct characters' is shown briefly as Il1 separating.",
+      "minDuration": 12,
+      "slide": {
+        "title": "Pick fonts that survive tough screens",
+        "text": "Open letter shapes. Generous x-height. Distinct characters. Solid strokes",
+        "notes": "Projectors wash out contrast, laptops shrink everything and video adds compression. Choose fonts with open letter shapes, a generous x-height and solid strokes that hold up in all three.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 12.766,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 5.6,
+          "text": "Projectors wash out contrast, laptops shrink everything, and video adds compression.",
+          "words": [
+            {
+              "w": "Projectors",
+              "t": 0.55
+            },
+            {
+              "w": "wash",
+              "t": 1.165
+            },
+            {
+              "w": "out",
+              "t": 1.455
+            },
+            {
+              "w": "contrast,",
+              "t": 1.664
+            },
+            {
+              "w": "laptops",
+              "t": 2.547
+            },
+            {
+              "w": "shrink",
+              "t": 3.081
+            },
+            {
+              "w": "everything,",
+              "t": 3.406
+            },
+            {
+              "w": "and",
+              "t": 4.079
+            },
+            {
+              "w": "video",
+              "t": 4.288
+            },
+            {
+              "w": "adds",
+              "t": 4.637
+            },
+            {
+              "w": "compression.",
+              "t": 4.881
+            }
+          ]
+        },
+        {
+          "t": 6.042,
+          "end": 11.916,
+          "text": "Choose fonts with open letter shapes, a generous x-height and solid strokes that hold up in all three.",
+          "words": [
+            {
+              "w": "Choose",
+              "t": 6.042
+            },
+            {
+              "w": "fonts",
+              "t": 6.413
+            },
+            {
+              "w": "with",
+              "t": 6.773
+            },
+            {
+              "w": "open",
+              "t": 6.982
+            },
+            {
+              "w": "letter",
+              "t": 7.284
+            },
+            {
+              "w": "shapes,",
+              "t": 7.551
+            },
+            {
+              "w": "a",
+              "t": 8.282
+            },
+            {
+              "w": "generous",
+              "t": 8.433
+            },
+            {
+              "w": "x-height",
+              "t": 9.072
+            },
+            {
+              "w": "and",
+              "t": 9.525
+            },
+            {
+              "w": "solid",
+              "t": 9.71
+            },
+            {
+              "w": "strokes",
+              "t": 10.059
+            },
+            {
+              "w": "that",
+              "t": 10.465
+            },
+            {
+              "w": "hold",
+              "t": 10.651
+            },
+            {
+              "w": "up",
+              "t": 10.906
+            },
+            {
+              "w": "in",
+              "t": 11.057
+            },
+            {
+              "w": "all",
+              "t": 11.162
+            },
+            {
+              "w": "three.",
+              "t": 11.37
+            }
+          ]
+        }
+      ],
+      "speechEnd": 11.916
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "You don't need a special font, just one that renders the same everywhere. Use one family in two weights, or pair a serif headline with a plain sans-serif body.",
+      "storyboard": "Paper stage. On 'renders the same everywhere' four name tags slide in on a row: Calibri, Arial, Segoe UI, Georgia, each set in its own face, with small check marks. On 'one family in two weights' the row clears and a single word appears in Bold over Regular, left half of frame. On 'serif headline' a Georgia headline drops into the right half, and on 'sans-serif body' an Arial body line settles beneath it, a teal bracket pairing them. Caption at bottom: 'Contrast, don't compete.'",
+      "minDuration": 11,
+      "slide": {
+        "title": "Use reliable fonts and pair them carefully",
+        "text": "Calibri, Arial, Segoe UI, Georgia. One family, two weights. Contrast, don't compete. Georgia headlines with Arial body",
+        "notes": "You don't need a special font, just one that renders the same everywhere. Use one family in two weights, or pair a serif headline with a plain sans-serif body.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 11.153,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.428,
+          "text": "You don't need a special font, just one that renders the same everywhere.",
+          "words": [
+            {
+              "w": "You",
+              "t": 0.55
+            },
+            {
+              "w": "don't",
+              "t": 0.701
+            },
+            {
+              "w": "need",
+              "t": 0.899
+            },
+            {
+              "w": "a",
+              "t": 1.096
+            },
+            {
+              "w": "special",
+              "t": 1.166
+            },
+            {
+              "w": "font,",
+              "t": 1.584
+            },
+            {
+              "w": "just",
+              "t": 2.408
+            },
+            {
+              "w": "one",
+              "t": 2.675
+            },
+            {
+              "w": "that",
+              "t": 2.884
+            },
+            {
+              "w": "renders",
+              "t": 3.046
+            },
+            {
+              "w": "the",
+              "t": 3.395
+            },
+            {
+              "w": "same",
+              "t": 3.511
+            },
+            {
+              "w": "everywhere.",
+              "t": 3.813
+            }
+          ]
+        },
+        {
+          "t": 4.939,
+          "end": 10.303,
+          "text": "Use one family in two weights, or pair a serif headline with a plain sans-serif body.",
+          "words": [
+            {
+              "w": "Use",
+              "t": 4.939
+            },
+            {
+              "w": "one",
+              "t": 5.264
+            },
+            {
+              "w": "family",
+              "t": 5.508
+            },
+            {
+              "w": "in",
+              "t": 5.914
+            },
+            {
+              "w": "two",
+              "t": 6.042
+            },
+            {
+              "w": "weights,",
+              "t": 6.274
+            },
+            {
+              "w": "or",
+              "t": 6.901
+            },
+            {
+              "w": "pair",
+              "t": 7.121
+            },
+            {
+              "w": "a",
+              "t": 7.4
+            },
+            {
+              "w": "serif",
+              "t": 7.505
+            },
+            {
+              "w": "headline",
+              "t": 7.899
+            },
+            {
+              "w": "with",
+              "t": 8.387
+            },
+            {
+              "w": "a",
+              "t": 8.561
+            },
+            {
+              "w": "plain",
+              "t": 8.642
+            },
+            {
+              "w": "sans-serif",
+              "t": 9.026
+            },
+            {
+              "w": "body.",
+              "t": 9.711
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.303
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Headlines at 36 to 44 point, body text 24 point or larger, chart labels 18 point minimum, and bigger still for video. If it won't fit at 24, cut words.",
+      "storyboard": "Night stage, a vertical type-scale ruler on the left. On 'Headlines' a block grows to the 36–44pt mark in paper white, on 'body text' a 24pt marker locks in signal yellow, on 'chart labels' an 18pt floor line appears in teal, on 'bigger still for video' every block scales up together. On 'cut words' a crowded paragraph tries to squeeze in at 24pt, overflows in coral, and words strike out until it fits. The bullet list is rebuilt as this animated scale.",
+      "minDuration": 12,
+      "slide": {
+        "title": "Set body text at 24pt or larger",
+        "text": "Headlines 36 to 44pt. Body text 24pt or larger. Chart labels 18pt minimum. Bigger still for video",
+        "notes": "If text won't fit at twenty-four point, the slide has too much on it. Cut words, split the slide, or move the detail into your speaker notes.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 13.323,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 9.478,
+          "text": "Headlines at 36 to 44 point, body text 24 point or larger, chart labels 18 point minimum, and bigger still for video.",
+          "words": [
+            {
+              "w": "Headlines",
+              "t": 0.55
+            },
+            {
+              "w": "at",
+              "t": 1.107
+            },
+            {
+              "w": "36",
+              "t": 1.223
+            },
+            {
+              "w": "to",
+              "t": 1.792
+            },
+            {
+              "w": "44",
+              "t": 1.931
+            },
+            {
+              "w": "point,",
+              "t": 2.535
+            },
+            {
+              "w": "body",
+              "t": 3.464
+            },
+            {
+              "w": "text",
+              "t": 3.801
+            },
+            {
+              "w": "24",
+              "t": 4.126
+            },
+            {
+              "w": "point",
+              "t": 4.648
+            },
+            {
+              "w": "or",
+              "t": 4.938
+            },
+            {
+              "w": "larger,",
+              "t": 5.089
+            },
+            {
+              "w": "chart",
+              "t": 5.821
+            },
+            {
+              "w": "labels",
+              "t": 6.169
+            },
+            {
+              "w": "18",
+              "t": 6.587
+            },
+            {
+              "w": "point",
+              "t": 7.063
+            },
+            {
+              "w": "minimum,",
+              "t": 7.33
+            },
+            {
+              "w": "and",
+              "t": 7.911
+            },
+            {
+              "w": "bigger",
+              "t": 8.131
+            },
+            {
+              "w": "still",
+              "t": 8.433
+            },
+            {
+              "w": "for",
+              "t": 8.735
+            },
+            {
+              "w": "video.",
+              "t": 8.874
+            }
+          ]
+        },
+        {
+          "t": 9.919,
+          "end": 12.473,
+          "text": "If it won't fit at 24, cut words.",
+          "words": [
+            {
+              "w": "If",
+              "t": 9.919
+            },
+            {
+              "w": "it",
+              "t": 10.093
+            },
+            {
+              "w": "won't",
+              "t": 10.186
+            },
+            {
+              "w": "fit",
+              "t": 10.418
+            },
+            {
+              "w": "at",
+              "t": 10.639
+            },
+            {
+              "w": "24,",
+              "t": 10.755
+            },
+            {
+              "w": "cut",
+              "t": 11.591
+            },
+            {
+              "w": "words.",
+              "t": 11.87
+            }
+          ]
+        }
+      ],
+      "speechEnd": 12.473
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Before: a script headline and seven tiny 16 point bullets. After: a bold headline that makes a point, one chart labelled at 18 point, and six bullets moved to speaker notes.",
+      "storyboard": "Split screen. Left, dim ink: a cramped mock slide with a curly script headline and seven tiny centred bullets, a coral 'Before' tag. On 'After' the camera slides right to a bright paper slide: bold headline 'Q2 sales grew in every region except the west', a simple bar chart building region by region with the west bar in coral, labels at 18pt. On 'six bullets moved to speaker notes' six bullets fly off the old slide down into a notes panel beneath. Hold on the clean slide.",
+      "minDuration": 12,
+      "slide": {
+        "title": "Before and after: make the headline count",
+        "text": "Before: script headline, seven 16pt bullets. After: \"Q2 sales grew in every region except the west\". One chart labelled at 18pt. Six bullets moved to speaker notes",
+        "notes": "A decorative headline and seven tiny centred bullets became a bold forty-point headline that makes a point, one clearly labelled chart and one left-aligned line.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "wipeleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 12.221,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.289,
+          "text": "Before: a script headline and seven tiny 16 point bullets.",
+          "words": [
+            {
+              "w": "Before:",
+              "t": 0.55
+            },
+            {
+              "w": "a",
+              "t": 1.177
+            },
+            {
+              "w": "script",
+              "t": 1.316
+            },
+            {
+              "w": "headline",
+              "t": 1.676
+            },
+            {
+              "w": "and",
+              "t": 2.141
+            },
+            {
+              "w": "seven",
+              "t": 2.315
+            },
+            {
+              "w": "tiny",
+              "t": 2.652
+            },
+            {
+              "w": "16",
+              "t": 3.011
+            },
+            {
+              "w": "point",
+              "t": 3.476
+            },
+            {
+              "w": "bullets.",
+              "t": 3.743
+            }
+          ]
+        },
+        {
+          "t": 4.614,
+          "end": 11.371,
+          "text": "After: a bold headline that makes a point, one chart labelled at 18 point, and six bullets moved to speaker notes.",
+          "words": [
+            {
+              "w": "After:",
+              "t": 4.614
+            },
+            {
+              "w": "a",
+              "t": 5.31
+            },
+            {
+              "w": "bold",
+              "t": 5.45
+            },
+            {
+              "w": "headline",
+              "t": 5.751
+            },
+            {
+              "w": "that",
+              "t": 6.123
+            },
+            {
+              "w": "makes",
+              "t": 6.251
+            },
+            {
+              "w": "a",
+              "t": 6.483
+            },
+            {
+              "w": "point,",
+              "t": 6.576
+            },
+            {
+              "w": "one",
+              "t": 7.168
+            },
+            {
+              "w": "chart",
+              "t": 7.4
+            },
+            {
+              "w": "labelled",
+              "t": 7.725
+            },
+            {
+              "w": "at",
+              "t": 8.085
+            },
+            {
+              "w": "18",
+              "t": 8.201
+            },
+            {
+              "w": "point,",
+              "t": 8.631
+            },
+            {
+              "w": "and",
+              "t": 9.246
+            },
+            {
+              "w": "six",
+              "t": 9.478
+            },
+            {
+              "w": "bullets",
+              "t": 9.78
+            },
+            {
+              "w": "moved",
+              "t": 10.152
+            },
+            {
+              "w": "to",
+              "t": 10.442
+            },
+            {
+              "w": "speaker",
+              "t": 10.558
+            },
+            {
+              "w": "notes.",
+              "t": 10.929
+            }
+          ]
+        }
+      ],
+      "speechEnd": 11.371
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "Large, plain, high-contrast type makes clearer slide videos. On Pro, a.i. directs every scene, but clear type still matters. Try Basic first at powerpoint2vid.com.",
+      "storyboard": "Night stage. On 'Large, plain, high-contrast' a paper-white headline punches in at 140px; the frame shrinks to a small window to show it still reads. On 'a.i. directs every scene' a strip of animated scene thumbnails glides past in teal outlines. On 'Try Basic first' everything clears to a signal-yellow button with 'powerpoint2vid.com' at 110px, holding center with a gentle pulse. Bullet text cut down to the URL and one line.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Clear fonts make clearer slide videos",
+        "text": "Large, plain, high-contrast type. Check at a small window size. Pro: a.i. directs every scene",
+        "notes": "On Pro, a.i. directs your deck, redesigning every slide as an animated scene timed to your narration, but clear type still matters. Try Basic first at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 14.581,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.462,
+          "text": "Large, plain, high-contrast type makes clearer slide videos.",
+          "words": [
+            {
+              "w": "Large,",
+              "t": 0.55
+            },
+            {
+              "w": "plain,",
+              "t": 1.003
+            },
+            {
+              "w": "high-contrast",
+              "t": 1.479
+            },
+            {
+              "w": "type",
+              "t": 2.268
+            },
+            {
+              "w": "makes",
+              "t": 2.849
+            },
+            {
+              "w": "clearer",
+              "t": 3.15
+            },
+            {
+              "w": "slide",
+              "t": 3.534
+            },
+            {
+              "w": "videos.",
+              "t": 3.87
+            }
+          ]
+        },
+        {
+          "t": 4.904,
+          "end": 8.909,
+          "text": "On Pro, a.i. directs every scene, but clear type still matters.",
+          "words": [
+            {
+              "w": "On",
+              "t": 4.904
+            },
+            {
+              "w": "Pro,",
+              "t": 5.147
+            },
+            {
+              "w": "A.I.",
+              "t": 5.496
+            },
+            {
+              "w": "directs",
+              "t": 5.879
+            },
+            {
+              "w": "every",
+              "t": 6.332
+            },
+            {
+              "w": "scene,",
+              "t": 6.668
+            },
+            {
+              "w": "but",
+              "t": 7.249
+            },
+            {
+              "w": "clear",
+              "t": 7.446
+            },
+            {
+              "w": "type",
+              "t": 7.748
+            },
+            {
+              "w": "still",
+              "t": 8.05
+            },
+            {
+              "w": "matters.",
+              "t": 8.364
+            }
+          ]
+        },
+        {
+          "t": 9.42,
+          "end": 12.381,
+          "text": "Try Basic first at powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 9.42
+            },
+            {
+              "w": "Basic",
+              "t": 9.745
+            },
+            {
+              "w": "first",
+              "t": 10.175
+            },
+            {
+              "w": "at",
+              "t": 10.558
+            },
+            {
+              "w": "PowerPoint",
+              "t": 10.709
+            },
+            {
+              "w": "to",
+              "t": 11.289
+            },
+            {
+              "w": "vid",
+              "t": 11.429
+            },
+            {
+              "w": "dot",
+              "t": 11.661
+            },
+            {
+              "w": "com.",
+              "t": 11.916
+            }
+          ]
+        }
+      ],
+      "speechEnd": 12.381
+    }
+  ],
+  "voiceProvider": "elevenlabs",
+  "degraded": true
+}

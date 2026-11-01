@@ -1,0 +1,101 @@
+{
+  "title": "\"Fonts for Presentations: Size, Pairing and Readability\" (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Fonts for Presentations: Size, Pairing, Readability",
+      "bullets": [],
+      "notes": "When fonts are right, nobody notices them. When they're wrong, people squint, lose the thread or stop reading. Here's how to choose fonts that stay readable.",
+      "minDuration": 9
+    },
+    {
+      "title": "Pick fonts that survive tough screens",
+      "bullets": [
+        "Open letter shapes",
+        "Generous x-height",
+        "Distinct characters",
+        "Solid strokes"
+      ],
+      "notes": "Projectors wash out contrast, laptops shrink everything and video adds compression. Choose fonts with open letter shapes, a generous x-height and solid strokes that hold up in all three.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Use reliable fonts and pair them carefully",
+      "bullets": [
+        "Calibri, Arial, Segoe UI, Georgia",
+        "One family, two weights",
+        "Contrast, don't compete",
+        "Georgia headlines with Arial body"
+      ],
+      "notes": "You don't need a special font, just one that renders the same everywhere. Use one family in two weights, or pair a serif headline with a plain sans-serif body.",
+      "minDuration": 11,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Set body text at 24pt or larger",
+      "bullets": [
+        "Headlines 36 to 44pt",
+        "Body text 24pt or larger",
+        "Chart labels 18pt minimum",
+        "Bigger still for video"
+      ],
+      "notes": "If text won't fit at twenty-four point, the slide has too much on it. Cut words, split the slide, or move the detail into your speaker notes.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Before and after: make the headline count",
+      "bullets": [
+        "Before: script headline, seven 16pt bullets",
+        "After: \"Q2 sales grew in every region except the west\"",
+        "One chart labelled at 18pt",
+        "Six bullets moved to speaker notes"
+      ],
+      "notes": "A decorative headline and seven tiny centred bullets became a bold forty-point headline that makes a point, one clearly labelled chart and one left-aligned line.",
+      "minDuration": 12,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Clear fonts make clearer slide videos",
+      "bullets": [
+        "Large, plain, high-contrast type",
+        "Check at a small window size",
+        "Pro: a.i. directs every scene"
+      ],
+      "notes": "On Pro, a.i. directs your deck, redesigning every slide as an animated scene timed to your narration, but clear type still matters. Try Basic first at powerpoint2vid.com.",
+      "minDuration": 12,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}

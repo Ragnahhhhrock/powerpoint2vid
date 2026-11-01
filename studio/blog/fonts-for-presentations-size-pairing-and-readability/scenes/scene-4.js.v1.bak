@@ -1,0 +1,127 @@
+/* Scene 5 — "Before: a script headline and seven tiny 16 point bullets. After: a bold headline that makes
+ * a point, one chart labelled at 18 point, and six bullets moved to speaker notes."
+ * Storyboard: split screen. First, a dim ink "Before" slide racks into focus: a curly script headline, then
+ * seven tiny centred bullets with a coral "16 PT" bracket. On "After" the camera eases right and pulls back
+ * to reveal a bright paper slide. The bold headline "Q2 sales grew in every region except the west" lands
+ * word by word, then a bar chart builds region by region with the west bar in coral and labels at 18pt.
+ * On "six bullets moved to speaker notes" six bullets fly off the old slide into a notes panel below.
+ * Hold on the clean slide. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const A = (b, w, f) => { const v = ctx.at(b, w); return isFinite(v) ? v : f; };
+  const tBefore = A(0, 'Before:', 0.55), tScript = A(0, 'script', 1.32), tSeven = A(0, 'seven', 2.32),
+    tTiny = A(0, 'tiny', 2.65), t16 = A(0, '16', 3.01), tAfter = A(1, 'After:', 4.61), tBold = A(1, 'bold', 5.45),
+    tPoint = A(1, 'point,', 6.58), tChart = A(1, 'chart', 7.4), t18 = A(1, '18', 8.2), tSix = A(1, 'six', 9.48),
+    tMoved = A(1, 'moved', 10.15);
+  const MONO = 'ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(80% 70% at 50% 45%, #1a1f2a 0%, var(--night) 75%)';
+  const warm = el('div', 'abs', stage, { inset: 0, opacity: 0, background: 'radial-gradient(55% 60% at 68% 42%, rgba(255,194,61,.16), transparent 70%)' });
+  const drift = el('div', 'abs', stage, { inset: 0, transformOrigin: '50% 50%' });
+  const cam = el('div', 'abs', drift, { left: 0, top: 0, width: '1920px', height: '1080px', transformOrigin: '0 0' });
+
+  /* ---------- AFTER slide (world 1500,120 · 1100x620) ---------- */
+  const AX = 1500, AY = 120;
+  const after = el('div', 'abs', cam, { left: AX + 'px', top: AY + 'px', width: '1100px', height: '620px', borderRadius: '14px', background: 'var(--paper)',
+    boxShadow: '0 50px 120px rgba(0,0,0,.55), 0 0 80px rgba(255,194,61,.12)' });
+  const aTag = el('div', 'abs', after, { left: '60px', top: '34px', padding: '8px 16px', borderRadius: '999px', background: 'var(--teal)', color: 'var(--night)', font: `700 18px/1 ${MONO}`, letterSpacing: '.14em' });
+  aTag.textContent = 'AFTER';
+  const head = el('div', 'abs', after, { left: '60px', top: '84px', width: '980px', font: '800 52px/1.06 Inter Display, Inter', letterSpacing: '-.035em', color: 'var(--ink)' });
+  const words = ctx.split(head, 'Q2 sales grew in every region except the west', 'word');
+  words[words.length - 1].style.color = 'var(--coral)';
+
+  const BASE = 450, BW = 120;
+  const REG = [['North', 130], ['East', 160], ['South', 110], ['Central', 175], ['West', -60]];
+  el('div', 'abs', after, { left: '70px', width: '960px', top: BASE + 'px', height: '2px', background: 'rgba(27,31,39,.35)' });
+  const bars = REG.map(([name, h], i) => {
+    const x = 100 + i * 190, neg = h < 0;
+    const bar = el('div', 'abs', after, { left: x + 'px', width: BW + 'px', top: (neg ? BASE + 2 : BASE - h) + 'px', height: Math.abs(h) + 'px',
+      borderRadius: neg ? '3px 3px 10px 10px' : '10px 10px 3px 3px', transformOrigin: neg ? '50% 0%' : '50% 100%',
+      background: neg ? 'linear-gradient(180deg,#ff7d77,var(--coral))' : 'linear-gradient(180deg,#3a4150,var(--ink))',
+      boxShadow: neg ? '0 10px 30px rgba(255,94,87,.4)' : '0 10px 24px rgba(27,31,39,.18)' });
+    const lab = el('div', 'abs', after, { left: x - 30 + 'px', width: BW + 60 + 'px', top: '530px', textAlign: 'center', font: '700 24px/1 Inter', color: neg ? 'var(--coral)' : 'var(--ink)' });
+    lab.textContent = name;
+    return { bar, lab };
+  });
+  const ptTag = el('div', 'abs', after, { left: '60px', top: '578px', font: `700 16px/1 ${MONO}`, letterSpacing: '.14em', color: '#b07d10' });
+  ptTag.textContent = '↑ LABELS · 18 PT';
+
+  /* ---------- notes panel (world 1500,770 · 1100x260) ---------- */
+  const notes = el('div', 'abs', cam, { left: '1500px', top: '770px', width: '1100px', height: '260px', borderRadius: '14px', background: 'var(--ink)', border: '2px solid rgba(138,147,163,.35)', boxShadow: '0 30px 80px rgba(0,0,0,.5)' });
+  const nHead = el('div', 'abs', notes, { left: '24px', top: '24px', font: `700 16px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--signal)' });
+  nHead.textContent = 'SPEAKER NOTES';
+
+  /* ---------- BEFORE slide (world 260,150 · 1100x620) ---------- */
+  const BX = 260, BY = 150;
+  const before = el('div', 'abs', cam, { left: BX + 'px', top: BY + 'px', width: '1100px', height: '620px', borderRadius: '14px', background: 'var(--ink)', border: '2px solid rgba(138,147,163,.18)', boxShadow: '0 40px 100px rgba(0,0,0,.6)' });
+  const bTag = el('div', 'abs', before, { right: '40px', top: '34px', padding: '8px 16px', borderRadius: '999px', background: 'var(--coral)', color: 'var(--night)', font: `700 18px/1 ${MONO}`, letterSpacing: '.14em' });
+  bTag.textContent = 'BEFORE';
+  const script = el('div', 'abs', cam, { left: BX + 'px', width: '1100px', top: BY + 92 + 'px', textAlign: 'center', font: 'italic 400 70px/1 "Brush Script MT", "Segoe Script", "Snell Roundhand", cursive', color: '#a9a39a' });
+  script.textContent = 'Quarterly Sales Overview';
+  const BUL = ['North region grew this quarter', 'East region grew steadily', 'South region beat its target', 'Central region grew too',
+    'West region declined', 'New hires onboarded in May', 'See appendix for full detail'];
+  const bullets = BUL.map((txt, i) => {
+    const b = el('div', 'abs', cam, { left: BX + 290 + 'px', top: BY + 210 + i * 36 + 'px', width: '520px', textAlign: 'center', font: '400 21px/1.2 Inter', color: 'var(--slate)', whiteSpace: 'nowrap' });
+    b.textContent = '• ' + txt;
+    return b;
+  });
+  const brk = el('div', 'abs', cam, { left: '1110px', top: '358px', width: '14px', height: '244px', border: '3px solid var(--coral)', borderLeft: 'none', borderRadius: '0 6px 6px 0', transformOrigin: '0 50%' });
+  const pt16 = el('div', 'abs', cam, { left: '1140px', top: '462px', font: `800 34px/1 Inter Display, Inter`, letterSpacing: '-.02em', color: 'var(--coral)' });
+  pt16.textContent = '16 PT';
+
+  ctx.fx.vignette({ strength: 0.5 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  /* ---------- timeline ---------- */
+  // camera: framed on the Before slide, then pulls right/back to the split
+  gsap.set(cam, { x: 29, y: 11, scale: 1.15, filter: 'blur(7px)' });
+  tl.to(cam, { filter: 'blur(0px)', duration: 0.9, ease: 'power2.out' }, 0.05);
+  tl.fromTo(drift, { scale: 1 }, { scale: 1.03, duration: ctx.dur, ease: 'none', immediateRender: false }, 0);
+
+  tl.from(bTag, { scale: 0.4, opacity: 0, duration: 0.5, ease: 'back.out(1.8)' }, tBefore);
+  gsap.set(script, { opacity: 0, filter: 'blur(10px)' });
+  tl.to(script, { opacity: 1, filter: 'blur(1.5px)', duration: 0.8, ease: 'power2.out' }, tScript - 0.1);
+  tl.to(script, { x: 3, duration: 0.6, yoyo: true, repeat: 3, ease: 'sine.inOut' }, tScript + 0.7);
+  gsap.set(bullets, { opacity: 0, y: 8 });
+  tl.to(bullets, { opacity: 1, y: 0, duration: 0.4, stagger: 0.07 }, tSeven - 0.05);
+  tl.to(cam, { scale: 1.22, x: -30, y: -20, duration: 0.9, ease: 'power2.inOut' }, tTiny - 0.2);
+  gsap.set(brk, { scaleX: 0, opacity: 0 });
+  tl.to(brk, { scaleX: 1, opacity: 1, duration: 0.4 }, t16 - 0.1);
+  tl.from(pt16, { opacity: 0, x: -20, duration: 0.5, ease: 'back.out(1.6)' }, t16);
+
+  // After: camera slides right, after slide arrives
+  gsap.set(after, { opacity: 0, x: 220 });
+  gsap.set(notes, { opacity: 0, y: 60 });
+  tl.to(cam, { x: -250, y: 106, scale: 0.78, duration: 1.3, ease: 'expo.inOut' }, tAfter - 0.15);
+  tl.to(after, { opacity: 1, x: 0, duration: 1.1, ease: 'power3.out' }, tAfter);
+  tl.to(warm, { opacity: 1, duration: 1.4 }, tAfter);
+  tl.to([before, script, brk, pt16, bTag], { opacity: 0.55, duration: 0.8 }, tAfter + 0.3);
+  tl.to(bullets, { color: '#b4bcc9', duration: 0.6 }, tAfter + 0.3);
+  tl.from(aTag, { scale: 0.4, opacity: 0, duration: 0.5, ease: 'back.out(1.8)' }, tAfter + 0.5);
+
+  // bold headline lands word by word
+  gsap.set(words, { opacity: 0, y: 24, scale: 1.12, filter: 'blur(6px)' });
+  tl.to(words, { opacity: 1, y: 0, scale: 1, filter: 'blur(0px)', duration: 0.5, stagger: 0.08, ease: 'back.out(1.4)' }, tBold - 0.1);
+  tl.to(words[words.length - 1], { scale: 1.08, duration: 0.2, yoyo: true, repeat: 1, ease: 'power2.out' }, tPoint);
+
+  // chart builds region by region
+  gsap.set(bars.map((b) => b.bar), { scaleY: 0 });
+  gsap.set(bars.map((b) => b.lab), { opacity: 0, y: 10 });
+  bars.forEach((b, i) => tl.to(b.bar, { scaleY: 1, duration: 0.6, ease: 'back.out(1.5)' }, tChart - 0.1 + i * 0.16));
+  tl.to(bars.map((b) => b.lab), { opacity: 1, y: 0, duration: 0.4, stagger: 0.06 }, t18 - 0.15);
+  tl.from(ptTag, { opacity: 0, x: -16, duration: 0.5 }, t18 + 0.2);
+
+  // six bullets fly to the speaker notes
+  tl.to(notes, { opacity: 1, y: 0, duration: 0.6 }, tSix - 0.3);
+  bullets.slice(0, 6).forEach((b, i) => {
+    const col = Math.floor(i / 3), row = i % 3;
+    const dx = (1520 + col * 540) - (BX + 290), dy = (840 + row * 50) - (BY + 210 + i * 36);
+    const s = tMoved - 0.35 + i * 0.08;
+    tl.to(b, { x: dx, duration: 0.75, ease: 'power3.inOut' }, s);
+    tl.to(b, { y: dy, duration: 0.75, ease: 'back.in(1.2)' }, s);
+    tl.to(b, { color: '#F7F4EE', duration: 0.4 }, s + 0.4);
+  });
+  tl.to(bullets[6], { opacity: 0.2, duration: 0.5 }, tMoved);
+  tl.to([before, script, brk, pt16, bTag], { opacity: 0.35, duration: 0.8 }, tMoved + 0.3);
+  tl.to(after, { boxShadow: '0 50px 120px rgba(0,0,0,.55), 0 0 120px rgba(255,194,61,.28)', duration: 0.8 }, tMoved + 0.5);
+});

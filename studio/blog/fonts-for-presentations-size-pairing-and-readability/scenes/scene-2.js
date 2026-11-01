@@ -1,0 +1,116 @@
+/* Scene 2 — "You don't need a special font, just one that renders the same everywhere.
+ * Use one family in two weights, or pair a serif headline with a plain sans-serif body."
+ * Storyboard: warm paper stage. On "special font" a fussy script word appears and is struck out.
+ * On "renders the same everywhere" four name tags slide in on a row (Calibri, Arial, Segoe UI,
+ * Georgia), each in its own face, and teal checks pop. On "one family in two weights" the row clears
+ * and one word sits on the left half, Bold over Regular. On "serif headline" a Georgia headline drops
+ * into the right half. On "sans-serif body" an Arial line settles beneath it and a teal bracket pairs
+ * them. The caption "Contrast, don't compete." lands at the bottom. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const A = (b, w) => ctx.at(b, w);
+  const tSpecial = A(0, 'special'), tFont = A(0, 'font,'), tJust = A(0, 'just'), tRenders = A(0, 'renders'), tEvery = A(0, 'everywhere.');
+  const tUse = A(1, 'Use'), tOne = A(1, 'one'), tTwo = A(1, 'two'), tOr = A(1, 'or'), tSerif = A(1, 'serif'), tSans = A(1, 'sans-serif'), tBody = A(1, 'body.');
+  const MONO = 'ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(70% 70% at 35% 30%, #fffdf8 0%, var(--paper) 55%, #e9e3d7 100%)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 540px' });
+
+  /* header */
+  const kicker = el('div', 'abs', cam, { left: '160px', top: '110px', font: `600 22px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--slate)' });
+  kicker.textContent = 'RULE 2 · RELIABLE FONTS';
+  const head = el('div', 'abs', cam, { left: '156px', top: '150px', font: '800 68px/1.05 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--ink)' });
+  head.textContent = 'Reliable, then paired';
+
+  /* "special" font */
+  const special = el('div', 'abs', cam, { left: '460px', top: '400px', width: '1000px', textAlign: 'center', font: 'italic 400 170px/1.1 "Brush Script MT", "Snell Roundhand", "Apple Chancery", cursive', color: 'var(--coral)', transformOrigin: '50% 50%' });
+  special.textContent = 'Spécial';
+  const strike = el('div', 'abs', cam, { left: '600px', top: '505px', width: '720px', height: '10px', borderRadius: '6px', background: 'var(--coral)', transformOrigin: '0% 50%' });
+  gsap.set(strike, { rotation: -4, scaleX: 0 });
+
+  /* four reliable faces */
+  const FACES = [['Calibri', 'Calibri, Carlito, Inter, sans-serif'], ['Arial', 'Arial, Helvetica, sans-serif'], ['Segoe UI', '"Segoe UI", "Selawik", Inter, sans-serif'], ['Georgia', 'Georgia, "Times New Roman", serif']];
+  const tags = FACES.map(([name, fam], i) => {
+    const card = el('div', 'abs', cam, { left: 180 + i * 400 + 'px', top: '420px', width: '360px', height: '220px', borderRadius: '22px', background: '#fff', boxShadow: '0 30px 60px rgba(27,31,39,.12), 0 2px 0 rgba(27,31,39,.05)' });
+    const nm = el('div', 'abs', card, { left: 0, right: 0, top: '70px', textAlign: 'center', font: `400 64px/1 ${fam}`, color: 'var(--ink)' });
+    nm.textContent = name;
+    const lab = el('div', 'abs', card, { left: 0, right: 0, top: '168px', textAlign: 'center', font: `600 16px/1 ${MONO}`, letterSpacing: '.18em', color: 'var(--slate)' });
+    lab.textContent = 'SAME ON EVERY SCREEN';
+    const chk = el('div', 'abs', card, { right: '-14px', top: '-14px', width: '52px', height: '52px', borderRadius: '50%', background: 'var(--teal)', boxShadow: '0 8px 20px rgba(46,196,182,.45)' });
+    chk.innerHTML = '<svg width="52" height="52"><path d="M15 27 L23 35 L38 18" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    return { card, chk };
+  });
+
+  /* left: one family, two weights */
+  const lBold = el('div', 'abs', cam, { left: '160px', top: '360px', font: '900 150px/1 Inter Display, Inter', letterSpacing: '-.045em', color: 'var(--ink)' });
+  lBold.textContent = 'Readable';
+  const lReg = el('div', 'abs', cam, { left: '160px', top: '540px', font: '400 150px/1 Inter Display, Inter', letterSpacing: '-.03em', color: 'var(--ink)' });
+  lReg.textContent = 'Readable';
+  const lb1 = el('div', 'abs', cam, { left: '166px', top: '326px', font: `600 18px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--signal)' }); lb1.textContent = 'BOLD · 900';
+  const lb2 = el('div', 'abs', cam, { left: '166px', top: '706px', font: `600 18px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--slate)' }); lb2.textContent = 'REGULAR · 400';
+
+  const divider = el('div', 'abs', cam, { left: '960px', top: '320px', width: '2px', height: '440px', background: 'rgba(27,31,39,.14)', transformOrigin: '50% 0%' });
+  gsap.set(divider, { scaleY: 0 });
+
+  /* right: serif headline + sans body */
+  const rHead = el('div', 'abs', cam, { left: '1080px', top: '390px', width: '700px', font: '700 86px/1.05 Georgia, "Times New Roman", serif', letterSpacing: '-.01em', color: 'var(--ink)' });
+  rHead.textContent = 'Make one point';
+  const rBody = el('div', 'abs', cam, { left: '1084px', top: '510px', width: '680px', font: '400 36px/1.35 Arial, Helvetica, sans-serif', color: '#3a4150' });
+  rBody.textContent = 'Plain body text carries the detail.';
+  const rl1 = el('div', 'abs', cam, { left: '1084px', top: '354px', font: `600 18px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--slate)' }); rl1.textContent = 'GEORGIA · HEADLINE';
+  const rl2 = el('div', 'abs', cam, { left: '1084px', top: '620px', font: `600 18px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--slate)' }); rl2.textContent = 'ARIAL · BODY';
+  const brk = el('div', 'abs', cam, { left: '1010px', top: '370px', width: '60px', height: '280px' });
+  brk.innerHTML = '<svg width="60" height="280"><path id="b" d="M50 6 L22 6 L22 274 L50 274" fill="none" stroke="#2EC4B6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="340" stroke-dashoffset="340"/></svg>';
+  const brkPath = brk.querySelector('path');
+
+  /* caption */
+  const cap = el('div', 'abs', cam, { left: '160px', right: '160px', top: '860px', textAlign: 'center', font: '800 56px/1 Inter Display, Inter', letterSpacing: '-.035em', color: 'var(--ink)' });
+  cap.innerHTML = 'Contrast, <span style="color:var(--teal)">don\u2019t compete.</span>';
+  const capLine = el('div', 'abs', cam, { left: '860px', top: '938px', width: '200px', height: '6px', borderRadius: '3px', background: 'var(--signal)', transformOrigin: '50% 50%' });
+  gsap.set(capLine, { scaleX: 0 });
+
+  ctx.fx.vignette({ strength: 0.25 });
+  ctx.fx.grain({ opacity: 0.05 });
+
+  /* ---- timeline ---- */
+  const blurOnes = [kicker, head, special, strike, lBold, lReg, rHead, rBody, cap, ...tags.map((t) => t.card)];
+  gsap.set(blurOnes, { filter: 'blur(0px)' });
+  gsap.set([special, lBold, lReg, lb1, lb2, rHead, rBody, rl1, rl2, cap, ...tags.map((t) => t.card)], { opacity: 0 });
+  gsap.set(tags.map((t) => t.chk), { scale: 0 });
+
+  tl.to(cam, { scale: 1.04, duration: ctx.dur, ease: 'none' }, 0);
+  tl.fromTo(head, { opacity: 0, y: 24, filter: 'blur(14px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.8 }, 0.05);
+  tl.fromTo(kicker, { opacity: 0 }, { opacity: 1, duration: 0.5 }, 0.2);
+
+  // "special font" -> struck out
+  tl.fromTo(special, { opacity: 0, scale: 1.15, filter: 'blur(10px)' }, { opacity: 1, scale: 1, filter: 'blur(0px)', duration: 0.6, immediateRender: false }, tSpecial - 0.1);
+  tl.to(strike, { scaleX: 1, duration: 0.35, ease: 'power2.out' }, tFont);
+  tl.to([special, strike], { opacity: 0, y: -40, filter: 'blur(12px)', duration: 0.5, ease: 'power2.in' }, tJust);
+
+  // four reliable faces
+  tags.forEach((t, i) => {
+    tl.fromTo(t.card, { opacity: 0, x: 160, filter: 'blur(8px)' }, { opacity: 1, x: 0, filter: 'blur(0px)', duration: 0.7, immediateRender: false }, tRenders - 0.1 + i * 0.12);
+    tl.to(t.chk, { scale: 1, duration: 0.45, ease: 'back.out(2)' }, tEvery + i * 0.08);
+  });
+
+  // clear row
+  tl.to(tags.map((t) => t.card), { opacity: 0, y: 40, filter: 'blur(8px)', duration: 0.45, stagger: 0.05, ease: 'power2.in' }, tUse - 0.2);
+
+  // one family, two weights
+  tl.fromTo(lBold, { opacity: 0, scale: 1.08, filter: 'blur(12px)' }, { opacity: 1, scale: 1, filter: 'blur(0px)', duration: 0.7, transformOrigin: '0% 50%', immediateRender: false }, tOne);
+  tl.to(lb1, { opacity: 1, duration: 0.4 }, tOne + 0.2);
+  tl.fromTo(lReg, { opacity: 0, y: 30, filter: 'blur(10px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.7, immediateRender: false }, tTwo);
+  tl.to(lb2, { opacity: 1, duration: 0.4 }, tTwo + 0.2);
+
+  // pair
+  tl.to(divider, { scaleY: 1, duration: 0.7, ease: 'expo.inOut' }, tOr);
+  tl.fromTo(rHead, { opacity: 0, y: -60, filter: 'blur(12px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.75, ease: 'back.out(1.4)', immediateRender: false }, tSerif - 0.1);
+  tl.to(rl1, { opacity: 1, duration: 0.4 }, tSerif + 0.2);
+  tl.fromTo(rBody, { opacity: 0, y: 24, filter: 'blur(8px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.7, immediateRender: false }, tSans);
+  tl.to(rl2, { opacity: 1, duration: 0.4 }, tSans + 0.2);
+  tl.to(brkPath, { attr: { 'stroke-dashoffset': 0 }, duration: 0.6, ease: 'power2.inOut' }, tSans + 0.25);
+
+  // caption
+  tl.fromTo(cap, { opacity: 0, y: 20, filter: 'blur(10px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.6, immediateRender: false }, tBody);
+  tl.to(capLine, { scaleX: 1, duration: 0.5, ease: 'power2.out' }, tBody + 0.3);
+});
