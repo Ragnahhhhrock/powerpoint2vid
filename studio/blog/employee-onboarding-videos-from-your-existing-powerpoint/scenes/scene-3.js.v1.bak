@@ -1,0 +1,98 @@
+/* Scene 3 — "Tidy each deck first. Give every slide one idea and a headline that makes a point,
+ * and swap stale names for roles like your manager."
+ * Storyboard: paper stage, close on a cluttered slide (skeleton bullets, one tiny real line).
+ * On "Tidy" the clutter sweeps away left and the one line grows into large ink type:
+ * "You can work from home / up to three days a week." A "1 SLIDE · 1 IDEA" tag lands on "idea".
+ * On "headline that makes a point" a coral underline draws beneath it. A "24PT+" tag pins in the corner.
+ * On "stale names" a placeholder name is struck through; on "roles" it morphs into "your manager" in teal. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const W = (i, w, d) => { const v = ctx.at(i, w); return (v == null || isNaN(v)) ? d : v; };
+  const tidy = W(0, 'Tidy', 0.55), idea = W(1, 'idea', 3.56), headline = W(1, 'headline', 4.28),
+    point = W(1, 'point', 5.14), swap = W(1, 'swap', 6.0), stale = W(1, 'stale', 6.32),
+    roles = W(1, 'roles', 7.21), manager = W(1, 'manager', 7.89);
+
+  stage.style.background = 'radial-gradient(70% 70% at 40% 35%, #fffdf8 0%, var(--paper) 55%, #e9e3d7 100%)';
+  const warm = el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(40% 40% at 85% 15%, rgba(255,197,71,.18), transparent 70%)' });
+
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '50% 50%' });
+  const push = el('div', 'abs', cam, { inset: 0, transformOrigin: '42% 42%' });
+
+  /* the slide card */
+  const card = el('div', 'abs', push, { left: '240px', top: '135px', width: '1440px', height: '810px', background: '#fff', borderRadius: '18px',
+    boxShadow: '0 50px 120px rgba(27,34,51,.18), 0 8px 24px rgba(27,34,51,.08)', overflow: 'hidden' });
+
+  /* clutter: title bar + skeleton bullets */
+  const clutter = [];
+  const tbar = el('div', 'abs', card, { left: '140px', top: '62px', width: '760px', height: '34px', borderRadius: '8px', background: '#c9ccd4' });
+  clutter.push(tbar);
+  const R = ctx.rand(7);
+  [130, 180, 230, 280, 470, 520, 570, 620, 670, 720].forEach((y, i) => {
+    const row = el('div', 'abs', card, { left: '140px', top: y + 'px', height: '22px', display: 'flex', gap: '18px', alignItems: 'center' });
+    el('div', '', row, { width: '12px', height: '12px', borderRadius: '50%', background: '#9aa1b0' });
+    el('div', '', row, { width: 380 + Math.floor(R() * 640) + 'px', height: '16px', borderRadius: '8px', background: i % 3 ? '#dfe1e6' : '#d2d5dc' });
+    clutter.push(row);
+  });
+
+  /* the one idea */
+  const head = el('div', 'abs', card, { left: '140px', top: '230px', font: '800 84px/1.08 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--ink)', whiteSpace: 'nowrap', transformOrigin: '0 0' });
+  el('div', '', head).textContent = 'You can work from home';
+  el('div', '', head).textContent = 'up to three days a week.';
+
+  const ideaTag = el('div', 'abs', card, { left: '142px', top: '168px', font: '700 22px/1 ui-monospace, Menlo, monospace', letterSpacing: '.16em', color: 'var(--slate)' });
+  ideaTag.textContent = '1 SLIDE · 1 IDEA';
+
+  const ul = el('div', 'abs', card, { left: '130px', top: '418px', width: '1120px', height: '40px' });
+  ul.innerHTML = '<svg width="1120" height="40" viewBox="0 0 1120 40"><path d="M6 24 C 260 10, 560 34, 820 18 S 1060 14, 1110 20" pathLength="1" fill="none" stroke="#FF6B5B" stroke-width="12" stroke-linecap="round" stroke-dasharray="1" stroke-dashoffset="1"/></svg>';
+  const ulPath = ul.querySelector('path');
+
+  /* roles, not names */
+  const roleRow = el('div', 'abs', card, { left: '142px', top: '540px', font: '600 54px/1 Inter Display, Inter', letterSpacing: '-.02em', color: 'var(--slate)', whiteSpace: 'nowrap' });
+  const pre = el('span', '', roleRow); pre.textContent = 'Questions? Ask ';
+  const slot = el('span', '', roleRow, { position: 'relative', display: 'inline-block' });
+  const name = el('span', '', slot, { display: 'inline-block', color: 'var(--ink)' }); name.textContent = 'Dave';
+  const strike = el('div', 'abs', slot, { left: '-6px', right: '-6px', top: '50%', height: '6px', marginTop: '-1px', borderRadius: '3px', background: 'var(--coral)', transformOrigin: '0 50%' });
+  const mgr = el('span', 'abs', slot, { left: 0, top: 0, color: 'var(--teal)', fontWeight: 800, whiteSpace: 'nowrap' });
+  const mgrChars = ctx.split(mgr, 'your manager', 'char');
+  const glow = el('div', 'abs', slot, { left: '-30px', top: '-30px', width: '420px', height: '120px', borderRadius: '60px', background: 'radial-gradient(closest-side, rgba(31,181,168,.25), transparent)', opacity: 0 });
+
+  /* 24pt+ pin */
+  const pin = el('div', 'abs', card, { right: '60px', top: '52px', padding: '14px 22px', borderRadius: '12px', background: 'var(--night)', color: 'var(--sun)',
+    font: '800 30px/1 ui-monospace, Menlo, monospace', letterSpacing: '.08em', boxShadow: '0 14px 30px rgba(15,22,38,.3)', transformOrigin: '50% 0%' });
+  pin.textContent = '24PT+';
+  const dot = el('div', 'abs', pin, { left: '50%', top: '-9px', width: '18px', height: '18px', marginLeft: '-9px', borderRadius: '50%', background: 'var(--coral)', boxShadow: '0 3px 6px rgba(0,0,0,.3)' });
+
+  ctx.fx.vignette({ strength: 0.25 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  /* ---- timeline ---- */
+  gsap.set(head, { scale: 0.34, y: 140 });
+  gsap.set([ideaTag, roleRow, pin, mgr], { opacity: 0 });
+  gsap.set(strike, { scaleX: 0 });
+  gsap.set(name, { filter: 'blur(0px)' });
+
+  tl.fromTo(card, { y: 40, scale: 0.97 }, { y: 0, scale: 1, duration: 0.8 }, 0);
+  tl.to(cam, { scale: 1.05, x: -20, duration: ctx.dur, ease: 'none' }, 0);
+
+  // "Tidy": shudder, then clutter sweeps left
+  tl.to(card, { x: 8, duration: 0.06, yoyo: true, repeat: 3, ease: 'none' }, tidy);
+  tl.to(clutter, { x: -1700, opacity: 0, duration: 0.55, ease: 'power3.in', stagger: 0.035 }, tidy + 0.25);
+  tl.to(head, { scale: 1, y: 0, duration: 0.95, ease: 'back.out(1.4)' }, tidy + 0.75);
+
+  // "idea"
+  tl.fromTo(ideaTag, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: 'back.out(1.8)', immediateRender: false }, idea - 0.1);
+
+  // "headline that makes a point"
+  tl.to(ulPath, { attr: { 'stroke-dashoffset': 0 }, duration: Math.max(0.6, point - headline), ease: 'power2.inOut' }, headline);
+  tl.to(push, { scale: 1.04, duration: 1.2, ease: 'expo.inOut' }, headline);
+  tl.fromTo(pin, { opacity: 0, y: -60, rotation: -12 }, { opacity: 1, y: 0, rotation: 4, duration: 0.6, ease: 'back.out(2)', immediateRender: false }, point + 0.3);
+
+  // "swap stale names for roles"
+  tl.fromTo(roleRow, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, immediateRender: false }, swap - 0.15);
+  tl.to(strike, { scaleX: 1, duration: 0.35, ease: 'power2.out' }, stale);
+  tl.to(push, { scale: 1.08, duration: 1.4, ease: 'expo.inOut' }, stale);
+  tl.to([name, strike], { opacity: 0, y: -30, filter: 'blur(8px)', duration: 0.4, ease: 'power2.in' }, roles - 0.15);
+  tl.set(mgr, { opacity: 1 }, roles);
+  tl.from(mgrChars, { opacity: 0, y: 40, duration: 0.5, ease: 'back.out(1.8)', stagger: 0.03 }, roles);
+  tl.to(glow, { opacity: 1, duration: 0.5 }, manager);
+});

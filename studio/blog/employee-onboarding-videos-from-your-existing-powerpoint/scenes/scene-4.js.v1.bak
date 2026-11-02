@@ -1,0 +1,133 @@
+/* Scene 4: "Your speaker notes become the voiceover, so write them like you're explaining things to a new
+ * colleague. Keep sentences short and spell out acronyms."
+ * Storyboard: night stage. A slide card sits on the left. On "notes" a speaker-notes panel slides up beneath it.
+ * On "become the voiceover" its words lift off and stream right, and a teal waveform builds across the stage.
+ * On "new colleague" a friendly chat bubble pops in beside the wave. On "keep sentences short" a long slate line
+ * draws in, then gets cut into short teal segments. On "spell out acronyms" a PTO chip expands to
+ * "Paid Time Off". The camera drifts throughout, then pushes gently into the waveform and holds. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const F = "'Inter Display', Inter, system-ui, sans-serif";
+  const MONO = 'ui-monospace, Menlo, monospace';
+  const notesT = ctx.at(0, 'notes'), become = ctx.at(0, 'become'), voice = ctx.at(0, 'voiceover,');
+  const colleague = ctx.at(0, 'colleague.'), keep = ctx.at(1, 'Keep'), short = ctx.at(1, 'short');
+  const spell = ctx.at(1, 'spell'), acro = ctx.at(1, 'acronyms.');
+
+  stage.style.background = 'radial-gradient(60% 55% at 68% 40%, #1d2a44 0%, var(--night) 70%)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '1290px 420px' });
+
+  /* ---------- slide card ---------- */
+  const card = el('div', 'abs', cam, { left: '160px', top: '150px', width: '560px', height: '315px', borderRadius: '18px', background: 'var(--paper)', boxShadow: '0 40px 90px rgba(0,0,0,.5)', overflow: 'hidden' });
+  el('div', 'abs', card, { left: '36px', top: '36px', width: '56px', height: '8px', borderRadius: '4px', background: 'var(--coral)' });
+  const ct = el('div', 'abs', card, { left: '36px', top: '62px', width: '488px', font: `800 34px/1.12 ${F}`, letterSpacing: '-.03em', color: 'var(--ink)' });
+  ct.textContent = 'Speaker notes become the voiceover';
+  [0, 1, 2].forEach((i) => el('div', 'abs', card, { left: '36px', top: 175 + i * 36 + 'px', width: [380, 300, 340][i] + 'px', height: '12px', borderRadius: '6px', background: 'rgba(27,34,51,.14)' }));
+
+  /* ---------- notes panel ---------- */
+  const panel = el('div', 'abs', cam, { left: '160px', top: '490px', width: '560px', height: '210px', borderRadius: '18px', background: 'var(--ink)', border: '1px solid rgba(255,255,255,.08)', boxShadow: '0 30px 70px rgba(0,0,0,.45)' });
+  const plab = el('div', 'abs', panel, { left: '28px', top: '24px', font: `600 16px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--slate)' });
+  plab.textContent = 'SPEAKER NOTES';
+  const vtag = el('div', 'abs', panel, { right: '28px', top: '22px', font: `700 16px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--teal)' });
+  vtag.textContent = '● VOICEOVER';
+  const lines = ["Write as you'd explain to a new colleague.", 'Keep sentences short.', 'Spell out acronyms the first time.'];
+  const words = [];
+  lines.forEach((ln, i) => {
+    const d = el('div', 'abs', panel, { left: '28px', top: 66 + i * 42 + 'px', width: '504px', font: `500 21px/1.3 ${F}`, color: 'var(--paper)', whiteSpace: 'nowrap' });
+    words.push(...ctx.split(d, ln, 'word'));
+  });
+  const ghost = [0, 1, 2].map((i) => el('div', 'abs', panel, { left: '28px', top: 76 + i * 42 + 'px', width: [440, 230, 360][i] + 'px', height: '10px', borderRadius: '5px', background: 'var(--teal)', opacity: 0 }));
+
+  /* ---------- waveform ---------- */
+  const glow = el('div', 'abs', cam, { left: '760px', top: '230px', width: '1080px', height: '380px', background: 'radial-gradient(50% 50% at 50% 50%, rgba(31,181,168,.32), transparent 70%)', opacity: 0 });
+  const N = 60, WX = 840, WW = 920, WY = 420, BH = 190, step = WW / N;
+  const rnd = ctx.rand(7);
+  const bars = [];
+  for (let i = 0; i < N; i++) {
+    const env = Math.pow(Math.sin(Math.PI * (i + 0.5) / N), 0.6);
+    const b = el('div', 'abs', cam, { left: WX + i * step + 'px', top: WY - BH / 2 + 'px', width: '8px', height: BH + 'px', borderRadius: '4px', background: 'linear-gradient(180deg, #7ff0e4, var(--teal) 50%, #12867c)', boxShadow: '0 0 18px rgba(31,181,168,.55)', transform: 'scaleY(0.02)' });
+    bars.push({ b, base: (0.35 + 0.65 * rnd()) * env, ph: rnd() * 6.28 });
+  }
+  const wlab = el('div', 'abs', cam, { left: WX + 'px', top: WY + 125 + 'px', font: `600 18px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--teal)' });
+  wlab.textContent = 'VOICEOVER';
+  const wave = { reveal: 0, amp: 0 };
+
+  /* ---------- chat bubble ---------- */
+  const bub = el('div', 'abs', cam, { left: '1080px', top: '150px', width: '640px', transformOrigin: '8% 100%' });
+  const bl = el('div', '', bub, { display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px', font: `600 16px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--sun)' });
+  el('div', '', bl, { width: '22px', height: '22px', borderRadius: '50%', background: 'var(--sun)' });
+  el('span', '', bl).textContent = 'TO A NEW COLLEAGUE';
+  const bb = el('div', '', bub, { position: 'relative', padding: '22px 28px', borderRadius: '26px 26px 26px 6px', background: 'var(--paper)', font: `700 28px/1.2 ${F}`, letterSpacing: '-.02em', color: 'var(--ink)', boxShadow: '0 30px 60px rgba(0,0,0,.4)' });
+  bb.textContent = "So, here's how your first week works.";
+
+  /* ---------- lower band: short sentences ---------- */
+  const lab1 = el('div', 'abs', cam, { left: '160px', top: '780px', font: `600 18px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--slate)' });
+  lab1.textContent = 'KEEP SENTENCES SHORT';
+  const trim = el('div', 'abs', cam, { left: '160px', top: '826px', width: '840px', height: '60px' });
+  const SEG0 = [[0, 300], [300, 290], [590, 230]], SEG1 = [[0, 230], [270, 210], [520, 190]];
+  const segs = SEG0.map(([x, w]) => el('div', 'abs', trim, { left: x + 'px', top: '19px', width: w + 'px', height: '22px', borderRadius: '11px', background: '#8A93A6' }));
+  const cuts = [300, 590].map((x) => el('div', 'abs', trim, { left: x - 2 + 'px', top: '0px', width: '4px', height: '60px', borderRadius: '2px', background: 'var(--coral)', boxShadow: '0 0 16px var(--coral)', opacity: 0 }));
+
+  /* ---------- lower band: acronyms ---------- */
+  const lab2 = el('div', 'abs', cam, { left: '1100px', top: '780px', font: `600 18px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--slate)' });
+  lab2.textContent = 'SPELL OUT ACRONYMS';
+  const chip = el('div', 'abs', cam, { left: '1100px', top: '822px', height: '68px', padding: '0 28px', borderRadius: '34px', border: '2px solid var(--sun)', background: 'rgba(255,197,71,.12)', display: 'flex', alignItems: 'center', font: `800 38px/1 ${F}`, letterSpacing: '-.02em', color: 'var(--sun)', whiteSpace: 'pre', transformOrigin: '0% 50%' });
+  const parts = [['P', 0], ['aid ', 1], ['T', 0], ['ime ', 1], ['O', 0], ['ff', 1]];
+  const hidden = [];
+  parts.forEach(([s, h]) => {
+    const sp = el('span', '', chip, { display: 'inline-block', overflow: 'hidden', whiteSpace: 'pre', verticalAlign: 'bottom', color: h ? 'var(--paper)' : 'var(--sun)' });
+    sp.textContent = s;
+    if (h) { const w = sp.scrollWidth || s.length * 20; hidden.push({ sp, w: w + 2 }); sp.style.maxWidth = '0px'; }
+  });
+
+  ctx.fx.vignette({ strength: 0.5 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  ctx.onFrame((t) => {
+    bars.forEach((o, i) => {
+      const vis = Math.max(0, Math.min(1, wave.reveal * N - i));
+      const osc = 0.55 + 0.45 * Math.sin(t * 7.3 + i * 0.9 + o.ph) * Math.sin(t * 3.1 + i * 0.37);
+      const s = Math.max(0.03, wave.amp * vis * o.base * osc);
+      o.b.style.transform = `scaleY(${s.toFixed(4)})`;
+    });
+  });
+
+  /* ---------- timeline ---------- */
+  gsap.set(words, { filter: 'blur(0px)', color: '#F7F4EE' });
+  gsap.set([vtag, wlab, bub, lab1, lab2, chip], { opacity: 0 });
+  gsap.set(trim, { clipPath: 'inset(0px 100% 0px 0px)' });
+
+  tl.from(card, { y: 50, opacity: 0, duration: 0.7, ease: 'back.out(1.4)' }, 0);
+  tl.to(cam, { x: -10, duration: ctx.dur, ease: 'none' }, 0);
+  tl.to(cam, { scale: 1.02, duration: 7.4, ease: 'power1.inOut' }, 0.5);
+
+  // notes panel slides up beneath the slide
+  tl.from(panel, { y: 140, opacity: 0, duration: 0.7, ease: 'back.out(1.5)' }, notesT - 0.3);
+
+  // "become the voiceover": words lift off, waveform builds
+  tl.to(words, { y: -80, x: (i) => 280 + i * 18, opacity: 0, scale: 0.6, color: '#1FB5A8', filter: 'blur(6px)', duration: 0.7, stagger: 0.03, ease: 'power2.in' }, become - 0.05);
+  tl.to(wave, { reveal: 1, duration: 1.0, ease: 'power2.out' }, voice - 0.15);
+  tl.to(wave, { amp: 1, duration: 0.8, ease: 'power2.out' }, voice - 0.15);
+  tl.to(glow, { opacity: 1, duration: 1.0 }, voice);
+  tl.to(vtag, { opacity: 1, duration: 0.4 }, voice);
+  tl.fromTo(wlab, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5 }, voice + 0.4);
+  tl.to(ghost, { opacity: 0.3, duration: 0.5, stagger: 0.08 }, voice + 0.9);
+
+  // "new colleague": chat bubble pops in
+  tl.fromTo(bub, { opacity: 0, scale: 0.6, y: 30 }, { opacity: 1, scale: 1, y: 0, duration: 0.6, ease: 'back.out(1.8)' }, colleague - 0.2);
+
+  // "keep sentences short": long line draws in, then gets trimmed
+  tl.fromTo(lab1, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 }, keep - 0.1);
+  tl.to(trim, { clipPath: 'inset(0px 0% 0px 0px)', duration: 0.6, ease: 'power2.out' }, keep);
+  cuts.forEach((c, i) => tl.fromTo(c, { opacity: 0, scaleY: 0.3 }, { opacity: 1, scaleY: 1, duration: 0.15, yoyo: true, repeat: 1, ease: 'power2.out', immediateRender: false }, short - 0.12 + i * 0.06));
+  segs.forEach((s, i) => tl.to(s, { left: SEG1[i][0], width: SEG1[i][1], background: '#1FB5A8', boxShadow: '0 0 20px rgba(31,181,168,.5)', duration: 0.6, ease: 'back.out(1.6)' }, short + 0.05 + i * 0.05));
+
+  // "spell out acronyms": PTO chip expands into words
+  tl.fromTo(lab2, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 }, spell - 0.1);
+  tl.fromTo(chip, { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(1.8)' }, spell);
+  hidden.forEach((h, i) => tl.to(h.sp, { maxWidth: h.w, duration: 0.55, ease: 'power3.out' }, acro - 0.05 + i * 0.07));
+  tl.to(chip, { borderColor: '#1FB5A8', background: 'rgba(31,181,168,.14)', duration: 0.5 }, acro + 0.2);
+
+  // camera pushes gently into the waveform and holds
+  tl.to(cam, { scale: 1.06, duration: 1.4, ease: 'expo.inOut' }, acro + 0.3);
+  tl.to(glow, { opacity: 0.8, duration: 0.6, yoyo: true, repeat: 1 }, acro + 0.5);
+});

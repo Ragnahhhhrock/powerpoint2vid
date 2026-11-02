@@ -1,0 +1,881 @@
+{
+  "title": "Employee Onboarding Videos From Your Existing PowerPoint (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0F1626",
+      "ink": "#1B2233",
+      "paper": "#F7F4EE",
+      "coral": "#FF6B5B",
+      "teal": "#1FB5A8",
+      "sun": "#FFC547",
+      "slate": "#8A93A6"
+    },
+    "font": "Inter Display",
+    "motion": "Brisk but warm: elements arrive on soft ease-out springs, holding still once landed. The camera makes slow push-ins on key words and occasional lateral dollies between beats.",
+    "story": "We move from the tired, repeated live session (dark night stage) into a bright, orderly process on paper, alternating dark and light scenes and wide overviews with close typographic moments, ending on a confident teal call to action."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "Your team presents the same onboarding deck to every new starter. What if they could watch it on day one, at their own pace, with the same message every time?",
+      "storyboard": "Night stage: a single presenter silhouette repeats a slide click, looping three times with a ghosted counter ticking up on 'every new starter'. On 'watch it on day one' the loop freezes and the slide flips into a play-button frame glowing coral. On 'own pace' a scrubber line draws beneath it; on 'same message every time' three identical frames stack perfectly aligned. Headline 'Onboarding videos from your existing PowerPoint' settles at 120px. The original's overlapping title and grey lines are cut and rebuilt cleanly.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Onboarding Videos From Your Existing PowerPoint",
+        "text": "Turn repeated sessions into video. Watch on day one, at their own pace. The same accurate message every time",
+        "notes": "Your team presents the same onboarding deck to every new starter. What if they could watch it on day one, at their own pace, with the same message every time?",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 11,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.434,
+          "text": "Your team presents the same onboarding deck to every new starter.",
+          "words": [
+            {
+              "w": "Your",
+              "t": 0.8
+            },
+            {
+              "w": "team",
+              "t": 1.113
+            },
+            {
+              "w": "presents",
+              "t": 1.404
+            },
+            {
+              "w": "the",
+              "t": 1.833
+            },
+            {
+              "w": "same",
+              "t": 1.973
+            },
+            {
+              "w": "onboarding",
+              "t": 2.274
+            },
+            {
+              "w": "deck",
+              "t": 2.832
+            },
+            {
+              "w": "to",
+              "t": 3.11
+            },
+            {
+              "w": "every",
+              "t": 3.261
+            },
+            {
+              "w": "new",
+              "t": 3.563
+            },
+            {
+              "w": "starter.",
+              "t": 3.772
+            }
+          ]
+        },
+        {
+          "t": 4.945,
+          "end": 9.925,
+          "text": "What if they could watch it on day one, at their own pace, with the same message every time?",
+          "words": [
+            {
+              "w": "What",
+              "t": 4.945
+            },
+            {
+              "w": "if",
+              "t": 5.165
+            },
+            {
+              "w": "they",
+              "t": 5.281
+            },
+            {
+              "w": "could",
+              "t": 5.421
+            },
+            {
+              "w": "watch",
+              "t": 5.607
+            },
+            {
+              "w": "it",
+              "t": 5.874
+            },
+            {
+              "w": "on",
+              "t": 6.001
+            },
+            {
+              "w": "day",
+              "t": 6.164
+            },
+            {
+              "w": "one,",
+              "t": 6.442
+            },
+            {
+              "w": "at",
+              "t": 6.837
+            },
+            {
+              "w": "their",
+              "t": 7.023
+            },
+            {
+              "w": "own",
+              "t": 7.232
+            },
+            {
+              "w": "pace,",
+              "t": 7.476
+            },
+            {
+              "w": "with",
+              "t": 8.056
+            },
+            {
+              "w": "the",
+              "t": 8.254
+            },
+            {
+              "w": "same",
+              "t": 8.37
+            },
+            {
+              "w": "message",
+              "t": 8.66
+            },
+            {
+              "w": "every",
+              "t": 9.09
+            },
+            {
+              "w": "time?",
+              "t": 9.403
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.925
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Start by sorting your decks into three groups. Stable policies and company history suit video, things that change often stay out, and welcomes and Q&A stay live.",
+      "storyboard": "Paper stage, wide. A messy pile of slide cards drops in on 'sorting your decks', then slides fan into three labelled bins. On 'suit video' cards glide into a teal bin marked 'Video'; on 'change often' a card bounces to a coral bin marked 'Keep out'; on 'stay live' a card lands in a sun-yellow bin with a speech-bubble icon, 'Live'. Camera pulls back to hold all three. Bullet text replaced by three one-word labels.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Audit your decks into three groups",
+        "text": "Stable and standard: ideal for video. Changes often: keep out or on one slide. Needs a human: keep live",
+        "notes": "Start by sorting your decks. Stable policies and company history suit video, things that change often stay out, and welcomes and Q&A stay live.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 12.291,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.104,
+          "text": "Start by sorting your decks into three groups.",
+          "words": [
+            {
+              "w": "Start",
+              "t": 0.55
+            },
+            {
+              "w": "by",
+              "t": 0.933
+            },
+            {
+              "w": "sorting",
+              "t": 1.107
+            },
+            {
+              "w": "your",
+              "t": 1.491
+            },
+            {
+              "w": "decks",
+              "t": 1.653
+            },
+            {
+              "w": "into",
+              "t": 1.978
+            },
+            {
+              "w": "three",
+              "t": 2.234
+            },
+            {
+              "w": "groups.",
+              "t": 2.535
+            }
+          ]
+        },
+        {
+          "t": 3.615,
+          "end": 11.441,
+          "text": "Stable policies and company history suit video, things that change often stay out, and welcomes and Q&A stay live.",
+          "words": [
+            {
+              "w": "Stable",
+              "t": 3.615
+            },
+            {
+              "w": "policies",
+              "t": 4.08
+            },
+            {
+              "w": "and",
+              "t": 4.602
+            },
+            {
+              "w": "company",
+              "t": 4.788
+            },
+            {
+              "w": "history",
+              "t": 5.229
+            },
+            {
+              "w": "suit",
+              "t": 5.636
+            },
+            {
+              "w": "video,",
+              "t": 5.914
+            },
+            {
+              "w": "things",
+              "t": 6.878
+            },
+            {
+              "w": "that",
+              "t": 7.226
+            },
+            {
+              "w": "change",
+              "t": 7.401
+            },
+            {
+              "w": "often",
+              "t": 7.818
+            },
+            {
+              "w": "stay",
+              "t": 8.155
+            },
+            {
+              "w": "out,",
+              "t": 8.457
+            },
+            {
+              "w": "and",
+              "t": 9.188
+            },
+            {
+              "w": "welcomes",
+              "t": 9.409
+            },
+            {
+              "w": "and",
+              "t": 9.92
+            },
+            {
+              "w": "Q&A",
+              "t": 10.082
+            },
+            {
+              "w": "stay",
+              "t": 10.605
+            },
+            {
+              "w": "live.",
+              "t": 10.918
+            }
+          ]
+        }
+      ],
+      "speechEnd": 11.441
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "A new hire is more likely to finish five six-minute videos than one thirty-minute video. So split your content into short, focused topics.",
+      "storyboard": "Night stage. A long coral bar labelled '30 min' stretches across the screen on 'one thirty-minute video'. On 'split' it snaps into five teal segments labelled '6 min' each, spacing apart. Three segments flip to reveal topics: 'Welcome & how we work', 'Policies', 'Systems & tools'. Camera dollies left along the row, then holds.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Short videos beat one long one",
+        "text": "Five six-minute videos, not one thirty-minute video. Welcome and how we work. Policies you need to know. Systems and tools",
+        "notes": "A new hire is more likely to finish five six-minute videos than one thirty-minute video. So split your content into short, focused topics.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 10,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 5.682,
+          "text": "A new hire is more likely to finish five six-minute videos than one thirty-minute video.",
+          "words": [
+            {
+              "w": "A",
+              "t": 0.55
+            },
+            {
+              "w": "new",
+              "t": 0.713
+            },
+            {
+              "w": "hire",
+              "t": 0.933
+            },
+            {
+              "w": "is",
+              "t": 1.27
+            },
+            {
+              "w": "more",
+              "t": 1.409
+            },
+            {
+              "w": "likely",
+              "t": 1.63
+            },
+            {
+              "w": "to",
+              "t": 1.966
+            },
+            {
+              "w": "finish",
+              "t": 2.082
+            },
+            {
+              "w": "five",
+              "t": 2.419
+            },
+            {
+              "w": "six-minute",
+              "t": 2.791
+            },
+            {
+              "w": "videos",
+              "t": 3.336
+            },
+            {
+              "w": "than",
+              "t": 3.963
+            },
+            {
+              "w": "one",
+              "t": 4.219
+            },
+            {
+              "w": "thirty-minute",
+              "t": 4.474
+            },
+            {
+              "w": "video.",
+              "t": 5.078
+            }
+          ]
+        },
+        {
+          "t": 6.192,
+          "end": 9.06,
+          "text": "So split your content into short, focused topics.",
+          "words": [
+            {
+              "w": "So",
+              "t": 6.192
+            },
+            {
+              "w": "split",
+              "t": 6.425
+            },
+            {
+              "w": "your",
+              "t": 6.75
+            },
+            {
+              "w": "content",
+              "t": 6.924
+            },
+            {
+              "w": "into",
+              "t": 7.4
+            },
+            {
+              "w": "short,",
+              "t": 7.632
+            },
+            {
+              "w": "focused",
+              "t": 7.992
+            },
+            {
+              "w": "topics.",
+              "t": 8.421
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.06
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Tidy each deck first. Give every slide one idea and a headline that makes a point, and swap stale names for roles like your manager.",
+      "storyboard": "Paper stage, close on a cluttered slide. On 'tidy' extra bullets sweep away, leaving one line: 'You can work from home up to three days a week' in large ink type. On 'headline that makes a point' a coral underline draws beneath it. On 'roles' a struck-through placeholder name morphs into 'your manager' in teal. Small tag '24pt+' pins in the corner.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Clean up slides before converting",
+        "text": "One idea per slide. \"You can work from home up to three days a week\". 24pt or larger body text. Roles, not names: \"your manager\"",
+        "notes": "Tidy each deck first. Give every slide one idea and a headline that makes a point, and swap stale names for roles like your manager.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "wipeleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 10,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.21,
+          "text": "Tidy each deck first.",
+          "words": [
+            {
+              "w": "Tidy",
+              "t": 0.55
+            },
+            {
+              "w": "each",
+              "t": 1.038
+            },
+            {
+              "w": "deck",
+              "t": 1.316
+            },
+            {
+              "w": "first.",
+              "t": 1.63
+            }
+          ]
+        },
+        {
+          "t": 2.384,
+          "end": 8.503,
+          "text": "Give every slide one idea and a headline that makes a point, and swap stale names for roles like your manager.",
+          "words": [
+            {
+              "w": "Give",
+              "t": 2.384
+            },
+            {
+              "w": "every",
+              "t": 2.64
+            },
+            {
+              "w": "slide",
+              "t": 2.907
+            },
+            {
+              "w": "one",
+              "t": 3.325
+            },
+            {
+              "w": "idea",
+              "t": 3.557
+            },
+            {
+              "w": "and",
+              "t": 4.022
+            },
+            {
+              "w": "a",
+              "t": 4.184
+            },
+            {
+              "w": "headline",
+              "t": 4.277
+            },
+            {
+              "w": "that",
+              "t": 4.672
+            },
+            {
+              "w": "makes",
+              "t": 4.799
+            },
+            {
+              "w": "a",
+              "t": 5.032
+            },
+            {
+              "w": "point,",
+              "t": 5.136
+            },
+            {
+              "w": "and",
+              "t": 5.775
+            },
+            {
+              "w": "swap",
+              "t": 5.995
+            },
+            {
+              "w": "stale",
+              "t": 6.32
+            },
+            {
+              "w": "names",
+              "t": 6.692
+            },
+            {
+              "w": "for",
+              "t": 7.052
+            },
+            {
+              "w": "roles",
+              "t": 7.214
+            },
+            {
+              "w": "like",
+              "t": 7.539
+            },
+            {
+              "w": "your",
+              "t": 7.725
+            },
+            {
+              "w": "manager.",
+              "t": 7.888
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.503
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Your speaker notes become the voiceover, so write them like you're explaining things to a new colleague. Keep sentences short and spell out acronyms.",
+      "storyboard": "Night stage. A notes panel slides up beneath a slide; on 'become the voiceover' its text lifts off and turns into a teal sound waveform. On 'new colleague' a chat bubble appears beside the wave. On 'keep sentences short' a long line trims into short segments; on 'spell out acronyms' an acronym chip expands into full words. Camera pushes gently into the waveform and holds.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Speaker notes become the voiceover",
+        "text": "Write as you'd explain to a new colleague. Keep sentences short. Spell out acronyms the first time. Respell names the voice mispronounces",
+        "notes": "Your speaker notes become the voiceover, so write them like you're explaining things to a new colleague. Keep sentences short and spell out acronyms.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "smoothup",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 10,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 5.45,
+          "text": "Your speaker notes become the voiceover, so write them like you're explaining things to a new colleague.",
+          "words": [
+            {
+              "w": "Your",
+              "t": 0.55
+            },
+            {
+              "w": "speaker",
+              "t": 0.782
+            },
+            {
+              "w": "notes",
+              "t": 1.189
+            },
+            {
+              "w": "become",
+              "t": 1.467
+            },
+            {
+              "w": "the",
+              "t": 1.758
+            },
+            {
+              "w": "voiceover,",
+              "t": 1.862
+            },
+            {
+              "w": "so",
+              "t": 2.628
+            },
+            {
+              "w": "write",
+              "t": 2.837
+            },
+            {
+              "w": "them",
+              "t": 3.093
+            },
+            {
+              "w": "like",
+              "t": 3.255
+            },
+            {
+              "w": "you're",
+              "t": 3.441
+            },
+            {
+              "w": "explaining",
+              "t": 3.627
+            },
+            {
+              "w": "things",
+              "t": 4.172
+            },
+            {
+              "w": "to",
+              "t": 4.428
+            },
+            {
+              "w": "a",
+              "t": 4.579
+            },
+            {
+              "w": "new",
+              "t": 4.66
+            },
+            {
+              "w": "colleague.",
+              "t": 4.846
+            }
+          ]
+        },
+        {
+          "t": 5.961,
+          "end": 8.573,
+          "text": "Keep sentences short and spell out acronyms.",
+          "words": [
+            {
+              "w": "Keep",
+              "t": 5.961
+            },
+            {
+              "w": "sentences",
+              "t": 6.239
+            },
+            {
+              "w": "short",
+              "t": 6.797
+            },
+            {
+              "w": "and",
+              "t": 7.145
+            },
+            {
+              "w": "spell",
+              "t": 7.307
+            },
+            {
+              "w": "out",
+              "t": 7.586
+            },
+            {
+              "w": "acronyms.",
+              "t": 7.783
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.573
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "When a policy changes, just edit the slide and convert again. On Pro, a.i. directs each video so it lands like a produced welcome. Try Basic first at powerpoint2vid.com.",
+      "storyboard": "Paper stage. On 'edit the slide' a cursor tweaks one line; on 'convert again' a fresh MP4 tile swaps into place over the old one, with a small 'Review every six months' calendar tag. On 'Pro' the stage warms to night with a sun-yellow spotlight on a polished video frame. On 'Try Basic' the screen settles on teal with 'powerpoint2vid.com' at 130px, holding.",
+      "minDuration": 12,
+      "slide": {
+        "title": "Update the slide, not the recording",
+        "text": "Edit the slide and its notes. Convert again and replace the MP4. Review every six months, with an owner. Pro: a.i.-directed videos",
+        "notes": "When a policy changes, just edit and convert again. On Pro, a.i. directs each video so it lands like a produced welcome. Try Basic first at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 14.581,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.114,
+          "text": "When a policy changes, just edit the slide and convert again.",
+          "words": [
+            {
+              "w": "When",
+              "t": 0.55
+            },
+            {
+              "w": "a",
+              "t": 0.771
+            },
+            {
+              "w": "policy",
+              "t": 0.84
+            },
+            {
+              "w": "changes,",
+              "t": 1.282
+            },
+            {
+              "w": "just",
+              "t": 1.955
+            },
+            {
+              "w": "edit",
+              "t": 2.222
+            },
+            {
+              "w": "the",
+              "t": 2.489
+            },
+            {
+              "w": "slide",
+              "t": 2.605
+            },
+            {
+              "w": "and",
+              "t": 3.046
+            },
+            {
+              "w": "convert",
+              "t": 3.209
+            },
+            {
+              "w": "again.",
+              "t": 3.615
+            }
+          ]
+        },
+        {
+          "t": 4.498,
+          "end": 8.921,
+          "text": "On Pro, a.i. directs each video so it lands like a produced welcome.",
+          "words": [
+            {
+              "w": "On",
+              "t": 4.498
+            },
+            {
+              "w": "Pro,",
+              "t": 4.753
+            },
+            {
+              "w": "A.I.",
+              "t": 5.333
+            },
+            {
+              "w": "directs",
+              "t": 5.786
+            },
+            {
+              "w": "each",
+              "t": 6.227
+            },
+            {
+              "w": "video",
+              "t": 6.483
+            },
+            {
+              "w": "so",
+              "t": 7.028
+            },
+            {
+              "w": "it",
+              "t": 7.249
+            },
+            {
+              "w": "lands",
+              "t": 7.354
+            },
+            {
+              "w": "like",
+              "t": 7.632
+            },
+            {
+              "w": "a",
+              "t": 7.795
+            },
+            {
+              "w": "produced",
+              "t": 7.864
+            },
+            {
+              "w": "welcome.",
+              "t": 8.317
+            }
+          ]
+        },
+        {
+          "t": 9.362,
+          "end": 12.381,
+          "text": "Try Basic first at powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 9.362
+            },
+            {
+              "w": "Basic",
+              "t": 9.71
+            },
+            {
+              "w": "first",
+              "t": 10.152
+            },
+            {
+              "w": "at",
+              "t": 10.558
+            },
+            {
+              "w": "PowerPoint",
+              "t": 10.697
+            },
+            {
+              "w": "to",
+              "t": 11.266
+            },
+            {
+              "w": "vid",
+              "t": 11.371
+            },
+            {
+              "w": "dot",
+              "t": 11.591
+            },
+            {
+              "w": "com.",
+              "t": 11.847
+            }
+          ]
+        }
+      ],
+      "speechEnd": 12.381
+    }
+  ],
+  "voiceProvider": "elevenlabs"
+}

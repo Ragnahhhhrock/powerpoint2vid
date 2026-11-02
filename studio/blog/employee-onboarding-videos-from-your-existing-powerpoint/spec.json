@@ -1,0 +1,105 @@
+{
+  "title": "Employee Onboarding Videos From Your Existing PowerPoint (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Onboarding Videos From Your Existing PowerPoint",
+      "bullets": [
+        "Turn repeated sessions into video",
+        "Watch on day one, at their own pace",
+        "The same accurate message every time"
+      ],
+      "notes": "Your team presents the same onboarding deck to every new starter. What if they could watch it on day one, at their own pace, with the same message every time?",
+      "minDuration": 10
+    },
+    {
+      "title": "Audit your decks into three groups",
+      "bullets": [
+        "Stable and standard: ideal for video",
+        "Changes often: keep out or on one slide",
+        "Needs a human: keep live"
+      ],
+      "notes": "Start by sorting your decks. Stable policies and company history suit video, things that change often stay out, and welcomes and Q&A stay live.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Short videos beat one long one",
+      "bullets": [
+        "Five six-minute videos, not one thirty-minute video",
+        "Welcome and how we work",
+        "Policies you need to know",
+        "Systems and tools"
+      ],
+      "notes": "A new hire is more likely to finish five six-minute videos than one thirty-minute video. So split your content into short, focused topics.",
+      "minDuration": 9,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Clean up slides before converting",
+      "bullets": [
+        "One idea per slide",
+        "\"You can work from home up to three days a week\"",
+        "24pt or larger body text",
+        "Roles, not names: \"your manager\""
+      ],
+      "notes": "Tidy each deck first. Give every slide one idea and a headline that makes a point, and swap stale names for roles like your manager.",
+      "minDuration": 10,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Speaker notes become the voiceover",
+      "bullets": [
+        "Write as you'd explain to a new colleague",
+        "Keep sentences short",
+        "Spell out acronyms the first time",
+        "Respell names the voice mispronounces"
+      ],
+      "notes": "Your speaker notes become the voiceover, so write them like you're explaining things to a new colleague. Keep sentences short and spell out acronyms.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Update the slide, not the recording",
+      "bullets": [
+        "Edit the slide and its notes",
+        "Convert again and replace the MP4",
+        "Review every six months, with an owner",
+        "Pro: a.i.-directed videos"
+      ],
+      "notes": "When a policy changes, just edit and convert again. On Pro, a.i. directs each video so it lands like a produced welcome. Try Basic first at powerpoint2vid.com.",
+      "minDuration": 12,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}
