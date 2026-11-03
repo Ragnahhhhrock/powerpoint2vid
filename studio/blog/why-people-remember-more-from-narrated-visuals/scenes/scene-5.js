@@ -1,0 +1,156 @@
+/* Scene 5 — "With PowerPoint2Vid, your speaker notes become the narration, with captions. On Pro, a.i. directs
+ * the video. Try Basic first, no subscription needed, at powerpoint2vid.com."
+ * Storyboard: a night stage slowly warms to amber. A slide card sits over its speaker-notes panel. On
+ * "become the narration" the notes panel lifts off and dissolves into a glowing amber voice wave. On
+ * "captions" a caption bar slides into the slide. On "A.I. directs" the static paper slide rebuilds into a
+ * dark animated scene while a blue stream flows in and merges with the amber one. On "Try Basic first" the
+ * card recedes, a headline lands and a "No subscription needed" pill pops. Final hold: "powerpoint2vid.com"
+ * at 130px paper-white, centred, held for about 4s with the merged streams running underneath. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const T = (i, w, f) => { const v = ctx.at(i, w); return (typeof v === 'number' && isFinite(v)) ? v : f; };
+  const tBrand = T(0, 'PowerPoint', 0.79), tNotes = T(0, 'speaker', 2.12), tBecome = T(0, 'become', 2.78),
+    tNarr = T(0, 'narration,', 3.17), tCap = T(0, 'captions.', 4.11), tPro = T(1, 'Pro,', 5.93),
+    tAI = T(1, 'A.I.', 6.41), tDir = T(1, 'directs', 6.83), tTry = T(2, 'Try', 7.95), tBasic = T(2, 'Basic', 8.26),
+    tNo = T(2, 'no', 9.27), tURL = T(2, 'PowerPoint', 10.71);
+  const MONO = 'ui-monospace, Menlo, monospace';
+
+  /* ---------- backdrop ---------- */
+  stage.style.background = 'radial-gradient(80% 70% at 50% 40%, #18203a 0%, var(--night) 70%)';
+  const warm = el('div', 'abs', stage, { inset: 0, opacity: 0,
+    background: 'radial-gradient(55% 45% at 50% 62%, rgba(255,178,61,.28) 0%, rgba(255,178,61,.08) 45%, transparent 75%)' });
+  const cool = el('div', 'abs', stage, { inset: 0, opacity: 0,
+    background: 'radial-gradient(40% 40% at 22% 70%, rgba(61,123,255,.22), transparent 70%)' });
+
+  const cv = el('canvas', 'abs', stage, { left: 0, top: 0, width: '1920px', height: '1080px' });
+  cv.width = 1920; cv.height = 1080;
+  const g = cv.getContext('2d');
+  const W = { amb: 0, blu: 0, m: 0, ax0: 440, ax1: 1480, bx1: 0, y: 845 };
+
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 500px' });
+
+  const brand = el('div', 'abs', cam, { left: 0, width: '1920px', top: '84px', textAlign: 'center',
+    font: '800 50px/1 Inter Display, Inter', letterSpacing: '-.035em', color: 'var(--paper)' });
+  brand.innerHTML = 'PowerPoint<span style="color:var(--ear-amber)">2</span>Vid';
+
+  const CX = 440, CY = 170, CW = 1040, CH = 585;
+  const card = el('div', 'abs', cam, { left: CX + 'px', top: CY + 'px', width: CW + 'px', height: CH + 'px',
+    borderRadius: '18px', overflow: 'hidden', background: 'var(--paper)', transformOrigin: '50% 50%',
+    boxShadow: '0 50px 120px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.08)' });
+  const sTitle = el('div', 'abs', card, { left: '70px', top: '64px', width: '560px', height: '40px', borderRadius: '8px', background: 'var(--ink)' });
+  const bullets = [0, 1, 2].map((i) => {
+    const row = el('div', 'abs', card, { left: '70px', top: 160 + i * 70 + 'px', width: '800px', height: '30px' });
+    el('div', 'abs', row, { left: 0, top: '8px', width: '14px', height: '14px', borderRadius: '50%', background: 'var(--mist)' });
+    el('div', 'abs', row, { left: '34px', top: '6px', width: [620, 520, 700][i] + 'px', height: '18px', borderRadius: '6px', background: 'rgba(27,34,56,.28)' });
+    return row;
+  });
+  const dark = el('div', 'abs', card, { inset: 0, opacity: 0,
+    background: 'radial-gradient(70% 80% at 30% 40%, #22305a 0%, var(--ink) 55%, #10162a 100%)' });
+  const orb = el('div', 'abs', card, { left: '150px', top: '120px', width: '200px', height: '200px', borderRadius: '50%',
+    background: 'radial-gradient(circle at 35% 35%, #9cc0ff, var(--eye-blue) 60%, #1d4bc0)', boxShadow: '0 0 80px rgba(61,123,255,.7)', opacity: 0 });
+  const ring = el('div', 'abs', card, { left: '130px', top: '100px', width: '240px', height: '240px', borderRadius: '50%',
+    border: '4px solid rgba(61,123,255,.6)', opacity: 0 });
+  const bars = [0.45, 0.7, 0.55, 0.95].map((h, i) => el('div', 'abs', card, { left: 520 + i * 100 + 'px', top: 340 - h * 220 + 'px',
+    width: '64px', height: h * 220 + 'px', borderRadius: '10px 10px 3px 3px', transformOrigin: '50% 100%', opacity: 0,
+    background: 'linear-gradient(180deg, #ffd38a, var(--ear-amber) 60%, #d98a12)', boxShadow: '0 0 30px rgba(255,178,61,.45)' }));
+  const aiTag = el('div', 'abs', card, { right: '40px', top: '36px', padding: '10px 16px', borderRadius: '8px',
+    font: `700 20px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--night)',
+    background: 'linear-gradient(90deg, var(--eye-blue), var(--ear-amber))', opacity: 0 });
+  aiTag.textContent = 'PRO · AI DIRECTED';
+  const progTrack = el('div', 'abs', card, { left: '40px', right: '40px', bottom: '18px', height: '6px', borderRadius: '3px', background: 'rgba(255,255,255,.12)', opacity: 0 });
+  const prog = el('div', 'abs', progTrack, { left: 0, top: 0, bottom: 0, width: '100%', borderRadius: '3px', transformOrigin: '0 50%',
+    background: 'linear-gradient(90deg, var(--eye-blue), var(--ear-amber))' });
+  const cap = el('div', 'abs', card, { left: '120px', right: '120px', bottom: '42px', height: '74px', borderRadius: '12px',
+    background: 'rgba(14,20,36,.86)', boxShadow: '0 12px 30px rgba(0,0,0,.35)', display: 'flex', alignItems: 'center', justifyContent: 'center',
+    font: '600 34px/1 Inter', letterSpacing: '-.01em', color: 'var(--paper)', borderBottom: '3px solid var(--ear-amber)' });
+
+  const notes = el('div', 'abs', cam, { left: CX + 'px', top: '775px', width: CW + 'px', height: '140px', borderRadius: '14px',
+    background: 'var(--ink)', border: '1px solid rgba(154,163,184,.25)', boxShadow: '0 20px 50px rgba(0,0,0,.4)', transformOrigin: '50% 0%' });
+  const nLab = el('div', 'abs', notes, { left: '32px', top: '24px', font: `700 18px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--mist)' });
+  nLab.textContent = 'SPEAKER NOTES';
+  const nLines = [820, 900, 640].map((w, i) => el('div', 'abs', notes, { left: '32px', top: 62 + i * 22 + 'px', width: w + 'px', height: '10px', borderRadius: '5px', background: 'rgba(154,163,184,.35)' }));
+
+  const head = el('div', 'abs', stage, { left: 0, width: '1920px', top: '340px', textAlign: 'center',
+    font: '900 104px/1 Inter Display, Inter', letterSpacing: '-.045em', color: 'var(--paper)', transformOrigin: '50% 50%', opacity: 0 });
+  head.innerHTML = 'Try <span style="color:var(--ear-amber)">Basic</span> first';
+  const pill = el('div', 'abs', stage, { left: '660px', width: '600px', top: '520px', height: '78px', borderRadius: '39px',
+    display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '16px',
+    background: 'rgba(255,178,61,.14)', border: '2px solid var(--ear-amber)', boxShadow: '0 0 50px rgba(255,178,61,.3)',
+    font: '700 34px/1 Inter', letterSpacing: '-.01em', color: 'var(--paper)', opacity: 0 });
+  pill.innerHTML = '<span style="color:var(--ear-amber);font-size:38px">✓</span>No subscription needed';
+  const url = el('div', 'abs', stage, { left: 0, width: '1920px', top: '420px', textAlign: 'center',
+    font: '800 130px/1 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--paper)', opacity: 0,
+    textShadow: '0 0 60px rgba(255,178,61,.35)' });
+  url.textContent = 'powerpoint2vid.com';
+
+  ctx.fx.vignette({ strength: 0.5 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  const wave = (x0, x1, base, amp, k, sp, ph, t, col, glow) => {
+    if (amp < 0.01 || x1 - x0 < 4) return;
+    g.save(); g.strokeStyle = col; g.shadowColor = glow; g.shadowBlur = 24; g.lineCap = 'round';
+    for (let L = 0; L < 3; L++) {
+      g.globalAlpha = [0.95, 0.45, 0.25][L]; g.lineWidth = [5, 3, 2][L];
+      g.beginPath();
+      for (let x = x0; x <= x1; x += 6) {
+        const u = (x - x0) / (x1 - x0), env = Math.sin(Math.PI * u);
+        const y = base + amp * env * (38 - L * 10) * Math.sin(x * k + t * sp + ph + L * 0.9) * (0.7 + 0.3 * Math.sin(x * 0.004 + t * 1.3));
+        x === x0 ? g.moveTo(x, y) : g.lineTo(x, y);
+      }
+      g.stroke();
+    }
+    g.restore();
+  };
+  ctx.onFrame((t) => {
+    g.clearRect(0, 0, 1920, 1080);
+    const off = 46 * (1 - W.m);
+    wave(80, W.bx1, W.y - off, W.blu, 0.014, -3.2, 1.3, t, '#3D7BFF', 'rgba(61,123,255,.9)');
+    wave(W.ax0, W.ax1, W.y + off * W.blu, W.amb, 0.012, 3.6, 0, t, '#FFB23D', 'rgba(255,178,61,.9)');
+    cap.textContent = t < tAI - 0.1 ? 'Your speaker notes become the narration' : 'On Pro, AI directs the video';
+  });
+
+  gsap.set([card, notes], { filter: 'blur(0px) brightness(1)' });
+  tl.to(cam, { scale: 1.03, duration: tTry, ease: 'sine.inOut' }, 0);
+  tl.to(warm, { opacity: 1, duration: 8, ease: 'sine.inOut' }, 0.5);
+
+  tl.from(card, { opacity: 0, scale: 0.94, y: 30, duration: 0.8 }, 0);
+  tl.from(notes, { opacity: 0, y: 30, duration: 0.8 }, 0.12);
+  tl.from(brand, { opacity: 0, y: -20, duration: 0.7 }, tBrand - 0.2);
+
+  tl.to(notes, { borderColor: 'rgba(255,178,61,.9)', boxShadow: '0 0 60px rgba(255,178,61,.35)', duration: 0.4 }, tNotes);
+  tl.to(nLab, { color: '#FFB23D', duration: 0.3 }, tNotes);
+  tl.to(nLines, { scaleX: 0, opacity: 0, transformOrigin: '50% 50%', duration: 0.5, stagger: 0.06, ease: 'power2.in' }, tBecome);
+  tl.to(notes, { y: -24, scaleY: 0.2, opacity: 0, filter: 'blur(8px) brightness(1.4)', duration: 0.7, ease: 'power2.in' }, tBecome + 0.1);
+  tl.to(W, { amb: 1, duration: 1.0, ease: 'power2.out' }, tNarr - 0.2);
+  tl.to(W, { ax0: 80, ax1: 1840, duration: 1.4, ease: 'expo.inOut' }, tNarr + 0.3);
+  tl.from(cap, { y: 120, opacity: 0, duration: 0.6, ease: 'back.out(1.5)' }, tCap - 0.1);
+
+  tl.to([sTitle, ...bullets], { x: 80, opacity: 0, duration: 0.4, stagger: 0.05, ease: 'power2.in' }, tAI - 0.35);
+  tl.to(dark, { opacity: 1, duration: 0.6, ease: 'power2.inOut' }, tAI - 0.1);
+  tl.to(card, { boxShadow: '0 50px 120px rgba(0,0,0,.55), 0 0 90px rgba(61,123,255,.35)', duration: 0.8 }, tAI);
+  tl.fromTo(aiTag, { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.5, ease: 'back.out(1.8)' }, tPro + 0.1);
+  tl.fromTo(orb, { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.7, ease: 'back.out(1.8)' }, tDir);
+  tl.fromTo(ring, { opacity: 0.9, scale: 0.8 }, { opacity: 0, scale: 1.5, duration: 1.2, ease: 'power2.out', repeat: 2, immediateRender: false }, tDir + 0.2);
+  tl.to(orb, { y: -14, duration: 1, ease: 'sine.inOut', yoyo: true, repeat: 1 }, tDir + 0.7);
+  tl.fromTo(bars, { opacity: 0, scaleY: 0 }, { opacity: 1, scaleY: 1, duration: 0.7, stagger: 0.1, ease: 'back.out(1.5)' }, tDir + 0.15);
+  tl.to(progTrack, { opacity: 1, duration: 0.3 }, tDir);
+  tl.fromTo(prog, { scaleX: 0 }, { scaleX: 1, duration: 3.2, ease: 'none', immediateRender: false }, tDir);
+  tl.to(cool, { opacity: 1, duration: 1 }, tAI);
+  tl.to(W, { bx1: 1840, duration: 1.2, ease: 'expo.inOut' }, tAI - 0.1);
+  tl.to(W, { blu: 1, duration: 0.8 }, tAI - 0.1);
+  tl.to(W, { m: 1, duration: 1.4, ease: 'power2.inOut' }, tDir + 0.4);
+
+  tl.to(card, { scale: 0.8, y: -30, opacity: 0.16, filter: 'blur(5px) brightness(.6)', duration: 0.9, ease: 'expo.inOut' }, tTry - 0.1);
+  tl.to(brand, { opacity: 0, y: -20, duration: 0.5 }, tTry - 0.1);
+  tl.fromTo(head, { opacity: 0, y: 40, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: 'back.out(1.5)' }, tBasic - 0.2);
+  tl.fromTo(pill, { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.55, ease: 'back.out(2)' }, tNo - 0.05);
+  tl.to(W, { y: 880, duration: 1.2, ease: 'power2.inOut' }, tTry);
+
+  const u0 = tURL - 0.25;
+  tl.to(card, { opacity: 0, duration: 0.5 }, u0);
+  tl.to(head, { y: -150, scale: 0.62, opacity: 0.85, duration: 0.7, ease: 'expo.inOut' }, u0);
+  tl.to(pill, { y: 130, duration: 0.7, ease: 'expo.inOut' }, u0);
+  tl.fromTo(url, { opacity: 0, y: 30, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: 'back.out(1.4)' }, u0 + 0.15);
+  tl.to(warm, { opacity: 1.0, scale: 1.08, duration: ctx.dur - u0, ease: 'sine.inOut' }, u0);
+  tl.to(url, { textShadow: '0 0 90px rgba(255,178,61,.55)', duration: 1.2, ease: 'sine.inOut' }, u0 + 1);
+});

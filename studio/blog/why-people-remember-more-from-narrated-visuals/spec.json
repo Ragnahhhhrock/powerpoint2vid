@@ -1,0 +1,105 @@
+{
+  "title": "Why People Remember More From Narrated Visuals (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Why People Remember More From Narrated Visuals",
+      "bullets": [
+        "Words and pictures together",
+        "Explainer video learning"
+      ],
+      "notes": "Think about the last time you understood something difficult. Odds are someone showed you a picture while they explained it.",
+      "minDuration": 9
+    },
+    {
+      "title": "Two channels are better than one",
+      "bullets": [
+        "A channel for what we see",
+        "A channel for what we hear",
+        "Each has limited capacity",
+        "The learner connects the two"
+      ],
+      "notes": "We take in information through our eyes and our ears. Show a picture and explain it out loud, and the load is shared.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Let the visual show, narration explain",
+      "bullets": [
+        "The visual stays visual",
+        "The explanation moves to audio",
+        "Timing is guided",
+        "Attention stays together"
+      ],
+      "notes": "A PDF deck makes readers do everything with their eyes. Narration moves the explaining to audio, and the voice tells viewers where to look and when.",
+      "minDuration": 11,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "What gets in the way of learning",
+      "bullets": [
+        "Reading slide text aloud word for word",
+        "Decorative extras",
+        "Words and pictures out of sync",
+        "Too much at once"
+      ],
+      "notes": "Narrated visuals aren't automatically good. Don't read your bullets aloud, cut decoration that doesn't teach, and talk about what's on screen, while it's on screen.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Before and after: the water cycle",
+      "bullets": [
+        "Before: a paragraph read aloud",
+        "Headline: Water moves in a loop driven by the sun",
+        "Four labelled stages with arrows",
+        "Each stage appears as the narration reaches it"
+      ],
+      "notes": "The diagram carries the structure. The voice carries the explanation. And the build keeps them in step, so each stage arrives as it's named.",
+      "minDuration": 12,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Turn teaching slides into narrated video",
+      "bullets": [
+        "Speaker notes become the narration",
+        "Captions to support viewers",
+        "On Pro, a.i. directs the video",
+        "Try Basic first, no subscription needed"
+      ],
+      "notes": "Your speaker notes become the narration. On Pro, a.i. directs, rebuilding diagrams as animated scenes that land on the word that names them. Try it at powerpoint2vid.com.",
+      "minDuration": 12,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}

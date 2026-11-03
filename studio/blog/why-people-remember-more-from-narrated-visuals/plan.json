@@ -1,0 +1,873 @@
+{
+  "title": "Why People Remember More From Narrated Visuals (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0E1424",
+      "ink": "#1B2238",
+      "paper": "#F6F3EC",
+      "eye-blue": "#3D7BFF",
+      "ear-amber": "#FFB23D",
+      "coral": "#FF5E57",
+      "mist": "#9AA3B8"
+    },
+    "font": "Inter Display",
+    "motion": "Calm, confident pacing with soft ease-out arrivals and gentle push-ins; elements land exactly on the spoken word, then hold still. Two colour-coded streams (blue for seeing, amber for hearing) recur as the film's visual thread.",
+    "story": "We open dark and intimate with a single spark of understanding, move to bright explanatory diagrams of the two channels, dip into a cluttered coral 'what goes wrong' scene, resolve with a clean water-cycle demonstration, and land on a warm, open call to action."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "Think about the last time you understood something difficult. Odds are, someone showed you a picture while they explained it.",
+      "storyboard": "Night stage, near-black. A single small sketch, a simple line drawing, glows in eye-blue at centre while an amber sound-wave ripples beside it. On 'understood something difficult' the two touch and a soft light blooms outward. On 'showed you a picture' the camera pushes in slowly and the title 'Narrated Visuals' rises in 140px paper-white type beneath. The original slide's overlapping subtitles are cut; only the title survives.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Why People Remember More From Narrated Visuals",
+        "text": "Words and pictures together. Explainer video learning",
+        "notes": "Think about the last time you understood something difficult. Odds are someone showed you a picture while they explained it.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 8.832,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.586,
+          "text": "Think about the last time you understood something difficult.",
+          "words": [
+            {
+              "w": "Think",
+              "t": 0.8
+            },
+            {
+              "w": "about",
+              "t": 1.102
+            },
+            {
+              "w": "the",
+              "t": 1.299
+            },
+            {
+              "w": "last",
+              "t": 1.415
+            },
+            {
+              "w": "time",
+              "t": 1.671
+            },
+            {
+              "w": "you",
+              "t": 1.938
+            },
+            {
+              "w": "understood",
+              "t": 2.1
+            },
+            {
+              "w": "something",
+              "t": 2.565
+            },
+            {
+              "w": "difficult.",
+              "t": 2.948
+            }
+          ]
+        },
+        {
+          "t": 4.097,
+          "end": 7.232,
+          "text": "Odds are, someone showed you a picture while they explained it.",
+          "words": [
+            {
+              "w": "Odds",
+              "t": 4.097
+            },
+            {
+              "w": "are,",
+              "t": 4.434
+            },
+            {
+              "w": "someone",
+              "t": 4.805
+            },
+            {
+              "w": "showed",
+              "t": 5.165
+            },
+            {
+              "w": "you",
+              "t": 5.444
+            },
+            {
+              "w": "a",
+              "t": 5.583
+            },
+            {
+              "w": "picture",
+              "t": 5.676
+            },
+            {
+              "w": "while",
+              "t": 6.036
+            },
+            {
+              "w": "they",
+              "t": 6.268
+            },
+            {
+              "w": "explained",
+              "t": 6.454
+            },
+            {
+              "w": "it.",
+              "t": 6.988
+            }
+          ]
+        }
+      ],
+      "speechEnd": 7.232
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "We take in information through two channels: our eyes and our ears. Each has limited capacity. Show a picture and explain it out loud, and the load is shared.",
+      "storyboard": "Paper stage. A stylised head in profile, centred, with an eye icon and an ear icon. On 'our eyes' a blue stream flows into the eye; on 'our ears' an amber stream flows into the ear. On 'limited capacity' each stream feeds a small vessel that fills to the brim. On 'the load is shared' both streams pour in at once, each vessel half full, and they link with a bright connecting line. Headline 'Two channels beat one' sits top-left at 110px; the bullet list is cut.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Two channels are better than one",
+        "text": "A channel for what we see. A channel for what we hear. Each has limited capacity. The learner connects the two",
+        "notes": "We take in information through our eyes and our ears. Show a picture and explain it out loud, and the load is shared.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 11.641,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.869,
+          "text": "We take in information through two channels: our eyes and our ears.",
+          "words": [
+            {
+              "w": "We",
+              "t": 0.55
+            },
+            {
+              "w": "take",
+              "t": 0.736
+            },
+            {
+              "w": "in",
+              "t": 1.015
+            },
+            {
+              "w": "information",
+              "t": 1.154
+            },
+            {
+              "w": "through",
+              "t": 1.781
+            },
+            {
+              "w": "two",
+              "t": 2.036
+            },
+            {
+              "w": "channels:",
+              "t": 2.257
+            },
+            {
+              "w": "our",
+              "t": 3.209
+            },
+            {
+              "w": "eyes",
+              "t": 3.464
+            },
+            {
+              "w": "and",
+              "t": 3.859
+            },
+            {
+              "w": "our",
+              "t": 4.045
+            },
+            {
+              "w": "ears.",
+              "t": 4.254
+            }
+          ]
+        },
+        {
+          "t": 5.473,
+          "end": 7.121,
+          "text": "Each has limited capacity.",
+          "words": [
+            {
+              "w": "Each",
+              "t": 5.473
+            },
+            {
+              "w": "has",
+              "t": 5.751
+            },
+            {
+              "w": "limited",
+              "t": 5.972
+            },
+            {
+              "w": "capacity.",
+              "t": 6.367
+            }
+          ]
+        },
+        {
+          "t": 7.295,
+          "end": 10.791,
+          "text": "Show a picture and explain it out loud, and the load is shared.",
+          "words": [
+            {
+              "w": "Show",
+              "t": 7.295
+            },
+            {
+              "w": "a",
+              "t": 7.563
+            },
+            {
+              "w": "picture",
+              "t": 7.656
+            },
+            {
+              "w": "and",
+              "t": 8.051
+            },
+            {
+              "w": "explain",
+              "t": 8.202
+            },
+            {
+              "w": "it",
+              "t": 8.62
+            },
+            {
+              "w": "out",
+              "t": 8.759
+            },
+            {
+              "w": "loud,",
+              "t": 8.945
+            },
+            {
+              "w": "and",
+              "t": 9.572
+            },
+            {
+              "w": "the",
+              "t": 9.746
+            },
+            {
+              "w": "load",
+              "t": 9.862
+            },
+            {
+              "w": "is",
+              "t": 10.117
+            },
+            {
+              "w": "shared.",
+              "t": 10.233
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.791
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "A PDF deck makes readers do everything with their eyes. Narration moves the explaining to audio, and the voice tells viewers where to look, and when.",
+      "storyboard": "Split screen on paper. Left: a page dense with grey text and a diagram, the blue eye-stream straining and flickering, overloaded on 'everything with their eyes'. On 'moves the explaining to audio' the text peels off the page and morphs into an amber wave, leaving only the clean diagram. On 'where to look, and when' an amber spotlight glides across the diagram, highlighting parts in turn. Headline 'Let the visual show' at 100px lands at the end.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Let the visual show, narration explain",
+        "text": "The visual stays visual. The explanation moves to audio. Timing is guided. Attention stays together",
+        "notes": "A PDF deck makes readers do everything with their eyes. Narration moves the explaining to audio, and the voice tells viewers where to look and when.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 10.939,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.755,
+          "text": "A PDF deck makes readers do everything with their eyes.",
+          "words": [
+            {
+              "w": "A",
+              "t": 0.55
+            },
+            {
+              "w": "PDF",
+              "t": 0.713
+            },
+            {
+              "w": "deck",
+              "t": 1.247
+            },
+            {
+              "w": "makes",
+              "t": 1.549
+            },
+            {
+              "w": "readers",
+              "t": 1.839
+            },
+            {
+              "w": "do",
+              "t": 2.187
+            },
+            {
+              "w": "everything",
+              "t": 2.373
+            },
+            {
+              "w": "with",
+              "t": 2.803
+            },
+            {
+              "w": "their",
+              "t": 2.954
+            },
+            {
+              "w": "eyes.",
+              "t": 3.186
+            }
+          ]
+        },
+        {
+          "t": 4.196,
+          "end": 9.339,
+          "text": "Narration moves the explaining to audio, and the voice tells viewers where to look, and when.",
+          "words": [
+            {
+              "w": "Narration",
+              "t": 4.196
+            },
+            {
+              "w": "moves",
+              "t": 4.823
+            },
+            {
+              "w": "the",
+              "t": 5.159
+            },
+            {
+              "w": "explaining",
+              "t": 5.299
+            },
+            {
+              "w": "to",
+              "t": 5.844
+            },
+            {
+              "w": "audio,",
+              "t": 5.984
+            },
+            {
+              "w": "and",
+              "t": 6.704
+            },
+            {
+              "w": "the",
+              "t": 6.878
+            },
+            {
+              "w": "voice",
+              "t": 6.982
+            },
+            {
+              "w": "tells",
+              "t": 7.261
+            },
+            {
+              "w": "viewers",
+              "t": 7.563
+            },
+            {
+              "w": "where",
+              "t": 7.911
+            },
+            {
+              "w": "to",
+              "t": 8.155
+            },
+            {
+              "w": "look,",
+              "t": 8.271
+            },
+            {
+              "w": "and",
+              "t": 8.619
+            },
+            {
+              "w": "when.",
+              "t": 8.817
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.339
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "But narrated visuals aren't automatically good. Don't read your bullets aloud, cut decoration that doesn't teach, and talk about what's on screen, while it's on screen.",
+      "storyboard": "Ink stage with coral accents. A busy mock slide fills the frame, crammed with clip-art and bullets. On 'read your bullets aloud' the amber wave duplicates the bullet text and both jam, flashing coral. On 'cut decoration' the clip-art is swept off-frame. On 'while it's on screen' a desynced waveform snaps into alignment with the picture. The slide calms to one clean element; headline 'What gets in the way' at 100px, top. The four bullets are rebuilt as these three gestures.",
+      "minDuration": 11,
+      "slide": {
+        "title": "What gets in the way of learning",
+        "text": "Reading slide text aloud word for word. Decorative extras. Words and pictures out of sync. Too much at once",
+        "notes": "Narrated visuals aren't automatically good. Don't read your bullets aloud, cut decoration that doesn't teach, and talk about what's on screen, while it's on screen.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 11.28,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.197,
+          "text": "But narrated visuals aren't automatically good.",
+          "words": [
+            {
+              "w": "But",
+              "t": 0.55
+            },
+            {
+              "w": "narrated",
+              "t": 0.759
+            },
+            {
+              "w": "visuals",
+              "t": 1.235
+            },
+            {
+              "w": "aren't",
+              "t": 1.711
+            },
+            {
+              "w": "automatically",
+              "t": 2.024
+            },
+            {
+              "w": "good.",
+              "t": 2.732
+            }
+          ]
+        },
+        {
+          "t": 3.638,
+          "end": 10.43,
+          "text": "Don't read your bullets aloud, cut decoration that doesn't teach, and talk about what's on screen, while it's on screen.",
+          "words": [
+            {
+              "w": "Don't",
+              "t": 3.638
+            },
+            {
+              "w": "read",
+              "t": 3.905
+            },
+            {
+              "w": "your",
+              "t": 4.114
+            },
+            {
+              "w": "bullets",
+              "t": 4.253
+            },
+            {
+              "w": "aloud,",
+              "t": 4.578
+            },
+            {
+              "w": "cut",
+              "t": 5.229
+            },
+            {
+              "w": "decoration",
+              "t": 5.496
+            },
+            {
+              "w": "that",
+              "t": 6.064
+            },
+            {
+              "w": "doesn't",
+              "t": 6.215
+            },
+            {
+              "w": "teach,",
+              "t": 6.552
+            },
+            {
+              "w": "and",
+              "t": 7.272
+            },
+            {
+              "w": "talk",
+              "t": 7.469
+            },
+            {
+              "w": "about",
+              "t": 7.713
+            },
+            {
+              "w": "what's",
+              "t": 7.98
+            },
+            {
+              "w": "on",
+              "t": 8.247
+            },
+            {
+              "w": "screen,",
+              "t": 8.421
+            },
+            {
+              "w": "while",
+              "t": 9.153
+            },
+            {
+              "w": "it's",
+              "t": 9.513
+            },
+            {
+              "w": "on",
+              "t": 9.698
+            },
+            {
+              "w": "screen.",
+              "t": 9.861
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.43
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Take the water cycle. Instead of a paragraph read aloud, the diagram carries the structure, the voice carries the explanation, and each stage arrives as it's named.",
+      "storyboard": "Starts with a grey wall of paragraph text on paper, which dissolves on 'instead of a paragraph'. Headline 'Water moves in a loop driven by the sun' types in at 90px. A sun rises top-right, then four labelled stages connected by blue arrows build in sequence around a loop, one per beat as the narration names structure, explanation and arrival. The final arrow closes the loop on 'as it's named' and the full diagram holds, gently rotating highlight around it.",
+      "minDuration": 12,
+      "slide": {
+        "title": "Before and after: the water cycle",
+        "text": "Before: a paragraph read aloud. Headline: Water moves in a loop driven by the sun. Four labelled stages with arrows. Each stage appears as the narration reaches it",
+        "notes": "The diagram carries the structure. The voice carries the explanation. And the build keeps them in step, so each stage arrives as it's named.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "smoothup",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 11.484,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 1.827,
+          "text": "Take the water cycle.",
+          "words": [
+            {
+              "w": "Take",
+              "t": 0.55
+            },
+            {
+              "w": "the",
+              "t": 0.84
+            },
+            {
+              "w": "water",
+              "t": 0.956
+            },
+            {
+              "w": "cycle.",
+              "t": 1.27
+            }
+          ]
+        },
+        {
+          "t": 2.036,
+          "end": 9.884,
+          "text": "Instead of a paragraph read aloud, the diagram carries the structure, the voice carries the explanation, and each stage arrives as it's named.",
+          "words": [
+            {
+              "w": "Instead",
+              "t": 2.036
+            },
+            {
+              "w": "of",
+              "t": 2.408
+            },
+            {
+              "w": "a",
+              "t": 2.512
+            },
+            {
+              "w": "paragraph",
+              "t": 2.582
+            },
+            {
+              "w": "read",
+              "t": 3.151
+            },
+            {
+              "w": "aloud,",
+              "t": 3.348
+            },
+            {
+              "w": "the",
+              "t": 3.952
+            },
+            {
+              "w": "diagram",
+              "t": 4.103
+            },
+            {
+              "w": "carries",
+              "t": 4.66
+            },
+            {
+              "w": "the",
+              "t": 5.066
+            },
+            {
+              "w": "structure,",
+              "t": 5.182
+            },
+            {
+              "w": "the",
+              "t": 5.925
+            },
+            {
+              "w": "voice",
+              "t": 6.087
+            },
+            {
+              "w": "carries",
+              "t": 6.389
+            },
+            {
+              "w": "the",
+              "t": 6.726
+            },
+            {
+              "w": "explanation,",
+              "t": 6.865
+            },
+            {
+              "w": "and",
+              "t": 7.771
+            },
+            {
+              "w": "each",
+              "t": 7.968
+            },
+            {
+              "w": "stage",
+              "t": 8.166
+            },
+            {
+              "w": "arrives",
+              "t": 8.56
+            },
+            {
+              "w": "as",
+              "t": 9.036
+            },
+            {
+              "w": "it's",
+              "t": 9.176
+            },
+            {
+              "w": "named.",
+              "t": 9.385
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.884
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "With PowerPoint2Vid, your speaker notes become the narration, with captions. On Pro, a.i. directs the video. Try Basic first, no subscription needed, at powerpoint2vid.com.",
+      "storyboard": "Night stage warming to amber glow. A slide card's notes panel lifts off and becomes an amber wave on 'become the narration', with a caption bar sliding in on 'captions'. On 'a.i. directs' the static slide rebuilds into an animated scene, blue and amber streams merging. On 'Try Basic first' a pill reading 'No subscription needed' pops in. Final hold: 'powerpoint2vid.com' at 130px paper-white, centred, for 2 seconds.",
+      "minDuration": 12,
+      "slide": {
+        "title": "Turn teaching slides into narrated video",
+        "text": "Speaker notes become the narration. Captions to support viewers. On Pro, a.i. directs the video. Try Basic first, no subscription needed",
+        "notes": "Your speaker notes become the narration. On Pro, a.i. directs, rebuilding diagrams as animated scenes that land on the word that names them. Try it at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 14.534,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.857,
+          "text": "With PowerPoint2Vid, your speaker notes become the narration, with captions.",
+          "words": [
+            {
+              "w": "With",
+              "t": 0.55
+            },
+            {
+              "w": "PowerPoint",
+              "t": 0.794
+            },
+            {
+              "w": "to",
+              "t": 1.328
+            },
+            {
+              "w": "vid,",
+              "t": 1.467
+            },
+            {
+              "w": "your",
+              "t": 1.943
+            },
+            {
+              "w": "speaker",
+              "t": 2.117
+            },
+            {
+              "w": "notes",
+              "t": 2.512
+            },
+            {
+              "w": "become",
+              "t": 2.779
+            },
+            {
+              "w": "the",
+              "t": 3.069
+            },
+            {
+              "w": "narration,",
+              "t": 3.174
+            },
+            {
+              "w": "with",
+              "t": 3.894
+            },
+            {
+              "w": "captions.",
+              "t": 4.114
+            }
+          ]
+        },
+        {
+          "t": 5.67,
+          "end": 7.83,
+          "text": "On Pro, a.i. directs the video.",
+          "words": [
+            {
+              "w": "On",
+              "t": 5.67
+            },
+            {
+              "w": "Pro,",
+              "t": 5.926
+            },
+            {
+              "w": "A.I.",
+              "t": 6.413
+            },
+            {
+              "w": "directs",
+              "t": 6.831
+            },
+            {
+              "w": "the",
+              "t": 7.203
+            },
+            {
+              "w": "video.",
+              "t": 7.307
+            }
+          ]
+        },
+        {
+          "t": 7.946,
+          "end": 12.334,
+          "text": "Try Basic first, no subscription needed, at powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 7.946
+            },
+            {
+              "w": "Basic",
+              "t": 8.259
+            },
+            {
+              "w": "first,",
+              "t": 8.677
+            },
+            {
+              "w": "no",
+              "t": 9.269
+            },
+            {
+              "w": "subscription",
+              "t": 9.467
+            },
+            {
+              "w": "needed,",
+              "t": 10.059
+            },
+            {
+              "w": "at",
+              "t": 10.5
+            },
+            {
+              "w": "PowerPoint",
+              "t": 10.709
+            },
+            {
+              "w": "to",
+              "t": 11.231
+            },
+            {
+              "w": "vid",
+              "t": 11.347
+            },
+            {
+              "w": "dot",
+              "t": 11.603
+            },
+            {
+              "w": "com.",
+              "t": 11.847
+            }
+          ]
+        }
+      ],
+      "speechEnd": 12.334
+    }
+  ],
+  "voiceProvider": "elevenlabs",
+  "degraded": true
+}
