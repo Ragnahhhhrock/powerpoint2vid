@@ -1,0 +1,854 @@
+{
+  "title": "\"Writing a Voiceover Script: Pace, Pauses and Plain Words\" (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0F1424",
+      "ink": "#1C2333",
+      "paper": "#F6F1E7",
+      "waveform": "#4FD1C5",
+      "coral": "#FF6B5A",
+      "amber": "#FFB547",
+      "mist": "#9AA4B8"
+    },
+    "font": "Inter Display",
+    "motion": "Rhythmic and audio-led: elements move on the beat of the voice with soft ease-out landings, and pauses are held as true stillness. The camera drifts slowly and only pushes in to land a key word.",
+    "story": "The story moves from silence to sound to control. Dark waveform scenes about hearing alternate with warm paper scenes about the written page, then close on a confident dark stage for the call to action."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "A voiceover script is text that nobody reads. They only hear it, once, at the speed it's spoken. That changes the rules.",
+      "storyboard": "We open on a night stage holding a single line of paper-coloured text that fades out letter by letter as the narrator says 'nobody reads'. On 'hear it, once' a teal waveform draws left to right across the centre of the frame and is gone. On 'changes the rules' the title 'Pace, Pauses, Plain Words' slams in at 140px, with each word lit in turn in teal, amber and coral. The camera makes a slow push-in. The plain white original title is rebuilt entirely.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Voiceover Scripts: Pace, Pauses and Plain Words",
+        "text": "",
+        "notes": "A voiceover script is text that nobody reads. They only hear it, once, at the speed it's spoken. That changes the rules.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 9,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.459,
+          "text": "A voiceover script is text that nobody reads.",
+          "words": [
+            {
+              "w": "A",
+              "t": 0.8
+            },
+            {
+              "w": "voiceover",
+              "t": 0.963
+            },
+            {
+              "w": "script",
+              "t": 1.473
+            },
+            {
+              "w": "is",
+              "t": 1.845
+            },
+            {
+              "w": "text",
+              "t": 2.007
+            },
+            {
+              "w": "that",
+              "t": 2.379
+            },
+            {
+              "w": "nobody",
+              "t": 2.565
+            },
+            {
+              "w": "reads.",
+              "t": 2.948
+            }
+          ]
+        },
+        {
+          "t": 3.633,
+          "end": 6.245,
+          "text": "They only hear it, once, at the speed it's spoken.",
+          "words": [
+            {
+              "w": "They",
+              "t": 3.633
+            },
+            {
+              "w": "only",
+              "t": 3.842
+            },
+            {
+              "w": "hear",
+              "t": 4.074
+            },
+            {
+              "w": "it,",
+              "t": 4.318
+            },
+            {
+              "w": "once,",
+              "t": 4.538
+            },
+            {
+              "w": "at",
+              "t": 4.898
+            },
+            {
+              "w": "the",
+              "t": 5.038
+            },
+            {
+              "w": "speed",
+              "t": 5.142
+            },
+            {
+              "w": "it's",
+              "t": 5.479
+            },
+            {
+              "w": "spoken.",
+              "t": 5.63
+            }
+          ]
+        },
+        {
+          "t": 6.686,
+          "end": 8.149,
+          "text": "That changes the rules.",
+          "words": [
+            {
+              "w": "That",
+              "t": 6.686
+            },
+            {
+              "w": "changes",
+              "t": 6.977
+            },
+            {
+              "w": "the",
+              "t": 7.429
+            },
+            {
+              "w": "rules.",
+              "t": 7.557
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.149
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Short sentences add weight. Longer ones carry the listener along. And give each sentence just one idea, so nobody has to hold two at once.",
+      "storyboard": "This scene sits on a paper stage, and the visual metaphor is a big amber dial at the left. On 'Short sentences' the dial snaps left and a chunky block of text thuds down with weight. On 'carry the listener along' the dial turns right and a long ribbon of text glides across the frame like a conveyor. On 'one idea' the ribbon collapses into a single 120px word, 'One idea.', on the right. The bullet list is cut.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Use sentence length as a dial",
+        "text": "Short sentences slow things down. Longer sentences carry the listener along. One idea per sentence",
+        "notes": "Short sentences add weight. Longer ones carry the listener along. And give each sentence just one idea, so nobody has to hold two at once.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 10,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.291,
+          "text": "Short sentences add weight.",
+          "words": [
+            {
+              "w": "Short",
+              "t": 0.55
+            },
+            {
+              "w": "sentences",
+              "t": 0.887
+            },
+            {
+              "w": "add",
+              "t": 1.49
+            },
+            {
+              "w": "weight.",
+              "t": 1.769
+            }
+          ]
+        },
+        {
+          "t": 2.617,
+          "end": 4.613,
+          "text": "Longer ones carry the listener along.",
+          "words": [
+            {
+              "w": "Longer",
+              "t": 2.617
+            },
+            {
+              "w": "ones",
+              "t": 3.0
+            },
+            {
+              "w": "carry",
+              "t": 3.302
+            },
+            {
+              "w": "the",
+              "t": 3.615
+            },
+            {
+              "w": "listener",
+              "t": 3.743
+            },
+            {
+              "w": "along.",
+              "t": 4.114
+            }
+          ]
+        },
+        {
+          "t": 4.857,
+          "end": 9.002,
+          "text": "And give each sentence just one idea, so nobody has to hold two at once.",
+          "words": [
+            {
+              "w": "And",
+              "t": 4.857
+            },
+            {
+              "w": "give",
+              "t": 5.078
+            },
+            {
+              "w": "each",
+              "t": 5.287
+            },
+            {
+              "w": "sentence",
+              "t": 5.496
+            },
+            {
+              "w": "just",
+              "t": 5.983
+            },
+            {
+              "w": "one",
+              "t": 6.227
+            },
+            {
+              "w": "idea,",
+              "t": 6.425
+            },
+            {
+              "w": "so",
+              "t": 7.04
+            },
+            {
+              "w": "nobody",
+              "t": 7.226
+            },
+            {
+              "w": "has",
+              "t": 7.528
+            },
+            {
+              "w": "to",
+              "t": 7.702
+            },
+            {
+              "w": "hold",
+              "t": 7.818
+            },
+            {
+              "w": "two",
+              "t": 8.062
+            },
+            {
+              "w": "at",
+              "t": 8.294
+            },
+            {
+              "w": "once.",
+              "t": 8.445
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.002
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "Full stops and questions create pauses. Use them to set up what you want remembered. So how many finished the study? Just over half.",
+      "storyboard": "We return to a night stage with a teal waveform running across the frame. On 'Full stops' a giant coral period drops onto the line and the wave goes flat. On 'questions' a huge question mark rises and the wave lifts in pitch. On 'finished the study?' everything holds in complete stillness for a beat. Then 'Just over half.' lands at 150px in amber, with the pause sitting visibly before the answer. The punctuation bullets are rebuilt as these glyphs.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Punctuation is your pause control",
+        "text": "Full stop: a clear pause. Comma: a short breath. Question mark: tone change and pause. Pause before the number, not after",
+        "notes": "Full stops and questions create pauses. Use them to set up what you want remembered. So how many finished the study? Just over half.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 10.718,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.965,
+          "text": "Full stops and questions create pauses.",
+          "words": [
+            {
+              "w": "Full",
+              "t": 0.55
+            },
+            {
+              "w": "stops",
+              "t": 0.852
+            },
+            {
+              "w": "and",
+              "t": 1.212
+            },
+            {
+              "w": "questions",
+              "t": 1.363
+            },
+            {
+              "w": "create",
+              "t": 1.92
+            },
+            {
+              "w": "pauses.",
+              "t": 2.291
+            }
+          ]
+        },
+        {
+          "t": 3.476,
+          "end": 5.612,
+          "text": "Use them to set up what you want remembered.",
+          "words": [
+            {
+              "w": "Use",
+              "t": 3.476
+            },
+            {
+              "w": "them",
+              "t": 3.777
+            },
+            {
+              "w": "to",
+              "t": 3.952
+            },
+            {
+              "w": "set",
+              "t": 4.068
+            },
+            {
+              "w": "up",
+              "t": 4.3
+            },
+            {
+              "w": "what",
+              "t": 4.439
+            },
+            {
+              "w": "you",
+              "t": 4.613
+            },
+            {
+              "w": "want",
+              "t": 4.753
+            },
+            {
+              "w": "remembered.",
+              "t": 4.996
+            }
+          ]
+        },
+        {
+          "t": 6.308,
+          "end": 7.853,
+          "text": "So how many finished the study?",
+          "words": [
+            {
+              "w": "So",
+              "t": 6.308
+            },
+            {
+              "w": "how",
+              "t": 6.494
+            },
+            {
+              "w": "many",
+              "t": 6.622
+            },
+            {
+              "w": "finished",
+              "t": 6.842
+            },
+            {
+              "w": "the",
+              "t": 7.179
+            },
+            {
+              "w": "study?",
+              "t": 7.295
+            }
+          ]
+        },
+        {
+          "t": 8.131,
+          "end": 9.118,
+          "text": "Just over half.",
+          "words": [
+            {
+              "w": "Just",
+              "t": 8.131
+            },
+            {
+              "w": "over",
+              "t": 8.387
+            },
+            {
+              "w": "half.",
+              "t": 8.63
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.118
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Spoken jargon is harder to decode, because there's no time to stop. Say use, not utilise. Help, not facilitate. Define technical terms once.",
+      "storyboard": "This scene is on a paper stage. On 'harder to decode' the word 'utilise' appears in mist grey, jittering slightly as if scrambled. On 'Say use' a coral strike cuts through it and 'use' pops in at 160px in ink. On 'Help' the same swap repeats with 'facilitate' becoming 'help', and the camera slides right. On 'Define technical terms once' a small amber label reading 'once' stamps beneath the words. The 'prior to \u2192 before' line is cut to keep the scene focused.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Swap jargon for plain words",
+        "text": "utilise \u2192 use. facilitate \u2192 help. prior to \u2192 before. Define terms once, simply",
+        "notes": "Spoken jargon is harder to decode, because there's no time to stop. Say use, not utilise. Help, not facilitate. Define technical terms once.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "wipeleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 10.978,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.033,
+          "text": "Spoken jargon is harder to decode, because there's no time to stop.",
+          "words": [
+            {
+              "w": "Spoken",
+              "t": 0.55
+            },
+            {
+              "w": "jargon",
+              "t": 1.049
+            },
+            {
+              "w": "is",
+              "t": 1.444
+            },
+            {
+              "w": "harder",
+              "t": 1.583
+            },
+            {
+              "w": "to",
+              "t": 1.908
+            },
+            {
+              "w": "decode,",
+              "t": 2.036
+            },
+            {
+              "w": "because",
+              "t": 2.535
+            },
+            {
+              "w": "there's",
+              "t": 2.791
+            },
+            {
+              "w": "no",
+              "t": 3.011
+            },
+            {
+              "w": "time",
+              "t": 3.174
+            },
+            {
+              "w": "to",
+              "t": 3.418
+            },
+            {
+              "w": "stop.",
+              "t": 3.534
+            }
+          ]
+        },
+        {
+          "t": 4.637,
+          "end": 6.413,
+          "text": "Say use, not utilise.",
+          "words": [
+            {
+              "w": "Say",
+              "t": 4.637
+            },
+            {
+              "w": "use,",
+              "t": 4.974
+            },
+            {
+              "w": "not",
+              "t": 5.473
+            },
+            {
+              "w": "utilise.",
+              "t": 5.705
+            }
+          ]
+        },
+        {
+          "t": 6.564,
+          "end": 8.213,
+          "text": "Help, not facilitate.",
+          "words": [
+            {
+              "w": "Help,",
+              "t": 6.564
+            },
+            {
+              "w": "not",
+              "t": 7.203
+            },
+            {
+              "w": "facilitate.",
+              "t": 7.412
+            }
+          ]
+        },
+        {
+          "t": 8.329,
+          "end": 10.128,
+          "text": "Define technical terms once.",
+          "words": [
+            {
+              "w": "Define",
+              "t": 8.329
+            },
+            {
+              "w": "technical",
+              "t": 8.782
+            },
+            {
+              "w": "terms",
+              "t": 9.234
+            },
+            {
+              "w": "once.",
+              "t": 9.618
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.128
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Preview what's coming, mark each transition, then recap. It feels repetitive on paper. In audio, it's what keeps people with you.",
+      "storyboard": "We move to an ink stage with a horizontal route line and three signposts. On 'Preview' the first teal signpost rises, on 'transition' the second, and on 'recap' the third, while a glowing dot travels along the route. On 'repetitive on paper' a paper card flashes in with the three signs looking dull. On 'keeps people with you' the dot reaches the end, and a cluster of small listener dots follows it, warming to amber. The original bullet examples are cut.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Tell listeners where they are",
+        "text": "Preview: three things to cover. Transition: now, what did we try?. Recap: so, to sum up",
+        "notes": "Preview what's coming, mark each transition, then recap. It feels repetitive on paper. In audio, it's what keeps people with you.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "smoothup",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 10,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.126,
+          "text": "Preview what's coming, mark each transition, then recap.",
+          "words": [
+            {
+              "w": "Preview",
+              "t": 0.55
+            },
+            {
+              "w": "what's",
+              "t": 1.073
+            },
+            {
+              "w": "coming,",
+              "t": 1.352
+            },
+            {
+              "w": "mark",
+              "t": 1.92
+            },
+            {
+              "w": "each",
+              "t": 2.257
+            },
+            {
+              "w": "transition,",
+              "t": 2.466
+            },
+            {
+              "w": "then",
+              "t": 3.197
+            },
+            {
+              "w": "recap.",
+              "t": 3.465
+            }
+          ]
+        },
+        {
+          "t": 4.509,
+          "end": 6.286,
+          "text": "It feels repetitive on paper.",
+          "words": [
+            {
+              "w": "It",
+              "t": 4.509
+            },
+            {
+              "w": "feels",
+              "t": 4.695
+            },
+            {
+              "w": "repetitive",
+              "t": 4.997
+            },
+            {
+              "w": "on",
+              "t": 5.566
+            },
+            {
+              "w": "paper.",
+              "t": 5.705
+            }
+          ]
+        },
+        {
+          "t": 6.889,
+          "end": 9.002,
+          "text": "In audio, it's what keeps people with you.",
+          "words": [
+            {
+              "w": "In",
+              "t": 6.889
+            },
+            {
+              "w": "audio,",
+              "t": 7.098
+            },
+            {
+              "w": "it's",
+              "t": 7.505
+            },
+            {
+              "w": "what",
+              "t": 7.644
+            },
+            {
+              "w": "keeps",
+              "t": 7.853
+            },
+            {
+              "w": "people",
+              "t": 8.143
+            },
+            {
+              "w": "with",
+              "t": 8.457
+            },
+            {
+              "w": "you.",
+              "t": 8.677
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.002
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "Put your script in the speaker notes. On Pro, AI directs the video and times the animation to your voice. Try it at powerpoint2vid.com.",
+      "storyboard": "We open on a night stage showing a stylised speaker-notes panel. On 'speaker notes' lines of script fill the panel in paper white. On 'times the animation to your voice' the text lifts into a teal waveform, and slide shapes animate in sync with its peaks. On 'powerpoint2vid.com' the URL lands centre-frame at 110px in amber and holds for 2 seconds. The original bullets are condensed into this single flow.",
+      "minDuration": 11,
+      "slide": {
+        "title": "From script to narrated slide video",
+        "text": "Script lives in your speaker notes. Speaker notes become the narration. Choose a voice and speaking speed. Read aloud before you convert",
+        "notes": "Put your script in the speaker notes. On Pro, a.i. directs the video and times the animation to your voice. Try it at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 11.446,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.338,
+          "text": "Put your script in the speaker notes.",
+          "words": [
+            {
+              "w": "Put",
+              "t": 0.55
+            },
+            {
+              "w": "your",
+              "t": 0.771
+            },
+            {
+              "w": "script",
+              "t": 0.922
+            },
+            {
+              "w": "in",
+              "t": 1.293
+            },
+            {
+              "w": "the",
+              "t": 1.398
+            },
+            {
+              "w": "speaker",
+              "t": 1.502
+            },
+            {
+              "w": "notes.",
+              "t": 1.874
+            }
+          ]
+        },
+        {
+          "t": 2.547,
+          "end": 6.587,
+          "text": "On Pro, AI directs the video and times the animation to your voice.",
+          "words": [
+            {
+              "w": "On",
+              "t": 2.547
+            },
+            {
+              "w": "Pro,",
+              "t": 2.791
+            },
+            {
+              "w": "AI",
+              "t": 3.36
+            },
+            {
+              "w": "directs",
+              "t": 3.708
+            },
+            {
+              "w": "the",
+              "t": 4.138
+            },
+            {
+              "w": "video",
+              "t": 4.242
+            },
+            {
+              "w": "and",
+              "t": 4.614
+            },
+            {
+              "w": "times",
+              "t": 4.741
+            },
+            {
+              "w": "the",
+              "t": 5.113
+            },
+            {
+              "w": "animation",
+              "t": 5.229
+            },
+            {
+              "w": "to",
+              "t": 5.751
+            },
+            {
+              "w": "your",
+              "t": 5.879
+            },
+            {
+              "w": "voice.",
+              "t": 6.053
+            }
+          ]
+        },
+        {
+          "t": 7.098,
+          "end": 9.246,
+          "text": "Try it at powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 7.098
+            },
+            {
+              "w": "it",
+              "t": 7.388
+            },
+            {
+              "w": "at",
+              "t": 7.505
+            },
+            {
+              "w": "PowerPoint",
+              "t": 7.621
+            },
+            {
+              "w": "to",
+              "t": 8.166
+            },
+            {
+              "w": "vid",
+              "t": 8.317
+            },
+            {
+              "w": "dot",
+              "t": 8.561
+            },
+            {
+              "w": "com.",
+              "t": 8.805
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.246
+    }
+  ],
+  "voiceProvider": "elevenlabs"
+}

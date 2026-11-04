@@ -1,0 +1,100 @@
+{
+  "title": "\"Writing a Voiceover Script: Pace, Pauses and Plain Words\" (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Voiceover Scripts: Pace, Pauses and Plain Words",
+      "bullets": [],
+      "notes": "A voiceover script is text that nobody reads. They only hear it, once, at the speed it's spoken. That changes the rules.",
+      "minDuration": 9
+    },
+    {
+      "title": "Use sentence length as a dial",
+      "bullets": [
+        "Short sentences slow things down",
+        "Longer sentences carry the listener along",
+        "One idea per sentence"
+      ],
+      "notes": "Short sentences add weight. Longer ones carry the listener along. And give each sentence just one idea, so nobody has to hold two at once.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Punctuation is your pause control",
+      "bullets": [
+        "Full stop: a clear pause",
+        "Comma: a short breath",
+        "Question mark: tone change and pause",
+        "Pause before the number, not after"
+      ],
+      "notes": "Full stops and questions create pauses. Use them to set up what you want remembered. So how many finished the study? Just over half.",
+      "minDuration": 11,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Swap jargon for plain words",
+      "bullets": [
+        "utilise → use",
+        "facilitate → help",
+        "prior to → before",
+        "Define terms once, simply"
+      ],
+      "notes": "Spoken jargon is harder to decode, because there's no time to stop. Say use, not utilise. Help, not facilitate. Define technical terms once.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Tell listeners where they are",
+      "bullets": [
+        "Preview: three things to cover",
+        "Transition: now, what did we try?",
+        "Recap: so, to sum up"
+      ],
+      "notes": "Preview what's coming, mark each transition, then recap. It feels repetitive on paper. In audio, it's what keeps people with you.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "From script to narrated slide video",
+      "bullets": [
+        "Script lives in your speaker notes",
+        "Speaker notes become the narration",
+        "Choose a voice and speaking speed",
+        "Read aloud before you convert"
+      ],
+      "notes": "Put your script in the speaker notes. On Pro, a.i. directs the video and times the animation to your voice. Try it at powerpoint2vid.com.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}
