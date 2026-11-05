@@ -1,0 +1,157 @@
+/* Scene 6 — "Solid, distinct colours survive compression. On Pro, a.i. directs your video, landing your
+ * accent on the word that names it. Try Basic first at powerpoint2vid.com."
+ * Storyboard: paper stage. A blue→coral gradient swatch and a solid coral swatch sit side by side. On
+ * "compression" the gradient blocks up into quantised macroblocks while the coral swatch stays clean
+ * ("survive" lands an INTACT chip). On "Pro" a plain slide card arrives; on "A.I." it morphs into a
+ * dark video frame with a playhead, and the word "accent" ignites coral exactly on "accent". On "Try" the
+ * frame clears, "TRY BASIC FIRST" appears on "Basic", then powerpoint2vid.com lands in 120px ink while a
+ * coral underline draws beneath it, holding to the close. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const A = (i, w, f) => { const v = ctx.at(i, w); return (typeof v === 'number' && isFinite(v)) ? v : f; };
+  const tSolid = A(0, 'Solid', 0.55), tSurvive = A(0, 'survive', 2.071), tComp = A(0, 'compression', 2.523);
+  const tPro = A(1, 'Pro', 3.905), tAI = A(1, 'A.I.', 4.427), tDirects = A(1, 'directs', 4.822), tVideo = A(1, 'video', 5.345);
+  const tAccent = A(1, 'accent', 6.645), tWord = A(1, 'word', 7.307), tNames = A(1, 'names', 7.771);
+  const tTry = A(2, 'Try', 8.712), tBasic = A(2, 'Basic', 9.048), tPP = A(2, 'PowerPoint', 10.047), tCom = A(2, 'com', 11.324);
+  const MONO = '600 22px/1 ui-monospace, Menlo, monospace';
+  const rnd = ctx.rand(11);
+
+  stage.style.background = 'radial-gradient(80% 70% at 50% 40%, #FFFFFF 0%, var(--paper) 60%, #ECE8DF 100%)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '50% 48%' });
+
+  /* ---------- Part 1: swatches ---------- */
+  const p1 = el('div', 'abs', cam, { inset: 0 });
+  const SW = 480, SY = 250, LX = 400, RX = 1040;
+  const mkSwatch = (x) => el('div', 'abs', p1, { left: x + 'px', top: SY + 'px', width: SW + 'px', height: SW + 'px', borderRadius: '28px', overflow: 'hidden', boxShadow: '0 40px 80px rgba(15,20,32,.14), 0 4px 12px rgba(15,20,32,.08)' });
+  const gSw = mkSwatch(LX);
+  gSw.style.background = 'linear-gradient(135deg, #3B82C4 0%, #8A6FB0 50%, #FF5A36 100%)';
+  const sSw = mkSwatch(RX);
+  sSw.style.background = 'var(--accent)';
+  const sGlow = el('div', 'abs', p1, { left: RX - 40 + 'px', top: SY - 40 + 'px', width: SW + 80 + 'px', height: SW + 80 + 'px', borderRadius: '60px', background: 'radial-gradient(closest-side, rgba(255,90,54,.35), transparent)', opacity: 0 });
+  p1.insertBefore(sGlow, sSw);
+
+  const N = 8, C = SW / N, c0 = [59, 130, 196], c1 = [255, 90, 54];
+  const cells = [];
+  for (let r = 0; r < N; r++) for (let c = 0; c < N; c++) {
+    const q = Math.round(((r + c) / (2 * N - 2)) * 3) / 3;
+    const j = (rnd() - 0.5) * 34;
+    const col = c0.map((v, k) => Math.max(0, Math.min(255, Math.round(v + (c1[k] - v) * q + j))));
+    const cell = el('div', 'abs', gSw, { left: c * C + 'px', top: r * C + 'px', width: C + 1 + 'px', height: C + 1 + 'px', background: `rgb(${col.join(',')})`, boxShadow: 'inset 0 0 0 1px rgba(15,20,32,.07)', opacity: 0 });
+    if (rnd() > 0.55) el('div', 'abs', cell, { left: (rnd() * 0.5 * C) + 'px', top: (rnd() * 0.5 * C) + 'px', width: C / 2 + 'px', height: C / 2 + 'px', background: `rgba(${rnd() > 0.5 ? '255,255,255,.12' : '15,20,32,.1'})` });
+    cells.push({ cell, d: rnd() });
+  }
+
+  const mkLabel = (x, txt, color) => { const d = el('div', 'abs', p1, { left: x + 'px', width: SW + 'px', top: SY + SW + 40 + 'px', textAlign: 'center', font: MONO, letterSpacing: '.16em', color }); d.textContent = txt; return d; };
+  const lG = mkLabel(LX, 'GRADIENT', 'var(--grey-mid)');
+  const lS = mkLabel(RX, 'SOLID', 'var(--grey-mid)');
+  const lG2 = mkLabel(LX, '✕  BLOCKED UP', 'var(--grey-mid)');
+  const lS2 = mkLabel(RX, '✓  INTACT', 'var(--accent)');
+  lS2.style.fontWeight = '800';
+  const compTag = el('div', 'abs', p1, { left: '0', width: '1920px', top: '150px', textAlign: 'center', font: MONO, letterSpacing: '.22em', color: 'var(--ink)' });
+  compTag.textContent = 'AFTER VIDEO COMPRESSION';
+
+  /* ---------- Part 2: slide → video frame ---------- */
+  const p2 = el('div', 'abs', cam, { inset: 0 });
+  const FX = 360, FY = 200, FW = 1200, FH = 675;
+  const frame = el('div', 'abs', p2, { left: FX + 'px', top: FY + 'px', width: FW + 'px', height: FH + 'px', borderRadius: '10px', overflow: 'hidden', background: '#FFFFFF', boxShadow: '0 50px 100px rgba(15,20,32,.18), 0 0 0 1px rgba(15,20,32,.08)' });
+  const slideBits = el('div', 'abs', frame, { inset: 0 });
+  el('div', 'abs', slideBits, { left: '90px', top: '90px', width: '640px', height: '40px', borderRadius: '8px', background: 'var(--grey-light)' });
+  [0, 1, 2, 3].forEach((i) => {
+    el('div', 'abs', slideBits, { left: '90px', top: 210 + i * 80 + 'px', width: '18px', height: '18px', borderRadius: '50%', background: 'var(--grey-mid)' });
+    el('div', 'abs', slideBits, { left: '130px', top: 206 + i * 80 + 'px', width: [720, 800, 560, 380][i] + 'px', height: '26px', borderRadius: '6px', background: '#E3E5EA' });
+  });
+  const vid = el('div', 'abs', frame, { inset: 0, opacity: 0 });
+  el('div', 'abs', vid, { inset: 0, background: 'radial-gradient(70% 70% at 50% 40%, #26304A 0%, var(--ink) 55%, var(--night) 100%)' });
+  const rec = el('div', 'abs', vid, { left: '50px', top: '44px', font: MONO, letterSpacing: '.16em', color: 'rgba(246,244,239,.7)', display: 'flex', alignItems: 'center', gap: '14px' });
+  el('span', '', rec, { width: '14px', height: '14px', borderRadius: '50%', background: 'var(--accent)', display: 'inline-block', boxShadow: '0 0 16px rgba(255,90,54,.8)' });
+  const recTxt = el('span', '', rec); recTxt.textContent = 'AI DIRECTOR';
+  const tc = el('div', 'abs', vid, { right: '50px', top: '44px', font: MONO, letterSpacing: '.1em', color: 'rgba(246,244,239,.55)', fontVariantNumeric: 'tabular-nums' });
+  const line = el('div', 'abs', vid, { left: '0', width: FW + 'px', top: '250px', textAlign: 'center', font: '800 72px/1.1 Inter Display, Inter', letterSpacing: '-.035em', color: 'var(--paper)', whiteSpace: 'nowrap' });
+  const words = ['Your', 'accent', 'lands', 'on', 'cue'].map((w) => {
+    const s = el('span', '', line, { display: 'inline-block', position: 'relative', margin: '0 14px', opacity: 0.3 });
+    s.textContent = w; return s;
+  });
+  const accW = words[1];
+  const accUnder = el('span', 'abs', accW, { left: '0', right: '0', bottom: '-10px', height: '8px', borderRadius: '4px', background: 'var(--accent)', transformOrigin: '0 50%', transform: 'scaleX(0)' });
+  const wave = el('div', 'abs', vid, { left: '120px', width: FW - 240 + 'px', top: '430px', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' });
+  const bars = [];
+  for (let i = 0; i < 60; i++) {
+    const h = 10 + Math.abs(Math.sin(i * 0.7) * 30 + Math.sin(i * 1.9) * 18) + rnd() * 10;
+    bars.push(el('div', '', wave, { width: '8px', height: h + 'px', borderRadius: '4px', background: i >= 14 && i < 24 ? 'var(--accent)' : 'rgba(201,204,211,.35)', opacity: i >= 14 && i < 24 ? 0.35 : 1 }));
+  }
+  const accBars = bars.slice(14, 24);
+  const track = el('div', 'abs', vid, { left: '50px', right: '50px', bottom: '56px', height: '8px', borderRadius: '4px', background: 'rgba(246,244,239,.15)' });
+  const prog = el('div', 'abs', track, { left: 0, top: 0, bottom: 0, width: '100%', borderRadius: '4px', background: 'var(--paper)', transformOrigin: '0 50%', transform: 'scaleX(0.02)' });
+  const head = el('div', 'abs', track, { left: '-9px', top: '-7px', width: '22px', height: '22px', borderRadius: '50%', background: 'var(--paper)', boxShadow: '0 0 12px rgba(246,244,239,.6)' });
+  const proTag = el('div', 'abs', p2, { left: FX + 'px', top: FY - 62 + 'px', font: '800 26px/1 Inter', letterSpacing: '.08em', color: '#fff', background: 'var(--ink)', padding: '10px 18px', borderRadius: '8px' });
+  proTag.textContent = 'PRO';
+  const play = { p: 0.02 };
+
+  /* ---------- Part 3: URL ---------- */
+  const p3 = el('div', 'abs', cam, { inset: 0 });
+  const tryL = el('div', 'abs', p3, { left: 0, width: '1920px', top: '380px', textAlign: 'center', font: '600 28px/1 ui-monospace, Menlo, monospace', letterSpacing: '.24em', color: 'var(--grey-mid)' });
+  tryL.innerHTML = 'TRY <span style="color:var(--accent);font-weight:800">BASIC</span> FIRST';
+  const urlWrap = el('div', 'abs', p3, { left: 0, width: '1920px', top: '450px', textAlign: 'center' });
+  const url = el('div', '', urlWrap, { display: 'inline-block', position: 'relative', font: '800 120px/1.1 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--ink)', whiteSpace: 'nowrap' });
+  const urlChars = ctx.split(url, 'powerpoint2vid.com', 'char');
+  const under = el('div', 'abs', url, { left: '4px', right: '4px', bottom: '-18px', height: '12px', borderRadius: '6px', background: 'var(--accent)', transformOrigin: '0 50%', transform: 'scaleX(0)', boxShadow: '0 8px 24px rgba(255,90,54,.35)' });
+
+  ctx.fx.vignette({ strength: 0.18 });
+  ctx.fx.grain({ opacity: 0.05 });
+
+  ctx.onFrame((t) => {
+    const s = Math.max(0, t - tVideo) * 1 + 12;
+    tc.textContent = '00:' + String(Math.floor(s)).padStart(2, '0') + ':' + String(Math.floor((s % 1) * 30)).padStart(2, '0');
+    prog.style.transform = `scaleX(${play.p})`;
+    head.style.left = `calc(${play.p * 100}% - 11px)`;
+  });
+
+  /* ---------- timeline ---------- */
+  tl.to(cam, { scale: 1.04, duration: ctx.dur, ease: 'none' }, 0);
+
+  // part 1
+  gsap.set([lG2, lS2], { opacity: 0, y: 10 });
+  tl.from(gSw, { opacity: 0, y: 40, scale: 0.94, duration: 0.8 }, 0.05);
+  tl.from(sSw, { opacity: 0, y: 40, scale: 0.94, duration: 0.8 }, 0.18);
+  tl.from([lG, lS], { opacity: 0, duration: 0.5, stagger: 0.1 }, 0.35);
+  tl.from(compTag, { opacity: 0, y: -12, duration: 0.6 }, tSolid);
+  cells.forEach((o) => tl.to(o.cell, { opacity: 1, duration: 0.08, ease: 'none' }, tComp - 0.15 + o.d * 0.55));
+  tl.to(gSw, { x: 6, duration: 0.05, yoyo: true, repeat: 3, ease: 'none' }, tComp + 0.4);
+  tl.to(lG, { opacity: 0, y: -10, duration: 0.3 }, tComp + 0.2);
+  tl.to(lG2, { opacity: 1, y: 0, duration: 0.4 }, tComp + 0.3);
+  tl.to(sGlow, { opacity: 1, duration: 0.4 }, tSurvive);
+  tl.fromTo(sSw, { scale: 1 }, { scale: 1.05, duration: 0.45, ease: 'back.out(2)', immediateRender: false }, tSurvive);
+  tl.to(lS, { opacity: 0, y: -10, duration: 0.25 }, tSurvive);
+  tl.to(lS2, { opacity: 1, y: 0, duration: 0.45, ease: 'back.out(2)' }, tSurvive + 0.05);
+  tl.to(p1, { opacity: 0, y: -60, duration: 0.6, ease: 'power2.in' }, tPro - 0.5);
+
+  // part 2
+  gsap.set(p2, { opacity: 0 });
+  tl.to(p2, { opacity: 1, duration: 0.01 }, tPro - 0.3);
+  tl.from(frame, { y: 80, opacity: 0, scale: 0.95, duration: 0.7 }, tPro - 0.3);
+  tl.from(proTag, { opacity: 0, y: 14, scale: 0.8, duration: 0.5, ease: 'back.out(2)' }, tPro);
+  tl.to(proTag, { backgroundColor: '#FF5A36', duration: 0.2 }, tAI);
+  // crisp morph on "A.I.": slide clears first, then the dark video layer takes over, complete before "directs" settles
+  tl.to(slideBits, { opacity: 0, scale: 0.96, duration: 0.22, ease: 'power2.in' }, tAI - 0.12);
+  tl.to(frame, { borderRadius: '26px', boxShadow: '0 60px 120px rgba(15,20,32,.35), 0 0 0 1px rgba(15,20,32,.2)', duration: 0.5, ease: 'expo.inOut' }, tAI - 0.1);
+  tl.to(vid, { opacity: 1, duration: 0.3, ease: 'power2.out' }, tAI);
+  tl.from(line, { y: 30, duration: 0.6 }, tAI + 0.1);
+  tl.from(wave.children, { scaleY: 0, duration: 0.4, stagger: 0.008 }, tAI + 0.2);
+  tl.to(play, { p: 0.82, duration: tNames + 0.4 - tVideo, ease: 'none' }, tVideo);
+  tl.to(words[0], { opacity: 1, duration: 0.3 }, tVideo + 0.4);
+  tl.to(accW, { opacity: 1, color: '#FF5A36', duration: 0.12, ease: 'none' }, tAccent);
+  tl.fromTo(accW, { scale: 1 }, { scale: 1.14, duration: 0.18, yoyo: true, repeat: 1, ease: 'power2.out', immediateRender: false }, tAccent);
+  tl.to(accUnder, { scaleX: 1, duration: 0.35, ease: 'power3.out' }, tAccent + 0.05);
+  tl.to(accBars, { opacity: 1, duration: 0.15, stagger: 0.02 }, tAccent);
+  tl.to(words.slice(2), { opacity: 1, duration: 0.3, stagger: 0.18 }, tWord - 0.1);
+  tl.to(frame, { scale: 1.04, duration: 1.6, ease: 'power1.inOut' }, tAccent);
+  tl.to(p2, { opacity: 0, scale: 0.92, duration: 0.55, ease: 'power2.in' }, tTry - 0.35);
+
+  // part 3
+  gsap.set(tryL, { opacity: 0, y: 16 });
+  gsap.set(urlChars, { opacity: 0, y: 50 });
+  tl.to(tryL, { opacity: 1, y: 0, duration: 0.6 }, tBasic - 0.15);
+  tl.to(urlChars, { opacity: 1, y: 0, duration: 0.6, stagger: 0.03, ease: 'back.out(1.6)' }, tTry + 0.3);
+  tl.to(under, { scaleX: 1, duration: Math.max(0.6, tCom - tPP), ease: 'power2.inOut' }, tPP);
+  tl.fromTo(url, { scale: 1 }, { scale: 1.03, duration: ctx.dur - tCom, ease: 'power1.out', immediateRender: false }, tCom);
+});

@@ -1,0 +1,885 @@
+{
+  "title": "\"Colour in Slides: Building a Palette That Works on Screen\" (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0F1420",
+      "ink": "#1C2333",
+      "paper": "#F6F4EF",
+      "grey-light": "#C9CCD3",
+      "grey-mid": "#7A8091",
+      "accent": "#FF5A36",
+      "support": "#3B82C4"
+    },
+    "font": "Inter Display",
+    "motion": "Calm and deliberate: elements ease in with soft cubic-out curves, then snap decisively when the accent arrives. The camera mostly holds still, with slow push-ins on the moment of clarity.",
+    "story": "We move from chaos to restraint: a noisy, over-coloured opening on dark night gives way to clean paper-white scenes where a single coral accent does all the talking. Dark scenes frame problems and payoffs, light scenes carry the method, alternating wide systems views with close-ups on one element."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "Colour can make a deck look considered, or make it look messy. Here's how to build a small palette that reads well on laptops, phones and in video.",
+      "storyboard": "Night stage. Dozens of mismatched colour chips rain down and jostle chaotically on 'messy'. On 'small palette' they collapse into a tidy row of seven swatches, and the title 'A Palette That Works on Screen' sets in 120px paper type above them. On 'laptops, phones and in video' three simple device outlines slide in beneath, each showing the same swatch row. The original bare title slide is rebuilt entirely; only the headline wording is kept.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Building a Palette That Works on Screen",
+        "text": "",
+        "notes": "Colour can make a deck look considered, or make it look messy. Here's how to build a small palette that reads well on laptops, phones and in video.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 10.787,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.353,
+          "text": "Colour can make a deck look considered, or make it look messy.",
+          "words": [
+            {
+              "w": "Colour",
+              "t": 0.8
+            },
+            {
+              "w": "can",
+              "t": 1.218
+            },
+            {
+              "w": "make",
+              "t": 1.38
+            },
+            {
+              "w": "a",
+              "t": 1.578
+            },
+            {
+              "w": "deck",
+              "t": 1.659
+            },
+            {
+              "w": "look",
+              "t": 1.938
+            },
+            {
+              "w": "considered,",
+              "t": 2.147
+            },
+            {
+              "w": "or",
+              "t": 3.122
+            },
+            {
+              "w": "make",
+              "t": 3.343
+            },
+            {
+              "w": "it",
+              "t": 3.54
+            },
+            {
+              "w": "look",
+              "t": 3.621
+            },
+            {
+              "w": "messy.",
+              "t": 3.83
+            }
+          ]
+        },
+        {
+          "t": 4.956,
+          "end": 9.937,
+          "text": "Here's how to build a small palette that reads well on laptops, phones and in video.",
+          "words": [
+            {
+              "w": "Here's",
+              "t": 4.956
+            },
+            {
+              "w": "how",
+              "t": 5.247
+            },
+            {
+              "w": "to",
+              "t": 5.386
+            },
+            {
+              "w": "build",
+              "t": 5.502
+            },
+            {
+              "w": "a",
+              "t": 5.781
+            },
+            {
+              "w": "small",
+              "t": 5.862
+            },
+            {
+              "w": "palette",
+              "t": 6.175
+            },
+            {
+              "w": "that",
+              "t": 6.686
+            },
+            {
+              "w": "reads",
+              "t": 6.918
+            },
+            {
+              "w": "well",
+              "t": 7.209
+            },
+            {
+              "w": "on",
+              "t": 7.557
+            },
+            {
+              "w": "laptops,",
+              "t": 7.731
+            },
+            {
+              "w": "phones",
+              "t": 8.463
+            },
+            {
+              "w": "and",
+              "t": 9.008
+            },
+            {
+              "w": "in",
+              "t": 9.229
+            },
+            {
+              "w": "video.",
+              "t": 9.357
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.937
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Most slide palettes trip over the same things: too many colours, brand colours everywhere, weak contrast, and colour carrying meaning on its own.",
+      "storyboard": "Ink-dark stage, a single mock slide in the centre. On 'too many colours' it floods with a rainbow of shapes; on 'brand colours everywhere' every element turns the same loud brand hue. On 'weak contrast' the text fades to grey-on-grey and nearly vanishes. On 'meaning on its own' two identical lines differ only by red and green, and a question mark appears. The four bullets are cut as text and become four quick visual failures, with a single label per beat in 90px type.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Why Most Slide Palettes Go Wrong",
+        "text": "Too many colours. Brand colours used everywhere. Low contrast. Colour carrying meaning alone",
+        "notes": "Most slide palettes trip over the same things. There are too many colours and brand colours everywhere. Contrast is weak, and colour carries meaning on its own.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 10.687,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 9.837,
+          "text": "Most slide palettes trip over the same things: too many colours, brand colours everywhere, weak contrast, and colour carrying meaning on its own.",
+          "words": [
+            {
+              "w": "Most",
+              "t": 0.55
+            },
+            {
+              "w": "slide",
+              "t": 0.898
+            },
+            {
+              "w": "palettes",
+              "t": 1.281
+            },
+            {
+              "w": "trip",
+              "t": 1.722
+            },
+            {
+              "w": "over",
+              "t": 2.036
+            },
+            {
+              "w": "the",
+              "t": 2.245
+            },
+            {
+              "w": "same",
+              "t": 2.361
+            },
+            {
+              "w": "things:",
+              "t": 2.651
+            },
+            {
+              "w": "too",
+              "t": 3.533
+            },
+            {
+              "w": "many",
+              "t": 3.742
+            },
+            {
+              "w": "colours,",
+              "t": 3.975
+            },
+            {
+              "w": "brand",
+              "t": 4.799
+            },
+            {
+              "w": "colours",
+              "t": 5.217
+            },
+            {
+              "w": "everywhere,",
+              "t": 5.6
+            },
+            {
+              "w": "weak",
+              "t": 6.482
+            },
+            {
+              "w": "contrast,",
+              "t": 6.795
+            },
+            {
+              "w": "and",
+              "t": 7.655
+            },
+            {
+              "w": "colour",
+              "t": 7.887
+            },
+            {
+              "w": "carrying",
+              "t": 8.2
+            },
+            {
+              "w": "meaning",
+              "t": 8.665
+            },
+            {
+              "w": "on",
+              "t": 9.036
+            },
+            {
+              "w": "its",
+              "t": 9.164
+            },
+            {
+              "w": "own.",
+              "t": 9.361
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.837
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "Think in roles, not favourite colours. A background, text, a couple of greys, one accent for what matters and a quiet support colour. That's five to seven in total.",
+      "storyboard": "Paper-white stage, wide shot. Empty labelled slots fill one by one as each role is spoken: background, text, two greys, then on 'one accent' a coral swatch drops in with a small bounce, and on 'quiet support' a blue swatch slides in smaller. On 'five to seven' a bracket draws across the row with the count '5\u20137' in 140px coral. Headline 'Roles, not favourites' sits top-left; bullets are rebuilt as the slot row.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Think in Roles, Not Favourite Colours",
+        "text": "Background and text. One to two greys. One accent for what matters. One support colour, used sparingly",
+        "notes": "Think in roles, not favourite colours. Pick a background, text colours, a couple of greys, one accent for what matters and a quiet support colour. That's five to seven in total.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 12.65,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.861,
+          "text": "Think in roles, not favourite colours.",
+          "words": [
+            {
+              "w": "Think",
+              "t": 0.55
+            },
+            {
+              "w": "in",
+              "t": 0.852
+            },
+            {
+              "w": "roles,",
+              "t": 0.992
+            },
+            {
+              "w": "not",
+              "t": 1.653
+            },
+            {
+              "w": "favourite",
+              "t": 1.897
+            },
+            {
+              "w": "colours.",
+              "t": 2.304
+            }
+          ]
+        },
+        {
+          "t": 3.186,
+          "end": 9.583,
+          "text": "A background, text, a couple of greys, one accent for what matters and a quiet support colour.",
+          "words": [
+            {
+              "w": "A",
+              "t": 3.186
+            },
+            {
+              "w": "background,",
+              "t": 3.348
+            },
+            {
+              "w": "text,",
+              "t": 4.173
+            },
+            {
+              "w": "a",
+              "t": 4.893
+            },
+            {
+              "w": "couple",
+              "t": 5.02
+            },
+            {
+              "w": "of",
+              "t": 5.299
+            },
+            {
+              "w": "greys,",
+              "t": 5.415
+            },
+            {
+              "w": "one",
+              "t": 6.53
+            },
+            {
+              "w": "accent",
+              "t": 6.762
+            },
+            {
+              "w": "for",
+              "t": 7.145
+            },
+            {
+              "w": "what",
+              "t": 7.261
+            },
+            {
+              "w": "matters",
+              "t": 7.458
+            },
+            {
+              "w": "and",
+              "t": 8.016
+            },
+            {
+              "w": "a",
+              "t": 8.236
+            },
+            {
+              "w": "quiet",
+              "t": 8.329
+            },
+            {
+              "w": "support",
+              "t": 8.689
+            },
+            {
+              "w": "colour.",
+              "t": 9.095
+            }
+          ]
+        },
+        {
+          "t": 10.024,
+          "end": 11.8,
+          "text": "That's five to seven in total.",
+          "words": [
+            {
+              "w": "That's",
+              "t": 10.024
+            },
+            {
+              "w": "five",
+              "t": 10.349
+            },
+            {
+              "w": "to",
+              "t": 10.64
+            },
+            {
+              "w": "seven",
+              "t": 10.779
+            },
+            {
+              "w": "in",
+              "t": 11.104
+            },
+            {
+              "w": "total.",
+              "t": 11.22
+            }
+          ]
+        }
+      ],
+      "speechEnd": 11.8
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Colours that look fine on your monitor can wash out on a projector. Aim for 4.5 to 1 contrast for body text, and label your chart series directly.",
+      "storyboard": "Split stage: left a crisp monitor, right a projector beam. On 'wash out' the same text in the beam fades to a ghostly grey. On '4.5 to 1' a huge '4.5:1' slams in at 160px over the darkened text and it snaps back to legible ink. On 'label your chart series directly' a small line chart loses its legend box and names appear at each line's end. The '3:1 for large text' point is kept as a small secondary caption.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Test Contrast Before You Commit",
+        "text": "4.5:1 for normal text. 3:1 for large text and graphics. Check accent on background. Add direct labels to charts",
+        "notes": "Colours that look fine on your monitor can wash out on a projector. Aim for 4.5 to 1 contrast for body text, and label your chart series directly.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 11,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.94,
+          "text": "Colours that look fine on your monitor can wash out on a projector.",
+          "words": [
+            {
+              "w": "Colours",
+              "t": 0.55
+            },
+            {
+              "w": "that",
+              "t": 0.956
+            },
+            {
+              "w": "look",
+              "t": 1.107
+            },
+            {
+              "w": "fine",
+              "t": 1.316
+            },
+            {
+              "w": "on",
+              "t": 1.618
+            },
+            {
+              "w": "your",
+              "t": 1.722
+            },
+            {
+              "w": "monitor",
+              "t": 1.885
+            },
+            {
+              "w": "can",
+              "t": 2.314
+            },
+            {
+              "w": "wash",
+              "t": 2.5
+            },
+            {
+              "w": "out",
+              "t": 2.79
+            },
+            {
+              "w": "on",
+              "t": 3.011
+            },
+            {
+              "w": "a",
+              "t": 3.115
+            },
+            {
+              "w": "projector.",
+              "t": 3.185
+            }
+          ]
+        },
+        {
+          "t": 4.381,
+          "end": 9.907,
+          "text": "Aim for 4.5 to 1 contrast for body text, and label your chart series directly.",
+          "words": [
+            {
+              "w": "Aim",
+              "t": 4.381
+            },
+            {
+              "w": "for",
+              "t": 4.718
+            },
+            {
+              "w": "4.5",
+              "t": 4.892
+            },
+            {
+              "w": "to",
+              "t": 5.623
+            },
+            {
+              "w": "1",
+              "t": 5.774
+            },
+            {
+              "w": "contrast",
+              "t": 6.064
+            },
+            {
+              "w": "for",
+              "t": 6.61
+            },
+            {
+              "w": "body",
+              "t": 6.761
+            },
+            {
+              "w": "text,",
+              "t": 7.063
+            },
+            {
+              "w": "and",
+              "t": 7.678
+            },
+            {
+              "w": "label",
+              "t": 7.922
+            },
+            {
+              "w": "your",
+              "t": 8.247
+            },
+            {
+              "w": "chart",
+              "t": 8.421
+            },
+            {
+              "w": "series",
+              "t": 8.758
+            },
+            {
+              "w": "directly.",
+              "t": 9.153
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.907
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Take a chart with six bars in six brand colours. Grey out five, put the north in the accent, and the slide says exactly one thing.",
+      "storyboard": "Night stage, close on an animated bar chart of six bars, each a different loud colour. On 'grey out five' five bars drain to light grey in a ripple. On 'the north in the accent' the north bar ignites coral and the camera pushes in slightly. On 'exactly one thing' the headline 'The north grew fastest this quarter' types in above it in paper white. No values are invented; bars have no numeric axis.",
+      "minDuration": 11,
+      "slide": {
+        "title": "One Accent Makes the Chart Speak",
+        "text": "Before: six bars, six brand colours. After: five bars in light grey. The north bar in the accent. \"The north grew fastest this quarter\"",
+        "notes": "Take a chart with six bars in six brand colours. Grey out five, put the north in the accent, and the slide says exactly one thing.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 10.359,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.557,
+          "text": "Take a chart with six bars in six brand colours.",
+          "words": [
+            {
+              "w": "Take",
+              "t": 0.55
+            },
+            {
+              "w": "a",
+              "t": 0.841
+            },
+            {
+              "w": "chart",
+              "t": 0.934
+            },
+            {
+              "w": "with",
+              "t": 1.282
+            },
+            {
+              "w": "six",
+              "t": 1.479
+            },
+            {
+              "w": "bars",
+              "t": 1.793
+            },
+            {
+              "w": "in",
+              "t": 2.199
+            },
+            {
+              "w": "six",
+              "t": 2.362
+            },
+            {
+              "w": "brand",
+              "t": 2.652
+            },
+            {
+              "w": "colours.",
+              "t": 3.0
+            }
+          ]
+        },
+        {
+          "t": 3.999,
+          "end": 8.759,
+          "text": "Grey out five, put the north in the accent, and the slide says exactly one thing.",
+          "words": [
+            {
+              "w": "Grey",
+              "t": 3.999
+            },
+            {
+              "w": "out",
+              "t": 4.324
+            },
+            {
+              "w": "five,",
+              "t": 4.556
+            },
+            {
+              "w": "put",
+              "t": 5.194
+            },
+            {
+              "w": "the",
+              "t": 5.403
+            },
+            {
+              "w": "north",
+              "t": 5.543
+            },
+            {
+              "w": "in",
+              "t": 5.845
+            },
+            {
+              "w": "the",
+              "t": 5.937
+            },
+            {
+              "w": "accent,",
+              "t": 6.065
+            },
+            {
+              "w": "and",
+              "t": 6.692
+            },
+            {
+              "w": "the",
+              "t": 6.866
+            },
+            {
+              "w": "slide",
+              "t": 6.971
+            },
+            {
+              "w": "says",
+              "t": 7.331
+            },
+            {
+              "w": "exactly",
+              "t": 7.609
+            },
+            {
+              "w": "one",
+              "t": 8.108
+            },
+            {
+              "w": "thing.",
+              "t": 8.329
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.759
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "Solid, distinct colours survive compression. On Pro, a.i. directs your video, landing your accent on the word that names it. Try Basic first at powerpoint2vid.com.",
+      "storyboard": "Paper stage. A gradient swatch blocks up into compression artefacts while a solid coral swatch beside it stays clean on 'survive compression'. On 'a.i. directs your video' a slide morphs into a video frame where a coral word lights up in sync. On 'Try Basic first' the frame clears to 'powerpoint2vid.com' in 120px ink with a coral underline drawing beneath, holding for the close.",
+      "minDuration": 12,
+      "slide": {
+        "title": "Make Your Palette Work in Video",
+        "text": "Solid, distinct colours survive compression. Preview on a phone and in the finished video. Pro: a.i. directs each scene. Try Basic first",
+        "notes": "On Pro, a.i. directs your video, rebuilding charts as animated charts and landing your accent on the word that names it. Try Basic first at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 14.011,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.197,
+          "text": "Solid, distinct colours survive compression.",
+          "words": [
+            {
+              "w": "Solid,",
+              "t": 0.55
+            },
+            {
+              "w": "distinct",
+              "t": 1.049
+            },
+            {
+              "w": "colours",
+              "t": 1.525
+            },
+            {
+              "w": "survive",
+              "t": 2.071
+            },
+            {
+              "w": "compression.",
+              "t": 2.523
+            }
+          ]
+        },
+        {
+          "t": 3.638,
+          "end": 8.328,
+          "text": "On Pro, a.i. directs your video, landing your accent on the word that names it.",
+          "words": [
+            {
+              "w": "On",
+              "t": 3.638
+            },
+            {
+              "w": "Pro,",
+              "t": 3.905
+            },
+            {
+              "w": "A.I.",
+              "t": 4.427
+            },
+            {
+              "w": "directs",
+              "t": 4.822
+            },
+            {
+              "w": "your",
+              "t": 5.182
+            },
+            {
+              "w": "video,",
+              "t": 5.345
+            },
+            {
+              "w": "landing",
+              "t": 6.076
+            },
+            {
+              "w": "your",
+              "t": 6.471
+            },
+            {
+              "w": "accent",
+              "t": 6.645
+            },
+            {
+              "w": "on",
+              "t": 7.075
+            },
+            {
+              "w": "the",
+              "t": 7.191
+            },
+            {
+              "w": "word",
+              "t": 7.307
+            },
+            {
+              "w": "that",
+              "t": 7.585
+            },
+            {
+              "w": "names",
+              "t": 7.771
+            },
+            {
+              "w": "it.",
+              "t": 8.108
+            }
+          ]
+        },
+        {
+          "t": 8.712,
+          "end": 11.811,
+          "text": "Try Basic first at powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 8.712
+            },
+            {
+              "w": "Basic",
+              "t": 9.048
+            },
+            {
+              "w": "first",
+              "t": 9.524
+            },
+            {
+              "w": "at",
+              "t": 9.919
+            },
+            {
+              "w": "PowerPoint",
+              "t": 10.047
+            },
+            {
+              "w": "to",
+              "t": 10.639
+            },
+            {
+              "w": "vid",
+              "t": 10.801
+            },
+            {
+              "w": "dot",
+              "t": 11.068
+            },
+            {
+              "w": "com.",
+              "t": 11.324
+            }
+          ]
+        }
+      ],
+      "speechEnd": 11.811
+    }
+  ],
+  "voiceProvider": "elevenlabs"
+}

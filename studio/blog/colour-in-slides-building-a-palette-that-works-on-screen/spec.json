@@ -1,0 +1,102 @@
+{
+  "title": "\"Colour in Slides: Building a Palette That Works on Screen\" (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Building a Palette That Works on Screen",
+      "bullets": [],
+      "notes": "Colour can make a deck look considered, or make it look messy. Here's how to build a small palette that reads well on laptops, phones and in video.",
+      "minDuration": 9
+    },
+    {
+      "title": "Why Most Slide Palettes Go Wrong",
+      "bullets": [
+        "Too many colours",
+        "Brand colours used everywhere",
+        "Low contrast",
+        "Colour carrying meaning alone"
+      ],
+      "notes": "Most slide palettes trip over the same things. There are too many colours and brand colours everywhere. Contrast is weak, and colour carries meaning on its own.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Think in Roles, Not Favourite Colours",
+      "bullets": [
+        "Background and text",
+        "One to two greys",
+        "One accent for what matters",
+        "One support colour, used sparingly"
+      ],
+      "notes": "Think in roles, not favourite colours. Pick a background, text colours, a couple of greys, one accent for what matters and a quiet support colour. That's five to seven in total.",
+      "minDuration": 12,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Test Contrast Before You Commit",
+      "bullets": [
+        "4.5:1 for normal text",
+        "3:1 for large text and graphics",
+        "Check accent on background",
+        "Add direct labels to charts"
+      ],
+      "notes": "Colours that look fine on your monitor can wash out on a projector. Aim for 4.5 to 1 contrast for body text, and label your chart series directly.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "One Accent Makes the Chart Speak",
+      "bullets": [
+        "Before: six bars, six brand colours",
+        "After: five bars in light grey",
+        "The north bar in the accent",
+        "\"The north grew fastest this quarter\""
+      ],
+      "notes": "Take a chart with six bars in six brand colours. Grey out five, put the north in the accent, and the slide says exactly one thing.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Make Your Palette Work in Video",
+      "bullets": [
+        "Solid, distinct colours survive compression",
+        "Preview on a phone and in the finished video",
+        "Pro: a.i. directs each scene",
+        "Try Basic first"
+      ],
+      "notes": "On Pro, a.i. directs your video, rebuilding charts as animated charts and landing your accent on the word that names it. Try Basic first at powerpoint2vid.com.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}
