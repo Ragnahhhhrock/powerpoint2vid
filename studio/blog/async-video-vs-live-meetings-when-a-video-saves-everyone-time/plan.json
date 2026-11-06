@@ -1,0 +1,864 @@
+{
+  "title": "\"Async Video vs Live Meetings: When a Video Saves Everyone Time\" (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0F1424",
+      "ink": "#1C2233",
+      "paper": "#F7F4EE",
+      "signal": "#FF6B4A",
+      "teal": "#2BB3A3",
+      "sky": "#8FB8FF",
+      "mist": "#9AA3B5"
+    },
+    "font": "Inter Display",
+    "motion": "Brisk, confident pacing with soft ease-out arrivals and short overshoots on key words; the camera drifts slowly and makes one decisive push or pull per scene.",
+    "story": "We open in a dark, crowded calendar and move into light as the video earns its place. Dark scenes for the problem and the meeting, paper-bright scenes for the async solution, ending on a warm, open call to action."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "A lot of meetings are really presentations with a calendar invite. Here's when a video saves everyone time, and when to keep the meeting.",
+      "storyboard": "Night stage: a tight grid of calendar blocks fills the frame and the camera slowly pushes in. On 'presentations with a calendar invite' one block flips to show a tiny slide icon, then the others flip in a ripple. On 'a video saves everyone time' the blocks dissolve away, leaving a single coral play button. The headline 'Async video vs live meetings' sets in at 120px with the subtitle beneath in mist. The original's overlapping title text is rebuilt cleanly; nothing else kept.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Async video vs live meetings",
+        "text": "When a video saves everyone time",
+        "notes": "A lot of meetings are really presentations with a calendar invite. Here's when a video saves everyone time, and when to keep the meeting.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 9.196,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.062,
+          "text": "A lot of meetings are really presentations with a calendar invite.",
+          "words": [
+            {
+              "w": "A",
+              "t": 0.8
+            },
+            {
+              "w": "lot",
+              "t": 0.963
+            },
+            {
+              "w": "of",
+              "t": 1.137
+            },
+            {
+              "w": "meetings",
+              "t": 1.253
+            },
+            {
+              "w": "are",
+              "t": 1.659
+            },
+            {
+              "w": "really",
+              "t": 1.787
+            },
+            {
+              "w": "presentations",
+              "t": 2.054
+            },
+            {
+              "w": "with",
+              "t": 2.774
+            },
+            {
+              "w": "a",
+              "t": 2.936
+            },
+            {
+              "w": "calendar",
+              "t": 3.018
+            },
+            {
+              "w": "invite.",
+              "t": 3.459
+            }
+          ]
+        },
+        {
+          "t": 4.504,
+          "end": 8.346,
+          "text": "Here's when a video saves everyone time, and when to keep the meeting.",
+          "words": [
+            {
+              "w": "Here's",
+              "t": 4.504
+            },
+            {
+              "w": "when",
+              "t": 4.829
+            },
+            {
+              "w": "a",
+              "t": 4.991
+            },
+            {
+              "w": "video",
+              "t": 5.061
+            },
+            {
+              "w": "saves",
+              "t": 5.548
+            },
+            {
+              "w": "everyone",
+              "t": 5.885
+            },
+            {
+              "w": "time,",
+              "t": 6.35
+            },
+            {
+              "w": "and",
+              "t": 6.907
+            },
+            {
+              "w": "when",
+              "t": 7.104
+            },
+            {
+              "w": "to",
+              "t": 7.383
+            },
+            {
+              "w": "keep",
+              "t": 7.499
+            },
+            {
+              "w": "the",
+              "t": 7.708
+            },
+            {
+              "w": "meeting.",
+              "t": 7.824
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.346
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "If the content is mostly one-way, a video often wins. It reaches the manager, finance and IT, and lands in their morning, whether that's Perth or London.",
+      "storyboard": "Paper stage, wide. On 'one-way' a single coral arrow shoots from a play button on the left. On 'the manager, finance and IT' it splits into three branches, each ending in a labelled avatar. On 'lands in their morning' each avatar gets a small rising sun. On 'Perth or London' the camera pulls back to reveal two clocks labelled Perth and London showing different times, both with sunrise. Headline 'Send a video when it's one-way' at top; the four bullets are cut and carried by the visual.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Send a video when content is one-way",
+        "text": "Same information for everyone. Several people, at different times. Time zones get in the way. People need to think first",
+        "notes": "If the content is mostly one-way, a video often wins. It reaches the manager, finance and IT, and lands in their morning, whether that's Perth or London.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 11.176,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.987,
+          "text": "If the content is mostly one-way, a video often wins.",
+          "words": [
+            {
+              "w": "If",
+              "t": 0.55
+            },
+            {
+              "w": "the",
+              "t": 0.736
+            },
+            {
+              "w": "content",
+              "t": 0.864
+            },
+            {
+              "w": "is",
+              "t": 1.305
+            },
+            {
+              "w": "mostly",
+              "t": 1.456
+            },
+            {
+              "w": "one-way,",
+              "t": 1.862
+            },
+            {
+              "w": "a",
+              "t": 2.559
+            },
+            {
+              "w": "video",
+              "t": 2.687
+            },
+            {
+              "w": "often",
+              "t": 3.081
+            },
+            {
+              "w": "wins.",
+              "t": 3.406
+            }
+          ]
+        },
+        {
+          "t": 4.428,
+          "end": 10.326,
+          "text": "It reaches the manager, finance and IT, and lands in their morning, whether that's Perth or London.",
+          "words": [
+            {
+              "w": "It",
+              "t": 4.428
+            },
+            {
+              "w": "reaches",
+              "t": 4.625
+            },
+            {
+              "w": "the",
+              "t": 4.997
+            },
+            {
+              "w": "manager,",
+              "t": 5.113
+            },
+            {
+              "w": "finance",
+              "t": 5.67
+            },
+            {
+              "w": "and",
+              "t": 6.17
+            },
+            {
+              "w": "IT,",
+              "t": 6.32
+            },
+            {
+              "w": "and",
+              "t": 7.005
+            },
+            {
+              "w": "lands",
+              "t": 7.238
+            },
+            {
+              "w": "in",
+              "t": 7.528
+            },
+            {
+              "w": "their",
+              "t": 7.632
+            },
+            {
+              "w": "morning,",
+              "t": 7.818
+            },
+            {
+              "w": "whether",
+              "t": 8.526
+            },
+            {
+              "w": "that's",
+              "t": 8.828
+            },
+            {
+              "w": "Perth",
+              "t": 9.084
+            },
+            {
+              "w": "or",
+              "t": 9.513
+            },
+            {
+              "w": "London.",
+              "t": 9.734
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.326
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "But keep the meeting for real conversation. A good rule: if it's mostly you talking, send a video. If it's mostly them talking, meet.",
+      "storyboard": "Night stage, close. Two speech bubbles face each other in teal and sky, pulsing back and forth on 'real conversation'. On 'mostly you talking' a single bubble swells huge on the left and morphs into a coral play button labelled 'Send a video'. On 'mostly them talking' the right side fills with many small bubbles that gather into a table icon labelled 'Meet'. The split-screen holds as a two-column rule. The four bullets are cut; the rule from the notes becomes the hero.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Keep the meeting for real conversation",
+        "text": "Building a new relationship. The topic is sensitive. You need a decision on the spot. The discussion is the point",
+        "notes": "A good rule: if the meeting is mostly you talking, send a video. If it's mostly them talking, meet.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 10.409,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.674,
+          "text": "But keep the meeting for real conversation.",
+          "words": [
+            {
+              "w": "But",
+              "t": 0.55
+            },
+            {
+              "w": "keep",
+              "t": 0.736
+            },
+            {
+              "w": "the",
+              "t": 0.945
+            },
+            {
+              "w": "meeting",
+              "t": 1.061
+            },
+            {
+              "w": "for",
+              "t": 1.409
+            },
+            {
+              "w": "real",
+              "t": 1.56
+            },
+            {
+              "w": "conversation.",
+              "t": 1.815
+            }
+          ]
+        },
+        {
+          "t": 3.487,
+          "end": 7.017,
+          "text": "A good rule: if it's mostly you talking, send a video.",
+          "words": [
+            {
+              "w": "A",
+              "t": 3.487
+            },
+            {
+              "w": "good",
+              "t": 3.638
+            },
+            {
+              "w": "rule:",
+              "t": 3.859
+            },
+            {
+              "w": "if",
+              "t": 4.52
+            },
+            {
+              "w": "it's",
+              "t": 4.683
+            },
+            {
+              "w": "mostly",
+              "t": 4.869
+            },
+            {
+              "w": "you",
+              "t": 5.252
+            },
+            {
+              "w": "talking,",
+              "t": 5.438
+            },
+            {
+              "w": "send",
+              "t": 6.041
+            },
+            {
+              "w": "a",
+              "t": 6.308
+            },
+            {
+              "w": "video.",
+              "t": 6.378
+            }
+          ]
+        },
+        {
+          "t": 7.527,
+          "end": 9.559,
+          "text": "If it's mostly them talking, meet.",
+          "words": [
+            {
+              "w": "If",
+              "t": 7.527
+            },
+            {
+              "w": "it's",
+              "t": 7.702
+            },
+            {
+              "w": "mostly",
+              "t": 7.876
+            },
+            {
+              "w": "them",
+              "t": 8.236
+            },
+            {
+              "w": "talking,",
+              "t": 8.479
+            },
+            {
+              "w": "meet.",
+              "t": 9.071
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.559
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "A video only saves time if people watch it. Keep it short, tell them why it matters up front, and end with one clear next step.",
+      "storyboard": "Paper stage. A horizontal video timeline bar draws across the frame on 'if people watch it'. On 'keep it short' the bar snaps shorter with a spring. On 'why it matters up front' a coral flag pops onto the start of the bar. On 'one clear next step' a teal arrow lands at the end of the bar labelled 'Next step'. Camera glides gently along the bar left to right. Headline 'Make a video people watch' at top-left; bullets cut.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Make an async video people watch",
+        "text": "Keep it short, one topic. Say why it matters on slide one. Use headlines that make a point. End with one clear next step",
+        "notes": "A video only saves time if people watch it. Keep it short, tell them why it matters up front, and end with one clear next step.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "wipeleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 9.341,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.139,
+          "text": "A video only saves time if people watch it.",
+          "words": [
+            {
+              "w": "A",
+              "t": 0.55
+            },
+            {
+              "w": "video",
+              "t": 0.701
+            },
+            {
+              "w": "only",
+              "t": 1.142
+            },
+            {
+              "w": "saves",
+              "t": 1.409
+            },
+            {
+              "w": "time",
+              "t": 1.746
+            },
+            {
+              "w": "if",
+              "t": 2.082
+            },
+            {
+              "w": "people",
+              "t": 2.21
+            },
+            {
+              "w": "watch",
+              "t": 2.523
+            },
+            {
+              "w": "it.",
+              "t": 2.837
+            }
+          ]
+        },
+        {
+          "t": 3.58,
+          "end": 8.491,
+          "text": "Keep it short, tell them why it matters up front, and end with one clear next step.",
+          "words": [
+            {
+              "w": "Keep",
+              "t": 3.58
+            },
+            {
+              "w": "it",
+              "t": 3.835
+            },
+            {
+              "w": "short,",
+              "t": 3.951
+            },
+            {
+              "w": "tell",
+              "t": 4.543
+            },
+            {
+              "w": "them",
+              "t": 4.776
+            },
+            {
+              "w": "why",
+              "t": 4.95
+            },
+            {
+              "w": "it",
+              "t": 5.194
+            },
+            {
+              "w": "matters",
+              "t": 5.31
+            },
+            {
+              "w": "up",
+              "t": 5.646
+            },
+            {
+              "w": "front,",
+              "t": 5.797
+            },
+            {
+              "w": "and",
+              "t": 6.448
+            },
+            {
+              "w": "end",
+              "t": 6.668
+            },
+            {
+              "w": "with",
+              "t": 6.9
+            },
+            {
+              "w": "one",
+              "t": 7.086
+            },
+            {
+              "w": "clear",
+              "t": 7.33
+            },
+            {
+              "w": "next",
+              "t": 7.632
+            },
+            {
+              "w": "step.",
+              "t": 7.957
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.491
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Instead of waiting a week for a follow-up meeting, send a five-minute narrated deck the next morning. The next meeting becomes questions, not a presentation.",
+      "storyboard": "Ink stage, wide. A week-long calendar strip shows a grey meeting block far off on the right; on 'waiting a week' it greys out with a strike. On 'five-minute narrated deck' a coral video card titled 'Three changes that would halve your month-end reporting time' drops onto tomorrow morning, with a '5 min' tag. It forwards along lines to 'finance' and 'IT' chips. On 'questions, not a presentation' the next meeting block shrinks and fills with question marks. Hold on the shorter block.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Video first, then a shorter meeting",
+        "text": "\"Three changes that would halve your month-end reporting time\". Five-minute narrated deck the next morning. Champion forwards it to finance and IT. Next meeting: questions, not a presentation",
+        "notes": "Instead of waiting a week for a follow-up meeting, send a five-minute narrated deck the next morning. The next meeting becomes questions, not a presentation.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "smoothup",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 10.893,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 5.67,
+          "text": "Instead of waiting a week for a follow-up meeting, send a five-minute narrated deck the next morning.",
+          "words": [
+            {
+              "w": "Instead",
+              "t": 0.55
+            },
+            {
+              "w": "of",
+              "t": 0.933
+            },
+            {
+              "w": "waiting",
+              "t": 1.049
+            },
+            {
+              "w": "a",
+              "t": 1.386
+            },
+            {
+              "w": "week",
+              "t": 1.479
+            },
+            {
+              "w": "for",
+              "t": 1.723
+            },
+            {
+              "w": "a",
+              "t": 1.874
+            },
+            {
+              "w": "follow-up",
+              "t": 1.966
+            },
+            {
+              "w": "meeting,",
+              "t": 2.384
+            },
+            {
+              "w": "send",
+              "t": 3.035
+            },
+            {
+              "w": "a",
+              "t": 3.302
+            },
+            {
+              "w": "five-minute",
+              "t": 3.394
+            },
+            {
+              "w": "narrated",
+              "t": 3.963
+            },
+            {
+              "w": "deck",
+              "t": 4.439
+            },
+            {
+              "w": "the",
+              "t": 4.764
+            },
+            {
+              "w": "next",
+              "t": 4.881
+            },
+            {
+              "w": "morning.",
+              "t": 5.159
+            }
+          ]
+        },
+        {
+          "t": 6.111,
+          "end": 9.293,
+          "text": "The next meeting becomes questions, not a presentation.",
+          "words": [
+            {
+              "w": "The",
+              "t": 6.111
+            },
+            {
+              "w": "next",
+              "t": 6.262
+            },
+            {
+              "w": "meeting",
+              "t": 6.518
+            },
+            {
+              "w": "becomes",
+              "t": 6.866
+            },
+            {
+              "w": "questions,",
+              "t": 7.226
+            },
+            {
+              "w": "not",
+              "t": 8.108
+            },
+            {
+              "w": "a",
+              "t": 8.317
+            },
+            {
+              "w": "presentation.",
+              "t": 8.387
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.293
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "Put what you'd say in the speaker notes. On Pro, a.i. directs the video, so your proposal lands like a produced pitch. Try it at powerpoint2vid.com.",
+      "storyboard": "Paper stage, centered. A slide card with a speaker-notes strip sits mid-frame; on 'speaker notes' the notes lift off as a sound wave. On 'a.i. directs the video' the card bursts into a cinematic frame with coral motion lines and a 'Pro' badge. A small 'Basic: no subscription needed' and 'MP4' chip slide in beneath. On 'powerpoint2vid.com' everything clears to the URL at 130px in ink with a coral underline drawing on, holding to the end.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Turn your deck into an async video",
+        "text": "Speaker notes become the narration. Pro: a.i. directs the video. Basic: try it first, no subscription needed. Download an MP4 to share",
+        "notes": "Put what you'd say in the speaker notes. On Pro, a.i. directs the video, so your proposal lands like a produced pitch. Try it at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 12.792,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.547,
+          "text": "Put what you'd say in the speaker notes.",
+          "words": [
+            {
+              "w": "Put",
+              "t": 0.55
+            },
+            {
+              "w": "what",
+              "t": 0.817
+            },
+            {
+              "w": "you'd",
+              "t": 0.991
+            },
+            {
+              "w": "say",
+              "t": 1.2
+            },
+            {
+              "w": "in",
+              "t": 1.479
+            },
+            {
+              "w": "the",
+              "t": 1.595
+            },
+            {
+              "w": "speaker",
+              "t": 1.699
+            },
+            {
+              "w": "notes.",
+              "t": 2.082
+            }
+          ]
+        },
+        {
+          "t": 2.872,
+          "end": 7.829,
+          "text": "On Pro, a.i. directs the video, so your proposal lands like a produced pitch.",
+          "words": [
+            {
+              "w": "On",
+              "t": 2.872
+            },
+            {
+              "w": "Pro,",
+              "t": 3.116
+            },
+            {
+              "w": "A.I.",
+              "t": 3.603
+            },
+            {
+              "w": "directs",
+              "t": 4.102
+            },
+            {
+              "w": "the",
+              "t": 4.52
+            },
+            {
+              "w": "video,",
+              "t": 4.648
+            },
+            {
+              "w": "so",
+              "t": 5.31
+            },
+            {
+              "w": "your",
+              "t": 5.484
+            },
+            {
+              "w": "proposal",
+              "t": 5.681
+            },
+            {
+              "w": "lands",
+              "t": 6.262
+            },
+            {
+              "w": "like",
+              "t": 6.633
+            },
+            {
+              "w": "a",
+              "t": 6.819
+            },
+            {
+              "w": "produced",
+              "t": 6.889
+            },
+            {
+              "w": "pitch.",
+              "t": 7.33
+            }
+          ]
+        },
+        {
+          "t": 8.27,
+          "end": 10.592,
+          "text": "Try it at powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 8.27
+            },
+            {
+              "w": "it",
+              "t": 8.537
+            },
+            {
+              "w": "at",
+              "t": 8.642
+            },
+            {
+              "w": "PowerPoint",
+              "t": 8.77
+            },
+            {
+              "w": "to",
+              "t": 9.385
+            },
+            {
+              "w": "vid",
+              "t": 9.559
+            },
+            {
+              "w": "dot",
+              "t": 9.826
+            },
+            {
+              "w": "com.",
+              "t": 10.093
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.592
+    }
+  ],
+  "voiceProvider": "elevenlabs"
+}
