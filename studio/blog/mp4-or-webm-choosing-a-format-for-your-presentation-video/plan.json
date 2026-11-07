@@ -1,0 +1,899 @@
+{
+  "title": "\"MP4 or WebM? Choosing a Format for Your Presentation Video\" (blog explainer)",
+  "brief": {
+    "palette": {
+      "ink": "#14161F",
+      "night": "#0B0D17",
+      "paper": "#F6F3EC",
+      "mp4 blue": "#3D7BFF",
+      "webm green": "#2EC4A0",
+      "amber": "#FFB547",
+      "slate": "#8A90A6"
+    },
+    "font": "Inter Display",
+    "motion": "Calm, confident pacing with soft ease-out arrivals and quick snaps on decisive words; the camera makes slow push-ins and occasional lateral glides between destinations.",
+    "story": "A two-character story: MP4 in blue and WebM in green, introduced on a dark stage, dissected on light paper, then sent out to real destinations before resolving on a night-stage call to action. Scenes alternate dark and light, wide maps and close-up file icons."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "You've turned your deck into a video. Now, which file format should it be? MP4 and WebM are both good, and here's how to choose.",
+      "storyboard": "Night stage. A slide card flips and morphs into a glowing video file icon at center. On 'which file format', the icon splits into two tags that slide apart: '.mp4' in blue left, '.webm' in green right, set at 150px. On 'both good', both tags pulse with a soft check, and a thin amber question mark settles between them. The sparse original title is rebuilt as 'MP4 or WebM?' in big type above.",
+      "minDuration": 9,
+      "slide": {
+        "title": "MP4 or WebM? Choosing Your Video Format",
+        "text": "",
+        "notes": "You've turned your deck into a video. Now, which file format should it be? MP4 and WebM are both good, and here's how to choose.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 10.45,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 2.774,
+          "text": "You've turned your deck into a video.",
+          "words": [
+            {
+              "w": "You've",
+              "t": 0.8
+            },
+            {
+              "w": "turned",
+              "t": 1.113
+            },
+            {
+              "w": "your",
+              "t": 1.392
+            },
+            {
+              "w": "deck",
+              "t": 1.566
+            },
+            {
+              "w": "into",
+              "t": 1.845
+            },
+            {
+              "w": "a",
+              "t": 2.077
+            },
+            {
+              "w": "video.",
+              "t": 2.158
+            }
+          ]
+        },
+        {
+          "t": 3.099,
+          "end": 5.363,
+          "text": "Now, which file format should it be?",
+          "words": [
+            {
+              "w": "Now,",
+              "t": 3.099
+            },
+            {
+              "w": "which",
+              "t": 3.563
+            },
+            {
+              "w": "file",
+              "t": 3.842
+            },
+            {
+              "w": "format",
+              "t": 4.144
+            },
+            {
+              "w": "should",
+              "t": 4.538
+            },
+            {
+              "w": "it",
+              "t": 4.759
+            },
+            {
+              "w": "be?",
+              "t": 4.887
+            }
+          ]
+        },
+        {
+          "t": 5.874,
+          "end": 9.6,
+          "text": "MP4 and WebM are both good, and here's how to choose.",
+          "words": [
+            {
+              "w": "MP4",
+              "t": 5.874
+            },
+            {
+              "w": "and",
+              "t": 6.559
+            },
+            {
+              "w": "WebM",
+              "t": 6.733
+            },
+            {
+              "w": "are",
+              "t": 7.244
+            },
+            {
+              "w": "both",
+              "t": 7.406
+            },
+            {
+              "w": "good,",
+              "t": 7.685
+            },
+            {
+              "w": "and",
+              "t": 8.335
+            },
+            {
+              "w": "here's",
+              "t": 8.532
+            },
+            {
+              "w": "how",
+              "t": 8.753
+            },
+            {
+              "w": "to",
+              "t": 8.904
+            },
+            {
+              "w": "choose.",
+              "t": 9.031
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.6
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Every video file has a container, like dot mp4, wrapping compressed video and audio. You don't need codec names. Just ask whether the destination can play it.",
+      "storyboard": "Paper stage, close-up. The file icon becomes a cutaway box: on 'container' the outer shell draws on labeled '.mp4'; on 'compressed video and audio' two inner layers slide in, a film strip and a waveform. On 'codec names', tiny grey jargon labels flutter in then get swept away. On 'can the destination play it?' the box rotates toward a play button that lights amber; headline 'Can it play there?' holds. The bullet list is cut.",
+      "minDuration": 10,
+      "slide": {
+        "title": "A video file has two layers",
+        "text": "Container: the file type, like .mp4 or .webm. Codecs: how video and audio are compressed. What matters: can the destination play it?",
+        "notes": "Every video file has a container, like dot mp4, wrapping compressed video and audio. You don't need codec names. Just ask whether the destination can play it.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 12.384,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 6.355,
+          "text": "Every video file has a container, like dot mp4, wrapping compressed video and audio.",
+          "words": [
+            {
+              "w": "Every",
+              "t": 0.55
+            },
+            {
+              "w": "video",
+              "t": 0.876
+            },
+            {
+              "w": "file",
+              "t": 1.235
+            },
+            {
+              "w": "has",
+              "t": 1.561
+            },
+            {
+              "w": "a",
+              "t": 1.711
+            },
+            {
+              "w": "container,",
+              "t": 1.781
+            },
+            {
+              "w": "like",
+              "t": 2.629
+            },
+            {
+              "w": "dot",
+              "t": 2.884
+            },
+            {
+              "w": "mp4,",
+              "t": 3.186
+            },
+            {
+              "w": "wrapping",
+              "t": 4.208
+            },
+            {
+              "w": "compressed",
+              "t": 4.637
+            },
+            {
+              "w": "video",
+              "t": 5.229
+            },
+            {
+              "w": "and",
+              "t": 5.624
+            },
+            {
+              "w": "audio.",
+              "t": 5.775
+            }
+          ]
+        },
+        {
+          "t": 6.739,
+          "end": 8.399,
+          "text": "You don't need codec names.",
+          "words": [
+            {
+              "w": "You",
+              "t": 6.739
+            },
+            {
+              "w": "don't",
+              "t": 6.901
+            },
+            {
+              "w": "need",
+              "t": 7.11
+            },
+            {
+              "w": "codec",
+              "t": 7.354
+            },
+            {
+              "w": "names.",
+              "t": 7.807
+            }
+          ]
+        },
+        {
+          "t": 9.212,
+          "end": 11.534,
+          "text": "Just ask whether the destination can play it.",
+          "words": [
+            {
+              "w": "Just",
+              "t": 9.212
+            },
+            {
+              "w": "ask",
+              "t": 9.502
+            },
+            {
+              "w": "whether",
+              "t": 9.827
+            },
+            {
+              "w": "the",
+              "t": 10.094
+            },
+            {
+              "w": "destination",
+              "t": 10.198
+            },
+            {
+              "w": "can",
+              "t": 10.825
+            },
+            {
+              "w": "play",
+              "t": 10.999
+            },
+            {
+              "w": "it.",
+              "t": 11.255
+            }
+          ]
+        }
+      ],
+      "speechEnd": 11.534
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "MP4 plays almost everywhere, so it's the safest bet for uploads. WebM is a solid web format, but sometimes needs converting for a specific destination.",
+      "storyboard": "Night stage, wide. A row of device silhouettes: phone, laptop, TV, platform tile. On 'almost everywhere', blue lines from an MP4 chip light every device in sequence. On 'solid web format', a green WebM chip lights three browser icons labeled Chrome, Edge and Firefox. On 'sometimes needs converting', its lines to phone and TV flicker dashed with a small label 'varies', and an LMS tile shows 'check your system'.",
+      "minDuration": 10,
+      "slide": {
+        "title": "MP4 is most portable; WebM suits the web",
+        "text": "MP4: phones, computers, TVs, most platforms. WebM: Chrome, Edge and Firefox. WebM on phones and TVs: varies. LMSs: check your system",
+        "notes": "MP4 plays almost everywhere, so it's the safest bet for uploads. WebM is a solid web format, but sometimes needs converting for a specific destination.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 11.5,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.903,
+          "text": "MP4 plays almost everywhere, so it's the safest bet for uploads.",
+          "words": [
+            {
+              "w": "MP4",
+              "t": 0.55
+            },
+            {
+              "w": "plays",
+              "t": 1.235
+            },
+            {
+              "w": "almost",
+              "t": 1.594
+            },
+            {
+              "w": "everywhere,",
+              "t": 2.012
+            },
+            {
+              "w": "so",
+              "t": 2.883
+            },
+            {
+              "w": "it's",
+              "t": 3.057
+            },
+            {
+              "w": "the",
+              "t": 3.22
+            },
+            {
+              "w": "safest",
+              "t": 3.348
+            },
+            {
+              "w": "bet",
+              "t": 3.777
+            },
+            {
+              "w": "for",
+              "t": 4.033
+            },
+            {
+              "w": "uploads.",
+              "t": 4.195
+            }
+          ]
+        },
+        {
+          "t": 5.414,
+          "end": 10.65,
+          "text": "WebM is a solid web format, but sometimes needs converting for a specific destination.",
+          "words": [
+            {
+              "w": "WebM",
+              "t": 5.414
+            },
+            {
+              "w": "is",
+              "t": 5.971
+            },
+            {
+              "w": "a",
+              "t": 6.111
+            },
+            {
+              "w": "solid",
+              "t": 6.192
+            },
+            {
+              "w": "web",
+              "t": 6.552
+            },
+            {
+              "w": "format,",
+              "t": 6.819
+            },
+            {
+              "w": "but",
+              "t": 7.504
+            },
+            {
+              "w": "sometimes",
+              "t": 7.69
+            },
+            {
+              "w": "needs",
+              "t": 8.201
+            },
+            {
+              "w": "converting",
+              "t": 8.468
+            },
+            {
+              "w": "for",
+              "t": 9.013
+            },
+            {
+              "w": "a",
+              "t": 9.153
+            },
+            {
+              "w": "specific",
+              "t": 9.222
+            },
+            {
+              "w": "destination.",
+              "t": 9.745
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.65
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Start with the destination. Either format works on your own website. For email, shared drives or an uncertain LMS, MP4 is the safe choice.",
+      "storyboard": "Paper stage. A decision path draws right-to-left from a destination pin back to the file, echoing 'work backwards'. On 'your own website', a browser card shows both blue and green tags. On 'email, shared drives', envelope and folder cards stamp blue MP4; on 'uncertain LMS', a card with a question mark also turns blue. Final hold: 'When unsure: MP4' at 130px.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Work backwards from where it's going",
+        "text": "Your own website: WebM or MP4. YouTube, social, LMS: check accepted formats. Email or shared drive: MP4. When unsure: MP4",
+        "notes": "Start with the destination. Either format works on your own website. For email, shared drives or an uncertain LMS, MP4 is the safe choice.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 10.722,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 1.954,
+          "text": "Start with the destination.",
+          "words": [
+            {
+              "w": "Start",
+              "t": 0.55
+            },
+            {
+              "w": "with",
+              "t": 0.91
+            },
+            {
+              "w": "the",
+              "t": 1.049
+            },
+            {
+              "w": "destination.",
+              "t": 1.153
+            }
+          ]
+        },
+        {
+          "t": 2.129,
+          "end": 4.439,
+          "text": "Either format works on your own website.",
+          "words": [
+            {
+              "w": "Either",
+              "t": 2.129
+            },
+            {
+              "w": "format",
+              "t": 2.477
+            },
+            {
+              "w": "works",
+              "t": 2.93
+            },
+            {
+              "w": "on",
+              "t": 3.266
+            },
+            {
+              "w": "your",
+              "t": 3.382
+            },
+            {
+              "w": "own",
+              "t": 3.557
+            },
+            {
+              "w": "website.",
+              "t": 3.766
+            }
+          ]
+        },
+        {
+          "t": 4.718,
+          "end": 9.872,
+          "text": "For email, shared drives or an uncertain LMS, MP4 is the safe choice.",
+          "words": [
+            {
+              "w": "For",
+              "t": 4.718
+            },
+            {
+              "w": "email,",
+              "t": 4.915
+            },
+            {
+              "w": "shared",
+              "t": 5.519
+            },
+            {
+              "w": "drives",
+              "t": 5.913
+            },
+            {
+              "w": "or",
+              "t": 6.401
+            },
+            {
+              "w": "an",
+              "t": 6.54
+            },
+            {
+              "w": "uncertain",
+              "t": 6.668
+            },
+            {
+              "w": "LMS,",
+              "t": 7.295
+            },
+            {
+              "w": "MP4",
+              "t": 8.05
+            },
+            {
+              "w": "is",
+              "t": 8.816
+            },
+            {
+              "w": "the",
+              "t": 8.99
+            },
+            {
+              "w": "safe",
+              "t": 9.106
+            },
+            {
+              "w": "choice.",
+              "t": 9.373
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.872
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Take a five-minute product overview saved as WebM. Embed it on your site, upload to YouTube, and convert once for the LMS. Then watch it through to check sync.",
+      "storyboard": "Night stage. A single green WebM file labeled '5-min product overview' sits left; three branches fan right. On 'embed it on your site', it drops into a browser frame. On 'upload to YouTube', it flies to a video-platform tile. On 'convert once', it passes through an amber converter ring and emerges blue MP4 into an LMS tile. On 'check sync', a playhead scrubs a waveform aligned to frames with an amber tick.",
+      "minDuration": 11,
+      "slide": {
+        "title": "One video, three destinations",
+        "text": "Website: embed the WebM. YouTube: upload WebM or convert. LMS: MP4 only, so convert once. Play the converted file through",
+        "notes": "Take a five-minute product overview saved as WebM. Embed it on your site, upload to YouTube, and convert once for the LMS. Then watch it through to check sync.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "slideleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 11.942,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.72,
+          "text": "Take a five-minute product overview saved as WebM.",
+          "words": [
+            {
+              "w": "Take",
+              "t": 0.55
+            },
+            {
+              "w": "a",
+              "t": 0.841
+            },
+            {
+              "w": "five-minute",
+              "t": 0.922
+            },
+            {
+              "w": "product",
+              "t": 1.491
+            },
+            {
+              "w": "overview",
+              "t": 1.897
+            },
+            {
+              "w": "saved",
+              "t": 2.454
+            },
+            {
+              "w": "as",
+              "t": 2.861
+            },
+            {
+              "w": "WebM.",
+              "t": 3.023
+            }
+          ]
+        },
+        {
+          "t": 4.103,
+          "end": 8.654,
+          "text": "Embed it on your site, upload to YouTube, and convert once for the LMS.",
+          "words": [
+            {
+              "w": "Embed",
+              "t": 4.103
+            },
+            {
+              "w": "it",
+              "t": 4.486
+            },
+            {
+              "w": "on",
+              "t": 4.602
+            },
+            {
+              "w": "your",
+              "t": 4.718
+            },
+            {
+              "w": "site,",
+              "t": 4.904
+            },
+            {
+              "w": "upload",
+              "t": 5.485
+            },
+            {
+              "w": "to",
+              "t": 5.937
+            },
+            {
+              "w": "YouTube,",
+              "t": 6.065
+            },
+            {
+              "w": "and",
+              "t": 6.831
+            },
+            {
+              "w": "convert",
+              "t": 7.04
+            },
+            {
+              "w": "once",
+              "t": 7.505
+            },
+            {
+              "w": "for",
+              "t": 7.725
+            },
+            {
+              "w": "the",
+              "t": 7.841
+            },
+            {
+              "w": "LMS.",
+              "t": 7.992
+            }
+          ]
+        },
+        {
+          "t": 9.165,
+          "end": 11.092,
+          "text": "Then watch it through to check sync.",
+          "words": [
+            {
+              "w": "Then",
+              "t": 9.165
+            },
+            {
+              "w": "watch",
+              "t": 9.444
+            },
+            {
+              "w": "it",
+              "t": 9.699
+            },
+            {
+              "w": "through",
+              "t": 9.815
+            },
+            {
+              "w": "to",
+              "t": 10.163
+            },
+            {
+              "w": "check",
+              "t": 10.303
+            },
+            {
+              "w": "sync.",
+              "t": 10.593
+            }
+          ]
+        }
+      ],
+      "speechEnd": 11.092
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "On Pro, a.i. directs your video, tightening the story and timing each scene to your narration. Try Basic first, and get an MP4 or WebM at powerpoint2vid.com.",
+      "storyboard": "Paper stage opening to night. A plain slide deck slides into a frame and exits as a film strip, speaker notes turning into a waveform. On 'a.i. directs', scene cards snap to waveform beats. On 'MP4 or WebM', blue and green tags pop out side by side. Final hold on night: 'powerpoint2vid.com' at 120px with 'Try Basic first. No subscription needed.' beneath.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Ordinary deck in, MP4 or WebM out",
+        "text": "Speaker notes become narration. MP4 to download, WebM available. Pro: a.i. directs the video. Try Basic first, no subscription needed",
+        "notes": "On Pro, a.i. directs your video, tightening the story and timing each scene to your narration. Try Basic first, and get an MP4 or WebM at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 13.814,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 5.844,
+          "text": "On Pro, a.i. directs your video, tightening the story and timing each scene to your narration.",
+          "words": [
+            {
+              "w": "On",
+              "t": 0.55
+            },
+            {
+              "w": "Pro,",
+              "t": 0.794
+            },
+            {
+              "w": "A.I.",
+              "t": 1.188
+            },
+            {
+              "w": "directs",
+              "t": 1.572
+            },
+            {
+              "w": "your",
+              "t": 1.931
+            },
+            {
+              "w": "video,",
+              "t": 2.106
+            },
+            {
+              "w": "tightening",
+              "t": 2.721
+            },
+            {
+              "w": "the",
+              "t": 3.185
+            },
+            {
+              "w": "story",
+              "t": 3.301
+            },
+            {
+              "w": "and",
+              "t": 3.743
+            },
+            {
+              "w": "timing",
+              "t": 3.894
+            },
+            {
+              "w": "each",
+              "t": 4.312
+            },
+            {
+              "w": "scene",
+              "t": 4.567
+            },
+            {
+              "w": "to",
+              "t": 4.88
+            },
+            {
+              "w": "your",
+              "t": 4.985
+            },
+            {
+              "w": "narration.",
+              "t": 5.147
+            }
+          ]
+        },
+        {
+          "t": 6.448,
+          "end": 11.614,
+          "text": "Try Basic first, and get an MP4 or WebM at powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 6.448
+            },
+            {
+              "w": "Basic",
+              "t": 6.773
+            },
+            {
+              "w": "first,",
+              "t": 7.191
+            },
+            {
+              "w": "and",
+              "t": 7.795
+            },
+            {
+              "w": "get",
+              "t": 7.98
+            },
+            {
+              "w": "an",
+              "t": 8.154
+            },
+            {
+              "w": "MP4",
+              "t": 8.259
+            },
+            {
+              "w": "or",
+              "t": 9.025
+            },
+            {
+              "w": "WebM",
+              "t": 9.223
+            },
+            {
+              "w": "at",
+              "t": 9.733
+            },
+            {
+              "w": "PowerPoint",
+              "t": 9.908
+            },
+            {
+              "w": "to",
+              "t": 10.488
+            },
+            {
+              "w": "vid",
+              "t": 10.616
+            },
+            {
+              "w": "dot",
+              "t": 10.906
+            },
+            {
+              "w": "com.",
+              "t": 11.138
+            }
+          ]
+        }
+      ],
+      "speechEnd": 11.614
+    }
+  ],
+  "voiceProvider": "elevenlabs",
+  "degraded": true
+}

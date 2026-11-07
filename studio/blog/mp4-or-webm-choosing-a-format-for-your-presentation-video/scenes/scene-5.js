@@ -1,0 +1,118 @@
+/* Scene 5 (final): "On Pro, a.i. directs your video, tightening the story and timing each scene to your narration. Try Basic first, and get an MP4 or WebM at powerpoint2vid.com."
+ * Storyboard: the scene opens on a paper stage. The plain deck slides into a frame and leaves as a film strip, and the speaker notes melt into a waveform while the stage turns to night.
+ * On 'a.i. directs', scene cards snap onto the waveform beats, and a playhead sweeps them on 'timing'. On 'MP4' and 'WebM', blue and green tags pop out side by side.
+ * The scene ends on night: 'powerpoint2vid.com' at 120px with 'Try Basic first. No subscription needed.' beneath. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const T = (i, w, f) => { let v; try { v = ctx.at(i, w); } catch (e) {} return (typeof v === 'number' && isFinite(v)) ? v : f; };
+  const pro = T(0, 'Pro', 0.79), directs = T(0, 'directs', 1.57), story = T(0, 'story', 3.3), timing = T(0, 'timing', 3.89), narr = T(0, 'narration', 5.15);
+  const tryT = T(1, 'Try', 6.45), mp4 = T(1, 'MP4', 8.26), webm = T(1, 'WebM', 9.22), pp = T(1, 'PowerPoint', 9.91), com = T(1, 'com', 11.14);
+  const rng = ctx.rand(7); const R = typeof rng === 'function' ? rng : () => 0.5;
+  const MONO = 'ui-monospace, Menlo, monospace';
+  const BLUE = '#3D7BFF', GREEN = '#2EC4A0';
+
+  stage.style.background = 'var(--night)';
+  el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(50% 50% at 30% 40%, rgba(61,123,255,.22), transparent 70%), radial-gradient(45% 45% at 72% 62%, rgba(46,196,160,.18), transparent 70%)' });
+  const paper = el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(80% 70% at 50% 45%, #fffdf8 0%, var(--paper) 70%)' });
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 540px' });
+
+  /* phase 1: deck on paper */
+  const frame = el('div', 'abs', cam, { left: '620px', top: '170px', width: '680px', height: '400px', borderRadius: '18px', border: '3px dashed rgba(20,22,31,.25)', boxSizing: 'border-box' });
+  const frameLab = el('div', 'abs', cam, { left: '620px', top: '128px', font: '600 22px/1 ' + MONO, letterSpacing: '.14em', color: 'var(--slate)' });
+  frameLab.textContent = 'YOUR DECK';
+  const card = el('div', 'abs', cam, { left: '640px', top: '190px', width: '640px', height: '360px', borderRadius: '12px', overflow: 'hidden', background: '#fff', boxShadow: '0 30px 70px rgba(20,22,31,.22)' });
+  const ci = el('img', 'abs', card, { inset: 0, width: '100%', height: '100%', objectFit: 'contain' }); ci.src = ctx.asset('slide-6.png');
+  const notes = el('div', 'abs', cam, { left: '640px', top: '600px', width: '640px', height: '150px', borderRadius: '12px', background: '#fff', boxShadow: '0 20px 50px rgba(20,22,31,.15)', transformOrigin: '50% 50%' });
+  const nl = el('div', 'abs', notes, { left: '28px', top: '22px', font: '600 18px/1 ' + MONO, letterSpacing: '.14em', color: 'var(--slate)' }); nl.textContent = 'SPEAKER NOTES';
+  [[64, 560], [92, 500], [120, 380]].forEach(([y, w]) => el('div', 'abs', notes, { left: '28px', top: y + 'px', width: w + 'px', height: '10px', borderRadius: '5px', background: '#c9ccd6' }));
+
+  /* film strip */
+  const strip = el('div', 'abs', cam, { left: '-720px', top: '150px', width: '3400px', height: '440px', background: 'var(--ink)', opacity: 0, boxShadow: '0 30px 80px rgba(0,0,0,.4)' });
+  ['10px', '410px'].forEach((y) => el('div', 'abs', strip, { left: 0, top: y, width: '100%', height: '20px', background: 'repeating-linear-gradient(90deg, transparent 0 14px, rgba(246,243,236,.85) 14px 40px, transparent 40px 56px)' }));
+  ['slide-4.png', 'slide-5.png', 'slide-6.png', 'slide-1.png', 'slide-2.png'].forEach((s, i) => {
+    const f = el('div', 'abs', strip, { left: i * 680 + 'px', top: '40px', width: '640px', height: '360px', borderRadius: '6px', overflow: 'hidden', background: '#fff' });
+    const im = el('img', 'abs', f, { inset: 0, width: '100%', height: '100%', objectFit: 'contain' }); im.src = ctx.asset(s);
+  });
+
+  /* phase 2: a.i. directs */
+  const dir = el('div', 'abs', cam, { inset: 0 });
+  const dLab = el('div', 'abs', dir, { left: 0, width: '1920px', top: '200px', textAlign: 'center', font: '700 26px/1 ' + MONO, letterSpacing: '.18em', color: 'var(--amber)', opacity: 0 });
+  dLab.textContent = 'PRO · A.I. DIRECTS';
+  const wave = el('div', 'abs', dir, { left: '160px', top: '640px', width: '1600px', height: '160px' });
+  const bars = [];
+  for (let i = 0; i < 80; i++) {
+    const env = Math.pow(Math.sin(Math.PI * (i + 0.5) / 80), 0.6), h = 20 + 130 * env * (0.35 + 0.65 * R());
+    bars.push(el('div', 'abs', wave, { left: i * 20 + 4 + 'px', top: (160 - h) / 2 + 'px', width: '12px', height: h + 'px', borderRadius: '6px', background: 'linear-gradient(180deg, #ffffff, var(--slate))', transformOrigin: '50% 50%' }));
+  }
+  const cards = [], links = [], dots = [];
+  for (let i = 0; i < 5; i++) {
+    const cx = 285 + i * 337.5, col = i % 2 ? GREEN : BLUE;
+    const c = el('div', 'abs', dir, { left: cx - 125 + 'px', top: '330px', width: '250px', height: '150px', borderRadius: '12px', overflow: 'hidden', background: '#fff', border: '4px solid ' + col, boxSizing: 'border-box', boxShadow: '0 0 0px rgba(255,181,71,0), 0 20px 50px rgba(0,0,0,.5)', opacity: 0 });
+    const im = el('img', 'abs', c, { inset: 0, width: '100%', height: '100%', objectFit: 'contain' }); im.src = ctx.asset('slide-' + (i + 1) + '.png');
+    cards.push({ c, cx });
+    links.push(el('div', 'abs', dir, { left: cx - 1 + 'px', top: '484px', width: '2px', height: '228px', background: 'linear-gradient(180deg, rgba(255,181,71,.2), var(--amber))', transformOrigin: '50% 0%' }));
+    dots.push(el('div', 'abs', dir, { left: cx - 10 + 'px', top: '710px', width: '20px', height: '20px', borderRadius: '50%', background: 'var(--amber)', boxShadow: '0 0 24px rgba(255,181,71,.9)' }));
+  }
+  const head = el('div', 'abs', dir, { left: '158px', top: '600px', width: '4px', height: '240px', borderRadius: '2px', background: '#fff', boxShadow: '0 0 24px rgba(255,255,255,.8)', opacity: 0 });
+
+  /* phase 3: call to action */
+  const mkTag = (txt, left, col, glow) => {
+    const t = el('div', 'abs', cam, { left: left + 'px', top: '290px', width: '320px', height: '130px', borderRadius: '26px', background: col, boxShadow: '0 0 70px ' + glow + ', 0 24px 60px rgba(0,0,0,.45)', textAlign: 'center', font: '800 76px/130px Inter Display, Inter', letterSpacing: '-.03em', color: '#fff', opacity: 0 });
+    t.textContent = txt; return t;
+  };
+  const tMp4 = mkTag('MP4', 620, BLUE, 'rgba(61,123,255,.55)');
+  const tWebm = mkTag('WebM', 980, GREEN, 'rgba(46,196,160,.5)');
+  const url = el('div', 'abs', cam, { left: 0, width: '1920px', top: '470px', textAlign: 'center', font: '800 120px/1 Inter Display, Inter', letterSpacing: '-.04em', color: '#fff', opacity: 0, transformOrigin: '50% 50%' });
+  url.textContent = 'powerpoint2vid.com';
+  const under = el('div', 'abs', cam, { left: '610px', top: '612px', width: '700px', height: '6px', borderRadius: '3px', background: 'linear-gradient(90deg, ' + BLUE + ', ' + GREEN + ')', transformOrigin: '0% 50%' });
+  const sub = el('div', 'abs', cam, { left: 0, width: '1920px', top: '664px', textAlign: 'center', font: '600 44px/1.2 Inter', letterSpacing: '-.01em', color: 'var(--slate)', opacity: 0 });
+  sub.innerHTML = '<span style="color:#fff">Try Basic first.</span> No subscription needed.';
+
+  ctx.fx.vignette({ strength: 0.4 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  /* ---- timeline ---- */
+  gsap.set([card, notes], { x: -520 });
+  gsap.set(bars, { scaleY: 0 });
+  gsap.set(links, { scaleY: 0 });
+  gsap.set(dots, { scale: 0 });
+  gsap.set([tMp4, tWebm], { scale: 0 });
+  gsap.set(under, { scaleX: 0 });
+  tl.fromTo(cam, { scale: 1 }, { scale: 1.04, duration: ctx.dur, ease: 'none' }, 0);
+
+  tl.to([card, notes], { x: 0, duration: 0.7, ease: 'power3.out', stagger: 0.06 }, 0.05);
+  tl.to(strip, { opacity: 1, duration: 0.12 }, pro);
+  tl.to([card, frame, frameLab], { opacity: 0, duration: 0.15 }, pro + 0.08);
+  tl.to(strip, { x: -3000, duration: 0.7, ease: 'power3.in' }, pro + 0.15);
+  tl.to(paper, { opacity: 0, duration: 0.9, ease: 'power2.inOut' }, pro + 0.15);
+  tl.to(notes, { opacity: 0, scaleY: 0.2, duration: 0.4, ease: 'power2.in' }, pro + 0.15);
+  tl.to(bars, { scaleY: 1, duration: 0.5, ease: 'back.out(1.6)', stagger: { each: 0.008, from: 'center' } }, pro + 0.3);
+
+  tl.to(dLab, { opacity: 1, duration: 0.4 }, directs - 0.2);
+  tl.fromTo(dLab, { y: 20 }, { y: 0, duration: 0.5, immediateRender: false }, directs - 0.2);
+  cards.forEach(({ c }, i) => {
+    const t = directs + i * 0.12;
+    tl.to(c, { opacity: 1, duration: 0.1 }, t);
+    tl.fromTo(c, { y: -520 }, { y: 0, duration: 0.6, ease: 'back.out(1.8)', immediateRender: false }, t);
+    tl.to(links[i], { scaleY: 1, duration: 0.35, ease: 'power2.out' }, t + 0.35);
+    tl.to(dots[i], { scale: 1, duration: 0.4, ease: 'back.out(2.2)' }, t + 0.45);
+  });
+  tl.to(cards.map((o) => o.c), { scale: 1.06, duration: 0.18, yoyo: true, repeat: 1, ease: 'power2.out', stagger: 0.05 }, story - 0.1);
+  const sweep = Math.max(1, narr + 0.7 - timing);
+  tl.to(head, { opacity: 1, duration: 0.2 }, timing - 0.1);
+  tl.fromTo(head, { x: 0 }, { x: 1600, duration: sweep, ease: 'none', immediateRender: false }, timing - 0.1);
+  cards.forEach(({ c, cx }, i) => {
+    const t = timing - 0.1 + ((cx - 160) / 1600) * sweep;
+    tl.to(c, { boxShadow: '0 0 60px rgba(255,181,71,.85), 0 20px 50px rgba(0,0,0,.5)', duration: 0.2, yoyo: true, repeat: 1 }, t);
+    tl.to(dots[i], { scale: 1.6, duration: 0.15, yoyo: true, repeat: 1 }, t);
+  });
+
+  tl.to(dir, { y: -160, opacity: 0, duration: 0.7, ease: 'expo.inOut' }, tryT - 0.6);
+  tl.to(sub, { opacity: 1, duration: 0.5 }, tryT);
+  tl.fromTo(sub, { y: 30 }, { y: 0, duration: 0.6, immediateRender: false }, tryT);
+  tl.to(tMp4, { scale: 1, opacity: 1, duration: 0.55, ease: 'back.out(2)' }, mp4 - 0.05);
+  tl.to(tWebm, { scale: 1, opacity: 1, duration: 0.55, ease: 'back.out(2)' }, webm - 0.05);
+  tl.fromTo(url, { scale: 1.25, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: 'power3.out', immediateRender: false }, pp - 0.1);
+  tl.to(under, { scaleX: 1, duration: 0.8, ease: 'expo.inOut' }, com - 0.3);
+  tl.to([tMp4, tWebm], { y: -8, duration: 0.25, yoyo: true, repeat: 1, ease: 'power2.out', stagger: 0.1 }, com);
+});

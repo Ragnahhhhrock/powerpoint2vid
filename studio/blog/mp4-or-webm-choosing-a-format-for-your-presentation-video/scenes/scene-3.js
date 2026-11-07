@@ -1,0 +1,124 @@
+/* Scene 3 — "Start with the destination. Either format works on your own website. For email, shared drives
+ * or an uncertain LMS, MP4 is the safe choice."
+ * Storyboard: paper stage. On "Start… destination" an amber destination pin drops on the right and a dotted
+ * decision path draws right-to-left back to the file (work backwards). On "your own website" a browser card
+ * lands with both a blue MP4 and a green WebM tag. On "email" and "shared drives" envelope + folder cards
+ * get stamped blue MP4; on "uncertain LMS" a question-mark card wobbles, then turns blue on "MP4".
+ * Final hold: "When unsure: MP4" at 130px, MP4 cards pulse on "safe". */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const BLUE = '#3D7BFF', GREEN = '#2EC4A0', AMBER = '#FFB547', SLATE = '#8A90A6', INK = '#14161F';
+  const W = (i, w) => ctx.at(i, w);
+  const tStart = W(0, 'Start'), tDest = W(0, 'destination.'), tOwn = W(1, 'own'), tWeb = W(1, 'website.');
+  const tEmail = W(2, 'email,'), tShared = W(2, 'shared'), tDrives = W(2, 'drives'), tUnc = W(2, 'uncertain'), tLMS = W(2, 'LMS,');
+  const tMP4 = W(2, 'MP4'), tSafe = W(2, 'safe');
+  const MONO = 'ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(80% 70% at 50% 35%, #fffdf7 0%, #F6F3EC 55%, #e9e4d8 100%)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 500px' });
+
+  el('div', 'abs', cam, { left: '1300px', top: '-200px', width: '900px', height: '700px', borderRadius: '50%', background: 'radial-gradient(closest-side, rgba(255,181,71,.16), transparent)' });
+  el('div', 'abs', cam, { left: '-200px', top: '500px', width: '1000px', height: '700px', borderRadius: '50%', background: 'radial-gradient(closest-side, rgba(61,123,255,.08), transparent)' });
+
+  const kicker = el('div', 'abs', cam, { left: '0px', width: '1920px', top: '96px', textAlign: 'center', font: `600 22px/1 ${MONO}`, letterSpacing: '.22em', color: SLATE });
+  kicker.textContent = 'WORK BACKWARDS';
+
+  const pathWrap = el('div', 'abs', cam, { left: 0, top: 0, width: '1920px', height: '1080px' });
+  pathWrap.innerHTML = `<svg width="1920" height="1080" style="overflow:visible"><defs><mask id="dm"><path id="dmp" d="M1665 238 C 1420 150, 1200 330, 960 238 S 520 160, 330 232" fill="none" stroke="#fff" stroke-width="20" stroke-linecap="round" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1"/></mask></defs>
+    <path id="dp" mask="url(#dm)" d="M1665 238 C 1420 150, 1200 330, 960 238 S 520 160, 330 232" fill="none" stroke="${INK}" stroke-opacity=".75" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 16"/>
+  </svg>`;
+  const dmp = pathWrap.querySelector('#dmp');
+  const head = el('div', 'abs', cam, { left: '300px', top: '214px', width: '0', height: '0', borderTop: '20px solid transparent', borderBottom: '20px solid transparent', borderRight: `30px solid ${INK}`, opacity: 0, transformOrigin: '0% 50%' });
+
+  /* file icon (left) as clean SVG */
+  const file = el('div', 'abs', cam, { left: '170px', top: '160px', width: '120px', height: '150px', transformOrigin: '50% 100%', filter: 'drop-shadow(0 20px 24px rgba(20,22,31,.16))' });
+  file.innerHTML = `<svg width="120" height="150" viewBox="0 0 120 150"><path d="M14 3 H84 L117 36 V136 Q117 147 106 147 H14 Q3 147 3 136 V14 Q3 3 14 3 Z" fill="#fff" stroke="${INK}" stroke-width="4" stroke-linejoin="round"/><path d="M84 3 V28 Q84 36 92 36 H117" fill="none" stroke="${INK}" stroke-width="4" stroke-linejoin="round"/><path d="M48 56 L82 78 L48 100 Z" fill="${INK}"/></svg>`;
+  const fileLab = el('div', 'abs', cam, { left: '110px', width: '240px', top: '330px', textAlign: 'center', font: `600 18px/1 ${MONO}`, letterSpacing: '.14em', color: SLATE });
+  fileLab.textContent = 'YOUR VIDEO';
+
+  const pin = el('div', 'abs', cam, { left: '1625px', top: '130px', width: '90px', height: '120px', transformOrigin: '50% 100%' });
+  pin.innerHTML = `<svg width="90" height="120" viewBox="0 0 90 120"><path d="M45 118 C 20 80, 4 62, 4 42 A 41 41 0 0 1 86 42 C 86 62, 70 80, 45 118 Z" fill="${AMBER}" stroke="${INK}" stroke-width="4"/><circle cx="45" cy="42" r="15" fill="#fff" stroke="${INK}" stroke-width="4"/></svg>`;
+  const pinGlow = el('div', 'abs', cam, { left: '1590px', top: '200px', width: '160px', height: '80px', borderRadius: '50%', background: 'radial-gradient(closest-side, rgba(255,181,71,.55), transparent)', opacity: 0 });
+  const pinLab = el('div', 'abs', cam, { left: '1550px', width: '240px', top: '275px', textAlign: 'center', font: `600 18px/1 ${MONO}`, letterSpacing: '.14em', color: SLATE });
+  pinLab.textContent = 'DESTINATION';
+
+  const CW = 340, CH = 320, CT = 395, CX = [190, 590, 990, 1390];
+  const icons = [
+    `<svg width="180" height="120" viewBox="0 0 180 120"><rect x="4" y="4" width="172" height="112" rx="12" fill="#fff" stroke="currentColor" stroke-width="5"/><line x1="4" y1="30" x2="176" y2="30" stroke="currentColor" stroke-width="5"/><circle cx="22" cy="17" r="5" fill="currentColor"/><circle cx="38" cy="17" r="5" fill="currentColor"/><circle cx="54" cy="17" r="5" fill="currentColor"/><path d="M78 52 L 108 72 L 78 92 Z" fill="currentColor"/></svg>`,
+    `<svg width="180" height="120" viewBox="0 0 180 120"><rect x="14" y="10" width="152" height="100" rx="10" fill="#fff" stroke="currentColor" stroke-width="5"/><path d="M16 16 L 90 70 L 164 16" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/></svg>`,
+    `<svg width="180" height="120" viewBox="0 0 180 120"><path d="M14 22 Q14 12 24 12 L 66 12 L 80 28 L 156 28 Q 166 28 166 38 L 166 102 Q 166 112 156 112 L 24 112 Q 14 112 14 102 Z" fill="#fff" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/><line x1="14" y1="44" x2="166" y2="44" stroke="currentColor" stroke-width="5"/></svg>`,
+    `<svg width="180" height="120" viewBox="0 0 180 120"><rect x="24" y="6" width="132" height="108" rx="14" fill="#fff" stroke="currentColor" stroke-width="5"/><text x="90" y="88" text-anchor="middle" font-family="Inter Display, Inter" font-weight="900" font-size="80" fill="currentColor">?</text></svg>`,
+  ];
+  const names = ['YOUR WEBSITE', 'EMAIL', 'SHARED DRIVE', 'LMS'];
+  const cards = CX.map((x, i) => {
+    const c = el('div', 'abs', cam, { left: x + 'px', top: CT + 'px', width: CW + 'px', height: CH + 'px', background: '#fff', borderRadius: '24px', boxShadow: '0 30px 70px rgba(20,22,31,.13), 0 2px 0 rgba(20,22,31,.06)', transformOrigin: '50% 80%' });
+    const ic = el('div', 'abs', c, { left: '80px', top: '38px', width: '180px', height: '120px', color: i === 3 ? SLATE : INK });
+    ic.innerHTML = icons[i];
+    const lab = el('div', 'abs', c, { left: 0, width: CW + 'px', top: '182px', textAlign: 'center', font: `600 19px/1 ${MONO}`, letterSpacing: '.16em', color: SLATE });
+    lab.textContent = names[i];
+    return { c, ic, lab };
+  });
+  const tagRow = el('div', 'abs', cards[0].c, { left: 0, width: CW + 'px', top: '226px', height: '62px', display: 'flex', justifyContent: 'center', gap: '14px' });
+  const pill = (txt, col) => {
+    const p = el('div', '', tagRow, { height: '62px', padding: '0 24px', borderRadius: '31px', background: col, color: '#fff', font: '800 34px/62px Inter Display, Inter', letterSpacing: '-.02em', boxShadow: `0 10px 26px ${col}66`, whiteSpace: 'nowrap' });
+    p.textContent = txt; return p;
+  };
+  const tagMP4 = pill('MP4', BLUE);
+  const tagWebM = pill('WebM', GREEN);
+  const stamp = (parent) => {
+    const s = el('div', 'abs', parent, { left: '95px', top: '218px', width: '150px', height: '76px', border: `6px solid ${BLUE}`, borderRadius: '14px', boxSizing: 'border-box', color: BLUE, textAlign: 'center', font: '900 44px/64px Inter Display, Inter', letterSpacing: '-.02em', background: 'rgba(61,123,255,.08)', transform: 'rotate(-7deg)' });
+    s.textContent = 'MP4'; return s;
+  };
+  const st1 = stamp(cards[1].c), st2 = stamp(cards[2].c), st3 = stamp(cards[3].c);
+  const unsure = el('div', 'abs', cards[3].c, { left: '120px', top: '226px', width: '100px', height: '62px', borderRadius: '31px', background: '#ECEAE4', color: SLATE, textAlign: 'center', font: '800 36px/62px Inter Display, Inter' });
+  unsure.textContent = '?';
+  const cardGlow = (i) => el('div', 'abs', cam, { left: CX[i] - 30 + 'px', top: CT - 30 + 'px', width: CW + 60 + 'px', height: CH + 60 + 'px', borderRadius: '40px', background: 'radial-gradient(closest-side, rgba(61,123,255,.28), transparent)', opacity: 0 });
+  const glows = [1, 2, 3].map(cardGlow);
+  glows.forEach((g) => cam.insertBefore(g, cards[0].c));
+
+  const final = el('div', 'abs', cam, { left: '0px', width: '1920px', top: '790px', textAlign: 'center', font: '900 130px/1 Inter Display, Inter', letterSpacing: '-.045em', color: INK, whiteSpace: 'nowrap', transformOrigin: '50% 60%' });
+  final.innerHTML = `When unsure: <span style="color:${BLUE}">MP4</span>`;
+  const fMP4 = final.querySelector('span');
+
+  ctx.fx.vignette({ strength: 0.22 });
+  ctx.fx.grain({ opacity: 0.05 });
+
+  tl.to(cam, { scale: 1.035, x: -14, duration: ctx.dur, ease: 'none' }, 0);
+  tl.from(file, { y: 30, opacity: 0, duration: 0.5 }, 0.05);
+  tl.from(fileLab, { opacity: 0, duration: 0.4 }, 0.15);
+  tl.from(kicker, { opacity: 0, y: -10, duration: 0.6 }, 0.2);
+  tl.from(pin, { y: -120, opacity: 0, duration: 0.6, ease: 'bounce.out' }, Math.max(0.1, tStart - 0.35));
+  tl.to(pinGlow, { opacity: 1, duration: 0.4 }, tStart + 0.2);
+  tl.from(pinLab, { opacity: 0, duration: 0.4 }, tStart);
+  tl.to(dmp, { attr: { 'stroke-dashoffset': 0 }, duration: tDest + 0.6 - tStart, ease: 'power2.inOut' }, tStart);
+  tl.fromTo(head, { opacity: 0, scaleX: 0 }, { opacity: 1, scaleX: 1, duration: 0.3, ease: 'back.out(2)' }, tDest + 0.55);
+  tl.to(file, { scale: 1.08, duration: 0.15, yoyo: true, repeat: 1 }, tDest + 0.6);
+
+  const cardIn = (i, t) => tl.fromTo(cards[i].c, { opacity: 0, y: 60, scale: 0.9 }, { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'back.out(1.6)' }, t);
+  gsap.set(cards.map((c) => c.c), { opacity: 0 });
+  cardIn(0, tOwn - 0.35);
+  tl.fromTo([tagMP4, tagWebM], { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.45, ease: 'back.out(2)', stagger: 0.12 }, tWeb);
+
+  cardIn(1, tEmail - 0.3);
+  cardIn(2, tShared - 0.25);
+  cardIn(3, tUnc - 0.2);
+  const stampIn = (s, card, t) => {
+    tl.fromTo(s, { opacity: 0, scale: 2.4, rotation: -18 }, { opacity: 1, scale: 1, rotation: -7, duration: 0.28, ease: 'power4.in' }, t);
+    tl.to(card, { y: 6, duration: 0.07, yoyo: true, repeat: 1 }, t + 0.28);
+  };
+  stampIn(st1, cards[1].c, tEmail + 0.25);
+  stampIn(st2, cards[2].c, tDrives + 0.1);
+  gsap.set([st3], { opacity: 0 });
+  tl.fromTo(unsure, { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.4, ease: 'back.out(2)', immediateRender: false }, tUnc + 0.2);
+  gsap.set(unsure, { opacity: 0 });
+  tl.to(cards[3].c, { rotation: 3, duration: 0.12, yoyo: true, repeat: 3, ease: 'sine.inOut' }, tLMS);
+  tl.to(unsure, { opacity: 0, scale: 0.5, duration: 0.2, ease: 'power2.in' }, tMP4 - 0.25);
+  tl.to(cards[3].ic, { color: BLUE, duration: 0.35 }, tMP4 - 0.1);
+  stampIn(st3, cards[3].c, tMP4 - 0.28);
+
+  tl.fromTo(final, { opacity: 0, y: 40, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'back.out(1.5)' }, tMP4 + 0.05);
+  tl.to(cards[0].c, { opacity: 0.55, duration: 0.5 }, tSafe - 0.1);
+  tl.to(glows, { opacity: 1, duration: 0.4, stagger: 0.06 }, tSafe);
+  tl.fromTo(fMP4, { textShadow: '0 0 0px rgba(61,123,255,0)' }, { textShadow: '0 0 40px rgba(61,123,255,.55)', duration: 0.5, immediateRender: false }, tSafe);
+  tl.to([st1, st2, st3], { scale: 1.12, duration: 0.18, yoyo: true, repeat: 1, stagger: 0.06 }, tSafe);
+});

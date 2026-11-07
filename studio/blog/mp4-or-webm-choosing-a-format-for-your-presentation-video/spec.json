@@ -1,0 +1,101 @@
+{
+  "title": "\"MP4 or WebM? Choosing a Format for Your Presentation Video\" (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "MP4 or WebM? Choosing Your Video Format",
+      "bullets": [],
+      "notes": "You've turned your deck into a video. Now, which file format should it be? MP4 and WebM are both good, and here's how to choose.",
+      "minDuration": 9
+    },
+    {
+      "title": "A video file has two layers",
+      "bullets": [
+        "Container: the file type, like .mp4 or .webm",
+        "Codecs: how video and audio are compressed",
+        "What matters: can the destination play it?"
+      ],
+      "notes": "Every video file has a container, like dot mp4, wrapping compressed video and audio. You don't need codec names. Just ask whether the destination can play it.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "MP4 is most portable; WebM suits the web",
+      "bullets": [
+        "MP4: phones, computers, TVs, most platforms",
+        "WebM: Chrome, Edge and Firefox",
+        "WebM on phones and TVs: varies",
+        "LMSs: check your system"
+      ],
+      "notes": "MP4 plays almost everywhere, so it's the safest bet for uploads. WebM is a solid web format, but sometimes needs converting for a specific destination.",
+      "minDuration": 11,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Work backwards from where it's going",
+      "bullets": [
+        "Your own website: WebM or MP4",
+        "YouTube, social, LMS: check accepted formats",
+        "Email or shared drive: MP4",
+        "When unsure: MP4"
+      ],
+      "notes": "Start with the destination. Either format works on your own website. For email, shared drives or an uncertain LMS, MP4 is the safe choice.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "One video, three destinations",
+      "bullets": [
+        "Website: embed the WebM",
+        "YouTube: upload WebM or convert",
+        "LMS: MP4 only, so convert once",
+        "Play the converted file through"
+      ],
+      "notes": "Take a five-minute product overview saved as WebM. Embed it on your site, upload to YouTube, and convert once for the LMS. Then watch it through to check sync.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Ordinary deck in, MP4 or WebM out",
+      "bullets": [
+        "Speaker notes become narration",
+        "MP4 to download, WebM available",
+        "Pro: a.i. directs the video",
+        "Try Basic first, no subscription needed"
+      ],
+      "notes": "On Pro, a.i. directs your video, tightening the story and timing each scene to your narration. Try Basic first, and get an MP4 or WebM at powerpoint2vid.com.",
+      "minDuration": 12,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}

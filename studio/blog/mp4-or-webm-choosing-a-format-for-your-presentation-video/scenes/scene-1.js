@@ -1,0 +1,136 @@
+/* Scene 2 — "Every video file has a container, like dot mp4, wrapping compressed video and audio.
+ * You don't need codec names. Just ask whether the destination can play it."
+ * Storyboard: paper stage, close-up on a single file icon. On "container" its outer shell draws on in
+ * blue and a ".mp4" tag snaps on, and the face goes translucent into a cutaway. On "compressed video and
+ * audio" two inner layers slide in: a running film strip and a live waveform. On "codec names" grey
+ * jargon chips flutter in around it, then get swept off. On "ask … destination" the box glides left and
+ * turns toward a play button that lights amber on "play". Headline "Can it play there?" holds. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const A = (i, w, f) => { const v = ctx.at(i, w); return (v == null || isNaN(v)) ? f : v; };
+  const tCont = A(0, 'container,', 1.78), tMp4 = A(0, 'mp4,', 3.19), tComp = A(0, 'compressed', 4.64),
+    tAud = A(0, 'audio.', 5.78), tCodec = A(1, 'codec', 7.35), tNames = A(1, 'names.', 7.81),
+    tAsk = A(2, 'ask', 9.5), tWhether = A(2, 'whether', 9.83), tDest = A(2, 'destination', 10.2), tPlay = A(2, 'play', 11.0);
+  // 'video' occurs twice in beat 0; take the one after 'compressed'
+  let tVid = tComp + 0.59;
+  const b0 = ctx.beats && ctx.beats[0];
+  if (b0 && b0.words) { const w = b0.words.find((x) => /^video/i.test(x.w) && x.t > tComp); if (w) tVid = w.t; }
+  const MONO = 'ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(60% 55% at 50% 42%, #ffffff 0%, var(--paper) 62%, #e9e3d6 100%)';
+  const persp = el('div', 'abs', stage, { inset: 0, perspective: '1800px' });
+  const cam = el('div', 'abs', persp, { inset: 0, transformOrigin: '960px 540px', transformStyle: 'preserve-3d' });
+
+  const floorSh = el('div', 'abs', cam, { left: '700px', top: '820px', width: '520px', height: '60px', borderRadius: '50%', background: 'radial-gradient(closest-side, rgba(20,22,31,.22), transparent)' });
+
+  const file = el('div', 'abs', cam, { left: '730px', top: '240px', width: '460px', height: '600px', transformOrigin: '50% 50%' });
+  const svgWrap = el('div', 'abs', file, { inset: 0, filter: 'drop-shadow(0 30px 50px rgba(20,22,31,.18))' });
+  svgWrap.innerHTML = `<svg width="460" height="600" viewBox="0 0 460 600" style="overflow:visible">
+    <path id="face" d="M20 20 H340 L440 120 V580 H20 Z" fill="#ffffff" stroke="#d9d3c6" stroke-width="3"/>
+    <path id="fold" d="M340 20 V120 H440 Z" fill="#ece6da"/>
+    <path id="shell" d="M20 20 H340 L440 120 V580 H20 Z" fill="none" stroke="#3D7BFF" stroke-width="7" stroke-linejoin="round" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1"/>
+    <path id="shellFold" d="M340 20 V120 H440" fill="none" stroke="#3D7BFF" stroke-width="7" stroke-linejoin="round" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1"/>
+  </svg>`;
+  const face = svgWrap.querySelector('#face'), shell = svgWrap.querySelector('#shell'), shellFold = svgWrap.querySelector('#shellFold');
+  const interior = el('div', 'abs', file, { left: '24px', top: '24px', width: '412px', height: '552px', clipPath: 'polygon(0 0, 77% 0, 100% 18%, 100% 100%, 0 100%)', background: 'linear-gradient(180deg, rgba(61,123,255,.07), rgba(61,123,255,.02))', opacity: 0 });
+  const glyph = el('div', 'abs', file, { left: '180px', top: '250px', width: 0, height: 0, borderTop: '50px solid transparent', borderBottom: '50px solid transparent', borderLeft: '84px solid #c9c2b3' });
+
+  const tag = el('div', 'abs', file, { left: '0px', top: '-84px', padding: '14px 26px', borderRadius: '14px', background: '#3D7BFF', color: '#fff', font: `700 44px/1 ${MONO}`, letterSpacing: '.02em', boxShadow: '0 14px 34px rgba(61,123,255,.38)', transformOrigin: '20% 100%' });
+  tag.textContent = '.mp4';
+  const contLab = el('div', 'abs', file, { left: '200px', top: '-62px', font: `600 22px/1 ${MONO}`, letterSpacing: '.16em', color: '#3D7BFF' });
+  contLab.textContent = 'CONTAINER';
+
+  const vLab = el('div', 'abs', file, { left: '62px', top: '126px', font: `600 20px/1 ${MONO}`, letterSpacing: '.16em', color: '#8A90A6' }); vLab.textContent = 'VIDEO';
+  const film = el('div', 'abs', file, { left: '60px', top: '156px', width: '340px', height: '170px', borderRadius: '10px', overflow: 'hidden', background: '#14161F', boxShadow: '0 18px 36px rgba(20,22,31,.25)' });
+  const holesT = el('div', 'abs', film, { left: 0, top: '10px', width: '700px', height: '14px', background: 'repeating-linear-gradient(90deg, #F6F3EC 0 14px, transparent 14px 30px)', opacity: 0.85 });
+  const holesB = el('div', 'abs', film, { left: 0, bottom: '10px', width: '700px', height: '14px', background: 'repeating-linear-gradient(90deg, #F6F3EC 0 14px, transparent 14px 30px)', opacity: 0.85 });
+  const frameRow = el('div', 'abs', film, { left: 0, top: '34px', height: '102px', width: '1200px' });
+  const hues = ['#3D7BFF', '#5b8fff', '#2EC4A0', '#FFB547', '#3D7BFF', '#7aa2ff', '#2EC4A0', '#FFB547', '#3D7BFF', '#5b8fff', '#2EC4A0', '#FFB547'];
+  hues.forEach((c, i) => el('div', 'abs', frameRow, { left: i * 120 + 'px', top: 0, width: '108px', height: '102px', borderRadius: '6px', background: `linear-gradient(150deg, ${c}, #14161F 130%)` }));
+
+  const aLab = el('div', 'abs', file, { left: '62px', top: '352px', font: `600 20px/1 ${MONO}`, letterSpacing: '.16em', color: '#8A90A6' }); aLab.textContent = 'AUDIO';
+  const wave = el('div', 'abs', file, { left: '60px', top: '382px', width: '340px', height: '150px', borderRadius: '10px', background: '#ffffff', border: '2px solid #e2dccf', boxShadow: '0 18px 36px rgba(20,22,31,.12)', overflow: 'hidden' });
+  const r = ctx.rand(7);
+  const bars = Array.from({ length: 28 }, (_, i) => {
+    const b = el('div', 'abs', wave, { left: 14 + i * 11.3 + 'px', width: '6px', top: '75px', height: '10px', borderRadius: '3px', background: i % 7 === 3 ? '#2EC4A0' : '#3D7BFF' });
+    return { b, ph: r() * 6.28, k: 3 + r() * 5, a: 0.35 + r() * 0.65 };
+  });
+
+  const JARGON = [['H.264', 330, 300, -8], ['AAC', 1330, 250, 7], ['VP9', 300, 560, 6], ['Opus', 1390, 520, -6], ['HEVC', 400, 790, -4], ['AV1', 1340, 770, 9]];
+  const chips = JARGON.map(([txt, x, y, rot]) => {
+    const c = el('div', 'abs', cam, { left: x + 'px', top: y + 'px', padding: '12px 20px', borderRadius: '999px', border: '2px solid #c9ccd6', background: 'rgba(255,255,255,.7)', font: `600 28px/1 ${MONO}`, letterSpacing: '.06em', color: '#8A90A6', opacity: 0 });
+    c.textContent = txt; c._rot = rot; return c;
+  });
+  const sweep = el('div', 'abs', cam, { left: '-500px', top: '160px', width: '260px', height: '780px', background: 'linear-gradient(90deg, transparent, rgba(138,144,166,.18), transparent)', transform: 'skewX(-14deg)', opacity: 0 });
+
+  const link = el('div', 'abs', cam, { left: 0, top: 0, width: '1920px', height: '1080px' });
+  link.innerHTML = `<svg width="1920" height="1080"><path d="M870 520 C 1000 470, 1150 470, 1270 520" fill="none" stroke="#8A90A6" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 16" /></svg>`;
+  gsap.set(link, { clipPath: 'inset(0px 1060px 0px 860px)' });
+  const playWrap = el('div', 'abs', cam, { left: '1300px', top: '400px', width: '240px', height: '240px', opacity: 0 });
+  const ring = el('div', 'abs', playWrap, { inset: 0, borderRadius: '50%', border: '6px solid #FFB547', opacity: 0 });
+  const btn = el('div', 'abs', playWrap, { inset: 0, borderRadius: '50%', background: '#ffffff', border: '5px solid #c9ccd6', boxShadow: '0 24px 50px rgba(20,22,31,.15)' });
+  const btnLit = el('div', 'abs', playWrap, { inset: 0, borderRadius: '50%', background: 'radial-gradient(circle at 35% 30%, #ffd58f, #FFB547 55%, #e8901a)', boxShadow: '0 0 90px rgba(255,181,71,.75), 0 24px 50px rgba(20,22,31,.18)', opacity: 0 });
+  const tri = el('div', 'abs', playWrap, { left: '96px', top: '76px', width: 0, height: 0, borderTop: '44px solid transparent', borderBottom: '44px solid transparent', borderLeft: '72px solid #8A90A6' });
+  const triLit = el('div', 'abs', playWrap, { left: '96px', top: '76px', width: 0, height: 0, borderTop: '44px solid transparent', borderBottom: '44px solid transparent', borderLeft: '72px solid #ffffff', opacity: 0 });
+
+  const head = el('div', 'abs', stage, { left: '160px', width: '1600px', top: '880px', textAlign: 'center', font: '800 92px/1 Inter Display, Inter', letterSpacing: '-.04em', color: '#14161F' });
+  const words = ctx.split(head, 'Can it play there?', 'word');
+  const glowFlash = el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(30% 35% at 74% 48%, rgba(255,181,71,.45), transparent 70%)', opacity: 0, pointerEvents: 'none' });
+
+  ctx.fx.vignette({ strength: 0.25 });
+  ctx.fx.grain({ opacity: 0.05, blend: 'multiply' });
+
+  ctx.onFrame((t) => {
+    const off = (t * 70) % 120;
+    frameRow.style.transform = `translateX(${-off}px)`;
+    const ho = (t * 70) % 30;
+    holesT.style.transform = holesB.style.transform = `translateX(${-ho}px)`;
+    bars.forEach((o) => {
+      const h = 14 + 110 * o.a * Math.abs(Math.sin(t * o.k + o.ph));
+      o.b.style.height = h + 'px'; o.b.style.top = 75 - h / 2 + 'px';
+    });
+  });
+
+  tl.from(file, { y: 40, opacity: 0, duration: 0.6 }, 0);
+  tl.from(floorSh, { opacity: 0, duration: 0.6 }, 0);
+  tl.to(cam, { scale: 1.05, duration: tAsk, ease: 'sine.inOut' }, 0);
+
+  gsap.set([tag, contLab, film, vLab, wave, aLab, ...words], { opacity: 0 });
+  tl.to(shell, { attr: { 'stroke-dashoffset': 0 }, duration: 1.0, ease: 'power2.inOut' }, tCont - 0.1);
+  tl.to(shellFold, { attr: { 'stroke-dashoffset': 0 }, duration: 0.4, ease: 'power2.out' }, tCont + 0.7);
+  tl.to(face, { attr: { 'fill-opacity': 0.35 }, duration: 0.8 }, tCont + 0.2);
+  tl.to(interior, { opacity: 1, duration: 0.8 }, tCont + 0.2);
+  tl.to(glyph, { opacity: 0, scale: 0.6, duration: 0.4, ease: 'power2.in' }, tCont + 0.2);
+  tl.to(contLab, { opacity: 1, duration: 0.5 }, tCont + 0.5);
+  tl.fromTo(tag, { opacity: 0, scale: 0.4, rotation: -10 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.55, ease: 'back.out(2)' }, tMp4 - 0.12);
+
+  tl.fromTo(film, { opacity: 0, x: -260 }, { opacity: 1, x: 0, duration: 0.7, ease: 'back.out(1.4)' }, tComp - 0.05);
+  tl.to(vLab, { opacity: 1, duration: 0.4 }, tVid - 0.1);
+  tl.fromTo(wave, { opacity: 0, x: 260 }, { opacity: 1, x: 0, duration: 0.7, ease: 'back.out(1.4)' }, tVid + 0.15);
+  tl.to(aLab, { opacity: 1, duration: 0.4 }, tAud - 0.1);
+
+  chips.forEach((c, i) => {
+    tl.fromTo(c, { opacity: 0, y: -40, rotation: c._rot * 3, scale: 0.7 }, { opacity: 1, y: 0, rotation: c._rot, scale: 1, duration: 0.55, ease: 'back.out(1.8)' }, tCodec - 0.25 + i * 0.07);
+    tl.to(c, { y: '+=8', rotation: c._rot * -0.6, duration: 0.5, ease: 'sine.inOut', yoyo: true, repeat: 1 }, tCodec + 0.35 + i * 0.05);
+  });
+  const sw = tNames + 0.45;
+  tl.fromTo(sweep, { opacity: 0, x: 0 }, { opacity: 1, x: 2600, duration: 0.9, ease: 'power2.inOut', immediateRender: false }, sw);
+  [...chips].sort((a, b) => parseFloat(a.style.left) - parseFloat(b.style.left)).forEach((c, i) => {
+    tl.to(c, { x: '+=520', y: '-=60', rotation: 40, opacity: 0, duration: 0.5, ease: 'power2.in' }, sw + 0.15 + i * 0.06);
+  });
+
+  tl.to(cam, { scale: 1, duration: 1.0, ease: 'expo.inOut' }, tAsk - 0.2);
+  tl.to(file, { x: -330, rotationY: 18, scale: 0.86, duration: 1.0, ease: 'expo.inOut' }, tAsk - 0.2);
+  tl.to(floorSh, { x: -330, scaleX: 0.86, duration: 1.0, ease: 'expo.inOut' }, tAsk - 0.2);
+  tl.to(link, { clipPath: 'inset(0px 640px 0px 860px)', duration: 0.6, ease: 'power2.inOut' }, tWhether);
+  tl.fromTo(playWrap, { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.6, ease: 'back.out(1.7)' }, tDest - 0.1);
+  words.forEach((w, i) => tl.fromTo(w, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.5, ease: 'back.out(1.6)' }, tDest + i * 0.08));
+
+  tl.to(btnLit, { opacity: 1, duration: 0.18, ease: 'power2.out' }, tPlay);
+  tl.to(triLit, { opacity: 1, duration: 0.18 }, tPlay);
+  tl.to(playWrap, { scale: 1.12, duration: 0.12, yoyo: true, repeat: 1, ease: 'power2.out' }, tPlay);
+  tl.fromTo(ring, { opacity: 1, scale: 1 }, { opacity: 0, scale: 1.8, duration: 0.9, ease: 'power2.out', immediateRender: false }, tPlay);
+  tl.fromTo(glowFlash, { opacity: 0 }, { opacity: 1, duration: 0.25, immediateRender: false }, tPlay);
+  tl.to(link.querySelector('path'), { attr: { stroke: '#FFB547' }, duration: 0.3 }, tPlay);
+  tl.to(cam, { scale: 1.035, x: -20, duration: Math.max(0.5, ctx.dur - tPlay), ease: 'sine.inOut' }, tPlay - 0.4);
+});
