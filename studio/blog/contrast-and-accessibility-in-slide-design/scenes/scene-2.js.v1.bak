@@ -1,0 +1,104 @@
+/* Scene 3 — "Use near-black text on light backgrounds, put a solid panel behind text on photos,
+ * and always test with a checker."
+ * Storyboard: hard switch to a paper stage. A washed-out sample line darkens to near-black ink on
+ * "near-black" as a focus ring tightens around it. On "panel" a busy, blurred photo slides in with an
+ * unreadable caption; a solid ink panel rises behind the words and they pop clear on "photos".
+ * On "test with a checker" a checker badge stamps a teal PASS tick beside the caption.
+ * The camera drifts gently right across the photo, then settles. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const W = (w, f) => { const v = ctx.at(0, w); return v == null ? f : v; };
+  const tNear = W('near-black', 0.9), tLight = W('light', 2.0), tPut = W('put', 3.2),
+        tPanel = W('panel', 3.85), tPhotos = W('photos', 5.05), tTest = W('test', 6.42), tCheck = W('checker', 6.97);
+  const mono = '600 20px/1 ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(80% 70% at 30% 35%, #FFFDF8 0%, var(--paper) 55%, #ECE8DF 100%)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '50% 50%' });
+
+  /* ---- left: near-black on light ---- */
+  const label = el('div', 'abs', cam, { left: '170px', top: '300px', font: mono, letterSpacing: '.14em', color: 'var(--mist)' });
+  label.textContent = 'INK ON PAPER';
+  const sample = el('div', 'abs', cam, { left: '170px', top: '350px', width: '640px', font: '850 100px/1.02 Inter Display, Inter', letterSpacing: '-.045em', color: '#CFCBC2' });
+  sample.innerHTML = 'Clear for<br>everyone.';
+  const ring = el('div', 'abs', cam, { left: '140px', top: '330px', width: '640px', height: '250px', border: '3px solid var(--signal)', borderRadius: '18px', opacity: 0 });
+  const chips = el('div', 'abs', cam, { left: '170px', top: '620px', display: 'flex', gap: '18px' });
+  const chip = (bg, txt, fg, bd) => {
+    const c = el('div', '', chips, { display: 'flex', alignItems: 'center', gap: '12px', padding: '12px 18px 12px 12px', borderRadius: '12px', background: '#fff', boxShadow: '0 10px 30px rgba(20,22,28,.08)' });
+    el('div', '', c, { width: '34px', height: '34px', borderRadius: '8px', background: bg, border: bd || 'none' });
+    const t = el('div', '', c, { font: mono, letterSpacing: '.08em', color: fg }); t.textContent = txt; return c;
+  };
+  const c1 = chip('var(--ink)', '#14161C', 'var(--ink)');
+  const c2 = chip('var(--paper)', '#F7F5F0', 'var(--ink)', '1px solid #ddd8cc');
+
+  /* ---- right: busy photo ---- */
+  const photo = el('div', 'abs', cam, { left: '900px', top: '220px', width: '880px', height: '620px', borderRadius: '22px', overflow: 'hidden', boxShadow: '0 50px 100px rgba(20,22,28,.28), 0 8px 20px rgba(20,22,28,.12)', background: '#e9dcc4' });
+  const blobs = el('div', 'abs', photo, { inset: '-60px', filter: 'blur(14px)' });
+  const r = ctx.rand(42);
+  const cols = ['#fff6e0', '#f2c46b', '#ffffff', '#9fd8cf', '#f6e7c8', '#e8a35c', '#cfe6f2', '#ffffff'];
+  let g = [];
+  for (let i = 0; i < 26; i++) {
+    const x = Math.round(r() * 100), y = Math.round(r() * 100), s = 8 + Math.round(r() * 22);
+    g.push(`radial-gradient(${s}% ${s * 1.3}% at ${x}% ${y}%, ${cols[i % cols.length]} 0%, transparent 70%)`);
+  }
+  blobs.style.background = g.join(',') + ', linear-gradient(135deg, #f4e2c0, #cfe3df)';
+  // a few soft "objects" for busyness
+  for (let i = 0; i < 9; i++) {
+    el('div', 'abs', blobs, { left: Math.round(r() * 900) + 'px', top: Math.round(r() * 650) + 'px', width: 60 + Math.round(r() * 140) + 'px', height: 60 + Math.round(r() * 140) + 'px', borderRadius: '50%', background: i % 2 ? 'rgba(255,255,255,.8)' : 'rgba(242,169,0,.35)' });
+  }
+  const pTag = el('div', 'abs', photo, { left: '36px', top: '32px', font: mono, letterSpacing: '.14em', color: 'rgba(255,255,255,.9)', padding: '8px 12px', borderRadius: '8px', background: 'rgba(20,22,28,.35)' });
+  pTag.textContent = 'TEXT ON PHOTO';
+  const panel = el('div', 'abs', photo, { left: '40px', top: '440px', width: '540px', height: '136px', borderRadius: '14px', background: 'var(--ink)', boxShadow: '0 20px 40px rgba(11,13,18,.35)', transformOrigin: '50% 100%' });
+  const caption = el('div', 'abs', photo, { left: '76px', top: '470px', width: '480px', font: '800 64px/1.1 Inter Display, Inter', letterSpacing: '-.035em', color: 'rgba(255,255,255,.6)', whiteSpace: 'nowrap', transformOrigin: '0% 50%' });
+  caption.textContent = 'Join us live';
+
+  /* ---- checker badge ---- */
+  const badge = el('div', 'abs', photo, { left: '612px', top: '420px', width: '230px', padding: '18px 20px', borderRadius: '18px', background: '#fff', boxShadow: '0 24px 50px rgba(11,13,18,.3)', transformOrigin: '50% 50%' });
+  const bl = el('div', '', badge, { font: '600 15px/1 ui-monospace, Menlo, monospace', letterSpacing: '.14em', color: 'var(--mist)' });
+  bl.textContent = 'CHECKER';
+  const row = el('div', '', badge, { display: 'flex', alignItems: 'center', gap: '14px', marginTop: '14px' });
+  const tick = el('div', '', row, { width: '62px', height: '62px', borderRadius: '50%', background: 'var(--teal)', boxShadow: '0 0 30px rgba(18,165,148,.55)', flex: 'none' });
+  tick.innerHTML = '<svg width="62" height="62" viewBox="0 0 62 62"><path id="tk" d="M18 32 L27 41 L45 22" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="44" stroke-dashoffset="44"/></svg>';
+  const tk = tick.querySelector('#tk');
+  const pv = el('div', '', row, {});
+  const pass = el('div', '', pv, { font: '900 44px/1 Inter Display, Inter', letterSpacing: '-.03em', color: 'var(--teal)' }); pass.textContent = 'Pass';
+  const ratio = el('div', '', pv, { font: '600 17px/1 ui-monospace, Menlo, monospace', letterSpacing: '.06em', color: 'var(--ink)', marginTop: '6px' }); ratio.textContent = '≥ 4.5:1';
+  const shock = el('div', 'abs', photo, { left: '667px', top: '445px', width: '120px', height: '120px', borderRadius: '50%', border: '5px solid var(--teal)', opacity: 0 });
+
+  ctx.fx.vignette({ strength: 0.25 });
+  ctx.fx.grain({ opacity: 0.05 });
+
+  /* ---- timeline ---- */
+  gsap.set(blobs, { filter: 'blur(14px)' });
+  tl.from(label, { opacity: 0, y: 12, duration: 0.5 }, 0.05);
+  tl.from(sample, { opacity: 0, y: 30, duration: 0.6 }, 0.1);
+  tl.from([c1, c2], { opacity: 0, y: 20, duration: 0.5, stagger: 0.1 }, 0.35);
+  // "near-black": ink lands, focus ring tightens
+  tl.to(sample, { color: '#14161C', duration: 0.5, ease: 'power2.out' }, tNear - 0.1);
+  tl.fromTo(ring, { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 0.55, ease: 'power3.out', immediateRender: false }, tNear - 0.05);
+  tl.to(ring, { opacity: 0, duration: 0.5 }, tLight + 0.4);
+  tl.fromTo(c1, { scale: 1 }, { scale: 1.08, duration: 0.18, yoyo: true, repeat: 1, ease: 'power2.out', immediateRender: false }, tNear + 0.2);
+  tl.fromTo(c2, { scale: 1 }, { scale: 1.08, duration: 0.18, yoyo: true, repeat: 1, ease: 'power2.out', immediateRender: false }, tLight);
+
+  // photo slides in, caption unreadable
+  gsap.set(panel, { scaleY: 0, opacity: 0 });
+  gsap.set(badge, { opacity: 0 });
+  tl.from(photo, { x: 1100, rotation: 4, duration: 0.9, ease: 'expo.out' }, tPut - 0.55);
+  tl.to(blobs, { x: -40, scale: 1.06, duration: ctx.dur, ease: 'none' }, 0);
+  tl.to([label, sample, chips], { opacity: 0.45, duration: 0.6 }, tPut);
+  // "panel": ink panel rises, words pop clear on "photos"
+  tl.to(panel, { scaleY: 1, opacity: 1, duration: 0.6, ease: 'back.out(1.6)' }, tPanel);
+  tl.to(caption, { color: '#ffffff', duration: 0.3 }, tPanel + 0.25);
+  tl.fromTo(caption, { scale: 1 }, { scale: 1.07, duration: 0.2, yoyo: true, repeat: 1, ease: 'power2.out', immediateRender: false }, tPhotos - 0.1);
+
+  // "test with a checker": badge stamps PASS
+  tl.fromTo(badge, { opacity: 0, scale: 2.2, rotation: -10 }, { opacity: 1, scale: 1, rotation: -3, duration: 0.4, ease: 'power4.in', immediateRender: false }, tTest - 0.25);
+  tl.to(badge, { y: 5, duration: 0.07, yoyo: true, repeat: 1 }, tTest + 0.15);
+  tl.fromTo(shock, { opacity: 0.9, scale: 0.5 }, { opacity: 0, scale: 2.4, duration: 0.8, ease: 'power2.out', immediateRender: false }, tTest + 0.15);
+  tl.to(tk, { attr: { 'stroke-dashoffset': 0 }, duration: 0.35, ease: 'power2.out' }, tCheck - 0.2);
+  tl.fromTo(tick, { scale: 1 }, { scale: 1.15, duration: 0.15, yoyo: true, repeat: 1, immediateRender: false }, tCheck + 0.1);
+
+  // camera: gentle push, drift right across the photo, then settle
+  tl.fromTo(cam, { scale: 1, x: 0 }, { scale: 1.03, x: -30, duration: tPut + 0.5, ease: 'power1.inOut', immediateRender: false }, 0);
+  tl.to(cam, { x: -70, scale: 1.05, duration: tTest - tPut - 0.5, ease: 'power1.inOut' }, tPut + 0.5);
+  tl.to(cam, { x: -60, scale: 1.055, duration: ctx.dur - tTest, ease: 'power2.out' }, tTest);
+});

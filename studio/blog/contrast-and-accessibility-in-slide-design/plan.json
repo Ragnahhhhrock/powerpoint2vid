@@ -1,0 +1,966 @@
+{
+  "title": "Contrast and Accessibility in Slide Design (blog explainer)",
+  "brief": {
+    "palette": {
+      "ink": "#14161C",
+      "night": "#0B0D12",
+      "paper": "#F7F5F0",
+      "signal": "#2F6BFF",
+      "amber": "#F2A900",
+      "teal": "#12A594",
+      "mist": "#9AA0AB"
+    },
+    "font": "Inter Display",
+    "motion": "Calm, confident pacing with soft ease-out landings and slow push-ins; elements snap into legibility as if a focus ring tightens on each key word.",
+    "story": "We open in murky low contrast and literally turn the contrast up, then alternate crisp paper scenes with deep night scenes for each fix, ending on a bright, fully legible call to action."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "Every audience sees, hears and processes information differently. A few simple fixes make your slides work for every viewer, and clearer for everyone.",
+      "storyboard": "Open on a pale grey stage where the headline 'Accessible slides are better slides' sits in washed-out mist grey, barely readable. On 'every viewer' a contrast dial in the corner spins and the type snaps to ink on paper, crisp at 140px. On 'clearer for everyone' four small chips slide up beneath: Contrast, Text, Colour, Video, each in signal blue. Slow push-in holds on the sharpened headline. The original's overlapping title and grey list are rebuilt cleanly; the clipping is cut.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Accessible Slides Are Better Slides",
+        "text": "Contrast. Text. Colour. Video",
+        "notes": "Every audience sees, hears and processes information differently. Here are simple fixes that make your slides work for every viewer, and clearer for everyone.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 10.613,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.596,
+          "text": "Every audience sees, hears and processes information differently.",
+          "words": [
+            {
+              "w": "Every",
+              "t": 0.8
+            },
+            {
+              "w": "audience",
+              "t": 1.16
+            },
+            {
+              "w": "sees,",
+              "t": 1.636
+            },
+            {
+              "w": "hears",
+              "t": 2.147
+            },
+            {
+              "w": "and",
+              "t": 2.518
+            },
+            {
+              "w": "processes",
+              "t": 2.692
+            },
+            {
+              "w": "information",
+              "t": 3.296
+            },
+            {
+              "w": "differently.",
+              "t": 3.923
+            }
+          ]
+        },
+        {
+          "t": 5.038,
+          "end": 9.763,
+          "text": "A few simple fixes make your slides work for every viewer, and clearer for everyone.",
+          "words": [
+            {
+              "w": "A",
+              "t": 5.038
+            },
+            {
+              "w": "few",
+              "t": 5.2
+            },
+            {
+              "w": "simple",
+              "t": 5.432
+            },
+            {
+              "w": "fixes",
+              "t": 5.816
+            },
+            {
+              "w": "make",
+              "t": 6.292
+            },
+            {
+              "w": "your",
+              "t": 6.5
+            },
+            {
+              "w": "slides",
+              "t": 6.663
+            },
+            {
+              "w": "work",
+              "t": 7.104
+            },
+            {
+              "w": "for",
+              "t": 7.394
+            },
+            {
+              "w": "every",
+              "t": 7.557
+            },
+            {
+              "w": "viewer,",
+              "t": 7.859
+            },
+            {
+              "w": "and",
+              "t": 8.474
+            },
+            {
+              "w": "clearer",
+              "t": 8.695
+            },
+            {
+              "w": "for",
+              "t": 9.055
+            },
+            {
+              "w": "everyone.",
+              "t": 9.194
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.763
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Low contrast is the most common problem, and one of the easiest to fix. Aim for four and a half to one for normal text, and three to one for large text.",
+      "storyboard": "Night stage. A grey word 'Read me' fades in nearly invisible against the dark; on 'easiest to fix' it brightens to paper white. On 'four and a half to one' a giant '4.5:1' counts up at 160px in paper with a small label 'normal text'. On 'three to one' a second figure '3:1' slides in to its right in amber, labelled 'large text & key graphics'. The near-black and photo-panel bullets are cut to keep one idea; camera holds wide on the two ratios.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Contrast Is the Foundation",
+        "text": "4.5:1 for normal text. 3:1 for large text and key graphics. Near-black text on light backgrounds. Panel behind text on photos",
+        "notes": "Low contrast is the most common problem, and one of the easiest to fix. Aim for four and a half to one for normal text, and test with a checker.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 11,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.497,
+          "text": "Low contrast is the most common problem, and one of the easiest to fix.",
+          "words": [
+            {
+              "w": "Low",
+              "t": 0.55
+            },
+            {
+              "w": "contrast",
+              "t": 0.817
+            },
+            {
+              "w": "is",
+              "t": 1.386
+            },
+            {
+              "w": "the",
+              "t": 1.514
+            },
+            {
+              "w": "most",
+              "t": 1.63
+            },
+            {
+              "w": "common",
+              "t": 1.85
+            },
+            {
+              "w": "problem,",
+              "t": 2.187
+            },
+            {
+              "w": "and",
+              "t": 2.814
+            },
+            {
+              "w": "one",
+              "t": 3.011
+            },
+            {
+              "w": "of",
+              "t": 3.162
+            },
+            {
+              "w": "the",
+              "t": 3.255
+            },
+            {
+              "w": "easiest",
+              "t": 3.406
+            },
+            {
+              "w": "to",
+              "t": 3.836
+            },
+            {
+              "w": "fix.",
+              "t": 3.963
+            }
+          ]
+        },
+        {
+          "t": 4.939,
+          "end": 9.536,
+          "text": "Aim for four and a half to one for normal text, and three to one for large text.",
+          "words": [
+            {
+              "w": "Aim",
+              "t": 4.939
+            },
+            {
+              "w": "for",
+              "t": 5.229
+            },
+            {
+              "w": "four",
+              "t": 5.392
+            },
+            {
+              "w": "and",
+              "t": 5.647
+            },
+            {
+              "w": "a",
+              "t": 5.775
+            },
+            {
+              "w": "half",
+              "t": 5.868
+            },
+            {
+              "w": "to",
+              "t": 6.1
+            },
+            {
+              "w": "one",
+              "t": 6.251
+            },
+            {
+              "w": "for",
+              "t": 6.518
+            },
+            {
+              "w": "normal",
+              "t": 6.692
+            },
+            {
+              "w": "text,",
+              "t": 7.063
+            },
+            {
+              "w": "and",
+              "t": 7.702
+            },
+            {
+              "w": "three",
+              "t": 7.923
+            },
+            {
+              "w": "to",
+              "t": 8.178
+            },
+            {
+              "w": "one",
+              "t": 8.317
+            },
+            {
+              "w": "for",
+              "t": 8.526
+            },
+            {
+              "w": "large",
+              "t": 8.689
+            },
+            {
+              "w": "text.",
+              "t": 9.026
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.536
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "Use near-black text on light backgrounds, put a solid panel behind text on photos, and always test with a checker.",
+      "storyboard": "Hard switch to paper stage: near-black ink text sits on cream. On 'panel behind text on photos' a busy blurred photo slides in, its caption unreadable, until a solid ink panel rises behind the words and they pop clear. On 'test with a checker' a small checker badge stamps a teal 'Pass' tick beside the caption. Camera drifts gently right across the photo, then settles.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Contrast Is the Foundation",
+        "text": "4.5:1 for normal text. 3:1 for large text and key graphics. Near-black text on light backgrounds. Panel behind text on photos",
+        "notes": "Low contrast is the most common problem, and one of the easiest to fix. Aim for four and a half to one for normal text, and test with a checker.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 9,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 7.504,
+          "text": "Use near-black text on light backgrounds, put a solid panel behind text on photos, and always test with a checker.",
+          "words": [
+            {
+              "w": "Use",
+              "t": 0.55
+            },
+            {
+              "w": "near-black",
+              "t": 0.898
+            },
+            {
+              "w": "text",
+              "t": 1.444
+            },
+            {
+              "w": "on",
+              "t": 1.839
+            },
+            {
+              "w": "light",
+              "t": 2.013
+            },
+            {
+              "w": "backgrounds,",
+              "t": 2.28
+            },
+            {
+              "w": "put",
+              "t": 3.197
+            },
+            {
+              "w": "a",
+              "t": 3.418
+            },
+            {
+              "w": "solid",
+              "t": 3.499
+            },
+            {
+              "w": "panel",
+              "t": 3.847
+            },
+            {
+              "w": "behind",
+              "t": 4.196
+            },
+            {
+              "w": "text",
+              "t": 4.532
+            },
+            {
+              "w": "on",
+              "t": 4.881
+            },
+            {
+              "w": "photos,",
+              "t": 5.055
+            },
+            {
+              "w": "and",
+              "t": 5.937
+            },
+            {
+              "w": "always",
+              "t": 6.123
+            },
+            {
+              "w": "test",
+              "t": 6.425
+            },
+            {
+              "w": "with",
+              "t": 6.738
+            },
+            {
+              "w": "a",
+              "t": 6.901
+            },
+            {
+              "w": "checker.",
+              "t": 6.97
+            }
+          ]
+        }
+      ],
+      "speechEnd": 7.504
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Some viewers can't tell red from green. Give each status a label and an icon, and let colour be an extra cue, not the only one.",
+      "storyboard": "Split screen on paper. Left 'Before': two status dots in red and green; on 'can't tell red from green' both desaturate to identical muddy grey. Right 'After': on 'a label and an icon' pills read 'On track' with a tick and 'Late' with a clock, staying readable even when greyed. On 'extra cue' the colour floods back softly behind the pills. A tiny line chart with series labelled directly at line ends slides in below and holds.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Never Rely on Colour Alone",
+        "text": "Before: status shown in red or green text. After: \"On track\" and \"Late\" labels plus icons. Label chart series directly",
+        "notes": "Some viewers can't tell red from green. Give each status a label and an icon, and let colour be an extra cue, not the only one.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "wipeleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 9.836,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.709,
+          "text": "Some viewers can't tell red from green.",
+          "words": [
+            {
+              "w": "Some",
+              "t": 0.55
+            },
+            {
+              "w": "viewers",
+              "t": 0.852
+            },
+            {
+              "w": "can't",
+              "t": 1.212
+            },
+            {
+              "w": "tell",
+              "t": 1.479
+            },
+            {
+              "w": "red",
+              "t": 1.758
+            },
+            {
+              "w": "from",
+              "t": 1.99
+            },
+            {
+              "w": "green.",
+              "t": 2.198
+            }
+          ]
+        },
+        {
+          "t": 3.151,
+          "end": 8.236,
+          "text": "Give each status a label and an icon, and let colour be an extra cue, not the only one.",
+          "words": [
+            {
+              "w": "Give",
+              "t": 3.151
+            },
+            {
+              "w": "each",
+              "t": 3.371
+            },
+            {
+              "w": "status",
+              "t": 3.58
+            },
+            {
+              "w": "a",
+              "t": 4.044
+            },
+            {
+              "w": "label",
+              "t": 4.137
+            },
+            {
+              "w": "and",
+              "t": 4.532
+            },
+            {
+              "w": "an",
+              "t": 4.683
+            },
+            {
+              "w": "icon,",
+              "t": 4.811
+            },
+            {
+              "w": "and",
+              "t": 5.461
+            },
+            {
+              "w": "let",
+              "t": 5.67
+            },
+            {
+              "w": "colour",
+              "t": 5.879
+            },
+            {
+              "w": "be",
+              "t": 6.192
+            },
+            {
+              "w": "an",
+              "t": 6.308
+            },
+            {
+              "w": "extra",
+              "t": 6.436
+            },
+            {
+              "w": "cue,",
+              "t": 6.761
+            },
+            {
+              "w": "not",
+              "t": 7.318
+            },
+            {
+              "w": "the",
+              "t": 7.516
+            },
+            {
+              "w": "only",
+              "t": 7.655
+            },
+            {
+              "w": "one.",
+              "t": 7.911
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.236
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Big, plain, left-aligned text reads well in a room and on a small screen. Body text at 24 point or larger, headlines at 36 or larger.",
+      "storyboard": "Night stage, left-aligned layout with wide right margin. A tiny script-font line shrinks and blurs away on 'plain'. On '24 point' a body-text sample grows to size with a ruler tick labelled '24pt+'; on '36' the headline sample above it scales up, labelled '36pt+', in amber. A phone outline slides in on 'small screen' showing the same text still crisp. Sentence case is shown implicitly; the bullet list is cut.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Make Text Easy to Read",
+        "text": "Body text 24pt or larger. Headlines 36pt or larger. Left-align body text. Use sentence case",
+        "notes": "Big, plain, left-aligned text reads well in a room and on a small screen. Avoid script or very light fonts, and leave plenty of space.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "smoothup",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 11.165,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.985,
+          "text": "Big, plain, left-aligned text reads well in a room and on a small screen.",
+          "words": [
+            {
+              "w": "Big,",
+              "t": 0.55
+            },
+            {
+              "w": "plain,",
+              "t": 0.899
+            },
+            {
+              "w": "left-aligned",
+              "t": 1.305
+            },
+            {
+              "w": "text",
+              "t": 1.955
+            },
+            {
+              "w": "reads",
+              "t": 2.57
+            },
+            {
+              "w": "well",
+              "t": 2.895
+            },
+            {
+              "w": "in",
+              "t": 3.197
+            },
+            {
+              "w": "a",
+              "t": 3.313
+            },
+            {
+              "w": "room",
+              "t": 3.406
+            },
+            {
+              "w": "and",
+              "t": 3.72
+            },
+            {
+              "w": "on",
+              "t": 3.871
+            },
+            {
+              "w": "a",
+              "t": 3.975
+            },
+            {
+              "w": "small",
+              "t": 4.056
+            },
+            {
+              "w": "screen.",
+              "t": 4.416
+            }
+          ]
+        },
+        {
+          "t": 5.589,
+          "end": 10.315,
+          "text": "Body text at 24 point or larger, headlines at 36 or larger.",
+          "words": [
+            {
+              "w": "Body",
+              "t": 5.589
+            },
+            {
+              "w": "text",
+              "t": 5.926
+            },
+            {
+              "w": "at",
+              "t": 6.309
+            },
+            {
+              "w": "24",
+              "t": 6.437
+            },
+            {
+              "w": "point",
+              "t": 6.959
+            },
+            {
+              "w": "or",
+              "t": 7.284
+            },
+            {
+              "w": "larger,",
+              "t": 7.447
+            },
+            {
+              "w": "headlines",
+              "t": 8.19
+            },
+            {
+              "w": "at",
+              "t": 8.724
+            },
+            {
+              "w": "36",
+              "t": 8.84
+            },
+            {
+              "w": "or",
+              "t": 9.513
+            },
+            {
+              "w": "larger.",
+              "t": 9.734
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.315
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "When a deck becomes a video, turn on captions, and let the voice explain what a chart shows, not just say 'as you can see here'.",
+      "storyboard": "Paper stage with a framed video player centred. On 'turn on captions' a burned-in caption bar slides up along the bottom in ink. A bar chart inside the player animates in; on 'explain what a chart shows' a sound wave pulses and a callout points to the tallest bar. On 'as you can see here' a speech bubble with that phrase appears and gets crossed out in amber. Slow push-in on the player, hold.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Video Needs Captions and Described Visuals",
+        "text": "Burned-in captions. Narration that describes the chart. Readable at small sizes. Steady pacing",
+        "notes": "When a deck becomes a video, turn on captions and let the voice explain what a chart shows, not just say \"as you can see here\".",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 9.72,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 8.12,
+          "text": "When a deck becomes a video, turn on captions, and let the voice explain what a chart shows, not just say 'as you can see here'.",
+          "words": [
+            {
+              "w": "When",
+              "t": 0.55
+            },
+            {
+              "w": "a",
+              "t": 0.759
+            },
+            {
+              "w": "deck",
+              "t": 0.84
+            },
+            {
+              "w": "becomes",
+              "t": 1.096
+            },
+            {
+              "w": "a",
+              "t": 1.432
+            },
+            {
+              "w": "video,",
+              "t": 1.502
+            },
+            {
+              "w": "turn",
+              "t": 2.152
+            },
+            {
+              "w": "on",
+              "t": 2.442
+            },
+            {
+              "w": "captions,",
+              "t": 2.593
+            },
+            {
+              "w": "and",
+              "t": 3.394
+            },
+            {
+              "w": "let",
+              "t": 3.568
+            },
+            {
+              "w": "the",
+              "t": 3.719
+            },
+            {
+              "w": "voice",
+              "t": 3.847
+            },
+            {
+              "w": "explain",
+              "t": 4.137
+            },
+            {
+              "w": "what",
+              "t": 4.555
+            },
+            {
+              "w": "a",
+              "t": 4.729
+            },
+            {
+              "w": "chart",
+              "t": 4.811
+            },
+            {
+              "w": "shows,",
+              "t": 5.147
+            },
+            {
+              "w": "not",
+              "t": 5.925
+            },
+            {
+              "w": "just",
+              "t": 6.134
+            },
+            {
+              "w": "say",
+              "t": 6.425
+            },
+            {
+              "w": "'as",
+              "t": 6.808
+            },
+            {
+              "w": "you",
+              "t": 7.04
+            },
+            {
+              "w": "can",
+              "t": 7.168
+            },
+            {
+              "w": "see",
+              "t": 7.353
+            },
+            {
+              "w": "here'.",
+              "t": 7.597
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.12
+    },
+    {
+      "file": "scenes/scene-6.js",
+      "narration": "Accessible slides make better videos. On Pro, AI directs the video, timing animation to your narration. Try Basic first at powerpoint2vid.com.",
+      "storyboard": "Night stage. 'Accessible slides make better videos' lands at 130px in paper, with three teal ticks ticking in beneath: Captions on, Steady speed, Small-window check. On 'AI directs the video' scene thumbnails fan out behind and sync to a waveform. On 'powerpoint2vid.com' everything clears and the URL settles centre in signal blue on paper-white type, holding for the end.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Accessible Slides Make Better Videos",
+        "text": "Captions on. Steady speaking speed. Check at small window size",
+        "notes": "Accessible slides make better videos. On Pro, a.i. directs the video, designing each scene and timing animation to your narration. Try Basic first at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-6.wav",
+      "duration": 13.315,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.861,
+          "text": "Accessible slides make better videos.",
+          "words": [
+            {
+              "w": "Accessible",
+              "t": 0.55
+            },
+            {
+              "w": "slides",
+              "t": 1.212
+            },
+            {
+              "w": "make",
+              "t": 1.688
+            },
+            {
+              "w": "better",
+              "t": 1.909
+            },
+            {
+              "w": "videos.",
+              "t": 2.176
+            }
+          ]
+        },
+        {
+          "t": 3.244,
+          "end": 7.4,
+          "text": "On Pro, AI directs the video, timing animation to your narration.",
+          "words": [
+            {
+              "w": "On",
+              "t": 3.244
+            },
+            {
+              "w": "Pro,",
+              "t": 3.476
+            },
+            {
+              "w": "AI",
+              "t": 3.905
+            },
+            {
+              "w": "directs",
+              "t": 4.277
+            },
+            {
+              "w": "the",
+              "t": 4.66
+            },
+            {
+              "w": "video,",
+              "t": 4.776
+            },
+            {
+              "w": "timing",
+              "t": 5.473
+            },
+            {
+              "w": "animation",
+              "t": 5.891
+            },
+            {
+              "w": "to",
+              "t": 6.413
+            },
+            {
+              "w": "your",
+              "t": 6.541
+            },
+            {
+              "w": "narration.",
+              "t": 6.715
+            }
+          ]
+        },
+        {
+          "t": 8.004,
+          "end": 11.115,
+          "text": "Try Basic first at powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 8.004
+            },
+            {
+              "w": "Basic",
+              "t": 8.364
+            },
+            {
+              "w": "first",
+              "t": 8.793
+            },
+            {
+              "w": "at",
+              "t": 9.177
+            },
+            {
+              "w": "PowerPoint",
+              "t": 9.304
+            },
+            {
+              "w": "to",
+              "t": 9.896
+            },
+            {
+              "w": "vid",
+              "t": 10.047
+            },
+            {
+              "w": "dot",
+              "t": 10.384
+            },
+            {
+              "w": "com.",
+              "t": 10.651
+            }
+          ]
+        }
+      ],
+      "speechEnd": 11.115
+    }
+  ],
+  "voiceProvider": "elevenlabs"
+}

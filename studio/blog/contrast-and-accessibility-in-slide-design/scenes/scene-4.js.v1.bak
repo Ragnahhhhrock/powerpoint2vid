@@ -1,0 +1,94 @@
+/* Scene 4 — "Big, plain, left-aligned text reads well in a room and on a small screen.
+ *            Body text at 24 point or larger, headlines at 36 or larger."
+ * Storyboard: night stage, left-aligned layout with a wide right margin. A tiny script-font title
+ * flickers in murky; on "Big" a heavy sans headline snaps into focus. On "plain" the script line
+ * shrinks and blurs away. On "left-aligned" a teal guide draws down the margin and the headline
+ * slides to it. On "small screen" a phone slides in showing the same text, still crisp.
+ * On "24" a body sample grows to size with a ruler tick "24PT+"; on "36" the headline above scales
+ * up in amber with "36PT+". Sentence case is shown implicitly; the bullet list is cut. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const big = ctx.at(0, 'Big,'), plain = ctx.at(0, 'plain,'), left = ctx.at(0, 'left-aligned');
+  const small = ctx.at(0, 'small'), body = ctx.at(1, 'Body'), p24 = ctx.at(1, '24'), p36 = ctx.at(1, '36');
+  const LX = 200;
+
+  stage.style.background = 'radial-gradient(60% 70% at 30% 45%, #161b2c 0%, var(--night) 70%), var(--night)';
+  const glow = el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(35% 40% at 80% 50%, rgba(47,107,255,.14), transparent 70%)' });
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '200px 540px' });
+
+  /* the tiny decorative script title it replaces */
+  const script = el('div', 'abs', cam, { left: '0px', width: '1920px', top: '540px', textAlign: 'center',
+    font: 'italic 300 26px/1 "Snell Roundhand", "Apple Chancery", cursive', color: 'var(--mist)', opacity: 0.45 });
+  script.textContent = 'Make Text Easy to Read';
+
+  /* alignment guide */
+  const guide = el('div', 'abs', cam, { left: LX - 28 + 'px', top: '220px', width: '3px', height: '560px', background: 'var(--teal)', boxShadow: '0 0 18px rgba(18,165,148,.7)', transformOrigin: '50% 0%' });
+
+  /* headline sample */
+  const head = el('div', 'abs', cam, { left: LX + 'px', top: '330px', font: '800 88px/1 Inter Display, Inter', letterSpacing: '-.04em', color: '#fff', whiteSpace: 'nowrap', transformOrigin: '0% 50%' });
+  head.textContent = 'Make text easy to read';
+  const headTag = el('div', 'abs', cam, { left: LX + 'px', top: '270px', font: '700 22px/1 ui-monospace, Menlo, monospace', letterSpacing: '.14em', color: 'var(--amber)' });
+  headTag.textContent = '36PT+';
+  const headTick = el('div', 'abs', cam, { left: LX - 36 + 'px', top: '330px', width: '14px', height: '96px', borderLeft: '4px solid var(--amber)', borderTop: '4px solid var(--amber)', borderBottom: '4px solid var(--amber)', boxShadow: '-6px 0 20px rgba(242,169,0,.35)' });
+
+  /* body sample */
+  const bodyT = el('div', 'abs', cam, { left: LX + 'px', top: '540px', font: '500 46px/1.2 Inter', letterSpacing: '-.01em', color: 'rgba(255,255,255,.9)', whiteSpace: 'nowrap', transformOrigin: '0% 50%' });
+  bodyT.textContent = 'Short, plain sentences in sentence case.';
+  const bodyTag = el('div', 'abs', cam, { left: LX + 'px', top: '490px', font: '700 22px/1 ui-monospace, Menlo, monospace', letterSpacing: '.14em', color: 'var(--signal)' });
+  bodyTag.textContent = '24PT+';
+  const bodyTick = el('div', 'abs', cam, { left: LX - 36 + 'px', top: '540px', width: '14px', height: '56px', borderLeft: '4px solid var(--signal)', borderTop: '4px solid var(--signal)', borderBottom: '4px solid var(--signal)', boxShadow: '-6px 0 20px rgba(47,107,255,.4)' });
+
+  /* phone */
+  const phone = el('div', 'abs', cam, { left: '1420px', top: '210px', width: '320px', height: '660px', borderRadius: '52px', border: '3px solid rgba(154,160,171,.7)',
+    background: 'linear-gradient(160deg, #1b2030, #0e1119)', boxShadow: '0 50px 100px rgba(0,0,0,.6), 0 0 60px rgba(47,107,255,.15)' });
+  el('div', 'abs', phone, { left: '115px', top: '18px', width: '84px', height: '20px', borderRadius: '10px', background: '#05070b' });
+  const pScreen = el('div', 'abs', phone, { left: '30px', top: '90px', width: '254px' });
+  const pHead = el('div', '', pScreen, { font: '800 34px/1.05 Inter Display, Inter', letterSpacing: '-.03em', color: '#fff' });
+  pHead.textContent = 'Make text easy to read';
+  const pBody = el('div', '', pScreen, { font: '500 19px/1.35 Inter', color: 'rgba(255,255,255,.85)', marginTop: '22px' });
+  pBody.textContent = 'Short, plain sentences in sentence case.';
+  const pGuide = el('div', 'abs', phone, { left: '20px', top: '90px', width: '2px', height: '220px', background: 'var(--teal)', opacity: 0.7 });
+
+  ctx.fx.vignette({ strength: 0.5 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  /* ---- timeline ---- */
+  gsap.set([head, script, bodyT, phone], { filter: 'blur(0px)' });
+  gsap.set(head, { x: 260, opacity: 0, scale: 0.6, filter: 'blur(14px)' });
+  gsap.set(guide, { scaleY: 0 });
+  gsap.set([headTag, bodyTag, headTick, bodyTick, bodyT, pBody], { opacity: 0 });
+  gsap.set(bodyT, { scale: 0.5, filter: 'blur(8px)' });
+  gsap.set(phone, { x: 520, opacity: 0 });
+
+  tl.to(cam, { scale: 1.04, duration: ctx.dur, ease: 'none' }, 0);
+  tl.to(glow, { opacity: 0.6, duration: ctx.dur, ease: 'sine.inOut' }, 0);
+  tl.from(script, { opacity: 0, duration: 0.25 }, 0);
+
+  // "Big": headline snaps into focus
+  tl.to(head, { opacity: 1, scale: 1, filter: 'blur(0px)', duration: 0.6, ease: 'back.out(1.6)' }, big - 0.1);
+  // "plain": script shrinks + blurs away
+  tl.to(script, { scale: 0.4, opacity: 0, filter: 'blur(10px)', duration: 0.6, ease: 'power2.in' }, plain - 0.05);
+  // "left-aligned": guide draws, headline snaps to margin
+  tl.to(guide, { scaleY: 1, duration: 0.6, ease: 'expo.out' }, left - 0.1);
+  tl.to(head, { x: 0, duration: 0.8, ease: 'expo.inOut' }, left);
+  // "small screen": phone slides in
+  tl.to(phone, { x: 0, opacity: 1, duration: 0.9, ease: 'expo.out' }, small - 0.3);
+  tl.fromTo(pScreen, { opacity: 0, filter: 'blur(6px)' }, { opacity: 1, filter: 'blur(0px)', duration: 0.5, immediateRender: false }, small + 0.2);
+
+  // "Body ... 24": body sample grows to size
+  tl.to(guide, { opacity: 0.25, duration: 0.6 }, body);
+  tl.to(head, { opacity: 0.55, duration: 0.5 }, body);
+  tl.to(bodyT, { opacity: 0.6, scale: 0.7, filter: 'blur(3px)', duration: 0.6 }, body);
+  tl.to(bodyT, { opacity: 1, scale: 1, filter: 'blur(0px)', duration: 0.6, ease: 'back.out(1.5)' }, p24 - 0.1);
+  tl.fromTo(bodyTick, { opacity: 0, scaleY: 0.2 }, { opacity: 1, scaleY: 1, duration: 0.45, ease: 'back.out(2)', immediateRender: false }, p24);
+  tl.fromTo(bodyTag, { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.45, immediateRender: false }, p24 + 0.08);
+  tl.to(pBody, { opacity: 1, duration: 0.01 }, 0);
+  tl.fromTo(pBody, { scale: 0.85 }, { scale: 1, duration: 0.5, ease: 'back.out(1.5)', transformOrigin: '0% 50%', immediateRender: false }, p24);
+
+  // "36": headline scales up in amber
+  tl.to(head, { opacity: 1, scale: 1.1, color: '#F2A900', textShadow: '0 0 40px rgba(242,169,0,.35)', duration: 0.7, ease: 'back.out(1.6)' }, p36 - 0.1);
+  tl.to(bodyT, { opacity: 0.75, duration: 0.5 }, p36);
+  tl.fromTo(headTick, { opacity: 0, scaleY: 0.2 }, { opacity: 1, scaleY: 1.1, duration: 0.5, ease: 'back.out(2)', transformOrigin: '50% 0%', immediateRender: false }, p36);
+  tl.fromTo(headTag, { opacity: 0, x: -20 }, { opacity: 1, x: 0, y: -14, duration: 0.5, immediateRender: false }, p36 + 0.08);
+  tl.to(pHead, { color: '#F2A900', duration: 0.5 }, p36);
+});

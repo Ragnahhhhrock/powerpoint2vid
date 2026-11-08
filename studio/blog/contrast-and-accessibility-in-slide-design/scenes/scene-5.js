@@ -1,0 +1,132 @@
+/* Scene 5. "When a deck becomes a video, turn on captions, and let the voice explain what a chart
+ * shows, not just say 'as you can see here'."
+ * Storyboard: a paper stage holds a framed video player in the centre. On "video" the play button
+ * pops away, the progress line starts and a bar chart grows inside. On "turn on captions" an ink
+ * caption bar slides up and types the narration live. On "voice explain what a chart shows" a
+ * voice waveform pulses and a callout points to the tallest bar. On "as you can see here" a speech
+ * bubble with that phrase appears and is struck out in amber. A slow push-in runs throughout, then holds. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const W = (word, fb) => { try { const v = ctx.at(0, word); return isFinite(v) ? v : fb; } catch (e) { return fb; } };
+  const tVideo = W('video,', 1.5), tTurn = W('turn', 2.15), tCap = W('captions,', 2.59), tVoice = W('voice', 3.85),
+    tChart = W('chart', 4.81), tShows = W('shows,', 5.15), tAs = W("'as", 6.8), tHere = W("here'.", 7.6);
+  const mono = 'ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(70% 70% at 50% 45%, #ffffff 0%, var(--paper) 60%, #e9e5dc 100%)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 60px' });
+
+  /* top label */
+  const label = el('div', 'abs', cam, { left: '360px', top: '90px', font: `600 22px/1 ${mono}`, letterSpacing: '.14em', color: 'var(--mist)' });
+  label.textContent = 'DECK → VIDEO';
+
+  /* player */
+  const PX = 360, PY = 150, PW = 1200, PH = 675;
+  const shadow = el('div', 'abs', cam, { left: PX + 'px', top: PY + 'px', width: PW + 'px', height: PH + 'px', borderRadius: '22px', boxShadow: '0 50px 120px rgba(20,22,28,.28), 0 10px 30px rgba(20,22,28,.18)' });
+  const player = el('div', 'abs', cam, { left: PX + 'px', top: PY + 'px', width: PW + 'px', height: PH + 'px', borderRadius: '22px', overflow: 'hidden',
+    background: 'radial-gradient(80% 70% at 50% 35%, #1b2030 0%, var(--night) 75%)', border: '10px solid var(--ink)', boxSizing: 'border-box' });
+
+  /* chart */
+  const BASE = 450, HS = [150, 210, 180, 300, 240], BX = 190, STEP = 170, BW = 104;
+  const axis = el('div', 'abs', player, { left: '150px', top: BASE + 'px', width: '880px', height: '2px', background: 'rgba(255,255,255,.25)' });
+  const bars = HS.map((h, i) => el('div', 'abs', player, { left: BX + i * STEP + 'px', top: BASE - h + 'px', width: BW + 'px', height: h + 'px', transformOrigin: '50% 100%',
+    borderRadius: '10px 10px 3px 3px', background: i === 3 ? 'linear-gradient(180deg,#6f9aff,var(--signal))' : 'linear-gradient(180deg,#3a4256,#2a3040)',
+    boxShadow: i === 3 ? '0 0 40px rgba(47,107,255,.45)' : 'none' }));
+  const top3 = bars[3];
+
+  /* callout to tallest bar */
+  const cx = BX + 3 * STEP + BW / 2, cy = BASE - HS[3];
+  const lineSvg = el('div', 'abs', player, { left: 0, top: 0, width: PW + 'px', height: PH + 'px' });
+  lineSvg.innerHTML = `<svg width="${PW}" height="${PH}"><path d="M${cx + 12} ${cy + 4} L ${cx + 70} ${cy + 22} L ${cx + 92} ${cy + 22}" fill="none" stroke="var(--amber)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" id="cl"/><circle cx="${cx}" cy="${cy - 2}" r="10" fill="var(--amber)" id="dot"/></svg>`;
+  const clPath = lineSvg.querySelector('#cl'), dot = lineSvg.querySelector('#dot');
+  const callout = el('div', 'abs', player, { left: cx + 100 + 'px', top: cy + 'px', padding: '12px 16px', borderRadius: '10px', background: 'var(--amber)',
+    font: `700 20px/1 ${mono}`, letterSpacing: '.06em', color: 'var(--ink)', whiteSpace: 'nowrap' });
+  callout.textContent = 'DESCRIBED: THE PEAK';
+
+  /* voice waveform */
+  const wave = el('div', 'abs', player, { left: '40px', top: '36px', height: '64px', padding: '0 22px', borderRadius: '32px', display: 'flex', alignItems: 'center', gap: '6px',
+    background: 'rgba(18,165,148,.16)', border: '2px solid rgba(18,165,148,.6)' });
+  const wl = el('div', '', wave, { font: `700 18px/1 ${mono}`, letterSpacing: '.12em', color: 'var(--teal)', marginRight: '10px' }); wl.textContent = 'VOICE';
+  const wbars = Array.from({ length: 18 }, () => el('div', '', wave, { width: '6px', height: '8px', borderRadius: '3px', background: 'var(--teal)' }));
+  const amp = { v: 0 };
+
+  /* play button */
+  const play = el('div', 'abs', player, { left: PW / 2 - 70 + 'px', top: PH / 2 - 90 + 'px', width: '140px', height: '140px', borderRadius: '50%', background: 'rgba(255,255,255,.95)', boxShadow: '0 20px 60px rgba(0,0,0,.4)' });
+  play.innerHTML = '<svg width="140" height="140"><path d="M58 44 L100 70 L58 96 Z" fill="#14161C"/></svg>';
+
+  /* progress line */
+  const prog = el('div', 'abs', player, { left: 0, bottom: 0, width: '100%', height: '8px', background: 'var(--signal)', transformOrigin: '0 50%' });
+
+  /* caption bar */
+  const capBar = el('div', 'abs', player, { left: '110px', top: '510px', width: '960px', height: '84px', borderRadius: '12px', background: 'var(--ink)',
+    border: '2px solid rgba(255,255,255,.18)', boxShadow: '0 10px 30px rgba(0,0,0,.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' });
+  const capText = el('div', '', capBar, { font: '600 36px/1 Inter', letterSpacing: '-.01em', color: '#fff', whiteSpace: 'nowrap' });
+  const ccTag = el('div', 'abs', player, { left: '1000px', top: '476px', padding: '6px 10px', borderRadius: '6px', background: '#fff', font: `800 18px/1 ${mono}`, color: 'var(--ink)' });
+  ccTag.textContent = 'CC';
+
+  /* caption chunks */
+  const words = (ctx.beats[0] && ctx.beats[0].words) || [];
+  const chunks = []; let cur = [], len = 0;
+  words.forEach((w) => { if (len + w.w.length > 36 && cur.length) { chunks.push(cur); cur = []; len = 0; } cur.push(w); len += w.w.length + 1; });
+  if (cur.length) chunks.push(cur);
+
+  /* speech bubble */
+  const bubble = el('div', 'abs', cam, { left: '1170px', top: '100px', padding: '26px 36px', borderRadius: '28px', background: '#fff', border: '4px solid var(--ink)',
+    boxShadow: '0 24px 60px rgba(20,22,28,.25)', transformOrigin: '20% 100%' });
+  const bt = el('div', '', bubble, { position: 'relative', font: '800 42px/1 Inter Display, Inter', letterSpacing: '-.03em', color: 'var(--ink)', whiteSpace: 'nowrap' });
+  bt.textContent = '“As you can see here…”';
+  const tail = el('div', 'abs', bubble, { left: '60px', bottom: '-22px', width: '36px', height: '36px', background: '#fff', borderRight: '4px solid var(--ink)', borderBottom: '4px solid var(--ink)', transform: 'rotate(45deg)' });
+  const strike = el('div', 'abs', bt, { left: '-10px', right: '-10px', top: '19px', height: '10px', borderRadius: '5px', background: 'var(--amber)', transformOrigin: '0 50%', boxShadow: '0 0 18px rgba(242,169,0,.6)' });
+
+  ctx.fx.vignette({ strength: 0.25 });
+  ctx.fx.grain({ opacity: 0.05 });
+
+  ctx.onFrame((t) => {
+    wbars.forEach((b, i) => {
+      const h = 8 + amp.v * 40 * (0.5 + 0.5 * Math.abs(Math.sin(t * 9 + i * 0.9) * Math.sin(t * 4.3 + i * 1.7)));
+      b.style.height = h.toFixed(1) + 'px';
+    });
+    let ci = -1;
+    chunks.forEach((c, i) => { if (t >= c[0].t - 0.05) ci = i; });
+    capText.textContent = ci < 0 ? '' : chunks[ci].filter((w) => t >= w.t - 0.05).map((w) => w.w).join(' ');
+  });
+
+  /* ---- timeline ---- */
+  gsap.set(prog, { scaleX: 0 });
+  gsap.set(bars, { scaleY: 0 });
+  gsap.set([callout, wave, ccTag, label], { opacity: 0 });
+  gsap.set(capBar, { y: 140, opacity: 0 });
+  gsap.set(bubble, { opacity: 0, scale: 0.6 });
+  gsap.set(strike, { scaleX: 0 });
+  gsap.set(dot, { opacity: 0 });
+  gsap.set(top3, { filter: 'brightness(1)' });
+
+  tl.from([shadow, player], { y: 40, scale: 0.96, duration: 0.9 }, 0);
+  tl.to(label, { opacity: 1, duration: 0.6 }, 0.3);
+  tl.to(cam, { scale: 1.06, duration: ctx.dur, ease: 'power1.inOut' }, 0);
+
+  // "video": play, chart grows
+  tl.to(play, { scale: 0, opacity: 0, duration: 0.45, ease: 'back.in(1.6)' }, tVideo - 0.3);
+  tl.to(prog, { scaleX: 1, duration: ctx.dur - tVideo, ease: 'none' }, tVideo);
+  tl.to(bars, { scaleY: 1, duration: 0.8, stagger: 0.08, ease: 'back.out(1.4)' }, tVideo);
+
+  // "turn on captions"
+  tl.to(capBar, { y: 0, opacity: 1, duration: 0.7, ease: 'back.out(1.3)' }, tTurn);
+  tl.fromTo(ccTag, { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(2)', immediateRender: false }, tCap);
+
+  // "voice explain"
+  tl.fromTo(wave, { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.5, immediateRender: false }, tVoice - 0.2);
+  tl.to(amp, { v: 1, duration: 0.4 }, tVoice);
+  tl.to(bars.filter((b, i) => i !== 3), { opacity: 0.45, duration: 0.6 }, tChart);
+  tl.to(dot, { opacity: 1, duration: 0.2 }, tChart);
+  tl.to(clPath, { attr: { 'stroke-dashoffset': 0 }, duration: 0.5, ease: 'power2.out' }, tChart);
+  tl.fromTo(callout, { opacity: 0, x: -20, scale: 0.8 }, { opacity: 1, x: 0, scale: 1, duration: 0.5, ease: 'back.out(1.8)', immediateRender: false }, tShows - 0.05);
+  tl.to(top3, { filter: 'brightness(1.3)', duration: 0.3, yoyo: true, repeat: 1 }, tShows);
+  tl.to(amp, { v: 0.45, duration: 0.6 }, tShows + 0.6);
+
+  // "as you can see here"
+  tl.to(bubble, { opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(1.8)' }, tAs - 0.25);
+  tl.to(strike, { scaleX: 1, duration: 0.4, ease: 'power3.inOut' }, tHere - 0.1);
+  tl.to(bt, { color: 'var(--mist)', duration: 0.4 }, tHere + 0.2);
+  tl.to(bubble, { rotation: -2, duration: 0.5, ease: 'back.out(2)' }, tHere + 0.2);
+  tl.to(amp, { v: 0.8, duration: 0.4 }, tHere + 0.2);
+});

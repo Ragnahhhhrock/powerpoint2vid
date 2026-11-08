@@ -1,0 +1,14 @@
+{
+ "duration": 71.1,
+ "transcript": [
+  "Every audience sees, hears and processes information differently. A few simple fixes make your slides work for every viewer, and clearer for everyone.",
+  "Low contrast is the most common problem, and one of the easiest to fix. Aim for four and a half to one for normal text, and three to one for large text.",
+  "Use near-black text on light backgrounds, put a solid panel behind text on photos, and always test with a checker.",
+  "Some viewers can't tell red from green. Give each status a label and an icon, and let colour be an extra cue, not the only one.",
+  "Big, plain, left-aligned text reads well in a room and on a small screen. Body text at 24 point or larger, headlines at 36 or larger.",
+  "When a deck becomes a video, turn on captions, and let the voice explain what a chart shows, not just say 'as you can see here'.",
+  "Accessible slides make better videos. On Pro, AI directs the video, timing animation to your narration. Try Basic first at powerpoint2vid.com."
+ ],
+ "youtubeId": "_I1syWuYe0U",
+ "thumbnailSet": true
+}

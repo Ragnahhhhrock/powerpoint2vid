@@ -1,0 +1,105 @@
+{
+  "title": "Contrast and Accessibility in Slide Design (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Accessible Slides Are Better Slides",
+      "bullets": [
+        "Contrast",
+        "Text",
+        "Colour",
+        "Video"
+      ],
+      "notes": "Every audience sees, hears and processes information differently. Here are simple fixes that make your slides work for every viewer, and clearer for everyone.",
+      "minDuration": 9
+    },
+    {
+      "title": "Contrast Is the Foundation",
+      "bullets": [
+        "4.5:1 for normal text",
+        "3:1 for large text and key graphics",
+        "Near-black text on light backgrounds",
+        "Panel behind text on photos"
+      ],
+      "notes": "Low contrast is the most common problem, and one of the easiest to fix. Aim for four and a half to one for normal text, and test with a checker.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Never Rely on Colour Alone",
+      "bullets": [
+        "Before: status shown in red or green text",
+        "After: \"On track\" and \"Late\" labels plus icons",
+        "Label chart series directly"
+      ],
+      "notes": "Some viewers can't tell red from green. Give each status a label and an icon, and let colour be an extra cue, not the only one.",
+      "minDuration": 10,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Make Text Easy to Read",
+      "bullets": [
+        "Body text 24pt or larger",
+        "Headlines 36pt or larger",
+        "Left-align body text",
+        "Use sentence case"
+      ],
+      "notes": "Big, plain, left-aligned text reads well in a room and on a small screen. Avoid script or very light fonts, and leave plenty of space.",
+      "minDuration": 10,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Video Needs Captions and Described Visuals",
+      "bullets": [
+        "Burned-in captions",
+        "Narration that describes the chart",
+        "Readable at small sizes",
+        "Steady pacing"
+      ],
+      "notes": "When a deck becomes a video, turn on captions and let the voice explain what a chart shows, not just say \"as you can see here\".",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Accessible Slides Make Better Videos",
+      "bullets": [
+        "Captions on",
+        "Steady speaking speed",
+        "Check at small window size"
+      ],
+      "notes": "Accessible slides make better videos. On Pro, a.i. directs the video, designing each scene and timing animation to your narration. Try Basic first at powerpoint2vid.com.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}
