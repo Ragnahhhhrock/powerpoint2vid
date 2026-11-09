@@ -1,0 +1,918 @@
+{
+  "title": "\"Sales Teams: Send a Narrated Pitch Deck, Not a Cold PDF\" (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0F1424",
+      "ink": "#1B2238",
+      "paper": "#F7F4EE",
+      "signal": "#FF6B4A",
+      "electric": "#4C7DFF",
+      "mint": "#3DD6A3",
+      "slate": "#8A93A8"
+    },
+    "font": "Inter Display",
+    "motion": "Confident and conversational: quick ease-out entrances, short holds, and slow push-ins that settle on the key word. Things that break stutter and drop; things that work glide into place.",
+    "story": "We open in the dark with a lonely PDF failing to speak for the seller, then move into warm paper-lit scenes as the narrated deck is built and sent. The video closes back on night with an electric, confident call to action."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "The prospect asked for something to share with the team. You sent a PDF. Here's why a narrated pitch deck makes the case when you're not there.",
+      "storyboard": "Night stage. A single email bubble reads 'Can you send something for the team?' and a grey PDF icon thuds into the reply on 'You sent a PDF', then sits there silently. Camera pushes in as the PDF dims. On 'narrated pitch deck' a coral play button blooms over it and sound waves ripple outward. The headline 'Send a narrated pitch deck, not a PDF' sets in at 120px, with 'narrated' in signal coral. The original bare title is rebuilt; nothing else is kept.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Send a Narrated Pitch Deck, Not a PDF",
+        "text": "",
+        "notes": "The prospect asked for something to share with the team. You sent a PDF. Here's why a narrated video pitch deck makes the case when you're not there.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 10,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.552,
+          "text": "The prospect asked for something to share with the team.",
+          "words": [
+            {
+              "w": "The",
+              "t": 0.8
+            },
+            {
+              "w": "prospect",
+              "t": 1.009
+            },
+            {
+              "w": "asked",
+              "t": 1.508
+            },
+            {
+              "w": "for",
+              "t": 1.857
+            },
+            {
+              "w": "something",
+              "t": 1.996
+            },
+            {
+              "w": "to",
+              "t": 2.356
+            },
+            {
+              "w": "share",
+              "t": 2.483
+            },
+            {
+              "w": "with",
+              "t": 2.762
+            },
+            {
+              "w": "the",
+              "t": 2.913
+            },
+            {
+              "w": "team.",
+              "t": 3.029
+            }
+          ]
+        },
+        {
+          "t": 3.993,
+          "end": 5.258,
+          "text": "You sent a PDF.",
+          "words": [
+            {
+              "w": "You",
+              "t": 3.993
+            },
+            {
+              "w": "sent",
+              "t": 4.19
+            },
+            {
+              "w": "a",
+              "t": 4.434
+            },
+            {
+              "w": "PDF.",
+              "t": 4.515
+            }
+          ]
+        },
+        {
+          "t": 5.467,
+          "end": 8.892,
+          "text": "Here's why a narrated pitch deck makes the case when you're not there.",
+          "words": [
+            {
+              "w": "Here's",
+              "t": 5.467
+            },
+            {
+              "w": "why",
+              "t": 5.746
+            },
+            {
+              "w": "a",
+              "t": 5.955
+            },
+            {
+              "w": "narrated",
+              "t": 6.059
+            },
+            {
+              "w": "pitch",
+              "t": 6.512
+            },
+            {
+              "w": "deck",
+              "t": 6.814
+            },
+            {
+              "w": "makes",
+              "t": 7.104
+            },
+            {
+              "w": "the",
+              "t": 7.406
+            },
+            {
+              "w": "case",
+              "t": 7.522
+            },
+            {
+              "w": "when",
+              "t": 7.824
+            },
+            {
+              "w": "you're",
+              "t": 7.975
+            },
+            {
+              "w": "not",
+              "t": 8.184
+            },
+            {
+              "w": "there.",
+              "t": 8.346
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.892
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Sales slides are built to be presented. Without your voice, readers jump to pricing, your champion retells it from memory, and every slide gets the same weight.",
+      "storyboard": "Dark ink stage. A neat row of five slide cards linked by a thin story line. On 'without your voice' the line snaps. On 'jump to pricing' a cursor skips straight to the last card, labelled 'Pricing'. On 'retells it from memory' a speech bubble passes the story along and gets blurrier with each hop. On 'same weight' all five cards flatten to one identical grey. Headline: 'A PDF strips out your reasoning'.",
+      "minDuration": 11,
+      "slide": {
+        "title": "A PDF strips out your reasoning",
+        "text": "The story breaks. The champion has to retell it. Nobody sees the emphasis",
+        "notes": "Sales slides are built to be presented. Without your voice, readers jump to pricing, your champion retells it from memory, and every slide gets the same weight.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 11,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.675,
+          "text": "Sales slides are built to be presented.",
+          "words": [
+            {
+              "w": "Sales",
+              "t": 0.55
+            },
+            {
+              "w": "slides",
+              "t": 0.956
+            },
+            {
+              "w": "are",
+              "t": 1.398
+            },
+            {
+              "w": "built",
+              "t": 1.514
+            },
+            {
+              "w": "to",
+              "t": 1.746
+            },
+            {
+              "w": "be",
+              "t": 1.85
+            },
+            {
+              "w": "presented.",
+              "t": 1.978
+            }
+          ]
+        },
+        {
+          "t": 2.849,
+          "end": 9.455,
+          "text": "Without your voice, readers jump to pricing, your champion retells it from memory, and every slide gets the same weight.",
+          "words": [
+            {
+              "w": "Without",
+              "t": 2.849
+            },
+            {
+              "w": "your",
+              "t": 3.22
+            },
+            {
+              "w": "voice,",
+              "t": 3.418
+            },
+            {
+              "w": "readers",
+              "t": 3.894
+            },
+            {
+              "w": "jump",
+              "t": 4.288
+            },
+            {
+              "w": "to",
+              "t": 4.555
+            },
+            {
+              "w": "pricing,",
+              "t": 4.66
+            },
+            {
+              "w": "your",
+              "t": 5.415
+            },
+            {
+              "w": "champion",
+              "t": 5.624
+            },
+            {
+              "w": "retells",
+              "t": 6.123
+            },
+            {
+              "w": "it",
+              "t": 6.599
+            },
+            {
+              "w": "from",
+              "t": 6.704
+            },
+            {
+              "w": "memory,",
+              "t": 6.913
+            },
+            {
+              "w": "and",
+              "t": 7.505
+            },
+            {
+              "w": "every",
+              "t": 7.714
+            },
+            {
+              "w": "slide",
+              "t": 7.958
+            },
+            {
+              "w": "gets",
+              "t": 8.364
+            },
+            {
+              "w": "the",
+              "t": 8.608
+            },
+            {
+              "w": "same",
+              "t": 8.724
+            },
+            {
+              "w": "weight.",
+              "t": 9.014
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.455
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "Keep it short and specific to the buyer. Their situation, the problem, your answer, proof, then one clear ask. It mirrors how a buyer thinks.",
+      "storyboard": "The stage flips to warm paper, wide shot. Five rounded steps rise left to right, each landing on its word: Situation, Problem, Answer, Proof, Next step. 'Answer' briefly shows five cards collapsing into one, echoing 'one slide, not five'. On 'one clear ask' the final step glows mint with an arrow. The camera tracks along the steps and then pulls back to show the whole staircase. The bullet text becomes the step labels.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Situation, problem, answer, proof, next step",
+        "text": "Their situation, in their words. The problem, described plainly. The answer: one slide, not five. Proof, then one clear ask",
+        "notes": "Keep it short and specific to the buyer. This pattern works because it mirrors how a buyer thinks about a purchase.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 11.211,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.802,
+          "text": "Keep it short and specific to the buyer.",
+          "words": [
+            {
+              "w": "Keep",
+              "t": 0.55
+            },
+            {
+              "w": "it",
+              "t": 0.829
+            },
+            {
+              "w": "short",
+              "t": 0.956
+            },
+            {
+              "w": "and",
+              "t": 1.34
+            },
+            {
+              "w": "specific",
+              "t": 1.491
+            },
+            {
+              "w": "to",
+              "t": 2.025
+            },
+            {
+              "w": "the",
+              "t": 2.141
+            },
+            {
+              "w": "buyer.",
+              "t": 2.257
+            }
+          ]
+        },
+        {
+          "t": 3.313,
+          "end": 8.108,
+          "text": "Their situation, the problem, your answer, proof, then one clear ask.",
+          "words": [
+            {
+              "w": "Their",
+              "t": 3.313
+            },
+            {
+              "w": "situation,",
+              "t": 3.569
+            },
+            {
+              "w": "the",
+              "t": 4.347
+            },
+            {
+              "w": "problem,",
+              "t": 4.521
+            },
+            {
+              "w": "your",
+              "t": 5.008
+            },
+            {
+              "w": "answer,",
+              "t": 5.229
+            },
+            {
+              "w": "proof,",
+              "t": 5.821
+            },
+            {
+              "w": "then",
+              "t": 6.68
+            },
+            {
+              "w": "one",
+              "t": 6.947
+            },
+            {
+              "w": "clear",
+              "t": 7.191
+            },
+            {
+              "w": "ask.",
+              "t": 7.516
+            }
+          ]
+        },
+        {
+          "t": 8.619,
+          "end": 10.361,
+          "text": "It mirrors how a buyer thinks.",
+          "words": [
+            {
+              "w": "It",
+              "t": 8.619
+            },
+            {
+              "w": "mirrors",
+              "t": 8.84
+            },
+            {
+              "w": "how",
+              "t": 9.211
+            },
+            {
+              "w": "a",
+              "t": 9.385
+            },
+            {
+              "w": "buyer",
+              "t": 9.467
+            },
+            {
+              "w": "thinks.",
+              "t": 9.803
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.361
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Headlines should tell the story with the sound off. Your speaker notes become the narration, so write them the way you'd say them. If you trip, the narrator will too.",
+      "storyboard": "Close-up on a slide headline that reads 'Our Platform' in grey with a muted-speaker icon beside it. On 'tell the story' it is struck through and retyped in ink as 'Your team gets one place to track every renewal'. On 'speaker notes become the narration' the camera tilts down to a notes panel whose lines lift off into a waveform. On 'trip' the waveform stumbles once in coral, then smooths out. The before and after headline text is kept verbatim.",
+      "minDuration": 12,
+      "slide": {
+        "title": "Headlines and notes carry the pitch",
+        "text": "Before: \"Our Platform\". After: \"Your team gets one place to track every renewal\". Speaker notes become the narration. Read the script aloud once",
+        "notes": "Headlines should tell the story with the sound off. Write speaker notes the way you'd say them: short sentences, plain words. If you trip, the narrator will too.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "smoothup",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 11.636,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.383,
+          "text": "Headlines should tell the story with the sound off.",
+          "words": [
+            {
+              "w": "Headlines",
+              "t": 0.55
+            },
+            {
+              "w": "should",
+              "t": 1.166
+            },
+            {
+              "w": "tell",
+              "t": 1.386
+            },
+            {
+              "w": "the",
+              "t": 1.642
+            },
+            {
+              "w": "story",
+              "t": 1.769
+            },
+            {
+              "w": "with",
+              "t": 2.187
+            },
+            {
+              "w": "the",
+              "t": 2.35
+            },
+            {
+              "w": "sound",
+              "t": 2.466
+            },
+            {
+              "w": "off.",
+              "t": 2.872
+            }
+          ]
+        },
+        {
+          "t": 3.894,
+          "end": 7.702,
+          "text": "Your speaker notes become the narration, so write them the way you'd say them.",
+          "words": [
+            {
+              "w": "Your",
+              "t": 3.894
+            },
+            {
+              "w": "speaker",
+              "t": 4.138
+            },
+            {
+              "w": "notes",
+              "t": 4.533
+            },
+            {
+              "w": "become",
+              "t": 4.811
+            },
+            {
+              "w": "the",
+              "t": 5.113
+            },
+            {
+              "w": "narration,",
+              "t": 5.229
+            },
+            {
+              "w": "so",
+              "t": 6.007
+            },
+            {
+              "w": "write",
+              "t": 6.193
+            },
+            {
+              "w": "them",
+              "t": 6.46
+            },
+            {
+              "w": "the",
+              "t": 6.634
+            },
+            {
+              "w": "way",
+              "t": 6.75
+            },
+            {
+              "w": "you'd",
+              "t": 6.936
+            },
+            {
+              "w": "say",
+              "t": 7.156
+            },
+            {
+              "w": "them.",
+              "t": 7.4
+            }
+          ]
+        },
+        {
+          "t": 8.027,
+          "end": 10.036,
+          "text": "If you trip, the narrator will too.",
+          "words": [
+            {
+              "w": "If",
+              "t": 8.027
+            },
+            {
+              "w": "you",
+              "t": 8.213
+            },
+            {
+              "w": "trip,",
+              "t": 8.364
+            },
+            {
+              "w": "the",
+              "t": 8.724
+            },
+            {
+              "w": "narrator",
+              "t": 8.886
+            },
+            {
+              "w": "will",
+              "t": 9.293
+            },
+            {
+              "w": "too.",
+              "t": 9.56
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.036
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Many people watch forwarded videos with the sound off, so turn on burned-in captions. Then send a brief email that states the length and the ask.",
+      "storyboard": "Electric blue stage. A phone plays the video with the sound muted; on 'burned-in captions' bold captions burn in along the bottom of the screen. Smooth pan right to an email draft. On 'states the length' the subject types out: 'The 3-minute version for your team'. On 'the ask' a mint 'Next step' line appears and the send button pulses.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Send it so it gets watched",
+        "text": "Turn on burned-in captions. Subject: \"The 3-minute version for your team\". Say what is in it. Point to the next step",
+        "notes": "Many people watch forwarded videos with the sound off, so turn on captions. Then send a brief email that states the length and the ask.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 10.533,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 5.346,
+          "text": "Many people watch forwarded videos with the sound off, so turn on burned-in captions.",
+          "words": [
+            {
+              "w": "Many",
+              "t": 0.55
+            },
+            {
+              "w": "people",
+              "t": 0.817
+            },
+            {
+              "w": "watch",
+              "t": 1.119
+            },
+            {
+              "w": "forwarded",
+              "t": 1.409
+            },
+            {
+              "w": "videos",
+              "t": 1.874
+            },
+            {
+              "w": "with",
+              "t": 2.338
+            },
+            {
+              "w": "the",
+              "t": 2.501
+            },
+            {
+              "w": "sound",
+              "t": 2.617
+            },
+            {
+              "w": "off,",
+              "t": 2.965
+            },
+            {
+              "w": "so",
+              "t": 3.418
+            },
+            {
+              "w": "turn",
+              "t": 3.615
+            },
+            {
+              "w": "on",
+              "t": 3.871
+            },
+            {
+              "w": "burned-in",
+              "t": 4.034
+            },
+            {
+              "w": "captions.",
+              "t": 4.556
+            }
+          ]
+        },
+        {
+          "t": 5.787,
+          "end": 8.933,
+          "text": "Then send a brief email that states the length and the ask.",
+          "words": [
+            {
+              "w": "Then",
+              "t": 5.787
+            },
+            {
+              "w": "send",
+              "t": 6.089
+            },
+            {
+              "w": "a",
+              "t": 6.344
+            },
+            {
+              "w": "brief",
+              "t": 6.425
+            },
+            {
+              "w": "email",
+              "t": 6.727
+            },
+            {
+              "w": "that",
+              "t": 7.134
+            },
+            {
+              "w": "states",
+              "t": 7.308
+            },
+            {
+              "w": "the",
+              "t": 7.679
+            },
+            {
+              "w": "length",
+              "t": 7.807
+            },
+            {
+              "w": "and",
+              "t": 8.132
+            },
+            {
+              "w": "the",
+              "t": 8.295
+            },
+            {
+              "w": "ask.",
+              "t": 8.434
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.933
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "Ordinary slides in, extraordinary pitch out. Try Basic with no subscription needed, or go Pro from A$29 a month and let a.i. direct your pitch. Visit powerpoint2vid.com.",
+      "storyboard": "Night stage, centred. A plain slide slides in from the left, passes through a glowing coral seam and comes out as a playing video. Headline: 'Ordinary slides in, extraordinary pitch out'. On 'Basic' and 'Pro from A$29 a month' two clean tags pop in side by side, with Pro edged in electric blue. On 'powerpoint2vid.com' the URL lands at 110px and holds.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Ordinary slides in, extraordinary pitch out",
+        "text": "Speaker notes become the narration. Basic: no subscription needed. Pro: a.i. directs the video. Pro from A$29 a month",
+        "notes": "On Pro, a.i. directs your pitch, tightening the story and timing each scene to the narration. Try Basic first at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 14.754,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.406,
+          "text": "Ordinary slides in, extraordinary pitch out.",
+          "words": [
+            {
+              "w": "Ordinary",
+              "t": 0.55
+            },
+            {
+              "w": "slides",
+              "t": 1.084
+            },
+            {
+              "w": "in,",
+              "t": 1.513
+            },
+            {
+              "w": "extraordinary",
+              "t": 1.978
+            },
+            {
+              "w": "pitch",
+              "t": 2.686
+            },
+            {
+              "w": "out.",
+              "t": 2.976
+            }
+          ]
+        },
+        {
+          "t": 3.789,
+          "end": 10.093,
+          "text": "Try Basic with no subscription needed, or go Pro from A$29 a month and let a.i. direct your pitch.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 3.789
+            },
+            {
+              "w": "Basic",
+              "t": 4.149
+            },
+            {
+              "w": "with",
+              "t": 4.567
+            },
+            {
+              "w": "no",
+              "t": 4.753
+            },
+            {
+              "w": "subscription",
+              "t": 4.938
+            },
+            {
+              "w": "needed,",
+              "t": 5.554
+            },
+            {
+              "w": "or",
+              "t": 6.204
+            },
+            {
+              "w": "go",
+              "t": 6.448
+            },
+            {
+              "w": "Pro",
+              "t": 6.645
+            },
+            {
+              "w": "from",
+              "t": 6.97
+            },
+            {
+              "w": "A$29",
+              "t": 7.144
+            },
+            {
+              "w": "a",
+              "t": 7.852
+            },
+            {
+              "w": "month",
+              "t": 7.934
+            },
+            {
+              "w": "and",
+              "t": 8.259
+            },
+            {
+              "w": "let",
+              "t": 8.445
+            },
+            {
+              "w": "A.I.",
+              "t": 8.665
+            },
+            {
+              "w": "direct",
+              "t": 9.095
+            },
+            {
+              "w": "your",
+              "t": 9.431
+            },
+            {
+              "w": "pitch.",
+              "t": 9.582
+            }
+          ]
+        },
+        {
+          "t": 10.534,
+          "end": 12.554,
+          "text": "Visit powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Visit",
+              "t": 10.534
+            },
+            {
+              "w": "PowerPoint",
+              "t": 10.906
+            },
+            {
+              "w": "to",
+              "t": 11.452
+            },
+            {
+              "w": "vid",
+              "t": 11.591
+            },
+            {
+              "w": "dot",
+              "t": 11.858
+            },
+            {
+              "w": "com.",
+              "t": 12.09
+            }
+          ]
+        }
+      ],
+      "speechEnd": 12.554
+    }
+  ],
+  "voiceProvider": "elevenlabs"
+}

@@ -1,0 +1,101 @@
+{
+  "title": "\"Sales Teams: Send a Narrated Pitch Deck, Not a Cold PDF\" (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Send a Narrated Pitch Deck, Not a PDF",
+      "bullets": [],
+      "notes": "The prospect asked for something to share with the team. You sent a PDF. Here's why a narrated video pitch deck makes the case when you're not there.",
+      "minDuration": 10
+    },
+    {
+      "title": "A PDF strips out your reasoning",
+      "bullets": [
+        "The story breaks",
+        "The champion has to retell it",
+        "Nobody sees the emphasis"
+      ],
+      "notes": "Sales slides are built to be presented. Without your voice, readers jump to pricing, your champion retells it from memory, and every slide gets the same weight.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Situation, problem, answer, proof, next step",
+      "bullets": [
+        "Their situation, in their words",
+        "The problem, described plainly",
+        "The answer: one slide, not five",
+        "Proof, then one clear ask"
+      ],
+      "notes": "Keep it short and specific to the buyer. This pattern works because it mirrors how a buyer thinks about a purchase.",
+      "minDuration": 10,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Headlines and notes carry the pitch",
+      "bullets": [
+        "Before: \"Our Platform\"",
+        "After: \"Your team gets one place to track every renewal\"",
+        "Speaker notes become the narration",
+        "Read the script aloud once"
+      ],
+      "notes": "Headlines should tell the story with the sound off. Write speaker notes the way you'd say them: short sentences, plain words. If you trip, the narrator will too.",
+      "minDuration": 12,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Send it so it gets watched",
+      "bullets": [
+        "Turn on burned-in captions",
+        "Subject: \"The 3-minute version for your team\"",
+        "Say what is in it",
+        "Point to the next step"
+      ],
+      "notes": "Many people watch forwarded videos with the sound off, so turn on captions. Then send a brief email that states the length and the ask.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Ordinary slides in, extraordinary pitch out",
+      "bullets": [
+        "Speaker notes become the narration",
+        "Basic: no subscription needed",
+        "Pro: a.i. directs the video",
+        "Pro from A$29 a month"
+      ],
+      "notes": "On Pro, a.i. directs your pitch, tightening the story and timing each scene to the narration. Try Basic first at powerpoint2vid.com.",
+      "minDuration": 10,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}

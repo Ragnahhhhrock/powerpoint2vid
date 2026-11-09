@@ -1,0 +1,134 @@
+/* Scene 3 — "Headlines should tell the story with the sound off. Your speaker notes become the narration,
+ * so write them the way you'd say them. If you trip, the narrator will too."
+ * Storyboard: warm paper-lit close-up on a slide headline, 'Our Platform', in grey with a muted-speaker icon.
+ * On "tell the story" it is struck through and the new headline types in, in ink: 'Your team gets one place
+ * to track every renewal'. The mute icon pulses on "sound off". On "speaker notes" the camera tilts down to
+ * a notes panel. On "narration" its lines lift off into a live waveform. On "trip" the waveform stutters once
+ * in coral, then glides smooth again on "narrator". */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const A = (i, w) => ctx.at(i, w);
+  const tTell = A(0, 'tell'), tStory = A(0, 'story'), tSound = A(0, 'sound');
+  const tSpeaker = A(1, 'speaker'), tNotes = A(1, 'notes'), tNarr = A(1, 'narration,'), tSay = A(1, 'say');
+  const tTrip = A(2, 'trip,'), tNarrator = A(2, 'narrator'), tToo = A(2, 'too.');
+
+  stage.style.background = 'radial-gradient(70% 60% at 45% 30%, #fffdf8 0%, var(--paper) 55%, #e9e2d4 100%)';
+  const warm = el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(40% 35% at 80% 15%, rgba(255,190,140,.22), transparent 70%)' });
+  const drift = el('div', 'abs', stage, { inset: 0, transformOrigin: '50% 50%' });
+  const persp = el('div', 'abs', drift, { inset: 0, perspective: '1800px' });
+  const cam = el('div', 'abs', persp, { left: 0, top: 0, width: '1920px', height: '1400px' });
+
+  /* ---- slide card with headline ---- */
+  const card = el('div', 'abs', cam, { left: '240px', top: '150px', width: '1440px', height: '560px', borderRadius: '20px', background: '#fff',
+    boxShadow: '0 50px 110px rgba(27,34,56,.18), 0 8px 24px rgba(27,34,56,.08)', transformOrigin: '50% 100%' });
+  const mono = '600 20px/1 ui-monospace, Menlo, monospace';
+  const tag = el('div', 'abs', card, { left: '70px', top: '56px', font: mono, letterSpacing: '.14em', color: 'var(--slate)' });
+  tag.textContent = 'SLIDE 4 · HEADLINE';
+
+  const oldRow = el('div', 'abs', card, { left: '70px', top: '120px', display: 'flex', alignItems: 'center' });
+  const oldTxt = el('div', '', oldRow, { position: 'relative', font: '700 92px/1.1 Inter Display, Inter', letterSpacing: '-.03em', color: 'var(--slate)' });
+  oldTxt.textContent = 'Our Platform';
+  const strike = el('div', 'abs', oldTxt, { left: '-8px', right: '-8px', top: '54%', height: '9px', borderRadius: '5px', background: 'var(--signal)', transformOrigin: '0% 50%' });
+  const icon = el('div', '', oldRow, { position: 'relative', marginLeft: '44px', width: '84px', height: '84px', borderRadius: '50%', background: 'rgba(138,147,168,.14)', display: 'flex', alignItems: 'center', justifyContent: 'center' });
+  icon.innerHTML = `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8A93A8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 9h4l5-4v14l-5-4H4z" fill="rgba(138,147,168,.25)"/><path d="M17 9l5 6M22 9l-5 6"/></svg>`;
+  const ring = el('div', 'abs', icon, { inset: '-4px', borderRadius: '50%', border: '4px solid var(--electric)', opacity: 0 });
+
+  const newH = el('div', 'abs', card, { left: '70px', top: '290px', width: '1300px', font: '800 80px/1.08 Inter Display, Inter', letterSpacing: '-.035em', color: 'var(--ink)' });
+  const chars = [];
+  'Your team gets one place to track every renewal'.split(' ').forEach((w, i, arr) => {
+    const ws = el('span', '', newH, { display: 'inline-block', whiteSpace: 'nowrap' });
+    chars.push(...ctx.split(ws, w, 'char'));
+    if (i < arr.length - 1) newH.appendChild(document.createTextNode(' '));
+  });
+  const underline = el('div', 'abs', card, { left: '70px', top: '480px', width: '220px', height: '8px', borderRadius: '4px', background: 'var(--mint)', transformOrigin: '0% 50%' });
+
+  /* ---- speaker notes panel ---- */
+  const panel = el('div', 'abs', cam, { left: '240px', top: '780px', width: '1440px', height: '480px', borderRadius: '20px', background: 'var(--ink)',
+    boxShadow: '0 50px 110px rgba(15,20,36,.35)', overflow: 'hidden' });
+  el('div', 'abs', panel, { inset: 0, background: 'radial-gradient(60% 70% at 50% 45%, rgba(76,125,255,.18), transparent 70%)' });
+  const nLab = el('div', 'abs', panel, { left: '80px', top: '56px', font: mono, letterSpacing: '.14em', color: 'rgba(255,255,255,.55)' });
+  nLab.textContent = 'SPEAKER NOTES';
+  const rLab = el('div', 'abs', panel, { left: '330px', top: '56px', font: mono, letterSpacing: '.14em', color: 'var(--electric)' });
+  rLab.textContent = '→ NARRATION';
+  const lines = [0.92, 0.78, 0.86, 0.6, 0.72].map((w, i) => el('div', 'abs', panel, { left: '80px', top: 130 + i * 56 + 'px', width: 1280 * w + 'px', height: '18px', borderRadius: '9px', background: 'rgba(255,255,255,.22)', transformOrigin: '0% 50%' }));
+
+  const N = 72, WX = 80, WY = 150, WW = 1280, WH = 260;
+  const rnd = ctx.rand(7);
+  const bars = Array.from({ length: N }, (_, i) => ({
+    d: el('div', 'abs', panel, { left: WX + i * (WW / N) + 'px', top: WY + 'px', width: '10px', height: WH + 'px', borderRadius: '5px', background: 'var(--electric)', transformOrigin: '50% 50%', transform: 'scaleY(0.02)', opacity: 0 }),
+    j: rnd(),
+  }));
+  const ann = el('div', 'abs', panel, { left: 0, width: '1440px', top: '420px', textAlign: 'center', font: mono, letterSpacing: '.16em', color: 'var(--signal)' });
+  ann.textContent = 'STUMBLE';
+
+  const W = { amp: 0, trip: 0 };
+  const frac = (x) => x - Math.floor(x);
+  ctx.onFrame((t) => {
+    const stepT = Math.floor(t * 14);
+    ann.textContent = W.trip > 0.5 || t < tNarrator ? 'STUMBLE' : 'SMOOTH';
+    ann.style.color = t < tNarrator + 0.15 ? 'var(--signal)' : 'var(--mint)';
+    const vis = Math.min(1, W.amp * 4);
+    bars.forEach((b, i) => {
+      const env = Math.sin((i / (N - 1)) * Math.PI) * 0.6 + 0.4;
+      let h = W.amp * env * (0.2 + 0.8 * Math.abs(Math.sin(i * 0.37 + t * 3.1) * Math.sin(i * 0.13 - t * 1.7 + b.j)));
+      const win = Math.max(0, 1 - Math.abs(i - 36) / 11);
+      const g = W.trip * win;
+      let dy = 0;
+      if (g > 0.01) {
+        const r = frac(Math.sin(i * 12.9898 + stepT * 78.233) * 43758.5453);
+        h = h * (1 - g) + g * (r < 0.35 ? 0.04 : 0.4 + r * 0.6);
+        dy = g * (r - 0.5) * 50;
+      }
+      b.d.style.opacity = vis;
+      b.d.style.transform = `translateY(${dy}px) scaleY(${Math.max(0.03, h)})`;
+      b.d.style.background = g > 0.25 ? 'var(--signal)' : 'linear-gradient(180deg,#8fb0ff,#4C7DFF)';
+      b.d.style.boxShadow = g > 0.25 ? '0 0 18px rgba(255,107,74,.7)' : '0 0 14px rgba(76,125,255,.45)';
+    });
+  });
+
+  ctx.fx.vignette({ strength: 0.25 });
+  ctx.fx.grain({ opacity: 0.05 });
+
+  /* ---- timeline ---- */
+  gsap.set(strike, { scaleX: 0 });
+  gsap.set(chars, { opacity: 0, y: 18 });
+  gsap.set(underline, { scaleX: 0 });
+  gsap.set([rLab, ann], { opacity: 0 });
+  gsap.set(card, { filter: 'brightness(1) blur(0px)' });
+
+  tl.to(drift, { scale: 1.035, duration: ctx.dur, ease: 'none' }, 0);
+  tl.from(card, { y: 50, duration: 0.8 }, 0);
+  tl.from(oldTxt, { opacity: 0, x: -20, duration: 0.5 }, 0.1);
+  tl.from(icon, { scale: 0, duration: 0.6, ease: 'back.out(1.8)' }, 0.3);
+  tl.from(tag, { opacity: 0, duration: 0.4 }, 0.2);
+  tl.fromTo(cam, { scale: 1.08, transformOrigin: '700px 300px' }, { scale: 1, duration: 3.2, ease: 'power2.out' }, 0);
+
+  // "tell the story": strike, then retype
+  tl.to(strike, { scaleX: 1, duration: 0.4, ease: 'power2.inOut' }, tTell - 0.05);
+  tl.to(oldTxt, { opacity: 0.5, duration: 0.4 }, tTell + 0.2);
+  tl.to(chars, { opacity: 1, y: 0, duration: 0.25, stagger: 0.022, ease: 'back.out(2)' }, tStory);
+  tl.to(underline, { scaleX: 1, duration: 0.5, ease: 'power3.out' }, tStory + 1.15);
+  // "sound off": the mute icon pulses, the headline still reads
+  tl.to(icon, { scale: 1.2, duration: 0.2, yoyo: true, repeat: 1, ease: 'power2.out' }, tSound);
+  tl.fromTo(ring, { scale: 0.9, opacity: 1 }, { scale: 1.8, opacity: 0, duration: 0.8, ease: 'power2.out', immediateRender: false }, tSound);
+
+  // "speaker notes": tilt down to the notes panel; the card fully clears the top edge
+  tl.to(cam, { y: -500, duration: 1.15, ease: 'expo.inOut' }, tSpeaker - 0.35);
+  tl.to(card, { rotationX: 16, y: -320, opacity: 0.6, filter: 'brightness(.92) blur(1px)', duration: 1.15, ease: 'expo.inOut' }, tSpeaker - 0.35);
+  tl.to(nLab, { color: '#fff', duration: 0.3 }, tNotes);
+
+  // "narration": lines lift off into a waveform
+  tl.to(lines, { y: (i) => 40 - i * 30, scaleX: 0.5, opacity: 0, duration: 0.6, stagger: 0.07, ease: 'power2.in' }, tNarr - 0.35);
+  tl.fromTo(rLab, { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.4, immediateRender: false }, tNarr);
+  tl.to(W, { amp: 1, duration: 0.9, ease: 'power2.out' }, tNarr - 0.05);
+  tl.to(W, { amp: 0.75, duration: 0.3, yoyo: true, repeat: 1, ease: 'sine.inOut' }, tSay);
+
+  // "trip": stumble in coral, then smooth
+  tl.to(W, { trip: 1, duration: 0.1, ease: 'none' }, tTrip - 0.05);
+  tl.to(panel, { x: -14, duration: 0.05, yoyo: true, repeat: 5, ease: 'steps(1)' }, tTrip);
+  tl.fromTo(ann, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.25, ease: 'back.out(2)', immediateRender: false }, tTrip);
+  tl.to(W, { trip: 0, duration: 0.7, ease: 'power2.out' }, tNarrator);
+  tl.to(panel, { boxShadow: '0 50px 120px rgba(76,125,255,.35)', duration: 0.8 }, tNarrator);
+  tl.to(drift, { scale: 1.08, duration: ctx.dur - tToo, ease: 'power1.inOut' }, tToo);
+});
