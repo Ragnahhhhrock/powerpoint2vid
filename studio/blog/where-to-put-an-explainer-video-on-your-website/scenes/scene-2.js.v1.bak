@@ -1,0 +1,139 @@
+/* Scene 2 — "Put home and pricing videos high on the page, walkthroughs beside the feature description,
+ * and help videos at the top of the matching article."
+ * Storyboard: ink stage, four paper wireframe pages in a row (Home, Feature, Pricing, Help). On "home" and
+ * "pricing" coral video blocks snap into the top slots, and a fold line marks "high on the page". The camera
+ * glides in on Feature as a sky walkthrough slides in beside the text column. It then tracks right to Help,
+ * where a mint block lands above the article lines and pushes them down. On "article" the camera pulls back
+ * to hold all four pages, and the headline "Place it where the question arises" settles in. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const W = (w) => ctx.at(0, w);
+  const tHome = W('home'), tPricing = W('pricing'), tHigh = W('high'), tWalk = W('walkthroughs'), tBeside = W('beside'),
+    tHelp = W('help'), tTop = W('top'), tArticle = W('article.');
+
+  stage.style.background = 'radial-gradient(80% 70% at 50% 45%, #26304d 0%, var(--ink) 55%, var(--night) 100%)';
+  const glowBg = el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(40% 35% at 30% 30%, rgba(91,140,255,.10), transparent 70%), radial-gradient(35% 30% at 75% 70%, rgba(255,107,74,.08), transparent 70%)' });
+  const drift = el('div', 'abs', stage, { inset: 0, transformOrigin: '50% 50%' });
+  const world = el('div', 'abs', drift, { left: 0, top: 0, width: '2480px', height: '700px' });
+
+  const PW = 560, PH = 700, GAP = 80;
+  const LINE = '#DAD6CC', DARK = '#B3AEA3';
+  const bar = (p, x, y, w, h, c = LINE, r = 6) => el('div', 'abs', p, { left: x + 'px', top: y + 'px', width: w + 'px', height: h + 'px', background: c, borderRadius: r + 'px' });
+  const mono = '600 26px/1 ui-monospace, Menlo, monospace';
+
+  const vid = (p, x, y, w, h, col, rgb) => {
+    const v = el('div', 'abs', p, { left: x + 'px', top: y + 'px', width: w + 'px', height: h + 'px', borderRadius: '14px',
+      background: `linear-gradient(145deg, ${col}, rgba(${rgb},.75))`, boxShadow: `0 18px 50px rgba(${rgb},.55), inset 0 1px 0 rgba(255,255,255,.4)` });
+    const d = Math.min(w, h) * 0.34;
+    const c = el('div', 'abs', v, { left: (w - d) / 2 + 'px', top: (h - d) / 2 + 'px', width: d + 'px', height: d + 'px', borderRadius: '50%', background: 'rgba(255,255,255,.95)', boxShadow: '0 6px 20px rgba(0,0,0,.2)' });
+    el('div', 'abs', c, { left: d * 0.4 + 'px', top: d * 0.3 + 'px', width: 0, height: 0, borderTop: d * 0.2 + 'px solid transparent', borderBottom: d * 0.2 + 'px solid transparent', borderLeft: d * 0.32 + 'px solid ' + col });
+    bar(v, 18, h - 22, w - 36, 5, 'rgba(255,255,255,.35)', 3);
+    bar(v, 18, h - 22, (w - 36) * 0.3, 5, '#fff', 3);
+    return v;
+  };
+  const slot = (p, x, y, w, h) => el('div', 'abs', p, { left: x + 'px', top: y + 'px', width: w + 'px', height: h + 'px', borderRadius: '14px', border: '3px dashed rgba(27,34,56,.18)', boxSizing: 'border-box' });
+
+  const names = ['HOME', 'FEATURE', 'PRICING', 'HELP'];
+  const pages = [], labels = [];
+  names.forEach((n, i) => {
+    const pg = el('div', 'abs', world, { left: i * (PW + GAP) + 'px', top: 0, width: PW + 'px', height: PH + 'px', background: 'var(--paper)', borderRadius: '18px', overflow: 'hidden', boxShadow: '0 40px 90px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.05)' });
+    const top = el('div', 'abs', pg, { left: 0, top: 0, width: '100%', height: '44px', background: '#E8E4DA' });
+    ['#FF6B4A', '#F2C14E', '#3DD6A3'].forEach((c, k) => el('div', 'abs', top, { left: 18 + k * 20 + 'px', top: '16px', width: '12px', height: '12px', borderRadius: '50%', background: c, opacity: 0.8 }));
+    bar(top, 100, 12, 300, 20, '#F6F3EC', 10);
+    bar(pg, 40, 66, 80, 14, DARK, 4);
+    [0, 1, 2].forEach((k) => bar(pg, 330 + k * 66, 68, 50, 10, LINE, 4));
+    const lab = el('div', 'abs', world, { left: i * (PW + GAP) + 'px', top: '-56px', font: mono, letterSpacing: '.18em', color: 'var(--mist)' });
+    lab.textContent = n;
+    pages.push(pg); labels.push(lab);
+  });
+  const [home, feat, price, help] = pages;
+
+  /* HOME */
+  bar(home, 40, 108, 320, 24, DARK); bar(home, 40, 142, 220, 24, DARK);
+  slot(home, 40, 186, 480, 250);
+  const vHome = vid(home, 40, 186, 480, 250, '#FF6B4A', '255,107,74');
+  [0, 1, 2].forEach((k) => bar(home, 40 + k * 167, 480, 146, 96, '#E6E2D8', 10));
+  bar(home, 40, 600, 420, 12); bar(home, 40, 626, 340, 12);
+
+  /* FEATURE */
+  bar(feat, 40, 108, 280, 24, DARK);
+  const featLines = [0, 1, 2, 3, 4, 5, 6].map((k) => bar(feat, 40, 168 + k * 26, k === 6 ? 140 : 220, 12));
+  const vFeat = vid(feat, 290, 160, 230, 180, '#5B8CFF', '91,140,255');
+  bar(feat, 40, 380, 480, 2, '#E6E2D8', 1);
+  bar(feat, 40, 410, 240, 20, DARK);
+  [0, 1, 2, 3].forEach((k) => bar(feat, 40, 450 + k * 26, k === 3 ? 300 : 480, 12));
+  bar(feat, 40, 570, 230, 90, '#E6E2D8', 10); bar(feat, 290, 570, 230, 90, '#E6E2D8', 10);
+
+  /* PRICING */
+  bar(price, 140, 102, 280, 24, DARK);
+  slot(price, 90, 146, 380, 214);
+  const vPrice = vid(price, 90, 146, 380, 214, '#FF6B4A', '255,107,74');
+  [0, 1, 2].forEach((k) => {
+    const c = el('div', 'abs', price, { left: 40 + k * 167 + 'px', top: '400px', width: '146px', height: '250px', borderRadius: '12px', background: '#fff', boxSizing: 'border-box', border: k === 1 ? '3px solid rgba(91,140,255,.6)' : '2px solid #E6E2D8' });
+    bar(c, 20, 22, 60, 12, DARK); bar(c, 20, 50, 90, 28, '#C9C4B8');
+    [0, 1, 2, 3].forEach((j) => bar(c, 20, 104 + j * 22, 100 - j * 8, 9));
+    bar(c, 20, 200, 102, 28, k === 1 ? '#5B8CFF' : '#E6E2D8', 8);
+  });
+
+  /* HELP */
+  el('div', 'abs', help, { left: '40px', top: '100px', width: '480px', height: '42px', borderRadius: '21px', border: '2px solid #DAD6CC', boxSizing: 'border-box' });
+  bar(help, 60, 115, 120, 10);
+  bar(help, 40, 168, 330, 24, DARK);
+  const vHelp = vid(help, 40, 214, 480, 230, '#3DD6A3', '61,214,163');
+  const article = el('div', 'abs', help, { left: '40px', top: '216px', width: '480px', height: '400px' });
+  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].forEach((k) => bar(article, 0, k * 26 + (k > 4 ? 20 : 0), k === 4 || k === 9 ? 280 : 480, 12));
+
+  /* fold lines */
+  const folds = [[home, 455], [price, 378]].map(([p, y]) => {
+    const f = el('div', 'abs', p, { left: '0', top: y + 'px', width: '100%', height: '0', borderTop: '3px dashed rgba(255,107,74,.75)', transformOrigin: '0 50%' });
+    const t = el('div', 'abs', f, { right: '14px', top: '-30px', font: '700 16px/1 ui-monospace, Menlo, monospace', letterSpacing: '.16em', color: '#FF6B4A' });
+    t.textContent = 'FOLD';
+    return f;
+  });
+
+  /* headline */
+  const head = el('div', 'abs', stage, { left: '80px', width: '1760px', top: '138px', textAlign: 'center', font: '800 76px/1.05 Inter Display, Inter', letterSpacing: '-.04em', color: '#fff' });
+  const words = ctx.split(head, 'Place it where the question arises', 'word');
+  const uline = el('div', 'abs', stage, { left: '810px', width: '300px', top: '248px', height: '6px', borderRadius: '3px', background: 'var(--signal)', boxShadow: '0 0 24px rgba(255,107,74,.7)', transformOrigin: '50% 50%' });
+
+  ctx.fx.vignette({ strength: 0.5 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  /* ---- camera helpers ---- */
+  const cam = (cx, cy, s, sy = 540) => ({ x: 960 - cx * s, y: sy - cy * s, scale: s });
+  const pc = (i) => i * (PW + GAP) + PW / 2;
+  gsap.set(world, { transformOrigin: '0 0', ...cam(pc(1) + 60, 350, 0.85, 575) });
+  gsap.set([vHome, vFeat, vPrice, vHelp, ...words, uline], { opacity: 0 });
+  gsap.set(folds, { scaleX: 0 });
+
+  /* opening: pages arrive, camera tracks right */
+  tl.from(pages, { y: 50, opacity: 0, duration: 0.7, stagger: 0.07, ease: 'back.out(1.4)' }, 0);
+  tl.from(labels, { opacity: 0, y: -10, duration: 0.5, stagger: 0.07 }, 0.15);
+  tl.to(world, { ...cam(pc(1), 350, 0.85, 575), duration: 2.6, ease: 'power1.inOut' }, 0);
+  tl.to(drift, { scale: 1.035, duration: ctx.dur, ease: 'none' }, 0);
+
+  /* "home and pricing": coral snaps */
+  [[vHome, tHome], [vPrice, tPricing]].forEach(([v, t]) => {
+    tl.fromTo(v, { opacity: 0, scale: 0.55, y: -50 }, { opacity: 1, scale: 1, y: 0, duration: 0.6, ease: 'back.out(1.9)', immediateRender: false }, t - 0.05);
+  });
+  tl.to([labels[0], labels[2]], { color: '#FF8F72', duration: 0.3, stagger: 0.38 }, tHome);
+  tl.to(folds, { scaleX: 1, duration: 0.6, stagger: 0.1, ease: 'power2.out' }, tHigh - 0.05);
+
+  /* "walkthroughs": push into Feature */
+  tl.to(world, { ...cam(pc(1), 350, 1.15), duration: 1.1, ease: 'expo.inOut' }, tWalk - 0.45);
+  tl.to(labels[1], { color: '#8DB0FF', duration: 0.3 }, tWalk);
+  tl.fromTo(vFeat, { opacity: 0, x: 140 }, { opacity: 1, x: 0, duration: 0.7, ease: 'back.out(1.5)', immediateRender: false }, tBeside - 0.1);
+  tl.to(featLines, { background: '#C3CEEA', duration: 0.25, stagger: 0.04, yoyo: true, repeat: 1 }, tBeside + 0.4);
+
+  /* "help videos": track right to Help */
+  tl.to(world, { ...cam(pc(3), 350, 1.15), duration: 1.2, ease: 'expo.inOut' }, tHelp - 0.7);
+  tl.to(labels[3], { color: '#7BE8C4', duration: 0.3 }, tHelp);
+  tl.to(article, { y: 252, duration: 0.7, ease: 'power3.inOut' }, tTop - 0.25);
+  tl.fromTo(vHelp, { opacity: 0, y: -120, scale: 0.9 }, { opacity: 1, y: 0, scale: 1, duration: 0.65, ease: 'back.out(1.7)', immediateRender: false }, tTop - 0.12);
+
+  /* "article": pull back to all four + headline */
+  tl.to(world, { ...cam(1240, 350, 0.68, 625), duration: 1.3, ease: 'expo.inOut' }, tArticle - 0.15);
+  tl.fromTo(words, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, stagger: 0.06, ease: 'back.out(1.5)', immediateRender: false }, tArticle + 0.35);
+  tl.fromTo(uline, { opacity: 0, scaleX: 0 }, { opacity: 1, scaleX: 1, duration: 0.6, ease: 'power3.out', immediateRender: false }, tArticle + 0.8);
+  tl.to([vHome, vFeat, vPrice, vHelp], { scale: 1.05, duration: 0.35, stagger: 0.08, yoyo: true, repeat: 1, ease: 'power2.inOut' }, tArticle + 1.2);
+});

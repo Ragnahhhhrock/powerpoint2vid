@@ -1,0 +1,859 @@
+{
+  "title": "Where to Put an Explainer Video on Your Website (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0F1424",
+      "ink": "#1B2238",
+      "paper": "#F6F3EC",
+      "signal": "#FF6B4A",
+      "sky": "#5B8CFF",
+      "mint": "#3DD6A3",
+      "mist": "#C9CEDB"
+    },
+    "font": "Inter Display",
+    "motion": "Confident and unhurried: elements arrive on a soft ease-out with a slight overshoot, and the camera glides like a scroll down a web page, pushing in on whatever the narrator names.",
+    "story": "We move from a lost video floating in the dark to a well-placed one glowing on the right page, alternating night stages for problems and ideas with paper stages for practical website layouts, then end in signal-coral on the call to action."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "You've made the explainer video. Now where does it go? In the wrong spot it's decoration; in the right spot, it works every day.",
+      "storyboard": "Night stage: a single video thumbnail with a coral play button drifts alone in empty space. On 'where does it go?' the headline 'Where to Put an Explainer Video' types in at 120px above it. On 'decoration' the thumbnail settles into a faint picture frame and dims to mist, like a painting nobody looks at. On 'works every day' the camera pushes in, the frame becomes a browser window, and the play button pulses coral. The plain title slide is rebuilt; nothing else is kept.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Where to Put an Explainer Video",
+        "text": "",
+        "notes": "You've made the explainer video. Now where does it go? In the wrong spot it's decoration; in the right spot it works every day.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 9.127,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 2.425,
+          "text": "You've made the explainer video.",
+          "words": [
+            {
+              "w": "You've",
+              "t": 0.8
+            },
+            {
+              "w": "made",
+              "t": 1.079
+            },
+            {
+              "w": "the",
+              "t": 1.299
+            },
+            {
+              "w": "explainer",
+              "t": 1.427
+            },
+            {
+              "w": "video.",
+              "t": 1.915
+            }
+          ]
+        },
+        {
+          "t": 2.634,
+          "end": 3.761,
+          "text": "Now where does it go?",
+          "words": [
+            {
+              "w": "Now",
+              "t": 2.634
+            },
+            {
+              "w": "where",
+              "t": 2.82
+            },
+            {
+              "w": "does",
+              "t": 3.041
+            },
+            {
+              "w": "it",
+              "t": 3.203
+            },
+            {
+              "w": "go?",
+              "t": 3.331
+            }
+          ]
+        },
+        {
+          "t": 4.086,
+          "end": 8.277,
+          "text": "In the wrong spot it's decoration; in the right spot, it works every day.",
+          "words": [
+            {
+              "w": "In",
+              "t": 4.086
+            },
+            {
+              "w": "the",
+              "t": 4.248
+            },
+            {
+              "w": "wrong",
+              "t": 4.353
+            },
+            {
+              "w": "spot",
+              "t": 4.62
+            },
+            {
+              "w": "it's",
+              "t": 5.003
+            },
+            {
+              "w": "decoration;",
+              "t": 5.2
+            },
+            {
+              "w": "in",
+              "t": 6.094
+            },
+            {
+              "w": "the",
+              "t": 6.245
+            },
+            {
+              "w": "right",
+              "t": 6.361
+            },
+            {
+              "w": "spot,",
+              "t": 6.605
+            },
+            {
+              "w": "it",
+              "t": 6.977
+            },
+            {
+              "w": "works",
+              "t": 7.151
+            },
+            {
+              "w": "every",
+              "t": 7.487
+            },
+            {
+              "w": "day.",
+              "t": 7.812
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.277
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Every explainer answers one question. Write it down, then ask where a visitor is when they have it. That's where the video goes.",
+      "storyboard": "Paper stage, wide. On 'one question' a huge sky-blue question mark draws itself centre frame. The deck's four questions flicker past beside it one at a time in 48px ink, then three fade to mist while 'What does this company actually do?' stays bold. On 'where a visitor is' a small cursor icon appears beside the question. On 'where the video goes' a coral pin drops onto the cursor and the headline 'Start with the question' holds at 110px. Bullets list cut down to the cycling questions.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Start with the question, not the page",
+        "text": "What does this company actually do?. How does this feature work?. Is the paid plan worth it?. How do I get started?",
+        "notes": "Every explainer answers one question. Write it down, then ask where a visitor is when they have it. That's where the video goes.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 9.859,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.848,
+          "text": "Every explainer answers one question.",
+          "words": [
+            {
+              "w": "Every",
+              "t": 0.55
+            },
+            {
+              "w": "explainer",
+              "t": 0.921
+            },
+            {
+              "w": "answers",
+              "t": 1.525
+            },
+            {
+              "w": "one",
+              "t": 1.989
+            },
+            {
+              "w": "question.",
+              "t": 2.233
+            }
+          ]
+        },
+        {
+          "t": 3.174,
+          "end": 6.343,
+          "text": "Write it down, then ask where a visitor is when they have it.",
+          "words": [
+            {
+              "w": "Write",
+              "t": 3.174
+            },
+            {
+              "w": "it",
+              "t": 3.487
+            },
+            {
+              "w": "down,",
+              "t": 3.591
+            },
+            {
+              "w": "then",
+              "t": 4.056
+            },
+            {
+              "w": "ask",
+              "t": 4.288
+            },
+            {
+              "w": "where",
+              "t": 4.602
+            },
+            {
+              "w": "a",
+              "t": 4.834
+            },
+            {
+              "w": "visitor",
+              "t": 4.915
+            },
+            {
+              "w": "is",
+              "t": 5.333
+            },
+            {
+              "w": "when",
+              "t": 5.565
+            },
+            {
+              "w": "they",
+              "t": 5.728
+            },
+            {
+              "w": "have",
+              "t": 5.89
+            },
+            {
+              "w": "it.",
+              "t": 6.099
+            }
+          ]
+        },
+        {
+          "t": 6.726,
+          "end": 8.259,
+          "text": "That's where the video goes.",
+          "words": [
+            {
+              "w": "That's",
+              "t": 6.726
+            },
+            {
+              "w": "where",
+              "t": 7.017
+            },
+            {
+              "w": "the",
+              "t": 7.179
+            },
+            {
+              "w": "video",
+              "t": 7.284
+            },
+            {
+              "w": "goes.",
+              "t": 7.678
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.259
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "Put home and pricing videos high on the page, walkthroughs beside the feature description, and help videos at the top of the matching article.",
+      "storyboard": "Ink stage with four simplified page wireframes in a row: Home, Feature, Pricing, Help. The camera tracks left to right. On 'home and pricing' coral video blocks snap to the top of the Home and Pricing pages. On 'walkthroughs beside the feature' a sky block slides in beside a text column on the Feature page. On 'help videos at the top' a mint block lands above article lines on the Help page. The camera pulls back to hold all four, with headline 'Place it where the question arises'.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Place it where the question arises",
+        "text": "Home page, near the top. Product and feature pages. Pricing page. Help centre and onboarding",
+        "notes": "Put home and pricing videos high on the page, walkthroughs beside the feature description, and help videos at the top of the matching article.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 9.766,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 8.166,
+          "text": "Put home and pricing videos high on the page, walkthroughs beside the feature description, and help videos at the top of the matching article.",
+          "words": [
+            {
+              "w": "Put",
+              "t": 0.55
+            },
+            {
+              "w": "home",
+              "t": 0.817
+            },
+            {
+              "w": "and",
+              "t": 1.072
+            },
+            {
+              "w": "pricing",
+              "t": 1.2
+            },
+            {
+              "w": "videos",
+              "t": 1.607
+            },
+            {
+              "w": "high",
+              "t": 2.071
+            },
+            {
+              "w": "on",
+              "t": 2.315
+            },
+            {
+              "w": "the",
+              "t": 2.408
+            },
+            {
+              "w": "page,",
+              "t": 2.524
+            },
+            {
+              "w": "walkthroughs",
+              "t": 3.278
+            },
+            {
+              "w": "beside",
+              "t": 3.917
+            },
+            {
+              "w": "the",
+              "t": 4.323
+            },
+            {
+              "w": "feature",
+              "t": 4.439
+            },
+            {
+              "w": "description,",
+              "t": 4.776
+            },
+            {
+              "w": "and",
+              "t": 5.6
+            },
+            {
+              "w": "help",
+              "t": 5.821
+            },
+            {
+              "w": "videos",
+              "t": 6.053
+            },
+            {
+              "w": "at",
+              "t": 6.494
+            },
+            {
+              "w": "the",
+              "t": 6.599
+            },
+            {
+              "w": "top",
+              "t": 6.703
+            },
+            {
+              "w": "of",
+              "t": 6.97
+            },
+            {
+              "w": "the",
+              "t": 7.063
+            },
+            {
+              "w": "matching",
+              "t": 7.179
+            },
+            {
+              "w": "article.",
+              "t": 7.551
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.166
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "You don't need five separate productions. Duplicate one master deck, cut it down for each page, and adjust the speaker notes for the audience.",
+      "storyboard": "Night stage. On 'five separate productions' five film-clapper icons appear and get struck through in coral. On 'one master deck' a single glowing deck card rises centre frame with the headline 'One master deck feeds every page'. On 'cut it down' four copies fan out on branching lines to labels: 'Home: short, broad and clear', 'Feature: step by step', 'Pricing: factual, reassuring', 'Help centre: as long as the task needs', each card a different length. On 'speaker notes' a small notes line ripples on each card; hold on the tree.",
+      "minDuration": 11,
+      "slide": {
+        "title": "One master deck feeds every page",
+        "text": "Home: short, broad and clear. Feature: step by step. Pricing: factual, reassuring. Help centre: as long as the task needs",
+        "notes": "You don't need five separate productions. Duplicate one master deck, cut it down for each page, and adjust the speaker notes for the audience.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 10.01,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.617,
+          "text": "You don't need five separate productions.",
+          "words": [
+            {
+              "w": "You",
+              "t": 0.55
+            },
+            {
+              "w": "don't",
+              "t": 0.701
+            },
+            {
+              "w": "need",
+              "t": 0.899
+            },
+            {
+              "w": "five",
+              "t": 1.131
+            },
+            {
+              "w": "separate",
+              "t": 1.444
+            },
+            {
+              "w": "productions.",
+              "t": 1.804
+            }
+          ]
+        },
+        {
+          "t": 2.942,
+          "end": 8.41,
+          "text": "Duplicate one master deck, cut it down for each page, and adjust the speaker notes for the audience.",
+          "words": [
+            {
+              "w": "Duplicate",
+              "t": 2.942
+            },
+            {
+              "w": "one",
+              "t": 3.557
+            },
+            {
+              "w": "master",
+              "t": 3.766
+            },
+            {
+              "w": "deck,",
+              "t": 4.161
+            },
+            {
+              "w": "cut",
+              "t": 4.66
+            },
+            {
+              "w": "it",
+              "t": 4.904
+            },
+            {
+              "w": "down",
+              "t": 5.032
+            },
+            {
+              "w": "for",
+              "t": 5.287
+            },
+            {
+              "w": "each",
+              "t": 5.438
+            },
+            {
+              "w": "page,",
+              "t": 5.67
+            },
+            {
+              "w": "and",
+              "t": 6.262
+            },
+            {
+              "w": "adjust",
+              "t": 6.437
+            },
+            {
+              "w": "the",
+              "t": 6.808
+            },
+            {
+              "w": "speaker",
+              "t": 6.913
+            },
+            {
+              "w": "notes",
+              "t": 7.296
+            },
+            {
+              "w": "for",
+              "t": 7.54
+            },
+            {
+              "w": "the",
+              "t": 7.656
+            },
+            {
+              "w": "audience.",
+              "t": 7.783
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.41
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Small details decide who presses play. Tell people what they'll get and how long it takes, lead with a clear headline, and add captions for sound-off browsing.",
+      "storyboard": "Paper stage, close on one video player. On 'what they'll get' the label 'See how it works in 2 minutes' slides in under it. On 'clear headline' the first frame flips from 'Welcome' (struck in mist) to 'Turn your deck into a narrated video'. On 'captions' a muted speaker icon appears and burned-in caption bars type across the bottom. A small 'No autoplay with sound' tag pins to the corner. Headline 'Small details decide who presses play' sits up top at 96px.",
+      "minDuration": 12,
+      "slide": {
+        "title": "Small details decide who presses play",
+        "text": "Label: \"See how it works in 2 minutes\". Before: \"Welcome\" / After: \"Turn your deck into a narrated video\". Burned-in captions for silent viewing. No autoplay with sound",
+        "notes": "Tell people what they'll get and how long it takes. Make the first frame a clear headline, and add captions for viewers browsing with the sound off.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "smoothup",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 11.474,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.0,
+          "text": "Small details decide who presses play.",
+          "words": [
+            {
+              "w": "Small",
+              "t": 0.55
+            },
+            {
+              "w": "details",
+              "t": 0.934
+            },
+            {
+              "w": "decide",
+              "t": 1.444
+            },
+            {
+              "w": "who",
+              "t": 1.886
+            },
+            {
+              "w": "presses",
+              "t": 2.06
+            },
+            {
+              "w": "play.",
+              "t": 2.443
+            }
+          ]
+        },
+        {
+          "t": 3.441,
+          "end": 9.874,
+          "text": "Tell people what they'll get and how long it takes, lead with a clear headline, and add captions for sound-off browsing.",
+          "words": [
+            {
+              "w": "Tell",
+              "t": 3.441
+            },
+            {
+              "w": "people",
+              "t": 3.732
+            },
+            {
+              "w": "what",
+              "t": 3.999
+            },
+            {
+              "w": "they'll",
+              "t": 4.149
+            },
+            {
+              "w": "get",
+              "t": 4.393
+            },
+            {
+              "w": "and",
+              "t": 4.707
+            },
+            {
+              "w": "how",
+              "t": 4.881
+            },
+            {
+              "w": "long",
+              "t": 5.032
+            },
+            {
+              "w": "it",
+              "t": 5.229
+            },
+            {
+              "w": "takes,",
+              "t": 5.345
+            },
+            {
+              "w": "lead",
+              "t": 6.146
+            },
+            {
+              "w": "with",
+              "t": 6.425
+            },
+            {
+              "w": "a",
+              "t": 6.576
+            },
+            {
+              "w": "clear",
+              "t": 6.669
+            },
+            {
+              "w": "headline,",
+              "t": 6.959
+            },
+            {
+              "w": "and",
+              "t": 7.691
+            },
+            {
+              "w": "add",
+              "t": 7.865
+            },
+            {
+              "w": "captions",
+              "t": 8.062
+            },
+            {
+              "w": "for",
+              "t": 8.573
+            },
+            {
+              "w": "sound-off",
+              "t": 8.736
+            },
+            {
+              "w": "browsing.",
+              "t": 9.2
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.874
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "When the product changes, edit the slides and export again, no reshoot. On Pro, a.i. directs each video. Try Basic first, with no subscription. Start at powerpoint2vid.com.",
+      "storyboard": "Night stage shifting to coral. On 'edit the slides' a slide card's text rewrites itself; on 'export again' it flows into a video player with a mint 'no reshoot' tick. On 'Pro, a.i. directs' the player bursts into a lively animated frame; a small 'Basic: try it first, no subscription needed' tag follows. On 'powerpoint2vid.com' the background floods coral and the URL lands at 140px in paper with headline 'Make videos from decks you control' above; hold 2s.",
+      "minDuration": 12,
+      "slide": {
+        "title": "Make videos from decks you control",
+        "text": "Edit the slide and speaker notes. Export again, no reshoot. Pro: a.i. directs the video. Basic: try it first, no subscription needed",
+        "notes": "When the product changes, edit the slides and export again. On Pro, a.i. directs each video, turning ordinary slides into an extraordinary explainer. Start at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 15.58,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.869,
+          "text": "When the product changes, edit the slides and export again, no reshoot.",
+          "words": [
+            {
+              "w": "When",
+              "t": 0.55
+            },
+            {
+              "w": "the",
+              "t": 0.759
+            },
+            {
+              "w": "product",
+              "t": 0.864
+            },
+            {
+              "w": "changes,",
+              "t": 1.235
+            },
+            {
+              "w": "edit",
+              "t": 1.92
+            },
+            {
+              "w": "the",
+              "t": 2.188
+            },
+            {
+              "w": "slides",
+              "t": 2.304
+            },
+            {
+              "w": "and",
+              "t": 2.733
+            },
+            {
+              "w": "export",
+              "t": 2.872
+            },
+            {
+              "w": "again,",
+              "t": 3.302
+            },
+            {
+              "w": "no",
+              "t": 3.917
+            },
+            {
+              "w": "reshoot.",
+              "t": 4.15
+            }
+          ]
+        },
+        {
+          "t": 5.682,
+          "end": 8.085,
+          "text": "On Pro, a.i. directs each video.",
+          "words": [
+            {
+              "w": "On",
+              "t": 5.682
+            },
+            {
+              "w": "Pro,",
+              "t": 5.926
+            },
+            {
+              "w": "A.I.",
+              "t": 6.379
+            },
+            {
+              "w": "directs",
+              "t": 6.785
+            },
+            {
+              "w": "each",
+              "t": 7.215
+            },
+            {
+              "w": "video.",
+              "t": 7.482
+            }
+          ]
+        },
+        {
+          "t": 8.468,
+          "end": 10.837,
+          "text": "Try Basic first, with no subscription.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 8.468
+            },
+            {
+              "w": "Basic",
+              "t": 8.794
+            },
+            {
+              "w": "first,",
+              "t": 9.235
+            },
+            {
+              "w": "with",
+              "t": 9.664
+            },
+            {
+              "w": "no",
+              "t": 9.873
+            },
+            {
+              "w": "subscription.",
+              "t": 10.047
+            }
+          ]
+        },
+        {
+          "t": 11.081,
+          "end": 13.38,
+          "text": "Start at powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Start",
+              "t": 11.081
+            },
+            {
+              "w": "at",
+              "t": 11.452
+            },
+            {
+              "w": "PowerPoint",
+              "t": 11.58
+            },
+            {
+              "w": "to",
+              "t": 12.16
+            },
+            {
+              "w": "vid",
+              "t": 12.311
+            },
+            {
+              "w": "dot",
+              "t": 12.59
+            },
+            {
+              "w": "com.",
+              "t": 12.822
+            }
+          ]
+        }
+      ],
+      "speechEnd": 13.38
+    }
+  ],
+  "voiceProvider": "elevenlabs"
+}

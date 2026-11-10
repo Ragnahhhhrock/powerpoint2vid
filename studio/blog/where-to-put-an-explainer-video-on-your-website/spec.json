@@ -1,0 +1,102 @@
+{
+  "title": "Where to Put an Explainer Video on Your Website (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Where to Put an Explainer Video",
+      "bullets": [],
+      "notes": "You've made the explainer video. Now where does it go? In the wrong spot it's decoration; in the right spot it works every day.",
+      "minDuration": 8
+    },
+    {
+      "title": "Start with the question, not the page",
+      "bullets": [
+        "What does this company actually do?",
+        "How does this feature work?",
+        "Is the paid plan worth it?",
+        "How do I get started?"
+      ],
+      "notes": "Every explainer answers one question. Write it down, then ask where a visitor is when they have it. That's where the video goes.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Place it where the question arises",
+      "bullets": [
+        "Home page, near the top",
+        "Product and feature pages",
+        "Pricing page",
+        "Help centre and onboarding"
+      ],
+      "notes": "Put home and pricing videos high on the page, walkthroughs beside the feature description, and help videos at the top of the matching article.",
+      "minDuration": 11,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "One master deck feeds every page",
+      "bullets": [
+        "Home: short, broad and clear",
+        "Feature: step by step",
+        "Pricing: factual, reassuring",
+        "Help centre: as long as the task needs"
+      ],
+      "notes": "You don't need five separate productions. Duplicate one master deck, cut it down for each page, and adjust the speaker notes for the audience.",
+      "minDuration": 10,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Small details decide who presses play",
+      "bullets": [
+        "Label: \"See how it works in 2 minutes\"",
+        "Before: \"Welcome\" / After: \"Turn your deck into a narrated video\"",
+        "Burned-in captions for silent viewing",
+        "No autoplay with sound"
+      ],
+      "notes": "Tell people what they'll get and how long it takes. Make the first frame a clear headline, and add captions for viewers browsing with the sound off.",
+      "minDuration": 12,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Make videos from decks you control",
+      "bullets": [
+        "Edit the slide and speaker notes",
+        "Export again, no reshoot",
+        "Pro: a.i. directs the video",
+        "Basic: try it first, no subscription needed"
+      ],
+      "notes": "When the product changes, edit the slides and export again. On Pro, a.i. directs each video, turning ordinary slides into an extraordinary explainer. Start at powerpoint2vid.com.",
+      "minDuration": 12,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}
