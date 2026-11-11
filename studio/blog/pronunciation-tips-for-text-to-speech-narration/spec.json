@@ -1,0 +1,104 @@
+{
+  "title": "Pronunciation Tips for Text-to-Speech Narration (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Fix Text-to-Speech Pronunciation in Your Script",
+      "bullets": [
+        "Pronunciation tips for training videos",
+        "Acronyms, names, numbers and jargon"
+      ],
+      "notes": "Nothing breaks a training video like a narrator who says your company name wrong. The good news: the fix almost always lives in your script.",
+      "minDuration": 9
+    },
+    {
+      "title": "Listen first, then list problem words",
+      "bullets": [
+        "Acronyms: WHS, HR, LMS, KPI",
+        "Product, people's and place names",
+        "Numbers, dates, money and ranges",
+        "Symbols and units: %, &, /, km"
+      ],
+      "notes": "A voice reads exactly what's written and guesses at the rest. So listen to the whole narration first, and note every word that sounds off.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Space out acronyms, spell names phonetically",
+      "bullets": [
+        "Before: the WHS portal",
+        "After: the W H S portal",
+        "Siobhan becomes Shiv-awn in the notes",
+        "Correct spelling stays on the slide"
+      ],
+      "notes": "If the voice reads WHS as a word, add spaces between the letters. For names, write them how they sound, and keep the real spelling on the slide.",
+      "minDuration": 12,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Write numbers the way people say them",
+      "bullets": [
+        "2026-27: twenty twenty-six to twenty-seven",
+        "$1,500: fifteen hundred dollars",
+        "% becomes per cent, & becomes and",
+        "Rephrase words like \"lead\""
+      ],
+      "notes": "Voices read numbers literally, so write them as people say them. Spell out symbols and units, and rephrase any word with two pronunciations.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Fix rhythm and keep a team list",
+      "bullets": [
+        "Short sentences, one idea each",
+        "Full stops for clear pauses",
+        "Avoid brackets",
+        "Shared list: WHS to W H S"
+      ],
+      "notes": "Short sentences with clear full stops sound natural, not rushed. Keep one shared pronunciation list, so every deck your team makes sounds consistent.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Clear narration, then an extraordinary video",
+      "bullets": [
+        "Speaker notes become the narration",
+        "Pro: a.i. directs the video",
+        "Try Basic first, no subscription needed"
+      ],
+      "notes": "Once your notes sound right, turn the deck into video. On Pro, a.i. directs it, landing each term as the voice says it. Start at powerpoint2vid.com.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}

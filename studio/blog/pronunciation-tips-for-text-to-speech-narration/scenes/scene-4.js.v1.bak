@@ -1,0 +1,134 @@
+/* Scene 4 — "Short sentences with clear full stops sound natural, not rushed. Keep one shared
+ * pronunciation list, so every deck your team makes sounds consistent."
+ * Storyboard: paper stage. A long run-on line with brackets jitters and crumples. On "full stops"
+ * it snaps into three short lines, each ending in a big signal-blue dot that pulses like a beat.
+ * On "shared pronunciation list" the camera pulls wide to one card, "WHS → W H S". On
+ * "every deck your team makes" mint copies of it fly into a row of deck thumbnails, and each
+ * thumbnail gets a mint check on "consistent". */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const A = (i, w, f) => { const v = ctx.at(i, w); return (v == null || isNaN(v)) ? f : v; };
+  const tShort = A(0, 'Short', 0.55), tClear = A(0, 'clear', 1.65), tStops = A(0, 'stops', 2.3);
+  const tNatural = A(0, 'natural,', 3.22), tRushed = A(0, 'rushed.', 4.14);
+  const tKeep = A(1, 'Keep', 5.33), tShared = A(1, 'shared', 5.89), tPron = A(1, 'pronunciation', 6.24), tList = A(1, 'list,', 7.0);
+  const tEvery = A(1, 'every', 7.72), tMakes = A(1, 'makes', 8.78), tCons = A(1, 'consistent.', 9.6);
+  const R = ctx.rand(7);
+
+  stage.style.background = 'radial-gradient(80% 70% at 50% 40%, #fffdf8 0%, var(--paper) 60%, #ebe5d9 100%)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 540px' });
+  const mono = '600 22px/1 ui-monospace, Menlo, monospace';
+
+  /* ---------- Part A: rhythm ---------- */
+  const partA = el('div', 'abs', cam, { inset: 0, transformOrigin: '960px 480px' });
+  const tagA = el('div', 'abs', partA, { left: '160px', top: '180px', font: mono, letterSpacing: '.16em', color: 'var(--mist)' });
+  tagA.textContent = 'SCRIPT · RHYTHM';
+
+  const run = el('div', 'abs', partA, { left: '160px', width: '1600px', top: '440px', font: '700 60px/1.15 Inter Display, Inter', letterSpacing: '-.03em', color: 'var(--ink)', whiteSpace: 'nowrap' });
+  const runWords = ctx.split(run, 'Check the list (and the brackets) then read on and on', 'word');
+  runWords.forEach((w) => { if (/[()]/.test(w.textContent)) w.style.color = 'var(--coral)'; });
+
+  const LINES = ['Check the list', 'Skip brackets', 'Read on'];
+  const lines = LINES.map((txt, i) => {
+    const row = el('div', 'abs', partA, { left: '300px', top: 290 + i * 150 + 'px', display: 'flex', alignItems: 'flex-end', gap: '10px' });
+    const t = el('div', '', row, { font: '800 104px/1 Inter Display, Inter', letterSpacing: '-.045em', color: 'var(--ink)' });
+    t.textContent = txt;
+    const dotWrap = el('div', '', row, { position: 'relative', width: '40px', height: '40px', marginBottom: '8px' });
+    const dot = el('div', 'abs', dotWrap, { inset: 0, borderRadius: '50%', background: 'var(--signal)', boxShadow: '0 0 30px rgba(61,123,255,.55)' });
+    const ring = el('div', 'abs', dotWrap, { inset: 0, borderRadius: '50%', border: '4px solid var(--signal)', opacity: 0 });
+    return { row, t, dot, ring };
+  });
+
+  /* ---------- Part B: shared list ---------- */
+  const partB = el('div', 'abs', cam, { inset: 0 });
+  const tagB = el('div', 'abs', partB, { left: '0', width: '1920px', top: '150px', textAlign: 'center', font: mono, letterSpacing: '.18em', color: 'var(--mist)' });
+  tagB.textContent = 'TEAM PRONUNCIATION LIST';
+  const card = el('div', 'abs', partB, { left: '560px', top: '200px', width: '800px', height: '230px', borderRadius: '28px', background: '#fff',
+    boxShadow: '0 40px 90px rgba(26,31,46,.18), 0 2px 0 rgba(26,31,46,.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '36px', transformOrigin: '50% 50%' });
+  const cW = el('div', '', card, { font: '900 112px/1 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--ink)' }); cW.textContent = 'WHS';
+  const cA = el('div', '', card, { font: '800 90px/1 Inter', color: 'var(--signal)' }); cA.textContent = '→';
+  const cS = el('div', '', card, { font: '900 112px/1 Inter Display, Inter', letterSpacing: '.14em', color: 'var(--mint)' }); cS.textContent = 'W H S';
+
+  const TW = 260, TH = 150, GAP = 40, TX0 = (1920 - (5 * TW + 4 * GAP)) / 2, TY = 640;
+  const thumbs = [0, 1, 2, 3, 4].map((i) => {
+    const x = TX0 + i * (TW + GAP);
+    const th = el('div', 'abs', partB, { left: x + 'px', top: TY + 'px', width: TW + 'px', height: TH + 'px', borderRadius: '14px', background: 'var(--ink)',
+      boxShadow: '0 24px 50px rgba(26,31,46,.25)', border: '3px solid transparent', overflow: 'hidden' });
+    el('div', 'abs', th, { left: '20px', top: '22px', width: 80 + R() * 80 + 'px', height: '12px', borderRadius: '6px', background: 'rgba(255,255,255,.75)' });
+    el('div', 'abs', th, { left: '20px', top: '48px', width: 120 + R() * 80 + 'px', height: '7px', borderRadius: '4px', background: 'rgba(255,255,255,.25)' });
+    el('div', 'abs', th, { left: '20px', top: '64px', width: 70 + R() * 90 + 'px', height: '7px', borderRadius: '4px', background: 'rgba(255,255,255,.25)' });
+    const chip = el('div', 'abs', partB, { left: x + 20 + 'px', top: TY + 90 + 'px', padding: '8px 14px', borderRadius: '10px', background: 'var(--mint)',
+      font: '800 26px/1 Inter', letterSpacing: '.12em', color: 'var(--night)', boxShadow: '0 0 24px rgba(63,214,164,.6)', whiteSpace: 'nowrap' });
+    chip.textContent = 'W H S';
+    const check = el('div', 'abs', partB, { left: x + TW - 54 + 'px', top: TY - 18 + 'px', width: '56px', height: '56px', borderRadius: '50%', background: 'var(--mint)',
+      display: 'flex', alignItems: 'center', justifyContent: 'center', font: '900 32px/1 Inter', color: 'var(--night)', boxShadow: '0 8px 24px rgba(63,214,164,.5)' });
+    check.textContent = '✓';
+    const lab = el('div', 'abs', partB, { left: x + 'px', width: TW + 'px', top: TY + TH + 22 + 'px', textAlign: 'center', font: '600 18px/1 ui-monospace, Menlo, monospace', letterSpacing: '.14em', color: 'var(--mist)' });
+    lab.textContent = 'DECK ' + (i + 1);
+    return { th, chip, check, lab, x };
+  });
+  const footer = el('div', 'abs', partB, { left: 0, width: '1920px', top: '900px', textAlign: 'center', font: '800 44px/1 Inter Display, Inter', letterSpacing: '-.03em', color: 'var(--ink)' });
+  footer.textContent = 'Every deck. One list.';
+
+  ctx.fx.vignette({ strength: 0.25 });
+  ctx.fx.grain({ opacity: 0.05, blend: 'multiply' });
+
+  /* ---------- timeline ---------- */
+  gsap.set(lines.flatMap((l) => [l.t, l.dot]), { opacity: 0 });
+  gsap.set(lines.map((l) => l.dot), { scale: 0 });
+  gsap.set([partB], { opacity: 1 });
+  gsap.set([tagB, card, cA, cS, footer, ...thumbs.flatMap((t) => [t.th, t.chip, t.check, t.lab])], { opacity: 0 });
+
+  tl.fromTo(cam, { scale: 1.05 }, { scale: 1.1, duration: tShared - 0.2, ease: 'none' }, 0);
+  tl.from(tagA, { opacity: 0, x: -20, duration: 0.4 }, 0.05);
+  tl.from(runWords, { opacity: 0, y: 24, duration: 0.35, stagger: 0.04 }, 0.1);
+
+  // run-on strains: words jitter and squeeze together
+  runWords.forEach((w, i) => {
+    tl.to(w, { x: -i * 6, y: (R() - 0.5) * 18, rotation: (R() - 0.5) * 8, duration: 0.5, ease: 'power2.inOut' }, tClear - 0.3 + i * 0.02);
+  });
+  // crumple away just before "stops"
+  runWords.forEach((w) => {
+    tl.to(w, { y: 60 + R() * 120, x: '+=' + (R() - 0.5) * 300, rotation: (R() - 0.5) * 90, scale: 0.4, opacity: 0, duration: 0.45, ease: 'power3.in' }, tStops - 0.45 + R() * 0.1);
+  });
+
+  // three short lines snap in with their full stops
+  lines.forEach((l, i) => {
+    const t = tStops + i * 0.22;
+    tl.fromTo(l.t, { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.35, ease: 'power3.out' }, t);
+    tl.to(l.dot, { opacity: 1, scale: 1, duration: 0.45, ease: 'back.out(2.4)' }, t + 0.15);
+  });
+  // dots pulse like a beat
+  [tNatural - 0.25, tNatural, tNatural + 0.25, tRushed - 0.2, tRushed + 0.05, tRushed + 0.3].forEach((bt, k) => {
+    const l = lines[k % 3];
+    tl.fromTo(l.ring, { scale: 1, opacity: 0.9 }, { scale: 2.6, opacity: 0, duration: 0.6, ease: 'power2.out', immediateRender: false }, bt);
+    tl.fromTo(l.dot, { scale: 1.35 }, { scale: 1, duration: 0.35, ease: 'power2.out', immediateRender: false }, bt);
+  });
+
+  // pull wide to the shared list
+  tl.to(partA, { opacity: 0, scale: 0.7, y: -140, duration: 0.6, ease: 'expo.inOut' }, tShared - 0.35);
+  tl.to(cam, { scale: 1, duration: 1.0, ease: 'expo.inOut' }, tShared - 0.3);
+  tl.to(tagB, { opacity: 1, duration: 0.4 }, tShared);
+  tl.fromTo(card, { opacity: 0, scale: 0.6, y: 120 }, { opacity: 1, scale: 1, y: 120, duration: 0.55, ease: 'back.out(1.7)', immediateRender: false }, tPron - 0.1);
+  tl.fromTo([cA, cS], { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.35, stagger: 0.12, immediateRender: false }, tList - 0.1);
+  tl.to(card, { y: 0, duration: 0.6, ease: 'expo.inOut' }, tList + 0.35);
+
+  // copies fly into every deck
+  thumbs.forEach((tb, i) => {
+    const t = tEvery - 0.1 + i * 0.12;
+    tl.fromTo(tb.th, { opacity: 0, y: 40, scale: 0.85 }, { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: 'back.out(1.6)', immediateRender: false }, t);
+    tl.to(tb.lab, { opacity: 1, duration: 0.3 }, t + 0.2);
+    const ft = t + 0.35;
+    const dx = 960 - (tb.x + 20 + 60), dy = 315 - (TY + 110);
+    tl.fromTo(tb.chip, { opacity: 0, x: dx, y: dy, scale: 1.8 }, { opacity: 1, x: 0, y: 0, scale: 1, duration: 0.6, ease: 'power3.inOut', immediateRender: false }, ft);
+    tl.to(tb.th, { borderColor: 'rgba(63,214,164,.9)', duration: 0.25 }, ft + 0.55);
+  });
+  tl.fromTo(card, { scale: 1.04 }, { scale: 1, duration: 0.3, repeat: 3, immediateRender: false }, tEvery + 0.3);
+
+  // consistent: checks pop on every deck
+  thumbs.forEach((tb, i) => {
+    tl.fromTo(tb.check, { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.4, ease: 'back.out(2.2)', immediateRender: false }, tCons - 0.1 + i * 0.07);
+    tl.to(tb.th, { boxShadow: '0 24px 50px rgba(26,31,46,.25), 0 0 40px rgba(63,214,164,.55)', duration: 0.4 }, tCons + i * 0.07);
+  });
+  tl.fromTo(footer, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, immediateRender: false }, Math.max(tMakes + 0.2, tCons - 0.4));
+  tl.to(cam, { scale: 1.035, duration: Math.max(0.5, ctx.dur - (tShared + 0.7)), ease: 'power1.inOut' }, tShared + 0.7);
+});

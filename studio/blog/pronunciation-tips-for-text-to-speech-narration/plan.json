@@ -1,0 +1,856 @@
+{
+  "title": "Pronunciation Tips for Text-to-Speech Narration (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0E1220",
+      "ink": "#1A1F2E",
+      "paper": "#F7F4EE",
+      "signal": "#3D7BFF",
+      "coral": "#FF6B57",
+      "mint": "#3FD6A4",
+      "mist": "#9AA3B5"
+    },
+    "font": "Inter Display",
+    "motion": "Crisp and conversational: text snaps in on the spoken word with quick ease-out, then holds still; the camera makes slow push-ins and occasional lateral glides between before/after states.",
+    "story": "We open in the dark with a narrator stumbling over a name, then move into bright paper-toned workshop scenes where each fix is rewritten live on screen, before closing back on night with a confident, polished video and the call to action."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "Nothing breaks a training video like a narrator who says your company name wrong. The good news? The fix almost always lives in your script.",
+      "storyboard": "Night stage. A thin audio waveform runs across centre in mist; on 'says your company name wrong' it glitches and a coral jagged spike tears through it. On 'the fix' the waveform smooths into a calm signal-blue line, and on 'your script' the headline 'Fix it in the script' types in at 140px, paper on night. Slow push-in throughout. The original title and subtitle are rebuilt; the overlapping layout is cut.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Fix Text-to-Speech Pronunciation in Your Script",
+        "text": "Pronunciation tips for training videos. Acronyms, names, numbers and jargon",
+        "notes": "Nothing breaks a training video like a narrator who says your company name wrong. The good news: the fix almost always lives in your script.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 10.45,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 5.247,
+          "text": "Nothing breaks a training video like a narrator who says your company name wrong.",
+          "words": [
+            {
+              "w": "Nothing",
+              "t": 0.8
+            },
+            {
+              "w": "breaks",
+              "t": 1.218
+            },
+            {
+              "w": "a",
+              "t": 1.555
+            },
+            {
+              "w": "training",
+              "t": 1.648
+            },
+            {
+              "w": "video",
+              "t": 2.042
+            },
+            {
+              "w": "like",
+              "t": 2.437
+            },
+            {
+              "w": "a",
+              "t": 2.634
+            },
+            {
+              "w": "narrator",
+              "t": 2.727
+            },
+            {
+              "w": "who",
+              "t": 3.389
+            },
+            {
+              "w": "says",
+              "t": 3.61
+            },
+            {
+              "w": "your",
+              "t": 3.877
+            },
+            {
+              "w": "company",
+              "t": 4.097
+            },
+            {
+              "w": "name",
+              "t": 4.504
+            },
+            {
+              "w": "wrong.",
+              "t": 4.759
+            }
+          ]
+        },
+        {
+          "t": 6.059,
+          "end": 6.849,
+          "text": "The good news?",
+          "words": [
+            {
+              "w": "The",
+              "t": 6.059
+            },
+            {
+              "w": "good",
+              "t": 6.233
+            },
+            {
+              "w": "news?",
+              "t": 6.442
+            }
+          ]
+        },
+        {
+          "t": 7.174,
+          "end": 9.6,
+          "text": "The fix almost always lives in your script.",
+          "words": [
+            {
+              "w": "The",
+              "t": 7.174
+            },
+            {
+              "w": "fix",
+              "t": 7.371
+            },
+            {
+              "w": "almost",
+              "t": 7.708
+            },
+            {
+              "w": "always",
+              "t": 8.079
+            },
+            {
+              "w": "lives",
+              "t": 8.509
+            },
+            {
+              "w": "in",
+              "t": 8.753
+            },
+            {
+              "w": "your",
+              "t": 8.857
+            },
+            {
+              "w": "script.",
+              "t": 9.031
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.6
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "A voice reads exactly what's written and guesses at the rest. So listen to the whole narration first, and note every word that sounds off.",
+      "storyboard": "Paper stage, ink type. A large headphone icon sits left; on 'listen to the whole narration' a playhead sweeps a script line. On 'every word that sounds off' four tags pop out of the line in coral, one per beat: 'WHS', 'names', '$1,500', '% & / km'. They settle into a neat column on the right titled 'Problem words'. Bullet list is rebuilt as these tags.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Listen first, then list problem words",
+        "text": "Acronyms: WHS, HR, LMS, KPI. Product, people's and place names. Numbers, dates, money and ranges. Symbols and units: %, &, /, km",
+        "notes": "A voice reads exactly what's written and guesses at the rest. So listen to the whole narration first, and note every word that sounds off.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 9.736,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.94,
+          "text": "A voice reads exactly what's written and guesses at the rest.",
+          "words": [
+            {
+              "w": "A",
+              "t": 0.55
+            },
+            {
+              "w": "voice",
+              "t": 0.713
+            },
+            {
+              "w": "reads",
+              "t": 1.038
+            },
+            {
+              "w": "exactly",
+              "t": 1.363
+            },
+            {
+              "w": "what's",
+              "t": 1.909
+            },
+            {
+              "w": "written",
+              "t": 2.176
+            },
+            {
+              "w": "and",
+              "t": 2.547
+            },
+            {
+              "w": "guesses",
+              "t": 2.756
+            },
+            {
+              "w": "at",
+              "t": 3.151
+            },
+            {
+              "w": "the",
+              "t": 3.255
+            },
+            {
+              "w": "rest.",
+              "t": 3.395
+            }
+          ]
+        },
+        {
+          "t": 4.544,
+          "end": 8.886,
+          "text": "So listen to the whole narration first, and note every word that sounds off.",
+          "words": [
+            {
+              "w": "So",
+              "t": 4.544
+            },
+            {
+              "w": "listen",
+              "t": 4.753
+            },
+            {
+              "w": "to",
+              "t": 5.055
+            },
+            {
+              "w": "the",
+              "t": 5.159
+            },
+            {
+              "w": "whole",
+              "t": 5.275
+            },
+            {
+              "w": "narration",
+              "t": 5.484
+            },
+            {
+              "w": "first,",
+              "t": 6.03
+            },
+            {
+              "w": "and",
+              "t": 6.657
+            },
+            {
+              "w": "note",
+              "t": 6.889
+            },
+            {
+              "w": "every",
+              "t": 7.144
+            },
+            {
+              "w": "word",
+              "t": 7.458
+            },
+            {
+              "w": "that",
+              "t": 7.794
+            },
+            {
+              "w": "sounds",
+              "t": 7.969
+            },
+            {
+              "w": "off.",
+              "t": 8.363
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.886
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "If the voice reads WHS as a word, add spaces between the letters. For names, write them how they sound, and keep the real spelling on the slide.",
+      "storyboard": "Split screen on paper. Left: 'the WHS portal' at 120px; on 'add spaces' the letters slide apart into 'W H S' with a signal-blue underline. Camera glides right to a slide card reading 'Siobhan'; on 'write them how they sound' a notes card beneath flips to 'Shiv-awn' in coral. On 'real spelling' a mint check lands on 'Siobhan'. Holds on both cards.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Space out acronyms, spell names phonetically",
+        "text": "Before: the WHS portal. After: the W H S portal. Siobhan becomes Shiv-awn in the notes. Correct spelling stays on the slide",
+        "notes": "If the voice reads WHS as a word, add spaces between the letters. For names, write them how they sound, and keep the real spelling on the slide.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 10.641,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 5.031,
+          "text": "If the voice reads WHS as a word, add spaces between the letters.",
+          "words": [
+            {
+              "w": "If",
+              "t": 0.55
+            },
+            {
+              "w": "the",
+              "t": 0.759
+            },
+            {
+              "w": "voice",
+              "t": 0.875
+            },
+            {
+              "w": "reads",
+              "t": 1.165
+            },
+            {
+              "w": "WHS",
+              "t": 1.478
+            },
+            {
+              "w": "as",
+              "t": 2.338
+            },
+            {
+              "w": "a",
+              "t": 2.465
+            },
+            {
+              "w": "word,",
+              "t": 2.558
+            },
+            {
+              "w": "add",
+              "t": 3.22
+            },
+            {
+              "w": "spaces",
+              "t": 3.499
+            },
+            {
+              "w": "between",
+              "t": 4.033
+            },
+            {
+              "w": "the",
+              "t": 4.369
+            },
+            {
+              "w": "letters.",
+              "t": 4.474
+            }
+          ]
+        },
+        {
+          "t": 5.472,
+          "end": 9.791,
+          "text": "For names, write them how they sound, and keep the real spelling on the slide.",
+          "words": [
+            {
+              "w": "For",
+              "t": 5.472
+            },
+            {
+              "w": "names,",
+              "t": 5.693
+            },
+            {
+              "w": "write",
+              "t": 6.215
+            },
+            {
+              "w": "them",
+              "t": 6.506
+            },
+            {
+              "w": "how",
+              "t": 6.68
+            },
+            {
+              "w": "they",
+              "t": 6.842
+            },
+            {
+              "w": "sound,",
+              "t": 7.028
+            },
+            {
+              "w": "and",
+              "t": 7.713
+            },
+            {
+              "w": "keep",
+              "t": 7.91
+            },
+            {
+              "w": "the",
+              "t": 8.131
+            },
+            {
+              "w": "real",
+              "t": 8.259
+            },
+            {
+              "w": "spelling",
+              "t": 8.537
+            },
+            {
+              "w": "on",
+              "t": 8.92
+            },
+            {
+              "w": "the",
+              "t": 9.013
+            },
+            {
+              "w": "slide.",
+              "t": 9.129
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.791
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Voices read numbers literally, so write them as people say them. Spell out symbols and units, and rephrase any word with two pronunciations.",
+      "storyboard": "Ink stage, paper type. '$1,500' fills centre at 160px; on 'as people say them' it morphs into 'fifteen hundred dollars', and '2026-27' briefly flips to 'twenty twenty-six to twenty-seven'. On 'symbols' a '%' and '&' drop in and turn into 'per cent' and 'and'. On 'two pronunciations' the word 'lead' splits into two ghosted copies in coral before being struck out. Slow push-in.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Write numbers the way people say them",
+        "text": "2026-27: twenty twenty-six to twenty-seven. $1,500: fifteen hundred dollars. % becomes per cent, & becomes and. Rephrase words like \"lead\"",
+        "notes": "Voices read numbers literally, so write them as people say them. Spell out symbols and units, and rephrase any word with two pronunciations.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "smoothup",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 10.938,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.044,
+          "text": "Voices read numbers literally, so write them as people say them.",
+          "words": [
+            {
+              "w": "Voices",
+              "t": 0.55
+            },
+            {
+              "w": "read",
+              "t": 1.049
+            },
+            {
+              "w": "numbers",
+              "t": 1.316
+            },
+            {
+              "w": "literally,",
+              "t": 1.711
+            },
+            {
+              "w": "so",
+              "t": 2.407
+            },
+            {
+              "w": "write",
+              "t": 2.605
+            },
+            {
+              "w": "them",
+              "t": 2.872
+            },
+            {
+              "w": "as",
+              "t": 3.034
+            },
+            {
+              "w": "people",
+              "t": 3.162
+            },
+            {
+              "w": "say",
+              "t": 3.499
+            },
+            {
+              "w": "them.",
+              "t": 3.719
+            }
+          ]
+        },
+        {
+          "t": 4.741,
+          "end": 9.338,
+          "text": "Spell out symbols and units, and rephrase any word with two pronunciations.",
+          "words": [
+            {
+              "w": "Spell",
+              "t": 4.741
+            },
+            {
+              "w": "out",
+              "t": 5.089
+            },
+            {
+              "w": "symbols",
+              "t": 5.287
+            },
+            {
+              "w": "and",
+              "t": 5.739
+            },
+            {
+              "w": "units,",
+              "t": 5.948
+            },
+            {
+              "w": "and",
+              "t": 6.506
+            },
+            {
+              "w": "rephrase",
+              "t": 6.703
+            },
+            {
+              "w": "any",
+              "t": 7.225
+            },
+            {
+              "w": "word",
+              "t": 7.469
+            },
+            {
+              "w": "with",
+              "t": 7.818
+            },
+            {
+              "w": "two",
+              "t": 7.992
+            },
+            {
+              "w": "pronunciations.",
+              "t": 8.212
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.338
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Short sentences with clear full stops sound natural, not rushed. Keep one shared pronunciation list, so every deck your team makes sounds consistent.",
+      "storyboard": "Paper stage. A long run-on line with brackets crumples; on 'full stops' it breaks into three short lines, each ending in a big signal-blue dot that pulses like a beat. On 'shared pronunciation list' camera pulls wide to a single card reading 'WHS \u2192 W H S', which duplicates across a row of deck thumbnails in mint on 'every deck your team makes'.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Fix rhythm and keep a team list",
+        "text": "Short sentences, one idea each. Full stops for clear pauses. Avoid brackets. Shared list: WHS to W H S",
+        "notes": "Short sentences with clear full stops sound natural, not rushed. Keep one shared pronunciation list, so every deck your team makes sounds consistent.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "wipeleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 11.269,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.73,
+          "text": "Short sentences with clear full stops sound natural, not rushed.",
+          "words": [
+            {
+              "w": "Short",
+              "t": 0.55
+            },
+            {
+              "w": "sentences",
+              "t": 0.898
+            },
+            {
+              "w": "with",
+              "t": 1.467
+            },
+            {
+              "w": "clear",
+              "t": 1.653
+            },
+            {
+              "w": "full",
+              "t": 2.001
+            },
+            {
+              "w": "stops",
+              "t": 2.303
+            },
+            {
+              "w": "sound",
+              "t": 2.872
+            },
+            {
+              "w": "natural,",
+              "t": 3.22
+            },
+            {
+              "w": "not",
+              "t": 3.905
+            },
+            {
+              "w": "rushed.",
+              "t": 4.138
+            }
+          ]
+        },
+        {
+          "t": 5.333,
+          "end": 10.419,
+          "text": "Keep one shared pronunciation list, so every deck your team makes sounds consistent.",
+          "words": [
+            {
+              "w": "Keep",
+              "t": 5.333
+            },
+            {
+              "w": "one",
+              "t": 5.635
+            },
+            {
+              "w": "shared",
+              "t": 5.891
+            },
+            {
+              "w": "pronunciation",
+              "t": 6.239
+            },
+            {
+              "w": "list,",
+              "t": 7.005
+            },
+            {
+              "w": "so",
+              "t": 7.516
+            },
+            {
+              "w": "every",
+              "t": 7.725
+            },
+            {
+              "w": "deck",
+              "t": 8.039
+            },
+            {
+              "w": "your",
+              "t": 8.352
+            },
+            {
+              "w": "team",
+              "t": 8.515
+            },
+            {
+              "w": "makes",
+              "t": 8.782
+            },
+            {
+              "w": "sounds",
+              "t": 9.2
+            },
+            {
+              "w": "consistent.",
+              "t": 9.606
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.419
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "Once your notes sound right, turn the deck into video. On Pro, a.i. directs it, landing each term as the voice says it. Start at powerpoint2vid.com.",
+      "storyboard": "Night stage, echoing the opening. A notes card flies into a video frame on 'turn the deck into video'; on 'a.i. directs it' words light up in signal blue in sync with a smooth waveform. On 'powerpoint2vid.com' the URL lands at 130px in paper, with a small mist line beneath: 'Try Basic first, no subscription needed'. Hold for the final beat.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Clear narration, then an extraordinary video",
+        "text": "Speaker notes become the narration. Pro: a.i. directs the video. Try Basic first, no subscription needed",
+        "notes": "Once your notes sound right, turn the deck into video. On Pro, a.i. directs it, landing each term as the voice says it. Start at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 13.083,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.65,
+          "text": "Once your notes sound right, turn the deck into video.",
+          "words": [
+            {
+              "w": "Once",
+              "t": 0.55
+            },
+            {
+              "w": "your",
+              "t": 0.852
+            },
+            {
+              "w": "notes",
+              "t": 1.026
+            },
+            {
+              "w": "sound",
+              "t": 1.293
+            },
+            {
+              "w": "right,",
+              "t": 1.641
+            },
+            {
+              "w": "turn",
+              "t": 2.141
+            },
+            {
+              "w": "the",
+              "t": 2.431
+            },
+            {
+              "w": "deck",
+              "t": 2.547
+            },
+            {
+              "w": "into",
+              "t": 2.814
+            },
+            {
+              "w": "video.",
+              "t": 3.035
+            }
+          ]
+        },
+        {
+          "t": 4.091,
+          "end": 8.189,
+          "text": "On Pro, a.i. directs it, landing each term as the voice says it.",
+          "words": [
+            {
+              "w": "On",
+              "t": 4.091
+            },
+            {
+              "w": "Pro,",
+              "t": 4.346
+            },
+            {
+              "w": "A.I.",
+              "t": 4.776
+            },
+            {
+              "w": "directs",
+              "t": 5.159
+            },
+            {
+              "w": "it,",
+              "t": 5.658
+            },
+            {
+              "w": "landing",
+              "t": 6.065
+            },
+            {
+              "w": "each",
+              "t": 6.494
+            },
+            {
+              "w": "term",
+              "t": 6.761
+            },
+            {
+              "w": "as",
+              "t": 7.11
+            },
+            {
+              "w": "the",
+              "t": 7.237
+            },
+            {
+              "w": "voice",
+              "t": 7.353
+            },
+            {
+              "w": "says",
+              "t": 7.62
+            },
+            {
+              "w": "it.",
+              "t": 7.876
+            }
+          ]
+        },
+        {
+          "t": 8.7,
+          "end": 10.883,
+          "text": "Start at powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Start",
+              "t": 8.7
+            },
+            {
+              "w": "at",
+              "t": 9.107
+            },
+            {
+              "w": "PowerPoint",
+              "t": 9.234
+            },
+            {
+              "w": "to",
+              "t": 9.803
+            },
+            {
+              "w": "vid",
+              "t": 9.942
+            },
+            {
+              "w": "dot",
+              "t": 10.198
+            },
+            {
+              "w": "com.",
+              "t": 10.453
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.883
+    }
+  ],
+  "voiceProvider": "elevenlabs"
+}

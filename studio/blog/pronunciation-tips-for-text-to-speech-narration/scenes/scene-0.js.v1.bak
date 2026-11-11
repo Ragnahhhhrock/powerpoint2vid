@@ -1,0 +1,139 @@
+/* Scene 0: "Nothing breaks a training video like a narrator who says your company name wrong.
+ * The good news? The fix almost always lives in your script."
+ * Storyboard: night stage, a thin mist audio waveform runs across centre while the narrator speaks.
+ * On "says your company name wrong" it glitches and a coral jagged spike tears through it (shake + flash).
+ * "The good news?" lets the glitch settle. On "fix" the waveform smooths into a calm signal-blue sine.
+ * On "your script" the wave glides down and "Fix it in the script" types in at 140px, paper on night,
+ * with the deck's subtitle rebuilt beneath. A slow push-in runs throughout. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const says = ctx.at(0, 'says'), wrong = ctx.at(0, 'wrong'), company = ctx.at(0, 'company');
+  const good = ctx.at(1, 'good'), fix = ctx.at(2, 'fix'), your2 = ctx.at(2, 'your'), script = ctx.at(2, 'script');
+
+  // own seeded PRNG (mulberry32)
+  let sd = 1337;
+  const rng = () => { sd |= 0; sd = (sd + 0x6D2B79F5) | 0; let t = Math.imul(sd ^ (sd >>> 15), 1 | sd); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+
+  stage.style.background = 'radial-gradient(60% 50% at 50% 52%, #18203a 0%, var(--night) 70%)';
+  const glowBlue = el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(45% 30% at 50% 60%, rgba(61,123,255,.22), transparent 70%)', opacity: 0 });
+  const glowCoral = el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(35% 35% at 55% 50%, rgba(255,107,87,.35), transparent 70%)', opacity: 0, mixBlendMode: 'screen' });
+
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 520px' });
+  const shake = el('div', 'abs', cam, { inset: 0 });
+
+  /* eyebrow (rebuilt from slide title) */
+  const mono = '600 22px/1 ui-monospace, Menlo, monospace';
+  const eyebrow = el('div', 'abs', shake, { left: '0', width: '1920px', top: '130px', textAlign: 'center', font: mono, letterSpacing: '.22em', color: 'var(--mist)' });
+  eyebrow.textContent = 'PRONUNCIATION TIPS · TRAINING VIDEOS';
+
+  /* waveform */
+  const X0 = 160, X1 = 1760, BASE = 540, N = 260;
+  const wave = el('div', 'abs', shake, { left: 0, top: 0, width: '1920px', height: '1080px' });
+  wave.innerHTML = `<svg width="1920" height="1080" style="overflow:visible">
+    <line x1="${X0}" y1="${BASE}" x2="${X1}" y2="${BASE}" stroke="rgba(154,163,181,.12)" stroke-width="1"/>
+    <path id="wm" fill="none" stroke="#9AA3B5" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path id="wb" fill="none" stroke="#3D7BFF" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" style="filter:drop-shadow(0 0 14px rgba(61,123,255,.9))"/>
+    <g id="sg"><path id="sp" fill="none" stroke="#FF6B57" stroke-width="6" stroke-linejoin="miter" stroke-linecap="round" style="filter:drop-shadow(0 0 18px rgba(255,107,87,.9))"/></g>
+  </svg>`;
+  const wm = wave.querySelector('#wm'), wb = wave.querySelector('#wb'), sp = wave.querySelector('#sp'), sg = wave.querySelector('#sg');
+
+  // jagged coral spike geometry
+  const SC = 1060;
+  let sd2 = '';
+  const spikes = [0, -60, 40, -120, 210, -260, 170, -200, 90, -140, 60, -30, 0];
+  spikes.forEach((v, i) => { const x = SC - 180 + i * 30; sd2 += (i ? ' L ' : 'M ') + x + ' ' + (BASE + v * (0.8 + rng() * 0.4)).toFixed(0); });
+  sp.setAttribute('d', sd2);
+  gsap.set(sp, { scaleY: 0, opacity: 0, transformOrigin: '50% 50%' });
+
+  // glitch jitter table
+  const JF = 12, jit = [];
+  for (let f = 0; f < JF; f++) { const row = []; for (let i = 0; i <= N; i++) row.push(rng() * 2 - 1); jit.push(row); }
+
+  const takeLab = el('div', 'abs', wave, { left: X0 + 'px', top: BASE - 170 + 'px', font: mono, letterSpacing: '.16em', color: 'var(--mist)' });
+  const errTag = el('div', 'abs', wave, { left: SC + 110 + 'px', top: BASE - 300 + 'px', font: '700 24px/1 ui-monospace, Menlo, monospace', letterSpacing: '.16em', color: 'var(--coral)', opacity: 0 });
+  errTag.textContent = '✕ MISPRONOUNCED';
+
+  /* headline + subtitle */
+  const head = el('div', 'abs', shake, { left: '0', width: '1920px', top: '290px', textAlign: 'center', font: '800 140px/1 Inter Display, Inter', letterSpacing: '-.045em', color: 'var(--paper)', whiteSpace: 'nowrap' });
+  const line = el('span', '', head, { position: 'relative', display: 'inline-block' });
+  const TXT = 'Fix it in the script';
+  const chars = ctx.split(line, TXT, 'char');
+  const caret = el('div', 'abs', line, { top: '8px', width: '8px', height: '130px', background: 'var(--signal)', borderRadius: '3px', opacity: 0 });
+  const bar = el('div', 'abs', line, { top: '146px', height: '10px', borderRadius: '5px', background: 'var(--signal)', boxShadow: '0 0 24px rgba(61,123,255,.8)', transformOrigin: '0% 50%' });
+  gsap.set(bar, { scaleX: 0 });
+  const sub = el('div', 'abs', shake, { left: '0', width: '1920px', top: '500px', textAlign: 'center', font: '500 38px/1 Inter', letterSpacing: '-.01em', color: 'var(--mist)', opacity: 0 });
+  sub.textContent = 'Acronyms · names · numbers · jargon';
+
+  ctx.fx.vignette({ strength: 0.6 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  /* state */
+  const W = { amp: 0, glitch: 0, smooth: 0 };
+  const typeStart = your2 - 0.12, STG = 0.034;
+  let barSet = false;
+  ctx.onFrame((t) => {
+    const fr = Math.floor(t * 30) % JF;
+    let dm = '';
+    for (let i = 0; i <= N; i++) {
+      const u = i / N, x = X0 + u * (X1 - X0);
+      const env = Math.pow(Math.sin(Math.PI * u), 0.8);
+      const speech = (Math.sin(u * 37 + t * 6) * 0.5 + Math.sin(u * 91 - t * 9) * 0.3 + Math.sin(u * 13 + t * 2.3) * 0.4) * (0.55 + 0.45 * Math.sin(u * 7 - t * 3));
+      const focus = 0.35 + Math.exp(-Math.pow((x - SC) / 260, 2));
+      const g = jit[fr][i] * W.glitch * 120 * focus;
+      const calm = Math.sin(u * Math.PI * 6 - t * 2.4) * 48;
+      const y = BASE + env * ((1 - W.smooth) * (speech * 85 * W.amp + g) + W.smooth * calm);
+      dm += (i ? 'L' : 'M') + x.toFixed(1) + ' ' + y.toFixed(1);
+    }
+    wm.setAttribute('d', dm); wb.setAttribute('d', dm);
+    wm.setAttribute('opacity', (1 - W.smooth).toFixed(3)); wb.setAttribute('opacity', W.smooth.toFixed(3));
+    sg.setAttribute('transform', `translate(${(jit[fr][5] * 14 * W.glitch).toFixed(1)} 0)`);
+    takeLab.textContent = t < fix ? '● NARRATION · TAKE 1' : '● NARRATION · TAKE 2';
+    takeLab.style.color = t < fix ? (W.glitch > 0.3 ? '#FF6B57' : '#9AA3B5') : '#3D7BFF';
+
+    // caret follows typing
+    const k = Math.max(0, Math.min(chars.length, Math.floor((t - typeStart) / STG) + 1));
+    if (t >= typeStart - 0.2) {
+      const last = chars[Math.max(0, k - 1)];
+      caret.style.left = (k ? last.offsetLeft + last.offsetWidth + 6 : -10) + 'px';
+      caret.style.opacity = (k < chars.length || Math.floor(t * 2.4) % 2 === 0) ? 1 : 0;
+    } else caret.style.opacity = 0;
+    if (!barSet && chars[14]) {
+      const s0 = chars[14], s1 = chars[chars.length - 1];
+      bar.style.left = s0.offsetLeft + 'px';
+      bar.style.width = (s1.offsetLeft + s1.offsetWidth - s0.offsetLeft) + 'px';
+      barSet = true;
+    }
+  });
+
+  /* ---- timeline ---- */
+  gsap.set(chars, { opacity: 0 });
+  tl.to(cam, { scale: 1.07, duration: ctx.dur, ease: 'power1.inOut' }, 0);
+  tl.from(eyebrow, { opacity: 0, y: -14, duration: 0.6 }, 0.05);
+  tl.from(takeLab, { opacity: 0, x: -20, duration: 0.5 }, 0.2);
+  tl.to(W, { amp: 1, duration: 0.9, ease: 'power2.out' }, 0.1);
+
+  // the stumble
+  tl.to(W, { glitch: 0.45, duration: 0.4, ease: 'power2.in' }, says);
+  tl.to(W, { glitch: 1, duration: 0.25 }, company + 0.2);
+  tl.to(sp, { scaleY: 1, opacity: 1, duration: 0.3, ease: 'back.out(2.5)' }, wrong - 0.06);
+  tl.fromTo(glowCoral, { opacity: 0 }, { opacity: 1, duration: 0.1, yoyo: true, repeat: 1, immediateRender: false }, wrong);
+  tl.to(shake, { x: 14, duration: 0.05, yoyo: true, repeat: 5, ease: 'none' }, wrong);
+  tl.fromTo(errTag, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.3, immediateRender: false }, wrong + 0.05);
+  tl.to(W, { glitch: 0.35, duration: 0.6, ease: 'power2.out' }, wrong + 0.4);
+  tl.to(W, { glitch: 0.15, duration: 0.5 }, good);
+
+  // the fix
+  tl.to(sp, { scaleY: 0, opacity: 0, duration: 0.4, ease: 'power3.in' }, fix - 0.1);
+  tl.to(errTag, { opacity: 0, y: -10, duration: 0.3 }, fix - 0.1);
+  tl.to(W, { glitch: 0, duration: 0.5 }, fix - 0.1);
+  tl.to(W, { smooth: 1, duration: 0.9, ease: 'power2.inOut' }, fix);
+  tl.to(glowBlue, { opacity: 1, duration: 1 }, fix);
+
+  // the script
+  tl.to(eyebrow, { opacity: 0, duration: 0.4 }, typeStart - 0.5);
+  tl.to(wave, { y: 200, duration: 0.8, ease: 'expo.inOut' }, typeStart - 0.5);
+  tl.to(glowBlue, { y: 200, duration: 0.8, ease: 'expo.inOut' }, typeStart - 0.5);
+  tl.to(chars, { opacity: 1, duration: 0.01, stagger: STG, ease: 'none' }, typeStart);
+  tl.to(bar, { scaleX: 1, duration: 0.45, ease: 'power3.out' }, script + 0.35);
+  tl.fromTo(sub, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, immediateRender: false }, script + 0.5);
+});

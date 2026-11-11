@@ -1,0 +1,114 @@
+/* Scene 2 — "If the voice reads WHS as a word, add spaces between the letters. For names, write them
+ * how they sound, and keep the real spelling on the slide."
+ * Storyboard: Split screen on paper. Left: 'the WHS portal' at 120px; a coral squiggle flags WHS read
+ * "as a word"; on 'add spaces' the letters slide apart into 'W H S' with a signal-blue underline.
+ * Camera glides right to a slide card reading 'Siobhan'; on 'write them how they sound' the notes card
+ * beneath flips to 'Shiv-awn' in coral. On 'real spelling' a mint check lands on 'Siobhan'. Holds on both. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const W = (w, i) => ctx.at(i, w);
+  const tReads = W('reads', 0), tWHS = W('WHS', 0), tWord = W('word,', 0), tSpaces = W('spaces', 0);
+  const tFor = W('For', 1), tWrite = W('write', 1), tReal = W('real', 1), tSpell = W('spelling', 1);
+  const MONO = '600 22px/1 ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(80% 70% at 40% 40%, #fffdf8 0%, var(--paper) 60%, #ebe5da 100%)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 540px' });
+  const world = el('div', 'abs', cam, { left: 0, top: 0, width: '3840px', height: '1080px' });
+
+  // soft light pools
+  el('div', 'abs', world, { left: '200px', top: '160px', width: '1100px', height: '760px', borderRadius: '50%', background: 'radial-gradient(closest-side, rgba(61,123,255,.08), transparent)' });
+  el('div', 'abs', world, { left: '1800px', top: '100px', width: '1400px', height: '900px', borderRadius: '50%', background: 'radial-gradient(closest-side, rgba(255,107,87,.07), transparent)' });
+  // split divider
+  const divider = el('div', 'abs', world, { left: '1440px', top: '180px', width: '2px', height: '720px', background: 'linear-gradient(180deg, transparent, rgba(26,31,46,.18), transparent)' });
+
+  /* ---------- LEFT: acronym ---------- */
+  const lab1 = el('div', 'abs', world, { left: '170px', top: '380px', font: MONO, letterSpacing: '.16em', color: 'var(--mist)' });
+  lab1.textContent = 'SCRIPT · NARRATION';
+  const line = el('div', 'abs', world, { left: '160px', top: '440px', display: 'flex', alignItems: 'baseline', whiteSpace: 'nowrap',
+    font: '800 120px/1.1 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--ink)' });
+  const the = el('span', '', line, { display: 'inline-block', marginRight: '.28em' }); the.textContent = 'the';
+  const grp = el('span', '', line, { display: 'inline-flex', position: 'relative', color: 'var(--ink)' });
+  const letters = ['W', 'H', 'S'].map((c) => { const s = el('span', '', grp, { display: 'inline-block' }); s.textContent = c; return s; });
+  const portal = el('span', '', line, { display: 'inline-block', marginLeft: '.28em' }); portal.textContent = 'portal';
+  const squig = el('div', 'abs', grp, { left: '-6px', right: '-6px', bottom: '-14px', height: '22px' });
+  squig.innerHTML = `<svg width="100%" height="22" viewBox="0 0 240 22" preserveAspectRatio="none"><path d="M2 11 q10 -10 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" fill="none" stroke="#FF6B57" stroke-width="4" stroke-linecap="round"/></svg>`;
+  const ul = el('div', 'abs', grp, { left: 0, right: 0, bottom: '-16px', height: '10px', borderRadius: '5px', background: 'var(--signal)', boxShadow: '0 6px 24px rgba(61,123,255,.45)', transformOrigin: '0% 50%' });
+  const tag1 = el('div', 'abs', world, { left: '170px', top: '660px', font: MONO, letterSpacing: '.16em', color: 'var(--coral)' });
+  tag1.textContent = '✕ READ AS ONE WORD';
+  const tag2 = el('div', 'abs', world, { left: '170px', top: '660px', font: MONO, letterSpacing: '.16em', color: 'var(--signal)' });
+  tag2.textContent = '✓ LETTER BY LETTER';
+
+  /* ---------- RIGHT: name ---------- */
+  const RX = 1500 + 410;
+  const slideCard = el('div', 'abs', world, { left: RX + 'px', top: '120px', width: '1100px', height: '440px', borderRadius: '22px', background: '#fff',
+    boxShadow: '0 40px 90px rgba(26,31,46,.16), 0 2px 0 rgba(26,31,46,.05)' });
+  const sLab = el('div', 'abs', slideCard, { left: '80px', top: '70px', font: MONO, letterSpacing: '.16em', color: 'var(--mist)' }); sLab.textContent = 'ON THE SLIDE';
+  const sName = el('div', 'abs', slideCard, { left: '74px', top: '160px', font: '800 160px/1 Inter Display, Inter', letterSpacing: '-.045em', color: 'var(--ink)' });
+  sName.textContent = 'Siobhan';
+  const sUl = el('div', 'abs', slideCard, { left: '80px', top: '360px', width: '560px', height: '8px', borderRadius: '4px', background: 'var(--mint)', transformOrigin: '0% 50%' });
+  const check = el('div', 'abs', slideCard, { left: '860px', top: '150px', width: '160px', height: '160px', borderRadius: '50%', background: 'var(--mint)',
+    boxShadow: '0 0 60px rgba(63,214,164,.6), 0 18px 40px rgba(63,214,164,.35)', display: 'flex', alignItems: 'center', justifyContent: 'center' });
+  check.innerHTML = `<svg width="90" height="90" viewBox="0 0 90 90"><path d="M18 47 L37 65 L72 26" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  const ring = el('div', 'abs', slideCard, { left: '860px', top: '150px', width: '160px', height: '160px', borderRadius: '50%', border: '5px solid var(--mint)' });
+
+  const notesWrap = el('div', 'abs', world, { left: RX + 'px', top: '600px', width: '1100px', height: '340px', perspective: '1400px' });
+  const face = (bg) => el('div', 'abs', notesWrap, { inset: 0, borderRadius: '22px', background: bg, backfaceVisibility: 'hidden', transformOrigin: '50% 50%',
+    boxShadow: '0 40px 90px rgba(14,18,32,.28)' });
+  const front = face('var(--ink)'), back = face('var(--ink)');
+  [front, back].forEach((f) => { const l = el('div', 'abs', f, { left: '80px', top: '60px', font: MONO, letterSpacing: '.16em', color: 'var(--mist)' }); l.textContent = 'SPEAKER NOTES'; });
+  const fName = el('div', 'abs', front, { left: '76px', top: '140px', font: '800 120px/1 Inter Display, Inter', letterSpacing: '-.04em', color: 'rgba(247,244,238,.55)' });
+  fName.textContent = 'Siobhan';
+  const bName = el('div', 'abs', back, { left: '76px', top: '140px', font: '800 120px/1 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--coral)', textShadow: '0 0 40px rgba(255,107,87,.45)' });
+  bName.textContent = 'Shiv-awn';
+  const bTag = el('div', 'abs', back, { right: '80px', top: '60px', font: MONO, letterSpacing: '.16em', color: 'var(--coral)' }); bTag.textContent = 'SAY IT LIKE THIS';
+
+  ctx.fx.vignette({ strength: 0.22 });
+  ctx.fx.grain({ opacity: 0.05 });
+
+  /* ---------- timeline ---------- */
+  gsap.set(cam, { scale: 1 });
+  gsap.set(world, { x: 0 });
+  gsap.set([tag1, tag2, squig, check, ring], { opacity: 0 });
+  gsap.set([ul, sUl], { scaleX: 0 });
+  gsap.set(back, { rotationX: 90 });
+  gsap.set(front, { rotationX: 0 });
+
+  // opening: the line snaps in
+  tl.from(lab1, { opacity: 0, x: -20, duration: 0.4, ease: 'power3.out' }, 0.05);
+  tl.from([the, ...letters, portal], { opacity: 0, y: 40, duration: 0.45, stagger: 0.05, ease: 'power3.out' }, 0.1);
+  tl.from(divider, { opacity: 0, duration: 0.6 }, 0.4);
+  // "reads WHS": WHS flagged
+  tl.to(grp, { color: 'var(--coral)', duration: 0.25 }, tWHS - 0.05);
+  tl.fromTo(squig, { opacity: 0, clipPath: 'inset(0 100% 0 0)' }, { opacity: 1, clipPath: 'inset(0 0% 0 0)', duration: 0.45, ease: 'power2.out', immediateRender: false }, tWHS);
+  tl.fromTo(tag1, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.3, immediateRender: false }, tWord - 0.1);
+  tl.to(grp, { x: 6, duration: 0.05, yoyo: true, repeat: 3, ease: 'none' }, tWord);
+  // "add spaces": letters slide apart
+  tl.to(squig, { opacity: 0, duration: 0.2 }, tSpaces - 0.25);
+  tl.to(tag1, { opacity: 0, y: -10, duration: 0.2 }, tSpaces - 0.25);
+  tl.to(grp, { color: 'var(--ink)', duration: 0.3 }, tSpaces - 0.2);
+  tl.to(letters.slice(1), { marginLeft: '.42em', duration: 0.55, ease: 'back.out(1.8)' }, tSpaces - 0.1);
+  tl.to(ul, { scaleX: 1, duration: 0.5, ease: 'power3.out' }, tSpaces + 0.3);
+  tl.fromTo(tag2, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.3, immediateRender: false }, tSpaces + 0.4);
+  tl.to(letters, { color: 'var(--signal)', duration: 0.3, stagger: 0.08 }, tSpaces + 0.4);
+
+  // slow push-in on the left, then the lateral glide
+  tl.to(cam, { scale: 1.04, duration: tFor - 0.4, ease: 'power1.inOut' }, 0);
+  const glide = tFor - 0.45;
+  tl.to(world, { x: -1500, duration: 1.05, ease: 'expo.inOut' }, glide);
+  tl.to(cam, { scale: 1, duration: 1.05, ease: 'expo.inOut' }, glide);
+  tl.from(slideCard, { y: 30, rotation: -1.2, duration: 1.0, ease: 'power3.out' }, glide + 0.2);
+  tl.from(notesWrap, { y: 50, duration: 1.0, ease: 'power3.out' }, glide + 0.3);
+
+  // "write them how they sound": notes card flips
+  tl.to(front, { rotationX: -90, duration: 0.22, ease: 'power2.in' }, tWrite - 0.1);
+  tl.to(back, { rotationX: 0, duration: 0.45, ease: 'back.out(1.6)' }, tWrite + 0.12);
+  tl.from(bTag, { opacity: 0, x: 20, duration: 0.3 }, tWrite + 0.4);
+
+  // "real spelling": mint check lands on Siobhan
+  tl.fromTo(check, { opacity: 0, scale: 2.2, rotation: -25 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.42, ease: 'back.out(1.8)', immediateRender: false }, tReal - 0.15);
+  tl.fromTo(ring, { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.9, duration: 0.8, ease: 'power2.out', immediateRender: false }, tReal + 0.2);
+  tl.to(sUl, { scaleX: 1, duration: 0.5, ease: 'power3.out' }, tSpell);
+
+  // hold with a gentle push-in so no frame is static
+  tl.to(cam, { scale: 1.03, duration: ctx.dur - (glide + 1.05), ease: 'power1.inOut' }, glide + 1.05);
+});
