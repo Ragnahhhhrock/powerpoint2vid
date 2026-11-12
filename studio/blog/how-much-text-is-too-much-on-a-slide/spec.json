@@ -1,0 +1,100 @@
+{
+  "title": "How Much Text Is Too Much on a Slide? (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "How Much Text Is Too Much?",
+      "bullets": [],
+      "notes": "A slide fills with words, you stop listening to read, and you fall behind on both. Here's how to spot an overloaded slide and fix it.",
+      "minDuration": 9
+    },
+    {
+      "title": "Text-heavy slides split attention",
+      "bullets": [
+        "Attention splits",
+        "Nothing stands out",
+        "Text gets small",
+        "In video, the slide runs out of time"
+      ],
+      "notes": "When everything is written down, nothing looks important. And in a video, the slide only stays up while the narration runs, so viewers pause or give up.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Five quick tests for overload",
+      "bullets": [
+        "Glance test: three seconds",
+        "Headline makes a point, not a label",
+        "Body text 24pt or larger",
+        "Read-aloud and two-ideas tests"
+      ],
+      "notes": "Glance for three seconds, then look away. Can you say what it was about? If you could read the slide aloud as your script, move that text.",
+      "minDuration": 12,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Move extra text where it helps",
+      "bullets": [
+        "Speaker notes: detail and examples",
+        "Handout: tables and fine print",
+        "More slides, less on each"
+      ],
+      "notes": "The words you cut don't disappear. Explanations go into the speaker notes, reference detail goes in a handout, and one crowded slide often becomes two or three clear ones.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Before and after: the leave policy",
+      "bullets": [
+        "Before: \"Leave policy\" and five dense bullets",
+        "After: \"Request leave two weeks ahead, through the HR portal\"",
+        "Three steps: submit, manager reviews, reply",
+        "Detail moves to the speaker notes"
+      ],
+      "notes": "The headline now makes the point, a simple graphic shows the steps, and the narration carries the detail about accrual and reply times.",
+      "minDuration": 12,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Lighter slides make better videos",
+      "bullets": [
+        "The slide shows the point",
+        "The voice explains it",
+        "Speaker notes become the narration"
+      ],
+      "notes": "The slide shows the point; your voice explains it. On Pro, a.i. directs the video, landing each key point on its word. Start with Basic at powerpoint2vid.com.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}

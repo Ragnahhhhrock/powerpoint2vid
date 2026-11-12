@@ -1,0 +1,121 @@
+/* Scene 4 — "The words you cut don't disappear. Explanations go into speaker notes, reference detail
+ * goes in a handout, and one crowded slide becomes two or three clear ones."
+ * Storyboard: ink stage, top-down. A crowded slide sits center, its words jittering in. On "don't
+ * disappear" every word lifts off the slide like a particle. On "speaker notes" a stream of words
+ * flows down into a teal notes panel and settles there as notes. On "handout" the next batch flies
+ * right onto an amber paper sheet as a table and fine print. On "becomes / two / three" the emptied
+ * slide splits into three clean cards with one word each; "More slides, less on each" settles. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const rnd = ctx.rand(4);
+  const T = (i, w, fb) => { const v = ctx.at(i, w); return (typeof v === 'number' && isFinite(v)) ? v : fb; };
+  const disappear = T(0, 'disappear', 1.86), speaker = T(1, 'speaker', 4.05), reference = T(1, 'reference', 5.05);
+  const handout = T(1, 'handout', 6.4), crowded = T(1, 'crowded', 7.63), becomes = T(1, 'becomes', 8.47);
+  const two = T(1, 'two', 8.84), three = T(1, 'three', 9.13), clear = T(1, 'clear', 9.37);
+
+  stage.style.background = 'radial-gradient(70% 65% at 50% 40%, #1d2030 0%, var(--ink) 55%, var(--night) 100%)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 540px' });
+  const glow = el('div', 'abs', cam, { left: '360px', top: '20px', width: '1200px', height: '700px', background: 'radial-gradient(50% 50% at 50% 50%, rgba(246,243,236,.10), transparent 70%)' });
+  const mono = '600 22px/1 ui-monospace, Menlo, monospace';
+
+  /* ---- crowded slide ---- */
+  const SX = 560, SY = 130, SW = 800, SH = 470;
+  const slideCard = el('div', 'abs', cam, { left: SX + 'px', top: SY + 'px', width: SW + 'px', height: SH + 'px', borderRadius: '14px', background: 'var(--paper)', boxShadow: '0 50px 110px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.08)' });
+  const sTitle = el('div', 'abs', cam, { left: SX + 40 + 'px', top: SY + 36 + 'px', width: '720px', font: '800 34px/1.1 Inter Display, Inter', letterSpacing: '-.03em', color: 'var(--ink)' });
+  sTitle.textContent = 'Move extra text where it helps';
+
+  const filler = ('Detail and examples explain each step with background context so readers understand why the policy exists ' +
+    'and how approvals are handled across teams. Tables list dates, codes and fine print for every region, including ' +
+    'exceptions, carry-over limits, accrual rates, reply windows, holiday calendars and contact names. Each section repeats ' +
+    'the key points again in longer sentences, adding notes, footnotes and caveats that nobody can read while listening to the narrator speak.').split(' ');
+  const FS = 19, LH = 29, CW = 10.4;
+  const wid = (w) => w.length * CW;
+  const words = [];
+  let cx = 0, cy = 0;
+  for (const w of filler) {
+    const ww = wid(w);
+    if (cx + ww > 720) { cx = 0; cy += LH; }
+    if (cy > 300) break;
+    const ox = SX + 40 + cx, oy = SY + 110 + cy;
+    const s = el('div', 'abs', cam, { left: ox + 'px', top: oy + 'px', font: `500 ${FS}px/1 Inter`, color: '#3a3d4a', whiteSpace: 'nowrap', transformOrigin: '0 0' });
+    s.textContent = w;
+    words.push({ s, w, ww, ox, oy, g: 0 });
+    cx += ww + 8;
+  }
+  words.forEach((o) => { const r = rnd(); o.g = r < 0.42 ? 0 : r < 0.78 ? 1 : 2; });
+  const A = words.filter((o) => o.g === 0), B = words.filter((o) => o.g === 1), C = words.filter((o) => o.g === 2);
+
+  /* ---- notes panel (teal) ---- */
+  const NX = 120, NY = 690, NW = 760, NH = 290;
+  const notes = el('div', 'abs', cam, { left: NX + 'px', top: NY + 'px', width: NW + 'px', height: NH + 'px', borderRadius: '16px', background: 'linear-gradient(180deg, rgba(31,181,168,.16), rgba(31,181,168,.06))', border: '2px solid rgba(31,181,168,.7)', boxShadow: '0 0 60px rgba(31,181,168,.25), 0 30px 70px rgba(0,0,0,.45)' });
+  const nLab = el('div', 'abs', notes, { left: '36px', top: '26px', font: mono, letterSpacing: '.14em', color: 'var(--teal)' });
+  nLab.textContent = 'SPEAKER NOTES';
+  const layout = (list, x0, y0, w, lh, sc) => { let x = 0, y = 0; list.forEach((o) => { const ww = o.ww * sc; if (x + ww > w) { x = 0; y += lh; } o.tx = x0 + x; o.ty = y0 + y; o.sc = sc; x += ww + 8 * sc; }); };
+  layout(A, NX + 36, NY + 74, NW - 72, 30, 0.86);
+
+  /* ---- handout sheet (amber paper) ---- */
+  const HX = 1440, HY = 290, HW = 360, HH = 480;
+  const sheet = el('div', 'abs', cam, { left: HX + 'px', top: HY + 'px', width: HW + 'px', height: HH + 'px', borderRadius: '8px', background: 'linear-gradient(170deg, #FFE7BC, #F8CF86)', boxShadow: '0 0 60px rgba(255,181,71,.25), 0 30px 70px rgba(0,0,0,.5)', transformOrigin: '50% 50%' });
+  const hLab = el('div', 'abs', sheet, { left: '28px', top: '24px', font: mono, letterSpacing: '.14em', color: '#7a4f0e' });
+  hLab.textContent = 'HANDOUT';
+  const cells = [];
+  for (let r = 0; r < 4; r++) for (let c = 0; c < 3; c++) {
+    cells.push(el('div', 'abs', sheet, { left: 28 + c * 102 + 'px', top: 70 + r * 36 + 'px', width: '96px', height: '30px', borderRadius: '3px', background: r === 0 ? 'rgba(122,79,14,.55)' : 'rgba(122,79,14,.16)' }));
+  }
+  layout(B, HX + 28, HY + 236, HW - 56, 18, 0.6);
+
+  /* ---- three clear cards ---- */
+  const CARD_W = 240, CARD_H = 300, CTOP = 180;
+  const cards = ['Point', 'Steps', 'Detail'].map((w, i) => {
+    const cxp = 680 + i * 280;
+    const c = el('div', 'abs', cam, { left: cxp - CARD_W / 2 + 'px', top: CTOP + 'px', width: CARD_W + 'px', height: CARD_H + 'px', borderRadius: '16px', background: 'var(--paper)', boxShadow: '0 40px 90px rgba(0,0,0,.5), 0 0 50px rgba(246,243,236,.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', font: '800 54px/1 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--ink)' });
+    c.textContent = w;
+    const bar = el('div', 'abs', c, { left: '28px', top: '28px', width: '40px', height: '6px', borderRadius: '3px', background: ['var(--coral)', 'var(--teal)', 'var(--amber)'][i] });
+    return { c, cxp };
+  });
+  const moreLab = el('div', 'abs', cam, { left: '460px', width: '1000px', top: '540px', textAlign: 'center', font: '600 30px/1 ui-monospace, Menlo, monospace', letterSpacing: '.12em', color: 'var(--paper)' });
+  moreLab.textContent = 'MORE SLIDES, LESS ON EACH';
+
+  ctx.fx.vignette({ strength: 0.5 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  /* ---- timeline ---- */
+  tl.to(cam, { scale: 1.035, x: -12, duration: ctx.dur, ease: 'sine.inOut' }, 0);
+  tl.from(slideCard, { y: 40, opacity: 0, duration: 0.45 }, 0);
+  tl.from(sTitle, { y: 20, opacity: 0, duration: 0.4 }, 0.1);
+  // clutter jitters in fast
+  tl.from(words.map((o) => o.s), { opacity: 0, y: () => (rnd() - 0.5) * 16, duration: 0.18, ease: 'power1.out', stagger: { each: 0.008, from: 'random' } }, 0.12);
+
+  // "don't disappear": words lift off as particles
+  tl.to(slideCard, { boxShadow: '0 70px 140px rgba(0,0,0,.65), 0 0 0 1px rgba(255,255,255,.08)', duration: 0.6 }, disappear - 0.3);
+  words.forEach((o) => {
+    tl.to(o.s, { y: -10 - rnd() * 22, x: (rnd() - 0.5) * 14, rotation: (rnd() - 0.5) * 10, color: '#5a5e70', duration: 0.6, ease: 'back.out(2.5)' }, disappear - 0.35 + rnd() * 0.35);
+  });
+  tl.to(slideCard, { background: '#e9e5dc', duration: 0.6 }, disappear);
+
+  // speaker notes: panel rises, stream flows down into it
+  tl.from(notes, { y: 80, opacity: 0, duration: 0.7, ease: 'power3.out' }, speaker - 0.55);
+  A.forEach((o, i) => {
+    tl.to(o.s, { x: o.tx - o.ox, y: o.ty - o.oy, rotation: 0, scale: o.sc, color: '#a8ece4', duration: 0.9, ease: 'power2.inOut' }, speaker - 0.05 + i * 0.022);
+  });
+  tl.fromTo(notes, { boxShadow: '0 0 60px rgba(31,181,168,.25), 0 30px 70px rgba(0,0,0,.45)' }, { boxShadow: '0 0 100px rgba(31,181,168,.5), 0 30px 70px rgba(0,0,0,.45)', duration: 0.5, yoyo: true, repeat: 1, immediateRender: false }, speaker + 1.1);
+
+  // handout: sheet slides in, table builds, fine print flies right
+  tl.from(sheet, { x: 260, rotation: 8, opacity: 0, duration: 0.8, ease: 'power3.out' }, reference);
+  tl.to(sheet, { rotation: 2.5, duration: 0.6, ease: 'back.out(1.6)' }, reference + 0.7);
+  tl.from(cells, { scaleX: 0, transformOrigin: '0 50%', duration: 0.3, stagger: 0.03 }, handout - 0.35);
+  B.forEach((o, i) => {
+    tl.to(o.s, { x: o.tx - o.ox, y: o.ty - o.oy, rotation: 0, scale: o.sc, color: '#6b4a14', duration: 0.8, ease: 'power2.inOut' }, handout - 0.15 + i * 0.02);
+  });
+
+  // one crowded slide becomes three clear ones
+  tl.to(C.map((o) => o.s), { opacity: 0, scale: 0.4, y: '-=30', duration: 0.4, stagger: 0.01, ease: 'power2.in' }, crowded);
+  tl.to([slideCard, sTitle], { opacity: 0, scale: 0.92, duration: 0.45, ease: 'power2.in' }, becomes - 0.3);
+  tl.to(glow, { opacity: 1.6, duration: 1 }, becomes);
+  [becomes, two, three].forEach((t, i) => {
+    const c = cards[i];
+    tl.fromTo(c.c, { x: 960 - c.cxp, scale: 0.85, opacity: 0 }, { x: 0, scale: 1, opacity: 1, duration: 0.75, ease: 'back.out(1.6)' }, t - 0.1);
+  });
+  tl.fromTo(moreLab, { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }, clear - 0.1);
+  tl.to(cards.map((c) => c.c), { y: -6, duration: 1.2, ease: 'sine.inOut', stagger: 0.1 }, clear + 0.4);
+});

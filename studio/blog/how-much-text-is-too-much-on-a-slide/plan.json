@@ -1,0 +1,1183 @@
+{
+  "title": "How Much Text Is Too Much on a Slide? (blog explainer)",
+  "brief": {
+    "palette": {
+      "ink": "#14161F",
+      "night": "#0B0D16",
+      "paper": "#F6F3EC",
+      "coral": "#FF5A4E",
+      "teal": "#1FB5A8",
+      "amber": "#FFB547",
+      "slate": "#8A90A6"
+    },
+    "font": "Inter Display",
+    "motion": "Calm, deliberate pacing with soft ease-out landings; clutter arrives jittery and fast, clarity settles slowly with gentle push-ins and generous holds.",
+    "story": "We open in a dark, cluttered night stage where words pile up and drown the viewer, then progressively clear the stage to bright paper as the fixes arrive. Wide, crowded frames give way to close, single-idea frames, ending on a clean light call to action."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "A slide fills with words. You stop listening to read, and you fall behind on both. Here's how to spot an overloaded slide and fix it.",
+      "storyboard": "Night stage. A blank slate-outlined slide frame sits center; on 'fills with words' tiny paper-coloured lines of text pour in until it is choked. On 'stop listening' a small waveform beside it flattens to a slate line; on 'fall behind' both the text and waveform drift out of focus. On 'fix it' the clutter sweeps away and the title 'How Much Text Is Too Much?' lands in 130px paper type with 'Too Much' in coral. Slow push-in throughout; the original plain title is rebuilt.",
+      "minDuration": 10,
+      "slide": {
+        "title": "How Much Text Is Too Much?",
+        "text": "",
+        "notes": "A slide fills with words, you stop listening to read, and you fall behind on both. Here's how to spot an overloaded slide and fix it.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 10.125,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 2.391,
+          "text": "A slide fills with words.",
+          "words": [
+            {
+              "w": "A",
+              "t": 0.8
+            },
+            {
+              "w": "slide",
+              "t": 0.963
+            },
+            {
+              "w": "fills",
+              "t": 1.38
+            },
+            {
+              "w": "with",
+              "t": 1.706
+            },
+            {
+              "w": "words.",
+              "t": 1.891
+            }
+          ]
+        },
+        {
+          "t": 2.634,
+          "end": 5.781,
+          "text": "You stop listening to read, and you fall behind on both.",
+          "words": [
+            {
+              "w": "You",
+              "t": 2.634
+            },
+            {
+              "w": "stop",
+              "t": 2.82
+            },
+            {
+              "w": "listening",
+              "t": 3.122
+            },
+            {
+              "w": "to",
+              "t": 3.482
+            },
+            {
+              "w": "read,",
+              "t": 3.633
+            },
+            {
+              "w": "and",
+              "t": 4.202
+            },
+            {
+              "w": "you",
+              "t": 4.387
+            },
+            {
+              "w": "fall",
+              "t": 4.527
+            },
+            {
+              "w": "behind",
+              "t": 4.759
+            },
+            {
+              "w": "on",
+              "t": 5.119
+            },
+            {
+              "w": "both.",
+              "t": 5.27
+            }
+          ]
+        },
+        {
+          "t": 6.477,
+          "end": 9.275,
+          "text": "Here's how to spot an overloaded slide and fix it.",
+          "words": [
+            {
+              "w": "Here's",
+              "t": 6.477
+            },
+            {
+              "w": "how",
+              "t": 6.768
+            },
+            {
+              "w": "to",
+              "t": 6.907
+            },
+            {
+              "w": "spot",
+              "t": 7.023
+            },
+            {
+              "w": "an",
+              "t": 7.336
+            },
+            {
+              "w": "overloaded",
+              "t": 7.453
+            },
+            {
+              "w": "slide",
+              "t": 8.056
+            },
+            {
+              "w": "and",
+              "t": 8.497
+            },
+            {
+              "w": "fix",
+              "t": 8.683
+            },
+            {
+              "w": "it.",
+              "t": 8.997
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.275
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "When everything is written down, nothing looks important. And in a video, the slide only stays up while the narration runs, so viewers pause or give up.",
+      "storyboard": "Ink stage, wide shot of a dense slide of grey bars, all identical weight. On 'nothing looks important' the camera hunts across the bars, finding no highlight. On 'in a video' an amber progress bar appears beneath and starts draining; on 'pause or give up' it hits zero, a pause icon flashes in coral and the slide snaps away. Headline 'Text-heavy slides split attention' holds at top in 96px. Bullet list cut; its four ideas become the motion.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Text-heavy slides split attention",
+        "text": "Attention splits. Nothing stands out. Text gets small. In video, the slide runs out of time",
+        "notes": "When everything is written down, nothing looks important. And in a video, the slide only stays up while the narration runs, so viewers pause or give up.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 10.445,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.406,
+          "text": "When everything is written down, nothing looks important.",
+          "words": [
+            {
+              "w": "When",
+              "t": 0.55
+            },
+            {
+              "w": "everything",
+              "t": 0.782
+            },
+            {
+              "w": "is",
+              "t": 1.165
+            },
+            {
+              "w": "written",
+              "t": 1.293
+            },
+            {
+              "w": "down,",
+              "t": 1.607
+            },
+            {
+              "w": "nothing",
+              "t": 2.129
+            },
+            {
+              "w": "looks",
+              "t": 2.443
+            },
+            {
+              "w": "important.",
+              "t": 2.675
+            }
+          ]
+        },
+        {
+          "t": 3.917,
+          "end": 9.595,
+          "text": "And in a video, the slide only stays up while the narration runs, so viewers pause or give up.",
+          "words": [
+            {
+              "w": "And",
+              "t": 3.917
+            },
+            {
+              "w": "in",
+              "t": 4.149
+            },
+            {
+              "w": "a",
+              "t": 4.265
+            },
+            {
+              "w": "video,",
+              "t": 4.347
+            },
+            {
+              "w": "the",
+              "t": 4.881
+            },
+            {
+              "w": "slide",
+              "t": 5.032
+            },
+            {
+              "w": "only",
+              "t": 5.403
+            },
+            {
+              "w": "stays",
+              "t": 5.659
+            },
+            {
+              "w": "up",
+              "t": 5.995
+            },
+            {
+              "w": "while",
+              "t": 6.204
+            },
+            {
+              "w": "the",
+              "t": 6.425
+            },
+            {
+              "w": "narration",
+              "t": 6.541
+            },
+            {
+              "w": "runs,",
+              "t": 7.052
+            },
+            {
+              "w": "so",
+              "t": 7.783
+            },
+            {
+              "w": "viewers",
+              "t": 7.992
+            },
+            {
+              "w": "pause",
+              "t": 8.352
+            },
+            {
+              "w": "or",
+              "t": 8.793
+            },
+            {
+              "w": "give",
+              "t": 8.991
+            },
+            {
+              "w": "up.",
+              "t": 9.211
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.595
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "Try the glance test. Look for three seconds, then look away. Can you say what it was about? Your headline should make a point, not a label.",
+      "storyboard": "Stage flips to paper. A huge teal '3' counts down to zero as a slide flickers on and off. On 'look away' the frame blacks for a beat, then a single question mark lands in ink. On 'make a point, not a label' a struck-through word 'Label' in slate swaps for a coral sentence headline. Bullets are rebuilt as these tests, one at a time.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Five quick tests for overload",
+        "text": "Glance test: three seconds. Headline makes a point, not a label. Body text 24pt or larger. Read-aloud and two-ideas tests",
+        "notes": "Glance for three seconds, then look away. Can you say what it was about? If you could read the slide aloud as your script, move that text.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 10,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 1.874,
+          "text": "Try the glance test.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 0.55
+            },
+            {
+              "w": "the",
+              "t": 0.852
+            },
+            {
+              "w": "glance",
+              "t": 0.968
+            },
+            {
+              "w": "test.",
+              "t": 1.34
+            }
+          ]
+        },
+        {
+          "t": 2.025,
+          "end": 4.184,
+          "text": "Look for three seconds, then look away.",
+          "words": [
+            {
+              "w": "Look",
+              "t": 2.025
+            },
+            {
+              "w": "for",
+              "t": 2.257
+            },
+            {
+              "w": "three",
+              "t": 2.385
+            },
+            {
+              "w": "seconds,",
+              "t": 2.628
+            },
+            {
+              "w": "then",
+              "t": 3.244
+            },
+            {
+              "w": "look",
+              "t": 3.441
+            },
+            {
+              "w": "away.",
+              "t": 3.639
+            }
+          ]
+        },
+        {
+          "t": 4.509,
+          "end": 5.856,
+          "text": "Can you say what it was about?",
+          "words": [
+            {
+              "w": "Can",
+              "t": 4.509
+            },
+            {
+              "w": "you",
+              "t": 4.695
+            },
+            {
+              "w": "say",
+              "t": 4.823
+            },
+            {
+              "w": "what",
+              "t": 4.997
+            },
+            {
+              "w": "it",
+              "t": 5.148
+            },
+            {
+              "w": "was",
+              "t": 5.229
+            },
+            {
+              "w": "about?",
+              "t": 5.368
+            }
+          ]
+        },
+        {
+          "t": 6.46,
+          "end": 8.968,
+          "text": "Your headline should make a point, not a label.",
+          "words": [
+            {
+              "w": "Your",
+              "t": 6.46
+            },
+            {
+              "w": "headline",
+              "t": 6.704
+            },
+            {
+              "w": "should",
+              "t": 7.156
+            },
+            {
+              "w": "make",
+              "t": 7.354
+            },
+            {
+              "w": "a",
+              "t": 7.539
+            },
+            {
+              "w": "point,",
+              "t": 7.632
+            },
+            {
+              "w": "not",
+              "t": 8.155
+            },
+            {
+              "w": "a",
+              "t": 8.364
+            },
+            {
+              "w": "label.",
+              "t": 8.445
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.968
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Keep body text at 24pt or larger. Watch for two ideas fighting on one slide. And if you could read it aloud as your script, move that text.",
+      "storyboard": "Paper stage, close-up. On '24pt or larger' a tiny line of text scales up until it reads '24pt' at 150px in ink. On 'two ideas' the frame splits with a teal seam and two shapes push against each other. On 'read it aloud' a speech bubble overlays a paragraph that lifts off the slide with an arrow labelled 'move'. Holds on the clean emptied slide.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Five quick tests for overload",
+        "text": "Glance test: three seconds. Headline makes a point, not a label. Body text 24pt or larger. Read-aloud and two-ideas tests",
+        "notes": "Glance for three seconds, then look away. Can you say what it was about? If you could read the slide aloud as your script, move that text.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 11,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.395,
+          "text": "Keep body text at 24pt or larger.",
+          "words": [
+            {
+              "w": "Keep",
+              "t": 0.55
+            },
+            {
+              "w": "body",
+              "t": 0.841
+            },
+            {
+              "w": "text",
+              "t": 1.154
+            },
+            {
+              "w": "at",
+              "t": 1.537
+            },
+            {
+              "w": "24pt",
+              "t": 1.665
+            },
+            {
+              "w": "or",
+              "t": 2.594
+            },
+            {
+              "w": "larger.",
+              "t": 2.814
+            }
+          ]
+        },
+        {
+          "t": 3.604,
+          "end": 6.17,
+          "text": "Watch for two ideas fighting on one slide.",
+          "words": [
+            {
+              "w": "Watch",
+              "t": 3.604
+            },
+            {
+              "w": "for",
+              "t": 3.917
+            },
+            {
+              "w": "two",
+              "t": 4.057
+            },
+            {
+              "w": "ideas",
+              "t": 4.301
+            },
+            {
+              "w": "fighting",
+              "t": 4.8
+            },
+            {
+              "w": "on",
+              "t": 5.195
+            },
+            {
+              "w": "one",
+              "t": 5.334
+            },
+            {
+              "w": "slide.",
+              "t": 5.554
+            }
+          ]
+        },
+        {
+          "t": 6.611,
+          "end": 10.129,
+          "text": "And if you could read it aloud as your script, move that text.",
+          "words": [
+            {
+              "w": "And",
+              "t": 6.611
+            },
+            {
+              "w": "if",
+              "t": 6.808
+            },
+            {
+              "w": "you",
+              "t": 6.913
+            },
+            {
+              "w": "could",
+              "t": 7.029
+            },
+            {
+              "w": "read",
+              "t": 7.203
+            },
+            {
+              "w": "it",
+              "t": 7.424
+            },
+            {
+              "w": "aloud",
+              "t": 7.54
+            },
+            {
+              "w": "as",
+              "t": 7.969
+            },
+            {
+              "w": "your",
+              "t": 8.085
+            },
+            {
+              "w": "script,",
+              "t": 8.26
+            },
+            {
+              "w": "move",
+              "t": 8.979
+            },
+            {
+              "w": "that",
+              "t": 9.27
+            },
+            {
+              "w": "text.",
+              "t": 9.49
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.129
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "The words you cut don't disappear. Explanations go into speaker notes, reference detail goes in a handout, and one crowded slide becomes two or three clear ones.",
+      "storyboard": "Ink stage, top-down view. A crowded slide sits center; on 'don't disappear' its text lifts off as particles. On 'speaker notes' a stream flows down into a notes panel in teal; on 'handout' tables and fine print fly right onto an amber paper sheet. On 'two or three clear ones' the remaining slide splits into three clean cards with one word each. Labels kept: 'Speaker notes', 'Handout', 'More slides, less on each'.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Move extra text where it helps",
+        "text": "Speaker notes: detail and examples. Handout: tables and fine print. More slides, less on each",
+        "notes": "The words you cut don't disappear. Explanations go into the speaker notes, reference detail goes in a handout, and one crowded slide often becomes two or three clear ones.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "smoothup",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 11,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.617,
+          "text": "The words you cut don't disappear.",
+          "words": [
+            {
+              "w": "The",
+              "t": 0.55
+            },
+            {
+              "w": "words",
+              "t": 0.725
+            },
+            {
+              "w": "you",
+              "t": 1.038
+            },
+            {
+              "w": "cut",
+              "t": 1.189
+            },
+            {
+              "w": "don't",
+              "t": 1.584
+            },
+            {
+              "w": "disappear.",
+              "t": 1.862
+            }
+          ]
+        },
+        {
+          "t": 2.861,
+          "end": 10.106,
+          "text": "Explanations go into speaker notes, reference detail goes in a handout, and one crowded slide becomes two or three clear ones.",
+          "words": [
+            {
+              "w": "Explanations",
+              "t": 2.861
+            },
+            {
+              "w": "go",
+              "t": 3.685
+            },
+            {
+              "w": "into",
+              "t": 3.836
+            },
+            {
+              "w": "speaker",
+              "t": 4.045
+            },
+            {
+              "w": "notes,",
+              "t": 4.428
+            },
+            {
+              "w": "reference",
+              "t": 5.055
+            },
+            {
+              "w": "detail",
+              "t": 5.508
+            },
+            {
+              "w": "goes",
+              "t": 5.984
+            },
+            {
+              "w": "in",
+              "t": 6.216
+            },
+            {
+              "w": "a",
+              "t": 6.309
+            },
+            {
+              "w": "handout,",
+              "t": 6.402
+            },
+            {
+              "w": "and",
+              "t": 7.168
+            },
+            {
+              "w": "one",
+              "t": 7.4
+            },
+            {
+              "w": "crowded",
+              "t": 7.633
+            },
+            {
+              "w": "slide",
+              "t": 8.051
+            },
+            {
+              "w": "becomes",
+              "t": 8.469
+            },
+            {
+              "w": "two",
+              "t": 8.84
+            },
+            {
+              "w": "or",
+              "t": 9.026
+            },
+            {
+              "w": "three",
+              "t": 9.131
+            },
+            {
+              "w": "clear",
+              "t": 9.374
+            },
+            {
+              "w": "ones.",
+              "t": 9.665
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.106
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "Take a leave policy slide. Before: a label and five dense bullets. After: request leave two weeks ahead, through the HR portal, with three simple steps.",
+      "storyboard": "Split screen. Left on night: 'Leave policy' over five grey dense bars, blurred, labelled 'Before' in slate. On 'After' a wipe reveals the right on paper: headline 'Request leave two weeks ahead, through the HR portal' in ink. On 'three simple steps' a teal flow draws in: Submit \u2192 Manager reviews \u2192 Reply, each node popping on its word. Camera pushes into the after side and holds.",
+      "minDuration": 12,
+      "slide": {
+        "title": "Before and after: the leave policy",
+        "text": "Before: \"Leave policy\" and five dense bullets. After: \"Request leave two weeks ahead, through the HR portal\". Three steps: submit, manager reviews, reply. Detail moves to the speaker notes",
+        "notes": "The headline now makes the point, a simple graphic shows the steps, and the narration carries the detail about accrual and reply times.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "wipeleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 11.635,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.164,
+          "text": "Take a leave policy slide.",
+          "words": [
+            {
+              "w": "Take",
+              "t": 0.55
+            },
+            {
+              "w": "a",
+              "t": 0.84
+            },
+            {
+              "w": "leave",
+              "t": 0.921
+            },
+            {
+              "w": "policy",
+              "t": 1.212
+            },
+            {
+              "w": "slide.",
+              "t": 1.606
+            }
+          ]
+        },
+        {
+          "t": 2.338,
+          "end": 4.88,
+          "text": "Before: a label and five dense bullets.",
+          "words": [
+            {
+              "w": "Before:",
+              "t": 2.338
+            },
+            {
+              "w": "a",
+              "t": 2.976
+            },
+            {
+              "w": "label",
+              "t": 3.139
+            },
+            {
+              "w": "and",
+              "t": 3.51
+            },
+            {
+              "w": "five",
+              "t": 3.685
+            },
+            {
+              "w": "dense",
+              "t": 4.021
+            },
+            {
+              "w": "bullets.",
+              "t": 4.335
+            }
+          ]
+        },
+        {
+          "t": 5.322,
+          "end": 10.035,
+          "text": "After: request leave two weeks ahead, through the HR portal, with three simple steps.",
+          "words": [
+            {
+              "w": "After:",
+              "t": 5.322
+            },
+            {
+              "w": "request",
+              "t": 5.728
+            },
+            {
+              "w": "leave",
+              "t": 6.158
+            },
+            {
+              "w": "two",
+              "t": 6.425
+            },
+            {
+              "w": "weeks",
+              "t": 6.634
+            },
+            {
+              "w": "ahead,",
+              "t": 6.889
+            },
+            {
+              "w": "through",
+              "t": 7.435
+            },
+            {
+              "w": "the",
+              "t": 7.725
+            },
+            {
+              "w": "HR",
+              "t": 7.864
+            },
+            {
+              "w": "portal,",
+              "t": 8.247
+            },
+            {
+              "w": "with",
+              "t": 8.63
+            },
+            {
+              "w": "three",
+              "t": 8.816
+            },
+            {
+              "w": "simple",
+              "t": 9.118
+            },
+            {
+              "w": "steps.",
+              "t": 9.478
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.035
+    },
+    {
+      "file": "scenes/scene-6.js",
+      "narration": "The headline makes the point, the graphic shows the steps, and the narration carries the detail about accrual and reply times.",
+      "storyboard": "Paper stage, continuing the 'after' slide close-up. On 'headline' it underlines in coral; on 'graphic' the three-step flow pulses teal. On 'narration carries the detail' a waveform rises beneath and small tags 'accrual' and 'reply times' float from the notes panel into it. Hold on the calm clean slide.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Before and after: the leave policy",
+        "text": "Before: \"Leave policy\" and five dense bullets. After: \"Request leave two weeks ahead, through the HR portal\". Three steps: submit, manager reviews, reply. Detail moves to the speaker notes",
+        "notes": "The headline now makes the point, a simple graphic shows the steps, and the narration carries the detail about accrual and reply times.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "dissolve",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-6.wav",
+      "duration": 9,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 7.435,
+          "text": "The headline makes the point, the graphic shows the steps, and the narration carries the detail about accrual and reply times.",
+          "words": [
+            {
+              "w": "The",
+              "t": 0.55
+            },
+            {
+              "w": "headline",
+              "t": 0.713
+            },
+            {
+              "w": "makes",
+              "t": 1.108
+            },
+            {
+              "w": "the",
+              "t": 1.375
+            },
+            {
+              "w": "point,",
+              "t": 1.491
+            },
+            {
+              "w": "the",
+              "t": 1.967
+            },
+            {
+              "w": "graphic",
+              "t": 2.106
+            },
+            {
+              "w": "shows",
+              "t": 2.489
+            },
+            {
+              "w": "the",
+              "t": 2.826
+            },
+            {
+              "w": "steps,",
+              "t": 2.942
+            },
+            {
+              "w": "and",
+              "t": 3.743
+            },
+            {
+              "w": "the",
+              "t": 3.917
+            },
+            {
+              "w": "narration",
+              "t": 4.033
+            },
+            {
+              "w": "carries",
+              "t": 4.567
+            },
+            {
+              "w": "the",
+              "t": 4.927
+            },
+            {
+              "w": "detail",
+              "t": 5.043
+            },
+            {
+              "w": "about",
+              "t": 5.519
+            },
+            {
+              "w": "accrual",
+              "t": 5.786
+            },
+            {
+              "w": "and",
+              "t": 6.262
+            },
+            {
+              "w": "reply",
+              "t": 6.437
+            },
+            {
+              "w": "times.",
+              "t": 6.843
+            }
+          ]
+        }
+      ],
+      "speechEnd": 7.435
+    },
+    {
+      "file": "scenes/scene-7.js",
+      "narration": "The slide shows the point; your voice explains it. On Pro, AI directs the video, landing each key point on its word. Start with Basic at powerpoint2vid.com.",
+      "storyboard": "Paper stage, wide. On 'shows the point' a single coral dot lands center of a clean slide; on 'your voice' a teal waveform draws beneath. On 'landing each key point on its word' words in the waveform light up as amber markers snapping to the dot. Camera pulls back to reveal 'Lighter slides make better videos' at 110px, then on 'powerpoint2vid.com' the URL settles in ink with a coral 'Start with Basic' button. Hold 2s.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Lighter slides make better videos",
+        "text": "The slide shows the point. The voice explains it. Speaker notes become the narration",
+        "notes": "The slide shows the point; your voice explains it. On Pro, a.i. directs the video, landing each key point on its word. Start with Basic at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-7.wav",
+      "duration": 14.093,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.545,
+          "text": "The slide shows the point; your voice explains it.",
+          "words": [
+            {
+              "w": "The",
+              "t": 0.55
+            },
+            {
+              "w": "slide",
+              "t": 0.736
+            },
+            {
+              "w": "shows",
+              "t": 1.107
+            },
+            {
+              "w": "the",
+              "t": 1.386
+            },
+            {
+              "w": "point;",
+              "t": 1.502
+            },
+            {
+              "w": "your",
+              "t": 2.28
+            },
+            {
+              "w": "voice",
+              "t": 2.477
+            },
+            {
+              "w": "explains",
+              "t": 2.768
+            },
+            {
+              "w": "it.",
+              "t": 3.278
+            }
+          ]
+        },
+        {
+          "t": 3.987,
+          "end": 8.294,
+          "text": "On Pro, AI directs the video, landing each key point on its word.",
+          "words": [
+            {
+              "w": "On",
+              "t": 3.987
+            },
+            {
+              "w": "Pro,",
+              "t": 4.242
+            },
+            {
+              "w": "AI",
+              "t": 4.672
+            },
+            {
+              "w": "directs",
+              "t": 5.032
+            },
+            {
+              "w": "the",
+              "t": 5.496
+            },
+            {
+              "w": "video,",
+              "t": 5.612
+            },
+            {
+              "w": "landing",
+              "t": 6.285
+            },
+            {
+              "w": "each",
+              "t": 6.68
+            },
+            {
+              "w": "key",
+              "t": 6.936
+            },
+            {
+              "w": "point",
+              "t": 7.179
+            },
+            {
+              "w": "on",
+              "t": 7.504
+            },
+            {
+              "w": "its",
+              "t": 7.632
+            },
+            {
+              "w": "word.",
+              "t": 7.795
+            }
+          ]
+        },
+        {
+          "t": 8.991,
+          "end": 11.893,
+          "text": "Start with Basic at powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Start",
+              "t": 8.991
+            },
+            {
+              "w": "with",
+              "t": 9.327
+            },
+            {
+              "w": "Basic",
+              "t": 9.513
+            },
+            {
+              "w": "at",
+              "t": 9.943
+            },
+            {
+              "w": "PowerPoint",
+              "t": 10.07
+            },
+            {
+              "w": "to",
+              "t": 10.72
+            },
+            {
+              "w": "vid",
+              "t": 10.906
+            },
+            {
+              "w": "dot",
+              "t": 11.15
+            },
+            {
+              "w": "com.",
+              "t": 11.405
+            }
+          ]
+        }
+      ],
+      "speechEnd": 11.893
+    }
+  ],
+  "voiceProvider": "elevenlabs"
+}

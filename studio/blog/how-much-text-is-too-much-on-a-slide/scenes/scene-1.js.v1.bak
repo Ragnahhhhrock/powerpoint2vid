@@ -1,0 +1,112 @@
+/* Scene 2 — "When everything is written down, nothing looks important. And in a video, the slide only
+ * stays up while the narration runs, so viewers pause or give up."
+ * Storyboard: ink stage, wide shot of a dense slide made of identical grey text bars that pile in, jittery
+ * and fast. On "nothing looks important" the camera pushes in and a focus lens hunts across the bars, finding
+ * no highlight. On "in a video" an amber progress bar appears beneath and drains while a teal reading
+ * highlight crawls line by line, falling behind. On "pause" the bar hits zero and a coral pause icon
+ * flashes; on "give up" the slide snaps away. The headline "Text-heavy slides split attention" holds at top. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const R = ctx.rand(7);
+  const written = ctx.at(0, 'written'), nothing = ctx.at(0, 'nothing'), important = ctx.at(0, 'important');
+  const video = ctx.at(1, 'video'), slideW = ctx.at(1, 'slide'), pause = ctx.at(1, 'pause'), give = ctx.at(1, 'give');
+  const MONO = 'ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(65% 60% at 50% 55%, #1d2030 0%, var(--ink) 55%, var(--night) 100%)';
+  const glow = el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(35% 30% at 50% 58%, rgba(138,144,166,.12), transparent 70%)' });
+
+  /* headline, holds at top outside the camera */
+  const head = el('div', 'abs', stage, { left: '80px', width: '1760px', top: '86px', textAlign: 'center', font: '800 90px/1 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--paper)', whiteSpace: 'nowrap' });
+  head.textContent = 'Text-heavy slides split attention';
+
+  /* camera */
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 600px' });
+
+  /* the dense slide */
+  const CX = 360, CY = 250, CW = 1200, CH = 620;
+  const card = el('div', 'abs', cam, { left: CX + 'px', top: CY + 'px', width: CW + 'px', height: CH + 'px', borderRadius: '18px', background: 'linear-gradient(180deg, #232636, #1a1c28)', border: '1px solid rgba(255,255,255,.08)', boxShadow: '0 50px 120px rgba(0,0,0,.6)' });
+  const ROWS = 13, rows = [];
+  for (let i = 0; i < ROWS; i++) {
+    const top = 62 + i * 41;
+    const indent = R() < 0.3 ? 40 : 0;
+    const w = 620 + R() * 440 - indent;
+    const hi = el('div', 'abs', card, { left: 76 + indent + 'px', top: top - 7 + 'px', width: w + 'px', height: '32px', borderRadius: '6px', background: 'rgba(31,181,168,.32)', transformOrigin: '0% 50%', transform: 'scaleX(0)' });
+    const dot = el('div', 'abs', card, { left: 50 + indent + 'px', top: top + 4 + 'px', width: '10px', height: '10px', borderRadius: '50%', background: '#5d6278' });
+    const bar = el('div', 'abs', card, { left: 76 + indent + 'px', top: top + 'px', width: w + 'px', height: '18px', borderRadius: '9px', background: '#5d6278', transformOrigin: '0% 50%' });
+    rows.push({ hi, dot, bar, top, x: 76 + indent, w });
+  }
+
+  /* hunting lens */
+  const lens = el('div', 'abs', card, { left: 0, top: 0, width: '220px', height: '220px', marginLeft: '-110px', marginTop: '-110px', borderRadius: '50%', border: '3px solid rgba(246,243,236,.85)', boxShadow: '0 0 40px rgba(246,243,236,.25), inset 0 0 40px rgba(246,243,236,.12)', opacity: 0 });
+  const lensTag = el('div', 'abs', lens, { left: '50%', top: '232px', transform: 'translateX(-50%)', font: `600 20px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--slate)', whiteSpace: 'nowrap' });
+  lensTag.textContent = 'NO FOCUS';
+
+  /* progress bar */
+  const PY = CY + CH + 44;
+  const pLab = el('div', 'abs', cam, { left: CX + 'px', top: PY - 2 + 'px', font: `600 20px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--slate)' });
+  pLab.textContent = 'SLIDE ON SCREEN';
+  const pTime = el('div', 'abs', cam, { left: CX + CW - 200 + 'px', width: '200px', textAlign: 'right', top: PY - 6 + 'px', font: `700 28px/1 ${MONO}`, color: 'var(--amber)', fontVariantNumeric: 'tabular-nums' });
+  const track = el('div', 'abs', cam, { left: CX + 'px', top: PY + 34 + 'px', width: CW + 'px', height: '14px', borderRadius: '7px', background: 'rgba(255,255,255,.08)' });
+  const fill = el('div', 'abs', track, { left: 0, top: 0, width: '100%', height: '100%', borderRadius: '7px', background: 'linear-gradient(90deg, #ffcf85, var(--amber))', boxShadow: '0 0 24px rgba(255,181,71,.55)', transformOrigin: '0% 50%' });
+
+  /* pause icon */
+  const pz = el('div', 'abs', cam, { left: 960 - 150 + 'px', top: CY + CH / 2 - 150 + 'px', width: '300px', height: '300px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,90,78,.25), rgba(255,90,78,.08) 70%)', border: '6px solid var(--coral)', boxShadow: '0 0 90px rgba(255,90,78,.55)', opacity: 0 });
+  [104, 166].forEach((x) => el('div', 'abs', pz, { left: x + 'px', top: '86px', width: '30px', height: '128px', borderRadius: '8px', background: 'var(--coral)' }));
+  const flash = el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(45% 45% at 50% 58%, rgba(255,90,78,.45), transparent 70%)', mixBlendMode: 'screen', opacity: 0 });
+
+  ctx.fx.vignette({ strength: 0.55 });
+  ctx.fx.grain({ opacity: 0.07 });
+
+  const clock = { s: 5 };
+  ctx.onFrame(() => { pTime.textContent = '0:0' + Math.ceil(Math.max(0, clock.s - 0.001)); });
+
+  /* ---- timeline ---- */
+  gsap.set([track, pLab, pTime], { opacity: 0 });
+  tl.fromTo(head, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }, 0.05);
+  tl.fromTo(card, { opacity: 0, scale: 0.96 }, { opacity: 1, scale: 1, duration: 0.6 }, 0);
+  // clutter piles in, jittery and fast
+  rows.forEach((r, i) => {
+    const t = i < 6 ? 0.12 + i * 0.05 : written - 0.2 + (i - 6) * 0.07;
+    tl.fromTo(r.bar, { scaleX: 0, x: (R() - 0.5) * 40, opacity: 0 }, { scaleX: 1, x: 0, opacity: 1, duration: 0.32, ease: 'power4.out' }, t);
+    tl.fromTo(r.dot, { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.2, ease: 'back.out(2)' }, t);
+    tl.to(r.bar, { x: (R() - 0.5) * 8, duration: 0.05, yoyo: true, repeat: 1, ease: 'none' }, t + 0.32);
+  });
+
+  // camera drift + hunt
+  tl.to(cam, { scale: 1.02, duration: nothing, ease: 'none' }, 0);
+  tl.to(cam, { scale: 1.14, x: 120, y: -30, duration: 0.7, ease: 'expo.inOut' }, nothing - 0.15);
+  tl.to(cam, { x: -140, y: -90, duration: 0.6, ease: 'expo.inOut' }, nothing + 0.6);
+  tl.to(cam, { x: 40, y: 60, duration: 0.6, ease: 'expo.inOut' }, important + 0.25);
+  tl.to(cam, { scale: 1, x: 0, y: 0, duration: 0.8, ease: 'expo.inOut' }, video - 0.6);
+  tl.to(cam, { scale: 1.05, duration: ctx.dur - video - 0.2, ease: 'power1.inOut' }, video + 0.2);
+
+  const lp = (i, fx) => ({ left: rows[i].x + rows[i].w * fx, top: rows[i].top + 9 });
+  gsap.set(lens, lp(2, 0.3));
+  tl.to(lens, { opacity: 1, duration: 0.3 }, nothing - 0.05);
+  tl.to(lens, { ...lp(4, 0.8), duration: 0.6, ease: 'expo.inOut' }, nothing + 0.6);
+  tl.to(lens, { ...lp(9, 0.35), duration: 0.6, ease: 'expo.inOut' }, important + 0.25);
+  tl.to(lens, { opacity: 0, scale: 0.8, duration: 0.35, ease: 'power2.in' }, video - 0.6);
+
+  // "in a video": the clock appears and drains
+  tl.fromTo([track, pLab, pTime], { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: 'back.out(1.6)', immediateRender: false }, video - 0.1);
+  tl.fromTo(fill, { scaleX: 1 }, { scaleX: 0, duration: pause - video - 0.1, ease: 'none', immediateRender: false }, video + 0.1);
+  tl.to(clock, { s: 0, duration: pause - video - 0.1, ease: 'none' }, video + 0.1);
+  // reading lags behind
+  const per = 0.62;
+  rows.forEach((r, i) => {
+    const t = slideW + i * per;
+    if (t >= pause) return;
+    tl.to(r.hi, { scaleX: Math.min(1, (pause - t) / per), duration: Math.min(per, pause - t), ease: 'none' }, t);
+  });
+
+  // "pause": bar hits zero, coral pause flashes
+  tl.to(track, { background: 'rgba(255,90,78,.35)', duration: 0.2 }, pause - 0.05);
+  tl.to(pTime, { color: '#FF5A4E', duration: 0.2 }, pause - 0.05);
+  tl.to(card, { opacity: 0.45, duration: 0.3 }, pause);
+  tl.fromTo(pz, { opacity: 0, scale: 1.5 }, { opacity: 1, scale: 1, duration: 0.45, ease: 'back.out(1.8)', immediateRender: false }, pause);
+  tl.fromTo(flash, { opacity: 0 }, { opacity: 1, duration: 0.12, yoyo: true, repeat: 1, immediateRender: false }, pause);
+  // "give up": slide snaps away
+  tl.to([card, track, pLab, pTime], { opacity: 0, scale: 0.88, y: 70, duration: 0.28, ease: 'power3.in' }, give - 0.05);
+  tl.to(pz, { scale: 1.08, duration: 0.6, yoyo: true, repeat: 1, ease: 'sine.inOut' }, give + 0.2);
+  tl.to(glow, { opacity: 0.5, duration: 1 }, give);
+});
