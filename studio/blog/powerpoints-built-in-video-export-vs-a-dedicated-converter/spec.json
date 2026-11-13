@@ -1,0 +1,100 @@
+{
+  "title": "PowerPoint's Built-in Video Export vs a Dedicated Converter (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Built-in Export vs a Dedicated Converter",
+      "bullets": [],
+      "notes": "Want to save PowerPoint as video? You have two sensible options, and they suit different jobs. Here's how to pick the right one for your deck.",
+      "minDuration": 9
+    },
+    {
+      "title": "Built-in export keeps your own voice",
+      "bullets": [
+        "Exports your transitions and animations",
+        "Recorded timings or fixed seconds per slide",
+        "Narration you record yourself",
+        "Typically an MP4 file"
+      ],
+      "notes": "PowerPoint's own export plays your animations exactly as designed, with your real voice. The catch? Stumble on slide 12, and you re-record slide 12.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "A converter treats video as its own thing",
+      "bullets": [
+        "Narration from your speaker notes",
+        "Timing follows the speech",
+        "Captions included",
+        "Edit the notes and export again"
+      ],
+      "notes": "A dedicated converter reads your speaker notes aloud, adds captions and times everything to the speech. The trade-off is a synthetic voice instead of your own.",
+      "minDuration": 11,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "The same slide, two ways",
+      "bullets": [
+        "\"New starters get their laptop on day one\"",
+        "Built-in: record it, re-record when it changes",
+        "Converter: type it into the notes, edit and export again"
+      ],
+      "notes": "Take one headline about new starters' laptops. Record it yourself, and every change means a new take. Type it into the notes, and a change is one quick edit.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Quick checklist for choosing",
+      "bullets": [
+        "Your own voice? Built-in export",
+        "Custom PowerPoint animations? Built-in export",
+        "Content changes often? Dedicated converter",
+        "Captions without extra work? Dedicated converter"
+      ],
+      "notes": "Many people use both. A leader's quarterly message suits their own voice, while an onboarding module that changes every few months suits a converter.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Try your own deck both ways",
+      "bullets": [
+        "Export a short section from PowerPoint",
+        "Drop the same .pptx into the converter",
+        "Compare a produced explainer with a straight export"
+      ],
+      "notes": "Ordinary slides in, extraordinary video out. On Pro, a.i. directs your video, tightening the story and timing each scene to the narration. Try Basic first at powerpoint2vid.com.",
+      "minDuration": 12,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}

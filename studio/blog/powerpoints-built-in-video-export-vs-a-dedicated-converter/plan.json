@@ -1,0 +1,882 @@
+{
+  "title": "PowerPoint's Built-in Video Export vs a Dedicated Converter (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0F1424",
+      "ink": "#1B2238",
+      "paper": "#F6F3EC",
+      "warm": "#F2A33A",
+      "cool": "#3FA7D6",
+      "coral": "#E8604C",
+      "mist": "#9AA3B8"
+    },
+    "font": "Inter Display",
+    "motion": "Calm, confident pacing with soft ease-out arrivals and gentle push-ins; split-screen comparisons slide apart and meet like two lanes of a road.",
+    "story": "A two-path comparison: warm amber stands for the built-in export (your voice), cool blue for the converter (your notes). Scenes alternate dark and light stages, wide splits versus close single-object shots, before both paths merge into one call to action."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "Want to save PowerPoint as video? You have two sensible options, and they suit different jobs. Here's how to pick the right one for your deck.",
+      "storyboard": "Night stage. A single slide card sits centre, then on 'two sensible options' it splits into two paths, a warm amber lane curving left and a cool blue lane curving right. Labels 'Built-in Export' and 'Dedicated Converter' rise at 110px on each lane. On 'pick the right one' the camera pushes slowly toward the fork. The original plain title is rebuilt as this fork metaphor.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Built-in Export vs a Dedicated Converter",
+        "text": "",
+        "notes": "Want to save PowerPoint as video? You have two sensible options, and they suit different jobs. Here's how to pick the right one for your deck.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 9.847,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 2.669,
+          "text": "Want to save PowerPoint as video?",
+          "words": [
+            {
+              "w": "Want",
+              "t": 0.8
+            },
+            {
+              "w": "to",
+              "t": 1.067
+            },
+            {
+              "w": "save",
+              "t": 1.183
+            },
+            {
+              "w": "PowerPoint",
+              "t": 1.45
+            },
+            {
+              "w": "as",
+              "t": 1.973
+            },
+            {
+              "w": "video?",
+              "t": 2.1
+            }
+          ]
+        },
+        {
+          "t": 3.366,
+          "end": 6.675,
+          "text": "You have two sensible options, and they suit different jobs.",
+          "words": [
+            {
+              "w": "You",
+              "t": 3.366
+            },
+            {
+              "w": "have",
+              "t": 3.552
+            },
+            {
+              "w": "two",
+              "t": 3.714
+            },
+            {
+              "w": "sensible",
+              "t": 3.981
+            },
+            {
+              "w": "options,",
+              "t": 4.469
+            },
+            {
+              "w": "and",
+              "t": 5.177
+            },
+            {
+              "w": "they",
+              "t": 5.351
+            },
+            {
+              "w": "suit",
+              "t": 5.514
+            },
+            {
+              "w": "different",
+              "t": 5.781
+            },
+            {
+              "w": "jobs.",
+              "t": 6.129
+            }
+          ]
+        },
+        {
+          "t": 6.953,
+          "end": 8.997,
+          "text": "Here's how to pick the right one for your deck.",
+          "words": [
+            {
+              "w": "Here's",
+              "t": 6.953
+            },
+            {
+              "w": "how",
+              "t": 7.244
+            },
+            {
+              "w": "to",
+              "t": 7.383
+            },
+            {
+              "w": "pick",
+              "t": 7.487
+            },
+            {
+              "w": "the",
+              "t": 7.696
+            },
+            {
+              "w": "right",
+              "t": 7.824
+            },
+            {
+              "w": "one",
+              "t": 8.056
+            },
+            {
+              "w": "for",
+              "t": 8.242
+            },
+            {
+              "w": "your",
+              "t": 8.37
+            },
+            {
+              "w": "deck.",
+              "t": 8.544
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.997
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "PowerPoint's own export plays your animations exactly as designed, with your real voice. The catch? Stumble on slide 12, and you re-record slide 12.",
+      "storyboard": "Paper stage, amber accents. A slide thumbnail plays a little fly-in animation on 'exactly as designed', and a microphone with an amber waveform appears on 'your real voice'. On 'The catch?' the camera tightens; a strip of slide numbers scrolls, and on 'slide 12' the waveform glitches coral and a big '12' (150px) stamps with a red re-record dot. The bullet list is cut; MP4 and timings are implied by a small 'MP4' tag on the file.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Built-in export keeps your own voice",
+        "text": "Exports your transitions and animations. Recorded timings or fixed seconds per slide. Narration you record yourself. Typically an MP4 file",
+        "notes": "PowerPoint's own export plays your animations exactly as designed, with your real voice. The catch? Stumble on slide 12, and you re-record slide 12.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 11.918,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 5.6,
+          "text": "PowerPoint's own export plays your animations exactly as designed, with your real voice.",
+          "words": [
+            {
+              "w": "PowerPoint's",
+              "t": 0.55
+            },
+            {
+              "w": "own",
+              "t": 1.212
+            },
+            {
+              "w": "export",
+              "t": 1.444
+            },
+            {
+              "w": "plays",
+              "t": 1.92
+            },
+            {
+              "w": "your",
+              "t": 2.21
+            },
+            {
+              "w": "animations",
+              "t": 2.373
+            },
+            {
+              "w": "exactly",
+              "t": 2.941
+            },
+            {
+              "w": "as",
+              "t": 3.429
+            },
+            {
+              "w": "designed,",
+              "t": 3.568
+            },
+            {
+              "w": "with",
+              "t": 4.393
+            },
+            {
+              "w": "your",
+              "t": 4.59
+            },
+            {
+              "w": "real",
+              "t": 4.753
+            },
+            {
+              "w": "voice.",
+              "t": 5.008
+            }
+          ]
+        },
+        {
+          "t": 6.297,
+          "end": 7.016,
+          "text": "The catch?",
+          "words": [
+            {
+              "w": "The",
+              "t": 6.297
+            },
+            {
+              "w": "catch?",
+              "t": 6.459
+            }
+          ]
+        },
+        {
+          "t": 7.62,
+          "end": 11.068,
+          "text": "Stumble on slide 12, and you re-record slide 12.",
+          "words": [
+            {
+              "w": "Stumble",
+              "t": 7.62
+            },
+            {
+              "w": "on",
+              "t": 8.05
+            },
+            {
+              "w": "slide",
+              "t": 8.189
+            },
+            {
+              "w": "12,",
+              "t": 8.537
+            },
+            {
+              "w": "and",
+              "t": 9.222
+            },
+            {
+              "w": "you",
+              "t": 9.42
+            },
+            {
+              "w": "re-record",
+              "t": 9.571
+            },
+            {
+              "w": "slide",
+              "t": 10.139
+            },
+            {
+              "w": "12.",
+              "t": 10.488
+            }
+          ]
+        }
+      ],
+      "speechEnd": 11.068
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "A dedicated converter reads your speaker notes aloud, adds captions and times everything to the speech. The trade-off is a synthetic voice instead of your own.",
+      "storyboard": "Night stage, cool blue accents. A notes panel types out text; on 'reads your speaker notes aloud' the words lift off and become a blue waveform. On 'adds captions' a caption bar slides up under a slide frame; on 'times everything' slide blocks snap to waveform segments on a timeline. On 'synthetic voice' the waveform briefly turns smooth and even, with a small mist-grey label 'synthetic voice'. The bullets are rebuilt as these three beats.",
+      "minDuration": 10,
+      "slide": {
+        "title": "A converter treats video as its own thing",
+        "text": "Narration from your speaker notes. Timing follows the speech. Captions included. Edit the notes and export again",
+        "notes": "A dedicated converter reads your speaker notes aloud, adds captions and times everything to the speech. The trade-off is a synthetic voice instead of your own.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 10.828,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 6.471,
+          "text": "A dedicated converter reads your speaker notes aloud, adds captions and times everything to the speech.",
+          "words": [
+            {
+              "w": "A",
+              "t": 0.55
+            },
+            {
+              "w": "dedicated",
+              "t": 0.713
+            },
+            {
+              "w": "converter",
+              "t": 1.27
+            },
+            {
+              "w": "reads",
+              "t": 1.851
+            },
+            {
+              "w": "your",
+              "t": 2.164
+            },
+            {
+              "w": "speaker",
+              "t": 2.327
+            },
+            {
+              "w": "notes",
+              "t": 2.721
+            },
+            {
+              "w": "aloud,",
+              "t": 2.988
+            },
+            {
+              "w": "adds",
+              "t": 3.766
+            },
+            {
+              "w": "captions",
+              "t": 4.08
+            },
+            {
+              "w": "and",
+              "t": 4.684
+            },
+            {
+              "w": "times",
+              "t": 4.869
+            },
+            {
+              "w": "everything",
+              "t": 5.229
+            },
+            {
+              "w": "to",
+              "t": 5.67
+            },
+            {
+              "w": "the",
+              "t": 5.798
+            },
+            {
+              "w": "speech.",
+              "t": 5.903
+            }
+          ]
+        },
+        {
+          "t": 6.982,
+          "end": 9.978,
+          "text": "The trade-off is a synthetic voice instead of your own.",
+          "words": [
+            {
+              "w": "The",
+              "t": 6.982
+            },
+            {
+              "w": "trade-off",
+              "t": 7.168
+            },
+            {
+              "w": "is",
+              "t": 7.679
+            },
+            {
+              "w": "a",
+              "t": 7.83
+            },
+            {
+              "w": "synthetic",
+              "t": 7.911
+            },
+            {
+              "w": "voice",
+              "t": 8.492
+            },
+            {
+              "w": "instead",
+              "t": 8.851
+            },
+            {
+              "w": "of",
+              "t": 9.235
+            },
+            {
+              "w": "your",
+              "t": 9.327
+            },
+            {
+              "w": "own.",
+              "t": 9.525
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.978
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Take one headline about new starters' laptops. Record it yourself, and every change means a new take. Type it into the notes, and a change is one quick edit.",
+      "storyboard": "Paper stage, wide split-screen. The quote 'New starters get their laptop on day one' lands top-centre at 90px. Left amber half: on 'every change means a new take' a clapperboard snaps and a take counter ticks 1, 2, 3. Right blue half: on 'one quick edit' a cursor changes one word in the notes and a single export arrow fires. Camera holds wide so both halves read at once.",
+      "minDuration": 11,
+      "slide": {
+        "title": "The same slide, two ways",
+        "text": "\"New starters get their laptop on day one\". Built-in: record it, re-record when it changes. Converter: type it into the notes, edit and export again",
+        "notes": "Take one headline about new starters' laptops. Record it yourself, and every change means a new take. Type it into the notes, and a change is one quick edit.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "wipeleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 11.106,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.394,
+          "text": "Take one headline about new starters' laptops.",
+          "words": [
+            {
+              "w": "Take",
+              "t": 0.55
+            },
+            {
+              "w": "one",
+              "t": 0.852
+            },
+            {
+              "w": "headline",
+              "t": 1.095
+            },
+            {
+              "w": "about",
+              "t": 1.56
+            },
+            {
+              "w": "new",
+              "t": 1.885
+            },
+            {
+              "w": "starters'",
+              "t": 2.129
+            },
+            {
+              "w": "laptops.",
+              "t": 2.628
+            }
+          ]
+        },
+        {
+          "t": 3.835,
+          "end": 6.912,
+          "text": "Record it yourself, and every change means a new take.",
+          "words": [
+            {
+              "w": "Record",
+              "t": 3.835
+            },
+            {
+              "w": "it",
+              "t": 4.242
+            },
+            {
+              "w": "yourself,",
+              "t": 4.369
+            },
+            {
+              "w": "and",
+              "t": 4.973
+            },
+            {
+              "w": "every",
+              "t": 5.182
+            },
+            {
+              "w": "change",
+              "t": 5.438
+            },
+            {
+              "w": "means",
+              "t": 5.844
+            },
+            {
+              "w": "a",
+              "t": 6.123
+            },
+            {
+              "w": "new",
+              "t": 6.227
+            },
+            {
+              "w": "take.",
+              "t": 6.424
+            }
+          ]
+        },
+        {
+          "t": 7.353,
+          "end": 10.256,
+          "text": "Type it into the notes, and a change is one quick edit.",
+          "words": [
+            {
+              "w": "Type",
+              "t": 7.353
+            },
+            {
+              "w": "it",
+              "t": 7.655
+            },
+            {
+              "w": "into",
+              "t": 7.76
+            },
+            {
+              "w": "the",
+              "t": 7.969
+            },
+            {
+              "w": "notes,",
+              "t": 8.096
+            },
+            {
+              "w": "and",
+              "t": 8.445
+            },
+            {
+              "w": "a",
+              "t": 8.642
+            },
+            {
+              "w": "change",
+              "t": 8.723
+            },
+            {
+              "w": "is",
+              "t": 9.118
+            },
+            {
+              "w": "one",
+              "t": 9.269
+            },
+            {
+              "w": "quick",
+              "t": 9.489
+            },
+            {
+              "w": "edit.",
+              "t": 9.768
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.256
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Many people use both. A leader's quarterly message suits their own voice, while an onboarding module that changes every few months suits a converter.",
+      "storyboard": "Night stage. Four checklist questions drop in as short chips \u2014 'Your own voice?', 'Custom animations?' tilt toward amber; 'Changes often?', 'Captions free?' tilt toward blue. On 'use both' the two lanes from the opening reappear side by side. On 'quarterly message' an amber card with a leader silhouette lands left; on 'onboarding module' a blue card with a repeating calendar lands right. Checklist is kept, condensed to chip labels.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Quick checklist for choosing",
+        "text": "Your own voice? Built-in export. Custom PowerPoint animations? Built-in export. Content changes often? Dedicated converter. Captions without extra work? Dedicated converter",
+        "notes": "Many people use both. A leader's quarterly message suits their own voice, while an onboarding module that changes every few months suits a converter.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 11,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 1.896,
+          "text": "Many people use both.",
+          "words": [
+            {
+              "w": "Many",
+              "t": 0.55
+            },
+            {
+              "w": "people",
+              "t": 0.84
+            },
+            {
+              "w": "use",
+              "t": 1.176
+            },
+            {
+              "w": "both.",
+              "t": 1.444
+            }
+          ]
+        },
+        {
+          "t": 2.14,
+          "end": 9.779,
+          "text": "A leader's quarterly message suits their own voice, while an onboarding module that changes every few months suits a converter.",
+          "words": [
+            {
+              "w": "A",
+              "t": 2.14
+            },
+            {
+              "w": "leader's",
+              "t": 2.314
+            },
+            {
+              "w": "quarterly",
+              "t": 2.709
+            },
+            {
+              "w": "message",
+              "t": 3.162
+            },
+            {
+              "w": "suits",
+              "t": 3.731
+            },
+            {
+              "w": "their",
+              "t": 4.114
+            },
+            {
+              "w": "own",
+              "t": 4.346
+            },
+            {
+              "w": "voice,",
+              "t": 4.624
+            },
+            {
+              "w": "while",
+              "t": 5.414
+            },
+            {
+              "w": "an",
+              "t": 5.681
+            },
+            {
+              "w": "onboarding",
+              "t": 5.82
+            },
+            {
+              "w": "module",
+              "t": 6.424
+            },
+            {
+              "w": "that",
+              "t": 6.853
+            },
+            {
+              "w": "changes",
+              "t": 7.028
+            },
+            {
+              "w": "every",
+              "t": 7.585
+            },
+            {
+              "w": "few",
+              "t": 7.91
+            },
+            {
+              "w": "months",
+              "t": 8.142
+            },
+            {
+              "w": "suits",
+              "t": 8.688
+            },
+            {
+              "w": "a",
+              "t": 9.001
+            },
+            {
+              "w": "converter.",
+              "t": 9.071
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.779
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "Ordinary slides in, extraordinary video out. On Pro, a.i. directs your video, tightening the story and timing each scene. Try Basic first at powerpoint2vid.com.",
+      "storyboard": "Paper stage. A plain slide drops into a frame on 'Ordinary slides in' and emerges as a vivid playing video on 'extraordinary video out', amber and blue lanes merging into one. On 'On Pro' a subtle director badge appears with scenes snapping to a timeline. On 'powerpoint2vid.com' the URL lands centre at 120px in ink with a warm underline and holds. The original three-step bullets are cut in favour of the single CTA.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Try your own deck both ways",
+        "text": "Export a short section from PowerPoint. Drop the same .pptx into the converter. Compare a produced explainer with a straight export",
+        "notes": "Ordinary slides in, extraordinary video out. On Pro, a.i. directs your video, tightening the story and timing each scene to the narration. Try Basic first at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 15.196,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.639,
+          "text": "Ordinary slides in, extraordinary video out.",
+          "words": [
+            {
+              "w": "Ordinary",
+              "t": 0.55
+            },
+            {
+              "w": "slides",
+              "t": 1.108
+            },
+            {
+              "w": "in,",
+              "t": 1.572
+            },
+            {
+              "w": "extraordinary",
+              "t": 1.99
+            },
+            {
+              "w": "video",
+              "t": 2.745
+            },
+            {
+              "w": "out.",
+              "t": 3.174
+            }
+          ]
+        },
+        {
+          "t": 4.451,
+          "end": 9.339,
+          "text": "On Pro, a.i. directs your video, tightening the story and timing each scene.",
+          "words": [
+            {
+              "w": "On",
+              "t": 4.451
+            },
+            {
+              "w": "Pro,",
+              "t": 4.718
+            },
+            {
+              "w": "A.I.",
+              "t": 5.241
+            },
+            {
+              "w": "directs",
+              "t": 5.612
+            },
+            {
+              "w": "your",
+              "t": 5.995
+            },
+            {
+              "w": "video,",
+              "t": 6.158
+            },
+            {
+              "w": "tightening",
+              "t": 6.843
+            },
+            {
+              "w": "the",
+              "t": 7.342
+            },
+            {
+              "w": "story",
+              "t": 7.458
+            },
+            {
+              "w": "and",
+              "t": 7.911
+            },
+            {
+              "w": "timing",
+              "t": 8.074
+            },
+            {
+              "w": "each",
+              "t": 8.55
+            },
+            {
+              "w": "scene.",
+              "t": 8.805
+            }
+          ]
+        },
+        {
+          "t": 9.85,
+          "end": 12.996,
+          "text": "Try Basic first at powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 9.85
+            },
+            {
+              "w": "Basic",
+              "t": 10.21
+            },
+            {
+              "w": "first",
+              "t": 10.651
+            },
+            {
+              "w": "at",
+              "t": 11.023
+            },
+            {
+              "w": "PowerPoint",
+              "t": 11.15
+            },
+            {
+              "w": "to",
+              "t": 11.8
+            },
+            {
+              "w": "vid",
+              "t": 11.975
+            },
+            {
+              "w": "dot",
+              "t": 12.218
+            },
+            {
+              "w": "com.",
+              "t": 12.497
+            }
+          ]
+        }
+      ],
+      "speechEnd": 12.996
+    }
+  ],
+  "voiceProvider": "elevenlabs"
+}

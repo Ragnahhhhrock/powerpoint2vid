@@ -1,0 +1,169 @@
+/* Scene 2 — "A dedicated converter reads your speaker notes aloud, adds captions and times everything to the speech.
+ *            The trade-off is a synthetic voice instead of your own."
+ * Storyboard: night stage with cool-blue accents. A speaker-notes panel types out one line. On "reads your speaker
+ * notes aloud" each word lifts off and flies down, and a blue waveform sweeps on as they land. On "adds captions"
+ * a caption bar slides up inside a slide frame. On "times everything" uneven slide blocks snap onto the waveform's
+ * speech segments, and a playhead starts to run. On "synthetic" the waveform settles into smooth, even bars, and
+ * a mist-grey "SYNTHETIC VOICE" tag pops in while the camera pushes gently toward the wave. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const reads = ctx.at(0, 'reads'), aloud = ctx.at(0, 'aloud,'), captions = ctx.at(0, 'captions');
+  const times = ctx.at(0, 'times'), everything = ctx.at(0, 'everything');
+  const tradeoff = ctx.at(1, 'trade-off'), synthetic = ctx.at(1, 'synthetic');
+  const MONO = 'ui-monospace, Menlo, monospace';
+  const COOL = '#3FA7D6';
+  const W0 = 140, WW = 1640, WY = 760;
+  const SEGS = [[0, 0.22], [0.25, 0.5], [0.53, 0.78], [0.81, 1]];
+  const LINE = 'Your laptop arrives on day one.';
+
+  stage.style.background = 'radial-gradient(60% 50% at 75% 30%, rgba(63,167,214,.16) 0%, transparent 70%), radial-gradient(70% 60% at 30% 80%, #1B2238 0%, var(--night) 75%)';
+  const drift = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 540px' });
+  const cam = el('div', 'abs', drift, { inset: 0, transformOrigin: '960px 760px' });
+
+  /* header label */
+  const head = el('div', 'abs', cam, { left: '140px', top: '96px', font: `600 22px/1 ${MONO}`, letterSpacing: '.16em', color: COOL, display: 'flex', alignItems: 'center', gap: '14px' });
+  el('div', '', head, { width: '12px', height: '12px', borderRadius: '50%', background: COOL, boxShadow: `0 0 14px ${COOL}` });
+  el('span', '', head).textContent = 'THE CONVERTER';
+
+  /* notes panel */
+  const panel = el('div', 'abs', cam, { left: '140px', top: '190px', width: '720px', height: '340px', borderRadius: '22px', background: 'linear-gradient(180deg, rgba(27,34,56,.95), rgba(19,25,43,.95))', border: '1px solid rgba(63,167,214,.25)', boxShadow: '0 40px 90px rgba(0,0,0,.45)' });
+  const pHead = el('div', 'abs', panel, { left: '48px', top: '38px', font: `600 20px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--mist)' });
+  pHead.textContent = 'SPEAKER NOTES';
+  el('div', 'abs', panel, { left: '48px', right: '48px', top: '78px', height: '1px', background: 'rgba(154,163,184,.18)' });
+  const TXT = { position: 'absolute', left: '48px', top: '116px', width: '600px', font: '700 54px/1.25 Inter Display, Inter', letterSpacing: '-.03em' };
+  const ghost = el('div', '', panel, { ...TXT, color: 'var(--mist)', opacity: 0 });
+  ghost.textContent = LINE;
+  const txt = el('div', '', panel, { ...TXT, color: '#fff' });
+  const words = [], chars = [];
+  LINE.split(' ').forEach((w, i, arr) => {
+    const ws = el('span', '', txt, { display: 'inline-block', whiteSpace: 'pre' });
+    (w + (i < arr.length - 1 ? ' ' : '')).split('').forEach((c) => { const cs = el('span', '', ws); cs.textContent = c; cs.style.opacity = 0; chars.push(cs); });
+    words.push(ws);
+  });
+  const caret = el('div', 'abs', txt, { width: '4px', height: '54px', background: COOL, boxShadow: `0 0 10px ${COOL}`, left: 0, top: '6px' });
+
+  /* slide frame */
+  const frame = el('div', 'abs', cam, { left: '1000px', top: '150px', width: '780px', height: '440px', borderRadius: '16px', overflow: 'hidden', background: 'var(--paper)', boxShadow: '0 40px 100px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.08)' });
+  el('div', 'abs', frame, { left: '56px', top: '52px', width: '360px', height: '30px', borderRadius: '8px', background: 'var(--ink)' });
+  el('div', 'abs', frame, { left: '56px', top: '100px', width: '240px', height: '16px', borderRadius: '6px', background: 'rgba(27,34,56,.25)' });
+  el('div', 'abs', frame, { left: '56px', top: '128px', width: '200px', height: '16px', borderRadius: '6px', background: 'rgba(27,34,56,.25)' });
+  el('div', 'abs', frame, { left: '470px', top: '70px', width: '220px', height: '140px', borderRadius: '12px', border: '10px solid var(--ink)', background: 'linear-gradient(135deg, #3FA7D6, #2a6f9a)' });
+  el('div', 'abs', frame, { left: '440px', top: '226px', width: '280px', height: '16px', borderRadius: '4px 4px 10px 10px', background: 'var(--ink)' });
+  const capBar = el('div', 'abs', frame, { left: '40px', right: '40px', bottom: '30px', height: '78px', borderRadius: '12px', background: 'rgba(15,20,36,.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', font: '700 32px/1 Inter', letterSpacing: '-.01em', color: '#fff' });
+  const capWords = LINE.split(' ').map((w) => { const s = el('span', '', capBar); s.textContent = w; return s; });
+  const capTag = el('div', 'abs', cam, { left: '1000px', top: '608px', font: `600 18px/1 ${MONO}`, letterSpacing: '.14em', color: COOL });
+  capTag.textContent = 'CAPTIONS';
+
+  /* waveform */
+  const waveLab = el('div', 'abs', cam, { left: '140px', top: '636px', font: `600 18px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--mist)' });
+  waveLab.textContent = 'NARRATION';
+  const cv = el('canvas', 'abs', cam, { left: 0, top: (WY - 140) + 'px', width: '1920px', height: '280px' });
+  cv.width = 1920; cv.height = 280;
+  const g = cv.getContext('2d');
+  const N = 110, R = ctx.rand(7), rnd = Array.from({ length: N }, () => R());
+  const W = { reveal: 0, smooth: 0 }, P = { u: 0 };
+  const ticks = SEGS.slice(1).map(([s0]) => el('div', 'abs', cam, { left: W0 + (s0 - 0.015) * WW + 'px', top: '650px', width: '2px', height: '220px', background: 'rgba(63,167,214,.35)', transformOrigin: '50% 100%' }));
+
+  /* timeline blocks */
+  const track = el('div', 'abs', cam, { left: W0 + 'px', top: '884px', width: WW + 'px', height: '74px', borderRadius: '10px', background: 'rgba(255,255,255,.04)', border: '1px solid rgba(255,255,255,.06)' });
+  const jit = [[-8, -2], [10, 1.5], [-4, -1.2], [12, 2]];
+  const blocks = SEGS.map(([s0, s1], i) => {
+    const b = el('div', 'abs', cam, { left: 160 + i * 250 + 'px', top: '892px', width: '230px', height: '58px', borderRadius: '8px', background: 'var(--paper)', border: '2px solid rgba(63,167,214,.0)', display: 'flex', alignItems: 'center', paddingLeft: '16px', boxSizing: 'border-box', font: `700 20px/1 ${MONO}`, color: 'var(--ink)', letterSpacing: '.08em' });
+    b.textContent = 'SLIDE 0' + (i + 1);
+    return { b, L: W0 + s0 * WW + 4, Wd: (s1 - s0) * WW - 8, j: jit[i] };
+  });
+  const playhead = el('div', 'abs', cam, { left: W0 + 'px', top: '640px', width: '3px', height: '330px', background: '#fff', boxShadow: `0 0 16px ${COOL}`, opacity: 0 });
+
+  /* synthetic tag */
+  const syn = el('div', 'abs', cam, { left: '1440px', top: '622px', padding: '12px 22px', borderRadius: '999px', border: '1.5px solid var(--mist)', background: 'rgba(154,163,184,.12)', font: `600 20px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--mist)', whiteSpace: 'nowrap' });
+  syn.textContent = 'SYNTHETIC VOICE';
+
+  ctx.fx.vignette({ strength: 0.5 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  const typed = { n: 0 }, car = { o: 1 };
+  ctx.onFrame((t) => {
+    const n = Math.floor(typed.n);
+    chars.forEach((c, i) => { c.style.opacity = i < n ? 1 : 0; });
+    const last = chars[Math.max(0, n - 1)];
+    const wp = last.parentNode;
+    caret.style.left = (n === 0 ? 0 : wp.offsetLeft + last.offsetLeft + last.offsetWidth + 4) + 'px';
+    caret.style.top = (wp.offsetTop + 6) + 'px';
+    caret.style.opacity = car.o * (Math.sin(t * 9) > -0.2 ? 1 : 0.15);
+    playhead.style.left = (W0 + P.u * WW) + 'px';
+
+    g.clearRect(0, 0, 1920, 280);
+    g.shadowColor = 'rgba(63,167,214,.55)'; g.shadowBlur = 14;
+    const bw = (WW / N) * 0.56;
+    for (let i = 0; i < N; i++) {
+      const u = (i + 0.5) / N, x = W0 + u * WW;
+      const rev = Math.min(1, Math.max(0, (W.reveal - u) * 10));
+      if (rev <= 0) continue;
+      const seg = SEGS.find(([a, b]) => u >= a && u <= b);
+      let nat = 0.04, sm = 0.04;
+      if (seg) {
+        const loc = (u - seg[0]) / (seg[1] - seg[0]);
+        const env = Math.sin(Math.PI * loc);
+        nat = Math.pow(env, 0.6) * (0.25 + 0.75 * rnd[i]) * (1 + 0.14 * Math.sin(t * 7 + i * 1.3));
+        sm = Math.pow(env, 0.12) * (0.42 + 0.03 * Math.sin(i * 0.7 + t * 3));
+      }
+      const a = nat + (sm - nat) * W.smooth;
+      const h = Math.max(4, a * 220 * rev);
+      g.globalAlpha = 0.3 + 0.7 * rev;
+      g.fillStyle = u < P.u ? '#c9ecfb' : COOL;
+      g.beginPath();
+      if (g.roundRect) g.roundRect(x - bw / 2, 140 - h / 2, bw, h, bw / 2); else g.rect(x - bw / 2, 140 - h / 2, bw, h);
+      g.fill();
+    }
+    g.globalAlpha = 1;
+  });
+
+  /* ---- timeline ---- */
+  gsap.set([capTag, waveLab, track, ...ticks, syn, ...blocks.map((o) => o.b)], { opacity: 0 });
+  gsap.set(ticks, { scaleY: 0 });
+  blocks.forEach((o) => gsap.set(o.b, { y: o.j[0], rotation: o.j[1] }));
+  gsap.set(capBar, { yPercent: 160 });
+  gsap.set(words, { filter: 'blur(0px)' });
+
+  tl.to(drift, { scale: 1.025, x: -14, duration: ctx.dur, ease: 'none' }, 0);
+  tl.from(head, { opacity: 0, x: -20, duration: 0.6 }, 0.05);
+  tl.from(panel, { opacity: 0, y: 40, duration: 0.7 }, 0.05);
+  tl.from(frame, { opacity: 0, x: 60, duration: 0.8 }, 0.35);
+  tl.to(typed, { n: chars.length, duration: 1.3, ease: 'none' }, 0.3);
+
+  // "reads your speaker notes aloud": words lift off into the waveform
+  tl.to(car, { o: 0, duration: 0.2 }, reads);
+  tl.to(waveLab, { opacity: 1, duration: 0.5 }, reads);
+  words.forEach((w, i) => {
+    const px = 140 + 48 + w.offsetLeft + w.offsetWidth / 2, py = 190 + 116 + w.offsetTop + 34;
+    const tx = W0 + ((i + 0.5) / words.length) * WW * 0.92, st = reads + i * 0.13;
+    tl.to(w, { x: tx - px, y: WY - py, scale: 0.45, duration: 0.85, ease: 'power2.in' }, st - 0.05);
+    tl.fromTo(w, { y: 0 }, { y: -18, duration: 0.25, ease: 'power2.out', immediateRender: false }, st - 0.25);
+    tl.to(w, { opacity: 0, filter: 'blur(6px)', color: COOL, duration: 0.3 }, st + 0.55);
+  });
+  tl.to(W, { reveal: 1.1, duration: aloud + 0.75 - (reads + 0.35), ease: 'power1.inOut' }, reads + 0.35);
+  tl.to(ghost, { opacity: 0.22, duration: 0.6 }, aloud + 0.3);
+
+  // "adds captions"
+  tl.to(capBar, { yPercent: 0, duration: 0.7, ease: 'back.out(1.6)' }, captions - 0.15);
+  tl.to(capTag, { opacity: 1, duration: 0.4 }, captions);
+  tl.to(capWords, { color: COOL, duration: 0.2, stagger: 0.16 }, captions + 0.35);
+  tl.to(capWords, { color: '#fff', duration: 0.2, stagger: 0.16 }, captions + 0.55);
+
+  // timeline track appears unsnapped, then "times everything" snaps
+  tl.to(track, { opacity: 1, duration: 0.5 }, captions - 0.3);
+  tl.to(blocks.map((o) => o.b), { opacity: 1, duration: 0.4, stagger: 0.06 }, captions - 0.2);
+  blocks.forEach((o, i) => {
+    tl.to(o.b, { left: o.L, width: o.Wd, y: 0, rotation: 0, duration: 0.65, ease: 'back.out(1.6)' }, times + i * 0.09);
+    tl.to(o.b, { borderColor: COOL, boxShadow: `0 0 26px rgba(63,167,214,.6)`, duration: 0.15, yoyo: true, repeat: 1 }, times + i * 0.09 + 0.35);
+  });
+  tl.to(ticks, { opacity: 1, scaleY: 1, duration: 0.5, stagger: 0.08, ease: 'back.out(1.6)' }, times + 0.05);
+  tl.to(playhead, { opacity: 1, duration: 0.3 }, everything);
+  tl.to(P, { u: 1, duration: ctx.dur - 0.15 - everything, ease: 'none' }, everything);
+
+  // "trade-off ... synthetic voice"
+  tl.to(cam, { scale: 1.045, duration: 1.6, ease: 'expo.inOut' }, tradeoff - 0.2);
+  tl.to([frame, panel], { filter: 'brightness(.7)', duration: 0.8 }, tradeoff);
+  tl.to(W, { smooth: 1, duration: 0.8, ease: 'power2.inOut' }, synthetic - 0.1);
+  tl.fromTo(syn, { opacity: 0, scale: 0.6, y: 12 }, { opacity: 1, scale: 1, y: 0, duration: 0.6, ease: 'back.out(1.8)', immediateRender: false }, synthetic + 0.1);
+});
