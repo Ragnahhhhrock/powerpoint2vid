@@ -1,0 +1,130 @@
+/* Scene 3 — "These are directions, not presets. Clean and corporate suits training. Calm and cinematic
+ * suits brand stories. Bold and energetic competes for attention in a feed."
+ * Storyboard: four tiles on ink, each styled in its own direction. On "directions, not presets" the
+ * tiles jiggle and swap places, then settle. On "clean and corporate" the slate tile (training, lectures)
+ * expands with crisp, near-linear motion. On "calm and cinematic" the amber tile (brand stories, research)
+ * dissolves forward slowly. The teal tile (launches, pitches) stays quiet. On "bold and energetic" the
+ * coral tile (social clips, promos) punches to full frame and holds.
+ */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const FONT = "'Inter Display', Inter, sans-serif", MONO = 'ui-monospace, Menlo, monospace';
+  const tDir = ctx.at(0, 'directions'), tNot = ctx.at(0, 'not'), tPre = ctx.at(0, 'presets');
+  const tClean = ctx.at(1, 'Clean'), tTrain = ctx.at(1, 'training');
+  const tCalm = ctx.at(2, 'Calm'), tBrand = ctx.at(2, 'brand');
+  const tBold = ctx.at(3, 'Bold'), tComp = ctx.at(3, 'competes'), tAtt = ctx.at(3, 'attention'), tFeed = ctx.at(3, 'feed');
+  const W = 780, H = 380;
+  const POS = [[160, 150], [980, 150], [160, 570], [980, 570]];
+
+  stage.style.background = 'radial-gradient(70% 70% at 50% 45%, #262e47 0%, var(--ink) 55%, var(--night) 100%)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 540px' });
+
+  const header = el('div', 'abs', cam, { left: '160px', top: '84px', font: `600 22px/1 ${MONO}`, letterSpacing: '.16em', color: 'rgba(246,243,238,.55)' });
+  header.textContent = 'MATCH THE DIRECTION TO THE DECK';
+
+  const DEFS = [
+    { label: 'CLEAN & CORPORATE', title: 'Training, lectures', bg: 'linear-gradient(160deg, #6a7a9b 0%, var(--slate) 55%, #47557a 100%)', radius: '10px',
+      tFont: `700 50px/1.05 ${FONT}`, color: 'var(--paper)' },
+    { label: 'CALM & CINEMATIC', title: 'Brand stories, research', bg: 'radial-gradient(80% 90% at 70% 40%, rgba(232,163,61,.75) 0%, rgba(232,163,61,.18) 45%, #120f0c 100%)', radius: '22px',
+      tFont: `italic 300 50px/1.05 ${FONT}`, color: 'var(--paper)' },
+    { label: 'POLISHED & MODERN', title: 'Launches, pitches', bg: 'linear-gradient(135deg, #3cc7b6 0%, var(--teal) 45%, #1a7f74 100%)', radius: '30px',
+      tFont: `800 50px/1.05 ${FONT}`, color: '#fff' },
+    { label: 'BOLD & ENERGETIC', title: ['SOCIAL CLIPS,', 'PROMOS'], bg: 'repeating-linear-gradient(-45deg, var(--coral) 0 40px, #e2523f 40px 80px)', radius: '16px',
+      tFont: `900 44px/0.95 ${FONT}`, color: '#fff' },
+  ];
+
+  const tiles = DEFS.map((d, i) => {
+    const t = el('div', 'abs', cam, { left: POS[i][0] + 'px', top: POS[i][1] + 'px', width: W + 'px', height: H + 'px', borderRadius: d.radius, overflow: 'hidden',
+      background: d.bg, boxShadow: '0 40px 80px rgba(0,0,0,.45)', zIndex: 1 });
+    const deco = el('div', 'abs', t, { inset: 0 });
+    const label = el('div', 'abs', t, { left: '44px', top: '40px', font: `600 20px/1 ${MONO}`, letterSpacing: '.16em', color: 'rgba(255,255,255,.8)' });
+    label.textContent = d.label;
+    const title = el('div', 'abs', t, { left: '44px', bottom: '48px', font: d.tFont, letterSpacing: '-.03em', color: d.color, whiteSpace: 'nowrap' });
+    if (Array.isArray(d.title)) d.title.forEach((s) => { el('div', '', title).textContent = s; });
+    else title.textContent = d.title;
+    return { t, deco, label, title };
+  });
+  const [slate, amber, teal, coral] = tiles;
+
+  /* per-direction texture */
+  slate.deco.style.backgroundImage = 'linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px)';
+  slate.deco.style.backgroundSize = '40px 40px';
+  const bar = el('div', 'abs', slate.t, { left: '44px', right: '44px', bottom: '26px', height: '4px', background: 'var(--paper)', transformOrigin: '0% 50%' });
+  gsap.set(bar, { scaleX: 0 });
+  const lbTop = el('div', 'abs', amber.t, { left: 0, right: 0, top: 0, height: '26px', background: '#050505' });
+  const lbBot = el('div', 'abs', amber.t, { left: 0, right: 0, bottom: 0, height: '26px', background: '#050505' });
+  gsap.set(amber.label, { top: '50px' });
+  const shine = el('div', 'abs', teal.t, { top: '-50%', left: '-60%', width: '40%', height: '200%', background: 'linear-gradient(90deg, transparent, rgba(255,255,255,.22), transparent)', transform: 'rotate(20deg)' });
+  gsap.set(coral.title, { skewX: -6, transformOrigin: '0% 100%' });
+  gsap.set(coral.t, { backgroundPosition: '0px 0px' });
+  const ring = el('div', 'abs', coral.t, { left: '50%', top: '50%', width: '400px', height: '400px', marginLeft: '-200px', marginTop: '-200px', borderRadius: '50%', border: '10px solid #fff', opacity: 0 });
+  const flash = el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(50% 50% at 50% 50%, rgba(255,230,210,.6), transparent 70%)', opacity: 0, mixBlendMode: 'screen', zIndex: 20 });
+
+  ctx.fx.vignette({ strength: 0.5 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  const allT = tiles.map((x) => x.t);
+  gsap.set(allT, { filter: 'blur(0px) brightness(1)' });
+
+  /* ---- intro ---- */
+  tl.from(header, { opacity: 0, y: -12, duration: 0.6 }, 0.05);
+  tl.from(allT, { opacity: 0, y: 50, scale: 0.9, duration: 0.7, ease: 'back.out(1.6)', stagger: 0.08 }, 0.05);
+  tl.to(cam, { scale: 1.03, duration: tBold, ease: 'sine.inOut' }, 0);
+  tl.to(shine, { left: '130%', duration: ctx.dur, ease: 'sine.inOut' }, 0);
+
+  /* ---- "directions, not presets": tiles loosen, swap, settle ---- */
+  const r = ctx.rand(7);
+  allT.forEach((t, i) => {
+    tl.to(t, { x: (r() - 0.5) * 70, y: (r() - 0.5) * 50, rotation: (r() - 0.5) * 7, duration: 0.5, ease: 'back.out(1.6)' }, tDir - 0.1 + i * 0.04);
+    const n = POS[(i + 1) % 4];
+    tl.to(t, { left: n[0] + 'px', top: n[1] + 'px', rotation: (r() - 0.5) * 5, duration: 0.6, ease: 'expo.inOut' }, tNot - 0.1 + i * 0.04);
+    tl.to(t, { left: POS[i][0] + 'px', top: POS[i][1] + 'px', x: 0, y: 0, rotation: 0, duration: 0.6, ease: 'power3.inOut' }, tPre + 0.35 + i * 0.04);
+  });
+
+  /* ---- "Clean and corporate": crisp expansion ---- */
+  const others = (k) => allT.filter((t) => t !== k);
+  tl.set(slate.t, { zIndex: 5 }, tClean - 0.05);
+  tl.to(slate.t, { left: '260px', top: '150px', width: '1400px', height: '800px', duration: 0.5, ease: 'power1.inOut' }, tClean - 0.05);
+  tl.to(slate.title, { fontSize: '96px', bottom: '80px', left: '72px', duration: 0.5, ease: 'power1.inOut' }, tClean - 0.05);
+  tl.to(slate.label, { fontSize: '26px', left: '72px', top: '64px', duration: 0.5, ease: 'power1.inOut' }, tClean - 0.05);
+  tl.to(others(slate.t), { opacity: 0.25, filter: 'blur(0px) brightness(.7)', duration: 0.4, ease: 'none' }, tClean - 0.05);
+  tl.to(bar, { scaleX: 1, duration: tCalm - tTrain - 0.4, ease: 'none' }, tTrain - 0.1);
+  const back1 = tCalm - 0.4;
+  tl.to(slate.t, { left: POS[0][0] + 'px', top: POS[0][1] + 'px', width: W + 'px', height: H + 'px', duration: 0.45, ease: 'power1.inOut' }, back1);
+  tl.to(slate.title, { fontSize: '50px', bottom: '48px', left: '44px', duration: 0.45, ease: 'power1.inOut' }, back1);
+  tl.to(slate.label, { fontSize: '20px', left: '44px', top: '40px', duration: 0.45, ease: 'power1.inOut' }, back1);
+  tl.to(bar, { opacity: 0, duration: 0.3 }, back1);
+  tl.set(slate.t, { zIndex: 1 }, back1 + 0.45);
+
+  /* ---- "Calm and cinematic": slow dissolve forward ---- */
+  tl.set(amber.t, { zIndex: 6 }, tCalm - 0.1);
+  tl.to(amber.t, { left: '310px', top: '170px', width: '1300px', height: '740px', duration: 1.6, ease: 'sine.inOut' }, tCalm - 0.1);
+  tl.to(amber.title, { fontSize: '88px', left: '80px', bottom: '110px', duration: 1.6, ease: 'sine.inOut' }, tCalm - 0.1);
+  tl.to(amber.label, { fontSize: '24px', left: '80px', top: '110px', duration: 1.6, ease: 'sine.inOut' }, tCalm - 0.1);
+  tl.to([lbTop, lbBot], { height: '62px', duration: 1.6, ease: 'sine.inOut' }, tCalm - 0.1);
+  tl.to(others(amber.t), { opacity: 0.2, filter: 'blur(5px) brightness(.6)', duration: 1.4, ease: 'sine.inOut' }, tCalm - 0.2);
+  tl.fromTo(amber.t, { filter: 'blur(0px) brightness(1)' }, { filter: 'blur(0px) brightness(1.15)', duration: 1.5, ease: 'sine.inOut', immediateRender: false }, tBrand);
+  const back2 = tBold - 0.5;
+  tl.to(amber.t, { left: POS[1][0] + 'px', top: POS[1][1] + 'px', width: W + 'px', height: H + 'px', filter: 'blur(0px) brightness(1)', duration: 0.42, ease: 'power2.inOut' }, back2);
+  tl.to(amber.title, { fontSize: '50px', left: '44px', bottom: '48px', duration: 0.42, ease: 'power2.inOut' }, back2);
+  tl.to(amber.label, { fontSize: '20px', left: '44px', top: '50px', duration: 0.42, ease: 'power2.inOut' }, back2);
+  tl.to([lbTop, lbBot], { height: '26px', duration: 0.42, ease: 'power2.inOut' }, back2);
+  tl.to(others(amber.t), { opacity: 1, filter: 'blur(0px) brightness(1)', duration: 0.4 }, back2);
+  tl.set(amber.t, { zIndex: 1 }, back2 + 0.42);
+
+  /* ---- teal stays quiet: a gentle glow while it waits ---- */
+  tl.to(teal.t, { boxShadow: '0 40px 80px rgba(0,0,0,.45), 0 0 60px rgba(43,179,163,.45)', duration: 1.2, ease: 'sine.inOut', yoyo: true, repeat: 1 }, back2 - 2.2);
+
+  /* ---- "Bold and energetic": punch to full frame, hold ---- */
+  tl.set(coral.t, { zIndex: 10 }, tBold - 0.08);
+  tl.to(coral.t, { left: '0px', top: '0px', width: '1920px', height: '1080px', borderRadius: '0px', duration: 0.38, ease: 'expo.out' }, tBold - 0.08);
+  tl.fromTo(coral.t, { rotation: 0 }, { rotation: -2.5, duration: 0.12, yoyo: true, repeat: 1, ease: 'power2.out', immediateRender: false }, tBold - 0.05);
+  tl.to(coral.title, { fontSize: '170px', left: '140px', bottom: '160px', duration: 0.45, ease: 'back.out(1.8)' }, tBold);
+  tl.to(coral.label, { fontSize: '30px', left: '146px', top: '150px', duration: 0.45, ease: 'back.out(1.8)' }, tBold);
+  tl.to(coral.t, { backgroundPosition: '452px 0px', duration: ctx.dur - tBold, ease: 'none' }, tBold);
+  tl.fromTo(flash, { opacity: 0 }, { opacity: 1, duration: 0.1, yoyo: true, repeat: 1, immediateRender: false }, tBold);
+  tl.to(coral.title, { x: 14, duration: 0.05, yoyo: true, repeat: 3, ease: 'none' }, tComp);
+  tl.fromTo(ring, { scale: 0.3, opacity: 0.9 }, { scale: 3.2, opacity: 0, duration: 0.9, ease: 'power2.out', immediateRender: false }, tAtt);
+  tl.fromTo(coral.title, { scale: 1 }, { scale: 1.06, duration: 0.16, yoyo: true, repeat: 1, ease: 'power2.out', immediateRender: false }, tFeed);
+  tl.to(cam, { scale: 1.06, duration: ctx.dur - tBold, ease: 'power1.inOut' }, tBold);
+});

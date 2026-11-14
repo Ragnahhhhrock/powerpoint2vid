@@ -1,0 +1,100 @@
+{
+  "title": "How to Choose a Video Style for Your Slide Deck (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "How to Choose a Video Style",
+      "bullets": [],
+      "notes": "The same deck can feel like a product launch, a quiet documentary or a punchy social clip. It all depends on how it moves.",
+      "minDuration": 9
+    },
+    {
+      "title": "Look and feel changes presentation, not message",
+      "bullets": [
+        "Framing",
+        "Motion",
+        "Reveals",
+        "Captions and texture"
+      ],
+      "notes": "Your content stays yours. The look changes the framing, the motion, how text arrives on screen, where captions sit, and the overall texture.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Match the direction to the deck",
+      "bullets": [
+        "Clean and corporate: training, lectures",
+        "Calm and cinematic: brand stories, research",
+        "Polished and modern: launches, pitches",
+        "Bold and energetic: social clips, promos"
+      ],
+      "notes": "These are directions, not presets. Clean and corporate suits training. Calm and cinematic suits brand stories. Bold and energetic competes for attention in a feed.",
+      "minDuration": 12,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Three questions narrow it down",
+      "bullets": [
+        "Where will people watch it?",
+        "What should people feel?",
+        "How much text is on your slides?"
+      ],
+      "notes": "Ask where people will watch, write one word for how they should feel, and check your text. Denser slides need a clean or calm direction.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "One deck, two directions",
+      "bullets": [
+        "Launch page: polished and modern",
+        "Social teaser: bold and energetic",
+        "\"Scheduling that fits around your team\"",
+        "\"Scheduling. Sorted.\""
+      ],
+      "notes": "On your launch page, the headline gets slow, confident movement. Cut to three slides for social, and it becomes Scheduling. Sorted. Same brand, two videos.",
+      "minDuration": 12,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Decide the direction, then see it",
+      "bullets": [
+        "Write speaker notes in your tone",
+        "Include captions for silent viewing",
+        "Make cut-down versions per channel"
+      ],
+      "notes": "On Pro, a.i. directs your video, shaping each scene to the tone you chose. Try Basic first, no subscription needed, at powerpoint2vid.com.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}

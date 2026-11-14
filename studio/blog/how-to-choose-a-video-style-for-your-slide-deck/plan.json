@@ -1,0 +1,906 @@
+{
+  "title": "How to Choose a Video Style for Your Slide Deck (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0E1220",
+      "ink": "#1B2133",
+      "paper": "#F6F3EE",
+      "slate": "#5B6B8C",
+      "amber": "#E8A33D",
+      "coral": "#F0604D",
+      "teal": "#2BB3A3"
+    },
+    "font": "Inter Display",
+    "motion": "Each scene borrows the motion of the style it names: measured ease-in-out drifts for calm moments, snappy overshoot cuts for energetic ones. The camera mostly holds, with slow push-ins on key words.",
+    "story": "We open dark and cinematic, move into bright paper scenes for the practical guidance, then split-screen dark versus light to show one deck becoming two videos. The video closes back on night with a warm amber call to action."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "The same deck can feel like a product launch, a quiet documentary, or a punchy social clip. It all depends on how it moves.",
+      "storyboard": "Night stage. A single slide card sits centre frame. On 'product launch' it glides in on a polished teal sweep. On 'quiet documentary' it softens into a slow amber vignette with film grain. On 'punchy social clip' it snaps with a coral zoom-punch. On 'how it moves' the card settles and the title 'How to Choose a Video Style' rises in 140px paper type beneath it. The original plain white title slide is rebuilt entirely.",
+      "minDuration": 9,
+      "slide": {
+        "title": "How to Choose a Video Style",
+        "text": "",
+        "notes": "The same deck can feel like a product launch, a quiet documentary or a punchy social clip. It all depends on how it moves.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 9.255,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 6.419,
+          "text": "The same deck can feel like a product launch, a quiet documentary, or a punchy social clip.",
+          "words": [
+            {
+              "w": "The",
+              "t": 0.8
+            },
+            {
+              "w": "same",
+              "t": 1.021
+            },
+            {
+              "w": "deck",
+              "t": 1.334
+            },
+            {
+              "w": "can",
+              "t": 1.659
+            },
+            {
+              "w": "feel",
+              "t": 1.857
+            },
+            {
+              "w": "like",
+              "t": 2.1
+            },
+            {
+              "w": "a",
+              "t": 2.274
+            },
+            {
+              "w": "product",
+              "t": 2.367
+            },
+            {
+              "w": "launch,",
+              "t": 2.75
+            },
+            {
+              "w": "a",
+              "t": 3.366
+            },
+            {
+              "w": "quiet",
+              "t": 3.517
+            },
+            {
+              "w": "documentary,",
+              "t": 3.865
+            },
+            {
+              "w": "or",
+              "t": 4.898
+            },
+            {
+              "w": "a",
+              "t": 5.096
+            },
+            {
+              "w": "punchy",
+              "t": 5.177
+            },
+            {
+              "w": "social",
+              "t": 5.607
+            },
+            {
+              "w": "clip.",
+              "t": 6.024
+            }
+          ]
+        },
+        {
+          "t": 6.663,
+          "end": 8.405,
+          "text": "It all depends on how it moves.",
+          "words": [
+            {
+              "w": "It",
+              "t": 6.663
+            },
+            {
+              "w": "all",
+              "t": 6.837
+            },
+            {
+              "w": "depends",
+              "t": 6.988
+            },
+            {
+              "w": "on",
+              "t": 7.406
+            },
+            {
+              "w": "how",
+              "t": 7.545
+            },
+            {
+              "w": "it",
+              "t": 7.708
+            },
+            {
+              "w": "moves.",
+              "t": 7.836
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.405
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Your content stays yours. The look changes the framing, the motion, how text arrives, where captions sit, and the overall texture.",
+      "storyboard": "Paper stage. The word 'message' sits locked in ink at the centre in 150px and never moves, our anchor. Around it the presentation changes beat by beat: on 'framing' crop marks tighten; on 'motion' a teal arc swings past; on 'how text arrives' letters cascade in; on 'captions' a caption bar slides under it; on 'texture' a grain overlay washes over. The camera holds still, so only the look changes. The bullet list is cut and rebuilt as these live demonstrations.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Look and feel changes presentation, not message",
+        "text": "Framing. Motion. Reveals. Captions and texture",
+        "notes": "Your content stays yours. The look changes the framing, the motion, how text arrives on screen, where captions sit, and the overall texture.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 10.247,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.28,
+          "text": "Your content stays yours.",
+          "words": [
+            {
+              "w": "Your",
+              "t": 0.55
+            },
+            {
+              "w": "content",
+              "t": 0.852
+            },
+            {
+              "w": "stays",
+              "t": 1.34
+            },
+            {
+              "w": "yours.",
+              "t": 1.723
+            }
+          ]
+        },
+        {
+          "t": 2.524,
+          "end": 9.397,
+          "text": "The look changes the framing, the motion, how text arrives, where captions sit, and the overall texture.",
+          "words": [
+            {
+              "w": "The",
+              "t": 2.524
+            },
+            {
+              "w": "look",
+              "t": 2.698
+            },
+            {
+              "w": "changes",
+              "t": 2.93
+            },
+            {
+              "w": "the",
+              "t": 3.395
+            },
+            {
+              "w": "framing,",
+              "t": 3.523
+            },
+            {
+              "w": "the",
+              "t": 4.161
+            },
+            {
+              "w": "motion,",
+              "t": 4.324
+            },
+            {
+              "w": "how",
+              "t": 5.125
+            },
+            {
+              "w": "text",
+              "t": 5.357
+            },
+            {
+              "w": "arrives,",
+              "t": 5.705
+            },
+            {
+              "w": "where",
+              "t": 6.46
+            },
+            {
+              "w": "captions",
+              "t": 6.762
+            },
+            {
+              "w": "sit,",
+              "t": 7.284
+            },
+            {
+              "w": "and",
+              "t": 7.865
+            },
+            {
+              "w": "the",
+              "t": 8.062
+            },
+            {
+              "w": "overall",
+              "t": 8.201
+            },
+            {
+              "w": "texture.",
+              "t": 8.642
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.397
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "These are directions, not presets. Clean and corporate suits training. Calm and cinematic suits brand stories. Bold and energetic competes for attention in a feed.",
+      "storyboard": "A four-quadrant grid on ink, each tile styled in its own direction. On 'directions, not presets' the tiles shuffle loosely to show they are not fixed. On 'clean and corporate' the slate tile labelled 'training, lectures' expands with crisp linear motion. On 'calm and cinematic' the amber tile labelled 'brand stories, research' dissolves forward slowly. 'Polished and modern: launches, pitches' sits as a quiet teal tile. On 'bold and energetic' the coral tile labelled 'social clips, promos' punches to full frame and holds.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Match the direction to the deck",
+        "text": "Clean and corporate: training, lectures. Calm and cinematic: brand stories, research. Polished and modern: launches, pitches. Bold and energetic: social clips, promos",
+        "notes": "These are directions, not presets. Clean and corporate suits training. Calm and cinematic suits brand stories. Bold and energetic competes for attention in a feed.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 12.673,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.802,
+          "text": "These are directions, not presets.",
+          "words": [
+            {
+              "w": "These",
+              "t": 0.55
+            },
+            {
+              "w": "are",
+              "t": 0.828
+            },
+            {
+              "w": "directions,",
+              "t": 0.933
+            },
+            {
+              "w": "not",
+              "t": 1.792
+            },
+            {
+              "w": "presets.",
+              "t": 2.013
+            }
+          ]
+        },
+        {
+          "t": 3.243,
+          "end": 5.101,
+          "text": "Clean and corporate suits training.",
+          "words": [
+            {
+              "w": "Clean",
+              "t": 3.243
+            },
+            {
+              "w": "and",
+              "t": 3.615
+            },
+            {
+              "w": "corporate",
+              "t": 3.777
+            },
+            {
+              "w": "suits",
+              "t": 4.195
+            },
+            {
+              "w": "training.",
+              "t": 4.509
+            }
+          ]
+        },
+        {
+          "t": 5.542,
+          "end": 8.259,
+          "text": "Calm and cinematic suits brand stories.",
+          "words": [
+            {
+              "w": "Calm",
+              "t": 5.542
+            },
+            {
+              "w": "and",
+              "t": 5.995
+            },
+            {
+              "w": "cinematic",
+              "t": 6.146
+            },
+            {
+              "w": "suits",
+              "t": 6.761
+            },
+            {
+              "w": "brand",
+              "t": 7.133
+            },
+            {
+              "w": "stories.",
+              "t": 7.551
+            }
+          ]
+        },
+        {
+          "t": 8.7,
+          "end": 11.823,
+          "text": "Bold and energetic competes for attention in a feed.",
+          "words": [
+            {
+              "w": "Bold",
+              "t": 8.7
+            },
+            {
+              "w": "and",
+              "t": 9.083
+            },
+            {
+              "w": "energetic",
+              "t": 9.222
+            },
+            {
+              "w": "competes",
+              "t": 9.919
+            },
+            {
+              "w": "for",
+              "t": 10.395
+            },
+            {
+              "w": "attention",
+              "t": 10.546
+            },
+            {
+              "w": "in",
+              "t": 11.068
+            },
+            {
+              "w": "a",
+              "t": 11.196
+            },
+            {
+              "w": "feed.",
+              "t": 11.289
+            }
+          ]
+        }
+      ],
+      "speechEnd": 11.823
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Three questions narrow it down. Where will people watch? What one word should they feel? And how much text is on your slides? Denser slides need a clean or calm direction.",
+      "storyboard": "Paper stage with a funnel drawn in slate lines. On 'where will people watch' icons for a phone, a laptop and a big screen drop into the top. On 'feel' a single handwritten word box appears. On 'how much text' a dense slide thumbnail falls in. The funnel narrows, and on 'clean or calm' two tiles, slate and amber, emerge at the bottom in 110px type. The camera pushes slowly down the funnel.",
+      "minDuration": 12,
+      "slide": {
+        "title": "Three questions narrow it down",
+        "text": "Where will people watch it?. What should people feel?. How much text is on your slides?",
+        "notes": "Ask where people will watch, write one word for how they should feel, and check your text. Denser slides need a clean or calm direction.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "smoothup",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 13.021,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.384,
+          "text": "Three questions narrow it down.",
+          "words": [
+            {
+              "w": "Three",
+              "t": 0.55
+            },
+            {
+              "w": "questions",
+              "t": 0.886
+            },
+            {
+              "w": "narrow",
+              "t": 1.397
+            },
+            {
+              "w": "it",
+              "t": 1.711
+            },
+            {
+              "w": "down.",
+              "t": 1.827
+            }
+          ]
+        },
+        {
+          "t": 2.767,
+          "end": 4.091,
+          "text": "Where will people watch?",
+          "words": [
+            {
+              "w": "Where",
+              "t": 2.767
+            },
+            {
+              "w": "will",
+              "t": 3.046
+            },
+            {
+              "w": "people",
+              "t": 3.232
+            },
+            {
+              "w": "watch?",
+              "t": 3.545
+            }
+          ]
+        },
+        {
+          "t": 4.532,
+          "end": 6.32,
+          "text": "What one word should they feel?",
+          "words": [
+            {
+              "w": "What",
+              "t": 4.532
+            },
+            {
+              "w": "one",
+              "t": 4.822
+            },
+            {
+              "w": "word",
+              "t": 5.089
+            },
+            {
+              "w": "should",
+              "t": 5.414
+            },
+            {
+              "w": "they",
+              "t": 5.623
+            },
+            {
+              "w": "feel?",
+              "t": 5.821
+            }
+          ]
+        },
+        {
+          "t": 6.564,
+          "end": 8.642,
+          "text": "And how much text is on your slides?",
+          "words": [
+            {
+              "w": "And",
+              "t": 6.564
+            },
+            {
+              "w": "how",
+              "t": 6.773
+            },
+            {
+              "w": "much",
+              "t": 6.924
+            },
+            {
+              "w": "text",
+              "t": 7.167
+            },
+            {
+              "w": "is",
+              "t": 7.562
+            },
+            {
+              "w": "on",
+              "t": 7.701
+            },
+            {
+              "w": "your",
+              "t": 7.817
+            },
+            {
+              "w": "slides?",
+              "t": 7.98
+            }
+          ]
+        },
+        {
+          "t": 9.338,
+          "end": 12.171,
+          "text": "Denser slides need a clean or calm direction.",
+          "words": [
+            {
+              "w": "Denser",
+              "t": 9.338
+            },
+            {
+              "w": "slides",
+              "t": 9.756
+            },
+            {
+              "w": "need",
+              "t": 10.221
+            },
+            {
+              "w": "a",
+              "t": 10.406
+            },
+            {
+              "w": "clean",
+              "t": 10.488
+            },
+            {
+              "w": "or",
+              "t": 10.848
+            },
+            {
+              "w": "calm",
+              "t": 11.08
+            },
+            {
+              "w": "direction.",
+              "t": 11.417
+            }
+          ]
+        }
+      ],
+      "speechEnd": 12.171
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "On your launch page, the headline gets slow, confident movement. Cut to three slides for social, and it becomes: Scheduling. Sorted. Same brand, two videos.",
+      "storyboard": "Split screen. Left, night with teal: 'Scheduling that fits around your team' eases in over two seconds at 96px on 'slow, confident movement'. On 'cut to three slides' a hard cut sends the right half to coral, where 'Scheduling.' then 'Sorted.' slam in at 160px on the beat. On 'same brand, two videos' both halves pull back to sit side by side as two phone and browser frames. The bullet labels are cut and replaced by these two rebuilt videos.",
+      "minDuration": 11,
+      "slide": {
+        "title": "One deck, two directions",
+        "text": "Launch page: polished and modern. Social teaser: bold and energetic. \"Scheduling that fits around your team\". \"Scheduling. Sorted.\"",
+        "notes": "On your launch page, the headline gets slow, confident movement. Cut to three slides for social, and it becomes Scheduling. Sorted. Same brand, two videos.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "wipeleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 12.256,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.347,
+          "text": "On your launch page, the headline gets slow, confident movement.",
+          "words": [
+            {
+              "w": "On",
+              "t": 0.55
+            },
+            {
+              "w": "your",
+              "t": 0.736
+            },
+            {
+              "w": "launch",
+              "t": 0.899
+            },
+            {
+              "w": "page,",
+              "t": 1.212
+            },
+            {
+              "w": "the",
+              "t": 1.758
+            },
+            {
+              "w": "headline",
+              "t": 1.932
+            },
+            {
+              "w": "gets",
+              "t": 2.338
+            },
+            {
+              "w": "slow,",
+              "t": 2.571
+            },
+            {
+              "w": "confident",
+              "t": 3.197
+            },
+            {
+              "w": "movement.",
+              "t": 3.708
+            }
+          ]
+        },
+        {
+          "t": 4.951,
+          "end": 8.817,
+          "text": "Cut to three slides for social, and it becomes: Scheduling.",
+          "words": [
+            {
+              "w": "Cut",
+              "t": 4.951
+            },
+            {
+              "w": "to",
+              "t": 5.241
+            },
+            {
+              "w": "three",
+              "t": 5.38
+            },
+            {
+              "w": "slides",
+              "t": 5.659
+            },
+            {
+              "w": "for",
+              "t": 6.088
+            },
+            {
+              "w": "social,",
+              "t": 6.251
+            },
+            {
+              "w": "and",
+              "t": 6.843
+            },
+            {
+              "w": "it",
+              "t": 7.029
+            },
+            {
+              "w": "becomes:",
+              "t": 7.133
+            },
+            {
+              "w": "Scheduling.",
+              "t": 8.085
+            }
+          ]
+        },
+        {
+          "t": 8.968,
+          "end": 9.583,
+          "text": "Sorted.",
+          "words": [
+            {
+              "w": "Sorted.",
+              "t": 8.968
+            }
+          ]
+        },
+        {
+          "t": 9.757,
+          "end": 11.406,
+          "text": "Same brand, two videos.",
+          "words": [
+            {
+              "w": "Same",
+              "t": 9.757
+            },
+            {
+              "w": "brand,",
+              "t": 10.082
+            },
+            {
+              "w": "two",
+              "t": 10.523
+            },
+            {
+              "w": "videos.",
+              "t": 10.756
+            }
+          ]
+        }
+      ],
+      "speechEnd": 11.406
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "Decide the direction, then see it. On Pro, AI directs your video, shaping each scene to your tone. Try Basic first, no subscription needed, at powerpoint2vid.com.",
+      "storyboard": "Night stage. Three short tips glow briefly as small paper chips at the top: 'speaker notes in your tone', 'captions', 'cut-downs'. On 'AI directs your video' a slide card morphs through teal, amber and coral styles. On 'Try Basic first' the card dissolves and 'powerpoint2vid.com' lands in 130px amber at centre, with 'No subscription needed' beneath in paper. The URL holds for two seconds.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Decide the direction, then see it",
+        "text": "Write speaker notes in your tone. Include captions for silent viewing. Make cut-down versions per channel",
+        "notes": "On Pro, a.i. directs your video, shaping each scene to the tone you chose. Try Basic first, no subscription needed, at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 14.627,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.745,
+          "text": "Decide the direction, then see it.",
+          "words": [
+            {
+              "w": "Decide",
+              "t": 0.55
+            },
+            {
+              "w": "the",
+              "t": 1.015
+            },
+            {
+              "w": "direction,",
+              "t": 1.131
+            },
+            {
+              "w": "then",
+              "t": 1.955
+            },
+            {
+              "w": "see",
+              "t": 2.222
+            },
+            {
+              "w": "it.",
+              "t": 2.466
+            }
+          ]
+        },
+        {
+          "t": 3.07,
+          "end": 7.284,
+          "text": "On Pro, AI directs your video, shaping each scene to your tone.",
+          "words": [
+            {
+              "w": "On",
+              "t": 3.07
+            },
+            {
+              "w": "Pro,",
+              "t": 3.325
+            },
+            {
+              "w": "AI",
+              "t": 3.755
+            },
+            {
+              "w": "directs",
+              "t": 4.184
+            },
+            {
+              "w": "your",
+              "t": 4.614
+            },
+            {
+              "w": "video,",
+              "t": 4.765
+            },
+            {
+              "w": "shaping",
+              "t": 5.357
+            },
+            {
+              "w": "each",
+              "t": 5.81
+            },
+            {
+              "w": "scene",
+              "t": 6.053
+            },
+            {
+              "w": "to",
+              "t": 6.402
+            },
+            {
+              "w": "your",
+              "t": 6.529
+            },
+            {
+              "w": "tone.",
+              "t": 6.715
+            }
+          ]
+        },
+        {
+          "t": 7.795,
+          "end": 12.427,
+          "text": "Try Basic first, no subscription needed, at powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 7.795
+            },
+            {
+              "w": "Basic",
+              "t": 8.132
+            },
+            {
+              "w": "first,",
+              "t": 8.55
+            },
+            {
+              "w": "no",
+              "t": 9.223
+            },
+            {
+              "w": "subscription",
+              "t": 9.42
+            },
+            {
+              "w": "needed,",
+              "t": 10.036
+            },
+            {
+              "w": "at",
+              "t": 10.581
+            },
+            {
+              "w": "PowerPoint",
+              "t": 10.779
+            },
+            {
+              "w": "to",
+              "t": 11.336
+            },
+            {
+              "w": "vid",
+              "t": 11.464
+            },
+            {
+              "w": "dot",
+              "t": 11.684
+            },
+            {
+              "w": "com.",
+              "t": 11.94
+            }
+          ]
+        }
+      ],
+      "speechEnd": 12.427
+    }
+  ],
+  "voiceProvider": "elevenlabs"
+}

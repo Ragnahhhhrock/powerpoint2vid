@@ -1,0 +1,116 @@
+/* Scene 4 — "On your launch page, the headline gets slow, confident movement. Cut to three slides for social,
+ * and it becomes: Scheduling. Sorted. Same brand, two videos."
+ * Storyboard: Night/teal launch page fills the frame. A faint nav arrives on "launch page". Then
+ * 'Scheduling that fits around your team' eases in over ~2s on "slow, confident movement" at 96px,
+ * under a slow push-in. On "Cut" a hard cut throws the right half to coral. Three story-style progress
+ * segments pop on "three slides". "Scheduling." slams in on its word, then "Sorted." on the beat.
+ * On "Same brand, two videos" both halves pull back into a browser frame and a phone frame side by side.
+ * The bullet labels are replaced by these two rebuilt videos. */
+P2V.scene((ctx) => {
+  const { tl, el, stage, at, dur } = ctx;
+  const launch = at(0, 'launch'), headline = at(0, 'headline'), slow = at(0, 'slow,');
+  const cut = at(1, 'Cut'), three = at(1, 'three'), social = at(1, 'social,'), sch = at(1, 'Scheduling.');
+  const sorted = at(2, 'Sorted.'), same = at(3, 'Same');
+  const MONO = '600 20px/1 ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(60% 60% at 50% 50%, #1a2034 0%, var(--night) 75%)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '50% 50%' });
+
+  /* ---------- LEFT: launch page ---------- */
+  const L = el('div', 'abs', cam, { left: '0px', top: '0px', width: '1920px', height: '1080px', overflow: 'hidden', borderRadius: '0px',
+    background: 'radial-gradient(55% 65% at 28% 55%, rgba(43,179,163,.24), transparent 70%), radial-gradient(40% 40% at 90% 10%, rgba(91,107,140,.18), transparent 70%), var(--night)' });
+  const chrome = el('div', 'abs', L, { left: 0, top: 0, right: 0, height: '40px', background: '#1B2133', display: 'flex', alignItems: 'center', gap: '10px', paddingLeft: '18px', opacity: 0 });
+  ['#F0604D', '#E8A33D', '#2BB3A3'].forEach((c) => el('div', '', chrome, { width: '12px', height: '12px', borderRadius: '50%', background: c }));
+  const nav = el('div', 'abs', L, { left: '120px', top: '90px', display: 'flex', alignItems: 'center', gap: '22px', transformOrigin: '0 0' });
+  el('div', '', nav, { width: '30px', height: '30px', borderRadius: '9px', background: 'var(--teal)', boxShadow: '0 0 24px rgba(43,179,163,.6)' });
+  [90, 70, 80].forEach((w) => el('div', '', nav, { width: w + 'px', height: '10px', borderRadius: '5px', background: 'rgba(246,243,238,.18)' }));
+  const tagL = el('div', 'abs', L, { left: '122px', top: '280px', font: MONO, letterSpacing: '.16em', color: 'var(--teal)' });
+  tagL.textContent = 'LAUNCH PAGE';
+  const hwrap = el('div', 'abs', L, { left: '120px', top: '340px', transformOrigin: '0 0' });
+  const lines = ['Scheduling', 'that fits around', 'your team.'].map((t, i) =>
+    Object.assign(el('div', '', hwrap, { font: '800 96px/1.06 Inter Display, Inter', letterSpacing: '-.04em', color: i === 2 ? 'var(--teal)' : 'var(--paper)', whiteSpace: 'nowrap',
+      textShadow: i === 2 ? '0 0 40px rgba(43,179,163,.45)' : 'none' }), { textContent: t }));
+  const rule = el('div', '', hwrap, { width: '140px', height: '6px', borderRadius: '3px', background: 'var(--teal)', marginTop: '40px', transformOrigin: '0 50%' });
+
+  /* ---------- RIGHT: social teaser ---------- */
+  const R = el('div', 'abs', cam, { left: '960px', top: '0px', width: '960px', height: '1080px', overflow: 'hidden', borderRadius: '0px', opacity: 0,
+    background: 'radial-gradient(70% 60% at 50% 45%, #ff7a63 0%, var(--coral) 60%, #c94431 100%)',
+    display: 'flex', alignItems: 'center', justifyContent: 'center' });
+  const bars = el('div', 'abs', R, { left: '60px', right: '60px', top: '56px', height: '8px', display: 'flex', gap: '10px' });
+  const segs = [0, 1, 2].map(() => {
+    const s = el('div', '', bars, { flex: '1', height: '8px', borderRadius: '4px', background: 'rgba(255,255,255,.35)', overflow: 'hidden', transformOrigin: '50% 50%' });
+    const f = el('div', '', s, { width: '100%', height: '100%', background: 'var(--paper)', transformOrigin: '0 50%' });
+    return { s, f };
+  });
+  const tagR = el('div', 'abs', R, { left: '62px', top: '96px', font: MONO, letterSpacing: '.16em', color: 'var(--night)', opacity: 0 });
+  tagR.textContent = 'SOCIAL · 3 SLIDES';
+  const tb = el('div', '', R, { display: 'flex', flexDirection: 'column', alignItems: 'flex-start', transformOrigin: '50% 50%' });
+  const w1 = el('div', '', tb, { font: '900 128px/0.98 Inter Display, Inter', letterSpacing: '-.05em', color: 'var(--paper)', whiteSpace: 'nowrap', transformOrigin: '30% 60%', textShadow: '0 10px 40px rgba(120,20,10,.35)' });
+  w1.textContent = 'Scheduling.';
+  const w2 = el('div', '', tb, { font: '900 128px/0.98 Inter Display, Inter', letterSpacing: '-.05em', color: 'var(--night)', whiteSpace: 'nowrap', transformOrigin: '30% 60%' });
+  w2.textContent = 'Sorted.';
+  const notch = el('div', 'abs', R, { left: '50%', top: '16px', width: '110px', height: '28px', marginLeft: '-55px', borderRadius: '14px', background: '#05070d', opacity: 0 });
+  const flash = el('div', 'abs', cam, { left: '960px', top: 0, width: '960px', height: '1080px', background: '#fff', opacity: 0, mixBlendMode: 'screen' });
+
+  /* labels under the final frames */
+  const labA = el('div', 'abs', stage, { left: '240px', top: '836px', font: MONO, letterSpacing: '.16em', color: 'var(--teal)', opacity: 0 });
+  labA.textContent = 'LAUNCH PAGE · 16:9';
+  const labB = el('div', 'abs', stage, { left: '1240px', top: '948px', width: '440px', textAlign: 'center', font: MONO, letterSpacing: '.16em', color: 'var(--coral)', opacity: 0 });
+  labB.textContent = 'SOCIAL · 9:16';
+
+  ctx.fx.vignette({ strength: 0.45 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  /* ---------- timeline ---------- */
+  gsap.set(L, { filter: 'brightness(1)', boxShadow: '0 0 0 0px rgba(255,255,255,0), 0 0px 0px rgba(0,0,0,0)' });
+  gsap.set(R, { boxShadow: '0 0 0 0px #05070d, 0 0px 0px rgba(0,0,0,0)' });
+  gsap.set(lines, { filter: 'blur(0px)' });
+  gsap.set([w1, w2], { opacity: 0 });
+  gsap.set(segs.map((s) => s.f), { scaleX: 0 });
+  gsap.set(segs.map((s) => s.s), { scaleY: 0 });
+
+  // opening: the launch page breathes in
+  tl.from(tagL, { opacity: 0, x: -20, duration: 0.8, ease: 'power2.inOut' }, 0.1);
+  tl.from(nav.children, { opacity: 0, y: -14, duration: 0.8, stagger: 0.08, ease: 'power2.inOut' }, Math.max(0.2, launch - 0.2));
+  // headline: slow, confident, two seconds
+  tl.fromTo(lines, { opacity: 0, y: 46, filter: 'blur(10px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 2.0, stagger: 0.3, ease: 'power2.inOut' }, headline - 0.1);
+  tl.from(rule, { scaleX: 0, duration: 1.6, ease: 'power2.inOut' }, slow + 0.2);
+  tl.to(hwrap, { scale: 1.04, duration: cut - headline, ease: 'sine.inOut' }, headline);
+
+  // hard cut to coral
+  tl.set(L, { width: '960px', filter: 'brightness(.72)' }, cut);
+  tl.set(R, { opacity: 1 }, cut);
+  tl.fromTo(flash, { opacity: 0.7 }, { opacity: 0, duration: 0.25, ease: 'power2.out', immediateRender: false }, cut);
+  tl.fromTo(R, { x: 30 }, { x: 0, duration: 0.3, ease: 'back.out(2)', immediateRender: false }, cut);
+  tl.to(segs.map((s) => s.s), { scaleY: 1, duration: 0.35, stagger: 0.08, ease: 'back.out(2.5)' }, three - 0.05);
+  tl.to(tagR, { opacity: 0.75, duration: 0.2 }, social - 0.1);
+  tl.from(tagR, { x: -20, duration: 0.35, ease: 'back.out(2)' }, social - 0.1);
+  tl.to(segs[0].f, { scaleX: 1, duration: sch - three, ease: 'none' }, three);
+  tl.to(segs[1].f, { scaleX: 1, duration: sorted - sch, ease: 'none' }, sch);
+  tl.to(segs[2].f, { scaleX: 1, duration: same - sorted, ease: 'none' }, sorted);
+
+  // slams
+  [[w1, sch], [w2, sorted]].forEach(([w, t]) => {
+    tl.fromTo(w, { opacity: 0, scale: 2.3, rotation: -3 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.22, ease: 'power4.in', immediateRender: false }, t - 0.2);
+    tl.fromTo(tb, { y: 0 }, { y: 10, duration: 0.06, yoyo: true, repeat: 1, ease: 'power1.out', immediateRender: false }, t + 0.02);
+    tl.fromTo(flash, { opacity: 0.35 }, { opacity: 0, duration: 0.2, immediateRender: false }, t + 0.02);
+  });
+
+  // pull back: browser + phone
+  const PB = 0.95, pe = 'expo.inOut';
+  tl.to(L, { left: '240px', top: '240px', width: '900px', height: '560px', borderRadius: '18px', filter: 'brightness(1)',
+    boxShadow: '0 0 0 2px rgba(255,255,255,.12), 0 40px 100px rgba(0,0,0,.6)', duration: PB, ease: pe }, same - 0.15);
+  tl.to(hwrap, { left: '70px', top: '160px', scale: 0.62, duration: PB, ease: pe }, same - 0.15);
+  tl.to(nav, { left: '70px', top: '66px', scale: 0.8, duration: PB, ease: pe }, same - 0.15);
+  tl.to(tagL, { left: '72px', top: '124px', fontSize: '15px', duration: PB, ease: pe }, same - 0.15);
+  tl.to(chrome, { opacity: 1, duration: 0.4 }, same + 0.3);
+  tl.to(R, { left: '1240px', top: '130px', width: '440px', height: '780px', borderRadius: '48px',
+    boxShadow: '0 0 0 12px #05070d, 0 40px 100px rgba(0,0,0,.6)', duration: PB, ease: pe }, same - 0.1);
+  tl.to(tb, { scale: 0.5, duration: PB, ease: pe }, same - 0.1);
+  tl.to(bars, { top: '58px', left: '28px', right: '28px', duration: PB, ease: pe }, same - 0.1);
+  tl.to(tagR, { left: '30px', top: '84px', fontSize: '14px', duration: PB, ease: pe }, same - 0.1);
+  tl.to(notch, { opacity: 1, duration: 0.3 }, same + 0.5);
+  tl.fromTo(labA, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: 'back.out(1.6)', immediateRender: false }, at(3, 'two') - 0.1);
+  tl.fromTo(labB, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: 'back.out(1.6)', immediateRender: false }, at(3, 'videos.') - 0.1);
+  tl.to(cam, { scale: 1.03, duration: Math.max(0.5, dur - (same + 0.8)), ease: 'power1.inOut' }, same + 0.8);
+});
