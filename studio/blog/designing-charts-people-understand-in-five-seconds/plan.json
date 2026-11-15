@@ -1,0 +1,1176 @@
+{
+  "title": "Designing Charts People Understand in Five Seconds (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0E1420",
+      "ink": "#1A2233",
+      "paper": "#F6F4EF",
+      "grey": "#A3A9B3",
+      "signal": "#FF5A3C",
+      "teal": "#2BB3A3",
+      "mist": "#DDE1E7"
+    },
+    "font": "Inter Display",
+    "motion": "Calm, deliberate pacing with soft ease-out landings; elements build in on the exact word, then hold still. Camera makes slow push-ins toward the one highlighted element, never wandering.",
+    "story": "A countdown from a five-second stopwatch to a clean, self-explaining chart: we move from dark, noisy problem scenes into bright paper stages as each rule strips clutter away. Grey dominates every scene so the single signal-orange accent always reads as 'the point'."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "A chart gets about five seconds to do its job. In a video, you can't point at the bar that matters, so the chart has to explain itself.",
+      "storyboard": "Night stage. A thin signal-orange ring draws itself like a stopwatch as the narrator says 'five seconds', with a big '5' in Inter Display at 160px counting down to 4. On 'point at the bar' a grey bar chart fades in and a ghostly cursor hand reaches toward it, then dissolves away, unable to touch it. On 'explain itself' one bar turns signal orange and the camera pushes in slightly. The original title 'One chart, one message, five seconds' is rebuilt as a small caption under the ring; the overlapping text is cut.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Charts People Understand in Five Seconds",
+        "text": "One chart, one message, five seconds",
+        "notes": "A chart on a slide has a few seconds to do its job. In a video, you can't point at the bar that matters, so the chart must explain itself.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 10,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.586,
+          "text": "A chart gets about five seconds to do its job.",
+          "words": [
+            {
+              "w": "A",
+              "t": 0.8
+            },
+            {
+              "w": "chart",
+              "t": 0.974
+            },
+            {
+              "w": "gets",
+              "t": 1.334
+            },
+            {
+              "w": "about",
+              "t": 1.555
+            },
+            {
+              "w": "five",
+              "t": 1.833
+            },
+            {
+              "w": "seconds",
+              "t": 2.158
+            },
+            {
+              "w": "to",
+              "t": 2.6
+            },
+            {
+              "w": "do",
+              "t": 2.739
+            },
+            {
+              "w": "its",
+              "t": 2.89
+            },
+            {
+              "w": "job.",
+              "t": 3.076
+            }
+          ]
+        },
+        {
+          "t": 4.028,
+          "end": 8.927,
+          "text": "In a video, you can't point at the bar that matters, so the chart has to explain itself.",
+          "words": [
+            {
+              "w": "In",
+              "t": 4.028
+            },
+            {
+              "w": "a",
+              "t": 4.213
+            },
+            {
+              "w": "video,",
+              "t": 4.283
+            },
+            {
+              "w": "you",
+              "t": 4.817
+            },
+            {
+              "w": "can't",
+              "t": 4.968
+            },
+            {
+              "w": "point",
+              "t": 5.223
+            },
+            {
+              "w": "at",
+              "t": 5.49
+            },
+            {
+              "w": "the",
+              "t": 5.595
+            },
+            {
+              "w": "bar",
+              "t": 5.711
+            },
+            {
+              "w": "that",
+              "t": 5.978
+            },
+            {
+              "w": "matters,",
+              "t": 6.164
+            },
+            {
+              "w": "so",
+              "t": 6.849
+            },
+            {
+              "w": "the",
+              "t": 7.035
+            },
+            {
+              "w": "chart",
+              "t": 7.151
+            },
+            {
+              "w": "has",
+              "t": 7.511
+            },
+            {
+              "w": "to",
+              "t": 7.72
+            },
+            {
+              "w": "explain",
+              "t": 7.859
+            },
+            {
+              "w": "itself.",
+              "t": 8.3
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.927
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Before you open the chart tool, write the one sentence you want people to remember. That sentence decides the chart type, what to highlight, and what to cut.",
+      "storyboard": "Fade to a paper stage with lots of white space. A blinking cursor types 'Renewals rose every quarter after we changed onboarding' at 90px in ink on 'write the one sentence'. On 'chart type' a faint line chart sketches itself underneath; on 'highlight' the word 'rose' turns signal orange; on 'cut' the two other example sentences from the slide slide in grey and are crossed out and dropped. Hold on the single sentence and its sketched line.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Start with the sentence, not the chart",
+        "text": "Renewals rose every quarter after we changed onboarding. Support tickets fell by about half in the first month. Region B is now our largest market",
+        "notes": "Before you open the chart tool, write the one sentence you want people to remember. That sentence decides the chart type, what to highlight and what to cut.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 10.846,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.776,
+          "text": "Before you open the chart tool, write the one sentence you want people to remember.",
+          "words": [
+            {
+              "w": "Before",
+              "t": 0.55
+            },
+            {
+              "w": "you",
+              "t": 0.921
+            },
+            {
+              "w": "open",
+              "t": 1.095
+            },
+            {
+              "w": "the",
+              "t": 1.363
+            },
+            {
+              "w": "chart",
+              "t": 1.467
+            },
+            {
+              "w": "tool,",
+              "t": 1.792
+            },
+            {
+              "w": "write",
+              "t": 2.198
+            },
+            {
+              "w": "the",
+              "t": 2.512
+            },
+            {
+              "w": "one",
+              "t": 2.663
+            },
+            {
+              "w": "sentence",
+              "t": 2.895
+            },
+            {
+              "w": "you",
+              "t": 3.336
+            },
+            {
+              "w": "want",
+              "t": 3.476
+            },
+            {
+              "w": "people",
+              "t": 3.708
+            },
+            {
+              "w": "to",
+              "t": 4.01
+            },
+            {
+              "w": "remember.",
+              "t": 4.137
+            }
+          ]
+        },
+        {
+          "t": 5.217,
+          "end": 9.246,
+          "text": "That sentence decides the chart type, what to highlight, and what to cut.",
+          "words": [
+            {
+              "w": "That",
+              "t": 5.217
+            },
+            {
+              "w": "sentence",
+              "t": 5.495
+            },
+            {
+              "w": "decides",
+              "t": 5.971
+            },
+            {
+              "w": "the",
+              "t": 6.471
+            },
+            {
+              "w": "chart",
+              "t": 6.587
+            },
+            {
+              "w": "type,",
+              "t": 6.9
+            },
+            {
+              "w": "what",
+              "t": 7.423
+            },
+            {
+              "w": "to",
+              "t": 7.678
+            },
+            {
+              "w": "highlight,",
+              "t": 7.817
+            },
+            {
+              "w": "and",
+              "t": 8.293
+            },
+            {
+              "w": "what",
+              "t": 8.444
+            },
+            {
+              "w": "to",
+              "t": 8.63
+            },
+            {
+              "w": "cut.",
+              "t": 8.77
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.246
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "Match the chart to your point. Change over time is a line, a few items is a sorted bar, a ranking is horizontal bars, largest at top.",
+      "storyboard": "Mist stage split into a quiet grid of three tiles that build one by one. On 'line' a teal line draws left to right in the first tile; on 'sorted bar' grey bars shuffle into descending order; on 'largest at top' horizontal bars stack with the longest rising to the top. Each tile carries a two-word label only. The bullet list is cut and rebuilt as these three animated mini-charts; camera slowly drifts right across them.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Pick the chart that fits the point",
+        "text": "Change over time: line chart. Comparing a few items: sorted bar chart. Ranking: horizontal bar, largest at top. A single key number: the number itself",
+        "notes": "Match the chart to your point, and when in doubt, use a bar chart. Sometimes the best chart is no chart, just forty hours a month in large type.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 10.224,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.036,
+          "text": "Match the chart to your point.",
+          "words": [
+            {
+              "w": "Match",
+              "t": 0.55
+            },
+            {
+              "w": "the",
+              "t": 0.864
+            },
+            {
+              "w": "chart",
+              "t": 0.98
+            },
+            {
+              "w": "to",
+              "t": 1.27
+            },
+            {
+              "w": "your",
+              "t": 1.374
+            },
+            {
+              "w": "point.",
+              "t": 1.56
+            }
+          ]
+        },
+        {
+          "t": 2.28,
+          "end": 9.374,
+          "text": "Change over time is a line, a few items is a sorted bar, a ranking is horizontal bars, largest at top.",
+          "words": [
+            {
+              "w": "Change",
+              "t": 2.28
+            },
+            {
+              "w": "over",
+              "t": 2.675
+            },
+            {
+              "w": "time",
+              "t": 2.907
+            },
+            {
+              "w": "is",
+              "t": 3.244
+            },
+            {
+              "w": "a",
+              "t": 3.371
+            },
+            {
+              "w": "line,",
+              "t": 3.464
+            },
+            {
+              "w": "a",
+              "t": 4.149
+            },
+            {
+              "w": "few",
+              "t": 4.289
+            },
+            {
+              "w": "items",
+              "t": 4.509
+            },
+            {
+              "w": "is",
+              "t": 4.869
+            },
+            {
+              "w": "a",
+              "t": 4.997
+            },
+            {
+              "w": "sorted",
+              "t": 5.078
+            },
+            {
+              "w": "bar,",
+              "t": 5.473
+            },
+            {
+              "w": "a",
+              "t": 6.32
+            },
+            {
+              "w": "ranking",
+              "t": 6.483
+            },
+            {
+              "w": "is",
+              "t": 6.901
+            },
+            {
+              "w": "horizontal",
+              "t": 7.04
+            },
+            {
+              "w": "bars,",
+              "t": 7.644
+            },
+            {
+              "w": "largest",
+              "t": 8.236
+            },
+            {
+              "w": "at",
+              "t": 8.782
+            },
+            {
+              "w": "top.",
+              "t": 8.909
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.374
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "When in doubt, use a bar chart. And sometimes the best chart is no chart at all, just forty hours a month in large type.",
+      "storyboard": "Night stage. A small grey bar chart sits off-center on 'bar chart', then on 'no chart at all' the bars collapse and dissolve. On 'forty hours a month' a huge '40 hours/month' snaps in at 160px in paper white, with '40' in signal orange. Camera holds wide with generous negative space around the number for a full beat.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Grey everything, colour one thing",
+        "text": "Make every bar or line grey. Colour only the one that carries your message. Add a label beside the highlighted item",
+        "notes": "This is the biggest improvement you can make. The eye goes straight to the colour, and a direct label means people with colour vision deficiency get the message too.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 9,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.616,
+          "text": "When in doubt, use a bar chart.",
+          "words": [
+            {
+              "w": "When",
+              "t": 0.55
+            },
+            {
+              "w": "in",
+              "t": 0.817
+            },
+            {
+              "w": "doubt,",
+              "t": 0.968
+            },
+            {
+              "w": "use",
+              "t": 1.572
+            },
+            {
+              "w": "a",
+              "t": 1.804
+            },
+            {
+              "w": "bar",
+              "t": 1.873
+            },
+            {
+              "w": "chart.",
+              "t": 2.117
+            }
+          ]
+        },
+        {
+          "t": 3.127,
+          "end": 8.027,
+          "text": "And sometimes the best chart is no chart at all, just forty hours a month in large type.",
+          "words": [
+            {
+              "w": "And",
+              "t": 3.127
+            },
+            {
+              "w": "sometimes",
+              "t": 3.336
+            },
+            {
+              "w": "the",
+              "t": 3.882
+            },
+            {
+              "w": "best",
+              "t": 3.998
+            },
+            {
+              "w": "chart",
+              "t": 4.242
+            },
+            {
+              "w": "is",
+              "t": 4.578
+            },
+            {
+              "w": "no",
+              "t": 4.729
+            },
+            {
+              "w": "chart",
+              "t": 4.915
+            },
+            {
+              "w": "at",
+              "t": 5.205
+            },
+            {
+              "w": "all,",
+              "t": 5.345
+            },
+            {
+              "w": "just",
+              "t": 5.821
+            },
+            {
+              "w": "forty",
+              "t": 6.064
+            },
+            {
+              "w": "hours",
+              "t": 6.401
+            },
+            {
+              "w": "a",
+              "t": 6.68
+            },
+            {
+              "w": "month",
+              "t": 6.773
+            },
+            {
+              "w": "in",
+              "t": 7.063
+            },
+            {
+              "w": "large",
+              "t": 7.214
+            },
+            {
+              "w": "type.",
+              "t": 7.539
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.027
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Here's the biggest improvement you can make: grey everything, and colour only the one thing that carries your message. Then label it directly.",
+      "storyboard": "Paper stage. A rainbow bar chart of five quarters appears; on 'grey everything' every bar drains to grey in a left-to-right wave. On 'colour only the one thing' the last bar fills signal orange and the camera pushes in toward it. On 'label it directly' a small label 'Q4' writes itself right beside the bar. Headline 'Grey everything, colour one thing' sits top-left at 96px.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Cut clutter, state the takeaway",
+        "text": "Remove legends, gridlines and 3D effects. Before: Quarterly renewals FY26. After: Renewals rose every quarter after the new onboarding",
+        "notes": "Label directly and cut the clutter. Then let the headline say what the chart shows, not what it is. Read the headline, see the proof, test passed.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 10,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 6.344,
+          "text": "Here's the biggest improvement you can make: grey everything, and colour only the one thing that carries your message.",
+          "words": [
+            {
+              "w": "Here's",
+              "t": 0.55
+            },
+            {
+              "w": "the",
+              "t": 0.887
+            },
+            {
+              "w": "biggest",
+              "t": 0.991
+            },
+            {
+              "w": "improvement",
+              "t": 1.305
+            },
+            {
+              "w": "you",
+              "t": 1.816
+            },
+            {
+              "w": "can",
+              "t": 1.92
+            },
+            {
+              "w": "make:",
+              "t": 2.083
+            },
+            {
+              "w": "grey",
+              "t": 2.698
+            },
+            {
+              "w": "everything,",
+              "t": 3.035
+            },
+            {
+              "w": "and",
+              "t": 3.615
+            },
+            {
+              "w": "colour",
+              "t": 3.836
+            },
+            {
+              "w": "only",
+              "t": 4.207
+            },
+            {
+              "w": "the",
+              "t": 4.463
+            },
+            {
+              "w": "one",
+              "t": 4.614
+            },
+            {
+              "w": "thing",
+              "t": 4.834
+            },
+            {
+              "w": "that",
+              "t": 5.066
+            },
+            {
+              "w": "carries",
+              "t": 5.217
+            },
+            {
+              "w": "your",
+              "t": 5.566
+            },
+            {
+              "w": "message.",
+              "t": 5.74
+            }
+          ]
+        },
+        {
+          "t": 7.04,
+          "end": 8.433,
+          "text": "Then label it directly.",
+          "words": [
+            {
+              "w": "Then",
+              "t": 7.04
+            },
+            {
+              "w": "label",
+              "t": 7.307
+            },
+            {
+              "w": "it",
+              "t": 7.609
+            },
+            {
+              "w": "directly.",
+              "t": 7.725
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.433
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "The eye goes straight to the colour, and a direct label means people with colour vision deficiency get the message too.",
+      "storyboard": "Same chart held on ink stage, now framed as two side-by-side views. On 'straight to the colour' an eye-path line darts directly to the orange bar. On 'colour vision deficiency' the right view desaturates fully, the orange bar becoming grey too, yet the 'Q4' label still glows clearly beside it. Hold on both views with the label as the anchor.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Turn data slides into a clear video",
+        "text": "Say numbers the way people say them. Give each chart enough narration time. Pro: charts rebuilt as animated charts. Try Basic first, no subscription needed",
+        "notes": "Put the explanation in your speaker notes. On Pro, a.i. directs the video, rebuilding each chart so the highlight lands on its word. Try it at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "dissolve",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 8.083,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 6.483,
+          "text": "The eye goes straight to the colour, and a direct label means people with colour vision deficiency get the message too.",
+          "words": [
+            {
+              "w": "The",
+              "t": 0.55
+            },
+            {
+              "w": "eye",
+              "t": 0.748
+            },
+            {
+              "w": "goes",
+              "t": 0.98
+            },
+            {
+              "w": "straight",
+              "t": 1.189
+            },
+            {
+              "w": "to",
+              "t": 1.491
+            },
+            {
+              "w": "the",
+              "t": 1.595
+            },
+            {
+              "w": "colour,",
+              "t": 1.711
+            },
+            {
+              "w": "and",
+              "t": 2.164
+            },
+            {
+              "w": "a",
+              "t": 2.361
+            },
+            {
+              "w": "direct",
+              "t": 2.443
+            },
+            {
+              "w": "label",
+              "t": 2.803
+            },
+            {
+              "w": "means",
+              "t": 3.128
+            },
+            {
+              "w": "people",
+              "t": 3.406
+            },
+            {
+              "w": "with",
+              "t": 3.72
+            },
+            {
+              "w": "colour",
+              "t": 3.917
+            },
+            {
+              "w": "vision",
+              "t": 4.207
+            },
+            {
+              "w": "deficiency",
+              "t": 4.521
+            },
+            {
+              "w": "get",
+              "t": 5.287
+            },
+            {
+              "w": "the",
+              "t": 5.508
+            },
+            {
+              "w": "message",
+              "t": 5.624
+            },
+            {
+              "w": "too.",
+              "t": 6.018
+            }
+          ]
+        }
+      ],
+      "speechEnd": 6.483
+    },
+    {
+      "file": "scenes/scene-6.js",
+      "narration": "Now cut the clutter: legends, gridlines, 3D effects. Then let the headline say what the chart shows, not what it is.",
+      "storyboard": "Paper stage with a deliberately cluttered 3D bar chart, gridlines and a legend. On 'legends' the legend flies off; on 'gridlines' they wipe away; on '3D effects' the bars flatten into clean 2D grey with the final bar orange. On 'what the chart shows' the headline 'Quarterly renewals FY26' strikes through and is replaced at 96px by 'Renewals rose every quarter after the new onboarding'.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Cut clutter, state the takeaway",
+        "text": "Remove legends, gridlines and 3D effects. Before: Quarterly renewals FY26. After: Renewals rose every quarter after the new onboarding",
+        "notes": "Label directly and cut the clutter. Then let the headline say what the chart shows, not what it is. Read the headline, see the proof, test passed.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "wipeleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-6.wav",
+      "duration": 9.882,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.521,
+          "text": "Now cut the clutter: legends, gridlines, 3D effects.",
+          "words": [
+            {
+              "w": "Now",
+              "t": 0.55
+            },
+            {
+              "w": "cut",
+              "t": 0.805
+            },
+            {
+              "w": "the",
+              "t": 1.026
+            },
+            {
+              "w": "clutter:",
+              "t": 1.131
+            },
+            {
+              "w": "legends,",
+              "t": 1.92
+            },
+            {
+              "w": "gridlines,",
+              "t": 2.605
+            },
+            {
+              "w": "3D",
+              "t": 3.487
+            },
+            {
+              "w": "effects.",
+              "t": 3.894
+            }
+          ]
+        },
+        {
+          "t": 4.764,
+          "end": 8.282,
+          "text": "Then let the headline say what the chart shows, not what it is.",
+          "words": [
+            {
+              "w": "Then",
+              "t": 4.764
+            },
+            {
+              "w": "let",
+              "t": 4.997
+            },
+            {
+              "w": "the",
+              "t": 5.159
+            },
+            {
+              "w": "headline",
+              "t": 5.287
+            },
+            {
+              "w": "say",
+              "t": 5.775
+            },
+            {
+              "w": "what",
+              "t": 6.053
+            },
+            {
+              "w": "the",
+              "t": 6.204
+            },
+            {
+              "w": "chart",
+              "t": 6.309
+            },
+            {
+              "w": "shows,",
+              "t": 6.61
+            },
+            {
+              "w": "not",
+              "t": 7.342
+            },
+            {
+              "w": "what",
+              "t": 7.528
+            },
+            {
+              "w": "it",
+              "t": 7.725
+            },
+            {
+              "w": "is.",
+              "t": 7.864
+            }
+          ]
+        }
+      ],
+      "speechEnd": 8.282
+    },
+    {
+      "file": "scenes/scene-7.js",
+      "narration": "Read the headline, see the proof, test passed.",
+      "storyboard": "Camera pulls back to frame the finished chart and headline cleanly on paper. On 'read the headline' a soft highlight sweeps the headline; on 'see the proof' the rising bars pulse once in sequence; on 'test passed' a signal-orange check mark and a small stopwatch reading '5s' land in the corner. Hold the complete clean chart.",
+      "minDuration": 7,
+      "slide": {
+        "title": "Cut clutter, state the takeaway",
+        "text": "Remove legends, gridlines and 3D effects. Before: Quarterly renewals FY26. After: Renewals rose every quarter after the new onboarding",
+        "notes": "Label directly and cut the clutter. Then let the headline say what the chart shows, not what it is. Read the headline, see the proof, test passed.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "cut",
+        "duration": 0
+      },
+      "audio": "audio/scene-7.wav",
+      "duration": 4.971,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.371,
+          "text": "Read the headline, see the proof, test passed.",
+          "words": [
+            {
+              "w": "Read",
+              "t": 0.55
+            },
+            {
+              "w": "the",
+              "t": 0.817
+            },
+            {
+              "w": "headline,",
+              "t": 0.945
+            },
+            {
+              "w": "see",
+              "t": 1.537
+            },
+            {
+              "w": "the",
+              "t": 1.769
+            },
+            {
+              "w": "proof,",
+              "t": 1.897
+            },
+            {
+              "w": "test",
+              "t": 2.408
+            },
+            {
+              "w": "passed.",
+              "t": 2.802
+            }
+          ]
+        }
+      ],
+      "speechEnd": 3.371
+    },
+    {
+      "file": "scenes/scene-8.js",
+      "narration": "Put the explanation in your speaker notes. On Pro, AI rebuilds each chart so the highlight lands on its word. Try Basic first at powerpoint2vid.com, no subscription needed.",
+      "storyboard": "Night stage. A slide thumbnail with a notes panel slides up on 'speaker notes', and lines of text flow from the notes into a waveform. On 'rebuilds each chart' the static chart in the thumbnail morphs into an animated bar chart whose orange bar pops exactly on 'its word'. On 'powerpoint2vid.com' the URL lands centered at 110px in paper white with 'Try Basic first' above in signal orange and 'no subscription needed' beneath in grey. Hold the call to action for two seconds.",
+      "minDuration": 12,
+      "slide": {
+        "title": "Turn data slides into a clear video",
+        "text": "Say numbers the way people say them. Give each chart enough narration time. Pro: charts rebuilt as animated charts. Try Basic first, no subscription needed",
+        "notes": "Put the explanation in your speaker notes. On Pro, a.i. directs the video, rebuilding each chart so the highlight lands on its word. Try it at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-8.wav",
+      "duration": 14.105,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 2.605,
+          "text": "Put the explanation in your speaker notes.",
+          "words": [
+            {
+              "w": "Put",
+              "t": 0.55
+            },
+            {
+              "w": "the",
+              "t": 0.771
+            },
+            {
+              "w": "explanation",
+              "t": 0.922
+            },
+            {
+              "w": "in",
+              "t": 1.548
+            },
+            {
+              "w": "your",
+              "t": 1.665
+            },
+            {
+              "w": "speaker",
+              "t": 1.815
+            },
+            {
+              "w": "notes.",
+              "t": 2.187
+            }
+          ]
+        },
+        {
+          "t": 2.849,
+          "end": 6.924,
+          "text": "On Pro, AI rebuilds each chart so the highlight lands on its word.",
+          "words": [
+            {
+              "w": "On",
+              "t": 2.849
+            },
+            {
+              "w": "Pro,",
+              "t": 3.093
+            },
+            {
+              "w": "AI",
+              "t": 3.487
+            },
+            {
+              "w": "rebuilds",
+              "t": 3.894
+            },
+            {
+              "w": "each",
+              "t": 4.428
+            },
+            {
+              "w": "chart",
+              "t": 4.695
+            },
+            {
+              "w": "so",
+              "t": 5.089
+            },
+            {
+              "w": "the",
+              "t": 5.252
+            },
+            {
+              "w": "highlight",
+              "t": 5.391
+            },
+            {
+              "w": "lands",
+              "t": 5.821
+            },
+            {
+              "w": "on",
+              "t": 6.146
+            },
+            {
+              "w": "its",
+              "t": 6.262
+            },
+            {
+              "w": "word.",
+              "t": 6.436
+            }
+          ]
+        },
+        {
+          "t": 7.528,
+          "end": 11.905,
+          "text": "Try Basic first at powerpoint2vid.com, no subscription needed.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 7.528
+            },
+            {
+              "w": "Basic",
+              "t": 7.876
+            },
+            {
+              "w": "first",
+              "t": 8.305
+            },
+            {
+              "w": "at",
+              "t": 8.677
+            },
+            {
+              "w": "PowerPoint",
+              "t": 8.816
+            },
+            {
+              "w": "to",
+              "t": 9.397
+            },
+            {
+              "w": "vid",
+              "t": 9.559
+            },
+            {
+              "w": "dot",
+              "t": 9.78
+            },
+            {
+              "w": "com,",
+              "t": 10.024
+            },
+            {
+              "w": "no",
+              "t": 10.651
+            },
+            {
+              "w": "subscription",
+              "t": 10.836
+            },
+            {
+              "w": "needed.",
+              "t": 11.44
+            }
+          ]
+        }
+      ],
+      "speechEnd": 11.905
+    }
+  ],
+  "voiceProvider": "elevenlabs"
+}

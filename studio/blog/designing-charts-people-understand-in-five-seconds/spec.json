@@ -1,0 +1,101 @@
+{
+  "title": "Designing Charts People Understand in Five Seconds (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Charts People Understand in Five Seconds",
+      "bullets": [
+        "One chart, one message, five seconds"
+      ],
+      "notes": "A chart on a slide has a few seconds to do its job. In a video, you can't point at the bar that matters, so the chart must explain itself.",
+      "minDuration": 9
+    },
+    {
+      "title": "Start with the sentence, not the chart",
+      "bullets": [
+        "Renewals rose every quarter after we changed onboarding",
+        "Support tickets fell by about half in the first month",
+        "Region B is now our largest market"
+      ],
+      "notes": "Before you open the chart tool, write the one sentence you want people to remember. That sentence decides the chart type, what to highlight and what to cut.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Pick the chart that fits the point",
+      "bullets": [
+        "Change over time: line chart",
+        "Comparing a few items: sorted bar chart",
+        "Ranking: horizontal bar, largest at top",
+        "A single key number: the number itself"
+      ],
+      "notes": "Match the chart to your point, and when in doubt, use a bar chart. Sometimes the best chart is no chart, just forty hours a month in large type.",
+      "minDuration": 11,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Grey everything, colour one thing",
+      "bullets": [
+        "Make every bar or line grey",
+        "Colour only the one that carries your message",
+        "Add a label beside the highlighted item"
+      ],
+      "notes": "This is the biggest improvement you can make. The eye goes straight to the colour, and a direct label means people with colour vision deficiency get the message too.",
+      "minDuration": 10,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Cut clutter, state the takeaway",
+      "bullets": [
+        "Remove legends, gridlines and 3D effects",
+        "Before: Quarterly renewals FY26",
+        "After: Renewals rose every quarter after the new onboarding"
+      ],
+      "notes": "Label directly and cut the clutter. Then let the headline say what the chart shows, not what it is. Read the headline, see the proof, test passed.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Turn data slides into a clear video",
+      "bullets": [
+        "Say numbers the way people say them",
+        "Give each chart enough narration time",
+        "Pro: charts rebuilt as animated charts",
+        "Try Basic first, no subscription needed"
+      ],
+      "notes": "Put the explanation in your speaker notes. On Pro, a.i. directs the video, rebuilding each chart so the highlight lands on its word. Try it at powerpoint2vid.com.",
+      "minDuration": 12,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}
