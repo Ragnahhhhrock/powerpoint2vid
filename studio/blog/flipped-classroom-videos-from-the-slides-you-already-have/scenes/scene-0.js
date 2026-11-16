@@ -1,0 +1,114 @@
+/* Scene 0 — "Flipping your class? You don't need a studio. The lecture slides you already have can become
+ * short pre-class videos your students will actually watch."
+ * Storyboard: night stage. The deck's own near-empty title slide sits centre as a grey card. On "need a studio"
+ * a ghosted camera-and-light rig fades in beside it and is struck through in coral, then dissolves. On "slides"
+ * the card flips over and becomes an amber-glowing video frame with a play button. The card lifts and the headline
+ * "Flipped Classroom Videos / From Your Slides" rises beneath in paper white at 120px. A slow push-in settles
+ * on the play button as "actually watch" lands. */
+P2V.scene((ctx) => {
+  const { tl, el, stage, dur } = ctx;
+  const W = (i, w, f) => { const v = ctx.at(i, w); return (typeof v === 'number' && isFinite(v)) ? v : f; };
+  const tFlip = W(0, 'Flipping', 0.8), tNeed = W(1, 'need', 2.565), tStudio = W(1, 'studio.', 2.843);
+  const tSlides = W(2, 'slides', 4.446), tBecome = W(2, 'become', 5.769), tVideos = W(2, 'videos', 7.046);
+  const tActually = W(2, 'actually', 8.207), tWatch = W(2, 'watch.', 8.637);
+
+  const CX = 960, CW = 640, CH = 360, CL = CX - CW / 2, CT = 150, CY = CT + CH / 2;
+  const LIFT = 540 - CY;
+  const mono = '600 20px/1 ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(70% 60% at 50% 35%, #1d2538 0%, var(--night) 70%)';
+  const glow = el('div', 'abs', stage, { inset: 0, opacity: 0, background: 'radial-gradient(38% 34% at 50% 30%, rgba(242,165,65,.22), transparent 70%)' });
+  const drift = el('div', 'abs', stage, { inset: 0 });
+  const cam = el('div', 'abs', drift, { inset: 0, transformOrigin: `${CX}px ${CY}px` });
+  const group = el('div', 'abs', cam, { inset: 0 });
+  gsap.set(group, { y: LIFT });
+
+  /* labels */
+  const labA = el('div', 'abs', group, { left: CL + 'px', top: CT - 38 + 'px', font: mono, letterSpacing: '.14em', color: 'rgba(221,230,225,.55)' });
+  labA.textContent = 'SLIDE 1 · AS WRITTEN';
+  const labB = el('div', 'abs', group, { left: CL + 'px', top: CT - 38 + 'px', font: mono, letterSpacing: '.14em', color: 'var(--amber)', opacity: 0 });
+  labB.textContent = 'PRE-CLASS VIDEO';
+
+  /* front: the original slide, greyed */
+  const front = el('div', 'abs', group, { left: CL + 'px', top: CT + 'px', width: CW + 'px', height: CH + 'px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 40px 90px rgba(0,0,0,.55)', background: '#fff' });
+  const img = el('img', 'abs', front, { inset: 0, width: '100%', height: '100%' }); img.src = ctx.asset('slide-1.png');
+  gsap.set(front, { filter: 'grayscale(1) brightness(.62) contrast(.9)', transformPerspective: 1500 });
+
+  /* back: the video frame */
+  const back = el('div', 'abs', group, { left: CL + 'px', top: CT + 'px', width: CW + 'px', height: CH + 'px', borderRadius: '16px', overflow: 'hidden',
+    background: 'radial-gradient(80% 90% at 50% 40%, #2a3247 0%, var(--ink) 75%)', border: '2px solid rgba(242,165,65,.85)',
+    boxShadow: '0 0 70px rgba(242,165,65,.45), 0 40px 90px rgba(0,0,0,.55)' });
+  gsap.set(back, { transformPerspective: 1500, rotationY: -90, opacity: 0 });
+  const playRing = el('div', 'abs', back, { left: CW / 2 - 70 + 'px', top: CH / 2 - 86 + 'px', width: '140px', height: '140px', borderRadius: '50%',
+    background: 'var(--amber)', boxShadow: '0 0 60px rgba(242,165,65,.8)' });
+  playRing.innerHTML = '<svg class="abs" style="left:0;top:0" width="140" height="140"><path d="M56 42 L100 70 L56 98 Z" fill="#1E2433" stroke="#1E2433" stroke-width="6" stroke-linejoin="round"/></svg>';
+  const pulse = el('div', 'abs', back, { left: CW / 2 - 70 + 'px', top: CH / 2 - 86 + 'px', width: '140px', height: '140px', borderRadius: '50%', border: '4px solid var(--amber)', opacity: 0 });
+  const track = el('div', 'abs', back, { left: '32px', right: '32px', bottom: '34px', height: '6px', borderRadius: '3px', background: 'rgba(221,230,225,.18)' });
+  const fill = el('div', 'abs', track, { left: 0, top: 0, bottom: 0, width: '100%', borderRadius: '3px', background: 'var(--amber)', transformOrigin: '0 50%' });
+  gsap.set(fill, { scaleX: 0.02 });
+  const tc = el('div', 'abs', back, { left: '32px', bottom: '54px', font: '600 18px/1 ui-monospace, Menlo, monospace', letterSpacing: '.08em', color: 'rgba(221,230,225,.7)' });
+  const cc = el('div', 'abs', back, { right: '32px', bottom: '52px', font: '700 16px/1 ui-monospace, Menlo, monospace', letterSpacing: '.1em', color: 'var(--ink)', background: 'var(--chalk)', padding: '4px 8px', borderRadius: '4px' });
+  cc.textContent = 'CC';
+
+  /* ghosted studio rig, right of card */
+  const rig = el('div', 'abs', group, { left: '1340px', top: CT + 10 + 'px', width: '340px', height: '340px', opacity: 0 });
+  rig.innerHTML = `<svg width="340" height="340" fill="none" stroke="#DDE6E1" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="40" y="70" width="140" height="92" rx="14"/><path d="M180 98 L232 72 L232 160 L180 134"/><circle cx="110" cy="116" r="26"/>
+    <path d="M110 162 L110 210 M110 210 L64 300 M110 210 L156 300 M110 210 L110 300"/>
+    <path d="M262 40 L318 40 L306 92 L274 92 Z"/><path d="M290 92 L290 300 M290 300 L258 318 M290 300 L322 318"/></svg>`;
+  const strike = el('div', 'abs', group, { left: '1310px', top: CT - 10 + 'px', width: '400px', height: '380px' });
+  strike.innerHTML = '<svg width="400" height="380"><line id="sl" x1="20" y1="360" x2="380" y2="20" stroke="#E76F51" stroke-width="12" stroke-linecap="round" stroke-dasharray="500" stroke-dashoffset="500"/></svg>';
+  const sl = strike.querySelector('#sl');
+
+  /* headline */
+  const head = el('div', 'abs', cam, { left: '160px', width: '1600px', top: '600px', textAlign: 'center', font: '800 120px/1.04 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--paper)' });
+  const l1 = el('div', '', head, { overflow: 'hidden', paddingBottom: '8px' });
+  const l2 = el('div', '', head, { overflow: 'hidden', paddingBottom: '8px' });
+  const w1 = ctx.split(l1, 'Flipped Classroom Videos', 'word');
+  const w2 = ctx.split(l2, 'From Your Slides', 'word');
+  const last = w2[w2.length - 1]; last.style.color = 'var(--amber)';
+
+  ctx.fx.vignette({ strength: 0.55 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  const prog = { p: 0 };
+  ctx.onFrame(() => {
+    const s = Math.floor(prog.p * 300);
+    tc.textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+  });
+
+  /* ---- timeline ---- */
+  tl.fromTo(drift, { x: -10, y: 8 }, { x: 10, y: -8, duration: dur, ease: 'none' }, 0);
+  tl.from(front, { y: 40, opacity: 0, duration: 0.8 }, 0.05);
+  tl.from(labA, { opacity: 0, y: 10, duration: 0.6 }, 0.25);
+  tl.to(front, { rotationY: 14, duration: 0.35, ease: 'power2.out' }, tFlip);
+  tl.to(front, { rotationY: 0, duration: 0.7, ease: 'back.out(2)' }, tFlip + 0.35);
+
+  tl.fromTo(rig, { opacity: 0, scale: 0.92 }, { opacity: 0.4, scale: 1, duration: 0.5, ease: 'power2.out' }, tNeed - 0.3);
+  tl.to(sl, { strokeDashoffset: 0, duration: 0.32, ease: 'power3.in' }, tStudio);
+  tl.to(rig, { x: -6, duration: 0.06, yoyo: true, repeat: 3 }, tStudio + 0.32);
+  gsap.set([rig, strike], { filter: 'blur(0px)' });
+  tl.to([rig, strike], { opacity: 0, filter: 'blur(10px)', scale: 1.06, duration: 0.6, ease: 'power2.in' }, tStudio + 0.85);
+
+  tl.to(front, { rotationY: 90, duration: 0.35, ease: 'power2.in' }, tSlides - 0.1);
+  tl.set(front, { opacity: 0 }, tSlides + 0.25);
+  tl.set(back, { opacity: 1 }, tSlides + 0.25);
+  tl.to(back, { rotationY: 0, duration: 0.8, ease: 'back.out(1.6)' }, tSlides + 0.25);
+  tl.fromTo(playRing, { scale: 0.3 }, { scale: 1, duration: 0.7, ease: 'back.out(2)', immediateRender: false }, tSlides + 0.45);
+  tl.to(labA, { opacity: 0, y: -8, duration: 0.3 }, tSlides);
+  tl.fromTo(labB, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, immediateRender: false }, tSlides + 0.4);
+  tl.to(glow, { opacity: 1, duration: 1.2, ease: 'power2.out' }, tSlides + 0.3);
+  tl.to(prog, { p: 1, duration: dur - tSlides - 0.4, ease: 'none' }, tSlides + 0.4);
+  tl.to(fill, { scaleX: 0.85, duration: dur - tSlides - 0.4, ease: 'none' }, tSlides + 0.4);
+
+  tl.to(group, { y: 0, duration: 0.9, ease: 'expo.inOut' }, tBecome - 0.7);
+  tl.from(w1, { yPercent: 110, duration: 0.8, stagger: 0.08, ease: 'power3.out' }, tBecome - 0.5);
+  tl.from(w2, { yPercent: 110, duration: 0.8, stagger: 0.08, ease: 'power3.out' }, tBecome - 0.2);
+
+  tl.to(back, { boxShadow: '0 0 110px rgba(242,165,65,.7), 0 40px 90px rgba(0,0,0,.55)', duration: 0.5, yoyo: true, repeat: 1, ease: 'sine.inOut' }, tVideos);
+
+  tl.to(cam, { scale: 1.1, duration: dur - (tVideos + 0.3), ease: 'power2.inOut' }, tVideos + 0.3);
+  tl.to(playRing, { scale: 1.12, duration: 0.18, yoyo: true, repeat: 1, ease: 'power2.out' }, tActually);
+  tl.fromTo(pulse, { scale: 1, opacity: 0.9 }, { scale: 2, opacity: 0, duration: 1, ease: 'power2.out', immediateRender: false }, tActually);
+  tl.fromTo(pulse, { scale: 1, opacity: 0.7 }, { scale: 2, opacity: 0, duration: 1, ease: 'power2.out', immediateRender: false }, tWatch + 0.2);
+});

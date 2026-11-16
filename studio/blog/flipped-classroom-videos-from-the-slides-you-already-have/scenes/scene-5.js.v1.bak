@@ -1,0 +1,138 @@
+/* Scene 6 (final) — "Start with one week and make two or three short videos. Try Basic first, or let Pro's a.i.
+ * direct your deck into a produced explainer. Ordinary slides in, extraordinary video out at powerpoint2vid.com."
+ * Storyboard: Night stage. A term calendar appears and one week's column lights amber on "week". Three video
+ * tiles drop in on "two / three / videos". Two pills slide up side by side: teal Basic lands on "Basic", amber Pro
+ * on "Pro's" and glows on "A.I.". On "Ordinary slides in" a plain grey card enters from the left. On "extraordinary"
+ * it becomes a vibrant video frame, which exits right on "out". Final lockup: "powerpoint2vid.com" at 140px in
+ * paper white over a warm amber glow, held to the end. */
+P2V.scene((ctx) => {
+  const { tl, el, stage, dur } = ctx;
+  const W = (b, w) => ctx.at(b, w);
+  const tWeek = W(0, 'week'), tTwo = W(0, 'two'), tThree = W(0, 'three'), tVid = W(0, 'videos.');
+  const tBasic = W(1, 'Basic'), tPro = W(1, "Pro's"), tAI = W(1, 'A.I.'), tExpl = W(1, 'explainer.');
+  const tOrd = W(2, 'Ordinary'), tIn = W(2, 'in,'), tExtra = W(2, 'extraordinary'), tOut = W(2, 'out'), tPP = W(2, 'PowerPoint'), tCom = W(2, 'com.');
+  const MONO = '600 22px/1 ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(70% 60% at 50% 45%, #1c2438 0%, var(--night) 75%)';
+  const warm = el('div', 'abs', stage, { inset: 0, opacity: 0, background: 'radial-gradient(55% 50% at 50% 52%, rgba(242,165,65,.42) 0%, rgba(231,111,81,.12) 45%, transparent 75%)' });
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '50% 50%' });
+
+  /* ---------- ACT 1: one week ---------- */
+  const act1 = el('div', 'abs', cam, { inset: 0 });
+  const head = el('div', 'abs', act1, { left: '0', width: '1920px', top: '110px', textAlign: 'center', font: '800 76px/1 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--paper)' });
+  head.textContent = 'Start with one week';
+  const GX = 300, GY = 290, COLS = 8, ROWS = 5, CW = 165, GAP = 20, CH = 92, RG = 12, HOT = 2;
+  const cells = [], weekLabs = [];
+  for (let c = 0; c < COLS; c++) {
+    const x = GX + c * (CW + GAP);
+    const lab = el('div', 'abs', act1, { left: x + 'px', width: CW + 'px', top: GY - 44 + 'px', textAlign: 'center', font: MONO, letterSpacing: '.12em', color: 'rgba(221,230,225,.5)' });
+    lab.textContent = 'WK ' + (c + 1);
+    weekLabs.push(lab);
+    for (let r = 0; r < ROWS; r++) {
+      cells.push(el('div', 'abs', act1, { left: x + 'px', top: GY + r * (CH + RG) + 'px', width: CW + 'px', height: CH + 'px', borderRadius: '12px', background: 'rgba(221,230,225,.05)', border: '1px solid rgba(221,230,225,.09)' }));
+    }
+  }
+  const hotX = GX + HOT * (CW + GAP);
+  const hotCol = el('div', 'abs', act1, { left: hotX - 8 + 'px', top: GY - 60 + 'px', width: CW + 16 + 'px', height: ROWS * (CH + RG) - RG + 76 + 'px', borderRadius: '18px', background: 'linear-gradient(180deg, rgba(242,165,65,.35), rgba(242,165,65,.12))', border: '2px solid var(--amber)', boxShadow: '0 0 70px rgba(242,165,65,.45)', opacity: 0, transformOrigin: '50% 100%' });
+  const tiles = [1, 2, 3].map((r, i) => {
+    const t = el('div', 'abs', act1, { left: hotX + 10 + 'px', top: GY + r * (CH + RG) + 6 + 'px', width: CW - 20 + 'px', height: CH - 12 + 'px', borderRadius: '10px', background: i === 2 ? 'linear-gradient(135deg, #2A9D8F, #1f6f66)' : 'linear-gradient(135deg, #F2A541, #E76F51)', boxShadow: '0 12px 30px rgba(0,0,0,.45)', opacity: 0 });
+    el('div', 'abs', t, { left: '58px', top: '24px', width: 0, height: 0, borderTop: '16px solid transparent', borderBottom: '16px solid transparent', borderLeft: '26px solid rgba(255,255,255,.95)' });
+    return t;
+  });
+  const sub1 = el('div', 'abs', act1, { left: '0', width: '1920px', top: '850px', textAlign: 'center', font: '600 26px/1 ui-monospace, Menlo, monospace', letterSpacing: '.16em', color: 'var(--amber)', opacity: 0 });
+  sub1.textContent = '2–3 SHORT VIDEOS';
+
+  /* ---------- ACT 2: Basic / Pro pills ---------- */
+  const act2 = el('div', 'abs', cam, { inset: 0 });
+  const mkPill = (x, col, rgb, tag, desc) => {
+    const p = el('div', 'abs', act2, { left: x + 'px', top: '440px', width: '800px', height: '200px', borderRadius: '100px', background: `linear-gradient(135deg, rgba(${rgb},.28), rgba(${rgb},.08))`, border: `2px solid ${col}`, boxShadow: `0 30px 70px rgba(0,0,0,.45), 0 0 0 rgba(${rgb},0)`, opacity: 0 });
+    const t = el('div', 'abs', p, { left: '70px', top: '46px', font: '700 24px/1 ui-monospace, Menlo, monospace', letterSpacing: '.2em', color: col });
+    t.textContent = tag;
+    const d = el('div', 'abs', p, { left: '70px', top: '92px', width: '680px', font: '800 46px/1.1 Inter Display, Inter', letterSpacing: '-.03em', color: 'var(--paper)' });
+    d.textContent = desc;
+    return p;
+  };
+  const basic = mkPill(140, 'var(--teal)', '42,157,143', 'BASIC', 'Narration, captions, transitions');
+  const pro = mkPill(980, 'var(--amber)', '242,165,65', 'PRO', 'A.I.-directed explainers');
+  const spark = el('div', 'abs', act2, { left: '1660px', top: '400px', width: '120px', height: '120px', borderRadius: '50%', border: '4px solid var(--amber)', opacity: 0 });
+
+  /* ---------- ACT 3: ordinary in, extraordinary out ---------- */
+  const act3 = el('div', 'abs', cam, { inset: 0 });
+  const inLab = el('div', 'abs', act3, { left: '160px', top: '250px', font: '600 24px/1 ui-monospace, Menlo, monospace', letterSpacing: '.18em', color: 'rgba(221,230,225,.6)', opacity: 0 });
+  inLab.textContent = 'SLIDES IN →';
+  const outLab = el('div', 'abs', act3, { right: '160px', top: '250px', font: '600 24px/1 ui-monospace, Menlo, monospace', letterSpacing: '.18em', color: 'var(--amber)', opacity: 0 });
+  outLab.textContent = '→ VIDEO OUT';
+  const card = el('div', 'abs', act3, { left: '640px', top: '320px', width: '640px', height: '360px', transformOrigin: '50% 50%' });
+  const grey = el('div', 'abs', card, { inset: 0, borderRadius: '14px', background: '#cfd2d6', boxShadow: '0 30px 70px rgba(0,0,0,.5)' });
+  el('div', 'abs', grey, { left: '50px', top: '50px', width: '330px', height: '28px', borderRadius: '6px', background: '#9aa0a8' });
+  [0, 1, 2].forEach((i) => el('div', 'abs', grey, { left: '50px', top: 130 + i * 52 + 'px', width: [470, 400, 430][i] + 'px', height: '16px', borderRadius: '8px', background: '#aeb3ba' }));
+  const vivid = el('div', 'abs', card, { inset: 0, borderRadius: '18px', overflow: 'hidden', background: 'linear-gradient(135deg, #2A9D8F 0%, #F2A541 60%, #E76F51 100%)', boxShadow: '0 30px 80px rgba(0,0,0,.5), 0 0 90px rgba(242,165,65,.55)', opacity: 0 });
+  el('div', 'abs', vivid, { inset: 0, background: 'radial-gradient(60% 70% at 30% 30%, rgba(255,255,255,.35), transparent 70%)' });
+  const vbars = [0, 1, 2, 3].map((i) => el('div', 'abs', vivid, { left: 60 + i * 60 + 'px', bottom: '70px', width: '40px', height: [80, 120, 160, 210][i] + 'px', borderRadius: '8px 8px 2px 2px', background: 'rgba(255,255,255,.85)', transformOrigin: '50% 100%' }));
+  const play = el('div', 'abs', vivid, { left: '400px', top: '110px', width: '120px', height: '120px', borderRadius: '50%', background: 'rgba(18,24,38,.55)' });
+  el('div', 'abs', play, { left: '46px', top: '34px', width: 0, height: 0, borderTop: '26px solid transparent', borderBottom: '26px solid transparent', borderLeft: '40px solid #fff' });
+  el('div', 'abs', vivid, { left: '30px', right: '30px', bottom: '28px', height: '8px', borderRadius: '4px', background: 'rgba(255,255,255,.3)' });
+  const prog = el('div', 'abs', vivid, { left: '30px', width: '580px', bottom: '28px', height: '8px', borderRadius: '4px', background: '#fff', transformOrigin: '0% 50%' });
+
+  /* ---------- ACT 4: lockup ---------- */
+  const act4 = el('div', 'abs', cam, { inset: 0 });
+  const lock = el('div', 'abs', act4, { left: '0', width: '1920px', top: '420px', textAlign: 'center', font: '900 140px/1 Inter Display, Inter', letterSpacing: '-.045em', color: 'var(--paper)', whiteSpace: 'nowrap', textShadow: '0 0 60px rgba(242,165,65,.45)' });
+  const chars = ctx.split(lock, 'powerpoint2vid.com', 'char');
+  const uline = el('div', 'abs', act4, { left: '560px', width: '800px', top: '600px', height: '8px', borderRadius: '4px', background: 'linear-gradient(90deg, var(--amber), var(--coral))', boxShadow: '0 0 30px rgba(242,165,65,.7)', transformOrigin: '50% 50%' });
+  const tagline = el('div', 'abs', act4, { left: '0', width: '1920px', top: '660px', textAlign: 'center', font: '600 26px/1 ui-monospace, Menlo, monospace', letterSpacing: '.18em', color: 'rgba(247,243,234,.75)' });
+  tagline.textContent = 'ORDINARY SLIDES IN · EXTRAORDINARY VIDEO OUT';
+
+  ctx.fx.vignette({ strength: 0.5 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  /* ---------- timeline ---------- */
+  tl.fromTo(cam, { scale: 1 }, { scale: 1.04, duration: dur, ease: 'none' }, 0);
+
+  // Act 1
+  tl.from(cells, { opacity: 0, y: 14, duration: 0.5, stagger: { each: 0.008, from: 'random' } }, 0.05);
+  tl.from(weekLabs, { opacity: 0, duration: 0.4, stagger: 0.03 }, 0.15);
+  tl.from(head, { opacity: 0, y: 24, duration: 0.6 }, 0.25);
+  tl.to(hotCol, { opacity: 1, duration: 0.35 }, tWeek - 0.08);
+  tl.fromTo(hotCol, { scaleY: 0.85 }, { scaleY: 1, duration: 0.6, ease: 'back.out(1.8)', immediateRender: false }, tWeek - 0.08);
+  tl.to(weekLabs[HOT], { color: '#F2A541', duration: 0.3 }, tWeek);
+  tl.to(weekLabs.filter((_, i) => i !== HOT), { opacity: 0.25, duration: 0.5 }, tWeek);
+  [tTwo, tThree, tVid].forEach((t, i) => {
+    tl.to(tiles[i], { opacity: 1, duration: 0.2 }, t - 0.1);
+    tl.fromTo(tiles[i], { y: -140 }, { y: 0, duration: 0.55, ease: 'back.out(1.7)', immediateRender: false }, t - 0.1);
+  });
+  tl.to(sub1, { opacity: 1, duration: 0.5 }, tVid);
+  tl.to(act1, { opacity: 0, y: -60, scale: 0.94, duration: 0.6, ease: 'power2.in' }, tBasic - 0.6);
+
+  // Act 2
+  tl.to(basic, { opacity: 1, duration: 0.3 }, tBasic - 0.15);
+  tl.fromTo(basic, { y: 120 }, { y: 0, duration: 0.7, ease: 'back.out(1.5)', immediateRender: false }, tBasic - 0.15);
+  tl.to(pro, { opacity: 1, duration: 0.3 }, tPro - 0.15);
+  tl.fromTo(pro, { y: 120 }, { y: 0, duration: 0.7, ease: 'back.out(1.5)', immediateRender: false }, tPro - 0.15);
+  tl.to(basic, { opacity: 0.55, duration: 0.5 }, tAI);
+  tl.to(pro, { scale: 1.04, boxShadow: '0 30px 70px rgba(0,0,0,.45), 0 0 90px rgba(242,165,65,.75)', duration: 0.5, ease: 'back.out(2)' }, tAI - 0.05);
+  tl.fromTo(spark, { scale: 0.3, opacity: 1 }, { scale: 2, opacity: 0, duration: 0.9, ease: 'power2.out', immediateRender: false }, tAI);
+  tl.to(pro, { boxShadow: '0 30px 70px rgba(0,0,0,.45), 0 0 140px rgba(242,165,65,.9)', duration: 0.5, yoyo: true, repeat: 1 }, tExpl);
+  tl.to(act2, { opacity: 0, y: -50, duration: 0.5, ease: 'power2.in' }, tOrd - 0.45);
+
+  // Act 3
+  gsap.set([card, inLab], { opacity: 0 });
+  tl.to(card, { opacity: 1, duration: 0.25 }, tOrd - 0.1);
+  tl.fromTo(card, { x: -1100, rotation: -4 }, { x: 0, rotation: 0, duration: 0.9, ease: 'power3.out', immediateRender: false }, tOrd - 0.1);
+  tl.to(inLab, { opacity: 1, duration: 0.4 }, tIn - 0.3);
+  tl.to(grey, { opacity: 0, duration: 0.3 }, tExtra);
+  tl.to(vivid, { opacity: 1, duration: 0.3 }, tExtra);
+  tl.fromTo(card, { scale: 1 }, { scale: 1.12, duration: 0.6, ease: 'back.out(2)', immediateRender: false }, tExtra);
+  tl.from(vbars, { scaleY: 0, duration: 0.5, stagger: 0.07, ease: 'back.out(1.8)' }, tExtra + 0.1);
+  tl.fromTo(prog, { scaleX: 0 }, { scaleX: 0.7, duration: 1.2, ease: 'none' }, tExtra);
+  tl.to(outLab, { opacity: 1, duration: 0.4 }, tExtra + 0.2);
+  tl.to(inLab, { opacity: 0.3, duration: 0.4 }, tExtra + 0.2);
+  tl.to(card, { x: 1300, rotation: 4, duration: 0.6, ease: 'power3.in' }, tOut - 0.15);
+  tl.to([inLab, outLab], { opacity: 0, duration: 0.4 }, tOut + 0.1);
+
+  // Act 4: lockup, held to the end
+  tl.to(warm, { opacity: 1, duration: 1.4, ease: 'power2.out' }, tOut);
+  tl.from(chars, { opacity: 0, y: 60, duration: 0.6, stagger: 0.03, ease: 'back.out(1.7)' }, tPP - 0.15);
+  tl.from(uline, { scaleX: 0, duration: 0.8, ease: 'expo.out' }, tCom - 0.3);
+  tl.from(tagline, { opacity: 0, y: 16, duration: 0.6 }, tCom);
+  tl.to(lock, { textShadow: '0 0 90px rgba(242,165,65,.7)', duration: 0.8, yoyo: true, repeat: 1 }, tCom);
+});

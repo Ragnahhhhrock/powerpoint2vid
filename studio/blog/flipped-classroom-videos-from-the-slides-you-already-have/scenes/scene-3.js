@@ -1,0 +1,138 @@
+/* Scene 3 — "Trim each slide to the key idea and move explanations into your notes. Those notes become
+ * the narration, so write them for the ear, and end with a link to class."
+ * Storyboard: Paper stage, camera close on one slide card crammed with grey text lines. On "Trim" the
+ * lines fly down into a speaker-notes panel, leaving only the quote "Demand falls when price rises"
+ * at 96px. A spec chip reads "24pt text · WCAG AA contrast". On "narration" the notes panel morphs
+ * into a teal sound waveform that ripples on "ear". On "link to class" an amber arrow slides from the
+ * card's edge to a classroom icon and holds. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const T = (i, w, fb) => { const v = ctx.at(i, w); return Number.isFinite(v) ? v : fb; };
+  const trim = T(0, 'Trim', 0.55), key = T(0, 'key', 1.77), explan = T(0, 'explanations', 3.02), notesW = T(0, 'notes', 4.22);
+  const narr = T(1, 'narration', 6.3), ear = T(1, 'ear', 8.06), endW = T(1, 'end', 8.76), link = T(1, 'link', 9.15), cls = T(1, 'class', 9.52);
+  const mono = 'ui-monospace, Menlo, monospace';
+  const rnd = ctx.rand(7);
+
+  stage.style.background = 'radial-gradient(70% 70% at 40% 35%, #fffdf7 0%, var(--paper) 60%, #ece5d6 100%)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 540px' });
+
+  /* ---- slide card ---- */
+  const CX = 120, CY = 120, CW = 1120, CH = 540;
+  const card = el('div', 'abs', cam, { left: CX + 'px', top: CY + 'px', width: CW + 'px', height: CH + 'px', borderRadius: '22px', background: '#fff',
+    boxShadow: '0 40px 90px rgba(30,36,51,.16), 0 6px 18px rgba(30,36,51,.08)' });
+  const slideTag = el('div', 'abs', cam, { left: CX + 80 + 'px', top: CY + 50 + 'px', font: `600 20px/1 ${mono}`, letterSpacing: '.14em', color: 'rgba(30,36,51,.45)' });
+  slideTag.textContent = 'SLIDE 4';
+
+  const lines = [];
+  for (let i = 0; i < 8; i++) {
+    const w = i === 0 ? 640 : 520 + Math.floor(rnd() * 440);
+    const l = el('div', 'abs', cam, { left: CX + 80 + 'px', top: CY + 100 + i * 46 + 'px', width: w + 'px', height: (i === 0 ? 26 : 16) + 'px', borderRadius: '8px',
+      background: i === 0 ? 'rgba(30,36,51,.55)' : 'rgba(30,36,51,.2)' });
+    lines.push(l);
+  }
+
+  // the key idea (quote sits right of the teal accent bar)
+  const quote = el('div', 'abs', cam, { left: CX + 96 + 'px', top: CY + 110 + 'px', width: '960px', font: '800 96px/1.04 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--ink)' });
+  const qWords = ctx.split(quote, '“Demand falls when price rises”', 'word');
+  const qBar = el('div', 'abs', cam, { left: CX + 64 + 'px', top: CY + 96 + 'px', width: '8px', height: '0px', borderRadius: '4px', background: 'var(--teal)' });
+
+  const chip = el('div', 'abs', cam, { left: CX + 80 + 'px', top: CY + CH - 100 + 'px', padding: '14px 22px', borderRadius: '40px', border: '2px solid rgba(42,157,143,.5)',
+    background: 'rgba(42,157,143,.08)', font: `600 20px/1 ${mono}`, letterSpacing: '.1em', color: 'var(--teal)', whiteSpace: 'nowrap' });
+  chip.textContent = '24PT TEXT · WCAG AA CONTRAST';
+
+  /* ---- notes panel ---- */
+  const PX = 120, PY = 710, PW = 1120, PH = 250;
+  const panel = el('div', 'abs', cam, { left: PX + 'px', top: PY + 'px', width: PW + 'px', height: PH + 'px', borderRadius: '18px', background: 'rgba(255,255,255,.6)',
+    border: '2px dashed rgba(30,36,51,.18)', boxShadow: '0 20px 50px rgba(30,36,51,.06)' });
+  const labNotes = el('div', 'abs', cam, { left: PX + 40 + 'px', top: PY + 26 + 'px', font: `700 20px/1 ${mono}`, letterSpacing: '.16em', color: 'rgba(30,36,51,.5)' });
+  labNotes.textContent = 'SPEAKER NOTES';
+  const labNarr = el('div', 'abs', cam, { left: PX + 'px', width: PW + 'px', textAlign: 'center', top: PY + 26 + 'px', font: `700 20px/1 ${mono}`, letterSpacing: '.16em', color: 'var(--teal)', opacity: 0 });
+  labNarr.textContent = 'NARRATION';
+
+  const N = 64, WX0 = PX + 70, WX1 = PX + PW - 70, WMID = PY + 145;
+  const bars = [];
+  for (let i = 0; i < N; i++) {
+    const x = WX0 + (i / (N - 1)) * (WX1 - WX0) - 5;
+    bars.push(el('div', 'abs', cam, { left: x + 'px', top: WMID + 'px', width: '10px', height: '0px', borderRadius: '5px',
+      background: 'linear-gradient(180deg, #48c2b3, var(--teal))', boxShadow: '0 0 14px rgba(42,157,143,.35)' }));
+  }
+  const wave = { a: 0, boost: 0 };
+  const rings = [0, 1, 2].map(() => el('div', 'abs', cam, { left: WX1 - 60 + 'px', top: WMID - 60 + 'px', width: '120px', height: '120px', borderRadius: '50%', border: '4px solid var(--teal)', opacity: 0 }));
+
+  ctx.onFrame((t) => {
+    bars.forEach((b, i) => {
+      const u = i / (N - 1);
+      const env = Math.sin(Math.PI * u) * 0.75 + 0.25;
+      const n = 0.35 + 0.65 * Math.abs(Math.sin(i * 0.9 + t * 5.3) * Math.cos(i * 0.37 - t * 3.1));
+      const h = Math.max(0, wave.a * (12 + 150 * env * n * (1 + wave.boost * 0.5)));
+      b.style.height = h + 'px';
+      b.style.top = WMID - h / 2 + 'px';
+    });
+  });
+
+  /* ---- classroom icon + arrow ---- */
+  const icon = el('div', 'abs', cam, { left: '1470px', top: '260px', width: '320px', height: '260px', transformOrigin: '50% 60%' });
+  icon.innerHTML = `<svg width="320" height="260" viewBox="0 0 320 260">
+    <rect x="40" y="10" width="240" height="120" rx="12" fill="#1E2433"/>
+    <rect x="70" y="40" width="120" height="10" rx="5" fill="#DDE6E1" opacity=".9"/>
+    <rect x="70" y="64" width="160" height="10" rx="5" fill="#DDE6E1" opacity=".55"/>
+    <rect x="70" y="88" width="90" height="10" rx="5" fill="#F2A541"/>
+    ${[70, 160, 250].map((x) => `<circle cx="${x}" cy="182" r="20" fill="#1E2433"/><path d="M${x - 36} 252 Q ${x - 36} 210 ${x} 210 Q ${x + 36} 210 ${x + 36} 252 Z" fill="#1E2433"/>`).join('')}
+  </svg>`;
+  const iconGlow = el('div', 'abs', cam, { left: '1430px', top: '200px', width: '400px', height: '380px', borderRadius: '50%',
+    background: 'radial-gradient(closest-side, rgba(242,165,65,.45), transparent)', opacity: 0 });
+  cam.insertBefore(iconGlow, icon);
+  const iconLab = el('div', 'abs', cam, { left: '1470px', width: '320px', top: '545px', textAlign: 'center', font: `700 22px/1 ${mono}`, letterSpacing: '.16em', color: 'var(--ink)' });
+  iconLab.textContent = 'IN CLASS';
+
+  const AY = CY + CH / 2, AX0 = CX + CW + 20, AX1 = 1452;
+  const arrow = el('div', 'abs', cam, { left: 0, top: 0, width: '1920px', height: '1080px' });
+  arrow.innerHTML = `<svg width="1920" height="1080"><line x1="${AX0}" y1="${AY}" x2="${AX1 - 10}" y2="${AY}" stroke="#F2A541" stroke-width="10" stroke-linecap="round"/>
+    <path d="M${AX1 - 34} ${AY - 24} L ${AX1} ${AY} L ${AX1 - 34} ${AY + 24}" fill="none" stroke="#F2A541" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  gsap.set(arrow, { clipPath: `inset(0px ${1920 - AX0 + 6}px 0px 0px)`, filter: 'drop-shadow(0 0 0px rgba(242,165,65,0))' });
+
+  ctx.fx.vignette({ strength: 0.22 });
+  ctx.fx.grain({ opacity: 0.05 });
+
+  /* ---- timeline ---- */
+  gsap.set(cam, { scale: 1.15, x: 322, y: 172 });
+  tl.to(cam, { scale: 1, x: 0, y: 0, duration: 1.3, ease: 'expo.inOut' }, trim - 0.1);
+  tl.to(cam, { scale: 1.035, x: -14, y: -6, duration: ctx.dur - (trim + 1.2), ease: 'sine.inOut' }, trim + 1.2);
+
+  tl.from([card, slideTag, ...lines], { y: 30, opacity: 0, duration: 0.5, stagger: 0.015 }, 0);
+  gsap.set([quote, qBar, chip], { opacity: 0 });
+  gsap.set([icon, iconLab], { opacity: 0 });
+
+  lines.forEach((l, i) => {
+    const tw = 300 + Math.floor(rnd() * 620);
+    tl.to(l, { left: PX + 40 + 'px', top: PY + 66 + i * 22 + 'px', width: tw + 'px', height: '10px', background: 'rgba(30,36,51,.28)',
+      duration: 0.85, ease: 'power3.inOut' }, trim + 0.05 + i * 0.07);
+  });
+  tl.to(slideTag, { opacity: 0, duration: 0.3 }, trim);
+
+  tl.to([quote], { opacity: 1, duration: 0.01 }, key - 0.2);
+  tl.from(qWords, { y: 50, opacity: 0, duration: 0.6, stagger: 0.06, ease: 'back.out(1.6)' }, key - 0.2);
+  tl.to(qBar, { opacity: 1, height: '205px', duration: 0.6, ease: 'power3.out' }, key);
+  tl.fromTo(chip, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: 'back.out(1.8)', immediateRender: false }, key + 0.7);
+
+  tl.to(panel, { background: 'rgba(255,255,255,.95)', border: '2px solid rgba(30,36,51,.1)', duration: 0.6 }, explan);
+  tl.to(labNotes, { scale: 1.15, color: 'var(--ink)', duration: 0.18, yoyo: true, repeat: 1, transformOrigin: '0% 50%' }, notesW);
+
+  tl.to(lines, { scaleX: 0, opacity: 0, transformOrigin: '50% 50%', duration: 0.5, stagger: 0.03, ease: 'power2.in' }, narr - 0.45);
+  tl.to(labNotes, { opacity: 0, y: -10, duration: 0.3 }, narr - 0.2);
+  tl.fromTo(labNarr, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4, immediateRender: false }, narr - 0.05);
+  tl.to(panel, { borderRadius: '125px', boxShadow: '0 24px 60px rgba(42,157,143,.18)', duration: 0.7, ease: 'power3.inOut' }, narr - 0.3);
+  tl.to(wave, { a: 1, duration: 0.8, ease: 'power3.out' }, narr - 0.05);
+
+  tl.to(wave, { boost: 1, duration: 0.25, yoyo: true, repeat: 1, ease: 'sine.inOut' }, ear - 0.1);
+  rings.forEach((r, i) => tl.fromTo(r, { scale: 0.4, opacity: 0.8 }, { scale: 2, opacity: 0, duration: 1, ease: 'power2.out', immediateRender: false }, ear + i * 0.16));
+
+  tl.fromTo(icon, { opacity: 0, scale: 0.8, y: 20 }, { opacity: 1, scale: 1, y: 0, duration: 0.6, ease: 'back.out(1.6)', immediateRender: false }, endW - 0.1);
+  tl.to(iconLab, { opacity: 1, duration: 0.4 }, endW + 0.1);
+  tl.to(arrow, { clipPath: 'inset(0px 0px 0px 0px)', duration: Math.max(0.35, cls - link), ease: 'power3.out' }, link - 0.05);
+  tl.to(arrow, { filter: 'drop-shadow(0 0 14px rgba(242,165,65,.8))', duration: 0.4 }, cls);
+  tl.to(iconGlow, { opacity: 1, duration: 0.5 }, cls);
+  tl.to(icon, { scale: 1.08, duration: 0.18, yoyo: true, repeat: 1, ease: 'power2.out' }, cls);
+  tl.to(iconLab, { color: '#c97f1f', duration: 0.4 }, cls);
+  tl.to(wave, { a: 0.55, duration: 1.2, ease: 'sine.inOut' }, cls + 0.2);
+});

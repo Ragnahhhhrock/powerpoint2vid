@@ -1,0 +1,952 @@
+{
+  "title": "Flipped Classroom Videos From the Slides You Already Have (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#121826",
+      "ink": "#1E2433",
+      "paper": "#F7F3EA",
+      "chalk": "#DDE6E1",
+      "amber": "#F2A541",
+      "teal": "#2A9D8F",
+      "coral": "#E76F51"
+    },
+    "font": "Inter Display",
+    "motion": "Calm, confident pacing with soft ease-out arrivals and gentle push-ins; elements snap into place on their key words, then breathe.",
+    "story": "From a dark, cluttered lecture hall to bright, organised short videos: scenes alternate night stages for problems and paper stages for practical steps, moving wide on concepts and close on concrete details, ending on a warm amber call to action."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "Flipping your class? You don't need a studio. The lecture slides you already have can become short pre-class videos your students will actually watch.",
+      "storyboard": "Night stage. A single grey slide card sits centre; on 'don't need a studio' a ghosted camera-and-light-rig icon fades in and is struck through in coral, then dissolves. On 'slides you already have' the card flips over and becomes a play-button video frame glowing amber. Headline 'Flipped Classroom Videos From Your Slides' rises in paper white at 120px beneath it. Slow push-in holds on the play button as 'actually watch' lands. The original near-empty title slide is rebuilt entirely.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Flipped Classroom Videos From Your Slides",
+        "text": "",
+        "notes": "Flipping your class? You don't need a studio. The lecture slides you already have can become short pre-class videos your students will actually watch.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 10,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 1.938,
+          "text": "Flipping your class?",
+          "words": [
+            {
+              "w": "Flipping",
+              "t": 0.8
+            },
+            {
+              "w": "your",
+              "t": 1.253
+            },
+            {
+              "w": "class?",
+              "t": 1.415
+            }
+          ]
+        },
+        {
+          "t": 2.182,
+          "end": 3.482,
+          "text": "You don't need a studio.",
+          "words": [
+            {
+              "w": "You",
+              "t": 2.182
+            },
+            {
+              "w": "don't",
+              "t": 2.344
+            },
+            {
+              "w": "need",
+              "t": 2.565
+            },
+            {
+              "w": "a",
+              "t": 2.774
+            },
+            {
+              "w": "studio.",
+              "t": 2.843
+            }
+          ]
+        },
+        {
+          "t": 3.923,
+          "end": 9.136,
+          "text": "The lecture slides you already have can become short pre-class videos your students will actually watch.",
+          "words": [
+            {
+              "w": "The",
+              "t": 3.923
+            },
+            {
+              "w": "lecture",
+              "t": 4.086
+            },
+            {
+              "w": "slides",
+              "t": 4.446
+            },
+            {
+              "w": "you",
+              "t": 4.794
+            },
+            {
+              "w": "already",
+              "t": 4.945
+            },
+            {
+              "w": "have",
+              "t": 5.305
+            },
+            {
+              "w": "can",
+              "t": 5.618
+            },
+            {
+              "w": "become",
+              "t": 5.769
+            },
+            {
+              "w": "short",
+              "t": 6.129
+            },
+            {
+              "w": "pre-class",
+              "t": 6.477
+            },
+            {
+              "w": "videos",
+              "t": 7.046
+            },
+            {
+              "w": "your",
+              "t": 7.441
+            },
+            {
+              "w": "students",
+              "t": 7.627
+            },
+            {
+              "w": "will",
+              "t": 8.021
+            },
+            {
+              "w": "actually",
+              "t": 8.207
+            },
+            {
+              "w": "watch.",
+              "t": 8.637
+            }
+          ]
+        }
+      ],
+      "speechEnd": 9.136
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Your slides are already sequenced and matched to your learning outcomes. As videos, students can pause and rewatch, read captions, and hear the same explanation every time.",
+      "storyboard": "Paper stage. A neat row of slide cards slides in from left, joined by a teal thread to a target icon on 'learning outcomes'. Camera pans right as the row compacts into one video player. On 'pause and rewatch' a pause and rewind control pops; on 'read captions' a caption bar types in below; on 'same explanation' identical waveforms stamp out three times with a 'Consistency' label. The four slide bullets become these icons; overlapping title text is cut.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Your Slides Are Already the Raw Material",
+        "text": "Control over pace. Words and pictures together. Captions. Consistency",
+        "notes": "Your slides are already sequenced and matched to the learning outcomes. As videos, they let students pause and rewatch, read captions, and hear the same explanation.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 11.535,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.917,
+          "text": "Your slides are already sequenced and matched to your learning outcomes.",
+          "words": [
+            {
+              "w": "Your",
+              "t": 0.55
+            },
+            {
+              "w": "slides",
+              "t": 0.771
+            },
+            {
+              "w": "are",
+              "t": 1.165
+            },
+            {
+              "w": "already",
+              "t": 1.282
+            },
+            {
+              "w": "sequenced",
+              "t": 1.618
+            },
+            {
+              "w": "and",
+              "t": 2.164
+            },
+            {
+              "w": "matched",
+              "t": 2.338
+            },
+            {
+              "w": "to",
+              "t": 2.686
+            },
+            {
+              "w": "your",
+              "t": 2.814
+            },
+            {
+              "w": "learning",
+              "t": 2.977
+            },
+            {
+              "w": "outcomes.",
+              "t": 3.302
+            }
+          ]
+        },
+        {
+          "t": 4.358,
+          "end": 10.685,
+          "text": "As videos, students can pause and rewatch, read captions, and hear the same explanation every time.",
+          "words": [
+            {
+              "w": "As",
+              "t": 4.358
+            },
+            {
+              "w": "videos,",
+              "t": 4.602
+            },
+            {
+              "w": "students",
+              "t": 5.263
+            },
+            {
+              "w": "can",
+              "t": 5.705
+            },
+            {
+              "w": "pause",
+              "t": 5.902
+            },
+            {
+              "w": "and",
+              "t": 6.32
+            },
+            {
+              "w": "rewatch,",
+              "t": 6.471
+            },
+            {
+              "w": "read",
+              "t": 7.295
+            },
+            {
+              "w": "captions,",
+              "t": 7.562
+            },
+            {
+              "w": "and",
+              "t": 8.363
+            },
+            {
+              "w": "hear",
+              "t": 8.572
+            },
+            {
+              "w": "the",
+              "t": 8.781
+            },
+            {
+              "w": "same",
+              "t": 8.909
+            },
+            {
+              "w": "explanation",
+              "t": 9.188
+            },
+            {
+              "w": "every",
+              "t": 9.896
+            },
+            {
+              "w": "time.",
+              "t": 10.198
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.685
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "Plan short videos, not recorded lectures. A week on supply and demand becomes four short videos, one concept each, and each one names what students will do in class.",
+      "storyboard": "Night stage. A long ribbon labelled 'Recorded lecture' stretches across the frame; on 'four short videos' it slices into four amber tiles with a crisp cut sound feel. Two tiles carry the deck's examples: 'What a demand curve shows' with a tiny animated downward curve, and 'What shifts demand' with the curve sliding right. On 'what students will do in class' a teal tag drops under each tile reading 'Class activity'. Wide shot holds on the four tiles.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Plan Short Videos, Not Recorded Lectures",
+        "text": "One concept per video. What a demand curve shows. What shifts demand. Name the class activity for each",
+        "notes": "Split each lecture into one-concept chunks. A week on supply and demand becomes four short videos. For each one, name what students will do in class.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 12.534,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.371,
+          "text": "Plan short videos, not recorded lectures.",
+          "words": [
+            {
+              "w": "Plan",
+              "t": 0.55
+            },
+            {
+              "w": "short",
+              "t": 0.945
+            },
+            {
+              "w": "videos,",
+              "t": 1.247
+            },
+            {
+              "w": "not",
+              "t": 2.071
+            },
+            {
+              "w": "recorded",
+              "t": 2.28
+            },
+            {
+              "w": "lectures.",
+              "t": 2.756
+            }
+          ]
+        },
+        {
+          "t": 3.882,
+          "end": 11.684,
+          "text": "A week on supply and demand becomes four short videos, one concept each, and each one names what students will do in class.",
+          "words": [
+            {
+              "w": "A",
+              "t": 3.882
+            },
+            {
+              "w": "week",
+              "t": 4.056
+            },
+            {
+              "w": "on",
+              "t": 4.323
+            },
+            {
+              "w": "supply",
+              "t": 4.474
+            },
+            {
+              "w": "and",
+              "t": 4.892
+            },
+            {
+              "w": "demand",
+              "t": 5.008
+            },
+            {
+              "w": "becomes",
+              "t": 5.647
+            },
+            {
+              "w": "four",
+              "t": 6.077
+            },
+            {
+              "w": "short",
+              "t": 6.39
+            },
+            {
+              "w": "videos,",
+              "t": 6.68
+            },
+            {
+              "w": "one",
+              "t": 7.505
+            },
+            {
+              "w": "concept",
+              "t": 7.76
+            },
+            {
+              "w": "each,",
+              "t": 8.306
+            },
+            {
+              "w": "and",
+              "t": 8.909
+            },
+            {
+              "w": "each",
+              "t": 9.142
+            },
+            {
+              "w": "one",
+              "t": 9.385
+            },
+            {
+              "w": "names",
+              "t": 9.617
+            },
+            {
+              "w": "what",
+              "t": 9.966
+            },
+            {
+              "w": "students",
+              "t": 10.163
+            },
+            {
+              "w": "will",
+              "t": 10.546
+            },
+            {
+              "w": "do",
+              "t": 10.732
+            },
+            {
+              "w": "in",
+              "t": 10.918
+            },
+            {
+              "w": "class.",
+              "t": 11.057
+            }
+          ]
+        }
+      ],
+      "speechEnd": 11.684
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Trim each slide to the key idea and move explanations into your notes. Those notes become the narration, so write them for the ear, and end with a link to class.",
+      "storyboard": "Paper stage, close on one slide card crammed with grey text lines. On 'trim' the lines fly downward into a speaker-notes panel, leaving only the quote 'Demand falls when price rises' at 96px. On 'narration' the notes panel morphs into a teal sound waveform. A small spec chip reads '24pt text \u00b7 WCAG AA contrast'. On 'link to class' an amber arrow slides from the card's edge to a classroom icon and holds.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Trim Slides, Write Notes for the Ear",
+        "text": "Move explanations into speaker notes. \"Demand falls when price rises\". 24pt text, WCAG AA contrast. End with a link to class",
+        "notes": "Keep the slide for the key idea and move explanations into the notes. Your notes become the narration, so write them for the ear and link them to class.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "smoothup",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 11.002,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 4.73,
+          "text": "Trim each slide to the key idea and move explanations into your notes.",
+          "words": [
+            {
+              "w": "Trim",
+              "t": 0.55
+            },
+            {
+              "w": "each",
+              "t": 0.922
+            },
+            {
+              "w": "slide",
+              "t": 1.177
+            },
+            {
+              "w": "to",
+              "t": 1.549
+            },
+            {
+              "w": "the",
+              "t": 1.653
+            },
+            {
+              "w": "key",
+              "t": 1.769
+            },
+            {
+              "w": "idea",
+              "t": 2.001
+            },
+            {
+              "w": "and",
+              "t": 2.547
+            },
+            {
+              "w": "move",
+              "t": 2.791
+            },
+            {
+              "w": "explanations",
+              "t": 3.023
+            },
+            {
+              "w": "into",
+              "t": 3.766
+            },
+            {
+              "w": "your",
+              "t": 4.045
+            },
+            {
+              "w": "notes.",
+              "t": 4.219
+            }
+          ]
+        },
+        {
+          "t": 5.171,
+          "end": 10.152,
+          "text": "Those notes become the narration, so write them for the ear, and end with a link to class.",
+          "words": [
+            {
+              "w": "Those",
+              "t": 5.171
+            },
+            {
+              "w": "notes",
+              "t": 5.519
+            },
+            {
+              "w": "become",
+              "t": 5.821
+            },
+            {
+              "w": "the",
+              "t": 6.193
+            },
+            {
+              "w": "narration,",
+              "t": 6.297
+            },
+            {
+              "w": "so",
+              "t": 7.18
+            },
+            {
+              "w": "write",
+              "t": 7.377
+            },
+            {
+              "w": "them",
+              "t": 7.632
+            },
+            {
+              "w": "for",
+              "t": 7.783
+            },
+            {
+              "w": "the",
+              "t": 7.899
+            },
+            {
+              "w": "ear,",
+              "t": 8.062
+            },
+            {
+              "w": "and",
+              "t": 8.55
+            },
+            {
+              "w": "end",
+              "t": 8.758
+            },
+            {
+              "w": "with",
+              "t": 8.921
+            },
+            {
+              "w": "a",
+              "t": 9.072
+            },
+            {
+              "w": "link",
+              "t": 9.153
+            },
+            {
+              "w": "to",
+              "t": 9.397
+            },
+            {
+              "w": "class.",
+              "t": 9.525
+            }
+          ]
+        }
+      ],
+      "speechEnd": 10.152
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Put each video in Moodle, Canvas or Blackboard, right beside the activity that depends on it. And tell students the viewing time up front: twelve minutes of video before Tuesday.",
+      "storyboard": "Chalk-tinted stage showing a simplified LMS course page; the three names Moodle, Canvas, Blackboard flicker as tab labels on 'Moodle, Canvas or Blackboard'. Two short video tiles under 'Before class' snap directly beside an activity card marked 'In class: apply the ideas' on 'beside the activity'. Camera pushes in as a sticky note appears on 'twelve minutes': 'Twelve minutes of video before Tuesday' in coral handwritten-style Inter, with a small clock filling to 12. Hold on the note.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Put Videos Beside the Activity",
+        "text": "Upload to Moodle, Canvas or Blackboard. Before class: two or three short videos. In class: apply the ideas. \"Twelve minutes of video before Tuesday\"",
+        "notes": "Place each video in your LMS right next to the activity that depends on it, and tell students the total viewing time up front.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "slideleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 11.895,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 6.042,
+          "text": "Put each video in Moodle, Canvas or Blackboard, right beside the activity that depends on it.",
+          "words": [
+            {
+              "w": "Put",
+              "t": 0.55
+            },
+            {
+              "w": "each",
+              "t": 0.793
+            },
+            {
+              "w": "video",
+              "t": 0.991
+            },
+            {
+              "w": "in",
+              "t": 1.362
+            },
+            {
+              "w": "Moodle,",
+              "t": 1.478
+            },
+            {
+              "w": "Canvas",
+              "t": 2.059
+            },
+            {
+              "w": "or",
+              "t": 2.593
+            },
+            {
+              "w": "Blackboard,",
+              "t": 2.744
+            },
+            {
+              "w": "right",
+              "t": 3.754
+            },
+            {
+              "w": "beside",
+              "t": 3.987
+            },
+            {
+              "w": "the",
+              "t": 4.393
+            },
+            {
+              "w": "activity",
+              "t": 4.509
+            },
+            {
+              "w": "that",
+              "t": 5.055
+            },
+            {
+              "w": "depends",
+              "t": 5.217
+            },
+            {
+              "w": "on",
+              "t": 5.647
+            },
+            {
+              "w": "it.",
+              "t": 5.775
+            }
+          ]
+        },
+        {
+          "t": 6.552,
+          "end": 11.045,
+          "text": "And tell students the viewing time up front: twelve minutes of video before Tuesday.",
+          "words": [
+            {
+              "w": "And",
+              "t": 6.552
+            },
+            {
+              "w": "tell",
+              "t": 6.761
+            },
+            {
+              "w": "students",
+              "t": 7.017
+            },
+            {
+              "w": "the",
+              "t": 7.423
+            },
+            {
+              "w": "viewing",
+              "t": 7.539
+            },
+            {
+              "w": "time",
+              "t": 7.853
+            },
+            {
+              "w": "up",
+              "t": 8.12
+            },
+            {
+              "w": "front:",
+              "t": 8.271
+            },
+            {
+              "w": "twelve",
+              "t": 8.967
+            },
+            {
+              "w": "minutes",
+              "t": 9.316
+            },
+            {
+              "w": "of",
+              "t": 9.594
+            },
+            {
+              "w": "video",
+              "t": 9.699
+            },
+            {
+              "w": "before",
+              "t": 10.059
+            },
+            {
+              "w": "Tuesday.",
+              "t": 10.36
+            }
+          ]
+        }
+      ],
+      "speechEnd": 11.045
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "Start with one week and make two or three short videos. Try Basic first, or let Pro's a.i. direct your deck into a produced explainer. Ordinary slides in, extraordinary video out at powerpoint2vid.com.",
+      "storyboard": "Night stage. A calendar week grid lights a single column in amber on 'one week', with three small video tiles dropping in. Two pills slide up side by side: 'Basic: narration, captions, transitions' in teal and 'Pro: a.i.-directed explainers' in amber, the Pro pill glowing on 'Pro'. On 'ordinary slides in' a plain grey card enters left and exits right as a vibrant video frame on 'extraordinary video out'. Final lockup 'powerpoint2vid.com' at 140px on paper white text, held for 2 seconds.",
+      "minDuration": 12,
+      "slide": {
+        "title": "Start With One Week",
+        "text": "Pick one week. Make two or three short videos. Basic: narration, captions, transitions. Pro: a.i.-directed explainer videos",
+        "notes": "Start with one week. On Pro, a.i. directs your lecture deck into a produced explainer, or try Basic first. Ordinary slides in, extraordinary video out at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 16.043,
+      "beats": [
+        {
+          "t": 0.55,
+          "end": 3.325,
+          "text": "Start with one week and make two or three short videos.",
+          "words": [
+            {
+              "w": "Start",
+              "t": 0.55
+            },
+            {
+              "w": "with",
+              "t": 0.887
+            },
+            {
+              "w": "one",
+              "t": 1.073
+            },
+            {
+              "w": "week",
+              "t": 1.282
+            },
+            {
+              "w": "and",
+              "t": 1.56
+            },
+            {
+              "w": "make",
+              "t": 1.7
+            },
+            {
+              "w": "two",
+              "t": 1.874
+            },
+            {
+              "w": "or",
+              "t": 2.059
+            },
+            {
+              "w": "three",
+              "t": 2.164
+            },
+            {
+              "w": "short",
+              "t": 2.408
+            },
+            {
+              "w": "videos.",
+              "t": 2.686
+            }
+          ]
+        },
+        {
+          "t": 3.836,
+          "end": 8.816,
+          "text": "Try Basic first, or let Pro's a.i. direct your deck into a produced explainer.",
+          "words": [
+            {
+              "w": "Try",
+              "t": 3.836
+            },
+            {
+              "w": "Basic",
+              "t": 4.172
+            },
+            {
+              "w": "first,",
+              "t": 4.637
+            },
+            {
+              "w": "or",
+              "t": 5.252
+            },
+            {
+              "w": "let",
+              "t": 5.426
+            },
+            {
+              "w": "Pro's",
+              "t": 5.612
+            },
+            {
+              "w": "A.I.",
+              "t": 5.995
+            },
+            {
+              "w": "direct",
+              "t": 6.483
+            },
+            {
+              "w": "your",
+              "t": 6.831
+            },
+            {
+              "w": "deck",
+              "t": 7.017
+            },
+            {
+              "w": "into",
+              "t": 7.342
+            },
+            {
+              "w": "a",
+              "t": 7.574
+            },
+            {
+              "w": "produced",
+              "t": 7.655
+            },
+            {
+              "w": "explainer.",
+              "t": 8.12
+            }
+          ]
+        },
+        {
+          "t": 9.257,
+          "end": 13.843,
+          "text": "Ordinary slides in, extraordinary video out at powerpoint2vid.com.",
+          "words": [
+            {
+              "w": "Ordinary",
+              "t": 9.257
+            },
+            {
+              "w": "slides",
+              "t": 9.745
+            },
+            {
+              "w": "in,",
+              "t": 10.198
+            },
+            {
+              "w": "extraordinary",
+              "t": 10.651
+            },
+            {
+              "w": "video",
+              "t": 11.359
+            },
+            {
+              "w": "out",
+              "t": 11.742
+            },
+            {
+              "w": "at",
+              "t": 11.974
+            },
+            {
+              "w": "PowerPoint",
+              "t": 12.102
+            },
+            {
+              "w": "to",
+              "t": 12.694
+            },
+            {
+              "w": "vid",
+              "t": 12.822
+            },
+            {
+              "w": "dot",
+              "t": 13.077
+            },
+            {
+              "w": "com.",
+              "t": 13.344
+            }
+          ]
+        }
+      ],
+      "speechEnd": 13.843
+    }
+  ],
+  "voiceProvider": "elevenlabs"
+}
