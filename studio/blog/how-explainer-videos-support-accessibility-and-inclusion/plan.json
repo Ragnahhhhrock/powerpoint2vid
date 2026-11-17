@@ -1,0 +1,207 @@
+{
+  "title": "How Explainer Videos Support Accessibility and Inclusion (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0F1A2B",
+      "ink": "#16202E",
+      "paper": "#F7F4EE",
+      "teal": "#1F8A8A",
+      "sun": "#F2B544",
+      "coral": "#E2604A",
+      "mist": "#C9D3DE"
+    },
+    "font": "Inter",
+    "motion": "Calm, unhurried pace with soft ease-in-out curves and no flashing; slow push-ins and gentle lateral drifts. Every element arrives once and holds, modelling the accessible pacing the video preaches.",
+    "story": "Opens wide and dark on a doorway that can open or close, moves through light 'how it helps' and dark 'how it fails' contrasts, then gets close and practical with before/after fixes on paper, landing on a warm, open call to action."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "An explainer video can reach people a slide deck misses, or it can shut them out. Here's how to make sure it brings more people in.",
+      "storyboard": "Night stage. A tall paper-coloured doorway of light sits centre; on 'reach people' it swings wide and four soft figures drift toward it, each tagged in small mist labels: Deaf or hard of hearing, Blind or low vision, Second-language readers, Learning differences. On 'shut them out' the door narrows to a sliver and the figures pause. On 'brings more people in' it opens fully and the headline 'Accessible explainer videos' rises at 120px beneath. Slow push-in throughout; the overlapping original title text is cut and rebuilt cleanly.",
+      "minDuration": 10,
+      "slide": {
+        "title": "How Explainer Videos Support Accessibility",
+        "text": "Accessible explainer videos. Deaf or hard of hearing, blind or low vision. Second-language readers, learning differences",
+        "notes": "An explainer video can reach people a slide deck misses, or it can shut them out. Here's how to make sure it brings more people in.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 9.658,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 5.363,
+          "text": "An explainer video can reach people a slide deck misses, or it can shut them out."
+        },
+        {
+          "t": 5.643,
+          "end": 8.058,
+          "text": "Here's how to make sure it brings more people in."
+        }
+      ],
+      "speechEnd": 8.058
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Text alone asks a lot of the reader. Video spreads the load across voice and image, and lets people pause, rewind and rewatch whenever they need.",
+      "storyboard": "Paper stage. A single heavy block labelled 'Text' sits on one narrow column, sagging, on 'asks a lot'. On 'spreads the load' the block splits onto two pillars, teal 'Voice' and sun 'Image', and levels out. On 'pause, rewind and rewatch' three large playback icons click in one by one along the bottom, with a caption strip glowing beneath. Headline 'Spread the load' at 110px top-left; bullets rebuilt as the pillars and icons.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Video spreads the load across channels",
+        "text": "Narration plus visuals. Pace set by the viewer. Captions. Consistency",
+        "notes": "Text alone asks a lot of the reader. Video spreads the load across voice and image, and lets people pause, rewind and rewatch whenever they need.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 10.423,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 2.716,
+          "text": "Text alone asks a lot of the reader."
+        },
+        {
+          "t": 2.996,
+          "end": 9.323,
+          "text": "Video spreads the load across voice and image, and lets people pause, rewind and rewatch whenever they need."
+        }
+      ],
+      "speechEnd": 9.323
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "But video isn't automatically accessible. Missing captions, low contrast, colour-only signals and rushed pacing all shut people out. Each one is fixable at the slide and script stage.",
+      "storyboard": "Night stage, headline 'Not automatically accessible' at 100px. Four tiles appear in a row as each is named: an empty caption bar, grey-on-grey text, a red/green dot pair, a blurred fast-forward arrow, each marked by a coral outline and an icon, never colour alone. On 'fixable' a teal check slides over each tile in turn, and the tiles brighten. Camera holds wide and still; no actual flashing is shown.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Video isn't automatically accessible",
+        "text": "No captions. Meaning shown only visually. Colour as the only signal. Fast pacing or flashing",
+        "notes": "Missing captions, low contrast, colour-only signals and rushed pacing all shut people out. The good news is each one is fixable at the slide and script stage.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 13.478,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.354,
+          "text": "But video isn't automatically accessible."
+        },
+        {
+          "t": 3.634,
+          "end": 9.277,
+          "text": "Missing captions, low contrast, colour-only signals and rushed pacing all shut people out."
+        },
+        {
+          "t": 9.557,
+          "end": 12.378,
+          "text": "Each one is fixable at the slide and script stage."
+        }
+      ],
+      "speechEnd": 12.378
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Say what the chart actually shows, so blind and low-vision viewers can follow too. Then caption everything, check contrast, and keep body text at 24 point or larger.",
+      "storyboard": "Paper stage, split layout. Left: a simple two-bar chart with a speech bubble 'As you can see, this one is much higher.' struck through in coral on 'actually shows'. Right: the bubble rewrites to 'Enrolments in the online course are higher' in teal. Camera drifts right. On 'caption everything', 'check contrast' and '24 point', three chips stack at bottom: CC, 'WCAG AA', '24pt+', the last rendered large.",
+      "minDuration": 12,
+      "slide": {
+        "title": "Describe what matters on screen",
+        "text": "Before: \"As you can see, this one is much higher.\". After: \"Enrolments in the online course are higher...\". Caption everything. WCAG AA contrast, 24pt text or larger",
+        "notes": "Say what the chart actually shows, so blind and low-vision viewers can follow too. Then caption everything, check contrast and keep body text at 24 point or larger.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 12.815,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 5.816,
+          "text": "Say what the chart actually shows, so blind and low-vision viewers can follow too."
+        },
+        {
+          "t": 6.096,
+          "end": 11.715,
+          "text": "Then caption everything, check contrast, and keep body text at 24 point or larger."
+        }
+      ],
+      "speechEnd": 11.715
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Swap a vague 'Results' headline and colour-coded pie for a clear statement and labelled bars. Now it works with sound or without, and with any colour vision.",
+      "storyboard": "Mist stage. Close on a red, amber and green pie under the word 'Results'. On 'clear statement' the title morphs into 'Most students passed the first assessment' at 90px, and the pie unrolls into horizontal bars, each directly labelled Passed, Resubmit, Not yet submitted (no invented values, bars shown proportionally unnumbered). On 'any colour vision' the scene desaturates to greyscale and still reads perfectly. A small 'Transcript / summary' tab slides in at the corner.",
+      "minDuration": 11,
+      "slide": {
+        "title": "One slide, made inclusive",
+        "text": "Before: \"Results\", red, amber and green pie. After: \"Most students passed the first assessment\". Direct labels: Passed, Resubmit, Not yet submitted. Offer a transcript or summary too",
+        "notes": "Swap a vague headline and colour-coded pie for a clear statement and labelled bars. Now the message works with sound or without, and with any colour vision.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 11,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 5.839,
+          "text": "Swap a vague 'Results' headline and colour-coded pie for a clear statement and labelled bars."
+        },
+        {
+          "t": 6.119,
+          "end": 9.451,
+          "text": "Now it works with sound or without, and with any colour vision."
+        }
+      ],
+      "speechEnd": 9.451
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "On Pro, a.i. directs the video, timing gentle animation to your narration so viewers follow by ear and eye. Try Basic first at powerpoint2vid.com.",
+      "storyboard": "Night stage warming to sun glow, echoing the opening doorway now fully open. On 'directs the video' a slide card glides through the door and becomes a playing video frame with a waveform synced to soft motion. On 'Try Basic first' two pills appear: 'Basic' highlighted, 'Pro' beside it. 'powerpoint2vid.com' lands at 130px in paper on the final words and holds. Checklist bullets cut to keep the CTA clean.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Turn accessible decks into explainer videos",
+        "text": "Write descriptive speaker notes. Check contrast and text size. Include captions, ask for a calm look. Try Basic first; Pro for a.i. direction",
+        "notes": "On Pro, a.i. directs the video, timing gentle animation to your narration so viewers follow by ear and eye. Try Basic first at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 11.422,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 7.348,
+          "text": "On Pro, a.i. directs the video, timing gentle animation to your narration so viewers follow by ear and eye."
+        },
+        {
+          "t": 7.628,
+          "end": 10.322,
+          "text": "Try Basic first at powerpoint2vid.com."
+        }
+      ],
+      "speechEnd": 10.322
+    }
+  ],
+  "voiceProvider": "piper"
+}

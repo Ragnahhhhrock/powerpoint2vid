@@ -1,0 +1,106 @@
+{
+  "title": "How Explainer Videos Support Accessibility and Inclusion (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "How Explainer Videos Support Accessibility",
+      "bullets": [
+        "Accessible explainer videos",
+        "Deaf or hard of hearing, blind or low vision",
+        "Second-language readers, learning differences"
+      ],
+      "notes": "An explainer video can reach people a slide deck misses, or it can shut them out. Here's how to make sure it brings more people in.",
+      "minDuration": 9
+    },
+    {
+      "title": "Video spreads the load across channels",
+      "bullets": [
+        "Narration plus visuals",
+        "Pace set by the viewer",
+        "Captions",
+        "Consistency"
+      ],
+      "notes": "Text alone asks a lot of the reader. Video spreads the load across voice and image, and lets people pause, rewind and rewatch whenever they need.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Video isn't automatically accessible",
+      "bullets": [
+        "No captions",
+        "Meaning shown only visually",
+        "Colour as the only signal",
+        "Fast pacing or flashing"
+      ],
+      "notes": "Missing captions, low contrast, colour-only signals and rushed pacing all shut people out. The good news is each one is fixable at the slide and script stage.",
+      "minDuration": 10,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Describe what matters on screen",
+      "bullets": [
+        "Before: \"As you can see, this one is much higher.\"",
+        "After: \"Enrolments in the online course are higher...\"",
+        "Caption everything",
+        "WCAG AA contrast, 24pt text or larger"
+      ],
+      "notes": "Say what the chart actually shows, so blind and low-vision viewers can follow too. Then caption everything, check contrast and keep body text at 24 point or larger.",
+      "minDuration": 12,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "One slide, made inclusive",
+      "bullets": [
+        "Before: \"Results\", red, amber and green pie",
+        "After: \"Most students passed the first assessment\"",
+        "Direct labels: Passed, Resubmit, Not yet submitted",
+        "Offer a transcript or summary too"
+      ],
+      "notes": "Swap a vague headline and colour-coded pie for a clear statement and labelled bars. Now the message works with sound or without, and with any colour vision.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Turn accessible decks into explainer videos",
+      "bullets": [
+        "Write descriptive speaker notes",
+        "Check contrast and text size",
+        "Include captions, ask for a calm look",
+        "Try Basic first; Pro for a.i. direction"
+      ],
+      "notes": "On Pro, a.i. directs the video, timing gentle animation to your narration so viewers follow by ear and eye. Try Basic first at powerpoint2vid.com.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}
