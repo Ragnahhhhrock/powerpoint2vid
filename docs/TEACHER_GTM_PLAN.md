@@ -75,14 +75,14 @@ Four education tiers, all at Pro quality (a.i.-directed, no watermark), A$ ex GS
 
 Basic (watermarked) stays the try-before-you-buy route. Never call it "free".
 
-**Open question:** confirm real cost per Pro video (a.i. plus ElevenLabs). Allowances assume under about A$1 per video; if not, shrink allowances, not prices.
+**Open question:** confirm real cost per Pro video (a.i. and rendering). Allowances assume under about A$1 per video; if not, shrink allowances, not prices.
 
 ## Product changes needed for education
 
 | Change | Why | Needed for | Effort |
 | --- | --- | --- | --- |
 | Teacher verification (school email domain) + Teacher plan in Stripe | Unlocks education pricing | Teacher plan | Small |
-| Classroom voice presets (Australian accents, slower speed) via ElevenLabs | Easier to follow; sounds local | Teacher plan | Small |
+| Classroom voice presets (Australian accents, slower speed) with a different narration voice | Easier to follow; sounds local | Teacher plan | Small |
 | Lesson mode: "Lesson" style, recap slide, pause-and-think prompts | A lesson, not a marketing explainer | Teacher plan | Medium |
 | Caption file download (VTT/SRT) | LMS players and accessibility | Faculty Pack | Small |
 | Shared library and team billing | Group buying | Faculty Pack, School | Medium |

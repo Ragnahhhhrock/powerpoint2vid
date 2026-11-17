@@ -2,8 +2,7 @@
 /* PowerPoint2Vid job runner: a small HTTP service that turns a deck into a video.
  * Runs in a container (see Dockerfile). Storage-agnostic: the caller sends the deck and fetches the outputs.
  *
- *   PUT  /jobs/<id>             body = .pptx bytes; headers: x-direction (optional), x-voice (optional ElevenLabs voice id),
- *                               x-tts-key (optional ElevenLabs key, used when the runner has no ELEVENLABS_API_KEY of its own),
+ *   PUT  /jobs/<id>             body = .pptx bytes; headers: x-direction (optional),
  *                               x-callback-url + x-callback-token (optional: POSTed {id,status,step,pct} on change)
  *   GET  /jobs/<id>             -> {status:'queued'|'running'|'done'|'failed', step, pct, msg, degraded, slides}
  *   GET  /jobs/<id>/<file>      file in {video.mp4, video.webm, captions.vtt, poster.jpg}
@@ -11,8 +10,8 @@
  *   GET  /health
  * Every request except /health needs header  x-p2v-secret: $RUNNER_SECRET.
  * Env: RUNNER_SECRET (required), PORT=8080, DATA_DIR=/data, ANTHROPIC_API_KEY (optional: without it jobs use the
- * slides-only fallback), ELEVENLABS_API_KEY / ELEVENLABS_MODEL (optional: narration voice; without a key, Piper),
- * P2V_VOICE=/voices/en_US-lessac-medium.onnx (Piper fallback voice), P2V_CONCURRENCY=1, MAX_DECK_MB=50, JOB_TTL_HOURS=6.
+ * slides-only fallback),
+ * P2V_VOICE=/voices/en_US-lessac-medium.onnx (Piper narration voice), P2V_CONCURRENCY=1, MAX_DECK_MB=50, JOB_TTL_HOURS=6.
  */
 import http from 'node:http';
 import fs from 'node:fs';
@@ -53,19 +52,14 @@ async function work(id) {
     const plan = JSON.parse(fs.readFileSync(path.join(d, 'plan.json'), 'utf8'));
     if (j.direction) { plan.direction = j.direction.slice(0, 1000); fs.writeFileSync(path.join(d, 'plan.json'), JSON.stringify(plan)); }
     set(id, { slides: plan.scenes.length });
-    const tts = {};
-    if (j.voice) tts.P2V_TTS_VOICE = j.voice;
-    if (!process.env.ELEVENLABS_API_KEY && j.ttsKey) tts.ELEVENLABS_API_KEY = j.ttsKey;
     await exec('node', [path.join(HERE, 'director.mjs'), d, '--voice', VOICE], (l) => {
       const m = l.match(/^\[(\d+)%\] (\w+) ?(.*)$/); if (m) set(id, { step: m[2], pct: +m[1], msg: m[3] });
-    }, tts);
-    delete j.ttsKey;
+    });
     const after = JSON.parse(fs.readFileSync(path.join(d, 'plan.json'), 'utf8'));
     if (!fs.existsSync(path.join(d, 'out', 'video.mp4'))) throw new Error('no video produced');
     set(id, { status: 'done', step: 'done', pct: 100, msg: '', degraded: !!after.degraded });
   } catch (e) {
     console.error(id, e.message);
-    delete j.ttsKey;
     set(id, { status: 'failed', msg: e.message.includes('slides') ? e.message.slice(0, 200) : 'We could not finish this video.' });
   }
 }
@@ -96,14 +90,14 @@ http.createServer((req, res) => {
     req.pipe(out);
     out.on('finish', () => {
       if (over) return;
-      jobs.set(id, { status: 'queued', step: 'queued', pct: 0, msg: '', direction: req.headers['x-direction'], voice: /^[A-Za-z0-9]{10,40}$/.test(req.headers['x-voice'] || '') ? req.headers['x-voice'] : undefined, ttsKey: req.headers['x-tts-key'] || undefined, cb: req.headers['x-callback-url'], token: req.headers['x-callback-token'] });
+      jobs.set(id, { status: 'queued', step: 'queued', pct: 0, msg: '', direction: req.headers['x-direction'], cb: req.headers['x-callback-url'], token: req.headers['x-callback-token'] });
       queue.push(id); pump(); send(res, 202, { id, status: 'queued', position: queue.length });
     });
     return;
   }
   if (req.method === 'GET' && !file) {
     const j = jobs.get(id); if (!j) return send(res, 404, { error: 'not found' });
-    const { cb, token, direction, voice, ttsKey, ...pub } = j; return send(res, 200, pub);
+    const { cb, token, direction, ...pub } = j; return send(res, 200, pub);
   }
   if (req.method === 'GET' && FILES.has(file)) {
     const p = path.join(dir(id), 'out', file); if (!fs.existsSync(p)) return send(res, 404, { error: 'not ready' });

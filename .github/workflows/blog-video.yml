@@ -3,8 +3,8 @@ name: Blog explainer video
 # 00:00 Perth tonight, embeds it in the post, and pushes to main (Cloudflare Pages deploys it).
 # If anything fails nothing is committed and the post goes live without a video.
 # Manual run: pick a post (slug) to make or remake its video; tick "revoice" to keep the scenes and only
-# re-narrate and re-render (e.g. swap the Piper voice for ElevenLabs on an earlier post).
-# Needs repo secrets ELEVENLABS_API_KEY and ANTHROPIC_API_KEY.
+# re-narrate and re-render.
+# Narration is the local Piper voice. Needs the repo secret ANTHROPIC_API_KEY.
 on:
   schedule:
     - cron: '0 12 * * *'
@@ -19,7 +19,7 @@ on:
         type: boolean
         default: false
       revoice:
-        description: 'Keep existing scenes, only re-narrate with ElevenLabs and re-render'
+        description: 'Keep existing scenes, only re-narrate and re-render'
         type: boolean
         default: false
 permissions:
@@ -34,23 +34,17 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check keys
         env:
-          E: ${{ secrets.ELEVENLABS_API_KEY }}
           A: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          [ -n "$E" ] || { echo "::error::Add the ELEVENLABS_API_KEY repo secret"; exit 1; }
           [ -n "$A" ] || [ "${{ inputs.revoice }}" = "true" ] || { echo "::error::Add the ANTHROPIC_API_KEY repo secret"; exit 1; }
       - name: Install tools
         run: |
           apt-get update && apt-get install -y --no-install-recommends python3 python3-pip ffmpeg fonts-inter fonts-liberation fonts-noto-core git libreoffice-impress poppler-utils
-          pip3 install python-pptx markdown pillow
+          pip3 install python-pptx markdown pillow piper-tts
+          mkdir -p /tmp/voices
+          curl -fsSL -o /tmp/voices/en_US-lessac-medium.onnx https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/lessac/medium/en_US-lessac-medium.onnx
+          curl -fsSL -o /tmp/voices/en_US-lessac-medium.onnx.json https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/lessac/medium/en_US-lessac-medium.onnx.json
           cd studio && npm ci
-      - name: Restore narration cache
-        # Keeps ElevenLabs responses between runs, so a retry or re-voice of the same script spends no credits.
-        uses: actions/cache@v4
-        with:
-          path: .tts-cache
-          key: tts-cache-${{ github.run_id }}
-          restore-keys: tts-cache-
       - name: Pick the post
         id: pick
         run: |
@@ -61,7 +55,6 @@ jobs:
       - name: Make the video
         if: steps.pick.outputs.slug != '' && inputs.upload_only != true
         env:
-          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: scripts/make-blog-video.sh "${{ steps.pick.outputs.slug }}" ${{ inputs.revoice && '--revoice' || '' }}
       - name: Upload to YouTube
