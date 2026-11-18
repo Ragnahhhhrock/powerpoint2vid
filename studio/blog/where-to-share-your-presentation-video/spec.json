@@ -1,0 +1,100 @@
+{
+  "title": "Where to Share Your Presentation Video (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Where to Share Your Presentation Video",
+      "bullets": [],
+      "notes": "You've turned your deck into a video. Now it needs an audience, and where you share it decides who watches to the end.",
+      "minDuration": 9
+    },
+    {
+      "title": "Get the file ready first",
+      "bullets": [
+        "Check the format: MP4, with WebM available",
+        "Name the file clearly",
+        "Make the first slide count",
+        "Burn in captions"
+      ],
+      "notes": "Start with an MP4 and a clear file name, like Q4 onboarding IT setup. Use a strong title slide as the thumbnail, and burn in captions for people watching on mute.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Website, YouTube and LinkedIn",
+      "bullets": [
+        "Website: product explainers",
+        "YouTube: tutorials found through search",
+        "LinkedIn: first few seconds carry the point"
+      ],
+      "notes": "Put explainers on your website beside the content they explain. Use YouTube to be found in search, and on LinkedIn, make the first few seconds carry the point.",
+      "minDuration": 11,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Courses, email and internal tools",
+      "bullets": [
+        "LMS: one concept each",
+        "Email: share a link, not an attachment",
+        "Say the length up front",
+        "Approved storage for confidential videos"
+      ],
+      "notes": "For courses, place each video beside its activity. By email, send a link and say the length, like a 3-minute walkthrough. Keep confidential videos in approved internal storage.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "One deck, several versions",
+      "bullets": [
+        "Full version for website, YouTube or LMS",
+        "Short version: three to five slides for social",
+        "Personalised version with the client's name"
+      ],
+      "notes": "You rarely need a brand new video for each channel. Duplicate the deck and adjust it, because the speaker notes do most of the work.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Make a version for every channel",
+      "bullets": [
+        "Add your .pptx",
+        "Download MP4 versions",
+        "Pro: a.i. directs each cut",
+        "Try Basic first"
+      ],
+      "notes": "Turn one deck into videos for every channel. On Pro, a.i. directs each cut with a tight story and punchy scenes. Try Basic first at powerpoint2vid.com.",
+      "minDuration": 10,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}

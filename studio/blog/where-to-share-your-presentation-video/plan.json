@@ -1,0 +1,264 @@
+{
+  "title": "Where to Share Your Presentation Video (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0E1420",
+      "ink": "#1A2233",
+      "paper": "#F6F3EC",
+      "signal": "#FF6B4A",
+      "sky": "#4FA3FF",
+      "mint": "#3DD6A5",
+      "mist": "#9AA6B8"
+    },
+    "font": "Inter Display",
+    "motion": "Brisk and confident: elements arrive on a snappy ease-out with a slight overshoot, then settle and hold. The camera makes slow push-ins on hero type and one decisive lateral pan per scene, never drifting aimlessly.",
+    "story": "A journey from one finished file to many audiences: we open in the dark with a single glowing video tile, move through bright paper-toned 'how-to' scenes, and branch into channels before landing back on night with the tile multiplied for the call to action. Wide map-like shots of channels alternate with tight close-ups on a single file or a single word."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "You've turned your deck into a video. Now it needs an audience, and where you share it decides who watches to the end.",
+      "storyboard": "Night stage, a single paper-white video tile glows at center with a play triangle in signal coral. On 'needs an audience', faint mist-grey dots fade in around it like an empty crowd. On 'where you share it', the camera pulls wide and three thin paths sweep out from the tile toward the edges. On 'watches to the end', a coral progress bar fills along the tile's bottom edge and the headline 'Where to share your video' lands at 120px above it. The original title is kept as the headline; the empty white slide is otherwise rebuilt entirely.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Where to Share Your Presentation Video",
+        "text": "",
+        "notes": "You've turned your deck into a video. Now it needs an audience, and where you share it decides who watches to the end.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 8.833,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 2.681,
+          "text": "You've turned your deck into a video."
+        },
+        {
+          "t": 2.961,
+          "end": 7.233,
+          "text": "Now it needs an audience, and where you share it decides who watches to the end."
+        }
+      ],
+      "speechEnd": 7.233
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Get the file ready first. Start with an MP4 and a clear name, like Q4 onboarding IT setup.",
+      "storyboard": "Paper stage, close-up on a large file card. On 'MP4', a bold 'MP4' badge stamps onto the card in sky blue with a small 'WebM' tag sliding in beside it. On 'clear name', a messy filename 'final_v3_REAL.mp4' types out, strikes through in coral, and rewrites as 'Q4 onboarding IT setup' at 96px. The camera eases in slightly as the clean name settles and holds. The title survives as a small kicker 'Get the file ready first'; the remaining bullets move to the next scene.",
+      "minDuration": 8,
+      "slide": {
+        "title": "Get the file ready first",
+        "text": "Check the format: MP4, with WebM available. Name the file clearly. Make the first slide count. Burn in captions",
+        "notes": "Start with an MP4 and a clear file name, like Q4 onboarding IT setup. Use a strong title slide as the thumbnail, and burn in captions for people watching on mute.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 8,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 2.414,
+          "text": "Get the file ready first."
+        },
+        {
+          "t": 2.694,
+          "end": 6.769,
+          "text": "Start with an MP4 and a clear name, like Q4 onboarding IT setup."
+        }
+      ],
+      "speechEnd": 6.769
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "Use a strong title slide as the thumbnail, and burn in captions for people watching on mute.",
+      "storyboard": "Same paper stage, the file card flips to reveal a phone frame on the left. On 'title slide as the thumbnail', a bold title card snaps into the phone screen as its thumbnail. On 'on mute', a coral muted-speaker icon pops in at the corner, and on 'burn in captions' a caption bar slides up across the bottom of the screen, words highlighting in sync. The camera pans right to the phrase 'Captions on. Sound off.' set at 110px in ink.",
+      "minDuration": 8,
+      "slide": {
+        "title": "Get the file ready first",
+        "text": "Check the format: MP4, with WebM available. Name the file clearly. Make the first slide count. Burn in captions",
+        "notes": "Start with an MP4 and a clear file name, like Q4 onboarding IT setup. Use a strong title slide as the thumbnail, and burn in captions for people watching on mute.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 7.404,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 5.804,
+          "text": "Use a strong title slide as the thumbnail, and burn in captions for people watching on mute."
+        }
+      ],
+      "speechEnd": 5.804
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Put explainers on your website beside the content they explain. Use YouTube to be found in search. On LinkedIn, make the first few seconds carry the point.",
+      "storyboard": "Night stage, wide shot of three columns built like channel cards, revealed one at a time. On 'website', a minimal browser frame appears with a video sitting next to product copy, labelled 'Website: explainers'. On 'found in search', a search bar types 'tutorial' and the video rises to the top result, labelled 'YouTube: search'. On 'first few seconds', a LinkedIn-style feed card shows a timer that lights coral for 0 to 3 seconds, labelled 'LinkedIn: first seconds'. The three bullets become these three animated cards; the slide title is cut.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Website, YouTube and LinkedIn",
+        "text": "Website: product explainers. YouTube: tutorials found through search. LinkedIn: first few seconds carry the point",
+        "notes": "Put explainers on your website beside the content they explain. Use YouTube to be found in search, and on LinkedIn, make the first few seconds carry the point.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 11.156,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.318,
+          "text": "Put explainers on your website beside the content they explain."
+        },
+        {
+          "t": 4.598,
+          "end": 6.479,
+          "text": "Use YouTube to be found in search."
+        },
+        {
+          "t": 6.759,
+          "end": 10.056,
+          "text": "On LinkedIn, make the first few seconds carry the point."
+        }
+      ],
+      "speechEnd": 10.056
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "For courses, place each video beside its activity. By email, send a link and say the length, like a 3-minute walkthrough.",
+      "storyboard": "Mint-tinted paper stage, split layout. On 'courses', a lesson outline appears on the left with a small video tile clicking in beside one activity, labelled 'One concept each'. On 'send a link', an email draft slides in on the right; a heavy paperclip attachment drops out with a coral cross and a clean link chip replaces it. On '3-minute walkthrough', the chip reads '3-minute walkthrough' and the '3-minute' pulses in sky blue, holding as the camera eases in.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Courses, email and internal tools",
+        "text": "LMS: one concept each. Email: share a link, not an attachment. Say the length up front. Approved storage for confidential videos",
+        "notes": "For courses, place each video beside its activity. By email, send a link and say the length, like a 3-minute walkthrough. Keep confidential videos in approved internal storage.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "smoothup",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 9.321,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.644,
+          "text": "For courses, place each video beside its activity."
+        },
+        {
+          "t": 3.924,
+          "end": 7.721,
+          "text": "By email, send a link and say the length, like a 3-minute walkthrough."
+        }
+      ],
+      "speechEnd": 7.721
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "Keep confidential videos in approved internal storage.",
+      "storyboard": "Hard cut to night stage, tight close-up. A single video tile slides toward a solid ink vault shape; on 'confidential', a coral lock icon snaps onto the tile. On 'approved internal storage', the vault door closes with a mint check mark and the words 'Approved storage only' land at 120px. Long hold on the locked vault.",
+      "minDuration": 6,
+      "slide": {
+        "title": "Courses, email and internal tools",
+        "text": "LMS: one concept each. Email: share a link, not an attachment. Say the length up front. Approved storage for confidential videos",
+        "notes": "For courses, place each video beside its activity. By email, send a link and say the length, like a 3-minute walkthrough. Keep confidential videos in approved internal storage.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "cut",
+        "duration": 0
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 5.453,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.853,
+          "text": "Keep confidential videos in approved internal storage."
+        }
+      ],
+      "speechEnd": 3.853
+    },
+    {
+      "file": "scenes/scene-6.js",
+      "narration": "You rarely need a brand new video for each channel. Duplicate the deck and adjust it: a full version, a short three-to-five-slide cut, and one personalised with the client's name.",
+      "storyboard": "Paper stage, one deck icon in the center. On 'duplicate the deck', it splits into three copies that fan out left, center and right. On 'full version', the left copy expands with tags 'Website \u00b7 YouTube \u00b7 LMS'; on 'short three-to-five-slide cut', the middle copy shrinks to a stack of 5 cards labelled 'Social'; on 'client's name', the right copy's title rewrites to 'Hi, Acme' in coral. The headline 'One deck, several versions' sits top at 100px; the bullets are rebuilt as these three copies.",
+      "minDuration": 12,
+      "slide": {
+        "title": "One deck, several versions",
+        "text": "Full version for website, YouTube or LMS. Short version: three to five slides for social. Personalised version with the client's name",
+        "notes": "You rarely need a brand new video for each channel. Duplicate the deck and adjust it, because the speaker notes do most of the work.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "dissolve",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-6.wav",
+      "duration": 12.083,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.575,
+          "text": "You rarely need a brand new video for each channel."
+        },
+        {
+          "t": 3.855,
+          "end": 10.983,
+          "text": "Duplicate the deck and adjust it: a full version, a short three-to-five-slide cut, and one personalised with the client's name."
+        }
+      ],
+      "speechEnd": 10.983
+    },
+    {
+      "file": "scenes/scene-7.js",
+      "narration": "Turn one deck into videos for every channel. On Pro, a.i. directs each cut with a tight story and punchy scenes. Try Basic first at powerpoint2vid.com.",
+      "storyboard": "Night stage, the opening video tile returns at center. On 'one deck into videos', a .pptx file drops in and multiplies into a row of MP4 tiles, each lit in sky, mint or coral. On 'a.i. directs each cut', a small 'Pro' badge glows over the row as tiles reorder themselves crisply. On 'Try Basic first', everything recedes and 'powerpoint2vid.com' lands at 130px in paper with a coral underline, holding for a full beat.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Make a version for every channel",
+        "text": "Add your .pptx. Download MP4 versions. Pro: a.i. directs each cut. Try Basic first",
+        "notes": "Turn one deck into videos for every channel. On Pro, a.i. directs each cut with a tight story and punchy scenes. Try Basic first at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-7.wav",
+      "duration": 11.458,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.18,
+          "text": "Turn one deck into videos for every channel."
+        },
+        {
+          "t": 3.46,
+          "end": 7.257,
+          "text": "On Pro, a.i. directs each cut with a tight story and punchy scenes."
+        },
+        {
+          "t": 7.537,
+          "end": 10.358,
+          "text": "Try Basic first at powerpoint2vid.com."
+        }
+      ],
+      "speechEnd": 10.358
+    }
+  ],
+  "voiceProvider": "piper"
+}
