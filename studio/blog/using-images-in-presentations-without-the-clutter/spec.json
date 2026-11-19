@@ -1,0 +1,101 @@
+{
+  "title": "Using Images in Presentations Without the Clutter (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Using Images Without the Clutter",
+      "bullets": [],
+      "notes": "Most decks have too many pictures, too small, placed wherever there was room. The fix isn't design talent. It's a few simple rules.",
+      "minDuration": 9
+    },
+    {
+      "title": "Ask One Question Before Adding Images",
+      "bullets": [
+        "What would the viewer lose without it?",
+        "Nothing? Leave it out",
+        "A screenshot of the actual product",
+        "A photo of the real place, team or object"
+      ],
+      "notes": "Before adding any image, ask what the viewer would lose if it were gone. If the answer is nothing, leave it out.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Choose Fewer, Bigger, Well-Cropped Pictures",
+      "bullets": [
+        "One strong image at full width",
+        "Three photos? Consider three slides",
+        "Crop to the button, field or chart",
+        "Faces on the upper third line"
+      ],
+      "notes": "One strong image at full width beats three small ones. Then crop away anything that doesn't support the point.",
+      "minDuration": 10,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Keep Text Off Busy Areas",
+      "bullets": [
+        "Pick one layout per slide",
+        "Text over sky, a plain wall or blur",
+        "Or add a dark or light band",
+        "Aim for 4.5:1 contrast, 3:1 for large text"
+      ],
+      "notes": "Pick one layout per slide. If a headline sits over a photo, find the quiet part, or add a contrast band behind it.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "One Image, One Claim, One Line",
+      "bullets": [
+        "Before: four stamp-sized photos, eight features",
+        "After: one large photo of the Trail Pack",
+        "\"Under 1 kg\" and \"Fits a 15-inch laptop\"",
+        "Other products moved to their own slides"
+      ],
+      "notes": "Four tiny product photos became one large shot of the Trail Pack. One image, one claim, one sentence of support. The narration does the rest.",
+      "minDuration": 12,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Clean Images Make Better Video",
+      "bullets": [
+        "A slow zoom on static photos",
+        "Images arrive as the narration mentions them",
+        "Leave the bottom calm for captions"
+      ],
+      "notes": "Fewer, bigger images make a better video. On Pro, a.i. directs it, framing each picture as a scene timed to your voice. Try Basic first at powerpoint2vid.com.",
+      "minDuration": 12,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}

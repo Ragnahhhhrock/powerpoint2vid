@@ -1,0 +1,105 @@
+/* Scene 2: "One strong image at full width beats three small ones. Then crop away anything that doesn't support the point."
+ * Storyboard: night stage, three small photo frames in a row. On "strong" two of them leave with quick ease-in
+ * exits and the third (a product screenshot) grows edge to edge in a long ease-out settle. On "crop" teal crop
+ * marks snap in and tighten around the card holding the buy button while everything else dims. Near "point" a faint
+ * rule-of-thirds grid flashes, with the upper third line in amber running through the avatar's face.
+ * On-screen text: "Fewer. Bigger. Cropped." at 110px. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const strong = ctx.at(0, 'strong'), full = ctx.at(0, 'full'), three = ctx.at(0, 'three');
+  const crop = ctx.at(1, 'crop'), support = ctx.at(1, 'support'), point = ctx.at(1, 'point');
+  const S = 0.25, FY = 400, FX = [180, 720, 1260];
+  const CARD = { x: 1100, y: 250, w: 640, h: 420 };
+
+  stage.style.background = 'radial-gradient(70% 60% at 50% 45%, #232838 0%, var(--night) 75%)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '50% 45%' });
+
+  const bar = (p, x, y, w, h, c, r) => el('div', 'abs', p, { left: x + 'px', top: y + 'px', width: w + 'px', height: h + 'px', background: c, borderRadius: (r == null ? h / 2 : r) + 'px' });
+  const mkFrame = (i) => el('div', 'abs', cam, { left: 0, top: 0, width: '1920px', height: '1080px', overflow: 'hidden', borderRadius: '40px', transformOrigin: '0 0', boxShadow: '0 60px 160px rgba(0,0,0,.6)' });
+
+  /* photo A: landscape */
+  const fA = mkFrame(0);
+  fA.style.background = 'linear-gradient(180deg, #f6c27a 0%, #e8604c 60%, #7a3a3a 100%)';
+  fA.innerHTML = `<svg class="abs" width="1920" height="1080" style="left:0;top:0"><circle cx="1300" cy="380" r="140" fill="#fff3d6" opacity=".85"/>
+    <path d="M0 760 L380 420 L700 700 L1040 360 L1480 760 L1920 520 L1920 1080 L0 1080Z" fill="#3b2a3a"/>
+    <path d="M0 900 L520 640 L980 880 L1500 680 L1920 860 L1920 1080 L0 1080Z" fill="#1F2230"/></svg>`;
+  /* photo B: portrait */
+  const fB = mkFrame(1);
+  fB.style.background = 'linear-gradient(160deg, #2BB3A3 0%, #1a6e66 100%)';
+  fB.innerHTML = `<svg class="abs" width="1920" height="1080" style="left:0;top:0"><circle cx="960" cy="400" r="190" fill="#F6F3EC" opacity=".9"/>
+    <path d="M560 1080 Q 960 560 1360 1080Z" fill="#F6F3EC" opacity=".9"/></svg>`;
+  /* photo C: product screenshot */
+  const fC = mkFrame(2);
+  fC.style.background = 'var(--paper)';
+  bar(fC, 0, 0, 1920, 100, 'var(--ink)', 0);
+  bar(fC, 60, 34, 180, 32, 'var(--amber)');
+  [0, 1, 2, 3].forEach((k) => bar(fC, 1180 + k * 160, 40, 120, 20, 'rgba(255,255,255,.3)'));
+  bar(fC, 0, 100, 320, 980, '#e9e4d8', 0);
+  for (let k = 0; k < 8; k++) bar(fC, 50, 160 + k * 80, 200 - (k % 3) * 40, 22, 'rgba(91,98,117,.35)');
+  const card = (x, y, w, h) => { const c = bar(fC, x, y, w, h, '#fff', 24); c.style.boxShadow = '0 10px 30px rgba(31,34,48,.12)'; return c; };
+  card(400, 250, 640, 420); bar(fC, 450, 300, 540, 200, '#d8e9e6', 16); bar(fC, 450, 530, 380, 26, 'rgba(91,98,117,.4)'); bar(fC, 450, 580, 260, 22, 'rgba(91,98,117,.25)');
+  card(400, 720, 1340, 300); for (let k = 0; k < 5; k++) bar(fC, 450 + k * 255, 770, 210, 180, k % 2 ? '#f3e3c8' : '#e3e6ee', 14);
+  /* the hero card */
+  card(CARD.x, CARD.y, CARD.w, CARD.h);
+  const ava = el('div', 'abs', fC, { left: CARD.x + 60 + 'px', top: CARD.y + CARD.h / 3 - 60 + 'px', width: '120px', height: '120px', borderRadius: '50%', background: 'radial-gradient(circle at 50% 38%, #f6d2b0 0 30%, #2BB3A3 31%)' });
+  bar(fC, CARD.x + 210, CARD.y + 110, 330, 28, 'rgba(31,34,48,.7)'); bar(fC, CARD.x + 210, CARD.y + 160, 240, 22, 'rgba(91,98,117,.35)');
+  const btn = bar(fC, CARD.x + 60, CARD.y + 290, 360, 84, 'var(--coral)', 42);
+  btn.style.boxShadow = '0 10px 30px rgba(232,96,76,.35)';
+  bar(btn, 70, 32, 160, 20, 'rgba(255,255,255,.9)');
+  el('div', 'abs', btn, { left: '270px', top: '26px', width: '22px', height: '22px', borderTop: '6px solid #fff', borderRight: '6px solid #fff', transform: 'rotate(45deg)' });
+
+  /* crop window inside fC */
+  const cw = el('div', 'abs', fC, { left: '40px', top: '40px', width: '1840px', height: '1000px', boxShadow: '0 0 0 3000px rgba(10,11,15,0)', opacity: 0 });
+  const corners = [[0, 0, 'Top', 'Left'], [1, 0, 'Top', 'Right'], [0, 1, 'Bottom', 'Left'], [1, 1, 'Bottom', 'Right']].map(([rx, ry, a, b]) => {
+    const c = el('div', 'abs', cw, { width: '64px', height: '64px', [rx ? 'right' : 'left']: '-10px', [ry ? 'bottom' : 'top']: '-10px' });
+    c.style['border' + a] = '8px solid var(--teal)'; c.style['border' + b] = '8px solid var(--teal)';
+    c.style.filter = 'drop-shadow(0 0 12px rgba(43,179,163,.8))';
+    return c;
+  });
+  const grid = el('div', 'abs', cw, { inset: 0, opacity: 0 });
+  [1, 2].forEach((k) => {
+    el('div', 'abs', grid, { left: k * 33.333 + '%', top: 0, bottom: 0, width: '2px', background: 'rgba(43,179,163,.55)' });
+    if (k === 2) el('div', 'abs', grid, { top: k * 33.333 + '%', left: 0, right: 0, height: '2px', background: 'rgba(43,179,163,.55)' });
+  });
+  const upper = el('div', 'abs', grid, { top: 'calc(33.333% - 3px)', left: 0, right: 0, height: '6px', background: 'var(--amber)', boxShadow: '0 0 24px rgba(242,165,65,.9)', transformOrigin: '0 50%' });
+
+  /* text band */
+  const band = el('div', 'abs', stage, { left: 0, right: 0, bottom: 0, height: '380px', background: 'linear-gradient(180deg, transparent, rgba(20,22,28,.9) 55%)', opacity: 0 });
+  const line = el('div', 'abs', stage, { left: '110px', top: '850px', font: '800 110px/1 Inter Display, Inter', letterSpacing: '-.04em', whiteSpace: 'nowrap' });
+  const words = [['Fewer.', '#fff'], ['Bigger.', 'var(--amber)'], ['Cropped.', 'var(--teal)']].map(([w, c]) => {
+    const s = el('span', '', line, { display: 'inline-block', color: c, marginRight: '34px' }); s.textContent = w; return s;
+  });
+
+  ctx.fx.vignette({ strength: 0.5 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  /* ---- timeline ---- */
+  [fA, fB, fC].forEach((f, i) => gsap.set(f, { x: FX[i], y: FY, scale: S }));
+  gsap.set(words, { opacity: 0, y: 40 });
+  tl.from([fA, fB, fC], { opacity: 0, y: FY + 50, duration: 0.6, stagger: 0.08 }, 0);
+  tl.to(cam, { scale: 1.03, duration: ctx.dur, ease: 'none' }, 0);
+
+  // "strong": two clear away, the survivor grows
+  tl.to(fA, { x: -700, opacity: 0, duration: 0.5, ease: 'power3.in' }, strong - 0.15);
+  tl.to(fB, { y: 1250, opacity: 0, duration: 0.5, ease: 'power3.in' }, strong - 0.05);
+  tl.to(fC, { x: 0, y: 0, scale: 1, borderRadius: 0, duration: 1.7, ease: 'power3.out' }, strong + 0.3);
+  tl.to(words[0], { opacity: 1, y: 0, duration: 0.7, ease: 'back.out(1.6)' }, strong + 0.25);
+  tl.to(band, { opacity: 1, duration: 0.8 }, full);
+  tl.to(words[1], { opacity: 1, y: 0, duration: 0.7, ease: 'back.out(1.6)' }, Math.max(full, strong + 0.6));
+
+  // "crop": marks snap in, tighten on the card
+  tl.to(cw, { opacity: 1, duration: 0.15 }, crop - 0.1);
+  tl.from(corners, { scale: 1.6, opacity: 0, duration: 0.35, ease: 'back.out(2)', stagger: 0.04 }, crop - 0.1);
+  tl.to(cw, { left: CARD.x + 'px', top: CARD.y + 'px', width: CARD.w + 'px', height: CARD.h + 'px', boxShadow: '0 0 0 3000px rgba(10,11,15,.72)', duration: 1.0, ease: 'power3.inOut' }, crop + 0.15);
+  tl.to(words[2], { opacity: 1, y: 0, duration: 0.7, ease: 'back.out(1.6)' }, crop + 0.3);
+  tl.to(cam, { scale: 1.09, transformOrigin: `${CARD.x + CARD.w / 2}px ${CARD.y + CARD.h / 2}px`, duration: ctx.dur - crop - 0.3, ease: 'power1.inOut' }, crop + 0.3);
+  tl.to(btn, { boxShadow: '0 0 60px rgba(232,96,76,.85)', scale: 1.04, duration: 0.5, ease: 'back.out(1.8)' }, support);
+
+  // rule-of-thirds flash, upper third through the face
+  const g = Math.min(point - 0.3, ctx.dur - 2);
+  gsap.set(upper, { scaleX: 0 });
+  tl.to(grid, { opacity: 1, duration: 0.2 }, g);
+  tl.to(upper, { scaleX: 1, duration: 0.5, ease: 'power3.out' }, g + 0.1);
+  tl.to(grid, { opacity: 0.6, duration: 0.6, ease: 'power1.inOut' }, g + 0.5);
+  tl.to(ava, { scale: 1.08, duration: 0.5, ease: 'back.out(2)' }, g + 0.2);
+});

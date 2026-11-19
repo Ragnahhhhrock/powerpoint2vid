@@ -1,0 +1,217 @@
+{
+  "title": "Using Images in Presentations Without the Clutter (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#14161C",
+      "ink": "#1F2230",
+      "paper": "#F6F3EC",
+      "slate": "#5B6275",
+      "amber": "#F2A541",
+      "teal": "#2BB3A3",
+      "coral": "#E8604C"
+    },
+    "font": "Inter Display",
+    "motion": "Calm and deliberate: things clear away with quick ease-in exits, and the survivors grow into place with long ease-out settles. The camera stays mostly still, with slow push-ins that echo the 'slow zoom' advice.",
+    "story": "The video moves from clutter to clarity. It opens on a dark, crowded stage, tightens into a light, spacious one as each rule removes something, and lands on a single full-bleed frame. Scenes alternate dark and light, and wide shots alternate with close crops."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "Most decks have too many pictures, too small, placed wherever there was room. The fix isn't design talent. It's a few simple rules.",
+      "storyboard": "We open on a night stage crammed with two dozen tiny slate-grey photo thumbnails, tilted and overlapping like a messy pinboard. On 'too small' the thumbnails jitter. On 'wherever there was room' a few more pile into the gaps. On 'isn't design talent' everything freezes. On 'simple rules' the thumbnails sweep off-frame and leave the headline 'Without the Clutter' in paper white at 140px, with a thin amber underline drawing across. The original title text is kept and the blank slide is rebuilt.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Using Images Without the Clutter",
+        "text": "",
+        "notes": "Most decks have too many pictures, too small, placed wherever there was room. The fix isn't design talent. It's a few simple rules.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 9.821,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 5.061,
+          "text": "Most decks have too many pictures, too small, placed wherever there was room."
+        },
+        {
+          "t": 5.341,
+          "end": 6.943,
+          "text": "The fix isn't design talent."
+        },
+        {
+          "t": 7.223,
+          "end": 8.721,
+          "text": "It's a few simple rules."
+        }
+      ],
+      "speechEnd": 8.721
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Before you add any image, ask one question: what would the viewer lose without it? If the answer is nothing, leave it out.",
+      "storyboard": "The stage turns paper-light. The question 'What would the viewer lose?' sits large in ink, left-aligned, with a placeholder photo frame on the right. On 'lose without it' the frame fades to 40%, testing its absence. On 'nothing' the frame crumples into a dot and vanishes. 'Leave it out.' lands in coral beneath the question. Two small amber tags, 'actual product' and 'real place, team or object', drift in briefly as images worth keeping, then settle quietly. The bullet list is cut.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Ask One Question Before Adding Images",
+        "text": "What would the viewer lose without it?. Nothing? Leave it out. A screenshot of the actual product. A photo of the real place, team or object",
+        "notes": "Before adding any image, ask what the viewer would lose if it were gone. If the answer is nothing, leave it out.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 9.401,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 5.665,
+          "text": "Before you add any image, ask one question: what would the viewer lose without it?"
+        },
+        {
+          "t": 5.945,
+          "end": 8.301,
+          "text": "If the answer is nothing, leave it out."
+        }
+      ],
+      "speechEnd": 8.301
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "One strong image at full width beats three small ones. Then crop away anything that doesn't support the point.",
+      "storyboard": "On a night stage, three small photo frames sit in a row. On 'one strong image' two of them slide away and the third expands edge to edge in a smooth ease-out. On 'crop away' teal crop marks snap in and tighten around a single button in a mock product screenshot, while the surroundings dim. A faint rule-of-thirds grid flashes, with the upper third line highlighted to show where faces belong. The only on-screen text is 'Fewer. Bigger. Cropped.' at 110px.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Choose Fewer, Bigger, Well-Cropped Pictures",
+        "text": "One strong image at full width. Three photos? Consider three slides. Crop to the button, field or chart. Faces on the upper third line",
+        "notes": "One strong image at full width beats three small ones. Then crop away anything that doesn't support the point.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 8.288,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.865,
+          "text": "One strong image at full width beats three small ones."
+        },
+        {
+          "t": 4.145,
+          "end": 6.688,
+          "text": "Then crop away anything that doesn't support the point."
+        }
+      ],
+      "speechEnd": 6.688
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Pick one layout per slide. If a headline sits over a photo, find the quiet part, or add a contrast band behind it.",
+      "storyboard": "A full-bleed abstract photo of a busy street below calm sky fills the frame. A headline first lands over the busy lower half and is visibly hard to read. On 'find the quiet part' it glides up into the sky area and turns crisp. On 'contrast band' a translucent night band wipes in behind a second headline position. Data labels '4.5:1' and '3:1 large text' tick in small in amber at the corner. The camera slowly pushes in throughout.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Keep Text Off Busy Areas",
+        "text": "Pick one layout per slide. Text over sky, a plain wall or blur. Or add a dark or light band. Aim for 4.5:1 contrast, 3:1 for large text",
+        "notes": "Pick one layout per slide. If a headline sits over a photo, find the quiet part, or add a contrast band behind it.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "dissolve",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 9.495,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 2.541,
+          "text": "Pick one layout per slide."
+        },
+        {
+          "t": 2.821,
+          "end": 7.895,
+          "text": "If a headline sits over a photo, find the quiet part, or add a contrast band behind it."
+        }
+      ],
+      "speechEnd": 7.895
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Four tiny product photos became one large shot of the Trail Pack. One image, one claim, one sentence of support. The narration does the rest.",
+      "storyboard": "A split before/after on a paper stage. The left side shows four stamp-sized photos with eight feature bullets in slate. On 'one large shot' the left side collapses and a big amber-toned backpack silhouette labelled 'Trail Pack' fills the frame. On 'one claim' the line 'Under 1 kg' appears at 120px. On 'support' the line 'Fits a 15-inch laptop' appears beneath it in slate. On 'the rest' the other three thumbnails file off to the right as their own mini slides.",
+      "minDuration": 11,
+      "slide": {
+        "title": "One Image, One Claim, One Line",
+        "text": "Before: four stamp-sized photos, eight features. After: one large photo of the Trail Pack. \"Under 1 kg\" and \"Fits a 15-inch laptop\". Other products moved to their own slides",
+        "notes": "Four tiny product photos became one large shot of the Trail Pack. One image, one claim, one sentence of support. The narration does the rest.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "wipeleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 11,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.376,
+          "text": "Four tiny product photos became one large shot of the Trail Pack."
+        },
+        {
+          "t": 4.656,
+          "end": 7.779,
+          "text": "One image, one claim, one sentence of support."
+        },
+        {
+          "t": 8.059,
+          "end": 9.789,
+          "text": "The narration does the rest."
+        }
+      ],
+      "speechEnd": 9.789
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "Fewer, bigger images make a better video. On Pro, AI directs it, framing each picture as a scene timed to your voice. Try Basic first at powerpoint2vid.com.",
+      "storyboard": "The night stage holds one full-width photo under a slow Ken Burns zoom, showing the advice rather than listing it. On 'timed to your voice' a teal waveform pulses along the top edge, and a second photo arrives exactly on the beat. The bottom band stays empty, kept calm for captions. On 'powerpoint2vid.com' the photo dims and 'Try Basic first' appears at 130px in paper white, with the URL in amber below. The final frame holds.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Clean Images Make Better Video",
+        "text": "A slow zoom on static photos. Images arrive as the narration mentions them. Leave the bottom calm for captions",
+        "notes": "Fewer, bigger images make a better video. On Pro, a.i. directs it, framing each picture as a scene timed to your voice. Try Basic first at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 12.433,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.401,
+          "text": "Fewer, bigger images make a better video."
+        },
+        {
+          "t": 3.681,
+          "end": 8.301,
+          "text": "On Pro, AI directs it, framing each picture as a scene timed to your voice."
+        },
+        {
+          "t": 8.581,
+          "end": 11.333,
+          "text": "Try Basic first at powerpoint2vid.com."
+        }
+      ],
+      "speechEnd": 11.333
+    }
+  ],
+  "voiceProvider": "piper"
+}
