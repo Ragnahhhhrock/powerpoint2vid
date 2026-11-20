@@ -1,0 +1,122 @@
+/* Scene 2 — "Follow five beats. Start with a problem viewers recognise, like chasing late invoices on
+ * Friday afternoons. Then show the product, how it works, the proof, and where to go next."
+ * Storyboard: ink stage, "Five beats" headline top-left; the deck's bullet list rebuilt as a horizontal
+ * track of five circles that pop in on "five beats". On "problem" circle 1 fills orange. A small calendar
+ * and an invoice appear above it. The invoice is stamped LATE on "late" and the calendar flips to FRI on
+ * "Friday". Circles 2-5 light up on product / works / proof / next with the labels Product, How, Proof,
+ * Next. The last circle glows mint and the camera pushes toward it. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const A = (i, w, f) => { const v = ctx.at(i, w); return Number.isFinite(v) ? v : f; };
+  const tFive = A(0, 'five', 1.1);
+  const tProblem = A(1, 'problem', 3.0), tRecog = A(1, 'recognise', 3.8);
+  const tChasing = A(1, 'chasing', 4.8), tLate = A(1, 'late', 5.3), tFri = A(1, 'Friday', 6.1);
+  const tProduct = A(2, 'product', 8.4), tWorks = A(2, 'works', 9.2), tProof = A(2, 'proof', 10.0), tNext = A(2, 'next', 11.4);
+
+  stage.style.background = 'radial-gradient(60% 55% at 70% 62%, #263252 0%, var(--ink) 60%, var(--night) 100%)';
+  const mono = 'ui-monospace, Menlo, monospace';
+
+  /* headline layer (not scaled by the camera) */
+  const tag = el('div', 'abs', stage, { left: '124px', top: '96px', font: `600 22px/1 ${mono}`, letterSpacing: '.16em', color: 'var(--haze)' });
+  tag.textContent = 'LAUNCH VIDEO · STRUCTURE';
+  const head = el('div', 'abs', stage, { left: '116px', top: '134px', font: '800 120px/1 Inter Display, Inter', letterSpacing: '-.045em', color: 'var(--paper)', whiteSpace: 'nowrap' });
+  const headWords = ctx.split(head, 'Five beats', 'word');
+
+  /* camera: outer slow push, inner decisive glide + final push */
+  const outer = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 560px' });
+  const cam = el('div', 'abs', outer, { inset: 0, transformOrigin: '1560px 640px' });
+
+  const CY = 640, R = 75, XS = [360, 660, 960, 1260, 1560];
+  const LABELS = ['Problem', 'Product', 'How', 'Proof', 'Next'];
+  const COLS = ['var(--launch)', 'var(--signal)', 'var(--signal)', 'var(--signal)', 'var(--mint)'];
+  const GLOW = ['rgba(255,90,54,.55)', 'rgba(61,123,255,.45)', 'rgba(61,123,255,.45)', 'rgba(61,123,255,.45)', 'rgba(47,198,154,.9)'];
+
+  const trackBase = el('div', 'abs', cam, { left: XS[0] + 'px', top: CY - 2 + 'px', width: XS[4] - XS[0] + 'px', height: '4px', borderRadius: '2px', background: 'rgba(154,163,181,.25)', transformOrigin: '0 50%' });
+  const trackFill = el('div', 'abs', cam, { left: XS[0] + 'px', top: CY - 3 + 'px', width: XS[4] - XS[0] + 'px', height: '6px', borderRadius: '3px', background: 'linear-gradient(90deg, var(--launch), var(--signal) 40%, var(--signal) 75%, var(--mint))', transformOrigin: '0 50%', boxShadow: '0 0 18px rgba(61,123,255,.5)' });
+
+  const nodes = XS.map((x, i) => {
+    const wrap = el('div', 'abs', cam, { left: x - R + 'px', top: CY - R + 'px', width: R * 2 + 'px', height: R * 2 + 'px', borderRadius: '50%', background: '#151b2b', border: '4px solid rgba(154,163,181,.45)', boxSizing: 'border-box', boxShadow: '0 0 0px rgba(0,0,0,0)' });
+    const fill = el('div', 'abs', wrap, { inset: '-4px', borderRadius: '50%', background: COLS[i] });
+    const num = el('div', 'abs', wrap, { inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', font: `700 40px/1 ${mono}`, color: 'var(--haze)' });
+    num.textContent = '0' + (i + 1);
+    const ring = el('div', 'abs', cam, { left: x - R + 'px', top: CY - R + 'px', width: R * 2 + 'px', height: R * 2 + 'px', borderRadius: '50%', border: '4px solid ' + COLS[i], boxSizing: 'border-box', opacity: 0 });
+    const lab = el('div', 'abs', cam, { left: x - 130 + 'px', width: '260px', top: CY + R + 34 + 'px', textAlign: 'center', font: '800 40px/1 Inter Display, Inter', letterSpacing: '-.03em', color: 'var(--paper)' });
+    lab.textContent = LABELS[i];
+    gsap.set(fill, { scale: 0 });
+    gsap.set(wrap, { scale: 0, opacity: 0 });
+    gsap.set(lab, { opacity: 0, y: 24 });
+    return { wrap, fill, num, ring, lab, x };
+  });
+
+  /* problem vignette: calendar + late invoice */
+  const vig = el('div', 'abs', cam, { left: '214px', top: '252px', width: '370px', height: '250px' });
+  const cal = el('div', 'abs', vig, { left: '0px', top: '24px', width: '190px', height: '210px', borderRadius: '16px', background: 'var(--paper)', boxShadow: '0 30px 60px rgba(0,0,0,.45)', overflow: 'hidden' });
+  const calHead = el('div', 'abs', cal, { left: 0, top: 0, width: '100%', height: '50px', background: 'var(--launch)' });
+  [52, 126].forEach((l) => el('div', 'abs', calHead, { left: l + 'px', top: '18px', width: '12px', height: '12px', borderRadius: '50%', background: 'rgba(14,18,32,.35)' }));
+  const page = (txt) => {
+    const p = el('div', 'abs', cal, { left: 0, top: '50px', width: '100%', height: '160px', background: 'var(--paper)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', transformOrigin: '50% 0%' });
+    const d = el('div', '', p, { font: '900 72px/1 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--ink)' }); d.textContent = txt;
+    const h = el('div', '', p, { font: `600 18px/1 ${mono}`, letterSpacing: '.12em', color: '#7a8294', marginTop: '10px' }); h.textContent = '16:30';
+    return p;
+  };
+  page('FRI');
+  const thu = page('THU');
+  const inv = el('div', 'abs', vig, { left: '172px', top: '0px', width: '180px', height: '236px', borderRadius: '10px', background: '#fff', boxShadow: '0 30px 60px rgba(0,0,0,.45)', transformOrigin: '50% 100%' });
+  const invT = el('div', 'abs', inv, { left: '20px', top: '22px', font: `700 18px/1 ${mono}`, letterSpacing: '.14em', color: 'var(--ink)' }); invT.textContent = 'INVOICE';
+  [62, 86, 110, 134].forEach((y, k) => el('div', 'abs', inv, { left: '20px', top: y + 'px', width: [120, 96, 132, 80][k] + 'px', height: '8px', borderRadius: '4px', background: '#dfe2e8' }));
+  el('div', 'abs', inv, { left: '20px', top: '196px', width: '140px', height: '12px', borderRadius: '6px', background: '#b9bfcc' });
+  const stamp = el('div', 'abs', inv, { left: '22px', top: '120px', padding: '8px 16px', border: '5px solid var(--launch)', borderRadius: '8px', font: '900 46px/1 Inter Display, Inter', letterSpacing: '.02em', color: 'var(--launch)', background: 'rgba(255,255,255,.85)' });
+  stamp.textContent = 'LATE';
+
+  const flash = el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(30% 35% at 82% 60%, rgba(47,198,154,.4), transparent 70%)', opacity: 0, mixBlendMode: 'screen' });
+
+  ctx.fx.vignette({ strength: 0.5 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  /* ---- timeline ---- */
+  gsap.set(cam, { x: 180 });
+  gsap.set([trackBase, trackFill], { scaleX: 0 });
+  gsap.set(vig, { opacity: 0, y: 40 });
+  gsap.set(inv, { opacity: 0, y: 60, rotation: 0 });
+  gsap.set(stamp, { opacity: 0, scale: 2.4, rotation: -4 });
+  gsap.set(thu, { transformPerspective: 700, rotationX: 0 });
+
+  tl.from(headWords, { y: 70, opacity: 0, duration: 0.8, ease: 'expo.out', stagger: 0.08 }, 0.05);
+  tl.from(tag, { opacity: 0, x: -20, duration: 0.6, ease: 'expo.out' }, 0.15);
+  tl.to(cam, { x: 0, duration: 1.6, ease: 'expo.out' }, 0.2);
+  tl.to(outer, { scale: 1.03, duration: ctx.dur - 0.3, ease: 'power1.inOut' }, 0.3);
+  tl.to(trackBase, { scaleX: 1, duration: 1.2, ease: 'expo.out' }, 0.25);
+  nodes.forEach((n, i) => tl.to(n.wrap, { scale: 1, opacity: 1, duration: 0.6, ease: 'back.out(1.8)' }, Math.min(tFive, 1.2) + i * 0.09));
+
+  const light = (i, t) => {
+    const n = nodes[i];
+    tl.to(n.fill, { scale: 1, duration: 0.5, ease: 'expo.out' }, t);
+    tl.to(n.num, { color: '#fff', duration: 0.2 }, t);
+    tl.fromTo(n.wrap, { scale: 1 }, { scale: 1.14, duration: 0.14, yoyo: true, repeat: 1, ease: 'power2.out', immediateRender: false }, t);
+    tl.to(n.wrap, { boxShadow: `0 0 50px ${GLOW[i]}`, duration: 0.5 }, t);
+    tl.fromTo(n.ring, { scale: 1, opacity: 0.9 }, { scale: 1.8, opacity: 0, duration: 0.8, ease: 'power2.out', immediateRender: false }, t);
+    tl.to(n.lab, { opacity: 1, y: 0, duration: 0.55, ease: 'expo.out' }, t + 0.05);
+    tl.to(trackFill, { scaleX: i / 4, duration: 0.5, ease: 'expo.out' }, t - 0.1);
+  };
+
+  // problem
+  light(0, tProblem);
+  tl.to(vig, { opacity: 1, y: 0, duration: 0.7, ease: 'expo.out' }, Math.min(tRecog, tChasing - 0.4));
+  tl.to(inv, { opacity: 1, y: 0, rotation: 6, duration: 0.6, ease: 'back.out(1.6)' }, Math.min(tChasing, tLate - 0.5));
+  tl.to(stamp, { opacity: 1, scale: 1, rotation: -14, duration: 0.3, ease: 'power4.in' }, tLate - 0.2);
+  tl.to(inv, { y: 6, duration: 0.07, yoyo: true, repeat: 1 }, tLate + 0.1);
+  tl.to(thu, { rotationX: -105, opacity: 0, duration: 0.55, ease: 'power2.in' }, tFri - 0.25);
+
+  // product, how, proof, next
+  light(1, tProduct);
+  light(2, tWorks);
+  light(3, tProof);
+  light(4, tNext);
+  tl.to(vig, { opacity: 0, y: -30, duration: 0.6, ease: 'power2.in' }, tNext - 0.4);
+  tl.to(nodes.slice(0, 4).map((n) => n.wrap), { opacity: 0.6, duration: 0.6 }, tNext);
+  tl.to(nodes.slice(0, 4).map((n) => n.lab), { opacity: 0.5, duration: 0.6 }, tNext);
+  tl.to(cam, { scale: 1.12, duration: 1.4, ease: 'expo.inOut' }, tNext - 0.3);
+  tl.to(nodes[4].wrap, { boxShadow: '0 0 110px rgba(47,198,154,.95)', duration: 0.6 }, tNext + 0.3);
+  tl.fromTo(flash, { opacity: 0 }, { opacity: 1, duration: 0.5, immediateRender: false }, tNext);
+  tl.to(nodes[4].lab, { color: 'var(--mint)', duration: 0.4 }, tNext + 0.2);
+});

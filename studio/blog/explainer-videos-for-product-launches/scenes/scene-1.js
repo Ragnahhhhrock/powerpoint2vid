@@ -1,0 +1,131 @@
+/* Scene 2 — "Write the explanation carefully once, and it keeps working. A prospect can watch at 10pm,
+ * and a partner can forward it to their boss."
+ * Storyboard: bright paper stage. An ink play-button tile sits at left under the headline
+ * "Explain once, for everyone". On "keeps working" the tile pulses and signal-blue routes branch
+ * right like a travel map. The deck's channels (product page, email, social, press kit) pop in as
+ * destination dots along the routes. On "10pm" the upper route reaches a moon-and-clock glyph. On
+ * "forward ... boss" the lower route reaches a person, and an arrow hops to a second person. The
+ * camera makes one slow, decisive glide right to follow the routes. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const safe = (v, d) => (typeof v === 'number' && isFinite(v) ? v : d);
+  const keeps = safe(ctx.at(0, 'keeps'), 3.0);
+  const ten = Math.max(keeps + 1.4, safe(ctx.at(1, '10pm'), 6.2));
+  const fwd = Math.max(ten + 0.6, safe(ctx.at(1, 'forward'), 7.3));
+  const boss = Math.max(fwd + 0.5, safe(ctx.at(1, 'boss'), 8.4));
+  const MONO = '600 20px/1 ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(80% 70% at 35% 45%, #ffffff 0%, var(--paper) 60%, #ece7dd 100%)';
+
+  /* world (camera) */
+  const cam = el('div', 'abs', stage, { left: 0, top: 0, width: '2400px', height: '1080px', transformOrigin: '960px 560px' });
+  el('div', 'abs', cam, { inset: 0, backgroundImage: 'radial-gradient(rgba(27,34,51,.13) 1.5px, transparent 1.6px)', backgroundSize: '48px 48px', opacity: 0.6 });
+
+  // routes
+  const svgWrap = el('div', 'abs', cam, { left: 0, top: 0, width: '2400px', height: '1080px' });
+  svgWrap.innerHTML = `<svg width="2400" height="1080">
+    <g fill="none" stroke="#3D7BFF" stroke-width="6" stroke-linecap="round">
+      <path id="p1" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1" d="M420 560 C 650 560, 700 380, 950 380 L 1490 380"/>
+      <path id="p2" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1" d="M420 560 C 650 560, 700 760, 950 760 L 1580 760"/>
+      <path id="p3" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1" d="M420 560 L 1300 560"/>
+      <path id="hop" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1" d="M1652 680 Q 1770 560, 1885 668"/>
+      <path id="hopHead" opacity="0" stroke-linejoin="round" d="M1860 664 L 1887 670 L 1885 642"/>
+    </g></svg>`;
+  const P = (id) => svgWrap.querySelector('#' + id);
+  const p1 = P('p1'), p2 = P('p2'), p3 = P('p3'), hop = P('hop'), hopHead = P('hopHead');
+
+  // destination dots + labels
+  const mkDot = (x, y, label, above) => {
+    const d = el('div', 'abs', cam, { left: x - 14 + 'px', top: y - 14 + 'px', width: '28px', height: '28px', borderRadius: '50%', background: 'var(--signal)', border: '5px solid #fff', boxSizing: 'border-box', boxShadow: '0 6px 18px rgba(61,123,255,.35)' });
+    const l = el('div', 'abs', cam, { left: x - 150 + 'px', width: '300px', top: (above ? y - 52 : y + 30) + 'px', textAlign: 'center', font: MONO, letterSpacing: '.14em', color: 'var(--ink)', textTransform: 'uppercase' });
+    l.textContent = label;
+    gsap.set(d, { scale: 0 }); gsap.set(l, { opacity: 0, y: above ? 10 : -10 });
+    return { d, l };
+  };
+  const dProduct = mkDot(1150, 380, 'product page', true);
+  const dEmail = mkDot(1150, 760, 'email', false);
+  const dSocial = mkDot(980, 560, 'social', false);
+  const dPress = mkDot(1300, 560, 'press kit', false);
+
+  // play tile
+  const ring = el('div', 'abs', cam, { left: '200px', top: '450px', width: '220px', height: '220px', borderRadius: '44px', border: '5px solid var(--signal)', boxSizing: 'border-box', opacity: 0 });
+  const tile = el('div', 'abs', cam, { left: '200px', top: '450px', width: '220px', height: '220px', borderRadius: '44px', background: 'linear-gradient(160deg, #2a3350, var(--ink) 60%, var(--night))', boxShadow: '0 40px 80px rgba(14,18,32,.28), 0 8px 20px rgba(14,18,32,.2), inset 0 1px 0 rgba(255,255,255,.15)' });
+  tile.innerHTML = '<svg width="220" height="220"><path d="M90 70 L 152 110 L 90 150 Z" fill="#F7F4EE" stroke="#F7F4EE" stroke-width="10" stroke-linejoin="round"/></svg>';
+
+  // moon + clock glyph (10pm)
+  const clock = el('div', 'abs', cam, { left: '1500px', top: '320px', width: '120px', height: '120px' });
+  clock.innerHTML = `<svg width="120" height="120" viewBox="0 0 120 120" overflow="visible">
+    <circle cx="60" cy="60" r="50" fill="#1B2233"/>
+    ${[0, 1, 2, 3].map((k) => `<line x1="60" y1="16" x2="60" y2="24" stroke="#9AA3B5" stroke-width="4" stroke-linecap="round" transform="rotate(${k * 90} 60 60)"/>`).join('')}
+    <line id="hh" x1="60" y1="60" x2="60" y2="36" stroke="#F7F4EE" stroke-width="7" stroke-linecap="round"/>
+    <line id="mh" x1="60" y1="60" x2="60" y2="24" stroke="#3D7BFF" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="60" cy="60" r="6" fill="#F7F4EE"/>
+    <g id="moon"><circle cx="112" cy="10" r="22" fill="#3D7BFF"/><circle cx="122" cy="2" r="19" fill="#FBFAF6"/></g>
+  </svg>`;
+  const hh = clock.querySelector('#hh'), mh = clock.querySelector('#mh'), moon = clock.querySelector('#moon');
+  const tenLab = el('div', 'abs', cam, { left: '1460px', width: '200px', top: '452px', textAlign: 'center', font: '800 34px/1 Inter Display, Inter', letterSpacing: '-.02em', color: 'var(--ink)' });
+  tenLab.textContent = '10pm';
+
+  // people
+  const person = (x, fill) => {
+    const p = el('div', 'abs', cam, { left: x - 45 + 'px', top: '705px', width: '90px', height: '110px', transformOrigin: '50% 100%' });
+    p.innerHTML = `<svg width="90" height="110"><circle cx="45" cy="28" r="22" fill="${fill}"/><path d="M4 108 Q4 58 45 58 Q86 58 86 108 Z" fill="${fill}"/></svg>`;
+    return p;
+  };
+  const pA = person(1640, '#1B2233');
+  const pB = person(1900, '#3D7BFF');
+
+  /* fixed headline */
+  const head = el('div', 'abs', stage, { left: '120px', top: '110px', font: '800 96px/1 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--ink)', whiteSpace: 'nowrap' });
+  const words = ctx.split(head, 'Explain once, for everyone', 'word');
+  words[words.length - 1].style.color = 'var(--signal)';
+
+  ctx.fx.vignette({ strength: 0.18 });
+  ctx.fx.grain({ opacity: 0.05 });
+
+  /* ---- timeline ---- */
+  gsap.set(tile, { scale: 0.6, opacity: 0 });
+  gsap.set([clock, tenLab, pA, pB], { scale: 0, opacity: 0 });
+  gsap.set(clock, { transformOrigin: '50% 50%' });
+  gsap.set(hh, { rotation: -150, svgOrigin: '60 60' });
+  gsap.set(mh, { rotation: 0, svgOrigin: '60 60' });
+
+  tl.to(tile, { scale: 1, opacity: 1, duration: 0.6, ease: 'expo.out' }, 0.05);
+  tl.from(words, { y: 50, opacity: 0, duration: 0.7, ease: 'expo.out', stagger: 0.08 }, 0.2);
+
+  // "keeps working": pulse + routes branch
+  tl.to(tile, { scale: 1.08, duration: 0.18, ease: 'power2.out', yoyo: true, repeat: 1 }, keeps - 0.05);
+  tl.fromTo(ring, { scale: 1, opacity: 0.9 }, { scale: 1.6, opacity: 0, duration: 0.9, ease: 'expo.out', immediateRender: false }, keeps);
+  tl.to(p3, { strokeDashoffset: 0, duration: 0.8, ease: 'expo.out' }, keeps + 0.05);
+  [[dSocial, keeps + 0.2], [dPress, keeps + 0.5]].forEach(([o, t]) => {
+    tl.to(o.d, { scale: 1, duration: 0.45, ease: 'back.out(2)' }, t);
+    tl.to(o.l, { opacity: 1, y: 0, duration: 0.4, ease: 'expo.out' }, t + 0.05);
+  });
+
+  const d1 = ten - (keeps + 0.15);
+  tl.to(p1, { strokeDashoffset: 0, duration: d1, ease: 'power1.inOut' }, keeps + 0.15);
+  tl.to(dProduct.d, { scale: 1, duration: 0.45, ease: 'back.out(2)' }, keeps + 0.15 + d1 * 0.5);
+  tl.to(dProduct.l, { opacity: 1, y: 0, duration: 0.4, ease: 'expo.out' }, keeps + 0.2 + d1 * 0.5);
+
+  const d2 = fwd - 0.15 - (keeps + 0.3);
+  tl.to(p2, { strokeDashoffset: 0, duration: d2, ease: 'power1.inOut' }, keeps + 0.3);
+  tl.to(dEmail.d, { scale: 1, duration: 0.45, ease: 'back.out(2)' }, keeps + 0.3 + d2 * 0.5);
+  tl.to(dEmail.l, { opacity: 1, y: 0, duration: 0.4, ease: 'expo.out' }, keeps + 0.35 + d2 * 0.5);
+
+  // "10pm"
+  tl.to(clock, { scale: 1, opacity: 1, duration: 0.55, ease: 'back.out(1.8)' }, ten - 0.12);
+  tl.to(hh, { rotation: -60, duration: 0.9, ease: 'expo.out' }, ten - 0.05);
+  tl.fromTo(mh, { rotation: -360 }, { rotation: 0, duration: 0.9, ease: 'expo.out', immediateRender: false }, ten - 0.05);
+  tl.from(moon, { opacity: 0, x: -20, y: 20, duration: 0.6, ease: 'expo.out' }, ten + 0.1);
+  tl.to(tenLab, { scale: 1, opacity: 1, duration: 0.45, ease: 'back.out(2)' }, ten + 0.05);
+
+  // "forward it to their boss"
+  tl.to(pA, { scale: 1, opacity: 1, duration: 0.5, ease: 'back.out(1.8)' }, fwd - 0.2);
+  tl.to(hop, { strokeDashoffset: 0, duration: Math.min(0.6, boss - fwd), ease: 'power2.inOut' }, fwd);
+  tl.to(hopHead, { opacity: 1, duration: 0.15 }, fwd + Math.min(0.55, boss - fwd - 0.05));
+  tl.to(pB, { scale: 1, opacity: 1, duration: 0.55, ease: 'back.out(2)' }, boss - 0.15);
+
+  // one decisive lateral glide (kept short so the tile stays in frame) + slow push-in
+  tl.to(cam, { x: -120, duration: fwd + 0.4 - (keeps + 0.4), ease: 'power2.inOut' }, keeps + 0.4);
+  tl.fromTo(cam, { scale: 1 }, { scale: 1.03, duration: ctx.dur, ease: 'none', immediateRender: false }, 0);
+});

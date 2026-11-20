@@ -1,0 +1,100 @@
+{
+  "title": "Explainer Videos for Product Launches (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Explainer Videos for Product Launches",
+      "bullets": [],
+      "notes": "Launch week is noisy, and people decide in seconds. A short launch video gives everyone the same clear story, and your deck already holds most of it.",
+      "minDuration": 9
+    },
+    {
+      "title": "A launch video explains once, for everyone",
+      "bullets": [
+        "It explains once, for everyone",
+        "It works without you in the room",
+        "It travels: product page, email, social, press kit"
+      ],
+      "notes": "Write the explanation carefully once, and it keeps working. A prospect can watch at 10pm, and a partner can forward it to their boss.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Follow five beats, problem to next step",
+      "bullets": [
+        "The problem and the product",
+        "How it works, in two or three steps",
+        "The proof",
+        "The next step"
+      ],
+      "notes": "Start with a problem viewers recognise, like chasing late invoices on Friday afternoons. Then show the product, how it works, the proof, and where to go next.",
+      "minDuration": 11,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Keep it shorter than you think",
+      "bullets": [
+        "Product page and email: one to two minutes",
+        "Social clips: one or two slides, captioned",
+        "Thirty slides? Six to ten will do"
+      ],
+      "notes": "The job is to make someone want the next step, not to document every feature. Cut anything that is merely nice to know.",
+      "minDuration": 10,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Build it from your existing launch deck",
+      "bullets": [
+        "Remove internal slides",
+        "Rewrite headlines as claims",
+        "Write narration into speaker notes",
+        "Add captions for silent viewing"
+      ],
+      "notes": "Swap labels for claims. Reminders becomes: reminders go out on your schedule, not when you remember. Then add real screenshots and captions.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "From launch deck to launch video",
+      "bullets": [
+        "Speaker notes become the voiceover",
+        "On Pro, a.i. directs each animated scene",
+        "Try Basic first",
+        "Edit the deck when the product changes"
+      ],
+      "notes": "On Pro, a.i. directs your launch deck into an animated explainer, so the reveal feels produced. Try Basic first at powerpoint2vid.com.",
+      "minDuration": 10,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}

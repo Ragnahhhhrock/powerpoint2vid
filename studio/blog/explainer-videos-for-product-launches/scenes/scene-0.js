@@ -1,0 +1,139 @@
+/* Scene 0 — "Launch week is noisy, and people decide in seconds. A short launch video gives everyone the same
+ * clear story, and your deck already holds most of it."
+ * Storyboard: a wide night stage crowded with faint haze-grey notification cards that jostle and ping. On
+ * "decide in seconds" a thin orange timer arc sweeps once around centre. On "same clear story" the noise
+ * blurs and falls away while the camera pushes in to one clean paper card: "Explainer Videos for Product
+ * Launches" at 110px. On "your deck" the card glides left and shows it is a slide, with the deck's other
+ * slides peeking out behind it. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const T = (i, w, fb) => { const v = ctx.at(i, w); return (typeof v === 'number' && isFinite(v)) ? v : fb; };
+  const noisy = T(0, 'noisy', 1.7), decide = T(0, 'decide', 2.6), seconds = T(0, 'seconds', 3.2);
+  const same = T(1, 'same', 6.2), clear = T(1, 'clear', 6.7), deck = T(1, 'deck', 8.3);
+  const dur = ctx.dur;
+
+  let s = 1337;
+  const R = () => { s |= 0; s = (s + 0x6D2B79F5) | 0; let t = Math.imul(s ^ (s >>> 15), 1 | s); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+
+  stage.style.background = 'radial-gradient(60% 55% at 50% 50%, #1a2140 0%, var(--night) 75%)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '50% 50%' });
+  const noise = el('div', 'abs', cam, { inset: 0, transformOrigin: '50% 50%' });
+
+  const LABELS = ['NEW', 'LIVE', '+3', '99+', 'PING', 'HOT', '+12'];
+  const cards = [];
+  const COLS = 6, ROWS = 6, CW = 1920 / COLS, CH = 1080 / ROWS;
+  for (let r = 0; r < ROWS; r++) for (let c = 0; c < COLS; c++) {
+    const w = 200 + R() * 100, h = 84 + R() * 46;
+    const x = c * CW + 10 + (CW - w - 20) * R(), y = r * CH + 8 + (CH - h - 16) * R();
+    const outer = el('div', 'abs', noise, { left: x + 'px', top: y + 'px', width: w + 'px', height: h + 'px' });
+    const inner = el('div', 'abs', outer, { inset: 0, borderRadius: '14px', background: 'rgba(154,163,181,.08)',
+      border: '1px solid rgba(154,163,181,.2)', boxShadow: '0 18px 40px rgba(0,0,0,.35)', overflow: 'hidden' });
+    const blue = R() < 0.3;
+    el('div', 'abs', inner, { left: '16px', top: '16px', width: '34px', height: '34px', borderRadius: '50%',
+      background: blue ? 'rgba(61,123,255,.55)' : 'rgba(154,163,181,.35)' });
+    el('div', 'abs', inner, { left: '62px', top: '20px', width: (w - 90) * (0.6 + R() * 0.4) + 'px', height: '10px', borderRadius: '5px', background: 'rgba(154,163,181,.38)' });
+    el('div', 'abs', inner, { left: '62px', top: '40px', width: (w - 90) * (0.4 + R() * 0.5) + 'px', height: '8px', borderRadius: '4px', background: 'rgba(154,163,181,.2)' });
+    if (h > 104) el('div', 'abs', inner, { left: '16px', top: '66px', width: (w - 40) * (0.5 + R() * 0.5) + 'px', height: '8px', borderRadius: '4px', background: 'rgba(154,163,181,.16)' });
+    if (R() < 0.35) {
+      const b = el('div', 'abs', inner, { right: '12px', bottom: '10px', padding: '5px 9px', borderRadius: '999px',
+        background: 'rgba(154,163,181,.16)', font: '700 13px/1 ui-monospace, Menlo, monospace', letterSpacing: '.1em', color: 'rgba(154,163,181,.85)' });
+      b.textContent = LABELS[Math.floor(R() * LABELS.length)];
+    }
+    const ping = el('div', 'abs', inner, { inset: 0, borderRadius: '14px', boxShadow: 'inset 0 0 0 2px rgba(61,123,255,.75)',
+      background: 'rgba(61,123,255,.12)', opacity: 0 });
+    const pings = [0.4 + R() * (same - 1), 0.4 + R() * (same - 1), 0.4 + R() * (same - 1)];
+    const dx = x + w / 2 - 960, dy = y + h / 2 - 540;
+    cards.push({ outer, inner, ping, pings, ph: R() * 6.28, f: 1.5 + R() * 2.5, amp: 3 + R() * 5, base: 0.45 + R() * 0.5, dist: Math.hypot(dx, dy), dx, dy });
+  }
+
+  const disc = el('div', 'abs', cam, { left: '660px', top: '240px', width: '600px', height: '600px', borderRadius: '50%',
+    background: 'radial-gradient(circle, rgba(14,18,32,.92) 0%, rgba(14,18,32,.7) 45%, transparent 70%)', opacity: 0 });
+  const RAD = 180, CIRC = 2 * Math.PI * RAD;
+  const timerWrap = el('div', 'abs', cam, { left: 0, top: 0, width: '1920px', height: '1080px', opacity: 0 });
+  timerWrap.innerHTML = `<svg width="1920" height="1080">
+    <circle cx="960" cy="540" r="${RAD}" fill="none" stroke="rgba(154,163,181,.18)" stroke-width="3"/>
+    <circle id="arcT" cx="960" cy="540" r="${RAD}" fill="none" stroke="#FF5A36" stroke-width="6" stroke-linecap="round"
+      transform="rotate(-90 960 540)" stroke-dasharray="${CIRC}" stroke-dashoffset="${CIRC}" style="filter:drop-shadow(0 0 10px rgba(255,90,54,.8))"/>
+    <circle id="headT" cx="960" cy="${540 - RAD}" r="9" fill="#FFD3C7" style="filter:drop-shadow(0 0 12px #FF5A36)"/></svg>`;
+  const arcT = timerWrap.querySelector('#arcT'), headT = timerWrap.querySelector('#headT');
+  const tm = { p: 0 };
+
+  const glow = el('div', 'abs', cam, { left: '160px', top: '40px', width: '1600px', height: '1000px',
+    background: 'radial-gradient(50% 50% at 50% 50%, rgba(255,244,230,.22), transparent 70%)', opacity: 0 });
+  const deckG = el('div', 'abs', cam, { left: '240px', top: '135px', width: '1440px', height: '810px', transformOrigin: '50% 50%' });
+  const stack = ['slide-4.png', 'slide-3.png', 'slide-2.png'].map((n) => {
+    const sl = el('div', 'abs', deckG, { inset: 0, borderRadius: '18px', backgroundColor: '#fff', backgroundImage: `url(${ctx.asset(n)})`,
+      backgroundSize: 'cover', boxShadow: '0 30px 70px rgba(0,0,0,.45)', opacity: 0, overflow: 'hidden' });
+    el('div', 'abs', sl, { inset: 0, background: 'linear-gradient(90deg, rgba(247,244,238,.35), rgba(247,244,238,.8))' });
+    return sl;
+  });
+  const card = el('div', 'abs', deckG, { inset: 0, borderRadius: '18px', background: 'var(--paper)',
+    boxShadow: '0 50px 120px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.4)', overflow: 'hidden' });
+  const title = el('div', 'abs', card, { left: '100px', right: '100px', top: '250px', textAlign: 'center',
+    font: '800 110px/1.04 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--ink)' });
+  const l1 = el('div', '', title), l2 = el('div', '', title);
+  const words = [...ctx.split(l1, 'Explainer Videos for', 'word'), ...ctx.split(l2, 'Product Launches', 'word')];
+  const accent = el('div', 'abs', card, { left: '660px', top: '560px', width: '120px', height: '8px', borderRadius: '4px', background: 'var(--launch)', transformOrigin: '50% 50%' });
+  const slideTag = el('div', 'abs', card, { left: '56px', top: '48px', font: '700 22px/1 ui-monospace, Menlo, monospace', letterSpacing: '.16em', color: 'var(--haze)', opacity: 0 });
+  slideTag.textContent = 'SLIDE 1 / 6';
+
+  ctx.fx.vignette({ strength: 0.5 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  ctx.onFrame((t) => {
+    const calm = Math.max(0, Math.min(1, (same - t) / 0.6));
+    cards.forEach((c) => {
+      const k = c.amp * calm;
+      c.inner.style.transform = `translate(${Math.sin(t * c.f + c.ph) * k}px, ${Math.cos(t * c.f * 1.3 + c.ph) * k * 0.7}px)`;
+      let p = 0;
+      c.pings.forEach((pt) => { p = Math.max(p, 1 - Math.abs(t - pt) / 0.22); });
+      c.ping.style.opacity = Math.max(0, p) * calm;
+    });
+    arcT.setAttribute('stroke-dashoffset', CIRC * (1 - tm.p));
+    const a = tm.p * Math.PI * 2 - Math.PI / 2;
+    headT.setAttribute('cx', 960 + Math.cos(a) * RAD);
+    headT.setAttribute('cy', 540 + Math.sin(a) * RAD);
+  });
+
+  cards.forEach((c, n) => {
+    gsap.set(c.outer, { filter: 'blur(0px)' });
+    const t0 = n % 5 === 0 ? 0 : 0.05 + R() * Math.min(1.6, noisy);
+    tl.fromTo(c.outer, { opacity: 0, scale: 0.85, y: 18 }, { opacity: c.base, scale: 1, y: 0, duration: 0.4, ease: 'expo.out' }, t0);
+  });
+  tl.fromTo(noise, { scale: 1 }, { scale: 1.05, duration: same - 0.3, ease: 'none', immediateRender: false }, 0);
+
+  tl.to(disc, { opacity: 1, duration: 0.4, ease: 'power2.out' }, decide - 0.3);
+  tl.fromTo(timerWrap, { opacity: 0, scale: 0.9, transformOrigin: '960px 540px' }, { opacity: 1, scale: 1, duration: 0.35, ease: 'expo.out', immediateRender: false }, decide - 0.25);
+  tl.to(tm, { p: 1, duration: Math.max(0.8, seconds + 0.35 - decide), ease: 'power1.inOut' }, decide - 0.1);
+  const tOut = Math.min(Math.max(seconds + 0.55, decide + 1.0), same - 0.6);
+  tl.to(timerWrap, { opacity: 0, scale: 1.08, duration: 0.45, ease: 'power2.in' }, tOut);
+  tl.to(disc, { opacity: 0.6, duration: 0.5 }, tOut);
+
+  cards.forEach((c) => {
+    const t0 = same - 0.35 + Math.min(0.3, c.dist / 3500);
+    tl.to(c.outer, { opacity: 0, y: '+=' + (160 + R() * 220), x: '+=' + c.dx * 0.25, rotation: (R() - 0.5) * 24,
+      filter: 'blur(12px)', duration: 0.75, ease: 'power2.in' }, t0);
+  });
+  tl.to(noise, { scale: 1.6, duration: 1.2, ease: 'expo.inOut' }, same - 0.35);
+  tl.to(disc, { opacity: 0, duration: 0.4 }, same - 0.2);
+  tl.to(glow, { opacity: 1, duration: 1 }, same);
+  gsap.set(deckG, { opacity: 0, scale: 0.25 });
+  tl.to(deckG, { opacity: 1, duration: 0.3, ease: 'power2.out' }, same - 0.15);
+  tl.to(deckG, { scale: 1, duration: 1.1, ease: 'expo.out' }, same - 0.15);
+  gsap.set(words, { opacity: 0 });
+  tl.fromTo(words, { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.6, ease: 'expo.out', stagger: 0.06, immediateRender: false }, Math.min(clear - 0.2, same + 0.15));
+  gsap.set(accent, { scaleX: 0 });
+  tl.fromTo(accent, { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: 'expo.out', immediateRender: false }, clear + 0.15);
+
+  tl.to(deckG, { x: -140, y: -20, scale: 0.8, duration: 0.9, ease: 'expo.inOut' }, deck - 0.3);
+  stack.forEach((sl, i) => {
+    const k = 3 - i;
+    gsap.set(sl, { filter: 'brightness(1)', transformOrigin: '0% 50%' });
+    tl.to(sl, { opacity: 1, x: 75 * k, y: 16 * k, rotation: 0.9 * k, filter: `brightness(${1 - k * 0.1})`,
+      duration: 0.8, ease: 'expo.out' }, deck - 0.05 + (2 - i) * 0.06);
+  });
+  tl.to(slideTag, { opacity: 1, duration: 0.4, ease: 'power2.out' }, deck + 0.2);
+  tl.to(card, { borderRadius: '10px', duration: 0.6 }, deck);
+
+  tl.fromTo(cam, { scale: 1 }, { scale: 1.04, duration: Math.max(0.5, dur - (deck + 0.6)), ease: 'power1.inOut', immediateRender: false }, deck + 0.6);
+});

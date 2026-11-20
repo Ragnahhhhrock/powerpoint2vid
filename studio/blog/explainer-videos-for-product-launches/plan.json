@@ -1,0 +1,222 @@
+{
+  "title": "Explainer Videos for Product Launches (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0E1220",
+      "ink": "#1B2233",
+      "paper": "#F7F4EE",
+      "launch": "#FF5A36",
+      "signal": "#3D7BFF",
+      "mint": "#2FC69A",
+      "haze": "#9AA3B5"
+    },
+    "font": "Inter Display",
+    "motion": "Confident and quick: elements snap in with expo-out easing, then hold still so the words land. Camera moves are slow push-ins and one decisive lateral glide per scene, never drifting.",
+    "story": "We open in a dark, noisy launch-week night, move into bright paper scenes as the story becomes clear and practical, and close back on night with a single orange launch spark for the call to action. Wide, crowded frames early give way to close, single-idea frames as the advice gets sharper."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "Launch week is noisy, and people decide in seconds. A short launch video gives everyone the same clear story, and your deck already holds most of it.",
+      "storyboard": "Night stage crowded with dozens of faint haze-grey notification cards, headlines and pings jostling in a wide shot. On 'decide in seconds' a thin orange timer arc sweeps once around centre. On 'same clear story' the noise cards blur and fall away as the camera pushes in to one clean paper card bearing 'Explainer Videos for Product Launches' at 110px. On 'your deck' the card subtly reveals itself as a slide, a stack of slides peeking behind it. The original plain title is rebuilt; nothing else kept.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Explainer Videos for Product Launches",
+        "text": "",
+        "notes": "Launch week is noisy, and people decide in seconds. A short launch video gives everyone the same clear story, and your deck already holds most of it.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 10.423,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.761,
+          "text": "Launch week is noisy, and people decide in seconds."
+        },
+        {
+          "t": 4.041,
+          "end": 9.323,
+          "text": "A short launch video gives everyone the same clear story, and your deck already holds most of it."
+        }
+      ],
+      "speechEnd": 9.323
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Write the explanation carefully once, and it keeps working. A prospect can watch at 10pm, and a partner can forward it to their boss.",
+      "storyboard": "Paper stage, a single play-button tile in ink at left with the headline 'Explain once, for everyone' at 96px. On 'keeps working' the tile pulses and signal-blue lines branch out to the right like a travel map. On 'watch at 10pm' one branch ends at a small moon-and-clock glyph reading 10pm; on 'forward it to their boss' another branch hops between two person icons with a forward arrow. The bullets 'product page, email, social, press kit' become four small destination dots along the lines; camera glides slowly right following the branches.",
+      "minDuration": 9,
+      "slide": {
+        "title": "A launch video explains once, for everyone",
+        "text": "It explains once, for everyone. It works without you in the room. It travels: product page, email, social, press kit",
+        "notes": "Write the explanation carefully once, and it keeps working. A prospect can watch at 10pm, and a partner can forward it to their boss.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 9.935,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.248,
+          "text": "Write the explanation carefully once, and it keeps working."
+        },
+        {
+          "t": 4.528,
+          "end": 8.835,
+          "text": "A prospect can watch at 10pm, and a partner can forward it to their boss."
+        }
+      ],
+      "speechEnd": 8.835
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "Follow five beats. Start with a problem viewers recognise, like chasing late invoices on Friday afternoons. Then show the product, how it works, the proof, and where to go next.",
+      "storyboard": "Ink stage with a horizontal track of five circles, headline 'Five beats' at 120px top-left. On 'problem viewers recognise' the first circle fills orange and a tiny calendar flips to Friday with an invoice stamped 'late'. On 'the product', 'how it works', 'the proof', 'where to go next' circles two to five light up in turn, each with a one-word label: Product, How, Proof, Next. The final circle glows mint and the camera pushes toward it. Original bullet list is rebuilt as this timeline.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Follow five beats, problem to next step",
+        "text": "The problem and the product. How it works, in two or three steps. The proof. The next step",
+        "notes": "Start with a problem viewers recognise, like chasing late invoices on Friday afternoons. Then show the product, how it works, the proof, and where to go next.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 13.118,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 2.042,
+          "text": "Follow five beats."
+        },
+        {
+          "t": 2.322,
+          "end": 7.489,
+          "text": "Start with a problem viewers recognise, like chasing late invoices on Friday afternoons."
+        },
+        {
+          "t": 7.769,
+          "end": 12.018,
+          "text": "Then show the product, how it works, the proof, and where to go next."
+        }
+      ],
+      "speechEnd": 12.018
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Keep it shorter than you think. One to two minutes for product page and email, captioned clips for social. Thirty slides? Six to ten will do.",
+      "storyboard": "Paper stage, headline 'Shorter than you think' at 100px. On 'one to two minutes' a slim timeline bar labelled '1\u20132 min' draws in signal blue beside small page and email icons. On 'captioned clips' a phone frame shows a single slide with a caption strip. On 'Thirty slides' a grid of 30 thumbnails fills the frame; on 'Six to ten will do' most fade to haze and collapse, leaving a tight row of eight highlighted in orange with the label '6\u201310'. Hold on the slim row.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Keep it shorter than you think",
+        "text": "Product page and email: one to two minutes. Social clips: one or two slides, captioned. Thirty slides? Six to ten will do",
+        "notes": "The job is to make someone want the next step, not to document every feature. Cut anything that is merely nice to know.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "wipeleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 11.099,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 2.286,
+          "text": "Keep it shorter than you think."
+        },
+        {
+          "t": 2.566,
+          "end": 7.152,
+          "text": "One to two minutes for product page and email, captioned clips for social."
+        },
+        {
+          "t": 7.432,
+          "end": 8.465,
+          "text": "Thirty slides?"
+        },
+        {
+          "t": 8.745,
+          "end": 9.999,
+          "text": "Six to ten will do."
+        }
+      ],
+      "speechEnd": 9.999
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Build it from your existing launch deck. Cut internal slides and swap labels for claims: Reminders becomes, reminders go out on your schedule, not when you remember.",
+      "storyboard": "Night stage, a deck of slides fanned out wide. On 'cut internal slides' two slides stamped 'Internal' slide off-frame. Camera pushes close on one remaining slide with the label 'Reminders' at 140px. On 'reminders go out on your schedule' the word types over into the claim 'Reminders go out on your schedule, not when you remember' at 90px in paper, with 'your schedule' in orange. A small caption bar slides up beneath to nod at silent viewing.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Build it from your existing launch deck",
+        "text": "Remove internal slides. Rewrite headlines as claims. Write narration into speaker notes. Add captions for silent viewing",
+        "notes": "Swap labels for claims. Reminders becomes: reminders go out on your schedule, not when you remember. Then add real screenshots and captions.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 11.491,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.145,
+          "text": "Build it from your existing launch deck."
+        },
+        {
+          "t": 3.425,
+          "end": 10.391,
+          "text": "Cut internal slides and swap labels for claims: Reminders becomes, reminders go out on your schedule, not when you remember."
+        }
+      ],
+      "speechEnd": 10.391
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "Your speaker notes become the voiceover. On Pro, a.i. directs each animated scene, so the reveal feels produced. Try Basic first at powerpoint2vid.com.",
+      "storyboard": "Starts on paper: a slide with its speaker notes beneath; on 'voiceover' the notes lift into a moving soundwave in signal blue. On 'a.i. directs each animated scene' the slide flips into a play-ready video frame with an orange spark tracing its edge, and the stage dissolves to night. On 'Try Basic first' the headline 'Try Basic first' lands at 130px, with 'powerpoint2vid.com' below in mint at 64px. Hold the call to action for two seconds.",
+      "minDuration": 11,
+      "slide": {
+        "title": "From launch deck to launch video",
+        "text": "Speaker notes become the voiceover. On Pro, a.i. directs each animated scene. Try Basic first. Edit the deck when the product changes",
+        "notes": "On Pro, a.i. directs your launch deck into an animated explainer, so the reveal feels produced. Try Basic first at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 11.969,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 2.739,
+          "text": "Your speaker notes become the voiceover."
+        },
+        {
+          "t": 3.019,
+          "end": 7.709,
+          "text": "On Pro, a.i. directs each animated scene, so the reveal feels produced."
+        },
+        {
+          "t": 7.989,
+          "end": 10.869,
+          "text": "Try Basic first at powerpoint2vid.com."
+        }
+      ],
+      "speechEnd": 10.869
+    }
+  ],
+  "voiceProvider": "piper"
+}
