@@ -1,0 +1,243 @@
+{
+  "title": "How Long Should Each Slide Stay on Screen in a Video? (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0E1220",
+      "ink": "#1B2235",
+      "paper": "#F6F3EC",
+      "amber": "#F2A93B",
+      "teal": "#2EC4B6",
+      "coral": "#EF6351",
+      "mist": "#9AA3B8"
+    },
+    "font": "Inter Display",
+    "motion": "Calm, metronomic pacing: elements arrive on the beat with soft ease-out curves, and a slow push-in holds each key visual. A recurring timeline bar acts as the camera's anchor, stretching and snapping like a stopwatch.",
+    "story": "From a ticking question to a confident rule of thumb, the film alternates night stages for problems (dragging, rushing) with warm paper stages for answers. Wide establishing frames give way to close-ups on single numbers and a single split."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "In a video, viewers can't ask you to slow down. Get slide timing right and it feels calm. Get it wrong, and it drags or rushes.",
+      "storyboard": "Night stage, a single amber progress bar glows at centre with a stopwatch tick sound. On 'can't ask you to slow down' a faint hand-raise icon fades in and dissolves, ignored. On 'calm' the bar fills smoothly in teal; on 'drags' it crawls and stalls, and on 'rushes' it whips across in coral. The headline 'How long should each slide stay on screen?' resolves at 120px, holding with a slow push-in. The original plain title is rebuilt; nothing else kept.",
+      "minDuration": 10,
+      "slide": {
+        "title": "How long should each slide stay on screen?",
+        "text": "",
+        "notes": "In a video, viewers can't ask you to slow down. Get slide timing right and it feels calm and clear. Get it wrong, and it drags or rushes.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 10.239,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.842,
+          "text": "In a video, viewers can't ask you to slow down."
+        },
+        {
+          "t": 4.122,
+          "end": 6.688,
+          "text": "Get slide timing right and it feels calm."
+        },
+        {
+          "t": 6.968,
+          "end": 9.139,
+          "text": "Get it wrong, and it drags or rushes."
+        }
+      ],
+      "speechEnd": 9.139
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "There's no single correct number. Keep each slide up as long as it takes to say it, plus a beat. A title, about four seconds; a three-step process, about forty.",
+      "storyboard": "Hard cut to paper stage. A waveform of narration draws left to right in ink and a timeline bar grows beneath it exactly as long; on 'plus a beat' a small amber gap appends to the end. On 'about four seconds' a short bar labelled '4s' snaps in; on 'about forty' a long bar labelled '40s' stretches across the frame. Headline 'Let the narration decide' sits top-left at 96px; the bullet list is cut.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Let the narration decide",
+        "text": "As long as it takes to say, plus a beat. Title slide: about four seconds. Three-step process: about forty seconds",
+        "notes": "There's no single correct number. Keep each slide up as long as it takes to say what it's about, plus a short pause. The words set the rhythm.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 11.748,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 2.611,
+          "text": "There's no single correct number."
+        },
+        {
+          "t": 2.891,
+          "end": 5.921,
+          "text": "Keep each slide up as long as it takes to say it, plus a beat."
+        },
+        {
+          "t": 6.201,
+          "end": 10.648,
+          "text": "A title, about four seconds; a three-step process, about forty."
+        }
+      ],
+      "speechEnd": 10.648
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "Use these ranges as starting points: titles three to six seconds, headline with image eight to twenty, charts fifteen to thirty, processes twenty to forty-five.",
+      "storyboard": "Night stage, wide shot of an animated range chart: four horizontal floating bars on a seconds axis from 0 to 45. Each range bar grows on its spoken label: 'Title or divider 3\u20136s' in mist, 'Headline + image 8\u201320s' in teal, 'Chart or data 15\u201330s' in amber, 'Process 20\u201345s' in coral. Camera slowly drifts right along the axis toward the 45-second mark, holding there. Data identical to the slide, rebuilt as a chart.",
+      "minDuration": 12,
+      "slide": {
+        "title": "Practical ranges by slide type",
+        "text": "Title or divider: 3 to 6 seconds. Headline with image: 8 to 20 seconds. Process slide: 20 to 45 seconds. Chart or data: 15 to 30 seconds",
+        "notes": "Use these as starting points, then adjust after the preview. If a slide needs more than about forty-five seconds, it's probably carrying two ideas. Split it.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 11.804,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 10.204,
+          "text": "Use these ranges as starting points: titles three to six seconds, headline with image eight to twenty, charts fifteen to thirty, processes twenty to forty-five."
+        }
+      ],
+      "speechEnd": 10.204
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "If a slide needs more than about forty-five seconds, it's probably carrying two ideas. Split it.",
+      "storyboard": "Close-up continuation: the camera pushes into the 45-second line, which turns into a coral wall. A bar overshoots it and glows warning red. On 'two ideas' two overlapping cards appear inside the bar; on 'Split it' a clean vertical cut slices the bar into two neat teal pieces. Single word 'Split it.' lands at 140px.",
+      "minDuration": 7,
+      "slide": {
+        "title": "Practical ranges by slide type",
+        "text": "Title or divider: 3 to 6 seconds. Headline with image: 8 to 20 seconds. Process slide: 20 to 45 seconds. Chart or data: 15 to 30 seconds",
+        "notes": "Use these as starting points, then adjust after the preview. If a slide needs more than about forty-five seconds, it's probably carrying two ideas. Split it.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "cut",
+        "duration": 0
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 7.683,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 5.746,
+          "text": "If a slide needs more than about forty-five seconds, it's probably carrying two ideas."
+        },
+        {
+          "t": 6.026,
+          "end": 6.583,
+          "text": "Split it."
+        }
+      ],
+      "speechEnd": 6.583
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "A breach reporting slide sat still for over a minute while viewers drifted. As three slides, the length stayed similar, but every topic change brought a new visual.",
+      "storyboard": "Paper stage, split layout. Left: one dense card with six grey bullets and a timer reading 'about 70s'; on 'viewers drifted' small eye icons fade away one by one. On 'three slides' the card shatters into three cards sliding right, each tagged '15\u201320s', one reading 'Report to the privacy team within one hour', another 'Use the breach form, not email'. On 'new visual' each card flashes a fresh amber icon in sequence. Holding wide on the three cards.",
+      "minDuration": 12,
+      "slide": {
+        "title": "Split one long slide into three",
+        "text": "Before: six bullets, about 70 seconds. After: three slides, 15 to 20 seconds each. Report to the privacy team within one hour. Use the breach form, not email",
+        "notes": "A breach reporting slide sat still for over a minute while viewers drifted. As three slides, the total length stayed similar, but every topic change brought a new visual.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 12,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 5.038,
+          "text": "A breach reporting slide sat still for over a minute while viewers drifted."
+        },
+        {
+          "t": 5.318,
+          "end": 10.519,
+          "text": "As three slides, the length stayed similar, but every topic change brought a new visual."
+        }
+      ],
+      "speechEnd": 10.519
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "If a slide drags, split it or reveal each part as the narration reaches it. If it flashes past, add a sentence so viewers get a fair look.",
+      "storyboard": "Night stage divided into two halves. Left, labelled 'Too long' in coral: on 'reveal each part' three items illuminate one by one in sync with a moving playhead. Right, labelled 'Too short' in amber: a tiny bar blinks by; on 'add a sentence' a speech line types in and the bar stretches to comfortable teal length. Bottom caption 'One to three sentences per simple slide' fades in. Original bullets rebuilt as this two-sided comparison.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Fix slides that feel rushed or stale",
+        "text": "Too long: split it or reveal parts as you go. Too short: add a sentence of narration. One to three sentences per simple slide. Read each note aloud once",
+        "notes": "If a slide drags, split it or reveal each part as the narration reaches it. If it flashes past, add a sentence so viewers get a fair look.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "wipeleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 10.552,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.956,
+          "text": "If a slide drags, split it or reveal each part as the narration reaches it."
+        },
+        {
+          "t": 5.236,
+          "end": 8.952,
+          "text": "If it flashes past, add a sentence so viewers get a fair look."
+        }
+      ],
+      "speechEnd": 8.952
+    },
+    {
+      "file": "scenes/scene-6.js",
+      "narration": "Speaker notes set the timing. On Pro, AI directs the video, pacing each scene to your narration. Try Basic first at powerpoint2vid.com.",
+      "storyboard": "Paper stage, wide. A speaker-notes card in ink sits on the left; on 'set the timing' a teal timeline flows out of it. On 'AI directs the video' scenes tile along the timeline, each sized to its waveform. On 'Try Basic first' everything recedes and 'powerpoint2vid.com' lands centre at 130px in ink with an amber underline, holding with a gentle push-in. 'Watch the full video once' bullet is cut from screen.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Watch it, then tune the timing",
+        "text": "Speaker notes set each slide's time. Adjust speaking speed. Watch the full video once",
+        "notes": "Speaker notes set the timing. On Pro, a.i. directs the video, pacing each scene to your narration. Try Basic first at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-6.wav",
+      "duration": 10.204,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 2.158,
+          "text": "Speaker notes set the timing."
+        },
+        {
+          "t": 2.438,
+          "end": 5.956,
+          "text": "On Pro, AI directs the video, pacing each scene to your narration."
+        },
+        {
+          "t": 6.236,
+          "end": 9.104,
+          "text": "Try Basic first at powerpoint2vid.com."
+        }
+      ],
+      "speechEnd": 9.104
+    }
+  ],
+  "voiceProvider": "piper"
+}

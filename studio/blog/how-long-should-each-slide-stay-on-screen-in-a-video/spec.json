@@ -1,0 +1,100 @@
+{
+  "title": "How Long Should Each Slide Stay on Screen in a Video? (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "How long should each slide stay on screen?",
+      "bullets": [],
+      "notes": "In a video, viewers can't ask you to slow down. Get slide timing right and it feels calm and clear. Get it wrong, and it drags or rushes.",
+      "minDuration": 9
+    },
+    {
+      "title": "Let the narration decide",
+      "bullets": [
+        "As long as it takes to say, plus a beat",
+        "Title slide: about four seconds",
+        "Three-step process: about forty seconds"
+      ],
+      "notes": "There's no single correct number. Keep each slide up as long as it takes to say what it's about, plus a short pause. The words set the rhythm.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Practical ranges by slide type",
+      "bullets": [
+        "Title or divider: 3 to 6 seconds",
+        "Headline with image: 8 to 20 seconds",
+        "Process slide: 20 to 45 seconds",
+        "Chart or data: 15 to 30 seconds"
+      ],
+      "notes": "Use these as starting points, then adjust after the preview. If a slide needs more than about forty-five seconds, it's probably carrying two ideas. Split it.",
+      "minDuration": 11,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Split one long slide into three",
+      "bullets": [
+        "Before: six bullets, about 70 seconds",
+        "After: three slides, 15 to 20 seconds each",
+        "Report to the privacy team within one hour",
+        "Use the breach form, not email"
+      ],
+      "notes": "A breach reporting slide sat still for over a minute while viewers drifted. As three slides, the total length stayed similar, but every topic change brought a new visual.",
+      "minDuration": 12,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Fix slides that feel rushed or stale",
+      "bullets": [
+        "Too long: split it or reveal parts as you go",
+        "Too short: add a sentence of narration",
+        "One to three sentences per simple slide",
+        "Read each note aloud once"
+      ],
+      "notes": "If a slide drags, split it or reveal each part as the narration reaches it. If it flashes past, add a sentence so viewers get a fair look.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Watch it, then tune the timing",
+      "bullets": [
+        "Speaker notes set each slide's time",
+        "Adjust speaking speed",
+        "Watch the full video once"
+      ],
+      "notes": "Speaker notes set the timing. On Pro, a.i. directs the video, pacing each scene to your narration. Try Basic first at powerpoint2vid.com.",
+      "minDuration": 10,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}
