@@ -1,0 +1,222 @@
+{
+  "title": "\"White Space: The Most Underused Tool in PowerPoint\" (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0E1116",
+      "ink": "#1A1D23",
+      "paper": "#F7F5F0",
+      "mist": "#D9DDE3",
+      "signal": "#FF5A3C",
+      "calm": "#3B6EF5",
+      "slate": "#6B7280"
+    },
+    "font": "Inter Display",
+    "motion": "Unhurried and confident: elements ease out slowly with long holds, and clutter is cleared with quick snaps that contrast the calm. The camera mostly sits still, with occasional slow push-ins to let emptiness breathe.",
+    "story": "We open on a cramped, noisy slide that empties out into airy paper-white space, then alternate dark night stages for problems and bright paper stages for fixes. Wide, empty frames contrast with tight, crowded moments, landing on a clean bright call to action."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "See empty room on a slide, and your instinct is to fill it. That instinct makes slides harder to read. White space is how you fix it.",
+      "storyboard": "Open on a night stage where a paper-coloured slide jitters as bullets, logos and shapes pile in, overlapping until the slide is crammed. On 'harder to read' the clutter blurs and vibrates in slate grey. On 'White space' everything snaps away in one beat, leaving a vast paper field with the title 'White Space' at 150px in ink, and a small signal-coral 'PowerPoint's most underused tool' beneath. The camera slowly pushes in on the emptiness and holds. The original's top-pinned title is rebuilt as a centred hero.",
+      "minDuration": 9,
+      "slide": {
+        "title": "White Space: PowerPoint's Most Underused Tool",
+        "text": "",
+        "notes": "Most people see empty room on a slide and fill it. That instinct makes slides harder to read. Here's how white space fixes it.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 10.308,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.329,
+          "text": "See empty room on a slide, and your instinct is to fill it."
+        },
+        {
+          "t": 4.609,
+          "end": 7.152,
+          "text": "That instinct makes slides harder to read."
+        },
+        {
+          "t": 7.432,
+          "end": 9.208,
+          "text": "White space is how you fix it."
+        }
+      ],
+      "speechEnd": 9.208
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "White space is any area without content, not just white. It focuses the eye, groups related things, and makes a slide feel calm and confident.",
+      "storyboard": "A deep calm-blue field fills the frame, captioned 'Any area without content' to show white space needn't be white. On 'focuses the eye' a single coral dot sits alone in the field and a soft spotlight settles on it. On 'groups' six scattered dots glide into two tight clusters separated by a clear gap. On 'calm and confident' the clusters exhale and settle as the word 'Calm' fades in at 120px on the open side. The three overlapping bullets are cut and become these three beats.",
+      "minDuration": 11,
+      "slide": {
+        "title": "White space guides the eye",
+        "text": "Focus: one element in open space. Grouping: close means related. Pace: calm feels confident",
+        "notes": "White space is any area without content, not just white. It focuses the eye, groups related things with gaps, and makes a slide feel calm and confident.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 11.12,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.341,
+          "text": "White space is any area without content, not just white."
+        },
+        {
+          "t": 4.621,
+          "end": 10.02,
+          "text": "It focuses the eye, groups related things, and makes a slide feel calm and confident."
+        }
+      ],
+      "speechEnd": 10.02
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "To find space, delete repeated logos and decorative shapes first. Then move reminders into your speaker notes, the single biggest source of new space in most decks.",
+      "storyboard": "Night stage with a cramped slide mock-up in the centre. On 'repeated logos and decorative shapes' the logos and swooshes flick off one by one with small snaps. On 'speaker notes' a block of tiny text lifts off the slide and slides down into a notes panel below, and the slide visibly grows roomier. On 'biggest source' the newly empty area glows faintly coral with the label 'New space'. Margins expand and the remaining items align to two guide lines, covering the last two bullets visually without on-screen text.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Find space in a crowded deck",
+        "text": "Remove what doesn't help. Move detail into speaker notes. Set generous margins. Group with gaps, align to a few lines",
+        "notes": "Delete repeated logos and decorative shapes first. Then move reminders into your speaker notes, the single biggest source of new space in most decks.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 11.712,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 5.038,
+          "text": "To find space, delete repeated logos and decorative shapes first."
+        },
+        {
+          "t": 5.318,
+          "end": 10.612,
+          "text": "Then move reminders into your speaker notes, the single biggest source of new space in most decks."
+        }
+      ],
+      "speechEnd": 10.612
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Before: seven bullets, two logos and a tiny chart. After: one point, one big chart, one supporting line. New customers doubled after we simplified sign-up.",
+      "storyboard": "Split frame on paper. On 'Before' the left side shows a cramped slide with seven bullets, two logos and a squeezed chart. On 'After' a wipe reveals the right: the headline 'New customers doubled' at 96px in ink, a large animated bar chart whose latest bar grows in signal coral, and a small line 'Sign-up went from five steps to two'. The camera pushes in on the coral bar and holds as the before side fades to mist. No new numbers are invented; the bars remain unlabelled.",
+      "minDuration": 12,
+      "slide": {
+        "title": "The slide carries less but says more",
+        "text": "Before: seven bullets, two logos, squeezed chart. After: \"New customers doubled after we simplified sign-up\". Large chart, latest bar highlighted. \"Sign-up went from five steps to two\"",
+        "notes": "The before slide had seven bullets, two logos and a tiny chart. The after slide has one point, one big chart and one supporting line.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "wipeleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 12.433,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.935,
+          "text": "Before: seven bullets, two logos and a tiny chart."
+        },
+        {
+          "t": 4.215,
+          "end": 8.139,
+          "text": "After: one point, one big chart, one supporting line."
+        },
+        {
+          "t": 8.419,
+          "end": 11.333,
+          "text": "New customers doubled after we simplified sign-up."
+        }
+      ],
+      "speechEnd": 11.333
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "In a video, space matters even more. Viewers can't lean in or flip back. Spacious slides stay crisp, give animation room, and leave the bottom clear for captions.",
+      "storyboard": "Night stage framed like a video player. On 'can't lean in' a ghost cursor tries to zoom and a back arrow greys out. On 'stay crisp' a crowded slide breaks into compression blocks while a spacious one stays sharp beside it. On 'animation room' a calm-blue shape glides freely across open space. On 'captions' a clean caption bar slides up into the empty lower third and holds. The headline 'Space matters more in video' sits at the top at 100px.",
+      "minDuration": 12,
+      "slide": {
+        "title": "Space matters more in video",
+        "text": "Viewers can't lean closer or flip back. Clean slides stay crisp when compressed. Room for motion to work. Keep the bottom clear for captions",
+        "notes": "In a video, viewers can't lean in or flip back. Spacious slides stay crisp, give animation room to work, and leave the bottom clear for captions.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 12,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.064,
+          "text": "In a video, space matters even more."
+        },
+        {
+          "t": 3.344,
+          "end": 5.48,
+          "text": "Viewers can't lean in or flip back."
+        },
+        {
+          "t": 5.76,
+          "end": 10.857,
+          "text": "Spacious slides stay crisp, give animation room, and leave the bottom clear for captions."
+        }
+      ],
+      "speechEnd": 10.857
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "With PowerPoint2Vid, your speaker notes become the narration. On Pro, a.i. turns uncluttered slides into calm animated scenes. Try Basic first at powerpoint2vid.com.",
+      "storyboard": "Bright paper stage. On 'speaker notes' a notes panel's text rises and turns into a flowing waveform. On 'Pro' a clean slide unfolds into an animated scene with a soft calm-blue glow and a small 'Pro' tag. On 'Try Basic first' everything clears to wide white space with 'powerpoint2vid.com' at 120px in ink and a coral underline drawing beneath it. Hold on the URL in generous emptiness.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Ordinary slides in, extraordinary video out",
+        "text": "Speaker notes become the narration. On Pro, a.i. directs each animated scene. Try it first on Basic",
+        "notes": "Your speaker notes become the narration. On Pro, a.i. turns uncluttered slides into calm animated scenes. Try Basic first at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 12.596,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.051,
+          "text": "With PowerPoint2Vid, your speaker notes become the narration."
+        },
+        {
+          "t": 4.331,
+          "end": 8.313,
+          "text": "On Pro, a.i. turns uncluttered slides into calm animated scenes."
+        },
+        {
+          "t": 8.593,
+          "end": 11.496,
+          "text": "Try Basic first at powerpoint2vid.com."
+        }
+      ],
+      "speechEnd": 11.496
+    }
+  ],
+  "voiceProvider": "piper"
+}

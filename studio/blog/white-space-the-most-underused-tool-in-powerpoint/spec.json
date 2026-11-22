@@ -1,0 +1,100 @@
+{
+  "title": "\"White Space: The Most Underused Tool in PowerPoint\" (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "White Space: PowerPoint's Most Underused Tool",
+      "bullets": [],
+      "notes": "Most people see empty room on a slide and fill it. That instinct makes slides harder to read. Here's how white space fixes it.",
+      "minDuration": 8
+    },
+    {
+      "title": "White space guides the eye",
+      "bullets": [
+        "Focus: one element in open space",
+        "Grouping: close means related",
+        "Pace: calm feels confident"
+      ],
+      "notes": "White space is any area without content, not just white. It focuses the eye, groups related things with gaps, and makes a slide feel calm and confident.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Find space in a crowded deck",
+      "bullets": [
+        "Remove what doesn't help",
+        "Move detail into speaker notes",
+        "Set generous margins",
+        "Group with gaps, align to a few lines"
+      ],
+      "notes": "Delete repeated logos and decorative shapes first. Then move reminders into your speaker notes, the single biggest source of new space in most decks.",
+      "minDuration": 11,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "The slide carries less but says more",
+      "bullets": [
+        "Before: seven bullets, two logos, squeezed chart",
+        "After: \"New customers doubled after we simplified sign-up\"",
+        "Large chart, latest bar highlighted",
+        "\"Sign-up went from five steps to two\""
+      ],
+      "notes": "The before slide had seven bullets, two logos and a tiny chart. The after slide has one point, one big chart and one supporting line.",
+      "minDuration": 12,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Space matters more in video",
+      "bullets": [
+        "Viewers can't lean closer or flip back",
+        "Clean slides stay crisp when compressed",
+        "Room for motion to work",
+        "Keep the bottom clear for captions"
+      ],
+      "notes": "In a video, viewers can't lean in or flip back. Spacious slides stay crisp, give animation room to work, and leave the bottom clear for captions.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Ordinary slides in, extraordinary video out",
+      "bullets": [
+        "Speaker notes become the narration",
+        "On Pro, a.i. directs each animated scene",
+        "Try it first on Basic"
+      ],
+      "notes": "Your speaker notes become the narration. On Pro, a.i. turns uncluttered slides into calm animated scenes. Try Basic first at powerpoint2vid.com.",
+      "minDuration": 10,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}
