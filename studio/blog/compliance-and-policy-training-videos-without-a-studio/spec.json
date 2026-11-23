@@ -1,0 +1,105 @@
+{
+  "title": "Compliance and Policy Training Videos Without a Studio (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Compliance Training Videos Without a Studio",
+      "bullets": [
+        "Accurate, consistent, easy to follow",
+        "Updated every time a policy changes",
+        "Start from the deck you already have"
+      ],
+      "notes": "Your policy deck already holds your compliance training. Here's how to turn it into a clear narrated video, without a studio or voice talent.",
+      "minDuration": 9
+    },
+    {
+      "title": "Cut the Deck to What People Do",
+      "bullets": [
+        "What the rule is",
+        "Why it matters, in one sentence",
+        "What to do in common situations",
+        "Who to contact and how"
+      ],
+      "notes": "Start from the approved policy, then strip out the background and history. Staff mainly need the rule, why it matters, and what to do.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Write One Rule Per Slide",
+      "bullets": [
+        "Before: Gifts and hospitality",
+        "After: Declare any gift over the policy limit within five working days",
+        "Before: Data handling",
+        "After: Lock your screen whenever you leave your desk"
+      ],
+      "notes": "Rewrite every headline as an instruction. A headline like this is a complete takeaway, even if someone only glances at the slide.",
+      "minDuration": 11,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Speaker Notes Become the Narration",
+      "bullets": [
+        "Explain it like you would to a colleague",
+        "Keep sentences short",
+        "Spell out acronyms the first time",
+        "Add a scenario after each key rule"
+      ],
+      "notes": "Write your notes the way you'd explain the rule to a colleague. Then add a scenario, like Priya and the supplier hamper, so the rule sticks.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Make It Accessible and Easy to Update",
+      "bullets": [
+        "Burned-in captions on",
+        "Contrast of 4.5:1 for normal text",
+        "Label Do and Don't in words",
+        "Policy change: edit the slide and note, export again"
+      ],
+      "notes": "Turn captions on and check contrast so everyone can follow. When a threshold changes, edit the slide and note, export again, and the narration matches.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Ordinary Policy Deck In, Extraordinary Video Out",
+      "bullets": [
+        "Basic: narration, captions, transitions",
+        "Pro: a.i. directs the video",
+        "Works with .pptx and Google Slides"
+      ],
+      "notes": "On Pro, a.i. directs your compliance video, giving each rule one clear scene timed to the narration. Try Basic first at powerpoint2vid.com.",
+      "minDuration": 10,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}

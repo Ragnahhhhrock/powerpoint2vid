@@ -1,0 +1,114 @@
+/* Scene 3 — "Your speaker notes become the narration, so write them like you'd explain the rule to a colleague.
+ * Then add a scenario, like Priya and the supplier hamper, so it sticks."
+ * Storyboard: Paper stage. Slide thumbnail settles, speaker-notes panel slides up beneath. On "become the narration"
+ * the grey lines collapse into a live teal waveform. On "colleague" two short friendly bubbles pop in. On "Priya"
+ * a gift hamper drops in with a swinging "Priya" tag; on "hamper" the camera pushes in and an amber "DECLARE IT" stamp snaps on. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const TEAL = '#14A38B', AMBER = '#F2A93B', CORAL = '#E5604D', SLATE = '#8A97A8', INK = '#1B2433', PAPER = '#F6F3EC';
+  const notesW = ctx.at(0, 'notes'), become = ctx.at(0, 'become'), narr = ctx.at(0, 'narration'), coll = ctx.at(0, 'colleague');
+  const priya = ctx.at(1, 'Priya'), hamper = ctx.at(1, 'hamper'), sticks = ctx.at(1, 'sticks');
+  const MONO = 'ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(60% 70% at 30% 40%, #fffdf7 0%, ' + PAPER + ' 60%, #ebe5d8 100%)';
+  const glow = el('div', 'abs', stage, { left: '900px', top: '200px', width: '1000px', height: '800px', borderRadius: '50%', background: 'radial-gradient(closest-side, rgba(242,169,59,.16), transparent)', opacity: 0 });
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '1300px 400px' });
+
+  const thumb = el('div', 'abs', cam, { left: '200px', top: '140px', width: '760px', height: '428px', background: '#fff', borderRadius: '18px', boxShadow: '0 30px 70px rgba(27,36,51,.14), 0 2px 0 rgba(27,36,51,.04)', overflow: 'hidden' });
+  el('div', 'abs', thumb, { left: '56px', top: '64px', width: '70px', height: '8px', borderRadius: '4px', background: TEAL });
+  const tt = el('div', 'abs', thumb, { left: '56px', top: '96px', width: '640px', font: '800 50px/1.08 Inter Display, Inter', letterSpacing: '-.03em', color: INK });
+  tt.textContent = 'Declare gifts over the limit';
+  [0, 1, 2].forEach((i) => el('div', 'abs', thumb, { left: '56px', top: 260 + i * 40 + 'px', width: [520, 440, 360][i] + 'px', height: '14px', borderRadius: '7px', background: '#e9e6df' }));
+  const thumbTag = el('div', 'abs', cam, { left: '204px', top: '100px', font: `600 20px/1 ${MONO}`, letterSpacing: '.14em', color: SLATE });
+  thumbTag.textContent = 'SLIDE';
+
+  const panel = el('div', 'abs', cam, { left: '200px', top: '600px', width: '760px', height: '300px', background: INK, borderRadius: '18px', boxShadow: '0 30px 70px rgba(14,23,38,.3)', overflow: 'hidden' });
+  const plab = el('div', 'abs', panel, { left: '36px', top: '30px', font: `600 20px/1 ${MONO}`, letterSpacing: '.16em', color: SLATE });
+  const dot = el('div', 'abs', panel, { right: '36px', top: '28px', width: '22px', height: '22px', borderRadius: '50%', background: CORAL, boxShadow: '0 0 18px rgba(229,96,77,.8)', opacity: 0 });
+  const lines = [600, 660, 520, 610].map((w, i) => el('div', 'abs', panel, { left: '36px', top: 86 + i * 46 + 'px', width: w + 'px', height: '16px', borderRadius: '8px', background: 'rgba(246,243,236,.22)', transformOrigin: '0% 50%' }));
+  const wave = el('div', 'abs', panel, { left: '42px', top: '90px', width: '676px', height: '180px', opacity: 0 });
+  const N = 52, bars = [];
+  for (let i = 0; i < N; i++) bars.push(el('div', 'abs', wave, { left: i * 13 + 'px', top: '90px', width: '8px', height: '6px', borderRadius: '4px', background: 'linear-gradient(180deg, #5fe0c8, ' + TEAL + ')', boxShadow: '0 0 14px rgba(20,163,139,.55)' }));
+  const amp = { a: 0 };
+
+  const mkBubble = (x, y, txt, dark, tailLeft) => {
+    const bg = dark ? TEAL : '#fff';
+    const b = el('div', 'abs', cam, { left: x + 'px', top: y + 'px', padding: '34px 46px', borderRadius: '36px', background: bg, color: dark ? '#fff' : INK, font: '800 54px/1 Inter Display, Inter', letterSpacing: '-.03em', whiteSpace: 'nowrap', boxShadow: '0 24px 60px rgba(27,36,51,.16)', transformOrigin: tailLeft ? '10% 100%' : '90% 100%' });
+    el('div', 'abs', b, { [tailLeft ? 'left' : 'right']: '48px', bottom: '-14px', width: '34px', height: '34px', background: bg, transform: 'rotate(45deg)', borderRadius: '6px' });
+    const s = el('span', '', b, { position: 'relative' }); s.textContent = txt;
+    return b;
+  };
+  const b1 = mkBubble(1060, 250, 'Got a gift?', false, true);
+  const b2 = mkBubble(1300, 450, 'Just declare it.', true, false);
+
+  const ham = el('div', 'abs', cam, { left: '1100px', top: '330px', width: '640px', height: '600px' });
+  const shadow = el('div', 'abs', cam, { left: '1180px', top: '880px', width: '480px', height: '40px', borderRadius: '50%', background: 'radial-gradient(closest-side, rgba(27,36,51,.28), transparent)', opacity: 0 });
+  ham.innerHTML = `<svg width="640" height="600" viewBox="0 0 640 600">
+    <rect x="300" y="60" width="54" height="190" rx="14" fill="#1B2433"/><rect x="312" y="30" width="30" height="44" rx="8" fill="#1B2433"/>
+    <rect x="300" y="130" width="54" height="56" fill="#F6F3EC"/>
+    <circle cx="200" cy="220" r="62" fill="#E5604D"/><circle cx="420" cy="215" r="56" fill="#F2A93B"/><circle cx="270" cy="250" r="44" fill="#14A38B"/>
+    <path d="M90 230 C 90 60, 550 60, 550 230" fill="none" stroke="#a8743a" stroke-width="22" stroke-linecap="round"/>
+    <path d="M70 250 L570 250 L520 520 Q 515 540 495 540 L145 540 Q 125 540 120 520 Z" fill="#c98b45"/>
+    <g stroke="#a8743a" stroke-width="7" opacity=".85">
+      <line x1="85" y1="320" x2="555" y2="320"/><line x1="98" y1="390" x2="542" y2="390"/><line x1="112" y1="460" x2="528" y2="460"/>
+      <line x1="170" y1="250" x2="185" y2="540"/><line x1="250" y1="250" x2="258" y2="540"/><line x1="320" y1="250" x2="320" y2="540"/><line x1="390" y1="250" x2="382" y2="540"/><line x1="470" y1="250" x2="455" y2="540"/>
+    </g>
+    <rect x="60" y="238" width="520" height="30" rx="12" fill="#d99b55"/>
+    <path d="M320 262 L280 300 L268 276 Z M320 262 L360 300 L372 276 Z" fill="#E5604D"/><circle cx="320" cy="262" r="14" fill="#E5604D"/>
+  </svg>`;
+  const tag = el('div', 'abs', ham, { left: '60px', top: '300px', width: '10px', height: '10px', transformOrigin: '50% 0%' });
+  el('div', 'abs', tag, { left: '4px', top: 0, width: '2px', height: '60px', background: INK });
+  const card = el('div', 'abs', tag, { left: '-80px', top: '58px', width: '170px', padding: '16px 0', background: PAPER, borderRadius: '10px', border: '3px solid ' + INK, textAlign: 'center', font: '800 40px/1 Inter Display, Inter', letterSpacing: '-.03em', color: INK, boxShadow: '0 12px 26px rgba(27,36,51,.2)' });
+  card.textContent = 'Priya';
+  const stamp = el('div', 'abs', cam, { left: '1270px', top: '640px', padding: '14px 30px', border: '7px solid ' + AMBER, borderRadius: '14px', color: AMBER, font: '900 64px/1 Inter Display, Inter', letterSpacing: '-.02em', background: 'rgba(246,243,236,.9)', whiteSpace: 'nowrap', transformOrigin: '50% 50%' });
+  stamp.textContent = 'DECLARE IT';
+  const ring = el('div', 'abs', cam, { left: '1340px', top: '560px', width: '260px', height: '260px', borderRadius: '50%', border: '5px solid ' + AMBER, opacity: 0 });
+
+  ctx.fx.vignette({ strength: 0.25 });
+  ctx.fx.grain({ opacity: 0.05 });
+
+  ctx.onFrame((t) => {
+    const pre = t < become + 0.2;
+    plab.textContent = pre ? 'SPEAKER NOTES' : 'NARRATION';
+    plab.style.color = pre ? SLATE : '#5fe0c8';
+    for (let i = 0; i < N; i++) {
+      const env = 0.3 + 0.7 * Math.abs(Math.sin(i * 0.71 + t * 6.3) * Math.cos(i * 0.23 - t * 3.1));
+      const mid = 1 - Math.abs(i - N / 2) / (N / 2) * 0.5;
+      const h = 6 + amp.a * 150 * env * mid;
+      bars[i].style.height = h + 'px';
+      bars[i].style.top = 90 - h / 2 + 'px';
+    }
+  });
+
+  gsap.set([b1, b2, ham, stamp, card], { opacity: 0 });
+  tl.from(thumb, { y: 40, opacity: 0, duration: 0.7 }, 0.05);
+  tl.from(thumbTag, { opacity: 0, duration: 0.5 }, 0.25);
+  tl.to(cam, { scale: 1.015, duration: priya, ease: 'none' }, 0);
+
+  tl.from(panel, { y: 360, opacity: 0, duration: 0.8 }, Math.max(0.3, notesW - 0.4));
+  tl.from(lines, { scaleX: 0, duration: 0.5, stagger: 0.08 }, Math.max(0.5, notesW - 0.1));
+
+  tl.to(lines, { scaleX: 0, opacity: 0, duration: 0.4, stagger: 0.05, ease: 'power2.in' }, become);
+  tl.to(wave, { opacity: 1, duration: 0.3 }, become + 0.2);
+  tl.to(amp, { a: 1, duration: 0.7, ease: 'power2.out' }, become + 0.25);
+  tl.to(dot, { opacity: 1, duration: 0.2 }, become + 0.25);
+  tl.to(panel, { boxShadow: '0 30px 80px rgba(20,163,139,.35)', duration: 0.8 }, narr);
+
+  tl.fromTo(b1, { opacity: 0, scale: 0.5, y: 30 }, { opacity: 1, scale: 1, y: 0, duration: 0.6, ease: 'back.out(1.8)' }, coll - 0.15);
+  tl.fromTo(b2, { opacity: 0, scale: 0.5, y: 30 }, { opacity: 1, scale: 1, y: 0, duration: 0.6, ease: 'back.out(1.8)' }, coll + 0.15);
+  tl.to(amp, { a: 0.55, duration: 0.6 }, coll + 0.4);
+
+  tl.to([b1, b2], { y: -160, opacity: 0, duration: 0.5, stagger: 0.06, ease: 'power2.in' }, priya - 0.45);
+  tl.fromTo(ham, { y: -800, opacity: 1 }, { y: 0, opacity: 1, duration: 0.75, ease: 'bounce.out', immediateRender: false }, priya - 0.15);
+  tl.fromTo(shadow, { opacity: 0, scaleX: 0.3 }, { opacity: 1, scaleX: 1, duration: 0.6, immediateRender: false }, priya - 0.05);
+  tl.to(glow, { opacity: 1, duration: 1 }, priya);
+  tl.to(card, { opacity: 1, duration: 0.2 }, priya - 0.1);
+  tl.fromTo(tag, { rotation: -40 }, { rotation: 0, duration: 1.6, ease: 'elastic.out(1, 0.35)', immediateRender: false }, priya + 0.3);
+
+  tl.to(cam, { scale: 1.05, duration: 1.0, ease: 'expo.inOut' }, hamper - 0.3);
+  tl.fromTo(stamp, { opacity: 0, scale: 2.4, rotation: 4 }, { opacity: 1, scale: 1, rotation: -9, duration: 0.32, ease: 'power4.in', immediateRender: false }, hamper + 0.15);
+  tl.to(cam, { y: 6, duration: 0.06, yoyo: true, repeat: 1 }, hamper + 0.47);
+  tl.fromTo(ring, { scale: 0.4, opacity: 0.9 }, { scale: 2, opacity: 0, duration: 0.8, ease: 'power2.out', immediateRender: false }, hamper + 0.47);
+  tl.to(cam, { scale: 1.06, duration: Math.max(0.5, ctx.dur - hamper - 0.7), ease: 'none' }, hamper + 0.7);
+  tl.to(stamp, { boxShadow: '0 0 40px rgba(242,169,59,.6)', duration: 0.5, yoyo: true, repeat: 1 }, sticks);
+});

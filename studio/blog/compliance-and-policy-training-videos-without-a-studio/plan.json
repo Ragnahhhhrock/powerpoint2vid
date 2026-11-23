@@ -1,0 +1,207 @@
+{
+  "title": "Compliance and Policy Training Videos Without a Studio (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0E1726",
+      "ink": "#1B2433",
+      "paper": "#F6F3EC",
+      "compliance teal": "#14A38B",
+      "signal amber": "#F2A93B",
+      "caution coral": "#E5604D",
+      "slate mist": "#8A97A8"
+    },
+    "font": "Inter Display",
+    "motion": "Calm, assured pacing with soft ease-out settles and occasional crisp snaps when a rule locks into place; the camera drifts slowly and pushes in only on the key word.",
+    "story": "We move from a cluttered, studio-less problem on a dark night stage to bright paper scenes where messy policy is trimmed into clear rules, then close back on night with a confident teal call to action. Wide establishing scenes alternate with close typographic moments."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "Your policy deck already holds your compliance training. Here's how to turn it into a clear narrated video, without a studio or voice talent.",
+      "storyboard": "Night stage. A single slide card floats centre, softly lit in teal. On 'compliance training' a faint play triangle glows through the card, as if the video was hiding inside it. On 'without a studio' a ghosted microphone, light stand and camera outline fade in around it, then are struck through in coral and dissolve away. Headline settles at 120px: 'No studio needed.' Original overlapping title text is cut and rebuilt as this single clean line.",
+      "minDuration": 9,
+      "slide": {
+        "title": "Compliance Training Videos Without a Studio",
+        "text": "Accurate, consistent, easy to follow. Updated every time a policy changes. Start from the deck you already have",
+        "notes": "Your policy deck already holds your compliance training. Here's how to turn it into a clear narrated video, without a studio or voice talent.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 9.587,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.772,
+          "text": "Your policy deck already holds your compliance training."
+        },
+        {
+          "t": 4.052,
+          "end": 8.487,
+          "text": "Here's how to turn it into a clear narrated video, without a studio or voice talent."
+        }
+      ],
+      "speechEnd": 8.487
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Start from the approved policy, then strip out the background and history. Staff mainly need the rule, why it matters, and what to do.",
+      "storyboard": "Paper stage, wide. A tall stack of dense policy pages sits left. On 'strip out the background and history' pages labelled 'Background' and 'History' slide off-frame and fade in slate. On 'the rule, why it matters, and what to do' three teal cards snap into a clean row: 'The rule', 'Why', 'What to do'. A small fourth card, 'Who to contact', tucks in beneath. Camera eases in on the row and holds.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Cut the Deck to What People Do",
+        "text": "What the rule is. Why it matters, in one sentence. What to do in common situations. Who to contact and how",
+        "notes": "Start from the approved policy, then strip out the background and history. Staff mainly need the rule, why it matters, and what to do.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 10,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.898,
+          "text": "Start from the approved policy, then strip out the background and history."
+        },
+        {
+          "t": 5.178,
+          "end": 8.638,
+          "text": "Staff mainly need the rule, why it matters, and what to do."
+        }
+      ],
+      "speechEnd": 8.638
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "Rewrite every headline as an instruction. 'Gifts and hospitality' becomes: declare any gift over the policy limit within five working days.",
+      "storyboard": "Ink stage, close typographic shot. The vague headline 'Gifts and hospitality' sits in slate at 110px. On 'becomes' it shatters letter by letter and reassembles in paper white as 'Declare gifts over the limit within five working days', with 'five working days' underlined in amber. A quick secondary flip shows 'Data handling' turning into 'Lock your screen when you leave'. Original bullet list is cut; the before-after pairs are rebuilt as morphing headlines.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Write One Rule Per Slide",
+        "text": "Before: Gifts and hospitality. After: Declare any gift over the policy limit within five working days. Before: Data handling. After: Lock your screen whenever you leave your desk",
+        "notes": "Rewrite every headline as an instruction. A headline like this is a complete takeaway, even if someone only glances at the slide.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 10.598,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 2.867,
+          "text": "Rewrite every headline as an instruction."
+        },
+        {
+          "t": 3.147,
+          "end": 8.998,
+          "text": "'Gifts and hospitality' becomes: declare any gift over the policy limit within five working days."
+        }
+      ],
+      "speechEnd": 8.998
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Your speaker notes become the narration, so write them like you'd explain the rule to a colleague. Then add a scenario, like Priya and the supplier hamper, so it sticks.",
+      "storyboard": "Paper stage. A speaker-notes panel slides up beneath a slide thumbnail; its lines turn into a teal audio waveform on 'become the narration'. On 'to a colleague' two friendly speech bubbles appear side by side, short and simple. On 'Priya and the supplier hamper' an illustrated gift hamper drops into frame with a small name tag reading 'Priya', and an amber 'Declare it' stamp lands on it. Original four-bullet list is cut to this single scene.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Speaker Notes Become the Narration",
+        "text": "Explain it like you would to a colleague. Keep sentences short. Spell out acronyms the first time. Add a scenario after each key rule",
+        "notes": "Write your notes the way you'd explain the rule to a colleague. Then add a scenario, like Priya and the supplier hamper, so the rule sticks.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "smoothup",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 11.131,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 5.607,
+          "text": "Your speaker notes become the narration, so write them like you'd explain the rule to a colleague."
+        },
+        {
+          "t": 5.887,
+          "end": 10.031,
+          "text": "Then add a scenario, like Priya and the supplier hamper, so it sticks."
+        }
+      ],
+      "speechEnd": 10.031
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Turn captions on and check contrast, at least 4.5 to 1, so everyone can follow. When a threshold changes, edit the slide and note, export again.",
+      "storyboard": "Split stage: left half paper, right half night. Left: a video frame gains burned-in captions on 'captions on', then a big '4.5:1' contrast badge pops in teal at 140px on 'contrast'. Right: on 'a threshold changes' a number on a slide flicks from old to new in amber, a loop arrow spins on 'export again', and the video thumbnail refreshes with a teal check. Do and Don't labels are cut for focus.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Make It Accessible and Easy to Update",
+        "text": "Burned-in captions on. Contrast of 4.5:1 for normal text. Label Do and Don't in words. Policy change: edit the slide and note, export again",
+        "notes": "Turn captions on and check contrast so everyone can follow. When a threshold changes, edit the slide and note, export again, and the narration matches.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "wipeleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 12.002,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 6.686,
+          "text": "Turn captions on and check contrast, at least 4.5 to 1, so everyone can follow."
+        },
+        {
+          "t": 6.966,
+          "end": 10.902,
+          "text": "When a threshold changes, edit the slide and note, export again."
+        }
+      ],
+      "speechEnd": 10.902
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "Try Basic first, with narration, captions and transitions. On Pro, a.i. directs your video, one clear scene per rule. Start at powerpoint2vid.com.",
+      "storyboard": "Night stage, wide. A plain slide deck slides in from the left and passes through a teal light gate, emerging on the right as a playing video, the 'ordinary in, extraordinary out' metaphor. On 'Basic' three small chips appear: Narration, Captions, Transitions. On 'Pro' a teal director's clapper snaps above. On 'powerpoint2vid.com' the URL lands centre at 100px in paper white, with small '.pptx and Google Slides' tags beneath; hold.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Ordinary Policy Deck In, Extraordinary Video Out",
+        "text": "Basic: narration, captions, transitions. Pro: a.i. directs the video. Works with .pptx and Google Slides",
+        "notes": "On Pro, a.i. directs your compliance video, giving each rule one clear scene timed to the narration. Try Basic first at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 11.748,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.364,
+          "text": "Try Basic first, with narration, captions and transitions."
+        },
+        {
+          "t": 4.644,
+          "end": 8.313,
+          "text": "On Pro, a.i. directs your video, one clear scene per rule."
+        },
+        {
+          "t": 8.593,
+          "end": 10.648,
+          "text": "Start at powerpoint2vid.com."
+        }
+      ],
+      "speechEnd": 10.648
+    }
+  ],
+  "voiceProvider": "piper"
+}

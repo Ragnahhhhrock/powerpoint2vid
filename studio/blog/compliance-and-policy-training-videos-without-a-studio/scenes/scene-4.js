@@ -1,0 +1,158 @@
+/* Scene 4 — "Turn captions on and check contrast, at least 4.5 to 1, so everyone can follow.
+ *            When a threshold changes, edit the slide and note, export again."
+ * Storyboard: split stage, paper left / night right. Captions snap on, 4.5:1 badge pops on "contrast".
+ * Right: number flicks old->new in amber on "threshold", note types, loop arrow spins on "export",
+ * thumbnail refreshes with a teal check on "again". Do/Don't cut for focus.
+ */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const A = (i, w, f) => { try { const v = ctx.at(i, w); return (typeof v === 'number' && isFinite(v)) ? v : f; } catch (e) { return f; } };
+  const tCap = A(0, 'captions', 1.2), tCon = A(0, 'contrast', 2.3), tEvery = A(0, 'everyone', 5.4);
+  const tThr = A(1, 'threshold', 7.4), tEdit = A(1, 'edit', 8.3), tNote = A(1, 'note', 9.1);
+  const tExp = A(1, 'export', 9.6), tAgain = A(1, 'again', 10.2);
+  const MONO = 'ui-monospace, Menlo, monospace';
+  const TEAL = 'var(--compliance-teal, #14A38B)', AMBER = 'var(--signal-amber, #F2A93B)';
+  const NIGHT = 'var(--night, #0E1726)', INK = 'var(--ink, #1B2433)', PAPER = 'var(--paper, #F6F3EC)', MIST = 'var(--slate-mist, #8A97A8)';
+
+  stage.style.background = NIGHT;
+
+  const left = el('div', 'abs', stage, { left: 0, top: 0, width: '960px', height: '1080px', overflow: 'hidden',
+    background: 'radial-gradient(80% 70% at 40% 40%, #fffdf7 0%, #F6F3EC 55%, #e9e4d8 100%)' });
+  const right = el('div', 'abs', stage, { left: '960px', top: 0, width: '960px', height: '1080px', overflow: 'hidden',
+    background: 'radial-gradient(70% 60% at 60% 45%, #1a2740 0%, #0E1726 70%)' });
+  const driftL = el('div', 'abs', left, { inset: 0, transformOrigin: '480px 520px' });
+  const driftR = el('div', 'abs', right, { inset: 0, transformOrigin: '480px 540px' });
+  const camL = el('div', 'abs', driftL, { inset: 0, transformOrigin: '480px 520px' });
+  const camR = el('div', 'abs', driftR, { inset: 0, transformOrigin: '480px 540px' });
+  const seam = el('div', 'abs', stage, { left: '958px', top: 0, width: '4px', height: '1080px', background: 'linear-gradient(180deg, transparent, rgba(20,163,139,.6), transparent)' });
+
+  const labL = el('div', 'abs', camL, { left: '120px', top: '110px', font: `600 22px/1 ${MONO}`, letterSpacing: '.14em', color: '#5d6878' });
+  labL.textContent = 'ACCESSIBLE · CAPTIONS ON';
+
+  const frame = el('div', 'abs', camL, { left: '120px', top: '170px', width: '720px', height: '405px', borderRadius: '18px', overflow: 'hidden',
+    background: 'radial-gradient(70% 80% at 35% 30%, #2a3a58 0%, #0E1726 75%)', boxShadow: '0 40px 80px rgba(14,23,38,.35), 0 6px 18px rgba(14,23,38,.25)' });
+  const fig = (x, c) => {
+    el('div', 'abs', frame, { left: x + 'px', top: '95px', width: '76px', height: '76px', borderRadius: '50%', background: c });
+    el('div', 'abs', frame, { left: x - 32 + 'px', top: '180px', width: '140px', height: '150px', borderRadius: '70px 70px 10px 10px', background: c });
+  };
+  fig(180, '#3b5277'); fig(470, '#2f4360');
+  const hamper = el('div', 'abs', frame, { left: '330px', top: '230px', width: '96px', height: '70px', borderRadius: '8px 8px 16px 16px', background: AMBER, boxShadow: '0 0 30px rgba(242,169,59,.45)' });
+  const prog = el('div', 'abs', frame, { left: 0, bottom: 0, height: '6px', width: '0px', background: TEAL });
+  const capBar = el('div', 'abs', frame, { left: '50px', right: '50px', top: '318px', textAlign: 'center' });
+  const capIn = el('span', '', capBar, { display: 'inline-block', padding: '10px 20px', borderRadius: '8px', background: 'rgba(0,0,0,.88)',
+    font: '700 32px/1.15 Inter, sans-serif', color: '#fff', letterSpacing: '-.01em' });
+  const capWords = ctx.split(capIn, 'Declare any gift over the limit.', 'word');
+  const ccTag = el('div', 'abs', frame, { right: '18px', top: '18px', padding: '6px 10px', borderRadius: '6px', border: '2px solid #fff', font: `800 18px/1 ${MONO}`, color: '#fff' });
+  ccTag.textContent = 'CC';
+
+  const badge = el('div', 'abs', camL, { left: '112px', top: '628px', font: '900 140px/1 Inter Display, Inter, sans-serif', letterSpacing: '-.05em', color: TEAL, transformOrigin: '20% 70%',
+    textShadow: '0 12px 40px rgba(20,163,139,.25)' });
+  badge.textContent = '4.5:1';
+  const side = el('div', 'abs', camL, { left: '560px', top: '650px', width: '280px' });
+  const sLab = el('div', '', side, { font: `600 20px/1.3 ${MONO}`, letterSpacing: '.12em', color: '#5d6878' });
+  sLab.textContent = 'MIN. CONTRAST';
+  const chip = el('div', '', side, { marginTop: '14px', display: 'flex', alignItems: 'center', gap: '16px' });
+  const aa = el('div', '', chip, { width: '110px', height: '74px', borderRadius: '12px', background: INK, color: '#fff', font: '800 40px/74px Inter, sans-serif', textAlign: 'center' });
+  aa.textContent = 'Aa';
+  const ok = el('div', '', chip, { width: '56px', height: '56px', borderRadius: '50%', background: TEAL, color: '#fff', font: '900 32px/56px Inter, sans-serif', textAlign: 'center', boxShadow: '0 0 24px rgba(20,163,139,.5)' });
+  ok.textContent = '✓';
+  const underline = el('div', 'abs', camL, { left: '120px', top: '800px', width: '420px', height: '6px', borderRadius: '3px', background: TEAL, transformOrigin: '0 50%' });
+
+  const labR = el('div', 'abs', camR, { left: '120px', top: '110px', font: `600 22px/1 ${MONO}`, letterSpacing: '.14em', color: MIST });
+  labR.textContent = 'POLICY CHANGE';
+  const card = el('div', 'abs', camR, { left: '120px', top: '170px', width: '720px', height: '300px', borderRadius: '14px', background: PAPER, boxShadow: '0 40px 90px rgba(0,0,0,.5)' });
+  const cTitle = el('div', 'abs', card, { left: '50px', top: '44px', font: '800 38px/1 Inter Display, Inter, sans-serif', letterSpacing: '-.03em', color: INK });
+  cTitle.textContent = 'Declare gifts over';
+  const slot = el('div', 'abs', card, { left: '46px', top: '108px', width: '420px', height: '140px', overflow: 'hidden' });
+  const oldN = el('div', 'abs', slot, { left: 0, top: 0, font: '900 124px/140px Inter Display, Inter, sans-serif', letterSpacing: '-.05em', color: INK });
+  oldN.textContent = '£50';
+  const newN = el('div', 'abs', slot, { left: 0, top: 0, font: '900 124px/140px Inter Display, Inter, sans-serif', letterSpacing: '-.05em', color: AMBER });
+  newN.textContent = '£75';
+  const cursor = el('div', 'abs', card, { left: '290px', top: '130px', width: '6px', height: '100px', background: AMBER, opacity: 0 });
+  const exTag = el('div', 'abs', card, { right: '30px', bottom: '28px', font: `600 16px/1 ${MONO}`, letterSpacing: '.12em', color: MIST });
+  exTag.textContent = 'EXAMPLE VALUE';
+
+  const notes = el('div', 'abs', camR, { left: '120px', top: '494px', width: '720px', height: '78px', borderRadius: '12px', background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.1)' });
+  const nLab = el('div', 'abs', notes, { left: '28px', top: '29px', font: `600 18px/1 ${MONO}`, letterSpacing: '.14em', color: MIST });
+  nLab.textContent = 'NOTES';
+  const nText = el('div', 'abs', notes, { left: '140px', top: '22px', font: '600 30px/1.1 Inter, sans-serif', color: '#fff' });
+  const nHi = el('div', 'abs', notes, { left: '130px', top: '16px', height: '46px', width: '300px', borderRadius: '6px', background: 'rgba(242,169,59,.22)', transformOrigin: '0 50%' });
+  notes.appendChild(nText);
+  const NOTE_STR = 'Limit is now £75.';
+  const noteState = { n: 0 };
+
+  const loop = el('div', 'abs', camR, { left: '130px', top: '650px', width: '170px', height: '170px', transformOrigin: '50% 50%' });
+  loop.innerHTML = `<svg width="170" height="170" viewBox="0 0 170 170"><circle cx="85" cy="85" r="78" fill="rgba(20,163,139,.08)"/>
+    <path d="M85 30 A55 55 0 1 1 33 66" fill="none" stroke="#14A38B" stroke-width="10" stroke-linecap="round"/>
+    <path d="M18 52 L33 70 L52 56" fill="none" stroke="#14A38B" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+  const thumb = el('div', 'abs', camR, { left: '360px', top: '608px', width: '480px', height: '270px', borderRadius: '14px', overflow: 'hidden',
+    background: 'radial-gradient(70% 80% at 35% 30%, #2a3a58 0%, #0b1220 80%)', boxShadow: '0 30px 70px rgba(0,0,0,.55)', border: '1px solid rgba(255,255,255,.12)' });
+  const tOld = el('div', 'abs', thumb, { left: '40px', top: '60px', font: '900 96px/1 Inter Display, Inter, sans-serif', letterSpacing: '-.05em', color: '#c9d2de' });
+  tOld.textContent = '£50';
+  const tNew = el('div', 'abs', thumb, { left: '40px', top: '60px', font: '900 96px/1 Inter Display, Inter, sans-serif', letterSpacing: '-.05em', color: AMBER, opacity: 0 });
+  tNew.textContent = '£75';
+  el('div', 'abs', thumb, { left: '40px', right: '40px', top: '200px', height: '30px', borderRadius: '6px', background: 'rgba(0,0,0,.75)' });
+  const tFlash = el('div', 'abs', thumb, { inset: 0, background: '#fff', opacity: 0 });
+  const check = el('div', 'abs', camR, { left: '770px', top: '578px', width: '84px', height: '84px', borderRadius: '50%', background: TEAL, color: '#fff',
+    font: '900 46px/84px Inter, sans-serif', textAlign: 'center', boxShadow: '0 0 40px rgba(20,163,139,.7)' });
+  check.textContent = '✓';
+
+  ctx.fx.vignette({ strength: 0.4 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  ctx.onFrame((t) => {
+    prog.style.width = Math.min(720, Math.max(0, t / ctx.dur) * 720) + 'px';
+    const n = Math.round(noteState.n);
+    nText.textContent = NOTE_STR.slice(0, n);
+    cursor.style.opacity = (t > tEdit - 0.1 && t < tNote) ? ((Math.floor(t * 4) % 2) ? 0.2 : 1) : 0;
+  });
+
+  tl.fromTo(driftL, { scale: 1, x: 0 }, { scale: 1.03, x: -6, duration: ctx.dur, ease: 'none', immediateRender: false }, 0);
+  tl.fromTo(driftR, { scale: 1.02, x: 6 }, { scale: 1, x: 0, duration: ctx.dur, ease: 'none', immediateRender: false }, 0);
+
+  tl.from(frame, { y: 40, opacity: 0, duration: 0.7 }, 0.05);
+  tl.from([labL, labR], { opacity: 0, y: 10, duration: 0.5, stagger: 0.1 }, 0.1);
+  tl.from(card, { y: 40, opacity: 0, duration: 0.8 }, 0.15);
+  tl.from([notes, thumb, loop], { y: 30, opacity: 0, duration: 0.7, stagger: 0.08 }, 0.3);
+  tl.from(seam, { scaleY: 0, duration: 0.9, ease: 'expo.inOut' }, 0);
+  gsap.set([card, notes, thumb, loop], { filter: 'brightness(1) saturate(1)' });
+  tl.to([card, notes, thumb, loop], { filter: 'brightness(.55) saturate(.6)', duration: 0.6, ease: 'power2.out' }, 0.9);
+  tl.fromTo(hamper, { y: -8 }, { y: 0, duration: 1.2, yoyo: true, repeat: 4, ease: 'sine.inOut', immediateRender: false }, 0.2);
+
+  gsap.set(capIn, { opacity: 0 });
+  gsap.set(capWords, { opacity: 0, y: 8 });
+  tl.to(capIn, { opacity: 1, duration: 0.12, ease: 'none' }, tCap);
+  tl.to(capWords, { opacity: 1, y: 0, duration: 0.25, stagger: 0.07, ease: 'back.out(2)' }, tCap + 0.05);
+  tl.fromTo(ccTag, { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: 'back.out(2)' }, tCap);
+
+  gsap.set([badge, side], { opacity: 0 });
+  gsap.set(underline, { scaleX: 0 });
+  tl.fromTo(badge, { scale: 0.4, opacity: 0, rotation: -4 }, { scale: 1, opacity: 1, rotation: 0, duration: 0.6, ease: 'back.out(1.8)', immediateRender: false }, tCon);
+  tl.to(side, { opacity: 1, duration: 0.5 }, tCon + 0.35);
+  tl.from(chip.children, { scale: 0.5, opacity: 0, duration: 0.45, stagger: 0.1, ease: 'back.out(2)' }, tCon + 0.45);
+  tl.to(underline, { scaleX: 1, duration: 0.7, ease: 'expo.out' }, tCon + 0.3);
+  tl.to(camL, { scale: 1.03, duration: 1.4, ease: 'expo.inOut' }, tCon - 0.1);
+  tl.to(capIn, { boxShadow: '0 0 30px rgba(20,163,139,.6)', duration: 0.5, yoyo: true, repeat: 1 }, tEvery);
+
+  tl.to([card, notes, thumb, loop], { filter: 'brightness(1) saturate(1)', duration: 0.6, ease: 'power2.out' }, tThr - 0.4);
+  tl.to(camR, { scale: 1.04, duration: 1.2, ease: 'expo.inOut' }, tThr - 0.3);
+  gsap.set(newN, { yPercent: 100 });
+  tl.to(oldN, { yPercent: -100, duration: 0.35, ease: 'power3.in' }, tThr);
+  tl.to(newN, { yPercent: 0, duration: 0.5, ease: 'back.out(1.8)' }, tThr + 0.25);
+  tl.fromTo(card, { boxShadow: '0 40px 90px rgba(0,0,0,.5)' }, { boxShadow: '0 40px 90px rgba(0,0,0,.5), 0 0 60px rgba(242,169,59,.5)', duration: 0.4, yoyo: true, repeat: 1, immediateRender: false }, tThr + 0.25);
+
+  gsap.set(nHi, { scaleX: 0 });
+  tl.to(noteState, { n: NOTE_STR.length, duration: 0.7, ease: 'none' }, tNote - 0.1);
+  tl.to(nHi, { scaleX: 1, duration: 0.6, ease: 'power2.out' }, tNote);
+  tl.to(nText, { color: '#F2A93B', duration: 0.4 }, tNote + 0.5);
+
+  tl.to(loop, { rotation: 360, duration: 0.9, ease: 'power2.inOut' }, tExp - 0.1);
+  tl.to(loop, { scale: 1.12, duration: 0.3, yoyo: true, repeat: 1, ease: 'power2.out' }, tExp - 0.1);
+  tl.fromTo(tFlash, { opacity: 0 }, { opacity: 0.8, duration: 0.1, yoyo: true, repeat: 1, ease: 'none', immediateRender: false }, tAgain - 0.1);
+  tl.set(tOld, { opacity: 0 }, tAgain);
+  tl.set(tNew, { opacity: 1 }, tAgain);
+  gsap.set(check, { scale: 0, opacity: 0 });
+  tl.to(check, { scale: 1, opacity: 1, duration: 0.5, ease: 'back.out(2.2)' }, tAgain + 0.1);
+  tl.to(thumb, { boxShadow: '0 30px 70px rgba(0,0,0,.55), 0 0 50px rgba(20,163,139,.5)', borderColor: 'rgba(20,163,139,.8)', duration: 0.5 }, tAgain + 0.1);
+});
