@@ -1,0 +1,126 @@
+/* Scene 4 — "Search engines read text, not pictures. Give the video a descriptive title, and tidy your
+ * speaker notes into a short transcript below it."
+ * Storyboard: paper stage, split layout. Left: a close-up of one page (video thumbnail, title, transcript).
+ * On "read" a signal-blue scanning beam sweeps down, passes straight through the washed-out thumbnail
+ * ("pictures" → NOT READ) and stops on the text line (READ). On "descriptive" the weak title
+ * "Watch our video" is struck in coral; on "title" the better title types out in ink. On "transcript" the
+ * speaker-note cards on the right fly over and fold into neat paragraph lines under the video. On "below"
+ * the thumbnail sharpens into a bold, high-contrast frame (the slide's last bullet). */
+P2V.scene((ctx) => {
+  const { tl, el, stage, at } = ctx;
+  const T_read = at(0, 'read'), T_pic = at(0, 'pictures');
+  const T_desc = at(1, 'descriptive'), T_title = at(1, 'title'), T_notes = at(1, 'notes');
+  const T_trans = at(1, 'transcript'), T_below = at(1, 'below');
+  const rnd = ctx.rand(4);
+  const MONO = 'ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(80% 70% at 30% 35%, #fffdf8 0%, var(--paper) 60%, #e9e4d8 100%)';
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '760px 540px' });
+
+  const card = el('div', 'abs', cam, { left: '120px', top: '100px', width: '940px', height: '880px', borderRadius: '22px', background: '#fff', boxShadow: '0 50px 110px rgba(27,34,56,.16), 0 8px 24px rgba(27,34,56,.08)', overflow: 'hidden' });
+
+  const thumb = el('div', 'abs', card, { left: '44px', top: '44px', width: '852px', height: '430px', borderRadius: '14px', overflow: 'hidden', background: 'linear-gradient(135deg, #3D7BFF 0%, #2a3f88 55%, #1B2238 100%)' });
+  const docWrap = el('div', 'abs', thumb, { left: '90px', top: '70px', width: '220px', height: '290px', transformOrigin: '50% 0%' });
+  const doc = el('div', 'abs', docWrap, { left: 0, top: 0, width: '220px', height: '290px', borderRadius: '10px', background: '#fff', transform: 'rotate(-6deg)', boxShadow: '0 20px 40px rgba(0,0,0,.3)' });
+  [40, 80, 110, 140, 200].forEach((y, i) => el('div', 'abs', doc, { left: '24px', top: y + 'px', width: (i === 0 ? 110 : i === 4 ? 90 : 170) + 'px', height: i === 0 ? '18px' : '10px', borderRadius: '5px', background: i === 4 ? 'var(--coral)' : '#cfd5e3' }));
+  const bell = el('div', 'abs', thumb, { left: '590px', top: '90px', width: '150px', height: '150px', borderRadius: '50%', background: 'var(--amber)', boxShadow: '0 0 60px rgba(255,181,71,.6)' });
+  el('div', 'abs', bell, { left: '50px', top: '40px', width: '50px', height: '60px', borderRadius: '25px 25px 6px 6px', background: '#fff' });
+  const play = el('div', 'abs', thumb, { left: '376px', top: '165px', width: '100px', height: '100px', borderRadius: '50%', background: 'rgba(255,255,255,.92)', boxShadow: '0 10px 30px rgba(0,0,0,.3)' });
+  el('div', 'abs', play, { left: '40px', top: '30px', width: 0, height: 0, borderTop: '20px solid transparent', borderBottom: '20px solid transparent', borderLeft: '32px solid var(--ink)' });
+  const scrim = el('div', 'abs', thumb, { left: 0, right: 0, bottom: 0, height: '220px', background: 'linear-gradient(0deg, rgba(14,20,36,.95), transparent)', opacity: 0 });
+  const bold = el('div', 'abs', thumb, { left: '40px', bottom: '34px', font: '900 64px/0.95 Inter Display, Inter', letterSpacing: '-.04em', color: '#fff', transformOrigin: '0% 100%', opacity: 0 });
+  bold.innerHTML = 'INVOICE REMINDERS<br><span style="color:var(--amber)">AUTOMATED</span>';
+  const hcTag = el('div', 'abs', thumb, { right: '24px', top: '22px', padding: '8px 14px', borderRadius: '8px', background: 'var(--amber)', font: `700 18px/1 ${MONO}`, letterSpacing: '.12em', color: 'var(--night)', opacity: 0 });
+  hcTag.textContent = 'HIGH-CONTRAST';
+  const notRead = el('div', 'abs', card, { left: '64px', top: '64px', padding: '9px 16px', borderRadius: '8px', background: 'var(--coral)', font: `700 20px/1 ${MONO}`, letterSpacing: '.12em', color: '#fff', opacity: 0 });
+  notRead.textContent = '✕ NOT READ';
+
+  const tWrap = el('div', 'abs', card, { left: '28px', top: '500px', width: '884px', padding: '14px 18px', boxSizing: 'border-box', borderRadius: '10px' });
+  const hl = el('div', 'abs', tWrap, { inset: 0, borderRadius: '10px', background: 'rgba(61,123,255,.10)', borderLeft: '6px solid var(--signal)', opacity: 0 });
+  const tLine = el('div', '', tWrap, { position: 'relative', minHeight: '48px', font: '800 42px/1.15 Inter Display, Inter', letterSpacing: '-.03em', color: 'var(--ink)' });
+  const oldT = el('span', 'abs', tLine, { left: 0, top: 0, whiteSpace: 'nowrap', color: 'var(--ink)' });
+  oldT.textContent = 'Watch our video';
+  const strike = el('div', 'abs', oldT, { left: '-6px', right: '-6px', top: '50%', height: '6px', marginTop: '-1px', borderRadius: '3px', background: 'var(--coral)', transformOrigin: '0% 50%' });
+  const newT = el('span', '', tLine, {});
+  const caret = el('span', '', tLine, { display: 'inline-block', width: '4px', height: '40px', marginLeft: '4px', verticalAlign: '-6px', background: 'var(--signal)', opacity: 0 });
+  const readTag = el('div', 'abs', card, { right: '44px', top: '470px', padding: '8px 14px', borderRadius: '8px', background: 'var(--signal)', font: `700 18px/1 ${MONO}`, letterSpacing: '.12em', color: '#fff', opacity: 0 });
+  readTag.textContent = '✓ READ';
+
+  const trLab = el('div', 'abs', card, { left: '46px', top: '700px', font: `700 18px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--mist)', opacity: 0 });
+  trLab.textContent = 'TRANSCRIPT';
+  const trLines = [0, 1, 2, 3, 4].map((i) => el('div', 'abs', card, { left: '46px', top: 738 + i * 28 + 'px', height: '12px', borderRadius: '6px', width: (i === 4 ? 420 : 760 + rnd() * 90) + 'px', background: i % 3 === 0 ? '#c9cfdc' : '#dde1ea', transformOrigin: '0% 50%' }));
+
+  const beam = el('div', 'abs', card, { left: 0, width: '940px', top: '-60px', height: '120px', opacity: 0, pointerEvents: 'none' });
+  el('div', 'abs', beam, { left: 0, right: 0, top: 0, height: '60px', background: 'linear-gradient(180deg, transparent, rgba(61,123,255,.22))' });
+  el('div', 'abs', beam, { left: 0, right: 0, top: '58px', height: '5px', background: 'var(--signal)', boxShadow: '0 0 24px 4px rgba(61,123,255,.7)' });
+
+  const head = el('div', 'abs', cam, { left: '1160px', top: '150px', width: '680px', font: '800 60px/1.05 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--ink)' });
+  head.innerHTML = 'Describe it in words <span style="color:var(--signal)">search can read</span>';
+  const noteLab = el('div', 'abs', cam, { left: '1162px', top: '430px', font: `700 20px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--mist)' });
+  noteLab.textContent = 'SPEAKER NOTES';
+  const rots = [-2.5, 1.8, -1.2];
+  const notes = rots.map((r, i) => {
+    const c = el('div', 'abs', cam, { left: 1160 + i * 14 + 'px', top: 480 + i * 150 + 'px', width: '620px', height: '124px', borderRadius: '14px', background: '#fffaf0', border: '1px solid #ece4d2', boxShadow: '0 20px 40px rgba(27,34,56,.12)', transform: `rotate(${r}deg)` });
+    const l = el('div', 'abs', c, { left: '26px', top: '20px', font: `700 16px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--amber)' });
+    l.textContent = 'SLIDE ' + (i + 1) + ' NOTES';
+    [52, 76, 100].forEach((y, k) => el('div', 'abs', c, { left: '26px', top: y + 'px', height: '10px', borderRadius: '5px', width: (k === 2 ? 260 : 480 + rnd() * 80) + 'px', background: '#e3dccb' }));
+    return c;
+  });
+
+  ctx.fx.vignette({ strength: 0.22 });
+  ctx.fx.grain({ opacity: 0.06 });
+
+  const FULL = 'How automatic invoice reminders work (2\u2011minute explainer)';
+  const ty = { n: 0 };
+  const tStart = T_title + 0.05, tEnd = tStart + 1.5;
+  ctx.onFrame((t) => {
+    newT.textContent = FULL.slice(0, Math.round(ty.n));
+    let c = 0;
+    if (t >= tStart && t < tEnd) c = 1;
+    else if (t >= tEnd && t < T_trans) c = Math.floor((t - tEnd) * 2.4) % 2 === 0 ? 1 : 0;
+    caret.style.opacity = c;
+  });
+
+  gsap.set(thumb, { filter: 'blur(5px) saturate(.35) contrast(.6) brightness(1.15)' });
+  gsap.set(trLines, { scaleX: 0 });
+  gsap.set(strike, { scaleX: 0 });
+
+  tl.from(card, { y: 40, opacity: 0, duration: 0.7 }, 0.05);
+  tl.from(head, { y: 24, opacity: 0, duration: 0.7 }, 0.2);
+  tl.from(noteLab, { opacity: 0, duration: 0.5 }, 0.5);
+  tl.from(notes, { y: 40, opacity: 0, duration: 0.7, stagger: 0.1, ease: 'back.out(1.4)' }, 0.55);
+  tl.to(cam, { scale: 1.03, duration: ctx.dur, ease: 'none' }, 0);
+
+  tl.to(beam, { opacity: 1, duration: 0.25 }, T_read - 0.2);
+  tl.to(beam, { top: '440px', duration: Math.max(0.6, T_pic - T_read + 0.2), ease: 'power1.inOut' }, T_read - 0.2);
+  tl.to(thumb, { opacity: 0.5, duration: 0.4 }, T_pic - 0.3);
+  tl.fromTo(notRead, { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.45, ease: 'back.out(1.8)', immediateRender: false }, T_pic);
+  tl.to(beam, { top: '468px', duration: 0.5, ease: 'power3.out' }, T_pic + 0.2);
+  tl.to(hl, { opacity: 1, duration: 0.35 }, T_pic + 0.5);
+  tl.fromTo(readTag, { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.45, ease: 'back.out(1.8)', immediateRender: false }, T_pic + 0.55);
+  tl.to(beam, { opacity: 0, duration: 0.5 }, T_pic + 1.0);
+  tl.to(readTag, { opacity: 0, duration: 0.4 }, T_desc - 0.3);
+
+  tl.to(strike, { scaleX: 1, duration: 0.4, ease: 'power2.inOut' }, T_desc);
+  tl.to(oldT, { color: 'var(--mist)', duration: 0.3 }, T_desc + 0.1);
+  tl.to(oldT, { opacity: 0, y: -24, duration: 0.35, ease: 'power2.in' }, Math.max(T_desc + 0.45, T_title - 0.3));
+  tl.to(ty, { n: FULL.length, duration: tEnd - tStart, ease: 'none' }, tStart);
+
+  notes.forEach((c, i) => {
+    const t0 = T_trans - 0.2 + i * 0.1;
+    tl.to(c, { x: 164 - (1160 + i * 14), y: 838 + i * 28 - (480 + i * 150) - 40, rotation: 0, scale: 0.45, duration: 0.7, ease: 'power3.inOut' }, t0);
+    tl.to(c, { opacity: 0, scaleY: 0.05, duration: 0.25, ease: 'power2.in' }, t0 + 0.55);
+  });
+  tl.to(noteLab, { opacity: 0, duration: 0.4 }, T_trans);
+  tl.to(trLab, { opacity: 1, duration: 0.4 }, T_trans + 0.2);
+  tl.to(trLines, { scaleX: 1, duration: 0.55, stagger: 0.06, ease: 'power3.out' }, T_trans + 0.35);
+
+  const S = Math.min(T_below + 0.2, ctx.dur - 2.2);
+  tl.to(notRead, { opacity: 0, duration: 0.3 }, S - 0.2);
+  tl.to(thumb, { opacity: 1, filter: 'blur(0px) saturate(1.15) contrast(1.1) brightness(1)', duration: 0.7, ease: 'power2.out' }, S);
+  tl.to(docWrap, { y: -50, scale: 0.72, duration: 0.6, ease: 'power3.out' }, S);
+  tl.to(scrim, { opacity: 1, duration: 0.5 }, S + 0.1);
+  tl.fromTo(bold, { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.55, ease: 'back.out(1.6)', immediateRender: false }, S + 0.2);
+  tl.fromTo(hcTag, { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.45, ease: 'back.out(1.8)', immediateRender: false }, S + 0.4);
+  tl.to(play, { scale: 0.8, y: -60, opacity: 0.85, duration: 0.5 }, S + 0.2);
+});

@@ -1,0 +1,113 @@
+/* Scene 5 — "Your sales deck already explains the topic. On Pro, a.i. directs the video, tightening the story
+ * and designing each scene. Try Basic first at powerpoint2vid.com."
+ * Storyboard: warm paper stage. The deck's real slides sit stacked and fan out on "sales deck"; the speaker
+ * notes lift off them as lines of narration. On "a.i. directs" the slides straighten into a new order, two are
+ * trimmed on "tightening", and the rest are restyled into cinematic night frames in palette colours on
+ * "designing". On "Try Basic first" everything clears to negative space; "powerpoint2vid.com" lands at 130px
+ * in ink and a signal-blue underline draws beneath it, then holds. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const safe = (i, w, f) => { const v = ctx.at(i, w); return (v == null || isNaN(v)) ? f : v; };
+  const tSales = safe(0, 'sales', 1.2), tExplains = safe(0, 'explains', 2.2);
+  const tAI = safe(1, 'directs', 4.6) - 0.25, tTight = safe(1, 'tightening', 5.8), tDesign = safe(1, 'designing', 7.0);
+  const tTry = safe(2, 'Try', 8.45), tBasic = safe(2, 'Basic', 8.8);
+  const tUrl = Math.min(Math.max(safe(2, 'at', 9.4) + 0.1, tTry + 0.6), 9.6);
+
+  stage.style.background = 'radial-gradient(60% 55% at 50% 45%, #fffdf8 0%, var(--paper) 60%, #ebe5d8 100%)';
+  el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(40% 35% at 78% 18%, rgba(255,181,71,.16), transparent 70%), radial-gradient(35% 30% at 15% 85%, rgba(61,123,255,.08), transparent 70%)' });
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '960px 560px' });
+
+  const mono = { font: '600 20px/1 ui-monospace, Menlo, monospace', letterSpacing: '.16em', color: 'var(--mist)', textTransform: 'uppercase' };
+
+  const W = 420, H = 236;
+  const tint = ['var(--signal)', 'var(--amber)', 'var(--coral)', '#7f8fb8'];
+  const tintRaw = ['61,123,255', '255,181,71', '255,107,90', '169,179,201'];
+  const cards = [1, 2, 3, 4, 5, 6].map((n, i) => {
+    const c = el('div', 'abs', cam, { left: 0, top: 0, width: W + 'px', height: H + 'px', borderRadius: '10px', overflow: 'hidden', background: '#fff',
+      boxShadow: '0 30px 60px rgba(27,34,56,.16), 0 4px 12px rgba(27,34,56,.08)', zIndex: i + 1 });
+    const img = el('img', 'abs', c, { inset: 0, width: '100%', height: '100%', objectFit: 'cover' }); img.src = ctx.asset(`slide-${n}.png`);
+    return { c, i };
+  });
+  const pos = (card, cx, cy, rot, s) => ({ x: cx - W / 2, y: cy - H / 2, rotation: rot, scale: s });
+  cards.forEach(({ c, i }) => gsap.set(c, pos(c, 960 + (i - 2.5) * 7, 600 - (i - 2.5) * 6, (i - 2.5) * 1.6, 1)));
+
+  const fanP = (i) => ({ cx: 960 + (i - 2.5) * 250, cy: 620 + Math.pow(i - 2.5, 2) * 12, rot: (i - 2.5) * 5 });
+
+  const notesTag = el('div', 'abs', cam, { ...mono, left: '560px', top: '150px', opacity: 0 });
+  notesTag.textContent = 'Speaker notes → narration';
+  gsap.set(notesTag, { opacity: 0 });
+  const widths = [780, 700, 800, 540, 740, 610];
+  const lines = widths.map((w, k) => el('div', 'abs', cam, { left: 0, top: 0, width: w + 'px', height: '14px', borderRadius: '7px',
+    background: k % 3 === 0 ? 'var(--ink)' : 'rgba(27,34,56,.55)', opacity: 0, zIndex: 20 }));
+
+  const dirTag = el('div', 'abs', cam, { ...mono, left: 0, width: '1920px', top: '250px', textAlign: 'center', color: 'var(--ink)', opacity: 0 });
+  dirTag.innerHTML = 'Pro · <span style="color:var(--signal)">a.i. directs</span>';
+
+  const order = [2, 0, 5, 3, 1, 4];
+  const kept = [1, 0, 3, 2];
+  const trimmed = [4, 5];
+  const overlays = kept.map((ci, k) => {
+    const o = el('div', 'abs', cards[ci].c, { inset: 0, background: `radial-gradient(70% 90% at ${25 + k * 15}% 40%, rgba(${tintRaw[k]},.55), transparent 70%), var(--night)` });
+    el('div', 'abs', o, { left: 0, right: 0, top: 0, height: '22px', background: '#05070d' });
+    el('div', 'abs', o, { left: 0, right: 0, bottom: 0, height: '22px', background: '#05070d' });
+    el('div', 'abs', o, { left: '36px', top: '84px', width: 150 + k * 25 + 'px', height: '22px', borderRadius: '5px', background: '#fff' });
+    el('div', 'abs', o, { left: '36px', top: '118px', width: 100 + (k % 2) * 40 + 'px', height: '10px', borderRadius: '5px', background: 'rgba(255,255,255,.45)' });
+    el('div', 'abs', o, { right: '38px', top: '70px', width: '86px', height: '86px', borderRadius: '50%', background: tint[k], boxShadow: `0 0 40px rgba(${tintRaw[k]},.8)` });
+    gsap.set(o, { clipPath: 'inset(0% 100% 0% 0%)' });
+    return o;
+  });
+
+  const cta = el('div', 'abs', stage, { left: 0, top: 0, width: '1920px', height: '1080px', transformOrigin: '960px 540px' });
+  const tryTag = el('div', 'abs', cta, { ...mono, left: 0, width: '1920px', top: '420px', textAlign: 'center', fontSize: '24px', color: 'var(--signal)', opacity: 0 });
+  tryTag.textContent = 'Try Basic first';
+  const urlWrap = el('div', 'abs', cta, { left: 0, width: '1920px', top: '470px', textAlign: 'center', opacity: 0 });
+  const url = el('div', '', urlWrap, { display: 'inline-block', position: 'relative', font: '800 130px/1.1 Inter Display, Inter', letterSpacing: '-.04em', color: 'var(--ink)' });
+  url.textContent = 'powerpoint2vid.com';
+  const under = el('div', 'abs', url, { left: '4px', right: '4px', bottom: '-18px', height: '12px', borderRadius: '6px', background: 'var(--signal)',
+    boxShadow: '0 8px 30px rgba(61,123,255,.45)', transformOrigin: '0% 50%' });
+  gsap.set(under, { scaleX: 0 });
+  const glow = el('div', 'abs', stage, { left: '460px', top: '380px', width: '1000px', height: '360px', borderRadius: '50%',
+    background: 'radial-gradient(closest-side, rgba(255,181,71,.25), transparent)', opacity: 0 });
+  stage.insertBefore(glow, cta);
+
+  ctx.fx.vignette({ strength: 0.22 });
+  ctx.fx.grain({ opacity: 0.05 });
+
+  tl.to(cam, { scale: 1.04, duration: tTry, ease: 'none' }, 0);
+  tl.from(cards.map((k) => k.c), { opacity: 0, y: '+=40', duration: 0.6, stagger: 0.03, ease: 'power3.out' }, 0);
+
+  cards.forEach(({ c, i }) => {
+    const p = fanP(i);
+    tl.to(c, { ...pos(c, p.cx, p.cy, p.rot, 1), duration: 0.9, ease: 'back.out(1.4)' }, tSales - 0.1 + i * 0.04);
+  });
+
+  tl.fromTo(notesTag, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, immediateRender: false }, tExplains - 0.2);
+  lines.forEach((ln, k) => {
+    const p = fanP(k), w = widths[k];
+    tl.fromTo(ln, { x: p.cx - w / 2, y: p.cy - 60, scaleX: 0.25, opacity: 0 },
+      { x: 560, y: 200 + k * 36, scaleX: 1, opacity: 1, duration: 0.8, ease: 'power3.out', immediateRender: false }, tExplains + k * 0.08);
+  });
+
+  tl.to([notesTag, ...lines], { opacity: 0, y: '-=30', duration: 0.5, stagger: 0.03, ease: 'power2.in' }, tAI - 0.3);
+  tl.fromTo(dirTag, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.6, immediateRender: false }, tAI);
+  cards.forEach(({ c, i }) => {
+    const s = order[i];
+    tl.set(c, { zIndex: 10 + s }, tAI);
+    tl.to(c, { ...pos(c, 960 + (s - 2.5) * 280, 600, 0, 0.62), duration: 1.0, ease: 'expo.inOut' }, tAI + s * 0.04);
+  });
+
+  trimmed.forEach((ci, j) => tl.to(cards[ci].c, { opacity: 0, scale: 0.4, y: '+=90', duration: 0.5, ease: 'power2.in' }, tTight - 0.1 + j * 0.08));
+  kept.forEach((ci, k) => tl.to(cards[ci].c, { ...pos(cards[ci].c, 960 + (k - 1.5) * 390, 600, 0, 0.85), duration: 0.8, ease: 'expo.inOut' }, tTight + 0.35));
+
+  overlays.forEach((o, k) => {
+    tl.to(o, { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.6, ease: 'power3.inOut' }, tDesign + k * 0.12);
+    tl.to(cards[kept[k]].c, { boxShadow: `0 40px 80px rgba(14,20,36,.35), 0 0 50px rgba(${tintRaw[k]},.3)`, duration: 0.6 }, tDesign + k * 0.12);
+  });
+
+  tl.to([dirTag, ...kept.map((ci) => cards[ci].c)], { opacity: 0, y: '-=40', scale: '-=0.06', duration: 0.55, stagger: 0.05, ease: 'power2.in' }, tTry - 0.15);
+  tl.fromTo(tryTag, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.6, immediateRender: false }, tBasic - 0.1);
+  tl.fromTo(urlWrap, { opacity: 0, y: 40, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: 'power3.out', immediateRender: false }, tUrl);
+  tl.to(glow, { opacity: 1, duration: 1.2, ease: 'power2.out' }, tUrl);
+  tl.to(under, { scaleX: 1, duration: 0.8, ease: 'power3.inOut' }, tUrl + 0.45);
+  tl.fromTo(cta, { scale: 1 }, { scale: 1.03, duration: ctx.dur - tTry, ease: 'none', immediateRender: false }, tTry);
+});

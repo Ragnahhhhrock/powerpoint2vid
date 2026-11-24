@@ -1,0 +1,212 @@
+{
+  "title": "\"Video and Search: How Explainer Videos Help Pages Get Found\" (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0E1424",
+      "ink": "#1B2238",
+      "paper": "#F6F3EC",
+      "signal": "#3D7BFF",
+      "amber": "#FFB547",
+      "coral": "#FF6B5A",
+      "mist": "#A9B3C9"
+    },
+    "font": "Inter Display",
+    "motion": "Calm, confident pace with soft ease-out arrivals and slow push-ins; elements snap into place only on the word that names them, then hold still.",
+    "story": "We open in the dark, with a page lost among search results, and move into light as each fix makes it easier to find. The scenes alternate between night and paper stages and between wide search-result views and close-ups of a single page, ending bright on the call to action."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "A video won't rescue a weak page. But a good explainer, placed well and described properly, can help your page get found.",
+      "storyboard": "Night stage: dozens of faint search-result cards drift downward like a dark ocean. On 'weak page' one grey card sinks and fades out. On 'good explainer' a single card lights up in signal blue, gains a small play icon, and rises toward the camera. On 'found' the camera pushes in and the word 'Found' lands at 150px in paper white beside the glowing card. The original sparse title is kept as the hero word and rebuilt with depth.",
+      "minDuration": 9,
+      "slide": {
+        "title": "How Explainer Videos Help Pages Get Found",
+        "text": "",
+        "notes": "A video won't rescue a weak page. But a good explainer, placed well and described properly, can help your page get found.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 9.018,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.052,
+          "text": "A video won't rescue a weak page."
+        },
+        {
+          "t": 3.332,
+          "end": 7.918,
+          "text": "But a good explainer, placed well and described properly, can help your page get found."
+        }
+      ],
+      "speechEnd": 7.918
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Search engines want pages that answer the question. A clear explainer helps, and it can show up in video results and on YouTube. But it never guarantees a ranking boost.",
+      "storyboard": "Paper stage, wide shot of a simplified results page. A search bar types a question with a blinking cursor, and on 'answer the question' a page card slides up with a check mark. On 'video results' a video thumbnail tile pops into a results carousel, and on 'YouTube' a second play-button tile joins it. On 'never guarantees' a ranking arrow tries to climb, stalls, and a small coral tag reads 'No guaranteed boost'. The four bullets are cut and turned into these three visual beats plus the caveat tag.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Video makes a page more useful",
+        "text": "Answers the searcher's question. Can appear in video results. Found on YouTube too. No guaranteed ranking boost",
+        "notes": "Search engines want pages that answer the question. A clear explainer helps, and it can show up in video results and on YouTube. But it never guarantees a ranking boost.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 11.899,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.389,
+          "text": "Search engines want pages that answer the question."
+        },
+        {
+          "t": 3.669,
+          "end": 8.255,
+          "text": "A clear explainer helps, and it can show up in video results and on YouTube."
+        },
+        {
+          "t": 8.535,
+          "end": 10.799,
+          "text": "But it never guarantees a ranking boost."
+        }
+      ],
+      "speechEnd": 10.799
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "Put each explainer on the page whose topic it explains, and place it where people see it. A video buried at the bottom is easy to miss.",
+      "storyboard": "Ink stage, close on a tall wireframe product page. On 'whose topic it explains' a video tile labelled 'Product explainer' snaps onto the matching 'Product page' frame. The camera tilts down the long page to show a video tile sitting greyed out at the very bottom, and on 'easy to miss' it dims further in mist. The camera whips back up and the tile springs into place right under the headline, glowing amber. Headline text: 'One topic. Near the top.' at 110px.",
+      "minDuration": 10,
+      "slide": {
+        "title": "One topic per page, near the top",
+        "text": "Product explainer on the product page. Close to the headline. Not hidden at the bottom",
+        "notes": "Put each explainer on the page whose topic it explains, and place it where people see it. A video buried at the bottom is easy to miss.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "smoothup",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 9.855,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 5.548,
+          "text": "Put each explainer on the page whose topic it explains, and place it where people see it."
+        },
+        {
+          "t": 5.828,
+          "end": 8.255,
+          "text": "A video buried at the bottom is easy to miss."
+        }
+      ],
+      "speechEnd": 8.255
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Search engines read text, not pictures. Give the video a descriptive title, and tidy your speaker notes into a short transcript below it.",
+      "storyboard": "Paper stage, split layout. On 'read text, not pictures' a scanning beam sweeps across a thumbnail, passes straight through it, and stops on the text lines. On 'descriptive title' the weak title 'Watch our video' is struck through in coral and replaced by 'How automatic invoice reminders work (2-minute explainer)', which types out in ink. On 'transcript' slide-note cards fold into neat paragraph lines beneath the video. The thumbnail sharpens into a bold, high-contrast frame, kept from the slide's last bullet.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Describe it in words search can read",
+        "text": "Weak: \"Watch our video\". Better: \"How automatic invoice reminders work (2-minute explainer)\". Transcript from your speaker notes. Readable, high-contrast thumbnail",
+        "notes": "Search engines read text, not pictures. Give the video a descriptive title, and tidy your speaker notes into a short transcript below it.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "wipeleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 10.482,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.424,
+          "text": "Search engines read text, not pictures."
+        },
+        {
+          "t": 3.704,
+          "end": 8.882,
+          "text": "Give the video a descriptive title, and tidy your speaker notes into a short transcript below it."
+        }
+      ],
+      "speechEnd": 8.882
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Add video structured data, or check your platform does. Keep the page fast with sensible hosting, and use captions and a transcript together.",
+      "storyboard": "Night stage, three-column build with one idea landing per beat. On 'structured data' a curly-brace code snippet assembles in signal blue and clicks onto the page like a label. On 'fast' a speed gauge needle swings into the green as a player placeholder shows 'load on click'. On 'captions and a transcript' a caption bar slides under the video while transcript lines appear beside it in amber. The title reduces to three 90px words: 'Data. Speed. Captions.'",
+      "minDuration": 11,
+      "slide": {
+        "title": "Structured data, fast pages, captions",
+        "text": "Add video structured data. Embed, or load the player on click. Captions plus an on-page transcript",
+        "notes": "Add video structured data, or check your platform does. Keep the page fast with sensible hosting, and use captions and a transcript together.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 11,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.225,
+          "text": "Add video structured data, or check your platform does."
+        },
+        {
+          "t": 4.505,
+          "end": 9.451,
+          "text": "Keep the page fast with sensible hosting, and use captions and a transcript together."
+        }
+      ],
+      "speechEnd": 9.451
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "Your sales deck already explains the topic. On Pro, a.i. directs the video, tightening the story and designing each scene. Try Basic first at powerpoint2vid.com.",
+      "storyboard": "Paper stage, warm and bright. On 'sales deck' a stack of slides fans out, and the speaker notes lift off as lines of narration. On 'a.i. directs' the slides reorder themselves, trimming and restyling into cinematic frames in palette colours. On 'Try Basic first' everything clears to negative space and 'powerpoint2vid.com' lands at 130px in ink, with a signal-blue underline drawing beneath it. It holds for two seconds.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Make the explainer from your deck",
+        "text": "Start with your sales or product deck. Speaker notes become narration and transcript. On Pro, a.i. directs the video",
+        "notes": "Your sales deck already explains the topic. On Pro, a.i. directs the video, tightening the story and designing each scene. Try Basic first at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 12.34,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.424,
+          "text": "Your sales deck already explains the topic."
+        },
+        {
+          "t": 3.704,
+          "end": 8.139,
+          "text": "On Pro, a.i. directs the video, tightening the story and designing each scene."
+        },
+        {
+          "t": 8.419,
+          "end": 11.24,
+          "text": "Try Basic first at powerpoint2vid.com."
+        }
+      ],
+      "speechEnd": 11.24
+    }
+  ],
+  "voiceProvider": "piper"
+}

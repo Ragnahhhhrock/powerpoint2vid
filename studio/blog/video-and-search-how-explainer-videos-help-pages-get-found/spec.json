@@ -1,0 +1,99 @@
+{
+  "title": "\"Video and Search: How Explainer Videos Help Pages Get Found\" (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "How Explainer Videos Help Pages Get Found",
+      "bullets": [],
+      "notes": "A video won't rescue a weak page. But a good explainer, placed well and described properly, can help your page get found.",
+      "minDuration": 8
+    },
+    {
+      "title": "Video makes a page more useful",
+      "bullets": [
+        "Answers the searcher's question",
+        "Can appear in video results",
+        "Found on YouTube too",
+        "No guaranteed ranking boost"
+      ],
+      "notes": "Search engines want pages that answer the question. A clear explainer helps, and it can show up in video results and on YouTube. But it never guarantees a ranking boost.",
+      "minDuration": 11,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "One topic per page, near the top",
+      "bullets": [
+        "Product explainer on the product page",
+        "Close to the headline",
+        "Not hidden at the bottom"
+      ],
+      "notes": "Put each explainer on the page whose topic it explains, and place it where people see it. A video buried at the bottom is easy to miss.",
+      "minDuration": 10,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Describe it in words search can read",
+      "bullets": [
+        "Weak: \"Watch our video\"",
+        "Better: \"How automatic invoice reminders work (2-minute explainer)\"",
+        "Transcript from your speaker notes",
+        "Readable, high-contrast thumbnail"
+      ],
+      "notes": "Search engines read text, not pictures. Give the video a descriptive title, and tidy your speaker notes into a short transcript below it.",
+      "minDuration": 12,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Structured data, fast pages, captions",
+      "bullets": [
+        "Add video structured data",
+        "Embed, or load the player on click",
+        "Captions plus an on-page transcript"
+      ],
+      "notes": "Add video structured data, or check your platform does. Keep the page fast with sensible hosting, and use captions and a transcript together.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Make the explainer from your deck",
+      "bullets": [
+        "Start with your sales or product deck",
+        "Speaker notes become narration and transcript",
+        "On Pro, a.i. directs the video"
+      ],
+      "notes": "Your sales deck already explains the topic. On Pro, a.i. directs the video, tightening the story and designing each scene. Try Basic first at powerpoint2vid.com.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}
