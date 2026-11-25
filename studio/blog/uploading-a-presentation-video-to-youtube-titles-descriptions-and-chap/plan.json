@@ -1,0 +1,207 @@
+{
+  "title": "\"Uploading a Presentation Video to YouTube: Titles, Descriptions and Chapters\" (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0F1115",
+      "ink": "#1C1F26",
+      "paper": "#F6F3EE",
+      "signal red": "#E8392F",
+      "amber": "#F5A623",
+      "slate": "#8A93A3",
+      "mint": "#3FC1A0"
+    },
+    "font": "Inter Display",
+    "motion": "Brisk, editorial pacing with snappy ease-out entrances and gentle overshoot on key reveals; the camera glides and pushes in slowly as if browsing a real upload page.",
+    "story": "We open in a dark, cinematic void where a lone video sits unseen, then move through bright paper-toned workshop scenes as the metadata is built piece by piece, returning to night for a confident red-accented finale that lands the call to action."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "Your video is only half the job on YouTube. The title, description, chapters and thumbnail decide whether anyone finds it, and whether they stay.",
+      "storyboard": "Night stage: a single video frame floats centre with a play triangle, lonely in black space. On 'only half the job' the frame splits vertically and the right half fades to a dashed outline. On 'title, description, chapters and thumbnail' four signal-red labels click into the empty half like puzzle pieces, one per word. On 'whether they stay' the completed frame glows and the headline 'The video is only half the job' sets in at 120px above it. The original overlapping title text is cut and rebuilt cleanly.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Uploading a Presentation Video to YouTube",
+        "text": "Titles, descriptions and chapters. The video is only half the job",
+        "notes": "Your video is only half the job on YouTube. The title, description, chapters and thumbnail decide whether anyone finds it, and whether they stay.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 10.237,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 3.192,
+          "text": "Your video is only half the job on YouTube."
+        },
+        {
+          "t": 3.472,
+          "end": 9.137,
+          "text": "The title, description, chapters and thumbnail decide whether anyone finds it, and whether they stay."
+        }
+      ],
+      "speechEnd": 9.137
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Before uploading, export an MP4 and watch it all the way through. Catch typos and internal information, and jot down when each new section starts.",
+      "storyboard": "Paper stage, wide shot of a horizontal timeline scrubber. On 'MP4' a file chip labelled 'MP4' drops onto the left end. On 'all the way through' a red playhead sweeps the full length. On 'typos and internal information' the playhead pauses twice and amber flags pop with tiny 'typo' and 'internal' tags. On 'each new section starts' mint tick marks stamp onto the timeline, and the camera pushes in to hold on them. Headline 'Prepare the file first' sits top-left at 96px; bullets are cut.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Prepare the file before you upload",
+        "text": "MP4 is the safest choice. Watch it once, all the way through. Check typos, audio and internal information. Note when each section starts",
+        "notes": "Before uploading, export an MP4 and watch it all the way through. Catch typos and internal information, and jot down when each new section starts.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 10.829,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.573,
+          "text": "Before uploading, export an MP4 and watch it all the way through."
+        },
+        {
+          "t": 4.853,
+          "end": 9.729,
+          "text": "Catch typos and internal information, and jot down when each new section starts."
+        }
+      ],
+      "speechEnd": 9.729
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "A good title says what viewers will learn, in the words they'd type. So Q4 Webinar becomes How to Plan a Q4 Marketing Budget for a Small Business.",
+      "storyboard": "Ink stage with a large search bar centre. On 'words they'd type' a cursor types into the bar. On 'Q4 Webinar' that phrase appears in slate at 140px, then gets struck through in red. On 'becomes' it morphs letter by letter into 'How to Plan a Q4 Marketing Budget for a Small Business' set at 90px in paper white, with 'Q4 Marketing Budget' underlined in amber to show the topic sits near the start. The camera eases left to right along the new title and holds.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Write a title people search for",
+        "text": "Weak: Q4 Webinar. Stronger: How to Plan a Q4 Marketing Budget for a Small Business. Main topic near the start. No all caps or vague teasers",
+        "notes": "A good title says what viewers will learn, in the words they'd type. So Q4 Webinar becomes How to Plan a Q4 Marketing Budget for a Small Business.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 11,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.538,
+          "text": "A good title says what viewers will learn, in the words they'd type."
+        },
+        {
+          "t": 4.818,
+          "end": 9.497,
+          "text": "So Q4 Webinar becomes How to Plan a Q4 Marketing Budget for a Small Business."
+        }
+      ],
+      "speechEnd": 9.497
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Make the first two lines a plain summary, since they show before the more link. Then add three to five bullets, your chapters and your links.",
+      "storyboard": "Paper stage: a stylised description box drawn as stacked rows. On 'first two lines' the top two rows highlight in amber and everything below blurs behind a '...more' fold. On 'more link' the fold unfurls downward with a smooth roll. On 'three to five bullets' three mint dots tick in, on 'chapters' a block of timestamps slides in, on 'links' three link pills appear. Camera tilts down the box as it grows; slide bullets are rebuilt as this anatomy.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Structure a useful description",
+        "text": "First two lines: a plain summary. What you'll learn: three to five bullets. Chapters: timestamps and titles. Links: website, related videos, sign-up",
+        "notes": "Make the first two lines a plain summary, since they show before the more link. Then add three to five bullets, your chapters and your links.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "smoothup",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 10.041,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.771,
+          "text": "Make the first two lines a plain summary, since they show before the more link."
+        },
+        {
+          "t": 5.051,
+          "end": 8.441,
+          "text": "Then add three to five bullets, your chapters and your links."
+        }
+      ],
+      "speechEnd": 8.441
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "List timestamps starting at zero, one per line with a title. Your section divider slides and point-making headlines become ready-made chapter titles.",
+      "storyboard": "Night stage, close-up on a giant '0:00' at 160px in signal red. On 'one per line' the camera pulls back as further timestamp lines stack below it. On 'section divider slides' small slide thumbnails fly in from the right and each snaps onto a timestamp line, its headline lifting off to become the chapter title. On 'ready-made chapter titles' a segmented YouTube-style progress bar forms beneath, each segment lighting in sequence, and holds.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Build chapters from your slides",
+        "text": "First timestamp must be 0:00. One timestamp and title per line. Use section divider slides. Headlines that make a point",
+        "notes": "List timestamps starting at zero, one per line with a title. Your section divider slides and point-making headlines become ready-made chapter titles.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 10.877,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.376,
+          "text": "List timestamps starting at zero, one per line with a title."
+        },
+        {
+          "t": 4.656,
+          "end": 9.277,
+          "text": "Your section divider slides and point-making headlines become ready-made chapter titles."
+        }
+      ],
+      "speechEnd": 9.277
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "Your slide headlines and speaker notes give you the chapters and description. On Pro, AI directs your deck into a video that holds viewers. Try Basic first at powerpoint2vid.com.",
+      "storyboard": "Paper stage split screen: a slide deck on the left, a YouTube upload page on the right. On 'headlines' a headline lifts into the chapters list; on 'speaker notes' the notes flow into the description box. On 'directs your deck into a video' the camera pushes into the deck as it transforms into a playing video frame, dissolving to night. On 'powerpoint2vid.com' the URL lands at 120px in paper white with a red 'Try Basic' button pulsing once, holding for the final beat.",
+      "minDuration": 12,
+      "slide": {
+        "title": "Make the video first",
+        "text": "Headlines become chapters. Speaker notes become the description. Download the finished MP4",
+        "notes": "Your slide headlines and speaker notes give you the chapters and description. On Pro, a.i. directs your deck into a video that holds viewers. Try Basic first at powerpoint2vid.com.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 13.083,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.573,
+          "text": "Your slide headlines and speaker notes give you the chapters and description."
+        },
+        {
+          "t": 4.853,
+          "end": 8.824,
+          "text": "On Pro, AI directs your deck into a video that holds viewers."
+        },
+        {
+          "t": 9.104,
+          "end": 11.983,
+          "text": "Try Basic first at powerpoint2vid.com."
+        }
+      ],
+      "speechEnd": 11.983
+    }
+  ],
+  "voiceProvider": "piper"
+}

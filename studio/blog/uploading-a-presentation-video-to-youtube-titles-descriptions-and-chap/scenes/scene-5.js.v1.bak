@@ -1,0 +1,183 @@
+/* Scene 5 — "Your slide headlines and speaker notes give you the chapters and description.
+ *  On Pro, AI directs your deck into a video that holds viewers. Try Basic first at powerpoint2vid.com."
+ * Storyboard: paper split screen. Left is a rebuilt slide of the deck with its speaker notes. Right is a YouTube
+ * upload page. On "headlines" the slide headline lifts and flies into the Chapters list as 0:00. On "notes" the
+ * note words flow along arcs into the Description box, which types itself. On "directs" the camera pushes into
+ * the slide and it becomes a playing video frame as the stage dissolves to night. On "powerpoint2vid.com" the URL
+ * lands at 120px in paper white. A red "Try Basic" button pulses once, then everything holds. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const safe = (v, f) => (Number.isFinite(v) ? v : f);
+  const B = ctx.beats;
+  const tHead = safe(ctx.at(0, 'headlines'), B[0].t + 0.5);
+  const tNotes = safe(ctx.at(0, 'notes'), B[0].t + 1.6);
+  const tDesc = safe(ctx.at(0, 'description'), B[0].t + 3.0);
+  const tDirect = safe(ctx.at(1, 'directs'), B[1].t + 1.2);
+  const tVideo = safe(ctx.at(1, 'video'), tDirect + 1.0);
+  const tHolds = safe(ctx.at(1, 'holds'), tVideo + 0.6);
+  const tBasic = safe(ctx.at(2, 'Basic'), B[2].t + 0.4);
+  const tUrl = Math.min(safe(ctx.at(2, 'powerpoint2vid.com'), safe(ctx.at(2, 'powerpoint2vid'), tBasic + 0.6)), ctx.dur - 2.2);
+  const MONO = 'ui-monospace, Menlo, monospace';
+
+  /* ---------- PAPER STAGE ---------- */
+  stage.style.background = 'var(--night)';
+  const paper = el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(80% 70% at 35% 30%, #fffdf9 0%, var(--paper) 60%, #e9e3da 100%)' });
+  const cam = el('div', 'abs', paper, { inset: 0, transformOrigin: '530px 400px' });
+
+  // deck slide
+  const deckTag = el('div', 'abs', cam, { left: '120px', top: '128px', font: `600 20px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--slate)' });
+  deckTag.textContent = 'YOUR DECK · SLIDE 6';
+  const slide = el('div', 'abs', cam, { left: '120px', top: '170px', width: '820px', height: '462px', background: '#fff', borderRadius: '14px', overflow: 'hidden', boxShadow: '0 40px 80px rgba(28,31,38,.16), 0 4px 12px rgba(28,31,38,.08)' });
+  const mark = el('div', 'abs', slide, { left: '44px', top: '58px', width: '560px', height: '54px', background: 'rgba(245,166,35,.35)', borderRadius: '6px', transformOrigin: '0 50%' });
+  const sTitle = el('div', 'abs', slide, { left: '56px', top: '56px', font: '800 54px/1 Inter Display, Inter', letterSpacing: '-.035em', color: 'var(--ink)' });
+  sTitle.textContent = 'Make the video first';
+  const bullets = ['Headlines become chapters', 'Speaker notes become the description', 'Download the finished MP4'].map((b, i) => {
+    const d = el('div', 'abs', slide, { left: '58px', top: 170 + i * 64 + 'px', font: '500 30px/1 Inter', color: '#4a4f5c', display: 'flex', alignItems: 'center', gap: '18px' });
+    el('span', '', d, { width: '10px', height: '10px', borderRadius: '50%', background: 'var(--signal-red, #E8392F)', display: 'inline-block' });
+    el('span', '', d).textContent = b;
+    return d;
+  });
+  const playOv = el('div', 'abs', slide, { inset: 0, background: 'linear-gradient(180deg, transparent 60%, rgba(15,17,21,.55))', opacity: 0 });
+  const ovBar = el('div', 'abs', playOv, { left: '40px', right: '40px', bottom: '30px', height: '6px', borderRadius: '3px', background: 'rgba(255,255,255,.3)' });
+  const ovFill = el('div', 'abs', ovBar, { left: 0, top: 0, bottom: 0, width: '0%', background: '#E8392F', borderRadius: '3px' });
+
+  // speaker notes
+  const notes = el('div', 'abs', cam, { left: '120px', top: '670px', width: '820px', height: '250px', background: '#efe9df', borderRadius: '14px', border: '1px solid rgba(28,31,38,.08)' });
+  const nTag = el('div', 'abs', notes, { left: '36px', top: '30px', font: `600 18px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--slate)' });
+  nTag.textContent = 'SPEAKER NOTES';
+  const nText = el('div', 'abs', notes, { left: '36px', top: '74px', width: '740px', font: '500 30px/1.45 Inter', color: 'var(--ink)' });
+  const NOTE = 'Make the video first, then download the finished MP4 and upload it.';
+  const nWords = ctx.split(nText, NOTE, 'word');
+
+  // upload page
+  const page = el('div', 'abs', cam, { left: '1020px', top: '120px', width: '780px', height: '840px', background: '#fff', borderRadius: '18px', boxShadow: '0 50px 100px rgba(28,31,38,.18), 0 4px 14px rgba(28,31,38,.08)', overflow: 'hidden' });
+  const top = el('div', 'abs', page, { left: 0, right: 0, top: 0, height: '86px', borderBottom: '1px solid #ece7df', display: 'flex', alignItems: 'center', padding: '0 40px', gap: '16px' });
+  el('div', '', top, { width: '44px', height: '30px', borderRadius: '8px', background: '#E8392F', position: 'relative' })
+    .innerHTML = '<svg width="44" height="30" style="position:absolute;inset:0"><path d="M18 9 L28 15 L18 21 Z" fill="#fff"/></svg>';
+  const hd = el('div', '', top, { font: '800 32px/1 Inter Display, Inter', letterSpacing: '-.03em', color: 'var(--ink)' }); hd.textContent = 'Details';
+  const up = el('div', '', top, { marginLeft: 'auto', font: `600 16px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--slate)' }); up.textContent = 'VIDEO UPLOAD';
+  const field = (label, y, h) => {
+    const l = el('div', 'abs', page, { left: '40px', top: y + 'px', font: `600 16px/1 ${MONO}`, letterSpacing: '.14em', color: 'var(--slate)' }); l.textContent = label;
+    const b = el('div', 'abs', page, { left: '40px', top: y + 28 + 'px', width: '700px', height: h + 'px', border: '2px solid #e4ded4', borderRadius: '12px', boxSizing: 'border-box' });
+    return [l, b];
+  };
+  const [tL, tB] = field('TITLE', 118, 64);
+  const tTxt = el('div', 'abs', tB, { left: '22px', top: '17px', font: '600 26px/1 Inter', color: 'var(--ink)' }); tTxt.textContent = 'Make the video first';
+  const [dL, dB] = field('DESCRIPTION', 236, 230);
+  const dTxt = el('div', 'abs', dB, { left: '22px', top: '18px', width: '650px', font: '500 25px/1.45 Inter', color: 'var(--ink)' });
+  const [cL, cB] = field('CHAPTERS', 524, 270);
+  const rows = [0, 1, 2].map((i) => {
+    const ts = el('div', 'abs', cB, { left: '22px', top: 26 + i * 78 + 'px', font: `700 24px/1 ${MONO}`, color: '#E8392F' });
+    ts.textContent = ['0:00', '0:42', '1:30'][i];
+    return ts;
+  });
+  const ph = [1, 2].map((i) => el('div', 'abs', cB, { left: '120px', top: 30 + i * 78 + 'px', width: i === 1 ? '360px' : '300px', height: '18px', borderRadius: '9px', background: '#ece6dc', transformOrigin: '0 50%' }));
+  // headline flyer (becomes chapter 1 text)
+  const flyer = el('div', 'abs', cam, { left: '176px', top: '226px', font: '800 54px/1 Inter Display, Inter', letterSpacing: '-.035em', color: 'var(--ink)', transformOrigin: '0 0', whiteSpace: 'nowrap', opacity: 0 });
+  flyer.textContent = 'Make the video first';
+  // chapter row 1 lives at page(1020,120) + box(40, 552) + (120, 24)
+  const FX = 1020 + 40 + 120 - 176, FY = 120 + 552 + 22 - 226;
+
+  // note chips that flow into description
+  const chipWords = ['Make', 'the video', 'first,', 'download', 'MP4', 'upload'];
+  const chips = chipWords.map((w) => {
+    const c = el('div', 'abs', cam, { left: '760px', top: '780px', padding: '8px 14px', borderRadius: '10px', background: 'var(--ink)', color: 'var(--paper)', font: '600 22px/1 Inter', whiteSpace: 'nowrap', opacity: 0, boxShadow: '0 10px 24px rgba(28,31,38,.25)' });
+    c.textContent = w; return c;
+  });
+  const DESC = 'Make the video first, then download the finished MP4 and upload it.';
+  const typed = { n: 0 };
+  const caret = { o: 0 };
+
+  /* ---------- NIGHT STAGE ---------- */
+  const night = el('div', 'abs', stage, { inset: 0, opacity: 0, background: 'radial-gradient(70% 60% at 50% 45%, #1f2330 0%, var(--night) 70%)' });
+  const ncam = el('div', 'abs', night, { inset: 0, transformOrigin: '960px 500px' });
+  const glow = el('div', 'abs', ncam, { left: '460px', top: '200px', width: '1000px', height: '520px', borderRadius: '50%', background: 'radial-gradient(closest-side, rgba(232,57,47,.35), transparent)', filter: 'blur(30px)' });
+  const frame = el('div', 'abs', ncam, { left: '410px', top: '150px', width: '1100px', height: '619px', borderRadius: '18px', overflow: 'hidden', transformOrigin: '50% 0%',
+    background: 'radial-gradient(90% 90% at 30% 20%, #2a2f3d 0%, #14171d 80%)', boxShadow: '0 50px 120px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.08)' });
+  const vLab = el('div', 'abs', frame, { left: '56px', top: '48px', font: `600 20px/1 ${MONO}`, letterSpacing: '.16em', color: '#F5A623' }); vLab.textContent = 'PRO · AI-DIRECTED';
+  const vTitle = el('div', 'abs', frame, { left: '56px', top: '210px', font: '900 96px/0.95 Inter Display, Inter', letterSpacing: '-.045em', color: 'var(--paper)', width: '900px' });
+  const vWords = ctx.split(vTitle, 'Make the video first', 'word');
+  vWords.forEach((w) => { w.style.marginRight = '0.22em'; });
+  const vSub = el('div', 'abs', frame, { left: '60px', top: '420px', font: '500 32px/1 Inter', color: 'var(--slate)' }); vSub.textContent = 'Headlines become chapters';
+  const vBar = el('div', 'abs', frame, { left: '56px', right: '56px', bottom: '44px', height: '8px', borderRadius: '4px', background: 'rgba(255,255,255,.18)' });
+  const vFill = el('div', 'abs', vBar, { left: 0, top: 0, bottom: 0, width: '0%', borderRadius: '4px', background: '#E8392F', boxShadow: '0 0 16px rgba(232,57,47,.8)' });
+  [0.33, 0.66].forEach((p) => el('div', 'abs', vBar, { left: p * 100 + '%', top: '-2px', width: '4px', height: '12px', background: 'var(--night)' }));
+  const vPlay = el('div', 'abs', frame, { right: '56px', top: '40px', width: '64px', height: '64px', borderRadius: '50%', background: 'rgba(255,255,255,.12)' });
+  vPlay.innerHTML = '<svg width="64" height="64"><path d="M26 20 L46 32 L26 44 Z" fill="#fff"/></svg>';
+
+  const url = el('div', 'abs', ncam, { left: '80px', width: '1760px', top: '500px', textAlign: 'center', font: '900 120px/1 Inter Display, Inter', letterSpacing: '-.045em', color: 'var(--paper)', whiteSpace: 'nowrap' });
+  const uChars = ctx.split(url, 'powerpoint2vid.com', 'char');
+  const btnWrap = el('div', 'abs', ncam, { left: '760px', top: '690px', width: '400px', height: '104px' });
+  const ring = el('div', 'abs', btnWrap, { inset: 0, borderRadius: '52px', border: '4px solid #E8392F', opacity: 0 });
+  const btn = el('div', 'abs', btnWrap, { inset: 0, borderRadius: '52px', background: 'linear-gradient(180deg, #f04b41, #c92a21)', color: '#fff', font: '800 42px/104px Inter Display, Inter', letterSpacing: '-.02em', textAlign: 'center', boxShadow: '0 20px 50px rgba(232,57,47,.45), inset 0 1px 0 rgba(255,255,255,.35)' });
+  btn.textContent = 'Try Basic';
+
+  ctx.fx.vignette({ strength: 0.4 });
+  ctx.fx.grain({ opacity: 0.06 });
+  ctx.onFrame(() => {
+    const n = Math.round(typed.n);
+    dTxt.textContent = DESC.slice(0, n) + (caret.o > 0.5 && n < DESC.length ? '|' : '');
+  });
+
+  /* ---------- TIMELINE ---------- */
+  // opening: everything settles in quickly
+  tl.from(cam, { scale: 1.04, duration: 1.4, ease: 'power2.out' }, 0);
+  tl.from([deckTag, slide, notes], { y: 40, opacity: 0, duration: 0.7, stagger: 0.08 }, 0.05);
+  tl.from(page, { x: 80, opacity: 0, duration: 0.8 }, 0.15);
+  tl.from([tL, tB, dL, dB, cL, cB], { y: 16, opacity: 0, duration: 0.5, stagger: 0.05 }, 0.35);
+  gsap.set(mark, { scaleX: 0 });
+  gsap.set(ph, { scaleX: 0 });
+  gsap.set(rows, { opacity: 0 });
+  tl.to(cam, { scale: 1.025, duration: tDirect - 1.5, ease: 'none' }, 1.4);
+
+  // "headlines": highlight, lift, fly into chapters
+  tl.to(mark, { scaleX: 1, duration: 0.4, ease: 'power2.out' }, tHead - 0.25);
+  tl.set(flyer, { opacity: 1 }, tHead);
+  tl.to(sTitle, { opacity: 0.25, duration: 0.3 }, tHead);
+  tl.to(flyer, { y: -24, scale: 1.04, duration: 0.25, ease: 'power2.out' }, tHead);
+  tl.to(flyer, { x: FX, y: FY, scale: 0.5, duration: 0.85, ease: 'expo.inOut' }, tHead + 0.25);
+  tl.to(rows[0], { opacity: 1, duration: 0.3 }, tHead + 0.9);
+  tl.fromTo(cB, { borderColor: '#e4ded4' }, { borderColor: '#E8392F', duration: 0.2, yoyo: true, repeat: 1, immediateRender: false }, tHead + 1.0);
+  tl.to(ph, { scaleX: 1, duration: 0.5, stagger: 0.12, ease: 'back.out(1.6)' }, tHead + 1.1);
+  tl.to(rows.slice(1), { opacity: 1, duration: 0.3, stagger: 0.12 }, tHead + 1.1);
+
+  // "notes": words lift, chips flow into description, it types
+  tl.to(nWords, { y: -8, color: '#E8392F', duration: 0.3, stagger: 0.03, yoyo: true, repeat: 1 }, tNotes - 0.2);
+  chips.forEach((c, i) => {
+    const t = tNotes + i * 0.11;
+    gsap.set(c, { x: -i * 90, y: (i % 2) * 40 });
+    tl.to(c, { opacity: 1, duration: 0.15 }, t);
+    tl.to(c, { motionPath: { path: [{ x: -i * 90, y: (i % 2) * 40 }, { x: 260 - i * 20, y: -260 }, { x: 380 + i * 50, y: -390 + (i % 2) * 40 }], curviness: 1.3 }, duration: 0.8, ease: 'power2.inOut' }, t);
+    tl.to(c, { opacity: 0, scale: 0.6, duration: 0.2 }, t + 0.7);
+  });
+  tl.to(caret, { o: 1, duration: 0.25, repeat: 9, yoyo: true, ease: 'steps(1)' }, tNotes + 0.5);
+  tl.to(typed, { n: DESC.length, duration: Math.max(1.2, Math.min(2.0, tDirect - tNotes - 1.4)), ease: 'none' }, tNotes + 0.7);
+  tl.fromTo(dB, { borderColor: '#e4ded4' }, { borderColor: '#3FC1A0', duration: 0.25, immediateRender: false }, Math.max(tDesc, tNotes + 1.6));
+
+  // "directs your deck into a video": push into slide, it plays, dissolve to night
+  tl.to([page, notes, deckTag, flyer, ...chips], { opacity: 0, duration: 0.5, ease: 'power2.in' }, tDirect - 0.1);
+  tl.to(cam, { scale: 2.3, x: 430, y: 140, duration: 1.2, ease: 'expo.inOut' }, tDirect - 0.15);
+  tl.to(playOv, { opacity: 1, duration: 0.4 }, tDirect + 0.3);
+  tl.to(ovFill, { width: '30%', duration: 1.0, ease: 'none' }, tDirect + 0.3);
+  tl.to(night, { opacity: 1, duration: 0.6, ease: 'power2.inOut' }, Math.min(tVideo - 0.3, tDirect + 0.8));
+  const nIn = Math.min(tVideo - 0.3, tDirect + 0.8);
+  tl.fromTo(frame, { scale: 1.25, opacity: 0.5 }, { scale: 1, opacity: 1, duration: 0.9, ease: 'expo.out', immediateRender: false }, nIn);
+  tl.from(vWords, { y: 60, opacity: 0, duration: 0.55, stagger: 0.08, ease: 'back.out(1.6)' }, nIn + 0.25);
+  tl.from([vLab, vSub], { opacity: 0, y: 14, duration: 0.4, stagger: 0.15 }, nIn + 0.45);
+  tl.to(vFill, { width: '100%', duration: ctx.dur - nIn, ease: 'none' }, nIn);
+  tl.fromTo(glow, { opacity: 0.4 }, { opacity: 1, duration: 0.5, yoyo: true, repeat: 1, immediateRender: false }, tHolds);
+  tl.to(ncam, { scale: 1.03, duration: ctx.dur - nIn, ease: 'none' }, nIn);
+
+  // "Try Basic first at powerpoint2vid.com": frame retreats, URL + button land
+  gsap.set(uChars, { opacity: 0 });
+  gsap.set(btnWrap, { opacity: 0 });
+  const tFin = Math.min(tBasic - 0.3, tUrl - 0.6);
+  tl.to(frame, { scale: 0.5, y: -40, duration: 0.8, ease: 'expo.inOut' }, tFin);
+  tl.to(glow, { y: -190, scale: 0.6, duration: 0.8, ease: 'expo.inOut' }, tFin);
+  tl.fromTo(btnWrap, { opacity: 0, y: 40, scale: 0.8 }, { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'back.out(1.8)', immediateRender: false }, tBasic);
+  tl.fromTo(uChars, { opacity: 0, y: 70, rotationX: -70 }, { opacity: 1, y: 0, rotationX: 0, duration: 0.5, stagger: 0.025, ease: 'back.out(1.7)', immediateRender: false }, tUrl - 0.35);
+  // single pulse
+  const tp = tUrl + 0.4;
+  tl.to(btn, { scale: 1.08, duration: 0.18, ease: 'power2.out', yoyo: true, repeat: 1 }, tp);
+  tl.fromTo(ring, { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.35, duration: 0.8, ease: 'power2.out', immediateRender: false }, tp);
+});

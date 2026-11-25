@@ -1,0 +1,104 @@
+{
+  "title": "\"Uploading a Presentation Video to YouTube: Titles, Descriptions and Chapters\" (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Uploading a Presentation Video to YouTube",
+      "bullets": [
+        "Titles, descriptions and chapters",
+        "The video is only half the job"
+      ],
+      "notes": "Your video is only half the job on YouTube. The title, description, chapters and thumbnail decide whether anyone finds it, and whether they stay.",
+      "minDuration": 9
+    },
+    {
+      "title": "Prepare the file before you upload",
+      "bullets": [
+        "MP4 is the safest choice",
+        "Watch it once, all the way through",
+        "Check typos, audio and internal information",
+        "Note when each section starts"
+      ],
+      "notes": "Before uploading, export an MP4 and watch it all the way through. Catch typos and internal information, and jot down when each new section starts.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Write a title people search for",
+      "bullets": [
+        "Weak: Q4 Webinar",
+        "Stronger: How to Plan a Q4 Marketing Budget for a Small Business",
+        "Main topic near the start",
+        "No all caps or vague teasers"
+      ],
+      "notes": "A good title says what viewers will learn, in the words they'd type. So Q4 Webinar becomes How to Plan a Q4 Marketing Budget for a Small Business.",
+      "minDuration": 11,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Structure a useful description",
+      "bullets": [
+        "First two lines: a plain summary",
+        "What you'll learn: three to five bullets",
+        "Chapters: timestamps and titles",
+        "Links: website, related videos, sign-up"
+      ],
+      "notes": "Make the first two lines a plain summary, since they show before the more link. Then add three to five bullets, your chapters and your links.",
+      "minDuration": 10,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Build chapters from your slides",
+      "bullets": [
+        "First timestamp must be 0:00",
+        "One timestamp and title per line",
+        "Use section divider slides",
+        "Headlines that make a point"
+      ],
+      "notes": "List timestamps starting at zero, one per line with a title. Your section divider slides and point-making headlines become ready-made chapter titles.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Make the video first",
+      "bullets": [
+        "Headlines become chapters",
+        "Speaker notes become the description",
+        "Download the finished MP4"
+      ],
+      "notes": "Your slide headlines and speaker notes give you the chapters and description. On Pro, a.i. directs your deck into a video that holds viewers. Try Basic first at powerpoint2vid.com.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}

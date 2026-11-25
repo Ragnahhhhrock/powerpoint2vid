@@ -1,0 +1,133 @@
+/* Scene 2 — "Before uploading, export an MP4 and watch it all the way through. Catch typos and internal
+ * information, and jot down when each new section starts."
+ * Storyboard: bright paper stage, wide shot of a horizontal timeline scrubber under a filmstrip. On "MP4"
+ * an MP4 file chip drops onto the left end. On "all the way through" a red playhead sweeps the full length.
+ * On "typos" / "internal" it rescans, pausing twice as amber flags pop with tiny TYPO / INTERNAL tags.
+ * On "section starts" mint tick marks stamp onto the track and the camera pushes in to hold on them.
+ * Headline "Prepare the file first" sits top-left at 96px. */
+P2V.scene((ctx) => {
+  const { tl, el, stage } = ctx;
+  const b0 = ctx.beats[0], b1 = ctx.beats[1];
+  const tMP4 = ctx.at(0, 'MP4'), tAll = ctx.at(0, 'all'), tThrough = ctx.at(0, 'through');
+  const tTypos = ctx.at(1, 'typos'), tInternal = ctx.at(1, 'internal');
+  const tSection = ctx.at(1, 'section'), tStarts = ctx.at(1, 'starts');
+
+  const X0 = 380, W = 1300, TRACK_Y = 640, STRIP_TOP = 470, STRIP_H = 130;
+  const MONO = 'ui-monospace, Menlo, monospace';
+
+  stage.style.background = 'radial-gradient(80% 70% at 55% 55%, #fffdf9 0%, var(--paper) 60%, #e9e3d9 100%)';
+  const glow = el('div', 'abs', stage, { inset: 0, background: 'radial-gradient(35% 30% at 70% 60%, rgba(232,57,47,.06), transparent 70%)' });
+  const cam = el('div', 'abs', stage, { inset: 0, transformOrigin: '1000px 600px' });
+
+  /* headline (outside camera so it stays anchored) */
+  const kicker = el('div', 'abs', stage, { left: '124px', top: '96px', font: `600 22px/1 ${MONO}`, letterSpacing: '.16em', color: 'var(--slate)' });
+  kicker.textContent = 'STEP 1 · BEFORE UPLOAD';
+  const head = el('div', 'abs', stage, { left: '118px', top: '134px', font: '800 96px/1 Inter Display, Inter', letterSpacing: '-.045em', color: 'var(--ink)', whiteSpace: 'nowrap' });
+  const words = ctx.split(head, 'Prepare the file first', 'word');
+  const rule = el('div', 'abs', stage, { left: '124px', top: '256px', width: '120px', height: '8px', borderRadius: '4px', background: 'var(--signal-red, #E8392F)', transformOrigin: '0 50%' });
+
+  /* filmstrip */
+  const strip = el('div', 'abs', cam, { left: X0 + 'px', top: STRIP_TOP + 'px', width: W + 'px', height: STRIP_H + 'px', borderRadius: '14px', overflow: 'hidden', background: '#1C1F26', boxShadow: '0 40px 80px rgba(28,31,38,.22), 0 6px 16px rgba(28,31,38,.12)', display: 'flex', gap: '6px', padding: '10px', boxSizing: 'border-box' });
+  const r = ctx.rand(7);
+  const cells = [];
+  for (let i = 0; i < 10; i++) {
+    const h1 = 200 + Math.floor(r() * 40), l1 = 26 + Math.floor(r() * 14);
+    const c = el('div', '', strip, { flex: '1', borderRadius: '6px', position: 'relative', overflow: 'hidden',
+      background: `linear-gradient(${120 + r() * 60}deg, hsl(${h1},14%,${l1}%) 0%, hsl(${h1 + 10},10%,${l1 - 10}%) 100%)` });
+    el('div', 'abs', c, { left: '14%', top: '22%', width: 30 + r() * 40 + '%', height: '9px', borderRadius: '5px', background: 'rgba(246,243,238,.55)' });
+    el('div', 'abs', c, { left: '14%', top: '46%', width: 40 + r() * 35 + '%', height: '6px', borderRadius: '3px', background: 'rgba(246,243,238,.22)' });
+    el('div', 'abs', c, { left: '14%', top: '62%', width: 25 + r() * 35 + '%', height: '6px', borderRadius: '3px', background: 'rgba(246,243,238,.22)' });
+    cells.push(c);
+  }
+
+  /* track */
+  const track = el('div', 'abs', cam, { left: X0 + 'px', top: TRACK_Y + 'px', width: W + 'px', height: '14px', borderRadius: '7px', background: 'rgba(28,31,38,.12)', transformOrigin: '0 50%' });
+  const fill = el('div', 'abs', cam, { left: X0 + 'px', top: TRACK_Y + 'px', width: '0px', height: '14px', borderRadius: '7px', background: 'linear-gradient(90deg, #ff6a5c, #E8392F)', boxShadow: '0 0 18px rgba(232,57,47,.35)' });
+
+  /* MP4 chip */
+  const chip = el('div', 'abs', cam, { left: '150px', top: '500px', width: '190px', height: '220px', borderRadius: '18px 46px 18px 18px', background: 'var(--ink)', boxShadow: '0 30px 60px rgba(28,31,38,.3)', transformOrigin: '50% 100%' });
+  el('div', 'abs', chip, { right: 0, top: 0, width: '46px', height: '46px', borderRadius: '0 46px 0 14px', background: '#3a3f4b' });
+  const tri = el('div', 'abs', chip, { left: '62px', top: '52px', width: 0, height: 0, borderTop: '30px solid transparent', borderBottom: '30px solid transparent', borderLeft: '50px solid #E8392F' });
+  const chipTxt = el('div', 'abs', chip, { left: 0, right: 0, top: '140px', textAlign: 'center', font: '800 50px/1 Inter Display, Inter', letterSpacing: '-.03em', color: '#F6F3EE' });
+  chipTxt.textContent = 'MP4';
+  const chipShadow = el('div', 'abs', cam, { left: '160px', top: '722px', width: '170px', height: '22px', borderRadius: '50%', background: 'rgba(28,31,38,.25)', filter: 'blur(8px)' });
+
+  /* flags */
+  const mkFlag = (p, label) => {
+    const x = X0 + p * W;
+    const f = el('div', 'abs', cam, { left: x - 2 + 'px', top: '330px', width: '4px', height: '140px', transformOrigin: '50% 100%' });
+    el('div', 'abs', f, { left: 0, top: 0, width: '4px', height: '140px', borderRadius: '2px', background: 'var(--ink)' });
+    const flag = el('div', 'abs', f, { left: '4px', top: '0px', padding: '14px 22px 14px 18px', borderRadius: '0 10px 10px 0', background: '#F5A623', boxShadow: '0 12px 28px rgba(245,166,35,.45)', font: `700 22px/1 ${MONO}`, letterSpacing: '.14em', color: '#1C1F26', whiteSpace: 'nowrap' });
+    flag.textContent = label;
+    const dot = el('div', 'abs', cam, { left: x - 11 + 'px', top: TRACK_Y - 4 + 'px', width: '22px', height: '22px', borderRadius: '50%', background: '#F5A623', boxShadow: '0 0 0 5px rgba(245,166,35,.25)' });
+    return { f, dot, p };
+  };
+  const flags = [mkFlag(0.3, 'TYPO'), mkFlag(0.58, 'INTERNAL')];
+
+  /* section ticks */
+  const TICKS = [0, 0.2, 0.45, 0.76];
+  const ticks = TICKS.map((p, i) => {
+    const x = X0 + p * W;
+    const t = el('div', 'abs', cam, { left: x - 3 + 'px', top: TRACK_Y - 22 + 'px', width: '6px', height: '62px', borderRadius: '3px', background: '#3FC1A0', boxShadow: '0 0 16px rgba(63,193,160,.55)', transformOrigin: '50% 0%' });
+    const lab = el('div', 'abs', cam, { left: x - 40 + 'px', width: '80px', top: TRACK_Y + 54 + 'px', textAlign: 'center', font: `700 24px/1 ${MONO}`, letterSpacing: '.1em', color: '#2a9c80' });
+    lab.textContent = '§' + (i + 1);
+    return { t, lab };
+  });
+
+  /* playhead */
+  const ph = el('div', 'abs', cam, { left: X0 - 2 + 'px', top: STRIP_TOP - 30 + 'px', width: '4px', height: TRACK_Y - STRIP_TOP + 60 + 'px', background: '#E8392F', borderRadius: '2px', boxShadow: '0 0 20px rgba(232,57,47,.5)' });
+  const knob = el('div', 'abs', ph, { left: '-13px', top: '-26px', width: '30px', height: '30px', borderRadius: '50% 50% 50% 0', transform: 'rotate(-45deg)', background: '#E8392F', boxShadow: '0 6px 16px rgba(232,57,47,.45)' });
+  const play = { p: 0 };
+  ctx.onFrame(() => {
+    ph.style.left = X0 + play.p * W - 2 + 'px';
+    fill.style.width = play.p * W + 'px';
+  });
+
+  ctx.fx.vignette({ strength: 0.22 });
+  ctx.fx.grain({ opacity: 0.05 });
+
+  /* ---- timeline ---- */
+  tl.to(cam, { scale: 1.03, duration: tSection - 0.3, ease: 'none' }, 0);
+  tl.from(kicker, { opacity: 0, x: -20, duration: 0.5 }, 0.05);
+  tl.from(words, { y: 60, opacity: 0, duration: 0.6, stagger: 0.07, ease: 'back.out(1.6)' }, 0.1);
+  tl.from(rule, { scaleX: 0, duration: 0.5 }, 0.45);
+  tl.from(track, { scaleX: 0, duration: 0.8, ease: 'expo.out' }, 0.1);
+  tl.from(strip, { opacity: 0, y: 40, duration: 0.7 }, 0.15);
+  tl.from(cells, { opacity: 0, y: 20, duration: 0.4, stagger: 0.04 }, 0.3);
+  tl.from(ph, { opacity: 0, duration: 0.4 }, 0.6);
+  tl.from(knob, { scale: 0, duration: 0.4, ease: 'back.out(2)' }, 0.7);
+
+  // "MP4": chip drops onto the left end
+  tl.fromTo(chip, { y: -620, rotation: -12, opacity: 1 }, { y: 0, rotation: 0, duration: 0.55, ease: 'power3.in', immediateRender: true }, tMP4 - 0.45);
+  tl.fromTo(chipShadow, { opacity: 0, scaleX: 0.3 }, { opacity: 1, scaleX: 1, duration: 0.55, ease: 'power3.in' }, tMP4 - 0.45);
+  tl.to(chip, { scaleY: 0.88, scaleX: 1.08, duration: 0.08, yoyo: true, repeat: 1, ease: 'power2.out' }, tMP4 + 0.1);
+  tl.from(tri, { scale: 0, duration: 0.4, ease: 'back.out(2.5)' }, tMP4 + 0.15);
+
+  // "all the way through": full sweep
+  const sweepEnd = Math.min(b1.t - 0.2, tThrough + 0.5);
+  tl.to(play, { p: 1, duration: Math.max(0.8, sweepEnd - tAll), ease: 'power1.inOut' }, tAll);
+  tl.to(cells, { filter: 'brightness(1.35)', duration: 0.2, stagger: Math.max(0.05, (sweepEnd - tAll) / 10), yoyo: true, repeat: 1 }, tAll);
+
+  // rescan, pausing at typo + internal
+  const rw = Math.max(sweepEnd + 0.05, b1.t - 0.15);
+  tl.to(play, { p: 0, duration: 0.35, ease: 'power2.inOut' }, rw);
+  tl.to(play, { p: flags[0].p, duration: Math.max(0.3, tTypos - (rw + 0.4)), ease: 'power2.out' }, rw + 0.4);
+  const typoT = Math.max(tTypos, rw + 0.7);
+  tl.to(play, { p: flags[1].p, duration: Math.max(0.3, tInternal - typoT - 0.3), ease: 'power2.inOut' }, typoT + 0.3);
+  const intT = Math.max(tInternal, typoT + 0.6);
+  [typoT, intT].forEach((t, i) => {
+    tl.fromTo(flags[i].f, { scaleY: 0, opacity: 0 }, { scaleY: 1, opacity: 1, duration: 0.5, ease: 'back.out(2)' }, t - 0.05);
+    tl.fromTo(flags[i].dot, { scale: 0 }, { scale: 1, duration: 0.4, ease: 'back.out(2.5)' }, t - 0.05);
+  });
+  tl.to(play, { p: 1, duration: Math.max(0.8, tStarts + 0.9 - (intT + 0.35)), ease: 'power1.inOut' }, intT + 0.35);
+
+  // "each new section starts": mint ticks stamp, camera pushes in
+  ticks.forEach((k, i) => {
+    const t = tSection - 0.15 + i * 0.12;
+    tl.fromTo(k.t, { scaleY: 0, opacity: 0 }, { scaleY: 1, opacity: 1, duration: 0.4, ease: 'back.out(2.2)' }, t);
+    tl.fromTo(k.lab, { y: -14, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: 'back.out(1.8)' }, t + 0.08);
+  });
+  tl.to(cam, { scale: 1.15, y: -10, duration: 1.3, ease: 'expo.inOut' }, tSection - 0.3);
+  tl.to(cam, { scale: 1.18, duration: Math.max(0.5, ctx.dur - (tSection + 1.0)), ease: 'none' }, tSection + 1.0);
+  tl.to(glow, { opacity: 0.6, duration: 1.2 }, tSection);
+});
