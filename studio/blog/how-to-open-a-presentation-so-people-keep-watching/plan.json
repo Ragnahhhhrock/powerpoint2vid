@@ -1,0 +1,208 @@
+{
+  "title": "How to Open a Presentation So People Keep Watching (blog explainer)",
+  "brief": {
+    "palette": {
+      "night": "#0E1220",
+      "ink": "#1A1F2E",
+      "paper": "#F6F3EC",
+      "signal": "#FF5A3C",
+      "amber": "#FFB547",
+      "teal": "#2EC4B6",
+      "mist": "#9AA3B5"
+    },
+    "font": "Inter Display",
+    "motion": "Brisk and decisive: snappy ease-out entrances, hard cuts on emphasis, slow push-ins only while an idea holds. Elements get struck, swiped or dropped away, never drift.",
+    "story": "From the dark tension of a viewer about to leave, through a light, airy toolkit of better openings, back to a dark, focused close. Wide establishing frames alternate with tight close-ups on single words and lines."
+  },
+  "scenes": [
+    {
+      "file": "scenes/scene-0.js",
+      "narration": "The first thirty seconds decide whether people lean in or reach for their phones. On video, one click and they're gone. Here's how to open well.",
+      "storyboard": "Night stage: a phone silhouette with a video progress bar starts playing, a bright '0:30' counter ticking in signal coral. On 'lean in' the camera pushes toward the screen; on 'reach for their phones' a thumb icon hovers. On 'one click' the thumb taps and the whole frame snaps to black for a beat. Title 'Open so people keep watching' slams in at 140px paper white on 'open well' and holds.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Open so people keep watching",
+        "text": "",
+        "notes": "The first thirty seconds decide whether people lean in or reach for their phones. On video, one click and they're gone. Here's how to open well.",
+        "image": "assets/slide-1.png"
+      },
+      "audio": "audio/scene-0.wav",
+      "duration": 10.111,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.736,
+          "text": "The first thirty seconds decide whether people lean in or reach for their phones."
+        },
+        {
+          "t": 5.016,
+          "end": 7.14,
+          "text": "On video, one click and they're gone."
+        },
+        {
+          "t": 7.42,
+          "end": 9.011,
+          "text": "Here's how to open well."
+        }
+      ],
+      "speechEnd": 9.011
+    },
+    {
+      "file": "scenes/scene-1.js",
+      "narration": "Before adding anything, remove what slows you down. Viewers don't need an agenda, your full bio or an apology before they know why they care.",
+      "storyboard": "Paper stage, wide. Headline 'Cut what slows the opening' sits top-left in ink. Three heavy grey blocks labelled 'Agenda', 'Full bio', 'Apology' stack in front of a small glowing 'Why care?' card, blocking it. On 'agenda', 'bio' and 'apology' each block gets a coral strike and drops out of frame. On 'why they care' the camera pushes in as the card brightens in amber. Housekeeping and definitions bullets are cut from screen but implied by the stack.",
+      "minDuration": 10,
+      "slide": {
+        "title": "Cut what slows the opening",
+        "text": "The agenda slide as slide two. Your full bio. Thanks and housekeeping. Apologies and long definitions",
+        "notes": "Before adding anything, remove what slows you down. Viewers don't need an agenda, your full bio or an apology before they know why they care.",
+        "image": "assets/slide-2.png"
+      },
+      "transition": {
+        "type": "fadewhite",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-1.wav",
+      "duration": 10.307,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.004,
+          "text": "Before adding anything, remove what slows you down."
+        },
+        {
+          "t": 4.284,
+          "end": 9.207,
+          "text": "Viewers don't need an agenda, your full bio or an apology before they know why they care."
+        }
+      ],
+      "speechEnd": 9.207
+    },
+    {
+      "file": "scenes/scene-2.js",
+      "narration": "Name a problem they already feel, give away the result first, or ask a specific question. A short real story or a true detail works too.",
+      "storyboard": "Light paper stage, grid layout. Four hooks drop in as bold cards, each landing on its word: 'Problem' with a coral warning mark, 'Result' with a teal check, 'Question' with a large amber question mark, 'Story / true detail' with a quote glyph. Each card pulses as named; the camera slides gently left to right across them. Final hold on all four together with the title 'Openings that hook' at the top.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Five openings that hook viewers",
+        "text": "Start with the problem. Start with the result. Start with a question. A short story or a surprising, true detail",
+        "notes": "Name a problem they already feel, give away the result first, or ask a specific question. A short real story or a true detail works too.",
+        "image": "assets/slide-3.png"
+      },
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-2.wav",
+      "duration": 10.586,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 5.792,
+          "text": "Name a problem they already feel, give away the result first, or ask a specific question."
+        },
+        {
+          "t": 6.072,
+          "end": 8.986,
+          "text": "A short real story or a true detail works too."
+        }
+      ],
+      "speechEnd": 8.986
+    },
+    {
+      "file": "scenes/scene-3.js",
+      "narration": "Instead of thanks, introductions and project history, open with the finding. The viewer knows the point and the plan in under twenty seconds.",
+      "storyboard": "Ink stage, split screen labelled 'Before' and 'After'. Left: four grey slide thumbnails — title, About me, Agenda, Background — shuffle by slowly and dim on 'project history'. On 'the finding' the right side lights up with a big paper-white headline: 'Shorter reminder emails got more replies'. Beneath it 'Three things we tested' clicks in on 'the plan'. A teal stopwatch ring closes under twenty seconds on 'twenty seconds' and holds.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Lead with the point, not the agenda",
+        "text": "Before: title, About me, Agenda, Background. After: \"Shorter reminder emails got more replies\". Then: \"Three things we tested\"",
+        "notes": "Instead of thanks, introductions and project history, open with the finding. The viewer knows the point and the plan in under twenty seconds.",
+        "image": "assets/slide-4.png"
+      },
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-3.wav",
+      "duration": 10.47,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 5.618,
+          "text": "Instead of thanks, introductions and project history, open with the finding."
+        },
+        {
+          "t": 5.898,
+          "end": 8.87,
+          "text": "The viewer knows the point and the plan in under twenty seconds."
+        }
+      ],
+      "speechEnd": 8.87
+    },
+    {
+      "file": "scenes/scene-4.js",
+      "narration": "Make the first slide state the point, then promise what's coming. Keep that first spoken line short, and match it to the headline on screen.",
+      "storyboard": "Paper stage, close up on a phone frame centered. On 'state the point' a huge headline fills the phone screen in readable type. On 'promise' a caption types in: 'In the next five minutes, you'll see three changes'. On 'short' a long sentence beneath compresses into a few words. On 'match it' a speech-bubble line and the headline glow coral together, linked by a line; camera holds.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Make the first slide work hard",
+        "text": "A headline that states the point. Large text that reads on a phone. \"In the next five minutes, you'll see three changes\". Keep the first sentence short",
+        "notes": "Make the first slide state the point, then promise what's coming. Keep that first spoken line short, and match it to the headline on screen.",
+        "image": "assets/slide-5.png"
+      },
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-4.wav",
+      "duration": 10.819,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 4.515,
+          "text": "Make the first slide state the point, then promise what's coming."
+        },
+        {
+          "t": 4.795,
+          "end": 9.219,
+          "text": "Keep that first spoken line short, and match it to the headline on screen."
+        }
+      ],
+      "speechEnd": 9.219
+    },
+    {
+      "file": "scenes/scene-5.js",
+      "narration": "Write your opening into the speaker notes and turn the deck into video at powerpoint2vid.com. Try Basic first; on Pro, AI directs your first line.",
+      "storyboard": "Night stage. A speaker-notes field appears and the opening line types itself on 'write your opening'. On 'turn the deck into video' the slide flips into a playing video frame with a sound waveform in teal. Two pills slide in on cue: 'Basic' then 'Pro', with Pro glowing amber on 'AI directs'. URL 'powerpoint2vid.com' lands large in paper white and holds center for the final beats.",
+      "minDuration": 11,
+      "slide": {
+        "title": "Hear your opening before anyone else",
+        "text": "Write the opening into the speaker notes. Listen to the result. Rewrite the first slide and try again",
+        "notes": "Write your opening into the speaker notes and turn the deck into video at powerpoint2vid.com. Try Basic first; on Pro, a.i. directs, landing your first line on a designed scene.",
+        "image": "assets/slide-6.png"
+      },
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      },
+      "audio": "audio/scene-5.wav",
+      "duration": 11,
+      "beats": [
+        {
+          "t": 0.8,
+          "end": 5.862,
+          "text": "Write your opening into the speaker notes and turn the deck into video at powerpoint2vid.com."
+        },
+        {
+          "t": 6.142,
+          "end": 9.764,
+          "text": "Try Basic first; on Pro, AI directs your first line."
+        }
+      ],
+      "speechEnd": 9.764
+    }
+  ],
+  "voiceProvider": "piper",
+  "degraded": true
+}

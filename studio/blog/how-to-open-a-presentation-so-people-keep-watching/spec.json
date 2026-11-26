@@ -1,0 +1,100 @@
+{
+  "title": "How to Open a Presentation So People Keep Watching (blog explainer)",
+  "brief": {
+    "font": "Inter",
+    "palette": {
+      "ink": "#0e1330",
+      "night": "#0a0d24",
+      "violet": "#6d4aff",
+      "lilac": "#8f75ff",
+      "coral": "#ff6b4a",
+      "paper": "#f6f4ff",
+      "muted": "#aab0d4",
+      "mint": "#5eead4"
+    },
+    "motion": "Confident editorial motion graphics.",
+    "story": "A clear explainer of the post."
+  },
+  "slides": [
+    {
+      "cover": true,
+      "title": "Open so people keep watching",
+      "bullets": [],
+      "notes": "The first thirty seconds decide whether people lean in or reach for their phones. On video, one click and they're gone. Here's how to open well.",
+      "minDuration": 9
+    },
+    {
+      "title": "Cut what slows the opening",
+      "bullets": [
+        "The agenda slide as slide two",
+        "Your full bio",
+        "Thanks and housekeeping",
+        "Apologies and long definitions"
+      ],
+      "notes": "Before adding anything, remove what slows you down. Viewers don't need an agenda, your full bio or an apology before they know why they care.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothleft",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Five openings that hook viewers",
+      "bullets": [
+        "Start with the problem",
+        "Start with the result",
+        "Start with a question",
+        "A short story or a surprising, true detail"
+      ],
+      "notes": "Name a problem they already feel, give away the result first, or ask a specific question. A short real story or a true detail works too.",
+      "minDuration": 11,
+      "transition": {
+        "type": "circleopen",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Lead with the point, not the agenda",
+      "bullets": [
+        "Before: title, About me, Agenda, Background",
+        "After: \"Shorter reminder emails got more replies\"",
+        "Then: \"Three things we tested\""
+      ],
+      "notes": "Instead of thanks, introductions and project history, open with the finding. The viewer knows the point and the plan in under twenty seconds.",
+      "minDuration": 11,
+      "transition": {
+        "type": "fadeblack",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Make the first slide work hard",
+      "bullets": [
+        "A headline that states the point",
+        "Large text that reads on a phone",
+        "\"In the next five minutes, you'll see three changes\"",
+        "Keep the first sentence short"
+      ],
+      "notes": "Make the first slide state the point, then promise what's coming. Keep that first spoken line short, and match it to the headline on screen.",
+      "minDuration": 10,
+      "transition": {
+        "type": "smoothright",
+        "duration": 0.6
+      }
+    },
+    {
+      "title": "Hear your opening before anyone else",
+      "bullets": [
+        "Write the opening into the speaker notes",
+        "Listen to the result",
+        "Rewrite the first slide and try again"
+      ],
+      "notes": "Write your opening into the speaker notes and turn the deck into video at powerpoint2vid.com. Try Basic first; on Pro, a.i. directs, landing your first line on a designed scene.",
+      "minDuration": 12,
+      "transition": {
+        "type": "fade",
+        "duration": 0.6
+      }
+    }
+  ]
+}
